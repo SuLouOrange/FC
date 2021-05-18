@@ -27,9 +27,18 @@
 #   undef _PreComp_
 #endif
 
-#ifdef FC_OS_LINUX
-#   include <unistd.h>
+static void noPrint(const char* format, ...) {
+    return;
+}
+
+#define DBG_MainGui
+#ifndef DBG_MainGui
+#define dbgPrint noPrint
+#else
+#include <cstdio>
+#define dbgPrint printf
 #endif
+
 
 #if HAVE_CONFIG_H
 #   include <config.h>
@@ -56,6 +65,8 @@
 #include <App/Application.h>
 #include <Gui/BitmapFactory.h>
 #include <Gui/Application.h>
+
+
 
 void PrintInitHelp(void);
 
@@ -100,41 +111,10 @@ private:
     FILE* file;
 };
 
-#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
-QString myDecoderFunc(const QByteArray &localFileName)
-{
-    QTextCodec* codec = QTextCodec::codecForName("UTF-8");
-    return codec->toUnicode(localFileName);
-}
-
-QByteArray myEncoderFunc(const QString &fileName)
-{
-    QTextCodec* codec = QTextCodec::codecForName("UTF-8");
-    return codec->fromUnicode(fileName);
-}
-#endif
 
 int main( int argc, char ** argv )
 {
-#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
-    // Make sure to setup the Qt locale system before setting LANG and LC_ALL to C.
-    // which is needed to use the system locale settings.
-    (void)QLocale::system();
-#if QT_VERSION < 0x050000
-    // http://www.freecadweb.org/tracker/view.php?id=399
-    // Because of setting LANG=C the Qt automagic to use the correct encoding
-    // for file names is broken. This is a workaround to force the use of UTF-8 encoding
-    QFile::setEncodingFunction(myEncoderFunc);
-    QFile::setDecodingFunction(myDecoderFunc);
-#endif
-    // See https://forum.freecadweb.org/viewtopic.php?f=18&t=20600
-    // See Gui::Application::runApplication()
-    putenv("LC_NUMERIC=C");
-    putenv("PYTHONPATH=");
-#elif defined(FC_OS_MACOSX)
-    (void)QLocale::system();
-    putenv("PYTHONPATH=");
-#else
+    dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
     _putenv("PYTHONPATH=");
     // https://forum.freecadweb.org/viewtopic.php?f=4&t=18288
     // https://forum.freecadweb.org/viewtopic.php?f=3&t=20515
@@ -143,9 +123,7 @@ int main( int argc, char ** argv )
         _putenv_s("PYTHONHOME", fc_py_home);
     else
         _putenv("PYTHONHOME=");
-#endif
 
-#if defined (FC_OS_WIN32)
     int argc_ = argc;
     QVector<QByteArray> data;
     QVector<char *> argv_;
@@ -160,9 +138,8 @@ int main( int argc, char ** argv )
         }
         argv_.push_back(0); // 0-terminated string
     }
-#endif
 
-#if PY_MAJOR_VERSION >= 3
+#if PY_MAJOR_VERSION >= 3 //3.8.6
 #if defined(_MSC_VER) && _MSC_VER <= 1800
     // See InterpreterSingleton::init
     Redirection out(stdout), err(stderr), inp(stdin);
@@ -185,7 +162,7 @@ int main( int argc, char ** argv )
     App::Application::Config()["SplashTextColor" ] = "#ffffff"; // white
     App::Application::Config()["SplashInfoColor" ] = "#c8c8c8"; // light grey
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0)) //5.15.2
     QGuiApplication::setDesktopFileName(QStringLiteral("org.freecadweb.FreeCAD.desktop"));
 #endif
 
@@ -197,11 +174,7 @@ int main( int argc, char ** argv )
         App::Application::Config()["LoggingConsole"] = "1";
 
         // Inits the Application
-#if defined (FC_OS_WIN32)
         App::Application::init(argc_, argv_.data());
-#else
-        App::Application::init(argc, argv);
-#endif
 #if defined(_MSC_VER)
         // create a dump file when the application crashes
         std::string dmpfile = App::Application::getUserAppDataDir();
