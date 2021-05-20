@@ -100,41 +100,9 @@ private:
     FILE* file;
 };
 
-#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
-QString myDecoderFunc(const QByteArray &localFileName)
-{
-    QTextCodec* codec = QTextCodec::codecForName("UTF-8");
-    return codec->toUnicode(localFileName);
-}
-
-QByteArray myEncoderFunc(const QString &fileName)
-{
-    QTextCodec* codec = QTextCodec::codecForName("UTF-8");
-    return codec->fromUnicode(fileName);
-}
-#endif
-
 int main( int argc, char ** argv )
 {
-#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
-    // Make sure to setup the Qt locale system before setting LANG and LC_ALL to C.
-    // which is needed to use the system locale settings.
-    (void)QLocale::system();
-#if QT_VERSION < 0x050000
-    // http://www.freecadweb.org/tracker/view.php?id=399
-    // Because of setting LANG=C the Qt automagic to use the correct encoding
-    // for file names is broken. This is a workaround to force the use of UTF-8 encoding
-    QFile::setEncodingFunction(myEncoderFunc);
-    QFile::setDecodingFunction(myDecoderFunc);
-#endif
-    // See https://forum.freecadweb.org/viewtopic.php?f=18&t=20600
-    // See Gui::Application::runApplication()
-    putenv("LC_NUMERIC=C");
-    putenv("PYTHONPATH=");
-#elif defined(FC_OS_MACOSX)
-    (void)QLocale::system();
-    putenv("PYTHONPATH=");
-#else
+
     _putenv("PYTHONPATH=");
     // https://forum.freecadweb.org/viewtopic.php?f=4&t=18288
     // https://forum.freecadweb.org/viewtopic.php?f=3&t=20515
@@ -143,9 +111,7 @@ int main( int argc, char ** argv )
         _putenv_s("PYTHONHOME", fc_py_home);
     else
         _putenv("PYTHONHOME=");
-#endif
 
-#if defined (FC_OS_WIN32)
     int argc_ = argc;
     QVector<QByteArray> data;
     QVector<char *> argv_;
@@ -160,7 +126,6 @@ int main( int argc, char ** argv )
         }
         argv_.push_back(0); // 0-terminated string
     }
-#endif
 
 #if PY_MAJOR_VERSION >= 3
 #if defined(_MSC_VER) && _MSC_VER <= 1800
