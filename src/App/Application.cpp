@@ -162,8 +162,17 @@ FC_LOG_LEVEL_INIT("App",true,true)
 
 //using Base::GetConsole;
 using namespace Base;
-using namespace App;
-using namespace std;
+
+#include <cstdio>
+static void noPrint(const char* para, ...) {
+    return;
+}
+#define DBG_APPLICATION
+#ifdef DBG_APPLICATION
+#define dbgPrint printf
+#else
+#define dbgPrint noPrint
+#endif
 
 //==========================================================================
 // Application
@@ -2269,10 +2278,13 @@ void Application::runApplication()
 {
     // process all files given through command line interface
     processCmdLineFiles();
+    dbgPrint("%s(%d),RunMode:%s\n", __FUNCTION__, __LINE__, mConfig["RunMode"].c_str());
 
     if (mConfig["RunMode"] == "Cmd") {
         // Run the commandline interface
-        Interpreter().runCommandLine("FreeCAD Console mode");
+        dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
+        Interpreter().runCommandLine("FreeCAD Console mode");//驻留
+        dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
     }
     else if (mConfig["RunMode"] == "Internal") {
         // run internal script
