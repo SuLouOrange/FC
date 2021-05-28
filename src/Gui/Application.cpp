@@ -1910,7 +1910,7 @@ void Application::runApplication(void)
 {
     const std::map<std::string,std::string>& cfg = App::Application::Config();
     std::map<std::string,std::string>::const_iterator it;
-
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 #elif defined(QTWEBENGINE) && defined(Q_OS_LINUX)
@@ -1955,21 +1955,25 @@ void Application::runApplication(void)
 #endif // QT_VERSION >= 0x050400
 
     // A new QApplication
+    Base::Console().Log("***************j relax , work fine ********************\n");
+
     Base::Console().Log("Init: Creating Gui::Application and QApplication\n");
 
     // if application not yet created by the splasher
     int argc = App::Application::GetARGC();
+
+    //**************j patch
+    printf("%s(%d), argc:%d, ", __FUNCTION__, __LINE__, argc);
+    char** argv = App::Application::GetARGV();
+    for (int i = 0; i < argc; i++)
+        printf("argv%d:%s  ", i, argv[i]);
+    printf("\n");
+
+    //************** j patch
     GUISingleApplication mainApp(argc, App::Application::GetARGV());
     // http://forum.freecadweb.org/viewtopic.php?f=3&t=15540
     mainApp.setAttribute(Qt::AA_DontShowIconsInMenus, false);
 
-#ifdef Q_OS_UNIX
-    // Make sure that we use '.' as decimal point. See also
-    // http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=559846
-    // and issue #0002891
-    // http://doc.qt.io/qt-5/qcoreapplication.html#locale-settings
-    setlocale(LC_NUMERIC, "C");
-#endif
 
     // check if a single or multiple instances can run
     it = cfg.find("SingleInstance");

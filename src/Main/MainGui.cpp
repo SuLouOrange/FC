@@ -258,6 +258,8 @@ int main( int argc, char ** argv )
         exit(101);
     }
 
+    dbgPrint("%s(%d),Console:%s, RunMode:%s\n", __FUNCTION__, __LINE__, App::Application::Config()["Console"].c_str(), App::Application::Config()["RunMode"].c_str());
+
     // Run phase ===========================================================
     Base::RedirectStdOutput stdcout;
     Base::RedirectStdLog    stdclog;
@@ -265,6 +267,7 @@ int main( int argc, char ** argv )
     std::streambuf* oldcout = std::cout.rdbuf(&stdcout);
     std::streambuf* oldclog = std::clog.rdbuf(&stdclog);
     std::streambuf* oldcerr = std::cerr.rdbuf(&stdcerr);
+
 
     try {
         // if console option is set then run in cmd mode
