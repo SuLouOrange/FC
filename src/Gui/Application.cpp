@@ -2010,9 +2010,6 @@ void Application::runApplication(void)
     else {
         mainApp.setApplicationName(QString::fromUtf8(App::GetApplication().getExecutableName()));
     }
-#ifndef Q_OS_MACX
-    mainApp.setWindowIcon(Gui::BitmapFactory().pixmap(App::Application::Config()["AppIcon"].c_str()));
-#endif
     QString plugin;
     plugin = QString::fromUtf8(App::GetApplication().getHomePath());
     plugin += QLatin1String("/plugins");
@@ -2175,7 +2172,7 @@ void Application::runApplication(void)
     initOpenInventor();
 
     QString home = QString::fromUtf8(App::GetApplication().getHomePath());
-
+#if 0 //j remove 
     it = cfg.find("WindowTitle");
     if (it != cfg.end()) {
         QString title = QString::fromUtf8(it->second.c_str());
@@ -2189,6 +2186,7 @@ void Application::runApplication(void)
         }
         QApplication::setWindowIcon(QIcon(path));
     }
+#endif //j remove
     it = cfg.find("ProgramLogo");
     if (it != cfg.end()) {
         QString path = QString::fromUtf8(it->second.c_str());
