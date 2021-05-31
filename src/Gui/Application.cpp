@@ -143,6 +143,16 @@ using namespace std;
 namespace bp = boost::placeholders;
 
 
+static void noPrint(const char* format, ...) {
+    return;
+}
+#include <cstdio>
+#define DBG_MainGui
+#ifndef DBG_MainGui
+#define dbgPrint noPrint
+#else
+#define dbgPrint printf
+#endif
 Application* Application::Instance = 0L;
 
 namespace Gui {
@@ -1980,6 +1990,7 @@ void Application::runApplication(void)
     if (it != cfg.end() && mainApp.isRunning()) {
         // send the file names to be opened to the server application so that this
         // opens them
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         QDir cwd = QDir::current();
         std::list<std::string> files = App::Application::getCmdLineFiles();
         for (std::list<std::string>::iterator jt = files.begin(); jt != files.end(); ++jt) {
@@ -2230,6 +2241,7 @@ void Application::runApplication(void)
     // Activate the correct workbench
     std::string start = App::Application::Config()["StartWorkbench"];
     Base::Console().Log("Init: Activating default workbench %s\n", start.c_str());
+    printf("%s(%d),Init: Activating default workbench %s\n", __FUNCTION__, __LINE__, start.c_str());
     std::string autoload = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/General")->
                            GetASCII("AutoloadModule", start.c_str());
     if ("$LastModule" == autoload) {
@@ -2240,8 +2252,10 @@ void Application::runApplication(void)
     }
     // if the auto workbench is not visible then force to use the default workbech
     // and replace the wrong entry in the parameters
+    printf("%s(%d),Init: Activating default workbench %s\n", __FUNCTION__, __LINE__, start.c_str());
     QStringList wb = app.workbenches();
     if (!wb.contains(QString::fromLatin1(start.c_str()))) {
+        printf("%s(%d),Init: Activating default workbench %s\n", __FUNCTION__, __LINE__, start.c_str());//NOT RUN
         start = App::Application::Config()["StartWorkbench"];
         if ("$LastModule" == autoload) {
             App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/General")->
