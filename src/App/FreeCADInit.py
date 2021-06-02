@@ -29,6 +29,7 @@
 
 # imports the one and only
 import FreeCAD
+import time
 
 def removeFromPath(module_name):
 	"""removes the module from the sys.path. The entry point for imports
@@ -78,7 +79,11 @@ def setupSearchPaths(PathExtension):
 	except KeyError:
 		os.environ["PATH"] = PathEnvironment
 
+print(__name__, "run phase 0");
+time.sleep(5)
+
 FreeCAD._importFromFreeCAD = removeFromPath
+print(__name__, "run phase 1");
 
 
 def InitApplications():

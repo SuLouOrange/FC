@@ -119,6 +119,7 @@ int main( int argc, char ** argv )
     // https://forum.freecadweb.org/viewtopic.php?f=4&t=18288
     // https://forum.freecadweb.org/viewtopic.php?f=3&t=20515
     const char* fc_py_home = getenv("FC_PYTHONHOME");
+    dbgPrint("%s(%d),fc_py_home: %s\n", __FUNCTION__, __LINE__, fc_py_home);
     if (fc_py_home)
         _putenv_s("PYTHONHOME", fc_py_home);
     else
