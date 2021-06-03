@@ -79,11 +79,18 @@ def setupSearchPaths(PathExtension):
 	except KeyError:
 		os.environ["PATH"] = PathEnvironment
 
-print(__name__, "run phase 0");
+stagePhaseCnt = 0
+print("global stage Phase cnt", stagePhaseCnt)
+stagePhaseCnt += 1
+print("name of", __name__, dir(__name__))
+print("name of FreeCAD", dir(FreeCAD))
 time.sleep(5)
 
 FreeCAD._importFromFreeCAD = removeFromPath
-print(__name__, "run phase 1");
+
+print("global stage Phase cnt", stagePhaseCnt)
+stagePhaseCnt += 1
+print("name of FreeCAD", dir(FreeCAD))
 
 
 def InitApplications():
@@ -255,6 +262,8 @@ App.__cmake__ = cmake;
 App.__unit_test__ = []
 
 Log ('Init: starting App::FreeCADInit.py\n')
+
+
 
 try:
     import sys,os,traceback,inspect
@@ -633,6 +642,8 @@ class FCADLogger(object):
                         FreeCADGui.getMainWindow(),self.title,str(e))
 
 FreeCAD.Logger = FCADLogger
+
+#以上只是简单的赋值,导入
 
 # init every application by importing Init.py
 try:

@@ -2220,7 +2220,7 @@ void Application::runApplication(void)
 
     // show splasher while initializing the GUI
     if (!hidden)
-        mw.startSplasher();
+       // mw.startSplasher();
 
     // running the GUI init script
     try {
@@ -2235,7 +2235,7 @@ void Application::runApplication(void)
 
     // stop splash screen and set immediately the active window that may be of interest
     // for scripts using Python binding for Qt
-    mw.stopSplasher();
+    //mw.stopSplasher();
     mainApp.setActiveWindow(&mw);
 
     // Activate the correct workbench
