@@ -32,6 +32,7 @@ import FreeCAD, FreeCADGui, time
 
 # shortcuts
 print("FreeCADGuiInit start run! sleep 5s to show this msg. Relax!")
+print("1.j test name in FreeCADGui, size {:}:".format(len(dir(FreeCADGui))), dir(FreeCADGui))
 #stagePhaseCnt += 1
 time.sleep(5)
 
@@ -185,7 +186,6 @@ Log ('Init: Running FreeCADGuiInit.py start script...\n')
 App.GuiUp = 1
 App.Gui = FreeCADGui
 FreeCADGui.Workbench = Workbench
-
 Gui.addWorkbench(NoneWorkbench())
 
 # Monkey patching pivy.coin.SoGroup.removeAllChildren to work around a bug
@@ -225,7 +225,8 @@ del(InitApplications)
 del(NoneWorkbench)
 del(StandardWorkbench)
 
-print("j test name in FreeCADGui", dir(Gui))
+print("2.j test name in FreeCADGui, size {:}:".format(len(dir(Gui))), dir(Gui))
+print("3.j test name in WorkBench, size {:}:".format(len(dir(Gui.Workbench))), dir(Gui.Workbench))
 
 
 Log ('Init: Running FreeCADGuiInit.py start script... done\n')

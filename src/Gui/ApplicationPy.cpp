@@ -893,7 +893,7 @@ PyObject* Application::sAddWorkbenchHandler(PyObject * /*self*/, PyObject *args)
     std::string item;
     if (!PyArg_ParseTuple(args, "O", &pcObject))
         return NULL;
-
+    printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, Instance->_pcWorkbenchDictionary, PyDict_Size(Instance->_pcWorkbenchDictionary));
     try {
         // get the class object 'Workbench' from the main module that is expected
         // to be base class for all workbench classes

@@ -531,12 +531,15 @@ Application::Application(bool GUIenabled)
     Instance = this;
 
     // instantiate the workbench dictionary
+    printf("%s(%d), before init, value of _pcWorkbenchDictionary %p\n", __FUNCTION__, __LINE__, _pcWorkbenchDictionary);
     _pcWorkbenchDictionary = PyDict_New();
+    printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, _pcWorkbenchDictionary, PyDict_Size(_pcWorkbenchDictionary));
 
     if (GUIenabled) {
         createStandardOperations();
         MacroCommand::load();
     }
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(_pcWorkbenchDictionary));
 }
 
 Application::~Application()
@@ -2116,6 +2119,7 @@ void Application::runApplication(void)
 
     Application app(true);
     MainWindow mw;
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(Instance->_pcWorkbenchDictionary));
     mw.setProperty("QuitOnClosed", true);
 
    
@@ -2207,11 +2211,13 @@ void Application::runApplication(void)
     // show splasher while initializing the GUI
     if (!hidden)
        // mw.startSplasher();
-
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(Instance->_pcWorkbenchDictionary));
     // running the GUI init script
     try {
         Base::Console().Log("Run Gui init script\n");
+        printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, Instance->_pcWorkbenchDictionary, PyDict_Size(Instance->_pcWorkbenchDictionary));
         runInitGuiScript();
+        printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, Instance->_pcWorkbenchDictionary, PyDict_Size(Instance->_pcWorkbenchDictionary));
     }
     catch (const Base::Exception& e) {
         Base::Console().Error("Error in FreeCADGuiInit.py: %s\n", e.what());
@@ -2252,6 +2258,7 @@ void Application::runApplication(void)
         }
     }
 
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(Instance->_pcWorkbenchDictionary));
     // Call this before showing the main window because otherwise:
     // 1. it shows a white window for a few seconds which doesn't look nice
     // 2. the layout of the toolbars is completely broken
