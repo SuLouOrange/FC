@@ -271,15 +271,9 @@ Application::Application(std::map<std::string,std::string> &mConfig)
         pAppModule = init_freecad_module();
         PyDict_SetItemString(modules, "FreeCAD", pAppModule);
     }
-    else
-        //printf("%s(%d), pAppModule is initialized ! It's wired!\n", __FUNCTION__, __LINE__);
 #else
     PyObject* pAppModule = Py_InitModule3("FreeCAD", Application::Methods, FreeCAD_doc);
 #endif
-
-    mod = getImportModules();
-    if (!mod.empty())
-        for_each(mod.begin(), mod.end(), [=](const std::string& str) { static int cnt = 0; printf("imported module %d: %s\n", ++cnt, str.c_str()); });
 
     Py::Module(pAppModule).setAttr(std::string("ActiveDocument"),Py::None());
 
@@ -1905,6 +1899,8 @@ void Application::initConfig(int argc, char ** argv)
 {
     // find the home path....
     mConfig["AppHomePath"] = FindHomePath(argv[0]);
+    printf("%s(%d),home path:%s.\n", __FUNCTION__, __LINE__, mConfig["AppHomePath"].c_str());
+
 
     // Version of the application extracted from SubWCRef into src/Build/Version.h
     // We only set these keys if not yet defined. Therefore it suffices to search
