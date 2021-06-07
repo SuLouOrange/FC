@@ -30,14 +30,6 @@
 # include <sstream>
 # include <exception>
 # include <ios>
-# if defined(FC_OS_LINUX) || defined(FC_OS_MACOSX) || defined(FC_OS_BSD)
-# include <unistd.h>
-# include <pwd.h>
-# include <sys/types.h>
-# elif defined(__MINGW32__)
-# define WINVER 0x502 // needed for SetDllDirectory
-# include <Windows.h>
-# endif
 # include <ctime>
 # include <csignal>
 # include <boost/program_options.hpp>
@@ -47,10 +39,6 @@
 # include <Shlobj.h>
 #endif
 
-#if defined(FC_OS_BSD)
-#include <sys/param.h>
-#include <sys/sysctl.h>
-#endif
 
 #include "Application.h"
 #include "Document.h"
@@ -140,6 +128,19 @@ using namespace boost;
 using namespace boost::program_options;
 namespace bp = boost::placeholders;
 
+//jia_patch
+static void no_print(const char* fmt, ...) {
+    return;
+}
+
+#define DBG_APPLICATION
+#ifdef DBG_APPLICATION
+#define  dbg_print   printf
+#include <cstdio>
+#else
+#define  dbg_print   no_print;
+#endif
+//jia_patch
 
 // scriptings (scripts are built-in but can be overridden by command line option)
 #include <App/InitScript.h>
