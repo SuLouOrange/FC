@@ -34,18 +34,22 @@
 class StartWorkbench ( Workbench ):
     "Start workbench object"
     def __init__(self):
+        print("Relax init StartWorkbench")
         self.__class__.Icon = FreeCAD.getResourceDir() + "Mod/Start/Resources/icons/StartWorkbench.svg"
         self.__class__.MenuText = "Start"
         self.__class__.ToolTip = "Start workbench"
 
     def Initialize(self):
         # load the module
-        import StartGui
+        import StartGui# where & what
         import Start
+        print("Relax init StartWorkbench")
 
     def GetClassName(self):
         return "StartGui::Workbench"
 
+Log('Relax initGui.py StartWorkbench ')
+print("Relax init StartWorkbench initGui.py")
 Gui.addWorkbench(StartWorkbench())
 
 FreeCAD.__unit_test__ += [ "TestStartGui" ]

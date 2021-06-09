@@ -67,6 +67,7 @@ private:
 
 PyObject* initModule()
 {
+    printf("%s(%d), relax\n", __FUNCTION__, __LINE__);
     return (new Module)->module().ptr();
 }
 
@@ -76,6 +77,7 @@ PyObject* initModule()
 /* Python entry */
 PyMOD_INIT_FUNC(StartGui)
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     if (!Gui::Application::Instance) {
         PyErr_SetString(PyExc_ImportError, "Cannot load Gui module in console application.");
         PyMOD_Return(0);
@@ -84,6 +86,7 @@ PyMOD_INIT_FUNC(StartGui)
     // load dependent module
     try {
         Base::Interpreter().runString("import WebGui");
+        printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     }
     catch(const Base::Exception& e) {
         PyErr_SetString(PyExc_ImportError, e.what());

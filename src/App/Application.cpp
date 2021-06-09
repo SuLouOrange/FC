@@ -30,6 +30,14 @@
 # include <sstream>
 # include <exception>
 # include <ios>
+# if defined(FC_OS_LINUX) || defined(FC_OS_MACOSX) || defined(FC_OS_BSD)
+# include <unistd.h>
+# include <pwd.h>
+# include <sys/types.h>
+# elif defined(__MINGW32__)
+# define WINVER 0x502 // needed for SetDllDirectory
+# include <Windows.h>
+# endif
 # include <ctime>
 # include <csignal>
 # include <boost/program_options.hpp>
@@ -39,6 +47,10 @@
 # include <Shlobj.h>
 #endif
 
+#if defined(FC_OS_BSD)
+#include <sys/param.h>
+#include <sys/sysctl.h>
+#endif
 
 #include "Application.h"
 #include "Document.h"
@@ -272,9 +284,15 @@ Application::Application(std::map<std::string,std::string> &mConfig)
         pAppModule = init_freecad_module();
         PyDict_SetItemString(modules, "FreeCAD", pAppModule);
     }
+    else
+        //printf("%s(%d), pAppModule is initialized ! It's wired!\n", __FUNCTION__, __LINE__);
 #else
     PyObject* pAppModule = Py_InitModule3("FreeCAD", Application::Methods, FreeCAD_doc);
 #endif
+
+    mod = getImportModules();
+    if (!mod.empty())
+        for_each(mod.begin(), mod.end(), [=](const std::string& str) { static int cnt = 0; printf("imported module %d: %s\n", ++cnt, str.c_str()); });
 
     Py::Module(pAppModule).setAttr(std::string("ActiveDocument"),Py::None());
 
@@ -2851,13 +2869,17 @@ std::string Application::FindHomePath(const char* sCall)
     //   In this case the calling name should be set to FreeCADBase.dll or FreeCADApp.dll in order
     //   to locate the correct home directory
     wchar_t szFileName [MAX_PATH];
+    printf("%s(%d),relax para:%s\n", __FUNCTION__, __LINE__, sCall);
     QString dll(QString::fromUtf8(sCall));
     if (Py_IsInitialized() || dll.endsWith(QLatin1String(".dll"))) {
         GetModuleFileNameW(GetModuleHandleA(sCall),szFileName, MAX_PATH-1);
     }
     else {
+        printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
         GetModuleFileNameW(0, szFileName, MAX_PATH-1);
     }
+
+
 
     std::wstring Call(szFileName), homePath;
     std::wstring::size_type pos = Call.find_last_of(PATHSEP);
