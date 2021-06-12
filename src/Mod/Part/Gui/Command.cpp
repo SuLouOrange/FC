@@ -143,6 +143,7 @@ CmdPartBox2::CmdPartBox2()
 
 void CmdPartBox2::activated(int iMsg)
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     Q_UNUSED(iMsg);
     openCommand(QT_TRANSLATE_NOOP("Command", "Part Box Create"));
     doCommand(Doc,"from FreeCAD import Base");

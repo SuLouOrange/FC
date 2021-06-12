@@ -1330,6 +1330,7 @@ void Application::tryClose(QCloseEvent * e)
  */
 bool Application::activateWorkbench(const char* name)
 {
+    printf("%s(%d),relax, %s\n", __FUNCTION__, __LINE__, name);
     bool ok = false;
     WaitCursor wc;
     Workbench* oldWb = WorkbenchManager::instance()->active();

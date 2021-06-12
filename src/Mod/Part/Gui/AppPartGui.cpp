@@ -108,6 +108,7 @@ PyObject* initModule()
 
 PyMOD_INIT_FUNC(PartGui)
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     if (!Gui::Application::Instance) {
         PyErr_SetString(PyExc_ImportError, "Cannot load Gui module in console application.");
         PyMOD_Return(0);

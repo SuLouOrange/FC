@@ -165,6 +165,7 @@ PyObject* Part::PartExceptionOCCDimensionError;
 
 PyMOD_INIT_FUNC(Part)
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     Base::Console().Log("Module: Part\n");
 
     // This is highly experimental and we should keep an eye on it
@@ -177,6 +178,7 @@ PyMOD_INIT_FUNC(Part)
 #endif
 
     PyObject* partModule = Part::initModule();
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     Base::Console().Log("Loading Part module... done\n");
 
     Py::Object module(partModule);

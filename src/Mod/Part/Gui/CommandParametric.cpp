@@ -94,6 +94,7 @@ CmdPartBox::CmdPartBox()
 
 void CmdPartBox::activated(int iMsg)
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     Q_UNUSED(iMsg);
     QString cmd;
     cmd = qApp->translate("CmdPartBox","Cube");
