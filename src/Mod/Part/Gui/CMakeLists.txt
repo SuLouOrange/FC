@@ -118,6 +118,7 @@ SET(PartGui_SRCS
     Command.cpp
     CommandSimple.cpp
     CommandParametric.cpp
+    CommandLayItemWithGeo.cpp
     CrossSections.cpp
     CrossSections.h
     CrossSections.ui
