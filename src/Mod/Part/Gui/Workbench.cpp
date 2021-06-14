@@ -184,6 +184,10 @@ Gui::ToolBarItem* Workbench::setupToolBars() const
             << "Part_Primitives"
             << "Part_Builder";
 
+    Gui::ToolBarItem* layItem = new Gui::ToolBarItem(root);
+    layItem->setCommand("LayItem");
+    *layItem << "Part_LayCylinder";
+
     Gui::ToolBarItem* tool = new Gui::ToolBarItem(root);
     tool->setCommand("Part tools");
     *tool << "Part_Extrude"
