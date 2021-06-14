@@ -31,14 +31,18 @@ CmdPartLayCylinder::CmdPartLayCylinder()
 void CmdPartLayCylinder::activated(int iMsg)
 {
     Q_UNUSED(iMsg);
+#if 0
     QString cmd;
     cmd = qApp->translate("CmdPartLayCylinder", "LayCylinder");
     openCommand((const char*)cmd.toUtf8());
     printf("%s(%d)\n", __FUNCTION__, __LINE__);
-    //runCommand(Doc, "App.ActiveDocument.addObject(\"Part::Cylinder\",\"Cylinder\")");
+    runCommand(Doc, "App.ActiveDocument.addObject(\"Part::Cylinder\",\"Cylinder\")");
     cmd = QString::fromLatin1("App.ActiveDocument.ActiveObject.Label = \"%1\"")
         .arg(qApp->translate("CmdPartCylinder", "Cylinder"));
     runCommand(Doc, cmd.toUtf8());
+#endif
+
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     commitCommand();
     updateActive();
     runCommand(Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");

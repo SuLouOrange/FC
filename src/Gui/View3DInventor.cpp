@@ -112,6 +112,7 @@ View3DInventor::View3DInventor(Gui::Document* pcDocument, QWidget* parent,
                                const QtGLWidget* sharewidget, Qt::WindowFlags wflags)
     : MDIView(pcDocument, parent, wflags), _viewerPy(0)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     stack = new QStackedWidget(this);
     // important for highlighting
     setMouseTracking(true);
