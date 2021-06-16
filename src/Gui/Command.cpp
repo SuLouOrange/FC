@@ -1772,6 +1772,7 @@ CommandManager::~CommandManager()
 void CommandManager::addCommand(Command* pCom)
 {
     _sCommands[pCom->getName()] = pCom;// pCom->Init();
+    printf("%s(%d), add command: %s to manager\n", __FUNCTION__, __LINE__, pCom->getName());
 }
 
 void CommandManager::removeCommand(Command* pCom)

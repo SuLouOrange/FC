@@ -1695,12 +1695,16 @@ MDIView *Document::createView(const Base::Type& typeId)
         QtGLWidget* shareWidget = 0;
         // VBO rendering doesn't work correctly when we don't share the OpenGL widgets
         if (!theViews.empty()) {
+            printf("%s(%d), the Views isn't empty.**********\n", __FUNCTION__, __LINE__);
             View3DInventor* firstView = static_cast<View3DInventor*>(theViews.front());
             shareWidget = qobject_cast<QtGLWidget*>(firstView->getViewer()->getGLWidget());
 
             const char *ppReturn = 0;
             firstView->onMsg("GetCamera",&ppReturn);
             saveCameraSettings(ppReturn);
+        }
+        else {
+            printf("%s(%d), the Views is empty.**********\n", __FUNCTION__, __LINE__);
         }
 
         View3DInventor* view3D = new View3DInventor(this, getMainWindow(), shareWidget);

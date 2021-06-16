@@ -4952,6 +4952,7 @@ CmdSketcherCreatePoint::CmdSketcherCreatePoint()
 void CmdSketcherCreatePoint::activated(int iMsg)
 {
     Q_UNUSED(iMsg);
+    printf("%s(%d)*****************************\n", __FUNCTION__, __LINE__);
     ActivateHandler(getActiveGuiDocument(), new DrawSketchHandlerPoint());
 }
 
