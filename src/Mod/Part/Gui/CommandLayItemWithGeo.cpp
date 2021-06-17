@@ -16,6 +16,10 @@
 #include <Gui/InventorAll.h>
 #include <Gui/View3DInventor.h>
 
+#include <App/Document.h>
+#include <Mod/Part/App/FeaturePartBox.h>
+#include <Mod/Part/App/PrimitiveFeature.h>
+
 //===========================================================================
 // Part_LayCylinder
 //===========================================================================
@@ -97,6 +101,7 @@ bool CmdPartLayCylinder::isActive(void)
         return false;
 }
 
+
 void  CmdPartLayCylinder::CBFunction(void* ud, SoEventCallback* n) {
     printf("%s(%d), start\n", __FUNCTION__, __LINE__);
     Gui::View3DInventorViewer* pViewer = reinterpret_cast<Gui::View3DInventorViewer*>(n->getUserData());
@@ -106,7 +111,40 @@ void  CmdPartLayCylinder::CBFunction(void* ud, SoEventCallback* n) {
 
     bool IsMouse = SoEventType.isDerivedFrom(SoMouseButtonEvent::getClassTypeId());
     if (IsMouse && SO_MOUSE_PRESS_EVENT(pSoEvent, BUTTON1)) {
-        pViewer->removeEventCallback(SoEvent::getClassTypeId(), CmdPartLayCylinder::CBFunction);
+        const SoMouseButtonEvent * pMouseEvent = reinterpret_cast<const SoMouseButtonEvent*>(pSoEvent);
+        if (pMouseEvent->getState() == SoButtonEvent::DOWN) {
+            const SbVec2s pos(pMouseEvent->getPosition());
+            Base::Vector3d Vec3d;
+           
+
+            SbPlane horizonZero(SbVec3f(0, 0, 1), SbVec3f(0, 0, 0));
+
+            SbVec3f focalPoint = pViewer->getPointOnScreen(pos);
+
+            //
+            SbLine viewLine;
+            viewLine.setPosDir(focalPoint, pViewer->getViewDirection());
+            SbVec3f zeroPoint;
+            if (horizonZero.intersect(viewLine, zeroPoint)) {
+                focalPoint = zeroPoint;
+            }
+
+            Vec3d.x = focalPoint[0];
+            Vec3d.y = focalPoint[1];
+            Vec3d.z = focalPoint[2];
+
+            Part::Cylinder* pCylinder = new Part::Cylinder;
+
+            Base::Placement placement;
+            placement.setPosition(Vec3d);
+            pCylinder->transformPlacement(placement);
+            App::Document* pAppDoc = App::GetApplication().getActiveDocument();
+            pAppDoc->addObject(pCylinder);
+            updateActive();
+            pViewer->removeEventCallback(SoEvent::getClassTypeId(), CmdPartLayCylinder::CBFunction);
+        }
+
+        
         printf("%s(%d), mouse button1 press!\n", __FUNCTION__, __LINE__);
     }
 
