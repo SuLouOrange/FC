@@ -4879,6 +4879,7 @@ public:
 
     virtual bool pressButton(Base::Vector2d onSketchPos)
     {
+        printf("%s(%d)*****************************\n", __FUNCTION__, __LINE__);
         EditPoint = onSketchPos;
         selectionDone = true;
         return true;

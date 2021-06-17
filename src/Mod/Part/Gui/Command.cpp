@@ -1494,6 +1494,7 @@ CmdPartMirror::CmdPartMirror()
 void CmdPartMirror::activated(int iMsg)
 {
     Q_UNUSED(iMsg);
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     Gui::Control().showDialog(new PartGui::TaskMirroring());
 }
 

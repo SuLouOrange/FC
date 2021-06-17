@@ -647,6 +647,7 @@ bool ViewProviderSketch::mouseButtonPressed(int Button, bool pressed, const SbVe
 {
     assert(edit);
 
+    printf("%s(%d)*****************************\n", __FUNCTION__, __LINE__);
     // Calculate 3d point to the mouse position
     SbLine line;
     getProjectingLine(cursorPos, viewer, line);
