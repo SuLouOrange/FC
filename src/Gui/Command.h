@@ -1025,19 +1025,5 @@ protected: \
     }\
 };
 
-#define DEF_STD_CMD_A_CB(X) class X : public Gui::Command \
-{\
-public:\
-    X(); \
-    virtual ~X() {}\
-    virtual const char* className() const\
-{ return #X; }\
-protected: \
-    virtual void activated(int iMsg); \
-    virtual bool isActive(void); \
-private:\
-    static  void CBFunction(void * ud, SoEventCallback * n);\
-};\
-
 
 #endif // GUI_COMMAND_H

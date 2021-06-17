@@ -20,12 +20,64 @@
 #include <Mod/Part/App/FeaturePartBox.h>
 #include <Mod/Part/App/PrimitiveFeature.h>
 
+template<typename objType>
+void CBFunction(void* ud, SoEventCallback* n) {
+    printf("%s(%d), start\n", __FUNCTION__, __LINE__);
+    Gui::View3DInventorViewer* pViewer = reinterpret_cast<Gui::View3DInventorViewer*>(n->getUserData());
+
+    const SoEvent* pSoEvent = n->getEvent();
+    const SoType SoEventType(pSoEvent->getTypeId());
+
+    bool IsMouse = SoEventType.isDerivedFrom(SoMouseButtonEvent::getClassTypeId());
+    if (IsMouse && SO_MOUSE_PRESS_EVENT(pSoEvent, BUTTON1)) {
+        const SoMouseButtonEvent* pMouseEvent = reinterpret_cast<const SoMouseButtonEvent*>(pSoEvent);
+        if (pMouseEvent->getState() == SoButtonEvent::DOWN) {
+            const SbVec2s pos(pMouseEvent->getPosition());
+            Base::Vector3d Vec3d;
+
+
+            SbPlane horizonZero(SbVec3f(0, 0, 1), SbVec3f(0, 0, 0));
+
+            SbVec3f focalPoint = pViewer->getPointOnScreen(pos);
+
+            //
+            SbLine viewLine;
+            viewLine.setPosDir(focalPoint, pViewer->getViewDirection());
+            SbVec3f zeroPoint;
+            if (horizonZero.intersect(viewLine, zeroPoint)) {
+                focalPoint = zeroPoint;
+            }
+
+            Vec3d.x = focalPoint[0];
+            Vec3d.y = focalPoint[1];
+            Vec3d.z = focalPoint[2];
+
+            //*******new a obj
+            objType* pObj = new objType;
+
+            Base::Placement placement;
+            placement.setPosition(Vec3d);
+            pObj->transformPlacement(placement);
+            App::Document* pAppDoc = App::GetApplication().getActiveDocument();
+            pAppDoc->addObject(pObj);
+            //*******obj work done
+
+
+            Gui::Command::updateActive();
+            pViewer->removeEventCallback(SoEvent::getClassTypeId(), CBFunction<objType>);
+        }
+
+
+        printf("%s(%d), mouse button1 press!\n", __FUNCTION__, __LINE__);
+    }
+
+}
+
 //===========================================================================
 // Part_LayCylinder
 //===========================================================================
-DEF_STD_CMD_A_CB(CmdPartLayCylinder)
+DEF_STD_CMD_A(CmdPartLayCylinder)
 
-//static void CmdPartLayCylinder::CBFunction(void* ud, SoEventCallback* n);
 
 CmdPartLayCylinder::CmdPartLayCylinder()
     : Command("Part_LayCylinder")
@@ -77,15 +129,13 @@ void CmdPartLayCylinder::activated(int iMsg)
         return;
     }
 
-
-    //2.add cb
-
     if (p3DViewer == nullptr) {
         printf("%s(%d)\n", __FUNCTION__, __LINE__);
         return;
     }
 
-    p3DViewer->addEventCallback(SoEvent::getClassTypeId(), CBFunction);
+    //2.add cb
+    p3DViewer->addEventCallback(SoEvent::getClassTypeId(), CBFunction<Part::Cylinder>);
 
     printf("%s(%d)\n", __FUNCTION__, __LINE__);
     commitCommand();
@@ -102,53 +152,7 @@ bool CmdPartLayCylinder::isActive(void)
 }
 
 
-void  CmdPartLayCylinder::CBFunction(void* ud, SoEventCallback* n) {
-    printf("%s(%d), start\n", __FUNCTION__, __LINE__);
-    Gui::View3DInventorViewer* pViewer = reinterpret_cast<Gui::View3DInventorViewer*>(n->getUserData());
 
-    const SoEvent* pSoEvent = n->getEvent();
-    const SoType SoEventType(pSoEvent->getTypeId());
-
-    bool IsMouse = SoEventType.isDerivedFrom(SoMouseButtonEvent::getClassTypeId());
-    if (IsMouse && SO_MOUSE_PRESS_EVENT(pSoEvent, BUTTON1)) {
-        const SoMouseButtonEvent * pMouseEvent = reinterpret_cast<const SoMouseButtonEvent*>(pSoEvent);
-        if (pMouseEvent->getState() == SoButtonEvent::DOWN) {
-            const SbVec2s pos(pMouseEvent->getPosition());
-            Base::Vector3d Vec3d;
-           
-
-            SbPlane horizonZero(SbVec3f(0, 0, 1), SbVec3f(0, 0, 0));
-
-            SbVec3f focalPoint = pViewer->getPointOnScreen(pos);
-
-            //
-            SbLine viewLine;
-            viewLine.setPosDir(focalPoint, pViewer->getViewDirection());
-            SbVec3f zeroPoint;
-            if (horizonZero.intersect(viewLine, zeroPoint)) {
-                focalPoint = zeroPoint;
-            }
-
-            Vec3d.x = focalPoint[0];
-            Vec3d.y = focalPoint[1];
-            Vec3d.z = focalPoint[2];
-
-            Part::Cylinder* pCylinder = new Part::Cylinder;
-
-            Base::Placement placement;
-            placement.setPosition(Vec3d);
-            pCylinder->transformPlacement(placement);
-            App::Document* pAppDoc = App::GetApplication().getActiveDocument();
-            pAppDoc->addObject(pCylinder);
-            updateActive();
-            pViewer->removeEventCallback(SoEvent::getClassTypeId(), CmdPartLayCylinder::CBFunction);
-        }
-
-        
-        printf("%s(%d), mouse button1 press!\n", __FUNCTION__, __LINE__);
-    }
-
-}
 
 void CreateLayPartCommands(void)
 {
