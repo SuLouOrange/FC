@@ -186,7 +186,7 @@ Gui::ToolBarItem* Workbench::setupToolBars() const
 
     Gui::ToolBarItem* layItem = new Gui::ToolBarItem(root);
     layItem->setCommand("LayItem");
-    *layItem << "Part_LayCylinder";
+    *layItem << "Part_LayCylinder" << "Part_LayBox";
 
     Gui::ToolBarItem* tool = new Gui::ToolBarItem(root);
     tool->setCommand("Part tools");

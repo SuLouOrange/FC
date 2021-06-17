@@ -1,11 +1,5 @@
 #include "PreCompiled.h"
 
-#ifndef _PreComp_
-# include <QApplication>
-# include <QDir>
-# include <QFileInfo>
-# include <QLineEdit>
-#endif
 
 #include <Gui/Application.h>
 #include <Gui/Command.h>
@@ -17,6 +11,8 @@
 #include <Gui/View3DInventor.h>
 
 #include <App/Document.h>
+
+
 #include <Mod/Part/App/FeaturePartBox.h>
 #include <Mod/Part/App/PrimitiveFeature.h>
 
@@ -152,11 +148,82 @@ bool CmdPartLayCylinder::isActive(void)
 }
 
 
+//===========================================================================
+// Part_LayBox
+//===========================================================================
+DEF_STD_CMD_A(CmdPartLayBox)
+
+
+CmdPartLayBox::CmdPartLayBox()
+    : Command("Part_LayBox")
+{
+    sAppModule = "Part";
+    sGroup = QT_TR_NOOP("Part");
+    sMenuText = QT_TR_NOOP("LayBox");
+    sToolTipText = QT_TR_NOOP("Lay a Box");
+    sWhatsThis = "Part_LayBox";
+    sStatusTip = sToolTipText;
+    sPixmap = "Part_LaBox";
+}
+
+void CmdPartLayBox::activated(int iMsg)
+{
+    Q_UNUSED(iMsg);
+
+    //1.get 3DInventorViewer
+    //Gui::View3DInventorViewer* pViewer = reinterpret_cast<Gui::View3DInventorViewer*>(getActiveGuiDocument()->getActiveView());
+
+    App::Document* activeDoc = App::GetApplication().getActiveDocument();
+    if (!activeDoc) {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        return;
+    }
+    Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
+    if (!activeGui) {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        return;
+    }
+
+    Gui::MDIView* pView = activeGui->getActiveView();
+    Gui::View3DInventorViewer* p3DViewer = nullptr;
+    if (pView->isDerivedFrom(Gui::View3DInventor::getClassTypeId())) {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        p3DViewer = reinterpret_cast<Gui::View3DInventor*>(pView)->getViewer();
+    }
+    else {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        return;
+    }
+
+    if (p3DViewer == nullptr) {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        return;
+    }
+
+    //2.add cb
+    p3DViewer->addEventCallback(SoEvent::getClassTypeId(), CBFunction<Part::Box>);
+
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
+    commitCommand();
+    updateActive();
+    //runCommand(Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");
+}
+
+bool CmdPartLayBox::isActive(void)
+{
+    if (getActiveGuiDocument())
+        return true;
+    else
+        return false;
+}
+
+
 
 
 void CreateLayPartCommands(void)
 {
     Gui::CommandManager& rcCmdMgr = Gui::Application::Instance->commandManager();
     rcCmdMgr.addCommand(new CmdPartLayCylinder());
+    rcCmdMgr.addCommand(new CmdPartLayBox());
     printf("%s(%d)\n", __FUNCTION__, __LINE__);
 }
