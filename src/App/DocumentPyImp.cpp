@@ -201,6 +201,7 @@ PyObject*  DocumentPy::addObject(PyObject *args, PyObject *kwd)
     DocumentObject *pcFtr = 0;
 
     if (!obj || !PyObject_IsTrue(attach)) {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         pcFtr = getDocumentPtr()->addObject(sType,sName,true,sViewType);
     }
     else {

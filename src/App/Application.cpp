@@ -2309,6 +2309,7 @@ void Application::LoadParameters(void)
     if (mConfig.find("SystemParameter") == mConfig.end())
         mConfig["SystemParameter"] = mConfig["UserAppData"] + "system.cfg";
 
+    printf("%s(%d),UserParameter:%s\n", __FUNCTION__, __LINE__, mConfig["UserParameter"].c_str());
     // create standard parameter sets
     _pcSysParamMngr = new ParameterManager();
     _pcSysParamMngr->SetSerializer(new ParameterSerializer(mConfig["SystemParameter"]));

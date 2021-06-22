@@ -34,7 +34,7 @@ import FreeCAD, FreeCADGui, time
 print("FreeCADGuiInit start run! sleep 5s to show this msg. Relax!")
 print("1.j test name in FreeCADGui, size {:}:".format(len(dir(FreeCADGui))), dir(FreeCADGui))
 #stagePhaseCnt += 1
-time.sleep(5)
+#time.sleep(5)
 
 Gui = FreeCADGui
 
@@ -111,7 +111,7 @@ class NoneWorkbench ( Workbench ):
 
 def InitApplications():
     print("FreeCADGuiInit Func start run sleep 3s! ")
-    time.sleep(3)
+    #time.sleep(3)
     import sys,os,traceback
     try:
         # Python3

@@ -3417,7 +3417,7 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
             FC_WARN("Ignore document recompute on undo/redo");
         return 0;
     }
-
+    FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") use console\n");
     int objectCount = 0;
     if (testStatus(Document::PartialDoc)) {
         if(mustExecute())
@@ -3478,12 +3478,14 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
     FC_TIME_INIT(t2);
 
     try {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") size of topoSortedObjects "  << topoSortedObjects.size());
         // maximum two passes to allow some form of dependency inversion
         for(int passes=0; passes<2 && idx<topoSortedObjects.size(); ++passes) {
             std::unique_ptr<Base::SequencerLauncher> seq;
             if(canAbort)
                 seq.reset(new Base::SequencerLauncher("Recompute...", topoSortedObjects.size()));
-            FC_LOG("Recompute pass " << passes);
+            FC_MSG("Recompute pass " << passes);
+           // FC_LOG("Recompute pass " << passes);
             for (; idx < topoSortedObjects.size(); ++idx) {
                 auto obj = topoSortedObjects[idx];
                 if(!obj->getNameInDocument() || filter.find(obj)!=filter.end())
@@ -3491,10 +3493,12 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
                 // ask the object if it should be recomputed
                 bool doRecompute = false;
                 if (obj->mustRecompute()) {
+                    FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") must recompute " << idx);
                     doRecompute = true;
                     ++objectCount;
                     int res = _recomputeFeature(obj);
                     if(res) {
+                        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
                         if(hasError)
                             *hasError = true;
                         if(res < 0) {
@@ -3738,16 +3742,24 @@ const char * Document::getErrorDescription(const App::DocumentObject*Obj) const
 // call the recompute of the Feature and handle the exceptions and errors.
 int Document::_recomputeFeature(DocumentObject* Feat)
 {
-    FC_LOG("Recomputing " << Feat->getFullName());
+    FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")  " << "Recomputing " << Feat->getFullName());
 
     DocumentObjectExecReturn  *returnCode = 0;
     try {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         returnCode = Feat->ExpressionEngine.execute(PropertyExpressionEngine::ExecuteNonOutput);
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         if (returnCode == DocumentObject::StdReturn) {
+            FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
             returnCode = Feat->recompute();
-            if(returnCode == DocumentObject::StdReturn)
+            FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+            if (returnCode == DocumentObject::StdReturn) {
                 returnCode = Feat->ExpressionEngine.execute(PropertyExpressionEngine::ExecuteOutput);
+                FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+            }
+            FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         }
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
     }
     catch(Base::AbortException &e){
         e.ReportException();
