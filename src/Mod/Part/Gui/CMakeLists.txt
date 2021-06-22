@@ -119,6 +119,7 @@ SET(PartGui_SRCS
     CommandSimple.cpp
     CommandParametric.cpp
     CommandLayItemWithGeo.cpp
+    CommandGenerateLinearSolid.cpp
     CrossSections.cpp
     CrossSections.h
     CrossSections.ui

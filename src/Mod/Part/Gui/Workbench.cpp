@@ -188,6 +188,10 @@ Gui::ToolBarItem* Workbench::setupToolBars() const
     layItem->setCommand("LayItem");
     *layItem << "Part_LayCylinder" << "Part_LayBox";
 
+    Gui::ToolBarItem* generateLinearSolid = new Gui::ToolBarItem(root);
+    generateLinearSolid->setCommand("GenerateLinearSolid");
+    *generateLinearSolid << "Part_GenerateLinearSolid";
+
     Gui::ToolBarItem* tool = new Gui::ToolBarItem(root);
     tool->setCommand("Part tools");
     *tool << "Part_Extrude"

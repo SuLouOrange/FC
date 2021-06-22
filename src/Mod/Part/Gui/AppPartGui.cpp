@@ -78,6 +78,7 @@ void CreatePartCommands(void);
 void CreateSimplePartCommands(void);
 void CreateParamPartCommands(void);
 void CreateLayPartCommands(void);
+void CreatePartGenerateLinearSolidCommands(void);
 
 void loadPartResource()
 {
@@ -217,6 +218,7 @@ PyMOD_INIT_FUNC(PartGui)
     CreateSimplePartCommands();
     CreateParamPartCommands();
     CreateLayPartCommands();
+    CreatePartGenerateLinearSolidCommands();
     try{
         Py::Object ae = Base::Interpreter().runStringObject("__import__('AttachmentEditor.Commands').Commands");
         Py::Module(partGuiModule).setAttr(std::string("AttachmentEditor"),ae);
