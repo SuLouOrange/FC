@@ -15,6 +15,7 @@
 
 
 #include <Mod/Sketcher/App/SketchObject.h>
+#include <Mod/Sketcher/App/Constraint.h>
 #include <Mod/Part/App/Geometry.h>
 
 //to do precompile
@@ -92,7 +93,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
 
     activeDoc->addObject(pSketchObject);
-#if 0 // GUI相关 显示dialog
+#if 0// GUI相关 显示dialog
     Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
     if (!activeGui) {
         FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
@@ -105,7 +106,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
     }
     activeGui->setEdit(pVp);
 #endif   
-    //create  line segment
+    //create  line segments
     std::vector<Part::GeomLineSegment*> vecLineSegment;
     for (int i = 0; i < 4; i++) {
         Part::GeomLineSegment* p = new  Part::GeomLineSegment();
@@ -117,9 +118,26 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
     vecLineSegment[2]->setPoints(Base::Vector3d(-50, -50, 0), Base::Vector3d(-50, 50, 0));
     vecLineSegment[3]->setPoints(Base::Vector3d(-50, 50, 0), Base::Vector3d(50, 50, 0));
 
+    
     for (int i = 0; i < vecLineSegment.size(); i++)
         pSketchObject->addGeometry(vecLineSegment[i]);
 
+
+    //create constraints
+    std::vector<Sketcher::Constraint*> vecConstraint;
+    for (int i = 0; i < 1; i++) {
+        Sketcher::Constraint* p = new  Sketcher::Constraint();
+        vecConstraint.push_back(p);
+    }
+
+    int i = 0;
+    vecConstraint[i]->First = 0;
+    vecConstraint[i]->FirstPos = Sketcher::PointPos::end;
+    vecConstraint[i]->Second = 1;
+    vecConstraint[i]->SecondPos = Sketcher::PointPos::start;
+    vecConstraint[i]->Type = Sketcher::ConstraintType::Coincident;
+
+    pSketchObject->addConstraints(vecConstraint);
 
 #if 0
     //2.add cb
