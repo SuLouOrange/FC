@@ -9,14 +9,14 @@
 
 #include <Gui/InventorAll.h>
 #include <Gui/View3DInventor.h>
+#include <Gui/ViewProvider.h>
 
 #include <App/Document.h>
 
 
-//#include <Mod/Part/App/FeaturePartBox.h>
-//#include <Mod/Part/App/PrimitiveFeature.h>
-
 #include <Mod/Sketcher/App/SketchObject.h>
+
+FC_LOG_LEVEL_INIT("App", true, true, true)
 
 
 //===========================================================================
@@ -44,19 +44,21 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
     App::Document* activeDoc = App::GetApplication().getActiveDocument();
     if (!activeDoc) {
-        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
         return;
     }
+
+#if 0
     Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
     if (!activeGui) {
-        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         return;
     }
 
     Gui::MDIView* pView = activeGui->getActiveView();
     Gui::View3DInventorViewer* p3DViewer = nullptr;
     if (pView->isDerivedFrom(Gui::View3DInventor::getClassTypeId())) {
-        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         p3DViewer = reinterpret_cast<Gui::View3DInventor*>(pView)->getViewer();
     }
     else {
@@ -65,17 +67,45 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
     }
 
     if (p3DViewer == nullptr) {
-        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         return;
     }
+#endif
 
-    Sketcher::SketchObject* pSketchObject;
+    Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;//默认，xy平面原点
+
+   
+    Base::Vector3d pos(0, 0, 0);
+
+    Base::Vector3d axis(0, 1, 0);//y
+    Base::Rotation rotation(axis, D_PI/2);
+
+    Base::Placement placement(pos, rotation);
+
+    pSketchObject->transformPlacement(placement);
+
+    
+
+
+    activeDoc->addObject(pSketchObject);
+    //activeDoc->setEdit()
+    Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
+    if (!activeGui) {
+        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
+        return;
+    }
+    Gui::ViewProvider* pVp = Gui::Application::Instance->getViewProvider(pSketchObject);
+    if (!pVp) {
+        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
+        return;
+    }
+    activeGui->setEdit(pVp);
 
 #if 0
     //2.add cb
     p3DViewer->addEventCallback(SoEvent::getClassTypeId(), CBFunction<Part::Cylinder>);
 #endif
-    printf("%s(%d)\n", __FUNCTION__, __LINE__);
+    FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
     commitCommand();
     updateActive();
     //runCommand(Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");

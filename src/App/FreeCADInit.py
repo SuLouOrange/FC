@@ -84,7 +84,7 @@ print("global stage Phase cnt", stagePhaseCnt)
 stagePhaseCnt += 1
 print("name of", __name__, dir(__name__))
 print("name of FreeCAD", dir(FreeCAD))
-time.sleep(5)
+#time.sleep(5)
 
 FreeCAD._importFromFreeCAD = removeFromPath
 
