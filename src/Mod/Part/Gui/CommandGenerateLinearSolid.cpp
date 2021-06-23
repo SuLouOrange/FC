@@ -15,6 +15,10 @@
 
 
 #include <Mod/Sketcher/App/SketchObject.h>
+#include <Mod/Part/App/Geometry.h>
+
+//to do precompile
+#include <GC_MakeSegment.hxx>
 
 FC_LOG_LEVEL_INIT("App", true, true, true)
 
@@ -88,7 +92,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
 
     activeDoc->addObject(pSketchObject);
-    //activeDoc->setEdit()
+#if 0 // GUIÏà¹Ø ÏÔÊ¾dialog
     Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
     if (!activeGui) {
         FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
@@ -100,6 +104,22 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
         return;
     }
     activeGui->setEdit(pVp);
+#endif   
+    //create  line segment
+    std::vector<Part::GeomLineSegment*> vecLineSegment;
+    for (int i = 0; i < 4; i++) {
+        Part::GeomLineSegment* p = new  Part::GeomLineSegment();
+        vecLineSegment.push_back(p);
+    }
+  
+    vecLineSegment[0]->setPoints(Base::Vector3d(50, 50, 0), Base::Vector3d(50, -50, 0));
+    vecLineSegment[1]->setPoints(Base::Vector3d(50, -50, 0), Base::Vector3d(-50, -50, 0));
+    vecLineSegment[2]->setPoints(Base::Vector3d(-50, -50, 0), Base::Vector3d(-50, 50, 0));
+    vecLineSegment[3]->setPoints(Base::Vector3d(-50, 50, 0), Base::Vector3d(50, 50, 0));
+
+    for (int i = 0; i < vecLineSegment.size(); i++)
+        pSketchObject->addGeometry(vecLineSegment[i]);
+
 
 #if 0
     //2.add cb
