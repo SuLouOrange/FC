@@ -10,6 +10,7 @@
 #include <Gui/InventorAll.h>
 #include <Gui/View3DInventor.h>
 #include <Gui/ViewProvider.h>
+//#include <Gui/WaitCursor>
 
 #include <App/Document.h>
 
@@ -17,6 +18,7 @@
 #include <Mod/Sketcher/App/SketchObject.h>
 #include <Mod/Sketcher/App/Constraint.h>
 #include <Mod/Part/App/Geometry.h>
+#include <Mod/Part/App/FeatureExtrusion.h>
 
 //to do precompile
 #include <GC_MakeSegment.hxx>
@@ -77,7 +79,8 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
     }
 #endif
 
-    Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;//默认，xy平面原点
+    //1.创建sketcherObj默认，xy平面原点
+    Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;
 
    
     Base::Vector3d pos(0, 0, 0);
@@ -106,7 +109,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
     }
     activeGui->setEdit(pVp);
 #endif   
-    //create  line segments
+    //2.create  line segments
     std::vector<Part::GeomLineSegment*> vecLineSegment;
     for (int i = 0; i < 4; i++) {
         Part::GeomLineSegment* p = new  Part::GeomLineSegment();
@@ -123,21 +126,40 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
         pSketchObject->addGeometry(vecLineSegment[i]);
 
 
-    //create constraints
+    //3.create constraints
     std::vector<Sketcher::Constraint*> vecConstraint;
-    for (int i = 0; i < 1; i++) {
+ 
+    // conincident
+    for (int i = 0; i < 4; i++) {
         Sketcher::Constraint* p = new  Sketcher::Constraint();
         vecConstraint.push_back(p);
+        vecConstraint[i]->First = i;
+        vecConstraint[i]->FirstPos = Sketcher::PointPos::end;
+        int secondId = i + 1;
+        if (i == 3)
+            secondId = 0;
+        vecConstraint[i]->Second = secondId;
+        vecConstraint[i]->SecondPos = Sketcher::PointPos::start;
+        vecConstraint[i]->Type = Sketcher::ConstraintType::Coincident;
     }
-
-    int i = 0;
-    vecConstraint[i]->First = 0;
-    vecConstraint[i]->FirstPos = Sketcher::PointPos::end;
-    vecConstraint[i]->Second = 1;
-    vecConstraint[i]->SecondPos = Sketcher::PointPos::start;
-    vecConstraint[i]->Type = Sketcher::ConstraintType::Coincident;
+    //to do add more constraint
 
     pSketchObject->addConstraints(vecConstraint);
+
+    //4.extrude
+    Part::Extrusion* pExtrusion = new Part::Extrusion;
+    activeDoc->addObject(pExtrusion);
+
+    //4.1:write property
+    pExtrusion->Base.setValue(pSketchObject);
+    pExtrusion->DirMode.setValue("Normal");
+
+    //to check link, maybe there is somthing useful
+
+    pExtrusion->LengthFwd.setValue(1000);
+    pExtrusion->Solid.setValue(true);
+
+
 
 #if 0
     //2.add cb
