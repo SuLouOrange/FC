@@ -13,6 +13,7 @@
 //#include <Gui/WaitCursor>
 
 #include <App/Document.h>
+#include <App/GeofeaturePy.h>
 
 
 #include <Mod/Sketcher/App/SketchObject.h>
@@ -23,7 +24,7 @@
 //to do precompile
 #include <GC_MakeSegment.hxx>
 
-FC_LOG_LEVEL_INIT("App", true, true, true)
+FC_LOG_LEVEL_INIT("", false, true)
 
 
 //===========================================================================
@@ -85,13 +86,41 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
     int i = 0;
     for (auto selObj: vecSelObj) {
-        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") get selObj "<< i++ <<" : " << selObj.FeatName);
+        FC_MSG(__FUNCTION__ << " get selObj " << i << " : " << selObj.FeatName << "; type: " << selObj.TypeName << " * ********");
+        App::DocumentObject* pObject = nullptr;
+        std::string typeStr(selObj.TypeName);
+#if 0
+        std::string typeStr(selObj.TypeName);
+        std::string pyTypeFlag("Py");
+        if (typeStr.find_last_of(pyTypeFlag) == typeStr.size() - pyTypeFlag.size()) {
+            FC_MSG(" selObj " << selObj.FeatName << " is Py object");
+            auto pObject = 
+        }
+
+
+        App::DocumentObject* pObject = selObj.pObject;
+        if (pObject->isDerivedFrom(App::GeoFeaturePy::getClassTypeId()))
+            i++;
+#endif
+        // can't filter some types, for instance rectangle...,maybe subType name is useful
+        std::string aimTypeStr("Part::Part2DObjectPython");
+        if (typeStr == aimTypeStr) {
+            static int j = 0;
+            pObject = selObj.pObject;
+            Part::Part2DObject* p2DObj = reinterpret_cast<Part::Part2DObject*>(selObj.pObject);
+
+           
+            FC_MSG(" get a obj of aimed type : "<< aimTypeStr <<"  " << j++ << " : " << selObj.FeatName << " , to do extrusion on it !!!!!!!!");
+        }
+
+        i++;
     }
 
     if (i == 0) {
-        FC_ERR(__FUNCTION__ << " no selected obj" );
+        FC_ERR(__FUNCTION__ << " no selected obj!" << " end##########");
     }
-
+    else
+        FC_MSG(__FUNCTION__ << " total sel obj number " << i << " end##########");
 #if 0
     //1.创建sketcherObj默认，xy平面原点
     Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;
