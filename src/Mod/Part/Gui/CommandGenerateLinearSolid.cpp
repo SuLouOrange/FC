@@ -1,4 +1,4 @@
-#include "PreCompiled.h"
+Ôªø#include "PreCompiled.h"
 
 
 #include <Gui/Application.h>
@@ -79,7 +79,21 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
     }
 #endif
 
-    //1.¥¥Ω®sketcherObjƒ¨»œ£¨xy∆Ω√Ê‘≠µ„
+    //0.get  lines
+    std::vector<App::DocumentObject*> vecSelectionLineSegment = Gui::Selection().getObjectsOfType(Part::GeomLineSegment::getClassTypeId());
+    std::vector<Gui::SelectionSingleton::SelObj>&& vecSelObj = Gui::Selection().getSelection();
+
+    int i = 0;
+    for (auto selObj: vecSelObj) {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") get selObj "<< i++ <<" : " << selObj.FeatName);
+    }
+
+    if (i == 0) {
+        FC_ERR(__FUNCTION__ << " no selected obj" );
+    }
+
+#if 0
+    //1.ÂàõÂª∫sketcherObjÈªòËÆ§ÔºåxyÂπ≥Èù¢ÂéüÁÇπ
     Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;
 
    
@@ -87,6 +101,8 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
     Base::Vector3d axis(0, 1, 0);//y
     Base::Rotation rotation(axis, D_PI/2);
+
+    //make a skether out of a line,to handle the rotation
 
     Base::Placement placement(pos, rotation);
 
@@ -96,7 +112,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
 
     activeDoc->addObject(pSketchObject);
-#if 0// GUIœ‡πÿ œ‘ ædialog
+#if 0// GUIÁõ∏ÂÖ≥ ÊòæÁ§∫dialog
     Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
     if (!activeGui) {
         FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
@@ -159,7 +175,9 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
     pExtrusion->LengthFwd.setValue(1000);
     pExtrusion->Solid.setValue(true);
 
+    //end
 
+#endif
 
 #if 0
     //2.add cb
