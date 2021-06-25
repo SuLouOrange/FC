@@ -39,10 +39,6 @@ Base::Vector3d getOrthonormalVector3(const Base::Vector3d& vec) {
     for (int i = 0; i < 3; ++i)
         if (std::abs(vec[i]) < std::abs(vec[imin]))
             imin = i;
-
-    //float v2[3] = { 0,0,0 };
-    //float dt = vec[imin];
-
     resultVec[imin] = 1;
 
     for (int i = 0; i < 3; i++)
@@ -105,24 +101,25 @@ int fAddItemsToSkecher(Sketcher::SketchObject* pSketchObject) {
     return 0;
 }
 
-int fMakeExtrusion(Sketcher::SketchObject* pSketchObject) {
+
+//does unit need to adapt?
+int fMakeExtrusion(Sketcher::SketchObject* pSketchObject, double length) {
     FC_MSG("");
     App::Document* activeDoc = App::GetApplication().getActiveDocument();
     if (!activeDoc) {
         FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
         return 1;
     }
-    //4.extrude
     Part::Extrusion* pExtrusion = new Part::Extrusion;
     activeDoc->addObject(pExtrusion);
 
-    //4.1:write property
+    //write property
     pExtrusion->Base.setValue(pSketchObject);
     pExtrusion->DirMode.setValue("Normal");
 
     //to check link, maybe there is somthing useful
-
-    pExtrusion->LengthFwd.setValue(80);
+  
+    pExtrusion->LengthFwd.setValue(length);
     pExtrusion->Solid.setValue(true);
     return 0;
 }
@@ -212,27 +209,32 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
             Part::Part2DObject* p2DObj = reinterpret_cast<Part::Part2DObject*>(selObj.pObject);
 
             //to make a s skecher plane
-           //1.get placement
+           //1.get global position
             Base::Placement basePlacement = p2DObj->globalPlacement();
             FC_MSG(" get a obj of aimed type : "<< aimTypeStr <<"  " << j++ << " : " << selObj.FeatName << " , to do extrusion on it !!!!!!!!");
             Base::Vector3d posGlobal = basePlacement.getPosition();
-            FC_MSG("it't pos in global (" << posGlobal[0] << ", " << posGlobal[1] << ", " << posGlobal[2] << ") ");
+            FC_MSG("its pos in global (" << posGlobal[0] << ", " << posGlobal[1] << ", " << posGlobal[2] << ") ");
 
 #if 0
             std::vector<App::Property*> list;
             list.clear();
             p2DObj->extensionGetPropertyList(list);
 #endif
-            //2.get normal vector
-            App::Property* pStartRawProperty, * pEndRawProperty;
+            //2.get normal vector, length;
+            App::Property* pStartRawProperty, * pEndRawProperty, * pRawLengthProperty;
             pStartRawProperty = p2DObj->getPropertyByName("Start");
             pEndRawProperty = p2DObj->getPropertyByName("End");
+            pRawLengthProperty = p2DObj->getPropertyByName("Length");
 
             App::PropertyVectorDistance* pStartPosProperty, * pEndPosProperty;
-            //Base::Type type = pStartPosProperty->getTypeId();
-            //const char * typeName = type.getName();
+            App::PropertyLength* pLengthProperty;
+#if 1
+            Base::Type type = pRawLengthProperty->getTypeId();
+            const char * typeName = type.getName();
+#endif
             pStartPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pStartRawProperty);
             pEndPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pEndRawProperty);
+            pLengthProperty = reinterpret_cast<App::PropertyLength*>(pRawLengthProperty);
 
             Base::Vector3d dirVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
             //Base::Vector3d normalVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
@@ -241,10 +243,9 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
             FC_MSG("direction normal vector (" << dirVector[0] << ", " << dirVector[1] << ", " << dirVector[2] << ") ");
 
 
-            //sketcher
+            //3.make sketcher
             Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;
 
-            Base::Vector3d axis(0, 1, 0);//y
             Base::Rotation rotation = getRotationOutNormalVec(dirVector);
             Base::Placement placement(posGlobal, rotation);
 
@@ -267,8 +268,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
 
             fAddItemsToSkecher(pSketchObject);
-
-            fMakeExtrusion(pSketchObject);
+            fMakeExtrusion(pSketchObject, pLengthProperty->getValue());
 
 #if 0
             std::map<std::string, App::Property*> map;
