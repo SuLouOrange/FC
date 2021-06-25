@@ -23,10 +23,112 @@
 
 //to do precompile
 #include <GC_MakeSegment.hxx>
+# include <gp_Pln.hxx>
+# include <gp_Pnt.hxx>
 
 FC_LOG_LEVEL_INIT("", false, true)
 
+static int fAddItemsToSkecher(Sketcher::SketchObject* pSketchObject);
+static int fMakeExtrusion(Sketcher::SketchObject* pSketchObject);
+static Base::Vector3d getOrthonormalVector3(const Base::Vector3d& vec);
+static Base::Rotation getRotationOutNormalVec(const Base::Vector3d& normaUnitVec);
 
+Base::Vector3d getOrthonormalVector3(const Base::Vector3d& vec) {
+    Base::Vector3d resultVec;
+    int imin = 0;
+    for (int i = 0; i < 3; ++i)
+        if (std::abs(vec[i]) < std::abs(vec[imin]))
+            imin = i;
+
+    //float v2[3] = { 0,0,0 };
+    //float dt = vec[imin];
+
+    resultVec[imin] = 1;
+
+    for (int i = 0; i < 3; i++)
+        resultVec[i] -= vec[imin] * vec[i];
+    return resultVec;
+}
+
+Base::Rotation getRotationOutNormalVec(const Base::Vector3d& normaUnitVec) {
+
+    const Base::Vector3d v3 = normaUnitVec;//v3 as z axis
+    auto v1 = getOrthonormalVector3(v3);
+    auto v2 = v3.Cross(v1);
+
+    Base::Matrix4D matrix4D(v1[0], v2[0], v3[0], 0, \
+                            v1[1], v2[1], v3[1], 0, \
+                            v1[2], v2[2], v3[2], 0, \
+                             0, 0, 0, 1);
+    return Base::Rotation(matrix4D);
+}
+
+
+int fAddItemsToSkecher(Sketcher::SketchObject* pSketchObject) {
+    FC_MSG("");
+    std::vector<Part::GeomLineSegment*> vecLineSegment;
+    for (int i = 0; i < 4; i++) {
+        Part::GeomLineSegment* p = new  Part::GeomLineSegment();
+        vecLineSegment.push_back(p);
+    }
+
+    int edgeLength = 20;
+    vecLineSegment[0]->setPoints(Base::Vector3d(edgeLength, edgeLength, 0), Base::Vector3d(edgeLength, -edgeLength, 0));
+    vecLineSegment[1]->setPoints(Base::Vector3d(edgeLength, -edgeLength, 0), Base::Vector3d(-edgeLength, -edgeLength, 0));
+    vecLineSegment[2]->setPoints(Base::Vector3d(-edgeLength, -edgeLength, 0), Base::Vector3d(-edgeLength, edgeLength, 0));
+    vecLineSegment[3]->setPoints(Base::Vector3d(-edgeLength, edgeLength, 0), Base::Vector3d(edgeLength, edgeLength, 0));
+
+
+    for (int i = 0; i < vecLineSegment.size(); i++)
+        pSketchObject->addGeometry(vecLineSegment[i]);
+
+
+    //3.create constraints
+    std::vector<Sketcher::Constraint*> vecConstraint;
+
+    // conincident
+    for (int i = 0; i < 4; i++) {
+        Sketcher::Constraint* p = new  Sketcher::Constraint();
+        vecConstraint.push_back(p);
+        vecConstraint[i]->First = i;
+        vecConstraint[i]->FirstPos = Sketcher::PointPos::end;
+        int secondId = i + 1;
+        if (i == 3)
+            secondId = 0;
+        vecConstraint[i]->Second = secondId;
+        vecConstraint[i]->SecondPos = Sketcher::PointPos::start;
+        vecConstraint[i]->Type = Sketcher::ConstraintType::Coincident;
+    }
+    //to do add more constraint
+
+    pSketchObject->addConstraints(vecConstraint);
+    return 0;
+}
+
+int fMakeExtrusion(Sketcher::SketchObject* pSketchObject) {
+    FC_MSG("");
+    App::Document* activeDoc = App::GetApplication().getActiveDocument();
+    if (!activeDoc) {
+        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
+        return 1;
+    }
+    //4.extrude
+    Part::Extrusion* pExtrusion = new Part::Extrusion;
+    activeDoc->addObject(pExtrusion);
+
+    //4.1:write property
+    pExtrusion->Base.setValue(pSketchObject);
+    pExtrusion->DirMode.setValue("Normal");
+
+    //to check link, maybe there is somthing useful
+
+    pExtrusion->LengthFwd.setValue(80);
+    pExtrusion->Solid.setValue(true);
+    return 0;
+}
+
+
+//
 //===========================================================================
 // Part_GenerateLinearSolid
 //===========================================================================
@@ -109,10 +211,71 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
             pObject = selObj.pObject;
             Part::Part2DObject* p2DObj = reinterpret_cast<Part::Part2DObject*>(selObj.pObject);
 
-           
+            //to make a s skecher plane
+           //1.get placement
+            Base::Placement basePlacement = p2DObj->globalPlacement();
             FC_MSG(" get a obj of aimed type : "<< aimTypeStr <<"  " << j++ << " : " << selObj.FeatName << " , to do extrusion on it !!!!!!!!");
-        }
+            Base::Vector3d posGlobal = basePlacement.getPosition();
+            FC_MSG("it't pos in global (" << posGlobal[0] << ", " << posGlobal[1] << ", " << posGlobal[2] << ") ");
 
+#if 0
+            std::vector<App::Property*> list;
+            list.clear();
+            p2DObj->extensionGetPropertyList(list);
+#endif
+            //2.get normal vector
+            App::Property* pStartRawProperty, * pEndRawProperty;
+            pStartRawProperty = p2DObj->getPropertyByName("Start");
+            pEndRawProperty = p2DObj->getPropertyByName("End");
+
+            App::PropertyVectorDistance* pStartPosProperty, * pEndPosProperty;
+            //Base::Type type = pStartPosProperty->getTypeId();
+            //const char * typeName = type.getName();
+            pStartPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pStartRawProperty);
+            pEndPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pEndRawProperty);
+
+            Base::Vector3d dirVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
+            //Base::Vector3d normalVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
+            dirVector = dirVector.Normalize();
+
+            FC_MSG("direction normal vector (" << dirVector[0] << ", " << dirVector[1] << ", " << dirVector[2] << ") ");
+
+
+            //sketcher
+            Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;
+
+            Base::Vector3d axis(0, 1, 0);//y
+            Base::Rotation rotation = getRotationOutNormalVec(dirVector);
+            Base::Placement placement(posGlobal, rotation);
+
+            pSketchObject->transformPlacement(placement);
+#if 0
+            //3.make skecher
+            BRepBuilderAPI_MakeFace builder(gp_Pln(gp_Pnt(posGlobal[0], posGlobal[1], posGlobal[2]), gp_Dir(dirVector[0], dirVector[0], dirVector[0])));
+            if (!builder.IsDone())
+                return;
+            TopoDS_Shape myShape = builder.Shape();
+            myShape.Infinite(Standard_True);
+            //Shape.setValue(myShape);
+           
+
+
+          
+            pSketchObject->Shape.setValue(myShape);
+#endif
+            activeDoc->addObject(pSketchObject);
+
+
+            fAddItemsToSkecher(pSketchObject);
+
+            fMakeExtrusion(pSketchObject);
+
+#if 0
+            std::map<std::string, App::Property*> map;
+            map.clear();
+            p2DObj->getPropertyMap(map);
+#endif         
+        }
         i++;
     }
 
@@ -137,75 +300,6 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
     pSketchObject->transformPlacement(placement);
 
-    
-
-
-    activeDoc->addObject(pSketchObject);
-#if 0// GUI相关 显示dialog
-    Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
-    if (!activeGui) {
-        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
-        return;
-    }
-    Gui::ViewProvider* pVp = Gui::Application::Instance->getViewProvider(pSketchObject);
-    if (!pVp) {
-        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
-        return;
-    }
-    activeGui->setEdit(pVp);
-#endif   
-    //2.create  line segments
-    std::vector<Part::GeomLineSegment*> vecLineSegment;
-    for (int i = 0; i < 4; i++) {
-        Part::GeomLineSegment* p = new  Part::GeomLineSegment();
-        vecLineSegment.push_back(p);
-    }
-  
-    vecLineSegment[0]->setPoints(Base::Vector3d(50, 50, 0), Base::Vector3d(50, -50, 0));
-    vecLineSegment[1]->setPoints(Base::Vector3d(50, -50, 0), Base::Vector3d(-50, -50, 0));
-    vecLineSegment[2]->setPoints(Base::Vector3d(-50, -50, 0), Base::Vector3d(-50, 50, 0));
-    vecLineSegment[3]->setPoints(Base::Vector3d(-50, 50, 0), Base::Vector3d(50, 50, 0));
-
-    
-    for (int i = 0; i < vecLineSegment.size(); i++)
-        pSketchObject->addGeometry(vecLineSegment[i]);
-
-
-    //3.create constraints
-    std::vector<Sketcher::Constraint*> vecConstraint;
- 
-    // conincident
-    for (int i = 0; i < 4; i++) {
-        Sketcher::Constraint* p = new  Sketcher::Constraint();
-        vecConstraint.push_back(p);
-        vecConstraint[i]->First = i;
-        vecConstraint[i]->FirstPos = Sketcher::PointPos::end;
-        int secondId = i + 1;
-        if (i == 3)
-            secondId = 0;
-        vecConstraint[i]->Second = secondId;
-        vecConstraint[i]->SecondPos = Sketcher::PointPos::start;
-        vecConstraint[i]->Type = Sketcher::ConstraintType::Coincident;
-    }
-    //to do add more constraint
-
-    pSketchObject->addConstraints(vecConstraint);
-
-    //4.extrude
-    Part::Extrusion* pExtrusion = new Part::Extrusion;
-    activeDoc->addObject(pExtrusion);
-
-    //4.1:write property
-    pExtrusion->Base.setValue(pSketchObject);
-    pExtrusion->DirMode.setValue("Normal");
-
-    //to check link, maybe there is somthing useful
-
-    pExtrusion->LengthFwd.setValue(1000);
-    pExtrusion->Solid.setValue(true);
-
-    //end
-
 #endif
 
 #if 0
@@ -224,6 +318,11 @@ bool CmdPartGenerateLinearSolid::isActive(void)
         return true;
     else
         return false;
+}
+
+Sketcher::SketchObject* fMakeSkecherPlane(Part::Part2DObject* pBaseObj) {
+    //
+    return nullptr;
 }
 
 

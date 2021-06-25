@@ -31,7 +31,9 @@
 #endif
 
 #include "DatumPlane.h"
+#include <Base/Console.h>
 
+FC_LOG_LEVEL_INIT("", false, true)
 using namespace PartDesign;
 using namespace Attacher;
 
@@ -89,6 +91,7 @@ void Plane::Restore(Base::XMLReader& reader)
 
 void Plane::onChanged(const App::Property *prop)
 {
+    FC_MSG( prop->getFullName() << " changed!");
     if (prop == &ResizeMode) {
         if (ResizeMode.getValue() == 0) {
             Length.setReadOnly(true);

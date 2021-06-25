@@ -42,6 +42,7 @@ std::string GroupExtensionPy::representation(void) const
 
 PyObject*  GroupExtensionPy::newObject(PyObject *args)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     char *sType,*sName=0;
     if (!PyArg_ParseTuple(args, "s|s", &sType,&sName))     // convert args: Python->C
         return NULL;
