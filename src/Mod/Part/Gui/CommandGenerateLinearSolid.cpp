@@ -29,7 +29,7 @@
 FC_LOG_LEVEL_INIT("", false, true)
 
 static int fAddItemsToSkecher(Sketcher::SketchObject* pSketchObject);
-static Part::Extrusion* fMakeExtrusion(Sketcher::SketchObject* pSketchObject);
+static Part::Extrusion* fMakeExtrusion(Sketcher::SketchObject* pSketchObject, double length);
 static Base::Vector3d getOrthonormalVector3(const Base::Vector3d& vec);
 static Base::Rotation getRotationOutNormalVec(const Base::Vector3d& normaUnitVec);
 
@@ -212,7 +212,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
             //to make a s skecher plane
            //1.get global position
             Base::Placement basePlacement = p2DObj->globalPlacement();
-            FC_MSG(" get a obj of aimed type : "<< aimTypeStr <<"  " << validNum++ << " : " << selObj.FeatName << " , to do extrusion on it !!!!!!!!");
+            FC_MSG(" get a obj of aimed type : "<< aimTypeStr <<"  " << validNum << " : " << selObj.FeatName << " , to do extrusion on it !!!!!!!!");
             Base::Vector3d posGlobal = basePlacement.getPosition();
             FC_MSG("its pos in global (" << posGlobal[0] << ", " << posGlobal[1] << ", " << posGlobal[2] << ") ");
 
@@ -222,30 +222,41 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
             p2DObj->extensionGetPropertyList(list);
 #endif
             //2.get normal vector, length;
-            App::Property* pStartRawProperty, * pEndRawProperty, * pRawLengthProperty;
+            App::Property* pStartRawProperty, * pEndRawProperty, * pRawLengthProperty, * pPointsPropertyRaw;
             pStartRawProperty = p2DObj->getPropertyByName("Start");
             pEndRawProperty = p2DObj->getPropertyByName("End");
             pRawLengthProperty = p2DObj->getPropertyByName("Length");
-            if (pRawLengthProperty == nullptr || pStartRawProperty == nullptr || pEndRawProperty == nullptr) {
+            pPointsPropertyRaw = p2DObj->getPropertyByName("Points");
+            if (pRawLengthProperty == nullptr || pStartRawProperty == nullptr || pEndRawProperty == nullptr || pPointsPropertyRaw == nullptr) {
                 FC_WARN(" not valid obj: " << p2DObj->getNameInDocument());
+                selObjNum++;
                 continue;
             }
 
             App::PropertyVectorDistance* pStartPosProperty, * pEndPosProperty;
             App::PropertyLength* pLengthProperty;
+            App::PropertyVectorList* pPointList;
 #if 1
-            Base::Type type = pRawLengthProperty->getTypeId();
+            Base::Type type = pPointsPropertyRaw->getTypeId();
             const char * typeName = type.getName();
 #endif
             pStartPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pStartRawProperty);
             pEndPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pEndRawProperty);
             pLengthProperty = reinterpret_cast<App::PropertyLength*>(pRawLengthProperty);
+            pPointList = reinterpret_cast<App::PropertyVectorList*>(pPointsPropertyRaw);
+
 
             Base::Vector3d dirVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
             //Base::Vector3d normalVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
             dirVector = dirVector.Normalize();
 
             FC_MSG("direction normal vector (" << dirVector[0] << ", " << dirVector[1] << ", " << dirVector[2] << ") ");
+
+            if (pPointList->getSize() != 2) {
+                FC_ERR(p2DObj->getNameInDocument() << " not a two points obj!" << " end##########");
+                selObjNum++;
+                continue;
+            }
 
 
             //3.make sketcher
@@ -265,6 +276,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
                 FC_MSG(validNum << ".create  " << pExtrusion->getNameInDocument() << " of type " << pExtrusion->getTypeId().getName() << " and "\
                     << pSketchObject->getNameInDocument() << " of type " << pSketchObject->getTypeId().getName() << " based on " << p2DObj->getNameInDocument()\
                     << ",the length of " << pExtrusion->getNameInDocument() << " is " << pLengthProperty->getValue() << pLengthProperty->getUnit().getString().toUtf8().constData());
+                validNum++;
             }
 
 #if 0
@@ -274,7 +286,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 #endif         
         }
         selObjNum++;
-    }
+    }//for loop
 
     if (!selObjNum) {
         FC_ERR(__FUNCTION__ << " no selected obj!" << " end##########");
@@ -298,10 +310,6 @@ bool CmdPartGenerateLinearSolid::isActive(void)
         return false;
 }
 
-Sketcher::SketchObject* fMakeSkecherPlane(Part::Part2DObject* pBaseObj) {
-    //
-    return nullptr;
-}
 
 
 void CreatePartGenerateLinearSolidCommands(void)
