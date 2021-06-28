@@ -190,7 +190,7 @@ Gui::ToolBarItem* Workbench::setupToolBars() const
 
     Gui::ToolBarItem* generateLinearSolid = new Gui::ToolBarItem(root);
     generateLinearSolid->setCommand("GenerateLinearSolid");
-    *generateLinearSolid << "Part_GenerateLinearSolid";
+    *generateLinearSolid << "Part_GenerateLinearSolid" << "Part_DrawLinearSolid";
 
     Gui::ToolBarItem* tool = new Gui::ToolBarItem(root);
     tool->setCommand("Part tools");

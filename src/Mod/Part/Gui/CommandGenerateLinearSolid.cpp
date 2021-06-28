@@ -125,6 +125,8 @@ Part::Extrusion* fMakeExtrusion(Sketcher::SketchObject* pSketchObject, double le
 }
 
 
+
+
 //
 //===========================================================================
 // Part_GenerateLinearSolid
@@ -311,10 +313,199 @@ bool CmdPartGenerateLinearSolid::isActive(void)
 }
 
 
+//
+//===========================================================================
+// Part_DrawLinearSolid
+//===========================================================================
+DEF_STD_CMD_A(CmdPartDrawLinearSolid)
+
+
+CmdPartDrawLinearSolid::CmdPartDrawLinearSolid()
+    : Command("Part_DrawLinearSolid")
+{
+    sAppModule = "Part";
+    sGroup = QT_TR_NOOP("Part");
+    sMenuText = QT_TR_NOOP("DrawLinearSolid");
+    sToolTipText = QT_TR_NOOP("Draw a Linear Solid");
+    sWhatsThis = "Part_DrawLinearSolid";
+    sStatusTip = sToolTipText;
+    sPixmap = "Part_DrawLinearSolid";
+}
+
+void CmdPartDrawLinearSolid::activated(int iMsg)
+{
+    Q_UNUSED(iMsg);
+
+
+    App::Document* activeDoc = App::GetApplication().getActiveDocument();
+    if (!activeDoc) {
+        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
+        return;
+    }
+
+#if 0
+    Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
+    if (!activeGui) {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+        return;
+    }
+
+    Gui::MDIView* pView = activeGui->getActiveView();
+    Gui::View3DInventorViewer* p3DViewer = nullptr;
+    if (pView->isDerivedFrom(Gui::View3DInventor::getClassTypeId())) {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+        p3DViewer = reinterpret_cast<Gui::View3DInventor*>(pView)->getViewer();
+    }
+    else {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        return;
+    }
+
+    if (p3DViewer == nullptr) {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+        return;
+    }
+#endif
+
+    //0.get  lines
+    std::vector<App::DocumentObject*> vecSelectionLineSegment = Gui::Selection().getObjectsOfType(Part::GeomLineSegment::getClassTypeId());
+    std::vector<Gui::SelectionSingleton::SelObj>&& vecSelObj = Gui::Selection().getSelection();
+
+    int selObjNum, validNum;
+    selObjNum = validNum = 0;
+    for (auto selObj : vecSelObj) {
+        FC_MSG(__FUNCTION__ << " get selObj " << selObjNum << " : " << selObj.FeatName << "; type: " << selObj.TypeName << " * ********");
+        App::DocumentObject* pObject = nullptr;
+        std::string typeStr(selObj.TypeName);
+#if 0
+        std::string typeStr(selObj.TypeName);
+        std::string pyTypeFlag("Py");
+        if (typeStr.find_last_of(pyTypeFlag) == typeStr.size() - pyTypeFlag.size()) {
+            FC_MSG(" selObj " << selObj.FeatName << " is Py object");
+            auto pObject =
+        }
+
+
+        App::DocumentObject* pObject = selObj.pObject;
+        if (pObject->isDerivedFrom(App::GeoFeaturePy::getClassTypeId()))
+            i++;
+#endif
+        // can't filter some types, for instance rectangle...,maybe subType name is useful
+        std::string aimTypeStr("Part::Part2DObjectPython");
+        if (typeStr == aimTypeStr) {
+
+            pObject = selObj.pObject;
+            Part::Part2DObject* p2DObj = reinterpret_cast<Part::Part2DObject*>(selObj.pObject);
+
+            //to make a s skecher plane
+           //1.get global position
+            Base::Placement basePlacement = p2DObj->globalPlacement();
+            FC_MSG(" get a obj of aimed type : " << aimTypeStr << "  " << validNum << " : " << selObj.FeatName << " , to do extrusion on it !!!!!!!!");
+            Base::Vector3d posGlobal = basePlacement.getPosition();
+            FC_MSG("its pos in global (" << posGlobal[0] << ", " << posGlobal[1] << ", " << posGlobal[2] << ") ");
+
+#if 0
+            std::vector<App::Property*> list;
+            list.clear();
+            p2DObj->extensionGetPropertyList(list);
+#endif
+            //2.get normal vector, length;
+            App::Property* pStartRawProperty, * pEndRawProperty, * pRawLengthProperty, * pPointsPropertyRaw;
+            pStartRawProperty = p2DObj->getPropertyByName("Start");
+            pEndRawProperty = p2DObj->getPropertyByName("End");
+            pRawLengthProperty = p2DObj->getPropertyByName("Length");
+            pPointsPropertyRaw = p2DObj->getPropertyByName("Points");
+            if (pRawLengthProperty == nullptr || pStartRawProperty == nullptr || pEndRawProperty == nullptr || pPointsPropertyRaw == nullptr) {
+                FC_WARN(" not valid obj: " << p2DObj->getNameInDocument());
+                selObjNum++;
+                continue;
+            }
+
+            App::PropertyVectorDistance* pStartPosProperty, * pEndPosProperty;
+            App::PropertyLength* pLengthProperty;
+            App::PropertyVectorList* pPointList;
+#if 1
+            Base::Type type = pPointsPropertyRaw->getTypeId();
+            const char* typeName = type.getName();
+#endif
+            pStartPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pStartRawProperty);
+            pEndPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pEndRawProperty);
+            pLengthProperty = reinterpret_cast<App::PropertyLength*>(pRawLengthProperty);
+            pPointList = reinterpret_cast<App::PropertyVectorList*>(pPointsPropertyRaw);
+
+
+            Base::Vector3d dirVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
+            //Base::Vector3d normalVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
+            dirVector = dirVector.Normalize();
+
+            FC_MSG("direction normal vector (" << dirVector[0] << ", " << dirVector[1] << ", " << dirVector[2] << ") ");
+
+            if (pPointList->getSize() != 2) {
+                FC_ERR(p2DObj->getNameInDocument() << " not a two points obj!" << " end##########");
+                selObjNum++;
+                continue;
+            }
+
+
+            //3.make sketcher
+            Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;
+
+            Base::Rotation rotation = getRotationOutNormalVec(dirVector);
+            Base::Placement placement(posGlobal, rotation);
+
+            pSketchObject->transformPlacement(placement);
+            activeDoc->addObject(pSketchObject);
+
+
+            fAddItemsToSkecher(pSketchObject);
+            Part::Extrusion* pExtrusion = fMakeExtrusion(pSketchObject, pLengthProperty->getValue());
+            if (pExtrusion)
+            {
+                FC_MSG(validNum << ".create  " << pExtrusion->getNameInDocument() << " of type " << pExtrusion->getTypeId().getName() << " and "\
+                    << pSketchObject->getNameInDocument() << " of type " << pSketchObject->getTypeId().getName() << " based on " << p2DObj->getNameInDocument()\
+                    << ",the length of " << pExtrusion->getNameInDocument() << " is " << pLengthProperty->getValue() << pLengthProperty->getUnit().getString().toUtf8().constData());
+                validNum++;
+            }
+
+#if 0
+            std::map<std::string, App::Property*> map;
+            map.clear();
+            p2DObj->getPropertyMap(map);
+#endif         
+        }
+        selObjNum++;
+    }//for loop
+
+    if (!selObjNum) {
+        FC_ERR(__FUNCTION__ << " no selected obj!" << " end##########");
+    }
+    else if (!validNum)
+        FC_ERR(" no valid obj!" << " end##########");
+    else
+        FC_MSG(" total sel obj number " << selObjNum << ", total " << validNum << " valid object.  end##########");
+
+    FC_MSG("(" << __LINE__ << ")");
+    commitCommand();
+    updateActive();
+    //runCommand(Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");
+}
+
+bool CmdPartDrawLinearSolid::isActive(void)
+{
+    if (getActiveGuiDocument())
+        return true;
+    else
+        return false;
+}
+
+
 
 void CreatePartGenerateLinearSolidCommands(void)
 {
     Gui::CommandManager& rcCmdMgr = Gui::Application::Instance->commandManager();
     rcCmdMgr.addCommand(new CmdPartGenerateLinearSolid());
+    rcCmdMgr.addCommand(new CmdPartDrawLinearSolid());
     printf("%s(%d)\n", __FUNCTION__, __LINE__);
 }
+
+
