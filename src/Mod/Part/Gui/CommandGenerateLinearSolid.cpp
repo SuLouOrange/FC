@@ -319,6 +319,69 @@ bool CmdPartGenerateLinearSolid::isActive(void)
 //===========================================================================
 DEF_STD_CMD_A(CmdPartDrawLinearSolid)
 
+typedef struct {
+    int pointIndex;
+    Base::Vector3d firstPointVec;
+    void reset() {
+        pointIndex = 0;
+        firstPointVec = Base::Vector3d(0, 0, 0);
+    }
+}controlData;
+static controlData cmdData;
+
+static int drawAction(Base::Vector3d p1, Base::Vector3d p2);
+Base::Vector3d parsePoint(const SbVec2s & vec2, Gui::View3DInventorViewer* pViewer){
+    Base::Vector3d point;
+    SbPlane horizonZero(SbVec3f(0, 0, 1), SbVec3f(0, 0, 0));
+
+    SbVec3f focalPoint = pViewer->getPointOnScreen(vec2);
+
+    
+    SbLine viewLine;
+    viewLine.setPosDir(focalPoint, pViewer->getViewDirection());
+    SbVec3f zeroPoint;
+    if (horizonZero.intersect(viewLine, zeroPoint)) {
+        focalPoint = zeroPoint;
+    }
+
+    point.x = focalPoint[0];
+    point.y = focalPoint[1];
+    point.z = focalPoint[2];
+    FC_MSG("get point success (" << point.x << ", " << point.y << ", " << point.z << ")");
+    return point;
+}
+
+void callBackFunc(void* ud, SoEventCallback* n) {
+    FC_MSG("start");
+    Gui::View3DInventorViewer* pViewer = reinterpret_cast<Gui::View3DInventorViewer*>(n->getUserData());
+    Base::Vector3d Vec3d(0,0,0);
+    const SoEvent* pSoEvent = n->getEvent();
+    const SoType SoEventType(pSoEvent->getTypeId());
+
+    bool IsMouse = SoEventType.isDerivedFrom(SoMouseButtonEvent::getClassTypeId());
+    if (IsMouse && SO_MOUSE_PRESS_EVENT(pSoEvent, BUTTON1)) {
+        const SoMouseButtonEvent* pMouseEvent = reinterpret_cast<const SoMouseButtonEvent*>(pSoEvent);
+        if (pMouseEvent->getState() == SoButtonEvent::DOWN) {
+            const SbVec2s pos(pMouseEvent->getPosition());
+            Vec3d = parsePoint(pos, pViewer);
+            if (cmdData.pointIndex == 0) {
+                cmdData.firstPointVec = Vec3d;
+                cmdData.pointIndex++;
+            }
+            else if (cmdData.pointIndex == 1) {
+                drawAction(cmdData.firstPointVec, Vec3d);
+                pViewer->removeEventCallback(SoEvent::getClassTypeId(), callBackFunc);
+            }
+        }
+    }
+    return;
+
+}
+
+int drawAction(Base::Vector3d p1, Base::Vector3d p2) {
+    FC_MSG(__FUNCTION__ << "start");
+    return 0;
+}
 
 CmdPartDrawLinearSolid::CmdPartDrawLinearSolid()
     : Command("Part_DrawLinearSolid")
@@ -342,8 +405,9 @@ void CmdPartDrawLinearSolid::activated(int iMsg)
         FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
         return;
     }
+    cmdData.reset();
 
-#if 0
+#if 1
     Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
     if (!activeGui) {
         FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
@@ -365,129 +429,12 @@ void CmdPartDrawLinearSolid::activated(int iMsg)
         FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         return;
     }
+
+    p3DViewer->addEventCallback(SoEvent::getClassTypeId(),callBackFunc);
 #endif
 
-    //0.get  lines
-    std::vector<App::DocumentObject*> vecSelectionLineSegment = Gui::Selection().getObjectsOfType(Part::GeomLineSegment::getClassTypeId());
-    std::vector<Gui::SelectionSingleton::SelObj>&& vecSelObj = Gui::Selection().getSelection();
+  
 
-    int selObjNum, validNum;
-    selObjNum = validNum = 0;
-    for (auto selObj : vecSelObj) {
-        FC_MSG(__FUNCTION__ << " get selObj " << selObjNum << " : " << selObj.FeatName << "; type: " << selObj.TypeName << " * ********");
-        App::DocumentObject* pObject = nullptr;
-        std::string typeStr(selObj.TypeName);
-#if 0
-        std::string typeStr(selObj.TypeName);
-        std::string pyTypeFlag("Py");
-        if (typeStr.find_last_of(pyTypeFlag) == typeStr.size() - pyTypeFlag.size()) {
-            FC_MSG(" selObj " << selObj.FeatName << " is Py object");
-            auto pObject =
-        }
-
-
-        App::DocumentObject* pObject = selObj.pObject;
-        if (pObject->isDerivedFrom(App::GeoFeaturePy::getClassTypeId()))
-            i++;
-#endif
-        // can't filter some types, for instance rectangle...,maybe subType name is useful
-        std::string aimTypeStr("Part::Part2DObjectPython");
-        if (typeStr == aimTypeStr) {
-
-            pObject = selObj.pObject;
-            Part::Part2DObject* p2DObj = reinterpret_cast<Part::Part2DObject*>(selObj.pObject);
-
-            //to make a s skecher plane
-           //1.get global position
-            Base::Placement basePlacement = p2DObj->globalPlacement();
-            FC_MSG(" get a obj of aimed type : " << aimTypeStr << "  " << validNum << " : " << selObj.FeatName << " , to do extrusion on it !!!!!!!!");
-            Base::Vector3d posGlobal = basePlacement.getPosition();
-            FC_MSG("its pos in global (" << posGlobal[0] << ", " << posGlobal[1] << ", " << posGlobal[2] << ") ");
-
-#if 0
-            std::vector<App::Property*> list;
-            list.clear();
-            p2DObj->extensionGetPropertyList(list);
-#endif
-            //2.get normal vector, length;
-            App::Property* pStartRawProperty, * pEndRawProperty, * pRawLengthProperty, * pPointsPropertyRaw;
-            pStartRawProperty = p2DObj->getPropertyByName("Start");
-            pEndRawProperty = p2DObj->getPropertyByName("End");
-            pRawLengthProperty = p2DObj->getPropertyByName("Length");
-            pPointsPropertyRaw = p2DObj->getPropertyByName("Points");
-            if (pRawLengthProperty == nullptr || pStartRawProperty == nullptr || pEndRawProperty == nullptr || pPointsPropertyRaw == nullptr) {
-                FC_WARN(" not valid obj: " << p2DObj->getNameInDocument());
-                selObjNum++;
-                continue;
-            }
-
-            App::PropertyVectorDistance* pStartPosProperty, * pEndPosProperty;
-            App::PropertyLength* pLengthProperty;
-            App::PropertyVectorList* pPointList;
-#if 1
-            Base::Type type = pPointsPropertyRaw->getTypeId();
-            const char* typeName = type.getName();
-#endif
-            pStartPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pStartRawProperty);
-            pEndPosProperty = reinterpret_cast<App::PropertyVectorDistance*>(pEndRawProperty);
-            pLengthProperty = reinterpret_cast<App::PropertyLength*>(pRawLengthProperty);
-            pPointList = reinterpret_cast<App::PropertyVectorList*>(pPointsPropertyRaw);
-
-
-            Base::Vector3d dirVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
-            //Base::Vector3d normalVector(pEndPosProperty->getValue() - pStartPosProperty->getValue());
-            dirVector = dirVector.Normalize();
-
-            FC_MSG("direction normal vector (" << dirVector[0] << ", " << dirVector[1] << ", " << dirVector[2] << ") ");
-
-            if (pPointList->getSize() != 2) {
-                FC_ERR(p2DObj->getNameInDocument() << " not a two points obj!" << " end##########");
-                selObjNum++;
-                continue;
-            }
-
-
-            //3.make sketcher
-            Sketcher::SketchObject* pSketchObject = new Sketcher::SketchObject;
-
-            Base::Rotation rotation = getRotationOutNormalVec(dirVector);
-            Base::Placement placement(posGlobal, rotation);
-
-            pSketchObject->transformPlacement(placement);
-            activeDoc->addObject(pSketchObject);
-
-
-            fAddItemsToSkecher(pSketchObject);
-            Part::Extrusion* pExtrusion = fMakeExtrusion(pSketchObject, pLengthProperty->getValue());
-            if (pExtrusion)
-            {
-                FC_MSG(validNum << ".create  " << pExtrusion->getNameInDocument() << " of type " << pExtrusion->getTypeId().getName() << " and "\
-                    << pSketchObject->getNameInDocument() << " of type " << pSketchObject->getTypeId().getName() << " based on " << p2DObj->getNameInDocument()\
-                    << ",the length of " << pExtrusion->getNameInDocument() << " is " << pLengthProperty->getValue() << pLengthProperty->getUnit().getString().toUtf8().constData());
-                validNum++;
-            }
-
-#if 0
-            std::map<std::string, App::Property*> map;
-            map.clear();
-            p2DObj->getPropertyMap(map);
-#endif         
-        }
-        selObjNum++;
-    }//for loop
-
-    if (!selObjNum) {
-        FC_ERR(__FUNCTION__ << " no selected obj!" << " end##########");
-    }
-    else if (!validNum)
-        FC_ERR(" no valid obj!" << " end##########");
-    else
-        FC_MSG(" total sel obj number " << selObjNum << ", total " << validNum << " valid object.  end##########");
-
-    FC_MSG("(" << __LINE__ << ")");
-    commitCommand();
-    updateActive();
-    //runCommand(Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");
 }
 
 bool CmdPartDrawLinearSolid::isActive(void)
