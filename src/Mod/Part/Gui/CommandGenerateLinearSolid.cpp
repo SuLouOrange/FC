@@ -238,7 +238,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
             App::PropertyVectorDistance* pStartPosProperty, * pEndPosProperty;
             App::PropertyLength* pLengthProperty;
             App::PropertyVectorList* pPointList;
-#if 1
+#if 0
             Base::Type type = pPointsPropertyRaw->getTypeId();
             const char * typeName = type.getName();
 #endif

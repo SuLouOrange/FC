@@ -49,7 +49,7 @@ import draftguitools.gui_edit_draft_objects as edit_draft
 import draftguitools.gui_edit_arch_objects as edit_arch
 import draftguitools.gui_edit_part_objects as edit_part
 import draftguitools.gui_edit_sketcher_objects as edit_sketcher
-
+App.Console.PrintWarning("draft workbench Initialize,after import edit_sketcher\n")
 from draftutils.translate import translate
 
 COLORS = {
@@ -241,9 +241,11 @@ class Edit(gui_base_original.Modifier):
         self.ghost = None
 
         # setup gui_tools for every supported object
+        App.Console.PrintWarning("draft workbench Initialize,before add DraftWireGuiTools\n")
         self.gui_tools_repository = GuiToolsRepository()
 
         self.gui_tools_repository.add('Wire', edit_draft.DraftWireGuiTools())
+        App.Console.PrintWarning("draft workbench Initialize,after add DraftWireGuiTools\n")
         self.gui_tools_repository.add('BSpline', edit_draft.DraftBSplineGuiTools())
         self.gui_tools_repository.add('BezCurve', edit_draft.DraftBezCurveGuiTools())
         self.gui_tools_repository.add('Circle', edit_draft.DraftCircleGuiTools())
@@ -267,6 +269,7 @@ class Edit(gui_base_original.Modifier):
         self.gui_tools_repository.add('Part::Sphere', edit_part.PartSphereGuiTools())
 
         self.gui_tools_repository.add('Sketcher::SketchObject', edit_sketcher.SketcherSketchObjectGuiTools())
+        App.Console.PrintWarning("draft workbench Initialize,gui_edit init end\n")
 
 
     def GetResources(self):

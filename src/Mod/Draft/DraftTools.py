@@ -46,9 +46,13 @@ import FreeCAD
 import FreeCADGui
 from FreeCAD import Vector
 
+FreeCAD.Console.PrintWarning("draftTools, before import Draft\n")
 import Draft
+FreeCAD.Console.PrintWarning("draftTools, after import Draft\n")
 import Draft_rc
+FreeCAD.Console.PrintWarning("draftTools, after import Draft_rc\n")
 import DraftGui  # Initializes the DraftToolBar class
+FreeCAD.Console.PrintWarning("draftTools, after import DraftGui\n")
 import DraftVecUtils
 import WorkingPlane
 from draftutils.todo import ToDo
@@ -74,7 +78,9 @@ if not hasattr(FreeCAD, "DraftWorkingPlane"):
 # ---------------------------------------------------------------------------
 # Commands that have been migrated to their own modules
 # ---------------------------------------------------------------------------
+FreeCAD.Console.PrintWarning("draftTools, before import draftguitools.gui_edit\n")
 import draftguitools.gui_edit
+FreeCAD.Console.PrintWarning("draftTools, after import draftguitools.gui_edit\n")
 import draftguitools.gui_selectplane
 import draftguitools.gui_setstyle
 import draftguitools.gui_planeproxy
