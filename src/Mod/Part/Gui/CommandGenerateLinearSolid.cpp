@@ -380,6 +380,19 @@ void callBackFunc(void* ud, SoEventCallback* n) {
 
 int drawAction(Base::Vector3d p1, Base::Vector3d p2) {
     FC_MSG(__FUNCTION__ << "start");
+    App::Document* activeDoc = App::GetApplication().getActiveDocument();
+    if (!activeDoc) {
+        FC_ERR(__FUNCTION__);
+        return;
+    }
+#if 0
+    Part::Part2DObject * p2dObj = new Part::Part2DObject;
+    Part::GeomLineSegment* p = new  Part::GeomLineSegment();
+    p->setPoints(p1, p2);
+    activeDoc->addObject(p);
+#endif
+
+
     return 0;
 }
 
@@ -402,7 +415,7 @@ void CmdPartDrawLinearSolid::activated(int iMsg)
 
     App::Document* activeDoc = App::GetApplication().getActiveDocument();
     if (!activeDoc) {
-        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
+        FC_ERR(__FUNCTION__);
         return;
     }
     cmdData.reset();
@@ -410,30 +423,28 @@ void CmdPartDrawLinearSolid::activated(int iMsg)
 #if 1
     Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
     if (!activeGui) {
-        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+        FC_ERR(__FUNCTION__);
         return;
     }
 
     Gui::MDIView* pView = activeGui->getActiveView();
     Gui::View3DInventorViewer* p3DViewer = nullptr;
     if (pView->isDerivedFrom(Gui::View3DInventor::getClassTypeId())) {
-        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+        FC_MSG(__FUNCTION__ );
         p3DViewer = reinterpret_cast<Gui::View3DInventor*>(pView)->getViewer();
     }
     else {
-        printf("%s(%d)\n", __FUNCTION__, __LINE__);
+        FC_ERR(__FUNCTION__);
         return;
     }
 
     if (p3DViewer == nullptr) {
-        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+        FC_ERR(__FUNCTION__ );
         return;
     }
 
     p3DViewer->addEventCallback(SoEvent::getClassTypeId(),callBackFunc);
 #endif
-
-  
 
 }
 
@@ -452,7 +463,7 @@ void CreatePartGenerateLinearSolidCommands(void)
     Gui::CommandManager& rcCmdMgr = Gui::Application::Instance->commandManager();
     rcCmdMgr.addCommand(new CmdPartGenerateLinearSolid());
     rcCmdMgr.addCommand(new CmdPartDrawLinearSolid());
-    printf("%s(%d)\n", __FUNCTION__, __LINE__);
+    FC_MSG(__FUNCTION__);
 }
 
 

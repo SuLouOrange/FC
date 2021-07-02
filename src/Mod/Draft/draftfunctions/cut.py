@@ -28,7 +28,9 @@
 ## \addtogroup draftfuctions
 # @{
 import FreeCAD as App
+App.Console.PrintWarning("before import  draftutils.gui_utils\n")
 import draftutils.gui_utils as gui_utils
+App.Console.PrintWarning("after import  draftutils.gui_utils\n")
 
 from draftutils.translate import translate
 from draftutils.messages import _err
@@ -68,5 +70,6 @@ def cut(object1, object2):
         object2.ViewObject.Visibility = False
 
     return obj
+App.Console.PrintWarning("cut end\n")
 
 ## @}

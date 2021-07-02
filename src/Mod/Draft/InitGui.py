@@ -88,7 +88,7 @@ class DraftWorkbench(FreeCADGui.Workbench):
             FreeCAD.Console.PrintWarning("draft workbench Initialize,after import Draft_rc\n")
             import DraftTools
             FreeCAD.Console.PrintWarning("draft workbench Initialize,after import DraftTools\n")
-            import DraftGui
+            import DraftGui#do many
             FreeCAD.Console.PrintWarning("draft workbench Initialize,after import DraftGui\n")
             import DraftFillet
             FreeCADGui.addLanguagePath(":/translations")

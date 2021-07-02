@@ -33,7 +33,7 @@ defined in `DraftTools.py`.
 #  @{
 
 import FreeCAD as App
-
+App.Console.PrintWarning("draft 1\n")
 if App.GuiUp:
     import Draft_rc
     gui = True
@@ -46,11 +46,13 @@ __title__ = "FreeCAD Draft Workbench"
 __author__ = ("Yorik van Havre, Werner Mayer, Martin Burbaum, Ken Cline, "
               "Dmitry Chigrin, Daniel Falck")
 __url__ = "https://www.freecadweb.org"
-
+App.Console.PrintWarning("draft 2\n")
 # ---------------------------------------------------------------------------
 # Utility functions
 # ---------------------------------------------------------------------------
+
 from draftutils.utils import ARROW_TYPES as arrowtypes
+App.Console.PrintWarning("draft 3\n")
 
 from draftutils.utils import (type_check,
                               typecheck,
@@ -63,7 +65,7 @@ from draftutils.utils import (type_check,
                               precision,
                               tolerance,
                               epsilon)
-
+App.Console.PrintWarning("draft 4\n")
 from draftutils.utils import (get_real_name,
                               getRealName,
                               get_type,
@@ -83,7 +85,7 @@ from draftutils.utils import (get_real_name,
                               filterObjectsForModifiers,
                               is_closed_edge,
                               isClosedEdge)
-
+App.Console.PrintWarning("draft 5\n")
 from draftutils.utils import (string_encode_coin,
                               stringencodecoin,
                               load_svg_patterns,
@@ -95,10 +97,10 @@ from draftutils.utils import (string_encode_coin,
 
 from draftfunctions.svg import (get_svg,
                                 getSVG)
-
+App.Console.PrintWarning("draft 6\n")
 from draftfunctions.dxf import (get_dxf,
                                 getDXF)
-
+App.Console.PrintWarning("draft 7\n")
 from draftutils.gui_utils import (get3DView,
                                   get_3d_view,
                                   autogroup,
@@ -114,12 +116,12 @@ from draftutils.gui_utils import (get3DView,
                                   loadTexture,
                                   load_texture,
                                   get_bbox)
-
+App.Console.PrintWarning("draft 8\n")
 from draftutils.gui_utils import (dim_symbol,
                                   dimSymbol,
                                   dim_dash,
                                   dimDash)
-
+App.Console.PrintWarning("draft 9\n")
 from draftutils.groups import (get_group_names,
                                getGroupNames,
                                ungroup,
@@ -132,18 +134,23 @@ from draftutils.groups import (get_group_names,
 # Draft functions
 # ---------------------------------------------------------------------------
 from draftfunctions.array import array
-
+App.Console.PrintWarning("draft 10\n")
 from draftfunctions.cut import cut
-
+App.Console.PrintWarning("draft 10.1\n")
 from draftfunctions.downgrade import downgrade
+App.Console.PrintWarning("draft 10.2\n")
 
 from draftfunctions.draftify import draftify
+App.Console.PrintWarning("draft 10.3\n")
 
 from draftfunctions.extrude import extrude
+App.Console.PrintWarning("draft 10.4\n")
 
 from draftfunctions.fuse import fuse
+App.Console.PrintWarning("draft 10.5\n")
 
 from draftfunctions.heal import heal
+App.Console.PrintWarning("draft 10.6\n")
 
 from draftfunctions.move import (move,
                                  move_vertex,
@@ -152,7 +159,7 @@ from draftfunctions.move import (move,
                                  moveEdge,
                                  copy_moved_edges,
                                  copyMovedEdges)
-
+App.Console.PrintWarning("draft 10.7\n")
 from draftfunctions.rotate import (rotate,
                                    rotate_vertex,
                                    rotateVertex,
@@ -160,7 +167,7 @@ from draftfunctions.rotate import (rotate,
                                    rotateEdge,
                                    copy_rotated_edges,
                                    copyRotatedEdges)
-
+App.Console.PrintWarning("draft 10.8\n")
 from draftfunctions.scale import (scale,
                                   scale_vertex,
                                   scaleVertex,
@@ -168,12 +175,12 @@ from draftfunctions.scale import (scale,
                                   scaleEdge,
                                   copy_scaled_edges,
                                   copyScaledEdges)
-
+App.Console.PrintWarning("draft 10.9\n")
 from draftfunctions.join import (join_wires,
                                  joinWires,
                                  join_two_wires,
                                  joinTwoWires)
-
+App.Console.PrintWarning("draft 10.10\n")
 from draftfunctions.split import split
 
 from draftfunctions.offset import offset
@@ -181,7 +188,7 @@ from draftfunctions.offset import offset
 from draftfunctions.mirror import mirror
 
 from draftfunctions.upgrade import upgrade
-
+App.Console.PrintWarning("draft 11\n")
 
 # ---------------------------------------------------------------------------
 # Draft objects
@@ -231,6 +238,7 @@ from draftobjects.rectangle import (Rectangle,
                                     _Rectangle)
 from draftmake.make_rectangle import (make_rectangle,
                                       makeRectangle)
+App.Console.PrintWarning("draft 12\n")
 
 if App.GuiUp:
     from draftviewproviders.view_rectangle import (ViewProviderRectangle,
@@ -250,6 +258,7 @@ from draftmake.make_line import (make_line,
                                  makeLine)
 from draftmake.make_wire import (make_wire,
                                  makeWire)
+App.Console.PrintWarning("draft 13\n")
 
 if App.GuiUp:
     from draftviewproviders.view_wire import (ViewProviderWire,
@@ -321,7 +330,7 @@ from draftobjects.pointarray import (PointArray,
                                      _PointArray)
 from draftmake.make_pointarray import (make_point_array,
                                        makePointArray)
-
+App.Console.PrintWarning("draft 14\n")
 if App.GuiUp:
     from draftviewproviders.view_array import (ViewProviderDraftArray,
                                                _ViewProviderDraftArray)
@@ -353,7 +362,7 @@ from draftobjects.shape2dview import (Shape2DView,
                                       _Shape2DView)
 from draftmake.make_shape2dview import (make_shape2dview,
                                         makeShape2DView)
-
+App.Console.PrintWarning("draft 15\n")
 # sketch
 from draftmake.make_sketch import (make_sketch,
                                    makeSketch)
@@ -394,7 +403,7 @@ from draftmake.make_dimension import (make_dimension,
                                       make_radial_dimension_obj,
                                       make_angular_dimension,
                                       makeAngularDimension)
-
+App.Console.PrintWarning("draft 16\n")
 if App.GuiUp:
     from draftviewproviders.view_dimension \
         import (ViewProviderLinearDimension,
@@ -417,9 +426,9 @@ from draftmake.make_text import (make_text,
                                  makeText,
                                  convert_draft_texts,
                                  convertDraftTexts)
-
+App.Console.PrintWarning("draft 17\n")
 if App.GuiUp:
     from draftviewproviders.view_text import (ViewProviderText,
                                               ViewProviderDraftText)
-
+App.Console.PrintWarning("draft 18\n")
 ## @}

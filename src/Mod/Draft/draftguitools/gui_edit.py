@@ -269,7 +269,7 @@ class Edit(gui_base_original.Modifier):
         self.gui_tools_repository.add('Part::Sphere', edit_part.PartSphereGuiTools())
 
         self.gui_tools_repository.add('Sketcher::SketchObject', edit_sketcher.SketcherSketchObjectGuiTools())
-        App.Console.PrintWarning("draft workbench Initialize,gui_edit init end\n")
+        App.Console.PrintWarning("class edit init end\n")
 
 
     def GetResources(self):
