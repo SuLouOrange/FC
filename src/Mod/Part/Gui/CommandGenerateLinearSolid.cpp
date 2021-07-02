@@ -383,7 +383,7 @@ int drawAction(Base::Vector3d p1, Base::Vector3d p2) {
     App::Document* activeDoc = App::GetApplication().getActiveDocument();
     if (!activeDoc) {
         FC_ERR(__FUNCTION__);
-        return;
+        return 1;
     }
 #if 0
     Part::Part2DObject * p2dObj = new Part::Part2DObject;

@@ -27,8 +27,10 @@ __doc__ = "Basic shapes"
 
 
 import Part
+import FreeCAD
 
 def makeTube(outerRadius, innerRadius, height):
+    FreeCAD.Console.PrintWarning("JY makeTube\n")
     outer_cylinder = Part.makeCylinder(outerRadius, height)
     shape = outer_cylinder
     if innerRadius > 0 and innerRadius < outerRadius:
@@ -46,6 +48,7 @@ class TubeFeature:
         obj.addExtension("Part::AttachExtensionPython")
 
     def execute(self, fp):
+        FreeCAD.Console.PrintWarning("JY tubeFeature execute\n")
         if fp.InnerRadius >= fp.OuterRadius:
             raise ValueError("Inner radius must be smaller than outer radius")
         fp.Shape = makeTube(fp.OuterRadius, fp.InnerRadius, fp.Height)
