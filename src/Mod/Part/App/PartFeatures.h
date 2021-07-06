@@ -92,7 +92,7 @@ private:
     static App::PropertyIntegerConstraint::Constraints Degrees;
 };
 
-class Sweep : public Part::Feature
+class PartExport Sweep : public Part::Feature
 {
     PROPERTY_HEADER(Part::Sweep);
 

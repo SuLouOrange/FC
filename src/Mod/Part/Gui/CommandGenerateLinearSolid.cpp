@@ -20,6 +20,7 @@
 #include <Mod/Sketcher/App/Constraint.h>
 #include <Mod/Part/App/Geometry.h>
 #include <Mod/Part/App/FeatureExtrusion.h>
+#include <Mod/Part/App/PartFeatures.h>
 
 //to do precompile
 #include <GC_MakeSegment.hxx>
@@ -30,8 +31,10 @@ FC_LOG_LEVEL_INIT("", false, true)
 
 static int fAddItemsToSkecher(Sketcher::SketchObject* pSketchObject);
 static Part::Extrusion* fMakeExtrusion(Sketcher::SketchObject* pSketchObject, double length);
+static Part::Sweep* fMakeSweep(Sketcher::SketchObject* pSketchObject, App::DocumentObject* pSpineObj);
 static Base::Vector3d getOrthonormalVector3(const Base::Vector3d& vec);
 static Base::Rotation getRotationOutNormalVec(const Base::Vector3d& normaUnitVec);
+
 
 Base::Vector3d getOrthonormalVector3(const Base::Vector3d& vec) {
     Base::Vector3d resultVec;
@@ -125,6 +128,22 @@ Part::Extrusion* fMakeExtrusion(Sketcher::SketchObject* pSketchObject, double le
 }
 
 
+Part::Sweep* fMakeSweep(Sketcher::SketchObject* pSketchObject, App::DocumentObject *pSpineObj) {
+    FC_MSG("");
+    App::Document* activeDoc = App::GetApplication().getActiveDocument();
+    if (!activeDoc) {
+        FC_ERR(__FUNCTION__ << "(" << __LINE__ << ")");
+        return nullptr;
+    }
+    Part::Sweep* pSweep = new Part::Sweep;
+    activeDoc->addObject(pSweep);
+
+    pSweep->Sections.setValue(pSketchObject);
+    pSweep->Spine.setValue(pSpineObj);
+  
+    pSweep->Solid.setValue(true);
+    return pSweep;
+}
 
 
 //
@@ -272,6 +291,7 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
 
 
             fAddItemsToSkecher(pSketchObject);
+#if 0
             Part::Extrusion *pExtrusion = fMakeExtrusion(pSketchObject, pLengthProperty->getValue());
             if(pExtrusion)
             {
@@ -280,6 +300,10 @@ void CmdPartGenerateLinearSolid::activated(int iMsg)
                     << ",the length of " << pExtrusion->getNameInDocument() << " is " << pLengthProperty->getValue() << pLengthProperty->getUnit().getString().toUtf8().constData());
                 validNum++;
             }
+#else
+            Part::Sweep* pSweep = fMakeSweep(pSketchObject, p2DObj);
+            
+#endif
 
 #if 0
             std::map<std::string, App::Property*> map;
