@@ -57,9 +57,9 @@ class CommandTube:
         vp = ViewProviderShapes.ViewProviderTube(tube.ViewObject)
         FreeCAD.ActiveDocument.recompute()
         FreeCAD.Console.PrintWarning("JY ****waiting for excuting vp.startDefaultEditMode(tube.ViewObject) ****\n")
-        time.sleep(10)
+        #time.sleep(10)
         FreeCAD.Console.PrintWarning("JY ****excuting vp.startDefaultEditMode(tube.ViewObject) finish ****\n")
-        vp.startDefaultEditMode(tube.ViewObject)
+        #vp.startDefaultEditMode(tube.ViewObject)
 
     def IsActive(self):
         return not FreeCAD.ActiveDocument is None

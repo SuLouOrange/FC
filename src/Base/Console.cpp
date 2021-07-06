@@ -421,6 +421,13 @@ int *ConsoleSingleton::GetLogLevel(const char *tag, bool create) {
     return &ret;
 }
 
+void ConsoleSingleton::SetLogLevel(const char* tag, int level) {
+    if (!tag)
+        return;
+    _logLevels[tag] = level;
+    return;
+}
+
 void ConsoleSingleton::Refresh() {
     if (_bCanRefresh)
         qApp->processEvents(QEventLoop::ExcludeUserInputEvents);

@@ -74,6 +74,9 @@
 // #include "Resources/icons/Part_FeatureImport.xpm"
 
 // use a different name to CreateCommand()
+
+
+
 void CreatePartCommands(void);
 void CreateSimplePartCommands(void);
 void CreateParamPartCommands(void);
@@ -116,6 +119,7 @@ PyMOD_INIT_FUNC(PartGui)
         PyMOD_Return(0);
     }
 
+    Base::ConsoleSingleton::Instance().SetLogLevel("sweep", FC_LOGLEVEL_TRACE);
     // load needed modules
     try {
         Base::Interpreter().runString("import Part");

@@ -564,6 +564,7 @@ namespace Base {
             void SetConnectionMode(ConnectionMode mode);
 
             int *GetLogLevel(const char *tag, bool create=true);
+            void SetLogLevel(const char* tag, int level);
 
             void SetDefaultLogLevel(int level) {
                 _defaultLogLevel = level;
