@@ -29,6 +29,7 @@
 
 #include "Document.h"
 #include <Base/FileInfo.h>
+#include <Base/Console.h>
 #include "DocumentObject.h"
 #include "DocumentObjectPy.h"
 #include "MergeDocuments.h"
@@ -41,6 +42,8 @@
 
 using namespace App;
 
+const char* logKeyStr = "DocumentPy";
+FC_LOG_LEVEL_INIT(logKeyStr, false, true)
 
 // returns a string which represent the object e.g. when printed in python
 std::string DocumentPy::representation(void) const
@@ -219,6 +222,7 @@ PyObject*  DocumentPy::addObject(PyObject *args, PyObject *kwd)
     if (pcFtr) {
         // Allows to hide the handling with Proxy in client python code
         if (obj) {
+            printf("%s(%d), obj is not null pointer\n", __FUNCTION__, __LINE__);
             try {
                 // the python binding class to the document object
                 Py::Object pyftr = Py::asObject(pcFtr->getPyObject());
@@ -262,6 +266,9 @@ PyObject*  DocumentPy::addObject(PyObject *args, PyObject *kwd)
             catch (Py::Exception& e) {
                 e.clear();
             }
+        }
+        else {
+            printf("%s(%d), obj is null pointer\n", __FUNCTION__, __LINE__);
         }
         return pcFtr->getPyObject();
     }

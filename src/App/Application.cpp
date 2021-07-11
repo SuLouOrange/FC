@@ -262,6 +262,8 @@ Application::Application(std::map<std::string,std::string> &mConfig)
     mpcPramManager["System parameter"] = _pcSysParamMngr;
     mpcPramManager["User parameter"] = _pcUserParamMngr;
 
+
+
     auto mod = getImportModules();
     if (!mod.empty())
         for_each(mod.begin(), mod.end(), [=](const std::string& str) { static int cnt = 0; printf("imported module %d: %s\n", ++cnt, str.c_str()); });
@@ -411,6 +413,7 @@ Application::Application(std::map<std::string,std::string> &mConfig)
     Base::Vector2dPy::init_type();
     Base::Interpreter().addType(Base::Vector2dPy::type_object(),
         pBaseModule,"Vector2d");
+
 }
 
 Application::~Application()

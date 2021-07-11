@@ -39,6 +39,8 @@
 #include <Base/GeometryPyCXX.h>
 #include <Base/VectorPy.h>
 
+
+
 using namespace Part;
 
 extern const char* gce_ErrorStatusText(gce_ErrorType et);
