@@ -6,6 +6,9 @@
 #include <Gui/MainWindow.h>
 #include <Gui/View3DInventorViewer.h>
 #include <Gui/Document.h>
+#include <Gui/ToolBarManager.h>
+#include <Gui/WorkbenchManager.h>
+#include <Gui/Workbench.h>
 
 #include <Gui/InventorAll.h>
 #include <Gui/View3DInventor.h>
@@ -15,6 +18,13 @@
 
 #include <Mod/Part/App/FeaturePartBox.h>
 #include <Mod/Part/App/PrimitiveFeature.h>
+
+#include <Base/Console.h>
+
+static const char* logKey = "CommandLayItemWithGeo";
+
+FC_LOG_LEVEL_INIT(logKey, false, true)
+
 
 template<typename objType>
 void CBFunction(void* ud, SoEventCallback* n) {
@@ -130,6 +140,35 @@ void CmdPartLayCylinder::activated(int iMsg)
         return;
     }
 
+    using namespace std;
+    //remove tool bar
+    Gui::Workbench* pCurWorkbench = Gui::WorkbenchManager::instance()->active();
+    //std::list<std::string> toolBarList = pCurWorkbench->listToolbars();
+    std::list<std::pair<std::string, std::list<std::string>>> toolBarCMD = pCurWorkbench->getToolbarItems();
+
+    std::list<std::string> toReplaceCMDList;
+    const string aimGroupStr = "GenerateLinearSolid";
+    for (auto CMD_group : toolBarCMD) {
+        if (CMD_group.first == aimGroupStr) {
+            toReplaceCMDList = CMD_group.second;
+            break;
+        }
+    }
+
+    if (toReplaceCMDList.empty())
+        FC_WARN("not find aim command group: " << aimGroupStr);
+    else {
+        int cnt = 0;
+        for (auto cmd : toReplaceCMDList) {
+            FC_MSG(" tool bar " << cnt++ << ":" << cmd << " to be replaced");
+        }
+    }
+    
+
+        
+    //Gui::ToolBarManager* pToolBarManager = Gui::ToolBarManager::getInstance();
+
+    
     //2.add cb
     p3DViewer->addEventCallback(SoEvent::getClassTypeId(), CBFunction<Part::Cylinder>);
 

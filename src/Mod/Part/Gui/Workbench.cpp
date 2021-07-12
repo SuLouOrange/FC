@@ -33,6 +33,7 @@
 
 using namespace PartGui;
 
+
 #if 0 // needed for Qt's lupdate utility
     qApp->translate("Workbench", "&Part");
     qApp->translate("Workbench", "&Simple");
