@@ -97,6 +97,7 @@ short Feature::mustExecute(void) const
 
 App::DocumentObjectExecReturn *Feature::recompute(void)
 {
+
     try {
         return App::GeoFeature::recompute();
     }

@@ -72,6 +72,8 @@
 #define M_PI       3.14159265358979323846
 #endif
 
+static const char* logKey = "PrimitiveFeature";
+FC_LOG_LEVEL_INIT(logKey, false,true)
 
 namespace Part {
     const App::PropertyQuantityConstraint::Constraints apexRange   = {-90.0,90.0,0.1};
@@ -188,6 +190,8 @@ void Primitive::Restore(Base::XMLReader &reader)
 
 void Primitive::onChanged(const App::Property* prop)
 {
+    printf("%s(%d), %s\n", __FUNCTION__, __LINE__, prop->getFullName().c_str());
+    FC_MSG(prop->getFullName());
     if (!isRestoring()) {
         // Do not support sphere, ellipsoid and torus because the creation
         // takes too long and thus is not feasible
@@ -529,6 +533,20 @@ Cylinder::Cylinder(void)
     ADD_PROPERTY_TYPE(Height,(10.0f),"Cylinder",App::Prop_None,"The height of the cylinder");
     ADD_PROPERTY_TYPE(Angle,(360.0f),"Cylinder",App::Prop_None,"The angle of the cylinder");
     Angle.setConstraints(&angleRangeU);
+}
+
+void Cylinder::onChanged(const App::Property* prop)
+{
+    if (!isRestoring()) {
+        try {
+            App::DocumentObjectExecReturn* ret = recompute();
+            delete ret;
+        }
+        catch (...) {
+        }
+    }
+
+    Part::Feature::onChanged(prop);
 }
 
 short Cylinder::mustExecute() const

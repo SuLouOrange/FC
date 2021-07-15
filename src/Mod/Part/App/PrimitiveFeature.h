@@ -197,6 +197,8 @@ public:
         return "PartGui::ViewProviderCylinderParametric";
     }
     //@}
+protected:
+    void onChanged(const App::Property* prop);
 };
 
 class PartExport Prism : public Primitive
