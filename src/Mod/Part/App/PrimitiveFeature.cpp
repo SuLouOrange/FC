@@ -1,4 +1,4 @@
-/***************************************************************************
+﻿/***************************************************************************
  *   Copyright (c) 2007 Werner Mayer <wmayer[at]users.sourceforge.net>     *
  *                                                                         *
  *   This file is part of the FreeCAD CAx development system.              *
@@ -190,7 +190,6 @@ void Primitive::Restore(Base::XMLReader &reader)
 
 void Primitive::onChanged(const App::Property* prop)
 {
-    printf("%s(%d), %s\n", __FUNCTION__, __LINE__, prop->getFullName().c_str());
     FC_MSG(prop->getFullName());
     if (!isRestoring()) {
         // Do not support sphere, ellipsoid and torus because the creation
@@ -537,12 +536,16 @@ Cylinder::Cylinder(void)
 
 void Cylinder::onChanged(const App::Property* prop)
 {
+
     if (!isRestoring()) {
-        try {
-            App::DocumentObjectExecReturn* ret = recompute();
-            delete ret;
-        }
-        catch (...) {
+        std::string grp = (prop->getGroup() ? prop->getGroup() : "");
+        if (grp == "Cylinder" ) {//排除基类
+            try {
+                App::DocumentObjectExecReturn* ret = recompute();
+                delete ret;
+            }
+            catch (...) {
+            }
         }
     }
 

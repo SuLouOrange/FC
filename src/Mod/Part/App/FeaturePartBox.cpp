@@ -35,6 +35,8 @@
 
 using namespace Part;
 
+static const char* logKey = "FeaturePartBox";
+FC_LOG_LEVEL_INIT(logKey,false,true)
 
 PROPERTY_SOURCE(Part::Box, Part::Primitive)
 
@@ -57,6 +59,7 @@ short Box::mustExecute() const
 
 App::DocumentObjectExecReturn *Box::execute(void)
 {
+    FC_MSG(getFullName());
     double L = Length.getValue();
     double W = Width.getValue();
     double H = Height.getValue();
@@ -225,6 +228,7 @@ void Box::Restore(Base::XMLReader &reader)
 
 void Box::onChanged(const App::Property* prop)
 {
+    FC_MSG(prop->getFullName() << " of " << getFullName());
     if (prop == &Length || prop == &Width || prop == &Height) {
         if (!isRestoring()) {
             App::DocumentObjectExecReturn *ret = recompute();

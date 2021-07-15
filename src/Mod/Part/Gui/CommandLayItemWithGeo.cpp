@@ -244,7 +244,7 @@ void CmdPartLayBox::activated(int iMsg)
 
     printf("%s(%d)\n", __FUNCTION__, __LINE__);
     commitCommand();
-    updateActive();
+   // updateActive();
     //runCommand(Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");
 }
 

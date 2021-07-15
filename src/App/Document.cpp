@@ -4034,7 +4034,9 @@ void Document::addObject(DocumentObject* pcObject, const char* pObjectName)
     // insert in the vector
     d->objectArray.push_back(pcObject);
 
+    FC_MSG("before Label set value to: " << ObjectName);
     pcObject->Label.setValue( ObjectName );
+    FC_MSG("after Label set value to: " << ObjectName);
 
     // mark the object as new (i.e. set status bit 2) and send the signal
     pcObject->setStatus(ObjectStatus::New, true);

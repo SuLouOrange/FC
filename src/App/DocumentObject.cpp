@@ -748,13 +748,17 @@ void DocumentObject::onChanged(const Property* prop)
             && !(prop->getType() & Prop_Output) 
             && !prop->testStatus(Property::Output)) 
     {
+        FC_MSG("obj !NoTouch");
         if(!StatusBits.test(ObjectStatus::Touch)) {
+            FC_MSG("obj not set touch");
             FC_TRACE("touch '" << getFullName() << "' on change of '" << prop->getName() << "'");
             StatusBits.set(ObjectStatus::Touch);
         }
         // must execute on document recompute
-        if (!(prop->getType() & Prop_NoRecompute))
+        if (!(prop->getType() & Prop_NoRecompute)) {
             StatusBits.set(ObjectStatus::Enforce);
+            FC_MSG("set enforce bit");
+        }
     }
 
     //call the parent for appropriate handling

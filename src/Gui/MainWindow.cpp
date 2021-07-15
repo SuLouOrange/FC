@@ -1386,9 +1386,10 @@ void MainWindow::updateActions(bool delay)
     }
 }
 
+static unsigned long long cnt = 0;//add by JiaYangyang 2021.7.15
 void MainWindow::_updateActions()
 {
-    qDebug() << __FUNCTION__ << __LINE__;
+    FC_MSG(cnt++);
     if (isVisible() && d->actionUpdateDelay <= 0) {
         FC_LOG("update actions");
         d->activityTimer->stop();
