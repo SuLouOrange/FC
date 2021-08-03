@@ -799,6 +799,7 @@ DocumentObject *DocumentObject::getSubObject(const char *subname,
     std::string name;
     const char *dot=0;
     if(!subname || !(dot=strchr(subname,'.'))) {
+        FC_MSG("subName is nullptr");
         ret = const_cast<DocumentObject*>(this);
     }else if(subname[0]=='$') {
         name = std::string(subname+1,dot);

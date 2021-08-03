@@ -1044,6 +1044,11 @@ bool SelectionSingleton::addSelection(const char* pDocName, const char* pObjectN
         const char* pSubName, float x, float y, float z, 
         const std::vector<SelObj> *pickedList, bool clearPreselect)
 {
+    if (pSubName) {
+        FC_MSG("subName: " << pSubName);
+    }
+    else
+        FC_MSG("subName: is empty");
     if(pickedList) {
         _PickedList.clear();
         for(const auto &sel : *pickedList) {

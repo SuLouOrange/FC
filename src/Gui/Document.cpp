@@ -303,13 +303,16 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
         return false;
     }
 
+    int i = 0;
     std::string _subname;
     if(!subname || !subname[0]) {
         // No subname reference is given, we try to extract one from the current
         // selection in order to obtain the correct transformation matrix below
         auto sels = Gui::Selection().getCompleteSelection(false);
         App::DocumentObject *parentObj = 0;
+       
         for(auto &sel : sels) {
+            FC_MSG(i++<<": " << sel.FeatName << "; subName:" << sel.SubName);
             if(!sel.pObject || !sel.pObject->getNameInDocument())
                 continue;
             if(!parentObj)
@@ -341,7 +344,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
                 return vp->getDocument()->setEdit(vp,ModNum,subname);
         }
     }
-
+    FC_MSG("exit selection loop i = " << i);
     if (d->_ViewProviderMap.find(obj) == d->_ViewProviderMap.end()) {
         // We can actually support editing external object, by calling
         // View3DInventViewer::setupEditingRoot() before exiting from
@@ -366,7 +369,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
                 << "'" << getDocument()->getName() << "'");
         return false;
     }
-
+    //FC_MSG("subName " << subname); maybe this is a nullptr
     d->_editingTransform = Base::Matrix4D();
     // Geo feature group now handles subname like link group. So no need of the
     // following code.
@@ -378,6 +381,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
     //         d->_editingTransform = ext->globalGroupPlacement().toMatrix();
     //     }
     // }
+
     auto sobj = obj->getSubObject(subname,0,&d->_editingTransform);
     if(!sobj || !sobj->getNameInDocument()) {
         FC_ERR("Invalid sub object '" << obj->getFullName()
@@ -392,6 +396,9 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
             FC_ERR("Cannot edit '" << sobj->getFullName() << "' without view provider");
             return false;
         }
+    }
+    else {
+        FC_MSG("subObj is obj");
     }
 
     View3DInventor *view3d = dynamic_cast<View3DInventor *>(getActiveView());

@@ -6194,6 +6194,9 @@ bool ViewProviderSketch::setEdit(int ModNum)
     // object unsets and sets its edit mode without closing
     // the task panel
     Gui::TaskView::TaskDialog *dlg = Gui::Control().activeDialog();
+    if (!dlg) {
+        FC_MSG("no active dialog");
+    }
     TaskDlgEditSketch *sketchDlg = qobject_cast<TaskDlgEditSketch *>(dlg);
     if (sketchDlg && sketchDlg->getSketchView() != this)
         sketchDlg = 0; // another sketch left open its task panel
