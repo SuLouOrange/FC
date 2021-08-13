@@ -285,7 +285,7 @@ protected:
 MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags f)
   : QMainWindow( parent, f/*WDestructiveClose*/ )
 {
-    qDebug() << __FUNCTION__ << __LINE__ << "start *****************************->";
+    //qDebug() << __FUNCTION__ << __LINE__ << "start *****************************->";
     d = new MainWindowP;
     d->splashscreen = 0;
     d->activeView = 0;
@@ -837,7 +837,7 @@ bool MainWindow::event(QEvent *e)
 bool MainWindow::eventFilter(QObject* o, QEvent* e)
 {
     if(e->type() == QEvent::Enter)
-        qDebug() << __FUNCTION__ << __LINE__ << ":    " << o << " " << e;
+        //qDebug() << __FUNCTION__ << __LINE__ << ":    " << o << " " << e;
     if (o != this) {
         if (e->type() == QEvent::WindowStateChange) {
             // notify all mdi views when the active view receives a show normal, show minimized
@@ -1962,7 +1962,7 @@ void MainWindow::statusMessageChanged() {
 }
 
 void MainWindow::showMessage(const QString& message, int timeout) {
-    qDebug() << __FUNCTION__ << __LINE__ << message;
+    //qDebug() << __FUNCTION__ << __LINE__ << message;
     if(QApplication::instance()->thread() != QThread::currentThread()) {
         QApplication::postEvent(this, new CustomMessageEvent(MainWindow::Tmp,message,timeout));
         return;

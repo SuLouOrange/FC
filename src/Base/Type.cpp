@@ -180,12 +180,12 @@ Type Type::fromName(const char *name)
 
     pos = typemap.find(name);
     if (pos != typemap.end()) {
-        printf("%s(%d), find the type %s\n", __FUNCTION__, __LINE__, name);
+        //printf("%s(%d), find the type %s\n", __FUNCTION__, __LINE__, name);
         return typedata[pos->second]->type;
     }
     else
     {
-        printf("%s(%d), not find name:%s\n", __FUNCTION__, __LINE__, name);
+        //printf("%s(%d), not find name:%s\n", __FUNCTION__, __LINE__, name);
         return Type::badType();
     }
 }
