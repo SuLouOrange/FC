@@ -1518,6 +1518,7 @@ void Document::onBeforeChangeProperty(const TransactionalObject *Who, const Prop
 
 void Document::onChangedProperty(const DocumentObject *Who, const Property *What)
 {
+    FC_MSG(__FUNCTION__<<" " << Who->getNameInDocument() << ", " << What->getFullName());
     signalChangedObject(*Who, *What);
 }
 

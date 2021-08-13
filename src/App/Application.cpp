@@ -1464,6 +1464,7 @@ void Application::slotBeforeChangeObject(const DocumentObject& O, const Property
 
 void Application::slotChangedObject(const App::DocumentObject&O, const App::Property& P)
 {
+    FC_MSG(__FUNCTION__);
     this->signalChangedObject(O,P);
 }
 

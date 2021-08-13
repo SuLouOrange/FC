@@ -1913,7 +1913,7 @@ void MainWindow::loadUrls(App::Document* doc, const QList<QUrl>& urls)
 
 void MainWindow::changeEvent(QEvent *e)
 {
-    qDebug() << __FUNCTION__ << __LINE__;
+    //qDebug() << __FUNCTION__ << __LINE__;
     if (e->type() == QEvent::LanguageChange) {
         d->sizeLabel->setText(tr("Dimension"));
 
