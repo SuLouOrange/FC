@@ -667,13 +667,15 @@ void Document::slotNewObject(const App::DocumentObject& Obj)
     ViewProviderDocumentObject* pcProvider = static_cast<ViewProviderDocumentObject*>(getViewProvider(&Obj));
     if (!pcProvider) {
         //Base::Console().Log("Document::slotNewObject() called\n");
+        FC_MSG("pcProvider is nullptr!");
         std::string cName = Obj.getViewProviderNameStored();
         for(;;) {
             if (cName.empty()) {
                 // handle document object with no view provider specified
-                FC_LOG(Obj.getFullName() << " has no view provider specified");
+                FC_MSG(Obj.getFullName() << " has no view provider specified");
                 return;
             }
+            FC_MSG(Obj.getFullName() << " has view provider name: " << cName);
             Base::BaseClass* base = static_cast<Base::BaseClass*>(
                     Base::Type::createInstanceByName(cName.c_str(),true));
             pcProvider = Base::freecad_dynamic_cast<ViewProviderDocumentObject>(base);

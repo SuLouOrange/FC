@@ -1464,8 +1464,9 @@ void Application::slotBeforeChangeObject(const DocumentObject& O, const Property
 
 void Application::slotChangedObject(const App::DocumentObject&O, const App::Property& P)
 {
-    FC_MSG(__FUNCTION__);
+    FC_MSG(__FUNCTION__ << " App:: Application::signalChangedObject slots number:" << signalChangedObject.num_slots());
     this->signalChangedObject(O,P);
+
 }
 
 void Application::slotRelabelObject(const App::DocumentObject&O)

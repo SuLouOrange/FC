@@ -959,6 +959,7 @@ void Application::slotDeletedObject(const ViewProvider& vp)
 
 void Application::slotChangedObject(const ViewProvider& vp, const App::Property& prop)
 {
+    FC_MSG("test Relax,maybe receive signal from App::Application::signalChangedObject");
     this->signalChangedObject(vp,prop);
     updateActions(true);
 }
