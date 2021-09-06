@@ -338,7 +338,9 @@ void ViewProviderDocumentObject::attach(App::DocumentObject *pcObj)
     }
 
     //attach the extensions
+    
     auto vector = getExtensionsDerivedFromType<Gui::ViewProviderExtension>();
+    FC_MSG("ViewProviderExtensions sum " << vector.size());
     for (Gui::ViewProviderExtension* ext : vector)
         ext->extensionAttach(pcObj);
 }

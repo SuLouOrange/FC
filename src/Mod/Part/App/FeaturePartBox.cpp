@@ -28,6 +28,7 @@
 #endif
 
 
+#include <App/Application.h>
 #include <Base/Console.h>
 #include <Base/Reader.h>
 #include "FeaturePartBox.h"
@@ -43,6 +44,8 @@ PROPERTY_SOURCE(Part::Box, Part::Primitive)
 
 Box::Box()
 {
+    int cnt = App::GetApplication().signalNewDocument.num_slots();
+    FC_MSG("App::Application::signalNewDocument num_slots:" << cnt);
     ADD_PROPERTY_TYPE(Length,(10.0f),"Box",App::Prop_None,"The length of the box");
     ADD_PROPERTY_TYPE(Width ,(10.0f),"Box",App::Prop_None,"The width of the box");
     ADD_PROPERTY_TYPE(Height,(10.0f),"Box",App::Prop_None,"The height of the box");

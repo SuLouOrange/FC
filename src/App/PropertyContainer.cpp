@@ -48,6 +48,12 @@ using namespace std;
 
 TYPESYSTEM_SOURCE(App::PropertyContainer,Base::Persistence)
 
+namespace {
+    int cnt = 0;
+}
+PropertyData::PropertyData() {
+    std::cout << __FUNCTION__ << " " << __LINE__ << "  cnt:" << cnt++ << "; addr of this: " << this << std::endl;
+}
 
 //**************************************************************************
 // Construction/Destruction

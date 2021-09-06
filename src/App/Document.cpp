@@ -3827,18 +3827,20 @@ bool Document::recomputeFeature(DocumentObject* Feat, bool recursive)
 DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
                                      bool isNew, const char* viewType, bool isPartial)
 {
+    FC_MSG(__FUNCTION__ << " entry ");
     Base::BaseClass* base = static_cast<Base::BaseClass*>(Base::Type::createInstanceByName(sType,true));
 
     string ObjectName;
     if (!base)
         return 0;
+    FC_MSG(__FUNCTION__ << " 1 ");
     if (!base->getTypeId().isDerivedFrom(App::DocumentObject::getClassTypeId())) {
         delete base;
         std::stringstream str;
         str << "'" << sType << "' is not a document object type";
         throw Base::TypeError(str.str());
     }
-
+    FC_MSG(__FUNCTION__ << " 2 ");
     App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(base);
     pcObject->setDocument(this);
 
@@ -3849,7 +3851,7 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
         if (d->activeUndoTransaction)
             d->activeUndoTransaction->addObjectDel(pcObject);
     }
-
+    FC_MSG(__FUNCTION__ << " 3 ");
     // get Unique name
     if (pObjectName && pObjectName[0] != '\0')
         ObjectName = getUniqueObjectName(pObjectName);
@@ -3875,7 +3877,7 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     // label conflicts later.
     if (!d->StatusBits.test(Restoring))
         pcObject->Label.setValue( ObjectName );
-
+    FC_MSG(__FUNCTION__ << " 4 ");
     // Call the object-specific initialization
     if (!d->undoing && !d->rollback && isNew) {
         pcObject->setupObject ();
@@ -3891,16 +3893,16 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
 
     if (viewType && viewType[0] != '\0')
         pcObject->_pcViewProviderName = viewType;
-
+    FC_MSG(__FUNCTION__ << " 5 "<< " to emit  signalNewObject");
     signalNewObject(*pcObject);
 
     // do no transactions if we do a rollback!
     if (!d->rollback && d->activeUndoTransaction) {
         signalTransactionAppend(*pcObject, d->activeUndoTransaction);
     }
-
+    FC_MSG(__FUNCTION__ << " 6 " << " to emit  signalActivatedObject");
     signalActivatedObject(*pcObject);
-
+    FC_MSG(__FUNCTION__ << " 7 end! ");
     // return the Object
     return pcObject;
 }
