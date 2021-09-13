@@ -325,6 +325,7 @@ void Workbench::setupCustomShortcuts() const
                 QString str = QString::fromUtf8(it->second.c_str());
                 QKeySequence shortcut = str;
                 cmd->getAction()->setShortcut(shortcut.toString(QKeySequence::NativeText));
+                cmd->recreateTooltip(it->first.c_str(), cmd->getAction()); // The tooltip has the shortcut in it...
             }
         }
     }
@@ -586,8 +587,8 @@ MenuItem* StdWorkbench::setupMenuBar() const
           << "Std_Paste" << "Std_DuplicateSelection" << "Separator"
           << "Std_Refresh" << "Std_BoxSelection" << "Std_BoxElementSelection"
           << "Std_SelectAll" << "Std_Delete" << "Std_SendToPythonConsole"
-          << "Separator" << "Std_Placement" /*<< "Std_TransformManip"*/ << "Std_Alignment"
-          << "Std_Edit" << "Separator" << "Std_DlgPreferences";
+          << "Separator" << "Std_Placement" << "Std_TransformManip" << "Std_Alignment"
+          << "Std_Edit" << "Separator" << "Std_UserEditMode" << "Separator" << "Std_DlgPreferences";
 
     MenuItem* axoviews = new MenuItem;
     axoviews->setCommand("Axonometric");
@@ -712,7 +713,7 @@ ToolBarItem* StdWorkbench::setupToolBars() const
     file->setCommand("File");
     *file << "Std_New" << "Std_Open" << "Std_Save" << "Std_Print" << "Separator" << "Std_Cut"
           << "Std_Copy" << "Std_Paste" << "Separator" << "Std_Undo" << "Std_Redo" << "Separator"
-          << "Std_Refresh" << "Separator" << "Std_WhatsThis";
+          << "Std_UserEditMode" << "Separator" << "Std_Refresh" << "Separator" << "Std_WhatsThis";
 
     // Workbench switcher
     ToolBarItem* wb = new ToolBarItem( root );

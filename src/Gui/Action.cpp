@@ -37,9 +37,7 @@
 # include <QToolButton>
 #endif
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-# include <QScreen>
-#endif
+#include <QScreen>
 
 #include <Base/Tools.h>
 #include "Action.h"
@@ -229,7 +227,7 @@ void Action::setMenuRole(QAction::MenuRole menuRole)
  * to the command object.
  */
 ActionGroup::ActionGroup ( Command* pcCmd,QObject * parent)
-  : Action(pcCmd, parent), _group(0), _dropDown(false),_external(false),_toggle(false)
+  : Action(pcCmd, parent), _group(0), _dropDown(false),_external(false),_toggle(false),_isMode(false)
 {
     _group = new QActionGroup(this);
     connect(_group, SIGNAL(triggered(QAction*)), this, SLOT(onActivated (QAction*)));
@@ -338,7 +336,7 @@ void ActionGroup::setCheckedAction(int i)
     QAction* a = _group->actions()[i];
     a->setChecked(true);
     this->setIcon(a->icon());
-    this->setToolTip(a->toolTip());
+    if (!this->_isMode) this->setToolTip(a->toolTip());
     this->setProperty("defaultAction", QVariant(i));
 }
 
@@ -380,7 +378,7 @@ void ActionGroup::onActivated (QAction* a)
     }
 #endif
     this->setIcon(a->icon());
-    this->setToolTip(a->toolTip());
+    if (!this->_isMode) this->setToolTip(a->toolTip());
     this->setProperty("defaultAction", QVariant(index));
     _pcCmd->invoke(index, Command::TriggerChildAction);
 }
@@ -431,11 +429,7 @@ void WorkbenchComboBox::showPopup()
     int rows = count();
     if (rows > 0) {
         int height = view()->sizeHintForRow(0);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
         int maxHeight = QApplication::primaryScreen()->size().height();
-#else
-        int maxHeight = QApplication::desktop()->height();
-#endif
         view()->setMinimumHeight(qMin(height * rows, maxHeight/2));
     }
 

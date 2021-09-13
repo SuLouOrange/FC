@@ -71,15 +71,13 @@ PyCommands = [["src/Mod/Draft",
               ["src/Mod/OpenSCAD",
                "pylupdate *.py Resources/ui/*.ui -ts Resources/translations/OpenSCAD.ts"],
               ["src/Mod/Start",
+               "lupdate Gui/*.ui Gui/*.cpp -ts Gui/Resources/translations/StartPage.ts"],
+              ["src/Mod/Start",
                "pylupdate StartPage/*.py -ts Gui/Resources/translations/StartPagepy.ts"],
               ["src/Mod/Start",
                'lconvert -i Gui/Resources/translations/StartPagepy.ts Gui/Resources/translations/StartPage.ts -o Gui/Resources/translations/StartPage.ts'],
               ["src/Mod/Start",
                'rm Gui/Resources/translations/StartPagepy.ts'],
-              ["src/Mod/Ship",
-               'pylupdate `find ./ -name "*.py"` -ts resources/translations/Ship.ts'],
-              ["src/Mod/Plot",
-               'pylupdate `find ./ -name "*.py"` -ts resources/translations/Plot.ts'],
               ["src/Mod/Path",
                'pylupdate `find ./ -name "*.py"` -ts Gui/Resources/translations/Pathpy.ts'],
               ["src/Mod/Path",
@@ -100,6 +98,12 @@ PyCommands = [["src/Mod/Draft",
                'lconvert -i Gui/Resources/translations/Partpy.ts Gui/Resources/translations/Part.ts -o Gui/Resources/translations/Part.ts'],
               ["src/Mod/Part",
                'rm Gui/Resources/translations/Partpy.ts'],
+              ["src/Mod/PartDesign",
+               'pylupdate `find ./ -name "*.py"` -ts Gui/Resources/translations/PartDesignpy.ts'],
+              ["src/Mod/PartDesign",
+               'lconvert -i Gui/Resources/translations/PartDesignpy.ts Gui/Resources/translations/PartDesign.ts -o Gui/Resources/translations/PartDesign.ts'],
+              ["src/Mod/PartDesign",
+               'rm Gui/Resources/translations/PartDesignpy.ts'],
               ["src/Mod/Image",
                'pylupdate `find ./ -name "*.py"` -ts Gui/Resources/translations/Imagepy.ts'],
               ["src/Mod/Image",
@@ -112,7 +116,7 @@ PyCommands = [["src/Mod/Draft",
 
 # add python folders to exclude list
 for c in PyCommands:
-    DirFilter.append(c[0])
+    DirFilter.append(c[0]+"$")
 
 QMAKE = ""
 LUPDATE = ""

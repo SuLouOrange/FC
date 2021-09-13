@@ -46,6 +46,7 @@
 # include <TopExp_Explorer.hxx>
 # include <gp_Ax1.hxx>
 # include <gp_Pln.hxx>
+# include <gp_Circ.hxx>
 # include <ShapeFix_Face.hxx>
 # include <ShapeFix_Wire.hxx>
 # include <ShapeAnalysis.hxx>
@@ -586,8 +587,13 @@ void ProfileBased::generatePrism(TopoDS_Shape& prism,
 
         if (method == "TwoLengths") {
             // midplane makes no sense here
-            Loffset = -L2;
             Ltotal += L2;
+            if (reversed)
+                Loffset = -L;
+            else if (midplane)
+                Loffset = -0.5 * (L2 + L);
+            else
+                Loffset = -L2;
         } else if (midplane)
             Loffset = -Ltotal/2;
 
@@ -753,8 +759,8 @@ bool ProfileBased::checkLineCrossesFace(const gp_Lin &line, const TopoDS_Face &f
     return false;
 #else
     // This is not as easy as it looks, because a distance of zero might be OK if
-    // the axis touches the sketchshape in in a linear edge or a vertex
-    // Note: This algorithm does not catch cases where the sketchshape touches the
+    // the axis touches the sketchshape in a linear edge or a vertex
+    // Note: This algorithm doesn't catch cases where the sketchshape touches the
     // axis in two or more points
     // Note: And it only works on closed outer wires
     TopoDS_Wire outerWire = ShapeAnalysis::OuterWire(face);
@@ -1129,12 +1135,18 @@ void ProfileBased::getAxis(const App::DocumentObject *pcReferenceAxis, const std
             if (refEdge.IsNull())
                 throw Base::ValueError("Failed to extract rotation edge");
             BRepAdaptor_Curve adapt(refEdge);
-            if (adapt.GetType() != GeomAbs_Line)
-                throw Base::TypeError("Rotation edge must be a straight line");
-
-            gp_Pnt b = adapt.Line().Location();
+            gp_Pnt b;
+            gp_Dir d;
+            if (adapt.GetType() == GeomAbs_Line) {
+                b = adapt.Line().Location();
+                d = adapt.Line().Direction();
+            } else if (adapt.GetType() == GeomAbs_Circle) {
+                b = adapt.Circle().Location();
+                d = adapt.Circle().Axis().Direction();
+            } else {
+                throw Base::TypeError("Rotation edge must be a straight line, circle or arc of circle");
+            }
             base = Base::Vector3d(b.X(), b.Y(), b.Z());
-            gp_Dir d = adapt.Line().Direction();
             dir = Base::Vector3d(d.X(), d.Y(), d.Z());
             // Check that axis is co-planar with sketch plane!
             // Check that axis is perpendicular with sketch plane!

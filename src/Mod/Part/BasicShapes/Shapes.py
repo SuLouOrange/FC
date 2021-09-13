@@ -26,8 +26,10 @@ __url__ = "http://www.freecadweb.org"
 __doc__ = "Basic shapes"
 
 
+import FreeCAD
 import Part
 import FreeCAD
+
 
 def makeTube(outerRadius, innerRadius, height):
     FreeCAD.Console.PrintWarning("JY makeTube\n")
@@ -52,3 +54,14 @@ class TubeFeature:
         if fp.InnerRadius >= fp.OuterRadius:
             raise ValueError("Inner radius must be smaller than outer radius")
         fp.Shape = makeTube(fp.OuterRadius, fp.InnerRadius, fp.Height)
+
+
+def addTube(doc, name="Tube"):
+    """addTube(document, [name]): adds a tube object"""
+
+    obj = doc.addObject("Part::FeaturePython", name)
+    TubeFeature(obj)
+    if FreeCAD.GuiUp:
+        from . import ViewProviderShapes
+        ViewProviderShapes.ViewProviderTube(obj.ViewObject)
+    return obj

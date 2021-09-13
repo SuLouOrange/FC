@@ -205,6 +205,18 @@ PyMethodDef Application::Methods[] = {
     {"removeDocumentObserver",  (PyCFunction) Application::sRemoveDocObserver, METH_VARARGS,
      "removeDocumentObserver() -> None\n\n"
      "Remove an added document observer."},
+    
+    {"listUserEditModes", (PyCFunction) Application::sListUserEditModes, METH_VARARGS,
+     "listUserEditModes() -> list\n\n"
+     "List available user edit modes"},
+     
+    {"getUserEditMode", (PyCFunction) Application::sGetUserEditMode, METH_VARARGS,
+     "getUserEditMode() -> string\n\n"
+     "Get current user edit mode"},
+     
+    {"setUserEditMode", (PyCFunction) Application::sSetUserEditMode, METH_VARARGS,
+     "setUserEditMode(string=mode) -> Bool\n\n"
+     "Set user edit mode to 'mode', returns True if exists, false otherwise"},
 
   {"reload",                    (PyCFunction) Application::sReload, METH_VARARGS,
    "reload(name) -> doc\n\n"
@@ -737,11 +749,7 @@ PyObject* Application::sGetLocale(PyObject * /*self*/, PyObject *args)
         return NULL;
 
     std::string locale = Translator::instance()->activeLanguage();
-#if PY_MAJOR_VERSION >= 3
     return PyUnicode_FromString(locale.c_str());
-#else
-    return PyString_FromString(locale.c_str());
-#endif
 }
 
 PyObject* Application::sSetLocale(PyObject * /*self*/, PyObject *args)
@@ -819,11 +827,7 @@ PyObject* Application::sAddPreferencePage(PyObject * /*self*/, PyObject *args)
 
     PyObject* dlg;
     // old style classes
-#if PY_MAJOR_VERSION >= 3
     if (PyArg_ParseTuple(args, "O!s", &PyType_Type, &dlg, &grp)) {
-#else
-    if (PyArg_ParseTuple(args, "O!s", &PyClass_Type, &dlg, &grp)) {
-#endif
         // add to the preferences dialog
         new PrefPagePyProducer(Py::Object(dlg), grp);
 
@@ -1153,16 +1157,12 @@ PyObject* Application::sAddCommand(PyObject * /*self*/, PyObject *args)
 
         std::string file;
         // usually this is the file name of the calling script
-#if (PY_MAJOR_VERSION > 3 || (PY_MAJOR_VERSION==3 && PY_MINOR_VERSION>=5))
         Py::Object info = list.getItem(0);
         PyObject *pyfile = PyStructSequence_GET_ITEM(*info,1);
         if(!pyfile)
             throw Py::Exception();
         file = Py::Object(pyfile).as_string();
-#else
-        Py::Tuple info = list.getItem(0);
-        file = info.getItem(1).as_string();
-#endif
+
         Base::FileInfo fi(file);
         // convert backslashes to slashes
         file = fi.filePath();
@@ -1498,3 +1498,29 @@ PyObject* Application::sCoinRemoveAllChildren(PyObject * /*self*/, PyObject *arg
     }PY_CATCH;
 }
 
+PyObject* Application::sListUserEditModes(PyObject * /*self*/, PyObject *args)
+{
+    Py::List ret;
+    if (!PyArg_ParseTuple(args, ""))
+        return NULL;
+    for (auto const &uem : Instance->listUserEditModes()) {
+        ret.append(Py::String(uem.second));
+    }
+    return Py::new_reference_to(ret);
+}
+
+PyObject* Application::sGetUserEditMode(PyObject * /*self*/, PyObject *args)
+{
+    if (!PyArg_ParseTuple(args, ""))
+        return NULL;
+    return Py::new_reference_to(Py::String(Instance->getUserEditModeName()));
+}
+
+PyObject* Application::sSetUserEditMode(PyObject * /*self*/, PyObject *args)
+{
+    char *mode = "";
+    if (!PyArg_ParseTuple(args, "s", &mode))
+        return NULL;
+    bool ok = Instance->setUserEditMode(std::string(mode));
+    return Py::new_reference_to(Py::Boolean(ok));
+}

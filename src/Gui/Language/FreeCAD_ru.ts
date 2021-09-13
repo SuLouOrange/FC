@@ -277,6 +277,36 @@
     </message>
   </context>
   <context>
+    <name>EditMode</name>
+    <message>
+      <source>Default</source>
+      <translation>По умолчанию</translation>
+    </message>
+    <message>
+      <source>Transform</source>
+      <translation>Преобразовать</translation>
+    </message>
+    <message>
+      <source>Cutting</source>
+      <translation>Обрезка</translation>
+    </message>
+    <message>
+      <source>Color</source>
+      <translation>Цвет</translation>
+    </message>
+  </context>
+  <context>
+    <name>ExpressionLabel</name>
+    <message>
+      <source>Enter an expression...</source>
+      <translation>Введите выражение...</translation>
+    </message>
+    <message>
+      <source>Expression: </source>
+      <translation>Выражение: </translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::AccelLineEdit</name>
     <message>
       <source>none</source>
@@ -465,14 +495,6 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Размер слова</translation>
     </message>
     <message>
-      <source>Credits</source>
-      <translation>Благодарности</translation>
-    </message>
-    <message>
-      <source>FreeCAD would be nowhere without their efforts:</source>
-      <translation>FreeCAD не увидел бы свет без их участия:</translation>
-    </message>
-    <message>
       <source>License</source>
       <translation>Лицензия</translation>
     </message>
@@ -494,6 +516,25 @@ while doing a left or right click and move the mouse up or down</source>
     <message>
       <source>Collection</source>
       <translation>Коллекция</translation>
+    </message>
+    <message>
+      <source>Credits</source>
+      <extracomment>Header for the Credits tab of the About screen</extracomment>
+      <translation>Благодарности</translation>
+    </message>
+    <message>
+      <source>FreeCAD would not be possible without the contributions of</source>
+      <translation>Список всех, кто внес свой вклад в создание FreeCAD</translation>
+    </message>
+    <message>
+      <source>Individuals</source>
+      <extracomment>Header for the list of individual people in the Credits list.</extracomment>
+      <translation>Участники</translation>
+    </message>
+    <message>
+      <source>Organizations</source>
+      <extracomment>Header for the list of companies/organizations in the Credits list.</extracomment>
+      <translation>Организации</translation>
     </message>
   </context>
   <context>
@@ -1364,10 +1405,6 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>О программе</translation>
     </message>
     <message>
-      <source>Code lines will be numbered </source>
-      <translation>Строки кода будут пронумерованы </translation>
-    </message>
-    <message>
       <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
       <translation>Нажатие &lt;Tab&gt; для вставки  определенного размера отступа</translation>
     </message>
@@ -1403,6 +1440,10 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <source>Color:</source>
       <translation>Цвет:</translation>
     </message>
+    <message>
+      <source>Code lines will be numbered</source>
+      <translation>Строки кода будут пронумерованы</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgGeneral</name>
@@ -1428,7 +1469,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
       <source>Change language:</source>
-      <translation>Изменить язык (Change language):</translation>
+      <translation>Изменить язык:</translation>
     </message>
     <message>
       <source>Main window</source>
@@ -1484,7 +1525,7 @@ this according to your screen size or personal taste</source>
     </message>
     <message>
       <source>Tree view mode:</source>
-      <translation>Режим просмотра "Дерево":</translation>
+      <translation>Режим древовидного отображения:</translation>
     </message>
     <message>
       <source>Customize how tree view is shown in the panel (restart required).
@@ -1595,7 +1636,7 @@ horizontal space in Python console</source>
     </message>
     <message>
       <source>Create</source>
-      <translation>Собрать</translation>
+      <translation>Создать</translation>
     </message>
     <message>
       <source>Delete</source>
@@ -2018,7 +2059,7 @@ Specify another directory, please.</source>
     <name>Gui::Dialog::DlgPreferences</name>
     <message>
       <source>Preferences</source>
-      <translation>Предпочтения</translation>
+      <translation>Настройки</translation>
     </message>
     <message>
       <source/>
@@ -2139,7 +2180,7 @@ Specify another directory, please.</source>
     </message>
     <message>
       <source>Create</source>
-      <translation>Собрать</translation>
+      <translation>Создать</translation>
     </message>
     <message>
       <source>Load project file after creation</source>
@@ -2225,7 +2266,7 @@ Specify another directory, please.</source>
     </message>
     <message>
       <source>Colors</source>
-      <translation>Цвета</translation>
+      <translation>Выделение цветом</translation>
     </message>
     <message>
       <source>Normal messages:</source>
@@ -2233,7 +2274,7 @@ Specify another directory, please.</source>
     </message>
     <message>
       <source>Log messages:</source>
-      <translation>Журнал (log):</translation>
+      <translation>Информационные сообщения (log):</translation>
     </message>
     <message>
       <source>Warnings:</source>
@@ -2279,7 +2320,7 @@ on-screen while displaying the error</source>
     </message>
     <message>
       <source>Show report view on error</source>
-      <translation>Показать отчёт в случае ошибки</translation>
+      <translation>Показать отчёт в случае вывода сообщения об ошибке (error)</translation>
     </message>
     <message>
       <source>When a warning has occurred, the Report View dialog becomes visible
@@ -2289,7 +2330,7 @@ on-screen while displaying the warning</source>
     </message>
     <message>
       <source>Show report view on warning</source>
-      <translation>Показать отчёт о предупреждении</translation>
+      <translation>Показать отчёт в случае вывода предупреждения (warning) </translation>
     </message>
     <message>
       <source>When a normal message has occurred, the Report View dialog becomes visible
@@ -2299,7 +2340,7 @@ on-screen while displaying the message</source>
     </message>
     <message>
       <source>Show report view on normal message</source>
-      <translation>Показывать отчёт в обычном сообщении</translation>
+      <translation>Показать отчёт в случае вывода обычного сообщения (normal)</translation>
     </message>
     <message>
       <source>When a log message has occurred, the Report View dialog becomes visible
@@ -2309,7 +2350,7 @@ on-screen while displaying the log message</source>
     </message>
     <message>
       <source>Show report view on log message</source>
-      <translation>Показать отчет в журнале</translation>
+      <translation>Показать отчёт в случае вывода информационного сообщения (log)</translation>
     </message>
     <message>
       <source>Font color for normal messages in Report view panel</source>
@@ -2345,7 +2386,7 @@ from Python console to Report view panel</source>
     </message>
     <message>
       <source>Include a timecode for each entry</source>
-      <translation>Включить код времени для каждой записи</translation>
+      <translation>Вставлять время вывода в каждую запись отчёта</translation>
     </message>
     <message>
       <source>Normal messages will be recorded</source>
@@ -2353,7 +2394,7 @@ from Python console to Report view panel</source>
     </message>
     <message>
       <source>Record normal messages</source>
-      <translation>Записывать обычные сообщения</translation>
+      <translation>Записывать обычные сообщения (normal)</translation>
     </message>
   </context>
   <context>
@@ -2535,10 +2576,6 @@ but slower response to any scene changes.</source>
       <translation>Централизованный</translation>
     </message>
     <message>
-      <source>What kind of multisample anti-aliasing is used </source>
-      <translation>Какой тип мультиобразного сглаживания используется </translation>
-    </message>
-    <message>
       <source>Transparent objects:</source>
       <translation>Прозрачные объекты:</translation>
     </message>
@@ -2561,14 +2598,6 @@ but slower response to any scene changes.</source>
     <message>
       <source>Eye to eye distance for stereo modes</source>
       <translation>Расстояние между глаз для стерео режима</translation>
-    </message>
-    <message>
-      <source>Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed. </source>
-      <translation>Межцентровое расстояние глаз используется для стерео проекций.
-Указанное значение — это множитель, который будет умножаться на размер ограничительной рамки 
-отображаемого в трехмерного объекта. </translation>
     </message>
     <message>
       <source>Backlight is enabled with the defined color</source>
@@ -2627,6 +2656,17 @@ Changing this option requires a restart of the application.</source>
     <message>
       <source>Use software OpenGL</source>
       <translation>Использовать программное обеспечение OpenGL</translation>
+    </message>
+    <message>
+      <source>What kind of multisample anti-aliasing is used</source>
+      <translation>Какой тип многопроходного сглаживания используется</translation>
+    </message>
+    <message>
+      <source>Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</source>
+      <translation>Межцентровое расстояние глаз используется для стерео проекций.
+Указанное значение — это множитель, который будет умножаться на габаритный прямоугольный каркас текущего отображаемого трехмерного объекта.</translation>
     </message>
   </context>
   <context>
@@ -3246,32 +3286,59 @@ Opening mode: If you defined a hinge in this component or any other earlier in t
       <source>Framebuffer (as is)</source>
       <translation>Framebuffer (как есть)</translation>
     </message>
-    <message>
-      <source>Pixel buffer</source>
-      <translation>Пиксель буфер</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
       <source>Unloaded Workbenches</source>
-      <translation>Выгруженные верстаки</translation>
+      <translation>Незагруженные верстаки</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load the selected workbenches, adding their preference windows to the preferences dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загрузить выбранные верстаки, добавляя их окна настроек в диалог настроек.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Workbench Name</source>
+      <translation>Название верстака</translation>
     </message>
     <message>
-      <source>Load Selected</source>
-      <translation>Загрузить выбранный</translation>
+      <source>Autoload?</source>
+      <translation>Автозагрузка?</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Available unloaded workbenches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Доступные выгруженные верстаки&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Load Now</source>
+      <translation>Загрузить сейчас</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation, but are not yet loaded:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Чтобы сохранить ресурсы, FreeCAD не загружает верстаки до тех пор, пока они не будут использованы. Загрузка их может обеспечить доступ к дополнительным настройкам, связанным с их функциональностью.&lt;/p&gt;&lt;p&gt;В вашей установке доступны следующие верстаки, но еще не загружены:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Чтобы сэкономить ресурсы, FreeCAD не загружает верстаки до тех пор, пока они не будут использованы. После загрузки верстака, если это предусмотрено в настройках может появится дополнительный раздел с настройкам, связанным с функциональностью загруженного верстака.&lt;/p&gt;&lt;p&gt;В текущий момент доступны следующие верстаки, которые можно загрузить, если это требуется:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsLazyLoadedImp</name>
+    <message>
+      <source>Workbench</source>
+      <translation>Верстак</translation>
+    </message>
+    <message>
+      <source>Autoload</source>
+      <translation>Автозагрузка</translation>
+    </message>
+    <message>
+      <source>If checked</source>
+      <translation>Если отмечено</translation>
+    </message>
+    <message>
+      <source>will be loaded automatically when FreeCAD starts up</source>
+      <translation>будет загружен автоматически при запуске FreeCAD</translation>
+    </message>
+    <message>
+      <source>This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</source>
+      <translation>Это текущий модуль запуска и должен быть автоматически загружен. Смотрите Настройки/Общее/Автозагрузка для изменения.</translation>
+    </message>
+    <message>
+      <source>Loaded</source>
+      <translation>Загружено</translation>
+    </message>
+    <message>
+      <source>Load now</source>
+      <translation>Загрузить сейчас</translation>
     </message>
   </context>
   <context>
@@ -3358,19 +3425,19 @@ Opening mode: If you defined a hinge in this component or any other earlier in t
     </message>
     <message>
       <source>Shortcut count</source>
-      <translation>Количество ярлыков</translation>
+      <translation>Количество макросов запускаемых комбинациями клавиш</translation>
     </message>
     <message>
       <source>How many recent macros should have shortcuts</source>
-      <translation>Сколько последних макросов должно иметь ярлыки</translation>
+      <translation>Определяет сколько макросов из списка "недавние макросы" должны иметь свою комбинацию клавиш</translation>
     </message>
     <message>
       <source>Keyboard Modifiers</source>
-      <translation>Модификаторы клавиатуры</translation>
+      <translation>Комбинация клавиш</translation>
     </message>
     <message>
       <source>Keyboard modifiers, default = Ctrl+Shift+</source>
-      <translation>Модификаторы клавиатуры, по умолчанию = Ctrl+Shift+</translation>
+      <translation>Комбинация клавиш для быстрого запуска макроса из списка "недавние макросы", по умолчанию = Ctrl+Shift+</translation>
     </message>
   </context>
   <context>
@@ -3401,19 +3468,19 @@ Opening mode: If you defined a hinge in this component or any other earlier in t
     </message>
     <message>
       <source>Top left</source>
-      <translation>Верхний левый</translation>
+      <translation>Верхний левый угол</translation>
     </message>
     <message>
       <source>Top right</source>
-      <translation>Верхний правый</translation>
+      <translation>Верхний правый угол</translation>
     </message>
     <message>
       <source>Bottom left</source>
-      <translation>Нижний левый</translation>
+      <translation>Нижний левый угол</translation>
     </message>
     <message>
       <source>Bottom right</source>
-      <translation>Нижний правый</translation>
+      <translation>Нижний правый угол</translation>
     </message>
     <message>
       <source>3D Navigation</source>
@@ -3486,12 +3553,6 @@ The value is the diameter of the sphere to fit on the screen.</source>
     <message>
       <source>Zoom step</source>
       <translation>Шаг масштабирования</translation>
-    </message>
-    <message>
-      <source>How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step. </source>
-      <translation>Насколько всё будет масштабировано.
-Шаг масштаба '1' означает коэффициент 7.5 для каждого шага масштаба.</translation>
     </message>
     <message>
       <source>Direction of zoom operations will be inverted</source>
@@ -3580,6 +3641,28 @@ Mouse tilting is not disabled by this setting.</source>
     <message>
       <source>Object center</source>
       <translation>Центр объекта</translation>
+    </message>
+    <message>
+      <source>Rotates to nearest possible state when clicking a cube face</source>
+      <translation>Поворачивать до ближайшего состояния при клике на кубическую грань</translation>
+    </message>
+    <message>
+      <source>Rotate to nearest</source>
+      <translation>Повернуть к ближайшему</translation>
+    </message>
+    <message>
+      <source>Cube size</source>
+      <translation>Размер куба</translation>
+    </message>
+    <message>
+      <source>Size of the navigation cube</source>
+      <translation>Размер навигационного куба</translation>
+    </message>
+    <message>
+      <source>How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
+      <translation>Насколько будет масштабировано.
+Шаг масштаба '1' означает коэффициент 7.5 для каждого шага масштаба.</translation>
     </message>
   </context>
   <context>
@@ -3720,7 +3803,7 @@ Mouse tilting is not disabled by this setting.</source>
     <name>Gui::Dialog::DlgSettingsViewColor</name>
     <message>
       <source>Colors</source>
-      <translation>Цвета</translation>
+      <translation>Выделение цветом</translation>
     </message>
     <message>
       <source>Selection</source>
@@ -3893,12 +3976,12 @@ The preference system is the one set in the general preferences.</source>
   <context>
     <name>Gui::Dialog::DlgUnitsCalculator</name>
     <message>
-      <source>unknown unit: </source>
-      <translation>неизвестная единица:</translation>
-    </message>
-    <message>
       <source>unit mismatch</source>
       <translation>несоответствие единиц измерения</translation>
+    </message>
+    <message>
+      <source>unknown unit:</source>
+      <translation>неизвестная единица:</translation>
     </message>
   </context>
   <context>
@@ -4613,6 +4696,16 @@ The 'Status' column shows whether the document could be recovered.</source>
       <source>Partial</source>
       <translation>Частично</translation>
     </message>
+    <message>
+      <source>&amp;Use Original Selections</source>
+      <translation type="unfinished">&amp;Use Original Selections</translation>
+    </message>
+    <message>
+      <source>Ignore dependencies and proceed with objects
+originally selected prior to opening this dialog</source>
+      <translation type="unfinished">Ignore dependencies and proceed with objects
+originally selected prior to opening this dialog</translation>
+    </message>
   </context>
   <context>
     <name>Gui::DlgTreeWidget</name>
@@ -4922,19 +5015,19 @@ Do you want to save your changes?</source>
     <name>Gui::Flag</name>
     <message>
       <source>Top left</source>
-      <translation>Верхний левый</translation>
+      <translation>Верхний левый угол</translation>
     </message>
     <message>
       <source>Bottom left</source>
-      <translation>Нижний левый</translation>
+      <translation>Нижний левый угол</translation>
     </message>
     <message>
       <source>Top right</source>
-      <translation>Верхний правый</translation>
+      <translation>Верхний правый угол</translation>
     </message>
     <message>
       <source>Bottom right</source>
-      <translation>Нижний правый</translation>
+      <translation>Нижний правый угол</translation>
     </message>
     <message>
       <source>Remove</source>
@@ -5378,7 +5471,7 @@ How do you want to proceed?</source>
     </message>
     <message>
       <source>Auto expand</source>
-      <translation type="unfinished">Auto expand</translation>
+      <translation>Разворачивать автоматически</translation>
     </message>
   </context>
   <context>
@@ -6170,7 +6263,7 @@ Do you want to specify another directory?</source>
     </message>
     <message>
       <source>Preferences...</source>
-      <translation>Предпочтения...</translation>
+      <translation>Настройки...</translation>
     </message>
     <message>
       <source>Quit %1</source>
@@ -6884,14 +6977,6 @@ Please check report view for more...</source>
     </message>
     <message>
       <source>
-
-Pyhsical path: </source>
-      <translation>
-
-Физический путь: </translation>
-    </message>
-    <message>
-      <source>
 Document: </source>
       <translation>
 Документ: </translation>
@@ -6921,6 +7006,14 @@ Document: </source>
     <message>
       <source>Workbenches</source>
       <translation>Рабочие окружения</translation>
+    </message>
+    <message>
+      <source>
+
+Physical path: </source>
+      <translation>
+
+Физический путь:</translation>
     </message>
   </context>
   <context>
@@ -7418,7 +7511,7 @@ Document: </source>
     </message>
     <message>
       <source>FreeCAD FAQ</source>
-      <translation>FreeCAD ЧаВо</translation>
+      <translation>FreeCAD Часто Задаваемые  Вопросы</translation>
     </message>
     <message>
       <source>Frequently Asked Questions on the FreeCAD website</source>
@@ -7588,7 +7681,7 @@ Document: </source>
     </message>
     <message>
       <source>Link actions</source>
-      <translation>Действия ссылки</translation>
+      <translation>Ссылка</translation>
     </message>
   </context>
   <context>
@@ -8692,6 +8785,17 @@ Document: </source>
     <message>
       <source>Start the units calculator</source>
       <translation>Открыть конвертор единиц измерения</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdUserEditMode</name>
+    <message>
+      <source>Edit mode</source>
+      <translation type="unfinished">Edit mode</translation>
+    </message>
+    <message>
+      <source>Defines behavior when editing an object from tree</source>
+      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
     </message>
   </context>
   <context>

@@ -27,10 +27,9 @@
 # include <QMessageBox>
 # include <QSharedPointer>
 # include <QWhatsThis>
-#if QT_VERSION >= 0x040200
 # include <QDesktopServices>
 # include <QUrl>
-#endif
+# include <boost_bind_bind.hpp>
 #endif
 
 #include <boost/scoped_ptr.hpp>
@@ -65,6 +64,7 @@
 using Base::Console;
 using Base::Sequencer;
 using namespace Gui;
+namespace bp = boost::placeholders;
 
 
 //===========================================================================
@@ -124,10 +124,10 @@ Action * StdCmdWorkbench::createAction(void)
     Action *pcAction;
 
     pcAction = new WorkbenchGroup(this,getMainWindow());
-    pcAction->setShortcut(QString::fromLatin1(sAccel));
+    pcAction->setShortcut(QString::fromLatin1(getAccel()));
     applyCommandData(this->className(), pcAction);
-    if (sPixmap)
-        pcAction->setIcon(Gui::BitmapFactory().iconFromTheme(sPixmap));
+    if (getPixmap())
+        pcAction->setIcon(Gui::BitmapFactory().iconFromTheme(getPixmap()));
 
     return pcAction;
 }
@@ -237,21 +237,16 @@ Action * StdCmdAbout::createAction(void)
     QString exe = qApp->applicationName();
     pcAction = new Action(this,getMainWindow());
     pcAction->setText(QCoreApplication::translate(
-        this->className(), sMenuText).arg(exe));
+        this->className(), getMenuText()).arg(exe));
     pcAction->setToolTip(QCoreApplication::translate(
-        this->className(), sToolTipText).arg(exe));
+        this->className(), getToolTipText()).arg(exe));
     pcAction->setStatusTip(QCoreApplication::translate(
-        this->className(), sStatusTip).arg(exe));
-    pcAction->setWhatsThis(QLatin1String(sWhatsThis));
+        this->className(), getStatusTip()).arg(exe));
+    pcAction->setWhatsThis(QLatin1String(getWhatsThis()));
     pcAction->setIcon(QApplication::windowIcon());
-    pcAction->setShortcut(QString::fromLatin1(sAccel));
-#if QT_VERSION > 0x050000
+    pcAction->setShortcut(QString::fromLatin1(getAccel()));
     // Needs to have AboutRole set to avoid duplicates if adding the about action more than once on macOS
     pcAction->setMenuRole(QAction::AboutRole);
-#else
-    // With Qt 4.8, having AboutRole set causes it to disappear when readding it: issue #0001485
-    pcAction->setMenuRole(QAction::ApplicationSpecificRole);
-#endif
     return pcAction;
 }
 
@@ -276,12 +271,12 @@ void StdCmdAbout::languageChange()
     if (_pcAction) {
         QString exe = qApp->applicationName();
         _pcAction->setText(QCoreApplication::translate(
-            this->className(), sMenuText).arg(exe));
+            this->className(), getMenuText()).arg(exe));
         _pcAction->setToolTip(QCoreApplication::translate(
-            this->className(), sToolTipText).arg(exe));
+            this->className(), getToolTipText()).arg(exe));
         _pcAction->setStatusTip(QCoreApplication::translate(
-            this->className(), sStatusTip).arg(exe));
-        _pcAction->setWhatsThis(QLatin1String(sWhatsThis));
+            this->className(), getStatusTip()).arg(exe));
+        _pcAction->setWhatsThis(QLatin1String(getWhatsThis()));
     }
 }
 
@@ -820,6 +815,100 @@ void StdCmdUnitsCalculator::activated(int iMsg)
     dlg->show();
 }
 
+//===========================================================================
+// StdCmdUserEditMode
+//===========================================================================
+class StdCmdUserEditMode : public Gui::Command
+{
+public:
+    StdCmdUserEditMode();
+    virtual ~StdCmdUserEditMode(){}
+    virtual void languageChange();
+    virtual const char* className() const {return "StdCmdUserEditMode";}
+    void updateIcon(int mode);
+protected:
+    virtual void activated(int iMsg);
+    virtual bool isActive(void);
+    virtual Gui::Action * createAction(void);
+};
+
+StdCmdUserEditMode::StdCmdUserEditMode()
+  : Command("Std_UserEditMode")
+{
+    sGroup        = QT_TR_NOOP("Edit mode");
+    sMenuText     = QT_TR_NOOP("Edit mode");
+    sToolTipText  = QT_TR_NOOP("Defines behavior when editing an object from tree");
+    sStatusTip    = QT_TR_NOOP("Defines behavior when editing an object from tree");
+    sWhatsThis    = "Std_UserEditMode";
+    sPixmap       = "EditModeDefault";
+    eType         = ForEdit;
+
+    this->getGuiApplication()->signalUserEditModeChanged.connect(boost::bind(&StdCmdUserEditMode::updateIcon, this, bp::_1));
+}
+
+Gui::Action * StdCmdUserEditMode::createAction(void)
+{
+    Gui::ActionGroup* pcAction = new Gui::ActionGroup(this, Gui::getMainWindow());
+    pcAction->setDropDownMenu(true);
+    pcAction->setIsMode(true);
+    applyCommandData(this->className(), pcAction);
+    
+    for (auto const &uem : Gui::Application::Instance->listUserEditModes()) {
+        QAction* act = pcAction->addAction(QString());
+        auto modeName = QString::fromStdString(uem.second);
+        act->setCheckable(true);
+        act->setIcon(BitmapFactory().iconFromTheme(qPrintable(QString::fromLatin1("EditMode")+modeName)));
+        act->setObjectName(QString::fromLatin1("Std_EditMode")+modeName);
+        act->setWhatsThis(QString::fromLatin1(getWhatsThis()));
+        
+        if (uem.first == 0) {
+            pcAction->setIcon(act->icon());
+            act->setChecked(true);
+        }
+    }
+
+    _pcAction = pcAction;
+    languageChange();
+    return pcAction;
+}
+
+void StdCmdUserEditMode::languageChange()
+{
+    Command::languageChange();
+
+    if (!_pcAction)
+        return;
+    Gui::ActionGroup* pcAction = qobject_cast<Gui::ActionGroup*>(_pcAction);
+    QList<QAction*> a = pcAction->actions();
+
+    for (int i = 0 ; i < a.count() ; i++) {
+        auto modeName = QString::fromStdString(Gui::Application::Instance->getUserEditModeName(i));
+        a[i]->setText(QCoreApplication::translate(
+        "EditMode", qPrintable(modeName)));
+        a[i]->setToolTip(QCoreApplication::translate(
+        "EditMode", qPrintable(modeName+QString::fromLatin1(" mode"))));
+    }
+}
+
+void StdCmdUserEditMode::updateIcon(int mode)
+{
+    Gui::ActionGroup *actionGroup = dynamic_cast<Gui::ActionGroup *>(_pcAction);
+    if (!actionGroup)
+        return;
+
+    actionGroup->setCheckedAction(mode);
+}
+
+void StdCmdUserEditMode::activated(int iMsg)
+{
+    Gui::Application::Instance->setUserEditMode(iMsg);
+}
+
+bool StdCmdUserEditMode::isActive(void)
+{
+    return true;
+}
+
 namespace Gui {
 
 void CreateStdCommands(void)
@@ -849,6 +938,7 @@ void CreateStdCommands(void)
     rcCmdMgr.addCommand(new StdCmdPythonWebsite());
     rcCmdMgr.addCommand(new StdCmdTextDocument());
     rcCmdMgr.addCommand(new StdCmdUnitsCalculator());
+    rcCmdMgr.addCommand(new StdCmdUserEditMode());
     //rcCmdMgr.addCommand(new StdCmdMeasurementSimple());
     //rcCmdMgr.addCommand(new StdCmdDownloadOnlineHelp());
     //rcCmdMgr.addCommand(new StdCmdDescription());

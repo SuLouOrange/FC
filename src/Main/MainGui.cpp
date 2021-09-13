@@ -140,12 +140,10 @@ int main( int argc, char ** argv )
         argv_.push_back(0); // 0-terminated string
     }
 
-#if PY_MAJOR_VERSION >= 3 //3.8.6
 #if defined(_MSC_VER) && _MSC_VER <= 1800
     // See InterpreterSingleton::init
     Redirection out(stdout), err(stderr), inp(stdin);
 #endif
-#endif // PY_MAJOR_VERSION
 
     // Name and Version of the Application
     App::Application::Config()["ExeName"] = "FreeCAD";
@@ -157,15 +155,15 @@ int main( int argc, char ** argv )
     App::Application::Config()["CopyrightInfo"] = sBanner;
     App::Application::Config()["AppIcon"] = "freecad";
     App::Application::Config()["SplashScreen"] = "freecadsplash";
+    App::Application::Config()["AboutImage"] = "freecadabout";
     App::Application::Config()["StartWorkbench"] = "StartWorkbench";
     //App::Application::Config()["HiddenDockWindow"] = "Property editor";
     App::Application::Config()["SplashAlignment" ] = "Bottom|Left";
     App::Application::Config()["SplashTextColor" ] = "#ffffff"; // white
     App::Application::Config()["SplashInfoColor" ] = "#c8c8c8"; // light grey
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0)) //5.15.2
+
     QGuiApplication::setDesktopFileName(QStringLiteral("org.freecadweb.FreeCAD.desktop"));
-#endif
 
     try {
         // Init phase ===========================================================
@@ -227,15 +225,7 @@ int main( int argc, char ** argv )
                           "Python is searching for its files in the following directories:\n%3\n\n"
                           "Python version information:\n%4\n")
                           .arg(appName, QString::fromUtf8(e.what()),
-#if PY_MAJOR_VERSION >= 3
-#if PY_MINOR_VERSION >= 5
                           QString::fromUtf8(Py_EncodeLocale(Py_GetPath(),NULL)), QString::fromLatin1(Py_GetVersion()));
-#else
-                          QString::fromUtf8(_Py_wchar2char(Py_GetPath(),NULL)), QString::fromLatin1(Py_GetVersion()));
-#endif
-#else
-                          QString::fromUtf8(Py_GetPath()), QString::fromLatin1(Py_GetVersion()));
-#endif
         const char* pythonhome = getenv("PYTHONHOME");
         if (pythonhome) {
             msg += QObject::tr("\nThe environment variable PYTHONHOME is set to '%1'.")

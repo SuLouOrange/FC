@@ -277,6 +277,36 @@
     </message>
   </context>
   <context>
+    <name>EditMode</name>
+    <message>
+      <source>Default</source>
+      <translation>Lehenetsia</translation>
+    </message>
+    <message>
+      <source>Transform</source>
+      <translation>Transformatu</translation>
+    </message>
+    <message>
+      <source>Cutting</source>
+      <translation>Moztea</translation>
+    </message>
+    <message>
+      <source>Color</source>
+      <translation>Kolorea</translation>
+    </message>
+  </context>
+  <context>
+    <name>ExpressionLabel</name>
+    <message>
+      <source>Enter an expression...</source>
+      <translation>Sartu adierazpen bat...</translation>
+    </message>
+    <message>
+      <source>Expression: </source>
+      <translation>Adierazpena: </translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::AccelLineEdit</name>
     <message>
       <source>none</source>
@@ -465,14 +495,6 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Hitz-tamaina</translation>
     </message>
     <message>
-      <source>Credits</source>
-      <translation>Kredituak</translation>
-    </message>
-    <message>
-      <source>FreeCAD would be nowhere without their efforts:</source>
-      <translation>FreeCAD ez litzakete ezer izango haien ahaleginengatik ez balitz:</translation>
-    </message>
-    <message>
       <source>License</source>
       <translation>Lizentzia</translation>
     </message>
@@ -494,6 +516,25 @@ while doing a left or right click and move the mouse up or down</source>
     <message>
       <source>Collection</source>
       <translation>Bilduma</translation>
+    </message>
+    <message>
+      <source>Credits</source>
+      <extracomment>Header for the Credits tab of the About screen</extracomment>
+      <translation>Kredituak</translation>
+    </message>
+    <message>
+      <source>FreeCAD would not be possible without the contributions of</source>
+      <translation>FreeCADik ez litzateke egongo honakoen laguntzarik gabe:</translation>
+    </message>
+    <message>
+      <source>Individuals</source>
+      <extracomment>Header for the list of individual people in the Credits list.</extracomment>
+      <translation>Banakoak</translation>
+    </message>
+    <message>
+      <source>Organizations</source>
+      <extracomment>Header for the list of companies/organizations in the Credits list.</extracomment>
+      <translation>Erakundeak</translation>
     </message>
   </context>
   <context>
@@ -1363,10 +1404,6 @@ Hau markatuta ez badago, propietateak izen bakarra izan behar du eta 'obj.Izena'
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Code lines will be numbered </source>
-      <translation>Kode-lerroak zenbakitu egingo dira </translation>
-    </message>
-    <message>
       <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
       <translation>&lt;Tab&gt; sakatzen bada, definitutako tamaina duen koskatze bat txertatuko da</translation>
     </message>
@@ -1401,6 +1438,10 @@ Hau markatuta ez badago, propietateak izen bakarra izan behar du eta 'obj.Izena'
     <message>
       <source>Color:</source>
       <translation>Kolorea:</translation>
+    </message>
+    <message>
+      <source>Code lines will be numbered</source>
+      <translation>Kode-lerroak zenbakituta egongo dira</translation>
     </message>
   </context>
   <context>
@@ -2541,10 +2582,6 @@ azkarrena eskaintzen du, baina erantzun motelagoa eszena-aldaketetan.</translati
       <translation>Zentralizatua</translation>
     </message>
     <message>
-      <source>What kind of multisample anti-aliasing is used </source>
-      <translation>Zein motatako lagin anitzeko antialiasinga ari den erabiltzen </translation>
-    </message>
-    <message>
       <source>Transparent objects:</source>
       <translation>Objektu gardenak:</translation>
     </message>
@@ -2567,14 +2604,6 @@ azkarrena eskaintzen du, baina erantzun motelagoa eszena-aldaketetan.</translati
     <message>
       <source>Eye to eye distance for stereo modes</source>
       <translation>Begien arteko distantzia modu estereoetarako</translation>
-    </message>
-    <message>
-      <source>Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed. </source>
-      <translation>Begien arteko distantzia proiekzio estereoetarako.
-Zehaztutako balioa unean bistaratzen ari den 3D objektuaren
-muga-koadroaren tamainarekin biderkatuko den faktore bat da. </translation>
     </message>
     <message>
       <source>Backlight is enabled with the defined color</source>
@@ -2633,6 +2662,18 @@ Aukera hau aldatzeko, aplikazioa berrabiarazi behar da.</translation>
     <message>
       <source>Use software OpenGL</source>
       <translation>Erabili softwareko OpenGLa</translation>
+    </message>
+    <message>
+      <source>What kind of multisample anti-aliasing is used</source>
+      <translation>Zein motatako lagin anitzeko antialiasing-a ari den erabiltzen</translation>
+    </message>
+    <message>
+      <source>Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</source>
+      <translation>Begien arteko distantzia proiekzio estereoetarako.
+Zehaztutako balioa unean bistaratzen ari den 3D objektuaren
+muga-koadroaren tamainarekin biderkatuko den faktore bat da.</translation>
     </message>
   </context>
   <context>
@@ -3249,10 +3290,6 @@ Honako forma ere erabili dezakezu: Jon Inor &lt;jon@inor.com&gt;</translation>
       <source>Framebuffer (as is)</source>
       <translation>Marko-bufferra (bere horretan)</translation>
     </message>
-    <message>
-      <source>Pixel buffer</source>
-      <translation>Pixel-bufferra</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
@@ -3261,20 +3298,51 @@ Honako forma ere erabili dezakezu: Jon Inor &lt;jon@inor.com&gt;</translation>
       <translation>Deskargatutako lan-mahaiak</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load the selected workbenches, adding their preference windows to the preferences dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kargatu hautatutako lan-mahaiak eta gehitu haien hobespen-leihoak hobespenen elkarrizketa-koadroari.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Workbench Name</source>
+      <translation>Lan-mahaiaren izena</translation>
     </message>
     <message>
-      <source>Load Selected</source>
-      <translation>Kargatu hautatua</translation>
+      <source>Autoload?</source>
+      <translation>Automatikoki kargatu?</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Available unloaded workbenches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deskargatutako lan-mahai erabilgarriak&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Load Now</source>
+      <translation>Kargatu orain</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation, but are not yet loaded:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Baliabideak aurrezteko, FreeCADek ez ditu laneko mahaiak kargatzen haiek erabili nahi diren arte. Kargatzen direnean, haien funtzionaltasunari lotutako hobespen gehigarriak agertuko dira.&lt;/p&gt;&lt;p&gt;Honako laneko mahaiak daude erabilgarri zure instalazioan (oraindik kargatu gabe daude):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Baliabideak aurrezteko, FreeCADek ez ditu laneko mahaiak kargatzen haiek erabili nahi diren arte. Kargatzen direnean, haien funtzionaltasunari lotutako hobespen gehigarriak agertuko dira.&lt;/p&gt;&lt;p&gt;Honako laneko mahaiak daude erabilgarri zure instalazioan:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsLazyLoadedImp</name>
+    <message>
+      <source>Workbench</source>
+      <translation>Lan-mahaia</translation>
+    </message>
+    <message>
+      <source>Autoload</source>
+      <translation>Kargatu automatikoki</translation>
+    </message>
+    <message>
+      <source>If checked</source>
+      <translation>Markatuta badago</translation>
+    </message>
+    <message>
+      <source>will be loaded automatically when FreeCAD starts up</source>
+      <translation>automatikoki kargatuko da FreeCAD abiarazten denean</translation>
+    </message>
+    <message>
+      <source>This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</source>
+      <translation type="unfinished">This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</translation>
+    </message>
+    <message>
+      <source>Loaded</source>
+      <translation>Kargatuta</translation>
+    </message>
+    <message>
+      <source>Load now</source>
+      <translation>Kargatu orain</translation>
     </message>
   </context>
   <context>
@@ -3491,12 +3559,6 @@ Balioa da pantailari doituko zaion esferaren diametroa.</translation>
       <translation>Zoom-urratsa</translation>
     </message>
     <message>
-      <source>How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step. </source>
-      <translation>Zenbateko zooma egingo den.
-'1' mailako zoomak 7.5eko faktorea da zoom-maila bakoitzerako. </translation>
-    </message>
-    <message>
       <source>Direction of zoom operations will be inverted</source>
       <translation>Zoom-eragiketen norabidea alderantzikatu egingo da.</translation>
     </message>
@@ -3583,6 +3645,28 @@ Ezarpen honek ez du desgaitzen sagu bidezko inklinazioa.</translation>
     <message>
       <source>Object center</source>
       <translation>Objektuaren zentroa</translation>
+    </message>
+    <message>
+      <source>Rotates to nearest possible state when clicking a cube face</source>
+      <translation>Egoera posible hurbilenera biratzen du kuboaren aurpegi batean klik egitean</translation>
+    </message>
+    <message>
+      <source>Rotate to nearest</source>
+      <translation>Biratu hurbilenera</translation>
+    </message>
+    <message>
+      <source>Cube size</source>
+      <translation>Kubo-tamaina</translation>
+    </message>
+    <message>
+      <source>Size of the navigation cube</source>
+      <translation>Nabigazio-kuboaren tamaina</translation>
+    </message>
+    <message>
+      <source>How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
+      <translation>Zenbateko zooma egingo den.
+'1' mailako zoomak 7,5eko faktorea da zoom-maila bakoitzerako.</translation>
     </message>
   </context>
   <context>
@@ -3895,12 +3979,12 @@ Hobespen-sistema hobespen orokorretan ezarritakoa da.</translation>
   <context>
     <name>Gui::Dialog::DlgUnitsCalculator</name>
     <message>
-      <source>unknown unit: </source>
-      <translation>Unitate ezezaguna: </translation>
-    </message>
-    <message>
       <source>unit mismatch</source>
       <translation>unitateak ez datoz bat</translation>
+    </message>
+    <message>
+      <source>unknown unit:</source>
+      <translation>Unitate ezezaguna:</translation>
     </message>
   </context>
   <context>
@@ -4614,6 +4698,16 @@ The 'Status' column shows whether the document could be recovered.</source>
     <message>
       <source>Partial</source>
       <translation>Partziala</translation>
+    </message>
+    <message>
+      <source>&amp;Use Original Selections</source>
+      <translation type="unfinished">&amp;Use Original Selections</translation>
+    </message>
+    <message>
+      <source>Ignore dependencies and proceed with objects
+originally selected prior to opening this dialog</source>
+      <translation type="unfinished">Ignore dependencies and proceed with objects
+originally selected prior to opening this dialog</translation>
     </message>
   </context>
   <context>
@@ -6894,14 +6988,6 @@ Begiratu txosten-bista gehiagorako...</translation>
     </message>
     <message>
       <source>
-
-Pyhsical path: </source>
-      <translation>
-
-Bide-izen fisikoa: </translation>
-    </message>
-    <message>
-      <source>
 Document: </source>
       <translation>
 Dokumentua: </translation>
@@ -6931,6 +7017,14 @@ Bide-izena: </translation>
     <message>
       <source>Workbenches</source>
       <translation>Lan-mahaiak</translation>
+    </message>
+    <message>
+      <source>
+
+Physical path: </source>
+      <translation>
+
+Bide-izen fisikoa: </translation>
     </message>
   </context>
   <context>
@@ -7402,7 +7496,7 @@ Bide-izena: </translation>
     </message>
     <message>
       <source>Recompute feature or document</source>
-      <translation>Birkalkulatu elementua edo dokumentua</translation>
+      <translation>Birkalkulatu ezaugarria edo dokumentua</translation>
     </message>
   </context>
   <context>
@@ -8702,6 +8796,17 @@ Bide-izena: </translation>
     <message>
       <source>Start the units calculator</source>
       <translation>Abiarazi unitate-kalkulagailua</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdUserEditMode</name>
+    <message>
+      <source>Edit mode</source>
+      <translation type="unfinished">Edit mode</translation>
+    </message>
+    <message>
+      <source>Defines behavior when editing an object from tree</source>
+      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
     </message>
   </context>
   <context>
