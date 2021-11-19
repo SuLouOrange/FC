@@ -127,6 +127,7 @@ DockWindowManager::~DockWindowManager()
  */
 QDockWidget* DockWindowManager::addDockWindow(const char* name, QWidget* widget, Qt::DockWidgetArea pos)
 {
+    qDebug() << __FUNCTION__ << ": " << name<<"; size of dockedW:"<< d->_dockedWindows.size();
     // creates the dock widget as container to embed this widget
     MainWindow* mw = getMainWindow();
     QDockWidget* dw = new QDockWidget(mw);
@@ -270,6 +271,7 @@ void DockWindowManager::retranslate()
  */
 bool DockWindowManager::registerDockWindow(const char* name, QWidget* widget)
 {
+    qDebug() << __FUNCTION__ << " : " << name;
     QMap<QString, QPointer<QWidget> >::Iterator it = d->_dockWindows.find(QLatin1String(name));
     if (it != d->_dockWindows.end() || !widget)
         return false;
@@ -301,21 +303,29 @@ void DockWindowManager::setup(DockWindowItems* items)
     QList<QDockWidget*> docked = d->_dockedWindows;
     const QList<DockWindowItem>& dws = items->dockWidgets();
     QList<QDockWidget*> areas[4];
+    int i = 0;
     for (QList<DockWindowItem>::ConstIterator it = dws.begin(); it != dws.end(); ++it) {
+        qDebug() << __FUNCTION__ << " LOOP in incoming items " << i++ << ": " << it->name;
         QDockWidget* dw = findDockWidget(docked, it->name);
         QByteArray dockName = it->name.toLatin1();
         bool visible = hPref->GetBool(dockName.constData(), it->visibility);
 
         if (!dw) {
+            qDebug() << __FUNCTION__ << " !DW";
             QMap<QString, QPointer<QWidget> >::ConstIterator jt = d->_dockWindows.find(it->name);
             if (jt != d->_dockWindows.end()) {
+                qDebug() << __FUNCTION__ << " !DW,but find in _dockWindows : " << jt->data();
                 dw = addDockWindow(jt.value()->objectName().toUtf8(), jt.value(), it->pos);
                 jt.value()->show();
                 dw->toggleViewAction()->setData(it->name);
                 dw->setVisible(visible);
             }
+            else {
+                qDebug() << __FUNCTION__ << " !DW,can't  find in _dockWindows too! ";
+            }
         }
         else {
+            qDebug() << __FUNCTION__ << "find DW: "<<dw->toggleViewAction()->data().toString();
             dw->setVisible(visible);
             dw->toggleViewAction()->setVisible(true);
             int index = docked.indexOf(dw);

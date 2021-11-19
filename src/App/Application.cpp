@@ -2059,6 +2059,9 @@ void Application::initConfig(int argc, char ** argv)
 #endif
     }
 
+    //Base::Console().SetDefaultLogLevel();//relax all will be print
+    Base::Console().SetLogLevel("App", FC_LOGLEVEL_TRACE + 1);
+
     // Change application tmp. directory
     std::string tmpPath = _pcUserParamMngr->GetGroup("BaseApp/Preferences/General")->GetASCII("TempPath");
     Base::FileInfo di(tmpPath);

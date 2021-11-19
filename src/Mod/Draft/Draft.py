@@ -430,14 +430,10 @@ App.Console.PrintWarning("draft 17\n")
 if App.GuiUp:
     from draftviewproviders.view_text import (ViewProviderText,
                                               ViewProviderDraftText)
-<<<<<<< HEAD
 App.Console.PrintWarning("draft 18\n")
-=======
 
 from draftobjects.hatch import (Draft_Hatch_Object)
 from draftmake.make_hatch import (make_hatch, makeHatch)
 if App.GuiUp:
     from draftviewproviders.view_hatch import (Draft_Hatch_ViewProvider)
-
->>>>>>> 48c1738a533ac63527cf46018c773f0ebb03adfd
 ## @}
