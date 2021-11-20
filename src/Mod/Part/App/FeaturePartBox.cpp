@@ -37,7 +37,7 @@
 using namespace Part;
 
 static const char* logKey = "FeaturePartBox";
-FC_LOG_LEVEL_INIT(logKey,false,true)
+FC_LOG_LEVEL_INIT("App",false,true)
 
 PROPERTY_SOURCE(Part::Box, Part::Primitive)
 
@@ -95,19 +95,27 @@ App::DocumentObjectExecReturn *Box::execute(void)
  */
 void Box::Restore(Base::XMLReader &reader)
 {
+    FC_TRACE(getNameInDocument());
     reader.readElement("Properties");
     int Cnt = reader.getAttributeAsInteger("Count");
     int transientCount = 0;
     if(reader.hasAttribute("TransientCount"))
         transientCount = reader.getAttributeAsUnsigned("TransientCount");
+    FC_TRACE("Cnt from reader" << Cnt);
+    FC_TRACE("transientCount from reader: " << transientCount);
+    FC_TRACE("PropertyContainer::dynamicProps Of doccument size: " << dynamicProps.size() << "\n\n");
 
+    FC_TRACE("read _Property(transient) start *********");
     for (int i=0;i<transientCount; ++i) {
         reader.readElement("_Property");
         App::Property* prop = getPropertyByName(reader.getAttribute("name"));
         if(prop && reader.hasAttribute("status"))
             prop->setStatusValue(reader.getAttributeAsUnsigned("status"));
     }
+    FC_TRACE("read _Property(transient) end*********" << "\n\n");
 
+    FC_TRACE("read Property start *********");
+#if 0
     bool location_xyz = false;
     bool location_axis = false;
     bool distance_lhw = false;
@@ -116,14 +124,29 @@ void Box::Restore(Base::XMLReader &reader)
     App::PropertyDistance l,w,h;
     App::PropertyVector Axis, Location;
     Axis.setValue(0.0f,0.0f,1.0f);
+#endif
     for (int i=0 ;i<Cnt;i++) {
         reader.readElement("Property");
         const char* PropName = reader.getAttribute("name");
         const char* TypeName = reader.getAttribute("type");
+        FC_TRACE("loop " << i << ": " << PropName << ",  " << TypeName);
         auto prop = dynamicProps.restore(*this,PropName,TypeName,reader);
-        if(!prop)
+        if (!prop) {
+            FC_TRACE("dynamicProps.restore() failed,then  try to get from memory");
             prop = getPropertyByName(PropName);
+            if (!prop)
+                FC_TRACE("get prop from memory failed");
+            else
+                FC_TRACE("get prop from memory success");
+        }
+        else
+            FC_TRACE("dynamicProps.restore() get a valid property");
 
+        if (prop) {
+            FC_TRACE("get property :"<<prop->getName() << "(name in container) success!");
+        }
+        else
+            FC_TRACE("get property : xxx faied!");
         std::bitset<32> status;
         if(reader.hasAttribute("status")) {
             status = reader.getAttributeAsUnsigned("status");
@@ -141,6 +164,7 @@ void Box::Restore(Base::XMLReader &reader)
             reader.readEndElement("Property");
             continue;
         }
+#if 0
         if (!prop) {
             // in case this comes from an old document we must use the new properties
             if (strcmp(PropName, "l") == 0) {
@@ -200,8 +224,10 @@ void Box::Restore(Base::XMLReader &reader)
             prop->Restore(reader);
 
         reader.readEndElement("Property");
+#endif
     }
 
+#if 0
     if (distance_lhw) {
         this->Length.setValue(l.getValue());
         this->Height.setValue(h.getValue());
@@ -225,7 +251,8 @@ void Box::Restore(Base::XMLReader &reader)
         this->Placement.setValue(this->Placement.getValue() * plm);
         this->Shape.setStatus(App::Property::User1, true); // override the shape's location later on
     }
-
+#endif
+    FC_TRACE("read Property end *********\n\n");
     reader.readEndElement("Properties");
 }
 

@@ -324,7 +324,10 @@ void PropertyContainer::Restore(Base::XMLReader &reader)
     int transientCount = 0;
     if(reader.hasAttribute("TransientCount"))
         transientCount = reader.getAttributeAsUnsigned("TransientCount");
-
+    FC_TRACE("Cnt from reader" << Cnt);
+    FC_TRACE("transientCount from reader: " << transientCount);
+    FC_TRACE("PropertyContainer::dynamicProps Of doccument size: " << dynamicProps.size());
+    FC_TRACE("\n\n read _Property(transient) start *********");
     for (int i=0;i<transientCount; ++i) {
         reader.readElement("_Property");
         Property* prop = getPropertyByName(reader.getAttribute("name"));
@@ -333,15 +336,25 @@ void PropertyContainer::Restore(Base::XMLReader &reader)
         if(prop && reader.hasAttribute("status"))
             prop->setStatusValue(reader.getAttributeAsUnsigned("status"));
     }
+    FC_TRACE("read _Property(transient) end*********");
 
+    FC_TRACE("\n\n read Property start *********");
     for (int i=0 ;i<Cnt ;i++) {
         reader.readElement("Property");
         std::string PropName = reader.getAttribute("name");
         std::string TypeName = reader.getAttribute("type");
+        FC_TRACE("loop " << i << ", propName:" << PropName << "; TypeName: " << TypeName);
         auto prop = dynamicProps.restore(*this,PropName.c_str(),TypeName.c_str(),reader);
-        if(!prop)
+        if (!prop) {
+            FC_TRACE("dynamicProps.restore() failed,then  try to get from memory");
             prop = getPropertyByName(PropName.c_str());
-
+            if(!prop)
+                FC_TRACE("get prop from memory failed");
+            else
+                FC_TRACE("get prop from memory success");
+        }
+        else
+            FC_TRACE("dynamicProps.restore() get a valid property");
         decltype(Property::StatusBits) status;
         if(reader.hasAttribute("status")) {
             status = decltype(status)(reader.getAttributeAsUnsigned("status"));
@@ -404,6 +417,7 @@ void PropertyContainer::Restore(Base::XMLReader &reader)
 #endif
         reader.readEndElement("Property");
     }
+    FC_TRACE("read Property end *********");
     reader.readEndElement("Properties");
 }
 
