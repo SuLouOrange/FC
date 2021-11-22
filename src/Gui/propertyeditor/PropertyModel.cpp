@@ -33,9 +33,11 @@
 #include "PropertyItem.h"
 #include "PropertyView.h"
 
+#include <Base/Console.h>
+
 using namespace Gui::PropertyEditor;
 
-
+FC_LOG_LEVEL_INIT("PropertyView", false, true);
 /* TRANSLATOR Gui::PropertyEditor::PropertyModel */
 
 PropertyModel::PropertyModel(QObject* parent)
@@ -229,6 +231,7 @@ static void setPropertyItemName(PropertyItem *item, const char *propName, QStrin
 
 void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 {
+    FC_TRACE(__FUNCTION__);
     beginResetModel();
 
     // fill up the listview with the properties
@@ -286,6 +289,7 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 
 void PropertyModel::updateProperty(const App::Property& prop)
 {
+    FC_TRACE(__FUNCTION__);
     int column = 1;
     int numChild = rootItem->childCount();
     for (int row=0; row<numChild; row++) {

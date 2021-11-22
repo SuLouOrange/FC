@@ -39,8 +39,8 @@ using namespace Part;
 static const char* logKey = "FeaturePartBox";
 FC_LOG_LEVEL_INIT("App",false,true)
 
-PROPERTY_SOURCE(Part::Box, Part::Primitive)
-
+//PROPERTY_SOURCE(Part::Box, Part::Primitive)
+PROPERTY_SOURCE_WITH_EXTENSIONS(Part::Box, Part::Primitive)
 
 Box::Box()
 {
