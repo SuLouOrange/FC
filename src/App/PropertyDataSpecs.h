@@ -41,7 +41,7 @@ namespace App {
 
         const std::map<std::string, std::string>& getValues(void) const { return _lValueList; }
 
-        //virtual const char* getEditorName(void) const { return "Gui::PropertyEditor::PropertyStringListItem"; }
+        virtual const char* getEditorName(void) const { return "Gui::PropertyEditor::PropertyDataSpecsItem"; }
 
         virtual PyObject* getPyObject(void);
         virtual void setPyObject(PyObject*);

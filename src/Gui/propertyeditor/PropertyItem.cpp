@@ -66,6 +66,10 @@
 #include "PropertyView.h"
 #include <Gui/SpinBox.h>
 
+#include <Base/Console.h>
+
+FC_LOG_LEVEL_INIT("PropertyView", false, true);
+
 using namespace Gui::PropertyEditor;
 using namespace Gui::Dialog;
 
@@ -108,6 +112,7 @@ PropertyItem::~PropertyItem()
 
 void PropertyItem::initialize()
 {
+
 }
 
 void PropertyItem::reset()
@@ -1098,7 +1103,7 @@ PROPERTYITEM_SOURCE(Gui::PropertyEditor::PropertyUnitConstraintItem)
 
 PropertyUnitConstraintItem::PropertyUnitConstraintItem()
 {
-
+    qDebug() << __FUNCTION__ << ", propName:" << propName << "; dispText:" << displayText << "; displayName: " << displayName();
 }
 
 void PropertyUnitConstraintItem::setEditorData(QWidget *editor, const QVariant& data) const

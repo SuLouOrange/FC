@@ -33,6 +33,8 @@
 #include "PropertyItem.h"
 #include "PropertyView.h"
 
+#include <App/PropertyDataSpecs.h>
+
 #include <Base/Console.h>
 
 using namespace Gui::PropertyEditor;
@@ -231,8 +233,14 @@ static void setPropertyItemName(PropertyItem *item, const char *propName, QStrin
 
 void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 {
+
     FC_TRACE(__FUNCTION__);
     beginResetModel();
+    if (!props.empty()) {
+        FC_TRACE(__FUNCTION__ << ", size of props:" << props.size());
+    }
+    else
+        FC_TRACE(__FUNCTION__ << "props is empty.");
 
     // fill up the listview with the properties
     rootItem->reset();
@@ -263,22 +271,26 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
             std::string editor(prop->getEditorName());
             if(editor.empty() && PropertyView::showAll())
                 editor = "Gui::PropertyEditor::PropertyItem";
-            if (!editor.empty()) {
+            if (prop->getTypeId() == App::PropertyDataSpecs::getClassTypeId()) {
+                FC_MSG(__FUNCTION__);
+            }
+            else if (!editor.empty()) {
                 PropertyItem* item = PropertyItemFactory::instance().createPropertyItem(editor.c_str());
                 if (!item) {
                     qWarning("No property item for type %s found\n", editor.c_str());
                     continue;
                 }
                 else {
-                    if(boost::ends_with(info.name,"*"))
+                    if (boost::ends_with(info.name, "*"))
                         item->setLinked(true);
                     PropertyItem* child = (PropertyItem*)item;
                     child->setParent(rootItem);
                     rootItem->appendChild(child);
 
-                    setPropertyItemName(child,prop->getName(),groupName);
+                    setPropertyItemName(child, prop->getName(), groupName);
 
                     child->setPropertyData(info.props);
+
                 }
             }
         }
@@ -289,9 +301,9 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 
 void PropertyModel::updateProperty(const App::Property& prop)
 {
-    FC_TRACE(__FUNCTION__);
     int column = 1;
     int numChild = rootItem->childCount();
+    FC_TRACE(__FUNCTION__ << ", " << prop.getName() << ", numChild:" << numChild);
     for (int row=0; row<numChild; row++) {
         PropertyItem* child = rootItem->child(row);
         if (child->hasProperty(&prop)) {

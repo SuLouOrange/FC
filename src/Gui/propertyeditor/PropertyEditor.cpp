@@ -406,7 +406,7 @@ void PropertyEditor::buildUp(PropertyModel::PropertyList &&props, bool checkDocu
 
 void PropertyEditor::updateProperty(const App::Property& prop)
 {
-    FC_TRACE(__FUNCTION__);
+    FC_TRACE(__FUNCTION__ << " committing: " << committing);
     // forward this to the model if the property is changed from outside
     if (!committing)
         propertyModel->updateProperty(prop);
