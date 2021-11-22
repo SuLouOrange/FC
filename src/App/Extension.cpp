@@ -96,8 +96,10 @@ void Extension::initExtension(ExtensionContainer* obj) {
     }
     FC_MSG("******   " << __FUNCTION__ << " type name " << typeNameStr);
     
-    if (m_extensionType.isBad())
+    if (m_extensionType.isBad()) {
+        //init();
         throw Base::RuntimeError("Extension: Extension type not set");
+    }
 
     //all properties are initialised without PropertyContainer father. Now that we know it we can
     //finally finish the property initialisation

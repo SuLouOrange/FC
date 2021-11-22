@@ -113,9 +113,11 @@
 #include "TextDocument.h"
 #include "ExpressionParser.h"
 #include "Transactions.h"
+#include "ExtensionPropertyData.h"
 #include <App/MaterialPy.h>
 #include <Base/GeometryPyCXX.h>
 #include "Link.h"
+#include "PropertyDataSpecs.h"
 
 #include "DocumentPy.h"
 #include "DocumentObjectGroupPy.h"
@@ -1870,6 +1872,8 @@ void Application::initTypes(void)
     App ::LinkElementPython         ::init();
     App ::LinkGroup                 ::init();
     App ::LinkGroupPython           ::init();
+    App::PropertyDataSpecs          ::init();
+    App::ExtensionPropertyData      ::init();
 
     // Expression classes
     App ::Expression                ::init();

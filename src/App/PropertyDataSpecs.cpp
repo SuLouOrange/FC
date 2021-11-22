@@ -60,7 +60,7 @@ namespace App {
     {
         PyObject* dict = PyDict_New();
 
-        for (std::map<std::string, std::string>::const_iterator it = _lValueList.begin(); it != _lValueList.end(); ++it) {
+        for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
             PyObject* item = PyUnicode_DecodeUTF8(it->second.c_str(), it->second.size(), nullptr);
             if (!item) {
                 Py_DECREF(dict);

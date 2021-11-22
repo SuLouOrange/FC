@@ -6,6 +6,8 @@ namespace App {
     class AppExport ExtensionPropertyData :public App::Extension {
         EXTENSION_PROPERTY_HEADER_WITH_OVERRIDE(App::ExtensionPropertyData);
     public:
+        static void addPropertiesOnObject(App::DocumentObject* object);
+
         ExtensionPropertyData();
         ~ExtensionPropertyData();
 
