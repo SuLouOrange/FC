@@ -231,6 +231,17 @@ static void setPropertyItemName(PropertyItem *item, const char *propName, QStrin
     item->setPropertyName(name);
 }
 
+static void splitSpecs(const App::PropertyDataSpecs& specs, std::map<std::string, std::vector<PropItemInfo>>& propGroup);
+void splitSpecs(const App::PropertyDataSpecs& propertyDataSpecs, std::map<std::string, std::vector<PropItemInfo>>& propGroup) {
+    FC_MSG(__FUNCTION__);
+    const auto& specs = propertyDataSpecs.getValues();
+    for (const auto& spec : specs) {
+        FC_MSG("name: " << spec.first << "; spec: ");
+        spec.second.printInfo();
+    }
+}
+
+//typedef vector<pair<string, vector<App::Property*>>> PropertyList;
 void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 {
 
@@ -244,12 +255,26 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 
     // fill up the listview with the properties
     rootItem->reset();
+    /*
+    struct PropItemInfo {
+        const std::string& name;
+        const std::vector<App::Property*>& props;
 
+        PropItemInfo(const std::string& n, const std::vector<App::Property*>& p)
+            :name(n), props(p)
+        {}
+    };
+    */
     // sort the properties into their groups
+    const auto& propertyDataSpecType = App::PropertyDataSpecs::getClassTypeId();
     std::map<std::string, std::vector<PropItemInfo> > propGroup;
-    PropertyModel::PropertyList::const_iterator jt;
-    for (jt = props.begin(); jt != props.end(); ++jt) {
+    for (auto jt = props.begin(); jt != props.end(); ++jt) {
+        FC_MSG(__FUNCTION__ << ", " << jt->first << ",size: " << jt->second.size());
         App::Property* prop = jt->second.front();
+        if (prop->getTypeId() == propertyDataSpecType) {
+            splitSpecs(*reinterpret_cast<App::PropertyDataSpecs*>(prop), propGroup);
+            continue;
+        }
         const char* group = prop->getGroup();
         bool isEmpty = (group == 0 || group[0] == '\0');
         std::string grp = isEmpty ? QT_TRANSLATE_NOOP("App::Property", "Base") : group;
@@ -271,10 +296,7 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
             std::string editor(prop->getEditorName());
             if(editor.empty() && PropertyView::showAll())
                 editor = "Gui::PropertyEditor::PropertyItem";
-            if (prop->getTypeId() == App::PropertyDataSpecs::getClassTypeId()) {
-                FC_MSG(__FUNCTION__);
-            }
-            else if (!editor.empty()) {
+            if (!editor.empty()) {
                 PropertyItem* item = PropertyItemFactory::instance().createPropertyItem(editor.c_str());
                 if (!item) {
                     qWarning("No property item for type %s found\n", editor.c_str());

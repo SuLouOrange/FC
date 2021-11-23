@@ -8,11 +8,30 @@
 #include <vector>
 
 namespace App {
+    
+
     class AppExport PropertyDataSpecs : public Property
     {
         TYPESYSTEM_HEADER();
 
     public:
+
+        enum {
+            emProperryTypeString,
+            emProperryTypeSum,
+        };
+
+        static const std::string subPropValueKey;
+        struct AppExport DataSpec {
+            int type = -1;
+            std::string value;
+            std::string group;
+            std::string toString()const;
+            static DataSpec fromString(const std::string & str);
+            void printInfo()const;
+        };
+
+        typedef DataSpec DataType;
 
         /**
          * A constructor.
@@ -31,15 +50,15 @@ namespace App {
         /** Sets the property
          */
         void setValue(void) {}
-        void setValue(const std::string& key, const std::string& value);
-        void setValues(const std::map<std::string, std::string>&);
+        void setValue(const std::string& key, const DataType& value);
+        void setValues(const std::map<std::string, DataType>&);
 
         /// index operator
-        const std::string& operator[] (const std::string& key) const;
+        const DataType& operator[] (const std::string& key) const;
 
-        void  set1Value(const std::string& key, const std::string& value) { _lValueList.operator[] (key) = value; }
+        void  set1Value(const std::string& key, const DataType value) { _lValueList.operator[] (key) = value; }
 
-        const std::map<std::string, std::string>& getValues(void) const { return _lValueList; }
+        const std::map<std::string, DataType>& getValues(void) const { return _lValueList; }
 
         virtual const char* getEditorName(void) const { return "Gui::PropertyEditor::PropertyDataSpecsItem"; }
 
@@ -56,7 +75,7 @@ namespace App {
 
 
     private:
-        std::map<std::string, std::string> _lValueList;
+        std::map<std::string, DataType> _lValueList;
     };
 }//namespace App
 #endif

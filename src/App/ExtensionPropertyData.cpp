@@ -18,9 +18,9 @@ namespace App{
 		Extension::m_isPythonExtension = true;
 		EXTENSION_ADD_PROPERTY_TYPE(PropertySpecs, (), "", PropertyType(Prop_None), "");
 
-		map<string, string> propertySpecs; ;
-		propertySpecs.insert({ "SingleBuildingName", "{Type : PropertyString,Value : xxx,Group : Special}" });
-		propertySpecs.insert({ "Model",              "{Type : PropertyString,Value : xxx,Group : Special}" });
+		map<string, PropertyDataSpecs::DataType> propertySpecs; ;
+		propertySpecs.insert({ "SingleBuildingName", {PropertyDataSpecs::emProperryTypeString,"thsBuildings","Specialty"} });
+		propertySpecs.insert({ "Model",               {PropertyDataSpecs::emProperryTypeString,"basic001","Specialty"} });
 		PropertySpecs.setValues(propertySpecs);
 	};
 

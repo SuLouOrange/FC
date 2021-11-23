@@ -6,10 +6,58 @@
 #include "Document.h"
 #include "DocumentObject.h"
 
+#include <Base/Console.h>
+
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
+FC_LOG_LEVEL_INIT("App", false, true);
+
 TYPESYSTEM_SOURCE(App::PropertyDataSpecs, App::Property)
 
 using namespace std;
 namespace App {
+    const string PropertyDataSpecs::subPropValueKey = "value";
+    string PropertyDataSpecs::DataSpec::toString()const {
+        string rValue = "{\"type\" : \"";
+        //string
+        rValue += to_string(type) + "\",\"" + subPropValueKey + "\": \"" + value + "\", \"group\" : \"" + group + "\"}";
+        return rValue;
+    }
+
+    PropertyDataSpecs::DataSpec PropertyDataSpecs::DataSpec::fromString(const string&str) {
+        DataSpec rValue;
+        int type = -1;
+
+        boost::property_tree::ptree dataSpecsTree;
+
+        try {
+            boost::property_tree::read_json(stringstream(str), dataSpecsTree);
+            rValue.type = dataSpecsTree.get<int>("type");
+            rValue.value = dataSpecsTree.get<string>(subPropValueKey);
+#if 0
+            switch (type) {
+            case emProperryTypeString:
+                break;
+            default:
+                FC_ERR(__FUNCTION__ << ",invalid type: " << type);
+                break;
+            }
+#endif
+            rValue.group= dataSpecsTree.get<string>("group");
+            rValue.printInfo();
+            
+        }
+        catch (std::exception& e) {
+            FC_ERR(__FUNCTION__<<", " << e.what());
+        }
+        return rValue;
+    }
+
+    void PropertyDataSpecs::DataSpec::printInfo()const {
+        FC_TRACE("type: " << type << "; vlaue: " << value << "; group : " << group);
+    }
+
+
     PropertyDataSpecs::PropertyDataSpecs()
     {
 
@@ -29,14 +77,14 @@ namespace App {
         return static_cast<int>(_lValueList.size());
     }
 
-    void PropertyDataSpecs::setValue(const std::string& key, const std::string& value)
+    void PropertyDataSpecs::setValue(const std::string& key, const DataType& value)
     {
         aboutToSetValue();
         _lValueList[key] = value;
         hasSetValue();
     }
 
-    void PropertyDataSpecs::setValues(const std::map<std::string, std::string>& map)
+    void PropertyDataSpecs::setValues(const std::map<std::string, DataType>& map)
     {
         aboutToSetValue();
         _lValueList = map;
@@ -45,10 +93,10 @@ namespace App {
 
 
 
-    const std::string& PropertyDataSpecs::operator[] (const std::string& key) const
+    const PropertyDataSpecs::DataType& PropertyDataSpecs::operator[] (const std::string& key) const
     {
-        static std::string empty;
-        std::map<std::string, std::string>::const_iterator it = _lValueList.find(key);
+        static DataType empty;
+        auto it = _lValueList.find(key);
         if (it != _lValueList.end())
             return it->second;
         else
@@ -61,6 +109,7 @@ namespace App {
         PyObject* dict = PyDict_New();
 
         for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
+#if 0
             PyObject* item = PyUnicode_DecodeUTF8(it->second.c_str(), it->second.size(), nullptr);
             if (!item) {
                 Py_DECREF(dict);
@@ -68,6 +117,7 @@ namespace App {
             }
             PyDict_SetItemString(dict, it->first.c_str(), item);
             Py_DECREF(item);
+#endif
         }
 
         return dict;
@@ -75,6 +125,7 @@ namespace App {
 
     void PropertyDataSpecs::setPyObject(PyObject* value)
     {
+#if 0
         if (PyDict_Check(value)) {
 
             std::map<std::string, std::string> values;
@@ -117,13 +168,14 @@ namespace App {
             error += value->ob_type->tp_name;
             throw Base::TypeError(error);
         }
+#endif
     }
 
     unsigned int PropertyDataSpecs::getMemSize() const
     {
         size_t size = 0;
-        for (std::map<std::string, std::string>::const_iterator it = _lValueList.begin(); it != _lValueList.end(); ++it) {
-            size += it->second.size();
+        for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
+            size += sizeof(it->second);//if this work
             size += it->first.size();
         }
         return size;
@@ -133,9 +185,9 @@ namespace App {
     {
         writer.Stream() << writer.ind() << "<Map count=\"" << getSize() << "\">" << endl;
         writer.incInd();
-        for (std::map<std::string, std::string>::const_iterator it = _lValueList.begin(); it != _lValueList.end(); ++it) {
+        for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
             writer.Stream() << writer.ind() << "<Item key=\"" << encodeAttribute(it->first)
-                << "\" value=\"" << encodeAttribute(it->second) << "\"/>" << endl;
+                << "\" value=\"" << encodeAttribute(it->second.toString()) << "\"/>" << endl;
         }
 
         writer.decInd();
@@ -149,10 +201,11 @@ namespace App {
         // get the value of my Attribute
         int count = reader.getAttributeAsInteger("count");
 
-        std::map<std::string, std::string> values;
+        std::map<std::string, DataType> values;
         for (int i = 0; i < count; i++) {
             reader.readElement("Item");
-            values[reader.getAttribute("key")] = reader.getAttribute("value");
+            const auto & dataSpecsStr = reader.getAttribute("value");
+            values[reader.getAttribute("key")] = DataType::fromString(dataSpecsStr);
         }
 
         reader.readEndElement("Map");
