@@ -1080,21 +1080,6 @@ protected:
     PropertyLinkListItem();
 };
 
-#if 0
-/**
- * Edit properties of link list type.
- * \author Werner Mayer
- */
-class GuiExport PropertyDataSpecItem : public PropertyLinkItem
-{
-    Q_OBJECT
-        PROPERTYITEM_HEADER
-
-protected:
-    PropertyLinkListItem();
-};
-#endif
-
 
 class PropertyItemEditorFactory : public QItemEditorFactory
 {

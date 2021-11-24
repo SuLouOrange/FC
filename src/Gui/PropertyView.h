@@ -111,6 +111,8 @@ private:
     Connection connectDelViewObject;
     QTabWidget* tabs;
     QTimer* timer;
+public:
+    static void classifyProperties(short typeKey, App::Property* property, std::vector<struct PropInfo>& propInfos);
 };
 
 namespace DockWnd {

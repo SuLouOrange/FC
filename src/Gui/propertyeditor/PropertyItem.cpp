@@ -48,6 +48,7 @@
 #include <App/PropertyGeo.h>
 #include <App/PropertyFile.h>
 #include <App/PropertyUnits.h>
+#include <App/PropertyDataSpecs.h>
 #include <Gui/Application.h>
 #include <Gui/Control.h>
 #include <Gui/Widgets.h>
@@ -337,8 +338,13 @@ QVariant PropertyItem::displayName() const
 
 QVariant PropertyItem::toolTip(const App::Property* prop) const
 {
+    const char *docu = nullptr;
+    if (prop->getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
+        docu = reinterpret_cast<const App::PropertyAdaptor*>(prop)->getDocumentation();
+    else
+        docu = prop->getDocumentation();
     QString str = QApplication::translate("App::Property",
-                                          prop->getDocumentation());
+                                          docu);
     return QVariant(str);
 }
 

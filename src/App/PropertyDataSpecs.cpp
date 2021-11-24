@@ -16,6 +16,7 @@ TYPESYSTEM_SOURCE(App::PropertyDataSpecs, App::Property)
 
 using namespace std;
 namespace App {
+
     const string PropertyDataSpecs::subPropValueKey = "value";
     string PropertyDataSpecs::DataSpec::toString()const {
         string rValue = "{\"type\" : \"";
@@ -65,7 +66,8 @@ namespace App {
 
     PropertyDataSpecs::~PropertyDataSpecs()
     {
-
+        for (auto adaptorPair : m_propertyAdaptors)
+            delete adaptorPair.second;
     }
 
     //**************************************************************************
@@ -175,7 +177,7 @@ namespace App {
     {
         size_t size = 0;
         for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
-            size += sizeof(it->second);//if this work
+            size += sizeof(it->second);//if this work?
             size += it->first.size();
         }
         return size;
@@ -227,4 +229,46 @@ namespace App {
         _lValueList = dynamic_cast<const PropertyDataSpecs&>(from)._lValueList;
         hasSetValue();
     }
+
+    const std::map<std::string, PropertyAdaptor*>& PropertyDataSpecs::getPropertyAdaptors()const {
+        return m_propertyAdaptors;
+    }
+
+    void PropertyDataSpecs::setPropertyAdaptors(std::map<std::string, PropertyAdaptor*>& adaptors) {
+        m_propertyAdaptors = adaptors;//todo ”≈ªØ
+    }
+
+    std::vector<PropertyAdaptor*> PropertyDataSpecs::getAdaptorVector()const{
+        std::vector<PropertyAdaptor*> adaptors;
+        for (auto item : m_propertyAdaptors)
+            adaptors.push_back(item.second);
+        return adaptors;
+    }
+
+    TYPESYSTEM_SOURCE(App::PropertyAdaptor, App::Property)
+
+    std::shared_ptr<PropertyAdaptor> PropertyAdaptor::fromDataSpecs(const PropertyDataSpecs::DataSpec& dataSpec) {
+
+        return std::make_shared<PropertyAdaptor>(dataSpec.type, dataSpec.docu.c_str(), dataSpec.group.c_str(), dataSpec.value);
+    }
+
+    PropertyAdaptor::PropertyAdaptor(int type, const char* docu, const char* group, const std::string& value) :
+        m_type(type), m_docu(docu), m_group(group), m_value(value)
+    {
+        
+    }
+
+    PropertyAdaptor::PropertyAdaptor() {
+
+    }
+
+    PropertyAdaptor::~PropertyAdaptor() {
+
+    }
+
+    void PropertyAdaptor::print() {
+        FC_TRACE("type: " << m_type << "; vlaue: " << m_value << "; group : " << m_group << "; docu: " << m_docu);
+    }
+
+
 }//namespace App

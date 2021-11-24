@@ -1823,6 +1823,8 @@ void Application::initTypes(void)
     App ::PropertyPythonObject      ::init();
     App ::PropertyExpressionContainer  ::init();
     App ::PropertyExpressionEngine  ::init();
+    App::PropertyAdaptor            ::init();
+    App::PropertyDataSpecs          ::init();
 
     // Extension classes
     App ::Extension                     ::init();
@@ -1872,7 +1874,6 @@ void Application::initTypes(void)
     App ::LinkElementPython         ::init();
     App ::LinkGroup                 ::init();
     App ::LinkGroupPython           ::init();
-    App::PropertyDataSpecs          ::init();
     App::ExtensionPropertyData      ::init();
 
     // Expression classes

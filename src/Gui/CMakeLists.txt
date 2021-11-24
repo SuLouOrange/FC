@@ -703,6 +703,8 @@ SET(Propertyeditor_SRCS
     propertyeditor/PropertyEditor.h
     propertyeditor/PropertyItem.cpp
     propertyeditor/PropertyItem.h
+    propertyeditor/PropertyAdaptorItem.cpp
+    propertyeditor/PropertyAdaptorItem.h
     propertyeditor/PropertyItemDelegate.cpp
     propertyeditor/PropertyItemDelegate.h
     propertyeditor/PropertyModel.cpp
