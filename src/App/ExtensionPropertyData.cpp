@@ -33,12 +33,6 @@ namespace App{
 		initExtensionType(ExtensionPropertyData::getExtensionClassTypeId());
 		Extension::m_isPythonExtension = true;
 		EXTENSION_ADD_PROPERTY_TYPE(PropertySpecs, (), "", PropertyType(Prop_None), "");
-
-#if 0
-		map<string, PropertyDataSpecs::DataType> propertySpecs; ;
-		propertySpecs.insert({ "SingleBuildingName", {PropertyDataSpecs::emProperryTypeString,"{ \"value\" : \"thsBuildings\"}","Specialty"} });
-		propertySpecs.insert({ "Model",               {PropertyDataSpecs::emProperryTypeString,"{\"value\" : \"basic001\"}","Specialty"} });
-#endif
 		map<string,PropertyAdaptor*> adaptors;
 		boost::property_tree::ptree properTree;
 		try {
@@ -54,7 +48,7 @@ namespace App{
 				doc = item.second.get<string>(docuKey);
 				typeEm = item.second.get<int>(typeKey);
 				value = "{\"Value\" : \"";
-				value += item.second.get<string>(valueKey);
+				value += item.second.get<string>(valueKey);//始终为string,需二次解析
 				value += "\"}";
 				auto adaptor = new PropertyAdaptor(name.c_str(), typeEm, doc.c_str(), group.c_str(), value);
 				const auto& result = adaptors.emplace(name, adaptor);
@@ -64,7 +58,6 @@ namespace App{
 				}
 				else {
 					auto prop = result.first->second;
-					//prop->myName = name.c_str();
 					prop->print();
 				}
 			}

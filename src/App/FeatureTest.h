@@ -82,6 +82,8 @@ public:
   App::PropertyVector     Vector;
   App::PropertyVectorList VectorList;
   App::PropertyPlacement  Placement;
+  App::PropertyPosition  Position;
+  App::PropertyVectorDistance VectorDistance;
 
   // Properties to test the Document::recompute()
   App::PropertyLink     Source1;

@@ -1081,6 +1081,7 @@ protected:
 };
 
 
+//just for override
 class PropertyItemEditorFactory : public QItemEditorFactory
 {
 public:

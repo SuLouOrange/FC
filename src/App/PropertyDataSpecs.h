@@ -8,19 +8,6 @@
 #include <vector>
 
 namespace App {
-    
-
-    /*
-    *PropertyAdaptor{
-    * type:int
-    * value :string
-    * group: 未保存在这里
-    * getValue();//向item提供数据
-    * 
-    * 
-    *}
-    */
-
     class PropertyAdaptor;
 
     class AppExport PropertyDataSpecs : public Property
@@ -31,21 +18,10 @@ namespace App {
 
         enum {
             emProperryTypeString,
+            emProperryTypeInteger,
+            emProperryTypeFloat,
             emProperryTypeSum,
         };
-
-        static const std::string subPropValueKey;
-        struct AppExport DataSpec {
-            int type = -1;
-            std::string value;
-            std::string group;
-            std::string docu;
-            std::string toString()const;
-            static DataSpec fromString(const std::string & str);
-            void printInfo()const;
-        };
-
-        typedef DataSpec DataType;
 
         /**
          * A constructor.
@@ -61,24 +37,27 @@ namespace App {
 
         virtual int getSize(void) const;
 
-        /** Sets the property
+        /** Sets the property 宏定义要求
          */
         void setValue(void) {}
-        void setValue(const std::string& key, const DataType& value);
-        void setValues(const std::map<std::string, DataType>&);
+        //void setValue(const std::string& key, const DataType& value);
+        //void setValues(const std::map<std::string, DataType>&);
 
         /// index operator
-        const DataType& operator[] (const std::string& key) const;
+        //const DataType& operator[] (const std::string& key) const;
 
-        void  set1Value(const std::string& key, const DataType value) { _lValueList.operator[] (key) = value; }
+        //void  set1Value(const std::string& key, const DataType value) { _lValueList.operator[] (key) = value; }
 
-        const std::map<std::string, DataType>& getValues(void) const { return _lValueList; }
+        //const std::map<std::string, DataType>& getValues(void) const { return _lValueList; }
 
-        virtual const char* getEditorName(void) const { return "Gui::PropertyEditor::PropertyDataSpecsItem"; }
+        //virtual const char* getEditorName(void) const { return "Gui::PropertyEditor::PropertyDataSpecsItem"; }
 
         virtual PyObject* getPyObject(void);
         virtual void setPyObject(PyObject*);
 
+        /*
+        * @note 暂key只考虑了adaptor的name
+        */
         virtual void Save(Base::Writer& writer) const;
         virtual void Restore(Base::XMLReader& reader);
 
@@ -93,12 +72,14 @@ namespace App {
         std::vector<PropertyAdaptor*> getAdaptorVector()const;
 
     private:
-        std::map<std::string, DataType> _lValueList;
+        //std::map<std::string, DataType> _lValueList;//to do 清理
         std::map<std::string,PropertyAdaptor*> m_propertyAdaptors;
 
     };
 
 
+
+    //此类的值通过PropertyDataSpecs保存
 #define USE_TEMPLATE 0
     class AppExport PropertyAdaptor : public Property {
         TYPESYSTEM_HEADER();
@@ -116,7 +97,15 @@ namespace App {
         template<typename T>
         T getValueByType()const;
 #endif
+        /*
+        * @brief 宿主属性restore时调用，如m_type == emProperryTypeString，也用于从Gui获取数据
+        * @param str 值
+        */
         void setValueByString(const std::string& str);
+
+        /*
+        * @brief 获取std::string格式的值，如m_type == emProperryTypeString，也用于Gui展示
+        */
         std::string getValueAsString()const;
         const char* getGroup()const { return m_group; }
         const char* getDocumentation()const { return m_docu; }
@@ -127,7 +116,7 @@ namespace App {
         virtual const char* getEditorName(void) const { return "Gui::PropertyEditor::PropertyAdaptorItem"; }
         void print();
         void setName(const char* name) { myName = name; };
-
+        unsigned int getMemSize(void) const override;
         PropertyAdaptor& operator = (const PropertyAdaptor&)  = delete;
     private:
         int m_type = -1;

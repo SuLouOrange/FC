@@ -10,7 +10,7 @@
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
-//#include <boosst/json.hpp>
+//#include <boosst/json.hpp>  解析起来应该更快，需要1.75版Boost
 
 #include <cstring>
 
@@ -20,49 +20,6 @@ TYPESYSTEM_SOURCE(App::PropertyDataSpecs, App::Property)
 
 using namespace std;
 namespace App {
-
-    const string PropertyDataSpecs::subPropValueKey = "value";
-    string PropertyDataSpecs::DataSpec::toString()const {
-        string rValue = "{\"type\" : \"";
-        //string
-        rValue += to_string(type) + "\",\"" + subPropValueKey + "\": \"" + value + "\", \"group\" : \"" + group + "\"}";
-        return rValue;
-    }
-
-    PropertyDataSpecs::DataSpec PropertyDataSpecs::DataSpec::fromString(const string&str) {
-        DataSpec rValue;
-        int type = -1;
-
-        boost::property_tree::ptree dataSpecsTree;
-
-        try {
-            boost::property_tree::read_json(stringstream(str), dataSpecsTree);
-            rValue.type = dataSpecsTree.get<int>("type");
-            rValue.value = dataSpecsTree.get<string>(subPropValueKey);
-#if 0
-            switch (type) {
-            case emProperryTypeString:
-                break;
-            default:
-                FC_ERR(__FUNCTION__ << ",invalid type: " << type);
-                break;
-            }
-#endif
-            rValue.group= dataSpecsTree.get<string>("group");
-            rValue.printInfo();
-            
-        }
-        catch (std::exception& e) {
-            FC_ERR(__FUNCTION__<<", " << e.what());
-        }
-        return rValue;
-    }
-
-    void PropertyDataSpecs::DataSpec::printInfo()const {
-        FC_TRACE("type: " << type << "; vlaue: " << value << "; group : " << group);
-    }
-
-
     PropertyDataSpecs::PropertyDataSpecs()
     {
 
@@ -80,9 +37,10 @@ namespace App {
 
     int PropertyDataSpecs::getSize() const
     {
-        return static_cast<int>(_lValueList.size());
+        return static_cast<int>(m_propertyAdaptors.size());
     }
 
+#if 0
     void PropertyDataSpecs::setValue(const std::string& key, const DataType& value)
     {
         aboutToSetValue();
@@ -108,14 +66,14 @@ namespace App {
         else
             return empty;
     }
-
+#endif
 
     PyObject* PropertyDataSpecs::getPyObject()
     {
         PyObject* dict = PyDict_New();
-
-        for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
 #if 0
+        for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
+
             PyObject* item = PyUnicode_DecodeUTF8(it->second.c_str(), it->second.size(), nullptr);
             if (!item) {
                 Py_DECREF(dict);
@@ -123,8 +81,9 @@ namespace App {
             }
             PyDict_SetItemString(dict, it->first.c_str(), item);
             Py_DECREF(item);
-#endif
+
         }
+#endif
 
         return dict;
     }
@@ -177,12 +136,14 @@ namespace App {
 #endif
     }
 
+
+    //大概值即可 参考 App::Property:getMemSize()说明
     unsigned int PropertyDataSpecs::getMemSize() const
     {
         size_t size = 0;
-        for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
-            size += sizeof(it->second);//if this work?
-            size += it->first.size();
+        for (auto& adaptorPair : m_propertyAdaptors) {
+            size += sizeof(adaptorPair.second);//if this work?
+            size += adaptorPair.first.size();
         }
         return size;
     }
@@ -191,9 +152,9 @@ namespace App {
     {
         writer.Stream() << writer.ind() << "<Map count=\"" << getSize() << "\">" << endl;
         writer.incInd();
-        for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
-            writer.Stream() << writer.ind() << "<Item key=\"" << encodeAttribute(it->first)
-                << "\" value=\"" << encodeAttribute(it->second.toString()) << "\"/>" << endl;
+        for (auto & adaptorPair:m_propertyAdaptors) {
+            writer.Stream() << writer.ind() << "<Item key=\"" << encodeAttribute(adaptorPair.first)
+                << "\" value=\"" << encodeAttribute(adaptorPair.second->getValueAsString()) << "\"/>" << endl;
         }
 
         writer.decInd();
@@ -206,31 +167,40 @@ namespace App {
         reader.readElement("Map");
         // get the value of my Attribute
         int count = reader.getAttributeAsInteger("count");
-
-        std::map<std::string, DataType> values;
+        const auto adaptorSize = m_propertyAdaptors.size();
+        if (adaptorSize != count) {
+            FC_WARN("sum of properties aren't same! adaptor : " << adaptorSize << "; properties in document : " << count
+                << "; object name : " << getContainer()->getFullName());
+        }
+        const auto endIt = m_propertyAdaptors.end();
         for (int i = 0; i < count; i++) {
             reader.readElement("Item");
-            const auto & dataSpecsStr = reader.getAttribute("value");
-            values[reader.getAttribute("key")] = DataType::fromString(dataSpecsStr);
+            const auto& key = reader.getAttribute("key");
+            const auto it = m_propertyAdaptors.find(key);
+            if (it  == endIt) {
+                FC_WARN("missing property : " << key << "; object name : " << getContainer()->getFullName());
+                continue;
+            }
+            const auto& dataSpecsStr = reader.getAttribute("value");
+            it->second->setValueByString(dataSpecsStr);
         }
 
         reader.readEndElement("Map");
-
-        // assignment
-        setValues(values);
     }
 
+    //todo:
     Property* PropertyDataSpecs::Copy() const
     {
         PropertyDataSpecs* p = new PropertyDataSpecs();
-        p->_lValueList = _lValueList;
+        //p->_lValueList = _lValueList;
         return p;
     }
 
+    //todo:
     void PropertyDataSpecs::Paste(const Property& from)
     {
         aboutToSetValue();
-        _lValueList = dynamic_cast<const PropertyDataSpecs&>(from)._lValueList;
+        //_lValueList = dynamic_cast<const PropertyDataSpecs&>(from)._lValueList;
         hasSetValue();
     }
 
@@ -251,13 +221,6 @@ namespace App {
 
     TYPESYSTEM_SOURCE(App::PropertyAdaptor, App::Property)
 
-#if 0
-    std::shared_ptr<PropertyAdaptor> PropertyAdaptor::fromDataSpecs(const PropertyDataSpecs::DataSpec& dataSpec) {
-
-        return std::make_shared<PropertyAdaptor>(dataSpec.type, dataSpec.docu.c_str(), dataSpec.group.c_str(), dataSpec.value);
-    }
-#endif
-
     PropertyAdaptor::PropertyAdaptor(const char* name , int type, const char* docu, const char* group, const std::string& value) :
         m_type(type),  m_value(value)
     {
@@ -272,6 +235,12 @@ namespace App {
         length = strlen(group);
         m_group = new char[++length];
         memcpy((void*)m_group, group, length);
+    }
+
+    PropertyAdaptor::~PropertyAdaptor() {
+        delete[]m_docu;
+        delete[]m_group;
+        delete[]myName;
     }
 
     PropertyAdaptor::PropertyAdaptor() {
@@ -308,8 +277,6 @@ namespace App {
 
     std::string PropertyAdaptor::getValueAsString()const {
         boost::property_tree::ptree valueTree;
-        //boost::json::
-
         try {
             stringstream streamInput(m_value);
             boost::property_tree::read_json(streamInput, valueTree);
@@ -321,14 +288,17 @@ namespace App {
     }
 #endif
 
-    PropertyAdaptor::~PropertyAdaptor() {
-        delete []m_docu;
-        delete []m_group;
-        delete []myName;
-    }
+    
 
     void PropertyAdaptor::print() {
         FC_TRACE("type: " << m_type << "; vlaue: " << m_value << "; group : " << m_group << "; docu: " << m_docu);
+    }
+
+    unsigned int PropertyAdaptor::getMemSize(void) const {
+        size_t size = 0;
+        size += m_value.size();
+        //to do
+        return size;
     }
 
 
