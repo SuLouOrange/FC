@@ -263,7 +263,11 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
     for (auto jt = props.begin(); jt != props.end(); ++jt) {
         FC_MSG(__FUNCTION__ << ", " << jt->first << ",size: " << jt->second.size());
         App::Property* prop = jt->second.front();
-        const char* group = prop->getGroup();
+        const char* group = nullptr;
+        if (prop->getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
+            group = reinterpret_cast<const App::PropertyAdaptor*>(prop)->getGroup();
+        else
+            group = prop->getGroup();
         bool isEmpty = (group == 0 || group[0] == '\0');
         std::string grp = isEmpty ? QT_TRANSLATE_NOOP("App::Property", "Base") : group;
         propGroup[grp].emplace_back(jt->first,jt->second);

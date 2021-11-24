@@ -51,15 +51,20 @@ namespace App{
 			for (auto& item : dataSpecsTree) {
 				name = item.second.get<string>(nameKey);
 				group = item.second.get<string>(groupKey);
-				doc = item.second.get<string>(groupKey);
+				doc = item.second.get<string>(docuKey);
 				typeEm = item.second.get<int>(typeKey);
-				const auto & result = adaptors.emplace(name, new PropertyAdaptor(typeEm, doc.c_str(), group.c_str(), value));
+				value = "{\"Value\" : \"";
+				value += item.second.get<string>(valueKey);
+				value += "\"}";
+				auto adaptor = new PropertyAdaptor(name.c_str(), typeEm, doc.c_str(), group.c_str(), value);
+				const auto& result = adaptors.emplace(name, adaptor);
 				if (!result.second) {
 					FC_ERR("error occur,same name: " << name);
+					delete adaptor;
 				}
 				else {
 					auto prop = result.first->second;
-					prop->myName = name.c_str();
+					//prop->myName = name.c_str();
 					prop->print();
 				}
 			}

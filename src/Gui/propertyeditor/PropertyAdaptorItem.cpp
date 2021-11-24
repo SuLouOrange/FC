@@ -42,9 +42,6 @@
 #include <App/PropertyDataSpecs.h>
 #include <Base/Console.h>
 
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/json_parser.hpp>
-
 FC_LOG_LEVEL_INIT("PropertyView", false, true);
 
 using namespace Gui::PropertyEditor;
@@ -61,14 +58,12 @@ PropertyAdaptorItem::~PropertyAdaptorItem() {
 QVariant PropertyAdaptorItem::value(const App::Property* prop) const{
     assert(prop && prop->getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()));
     auto propAdaptor = reinterpret_cast<const App::PropertyAdaptor*>(prop);
-    const std::string& strValue = propAdaptor->getStrValue();
-    boost::property_tree::ptree dataSpecsTree;
+    
     try {
         switch (propAdaptor->getDataType()) {
         case App::PropertyDataSpecs::emProperryTypeString: {
-            //boost::property_tree::read_json(std::stringstream(strValue), dataSpecsTree);
-            const std::string& value = strValue;
-            return QVariant(QString::fromUtf8(value.c_str()));
+            const auto & value = propAdaptor->getValueAsString();
+            return QString::fromUtf8(value.c_str());
             break; 
         }
         default:
@@ -88,23 +83,40 @@ void PropertyAdaptorItem::setValue(const QVariant& value)
         switch (propertyAdaptor->getDataType()) {
         case App::PropertyDataSpecs::emProperryTypeString: {
             QString val = value.toString();
-
-            //boost::property_tree::read_json(std::stringstream(strValue), dataSpecsTree);
-            //const std::string& value = strValue;
-            //return QVariant(QString::fromUtf8(value.c_str()));
+            propertyAdaptor->setValueByString(val.toStdString());
             break;
         }
         default:
             break;
         }
-        if (!value.canConvert(QVariant::String))
-            return;
-       // QString val = value.toString();
-        //val = QString::fromUtf8(Base::Interpreter().strToPython(val.toUtf8()).c_str());
-       // QString data = QString::fromLatin1("\"%1\"").arg(val);
-        //setPropertyValue(data);
 
     }
+}
+
+QWidget* PropertyAdaptorItem::createEditor(QWidget* parent, const QObject* receiver, const char* method) const
+{
+    ExpLineEdit* le = new ExpLineEdit(parent);
+    le->setFrame(false);
+    le->setReadOnly(isReadOnly());
+    QObject::connect(le, SIGNAL(textChanged(const QString&)), receiver, method);
+    if (isBound()) {
+        le->bind(getPath());
+        le->setAutoApply(autoApply());
+    }
+
+    return le;
+}
+
+void PropertyAdaptorItem::setEditorData(QWidget* editor, const QVariant& data) const
+{
+    QLineEdit* le = qobject_cast<QLineEdit*>(editor);
+    le->setText(data.toString());
+}
+
+QVariant PropertyAdaptorItem::editorData(QWidget* editor) const
+{
+    QLineEdit* le = qobject_cast<QLineEdit*>(editor);
+    return QVariant(le->text());
 }
 
 #include "moc_PropertyAdaptorItem.cpp"

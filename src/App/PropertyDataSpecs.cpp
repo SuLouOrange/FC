@@ -10,6 +10,10 @@
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
+//#include <boosst/json.hpp>
+
+#include <cstring>
+
 FC_LOG_LEVEL_INIT("App", false, true);
 
 TYPESYSTEM_SOURCE(App::PropertyDataSpecs, App::Property)
@@ -247,23 +251,80 @@ namespace App {
 
     TYPESYSTEM_SOURCE(App::PropertyAdaptor, App::Property)
 
+#if 0
     std::shared_ptr<PropertyAdaptor> PropertyAdaptor::fromDataSpecs(const PropertyDataSpecs::DataSpec& dataSpec) {
 
         return std::make_shared<PropertyAdaptor>(dataSpec.type, dataSpec.docu.c_str(), dataSpec.group.c_str(), dataSpec.value);
     }
+#endif
 
-    PropertyAdaptor::PropertyAdaptor(int type, const char* docu, const char* group, const std::string& value) :
-        m_type(type), m_docu(docu), m_group(group), m_value(value)
+    PropertyAdaptor::PropertyAdaptor(const char* name , int type, const char* docu, const char* group, const std::string& value) :
+        m_type(type),  m_value(value)
     {
-        
+        auto length = strlen(name);
+        myName = new char[++length];
+        memcpy((void*)myName, name, length);
+
+        length = strlen(docu);
+        m_docu = new char[++length];
+        memcpy((void*)m_docu, docu, length);
+
+        length = strlen(group);
+        m_group = new char[++length];
+        memcpy((void*)m_group, group, length);
     }
 
     PropertyAdaptor::PropertyAdaptor() {
 
     }
+#if  USE_TEMPLATE
+    template<typename T>
+    T PropertyAdaptor::getValueByType()const {
+        boost::property_tree::ptree valueTree;
+        try {
+            stringstream streamInput(m_value);
+            boost::property_tree::read_json(streamInput, valueTree);
+            return valueTree.get<T>("Value");
+        }
+        catch (std::exception& e) {
+            FC_ERR(__FUNCTION__ << e.what());
+        }
+    }
+#endif
+
+#if 1
+    void PropertyAdaptor::setValueByString(const std::string& str) {
+        boost::property_tree::ptree valueTree;
+        stringstream outputStr;
+        try {
+            valueTree.put("Value", str);
+            boost::property_tree::write_json(outputStr, valueTree);
+            m_value = outputStr.str();
+        }
+        catch (std::exception& e) {
+            FC_ERR(__FUNCTION__ << e.what());
+        }
+    }
+
+    std::string PropertyAdaptor::getValueAsString()const {
+        boost::property_tree::ptree valueTree;
+        //boost::json::
+
+        try {
+            stringstream streamInput(m_value);
+            boost::property_tree::read_json(streamInput, valueTree);
+            return valueTree.get<std::string>("Value");
+        }
+        catch (std::exception& e) {
+            FC_ERR(__FUNCTION__ << e.what());
+        }
+    }
+#endif
 
     PropertyAdaptor::~PropertyAdaptor() {
-
+        delete []m_docu;
+        delete []m_group;
+        delete []myName;
     }
 
     void PropertyAdaptor::print() {

@@ -41,7 +41,7 @@ namespace App
 
 class PropertyContainer;
 class ObjectIdentifier;
-class ExtensionPropertyData;
+class PropertyAdaptor;
 
 /** Base class of all properties
  * This is the father of all properties. Properties are objects which are used
@@ -237,7 +237,7 @@ public:
     friend class PropertyContainer;
     friend struct PropertyData;
     friend class DynamicProperty;
-    friend class ExtensionPropertyData;
+    friend class PropertyAdaptor;
 
 protected:
     /** Status bits of the property

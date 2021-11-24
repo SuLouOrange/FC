@@ -98,25 +98,37 @@ namespace App {
 
     };
 
+
+#define USE_TEMPLATE 0
     class AppExport PropertyAdaptor : public Property {
         TYPESYSTEM_HEADER();
     public:
-        static std::shared_ptr<PropertyAdaptor>  fromDataSpecs(const PropertyDataSpecs::DataSpec & sataSpec);
-        PropertyAdaptor(int type,const char * docu,const char * group,const std::string & value);
+        //static std::shared_ptr<PropertyAdaptor>  fromDataSpecs(const PropertyDataSpecs::DataSpec & sataSpec);
+        PropertyAdaptor(const char* name, int type, const char* docu, const char* group, const std::string& value);
+        PropertyAdaptor(const PropertyAdaptor&) = delete;
         PropertyAdaptor();
         ~PropertyAdaptor();
         int getDataType()const { return m_type; };
         void setDataType(int type) { m_type = type; };
         const std::string& getStrValue() const { return m_value; }
+
+#if USE_TEMPLATE
+        template<typename T>
+        T getValueByType()const;
+#endif
+        void setValueByString(const std::string& str);
+        std::string getValueAsString()const;
         const char* getGroup()const { return m_group; }
-        const char* getDocumentation()const { return m_group; }
+        const char* getDocumentation()const { return m_docu; }
         Property* Copy(void) const override { return nullptr; };
         virtual void Paste(const Property& from) override { return; };
         void Save(Base::Writer& writer)const override {};
         void Restore(Base::XMLReader& reader) override {};
         virtual const char* getEditorName(void) const { return "Gui::PropertyEditor::PropertyAdaptorItem"; }
         void print();
+        void setName(const char* name) { myName = name; };
 
+        PropertyAdaptor& operator = (const PropertyAdaptor&)  = delete;
     private:
         int m_type = -1;
         const char* m_docu = nullptr;//tool tip
