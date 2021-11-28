@@ -24,9 +24,11 @@ namespace App{
 		if (!object)
 			throw(string("object is null"));
 		extension->initExtension(object);
+#if 1 
 		auto& adaptors = extension->PropertySpecs.getPropertyAdaptors();
 		for (auto adaptorPair : adaptors)
 			adaptorPair.second->setContainer(object);//不会merge但是要保证能get到container
+#endif
 	}
 
 	ExtensionPropertyData::ExtensionPropertyData() {

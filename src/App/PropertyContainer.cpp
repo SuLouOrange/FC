@@ -502,6 +502,8 @@ const PropertyData::PropertySpec *PropertyData::findProperty(OffsetBase offsetBa
     if(diff<0)
         return 0;
 
+
+    //auto & indexBySequence = propertyData.get<1>();
     auto &index = propertyData.get<2>();
     auto it = index.find(diff);
     if(it!=index.end())
@@ -513,7 +515,6 @@ const PropertyData::PropertySpec *PropertyData::findProperty(OffsetBase offsetBa
 const char* PropertyData::getName(OffsetBase offsetBase,const Property* prop) const
 {
   const PropertyData::PropertySpec* Spec = findProperty(offsetBase,prop);
-
   if(Spec)
     return Spec->Name;
   else

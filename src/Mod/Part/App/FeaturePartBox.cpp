@@ -45,6 +45,7 @@ PROPERTY_SOURCE_WITH_EXTENSIONS(Part::Box, Part::Primitive)
 
 Box::Box()
 {
+    addDynamicProperty("App::PropertyLength", "Length", "Box", "动态长度，假的", App::Prop_None);
     int cnt = App::GetApplication().signalNewDocument.num_slots();
     FC_MSG("App::Application::signalNewDocument num_slots:" << cnt);
     ADD_PROPERTY_TYPE(Length,(10.0f),"Box",App::Prop_None,"The length of the box");
