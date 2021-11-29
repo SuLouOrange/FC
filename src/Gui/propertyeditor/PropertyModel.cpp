@@ -346,10 +346,10 @@ void PropertyModel::appendProperty(const App::Property& prop)
             return;
         }
         const char* group = nullptr;
-        if (prop.getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
-            group = reinterpret_cast<const App::PropertyAdaptor &>(prop).getGroup();
-        else
-            group = prop.getGroup();
+        //if (prop.getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
+          //  group = reinterpret_cast<const App::PropertyAdaptor &>(prop).getGroup();
+        //else
+        group = prop.getGroup();
         bool isEmpty = (group == 0 || group[0] == '\0');
         std::string grp = isEmpty ? QT_TRANSLATE_NOOP("App::Property", "Base") : group;
         QString groupName = QString::fromStdString(grp);

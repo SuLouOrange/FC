@@ -435,6 +435,7 @@ void PropertyView::onTimer() {
                 if (isPropertyHidden(prop))
                     continue;
                 const auto typeKey = prop->getTypeId().getKey();
+#if 0
                 if (typeKey == App::PropertyDataSpecs::getClassTypeId().getKey()) {
                     const auto& items = reinterpret_cast<App::PropertyDataSpecs*>(prop)->getPropertyAdaptors();
                     for (auto item : items) {
@@ -442,6 +443,7 @@ void PropertyView::onTimer() {
                         classifyProperties(typeKey, propertyAdaptor, propDataMap);
                     }
                 }
+#endif
                 classifyProperties(typeKey, prop, propDataMap);
             }
         }

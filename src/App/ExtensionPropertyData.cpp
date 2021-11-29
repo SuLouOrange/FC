@@ -84,4 +84,32 @@ namespace App{
 		return dynamicProps.getDynamicPropertyByName(name);
 	}
 
+	const char* ExtensionPropertyData::extensionGetPropertyName(const Property* prop) const {
+		return dynamicProps.getPropertyName(prop);
+	}
+
+	short ExtensionPropertyData::extensionGetPropertyType(const Property* prop) const {
+		return dynamicProps.getPropertyType(prop);
+	}
+
+	short ExtensionPropertyData::extensionGetPropertyType(const char* name) const {
+		return dynamicProps.getPropertyType(name);
+	}
+
+	const char * ExtensionPropertyData::extensionGetPropertyGroup(const Property* prop) const {
+		return dynamicProps.getPropertyGroup(prop);
+	}
+
+	const char* ExtensionPropertyData::extensionGetPropertyGroup(const char* name) const {
+		return dynamicProps.getPropertyGroup(name);
+	}
+
+	const char* ExtensionPropertyData::extensionGetPropertyDocumentation(const Property* prop) const {
+		return dynamicProps.getPropertyDocumentation(prop);
+	}
+
+	const char* ExtensionPropertyData::extensionGetPropertyDocumentation(const char* name) const {
+		return dynamicProps.getPropertyDocumentation(name);
+	}
+
 }//naemspace App
