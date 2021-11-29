@@ -19,60 +19,69 @@ namespace App{
 	static const  string valueKey = "Value";
 	static const  string groupKey = "Group";
 	static const  string docuKey = "Docu";
+
+	static const char* getCharMem(const string& str);
+	const char* getCharMem(const string & str) {
+		const char* originChar = str.c_str();
+		auto length = strlen(originChar);
+		const char* charMem = new char[++length];
+		memcpy((void*)charMem, originChar, length);
+		return charMem;
+	}
+
 	void ExtensionPropertyData::addPropertiesOnObject(App::DocumentObject* object) {
 		auto extension = new ExtensionPropertyData();
 		if (!object)
 			throw(string("object is null"));
 		extension->initExtension(object);
-#if 1 
-		auto& adaptors = extension->PropertySpecs.getPropertyAdaptors();
-		for (auto adaptorPair : adaptors)
-			adaptorPair.second->setContainer(object);//不会merge但是要保证能get到container
-#endif
-	}
-
-	ExtensionPropertyData::ExtensionPropertyData() {
-		initExtensionType(ExtensionPropertyData::getExtensionClassTypeId());
-		Extension::m_isPythonExtension = true;
-		EXTENSION_ADD_PROPERTY_TYPE(PropertySpecs, (), "", PropertyType(Prop_None), "");
-		map<string,PropertyAdaptor*> adaptors;
 		boost::property_tree::ptree properTree;
 		try {
 			boost::property_tree::read_json(path, properTree);
 
-			auto & dataSpecsTree = properTree.get_child("ParameterSpecs");
-			string name, group, doc, value;
+			auto& dataSpecsTree = properTree.get_child("ParameterSpecs");
+			string name, group, doc, value, typeStr;
 			int typeEm = -1;
-
+		//	string typeStr;
 			for (auto& item : dataSpecsTree) {
 				name = item.second.get<string>(nameKey);
 				group = item.second.get<string>(groupKey);
 				doc = item.second.get<string>(docuKey);
-				typeEm = item.second.get<int>(typeKey);
-				value = "{\"Value\" : \"";
-				value += item.second.get<string>(valueKey);//始终为string,需二次解析
+				typeStr = item.second.get<string>(typeKey);
+				//value = "{\"Value\" : \""; \
+				value += item.second.get<string>(valueKey);//始终为string,需二次解析 \
 				value += "\"}";
-				auto adaptor = new PropertyAdaptor(name.c_str(), typeEm, doc.c_str(), group.c_str(), value);
-				const auto& result = adaptors.emplace(name, adaptor);
-				if (!result.second) {
-					FC_ERR("error occur,same name: " << name);
-					delete adaptor;
-				}
-				else {
-					auto prop = result.first->second;
-					prop->print();
-				}
+
+				//addDynamicProperty(PropertyContainer &pc, const char* type, const char* name=0, const char* group=0,\
+				const char* doc = 0, short attr = 0, bool ro = false, bool hidden = false);
+				extension->dynamicProps.addDynamicProperty(*object, getCharMem(typeStr), getCharMem(name), getCharMem(group), getCharMem(doc)\
+				);//to do more
 			}
 		}
 		catch (std::exception& e) {
 			FC_ERR(__FUNCTION__ << e.what());
 		}
+	}
 
-		PropertySpecs.setPropertyAdaptors(adaptors);
+	ExtensionPropertyData::ExtensionPropertyData() {
+		initExtensionType(ExtensionPropertyData::getExtensionClassTypeId());
+		Extension::m_isPythonExtension = true;
 	};
 
 	ExtensionPropertyData::~ExtensionPropertyData() {
+		//charMem destructor todo;
 
 	};
+
+	void ExtensionPropertyData::extensionGetPropertyMap(std::map<std::string, Property*>& Map) const {
+		return dynamicProps.getPropertyMap(Map);
+	}
+
+	void ExtensionPropertyData::extensionGetPropertyList(std::vector<Property*>& List) const {
+		return dynamicProps.getPropertyList(List);
+	}
+
+	Property* ExtensionPropertyData::extensionGetPropertyByName(const char* name) const  {
+		return dynamicProps.getDynamicPropertyByName(name);
+	}
 
 }//naemspace App
