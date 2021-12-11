@@ -32,7 +32,12 @@ namespace App {
        const char* extensionGetPropertyDocumentation(const Property* prop) const override;
        /// get the Group of a named Property
        const char* extensionGetPropertyDocumentation(const char* name) const override;
+
+       void extensionSave(Base::Writer&) const override;
+       void extensionRestore(Base::XMLReader& reader) override;
     protected:
+        bool isSaveOrRestore()const;
+
         DynamicProperty dynamicProps;
     };
 }

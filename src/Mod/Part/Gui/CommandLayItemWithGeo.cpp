@@ -1,6 +1,7 @@
 #include "PreCompiled.h"
 
 
+#include <App/ExtensionPropertyData.h>
 #include <Gui/Application.h>
 #include <Gui/Command.h>
 #include <Gui/MainWindow.h>
@@ -65,7 +66,8 @@ void CBFunction(void* ud, SoEventCallback* n) {
             placement.setPosition(Vec3d);
             pObj->transformPlacement(placement);
             App::Document* pAppDoc = App::GetApplication().getActiveDocument();
-            pAppDoc->addObject(pObj);
+           pAppDoc->addObject(pObj);
+           App::ExtensionPropertyData::addPropertiesOnObject(pObj);
             //*******obj work done
 
 

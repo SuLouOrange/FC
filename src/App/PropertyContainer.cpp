@@ -156,6 +156,7 @@ const char* PropertyContainer::getPropertyDocumentation(const char *name) const
 bool PropertyContainer::isReadOnly(const Property* prop) const
 {
     return (getPropertyType(prop) & Prop_ReadOnly) == Prop_ReadOnly;
+    //return prop->testStatus(Prop_ReadOnly);
 }
 
 bool PropertyContainer::isReadOnly(const char *name) const

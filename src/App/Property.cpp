@@ -36,7 +36,7 @@
 #include "DocumentObject.h"
 
 using namespace App;
-
+using namespace std;
 
 //**************************************************************************
 //**************************************************************************
@@ -82,12 +82,26 @@ short Property::getType(void) const
 #define GET_PTYPE(_name) do {\
         if(testStatus(App::Property::Prop##_name)) type|=Prop_##_name;\
     }while(0)
-    GET_PTYPE(ReadOnly);
+   // GET_PTYPE(ReadOnly);
+    if (testStatus(App::Property::PropReadOnly))
+        type |= Prop_ReadOnly;
+    if (testStatus(App::Property::PropHidden))
+        type |= Prop_Hidden;
+    if (testStatus(App::Property::PropOutput))
+        type |= Prop_Output;
+    if (testStatus(App::Property::PropTransient))
+        type |= Prop_Transient;
+    if (testStatus(App::Property::PropNoRecompute))
+        type |= Prop_NoRecompute;
+    if (testStatus(App::Property::PropNoPersist))
+        type |= Prop_NoPersist;
+#if 0
     GET_PTYPE(Hidden);
     GET_PTYPE(Output);
     GET_PTYPE(Transient);
     GET_PTYPE(NoRecompute);
     GET_PTYPE(NoPersist);
+#endif
     return type;
 }
 
@@ -95,12 +109,34 @@ void Property::syncType(unsigned type) {
 #define SYNC_PTYPE(_name) do{\
         if(type & Prop_##_name) StatusBits.set((size_t)Prop##_name);\
     }while(0)
-    SYNC_PTYPE(ReadOnly);
-    SYNC_PTYPE(Transient);
-    SYNC_PTYPE(Hidden);
-    SYNC_PTYPE(Output);
-    SYNC_PTYPE(NoRecompute);
-    SYNC_PTYPE(NoPersist);
+    //SYNC_PTYPE(ReadOnly);
+    
+    //按位或
+    if(type & Prop_ReadOnly)   
+       StatusBits.set((size_t)PropReadOnly);//24
+    
+    if (type & Prop_Transient)   
+        StatusBits.set((size_t)PropTransient);//25
+    //SYNC_PTYPE(Transient);//2
+
+    if (type & Prop_Hidden)   
+        StatusBits.set((size_t)PropHidden);//26
+
+    if (type & Prop_Output)   
+        StatusBits.set((size_t)PropOutput);//27
+
+    if (type & Prop_NoRecompute)   
+        StatusBits.set((size_t)PropNoRecompute);//23
+
+    if (type & Prop_NoPersist)   
+        StatusBits.set((size_t)PropNoPersist);//22
+
+#if 0
+    SYNC_PTYPE(Hidden);//4
+    SYNC_PTYPE(Output);//8
+    SYNC_PTYPE(NoRecompute);//16
+    SYNC_PTYPE(NoPersist);//32
+#endif
 }
 
 const char* Property::getGroup(void) const
@@ -240,8 +276,14 @@ void Property::Paste(const Property& /*from*/)
     // have to be reimplemented by a subclass!
     assert(0);
 }
+static string getCodeIndicator(const char* func, int line);
 
-void Property::setStatusValue(unsigned long status) {
+string getCodeIndicator(const char* func, int line) {
+    string rValue(func);
+    rValue = rValue + '(' + to_string(line) + ')';
+    
+}
+void Property::setStatusValue(unsigned long status) {   
     static const unsigned long mask =
         (1<<PropDynamic)
         |(1<<PropNoRecompute)
@@ -249,9 +291,19 @@ void Property::setStatusValue(unsigned long status) {
         |(1<<PropTransient)
         |(1<<PropOutput)
         |(1<<PropHidden);
+    static bool flag = true;
+    //0x 0f a0 00 00 
+    using namespace std;
+    if (flag) {
+        cout << __FUNCTION__ << "(" << __LINE__ << ")" << hex << " mask :0x" << mask << endl;
+        flag = false;
+    }
 
     status &= ~mask;
+    const auto tmp = StatusBits.to_ulong();
+
     status |= StatusBits.to_ulong() & mask;
+
     unsigned long oldStatus = StatusBits.to_ulong();
     StatusBits = decltype(StatusBits)(status);
 

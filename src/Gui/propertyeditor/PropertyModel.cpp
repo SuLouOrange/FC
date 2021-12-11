@@ -303,7 +303,7 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
                     rootItem->appendChild(child);
 
                     setPropertyItemName(child, prop->getName(), groupName);
-
+                    FC_TRACE(__FUNCTION__ << ", to set Data. prop name:" << prop->getName());
                     child->setPropertyData(info.props);
 
                 }

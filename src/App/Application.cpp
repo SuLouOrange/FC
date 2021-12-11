@@ -1504,12 +1504,15 @@ void Application::slotAbortTransaction(const Document& d)
 
 void Application::slotStartSaveDocument(const App::Document& doc, const std::string& filename)
 {
+    //setStatus
+    const_cast<App::Document&>(doc).setStatus(App::Document::Saving, true);
     this->signalStartSaveDocument(doc, filename);
 }
 
 void Application::slotFinishSaveDocument(const App::Document& doc, const std::string& filename)
 {
     this->signalFinishSaveDocument(doc, filename);
+    const_cast<App::Document&>(doc).setStatus(App::Document::Saving, false);
 }
 
 void Application::slotChangePropertyEditor(const App::Document &doc, const App::Property &prop)

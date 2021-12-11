@@ -256,6 +256,7 @@ void PropertyEditor::setupTransaction(const QModelIndex &index) {
 
 void PropertyEditor::onItemActivated ( const QModelIndex & index )
 {
+    FC_TRACE(__FUNCTION__ << " index:" << index.row() <<", " << index.column());
     if(index.column() != 1)
         return;
     edit(model()->buddy(index),AllEditTriggers,0);

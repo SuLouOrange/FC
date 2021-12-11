@@ -45,14 +45,14 @@ PROPERTY_SOURCE_WITH_EXTENSIONS(Part::Box, Part::Primitive)
 
 Box::Box()
 {
-    addDynamicProperty("App::PropertyLength", "Length", "Box", "动态长度，假的", App::Prop_None);
+    //addDynamicProperty("App::PropertyLength", "Length", "Box", "动态长度，假的", App::Prop_None);
     int cnt = App::GetApplication().signalNewDocument.num_slots();
     FC_MSG("App::Application::signalNewDocument num_slots:" << cnt);
     ADD_PROPERTY_TYPE(Length,(10.0f),"Box",App::Prop_None,"The length of the box");
     ADD_PROPERTY_TYPE(Width ,(10.0f),"Box",App::Prop_None,"The width of the box");
     ADD_PROPERTY_TYPE(Height,(10.0f),"Box",App::Prop_None,"The height of the box");
 
-    App::ExtensionPropertyData::addPropertiesOnObject(this);
+    //App::ExtensionPropertyData::addPropertiesOnObject(this);
 }
 
 short Box::mustExecute() const
@@ -99,7 +99,9 @@ App::DocumentObjectExecReturn *Box::execute(void)
  */
 void Box::Restore(Base::XMLReader &reader)
 {
+    ExtensionContainer::restoreExtensions(reader);
     FC_TRACE(getNameInDocument());
+
     reader.readElement("Properties");
     int Cnt = reader.getAttributeAsInteger("Count");
     int transientCount = 0;
