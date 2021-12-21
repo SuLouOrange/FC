@@ -340,7 +340,7 @@ void PropertyView::classifyProperties(short typeKey, App::Property* prop, std::v
     nameType.propName = prop->getName();
     nameType.propId = typeKey;
 
-    std::vector<PropInfo>::iterator pi = std::find_if(propDataMap.begin(), propDataMap.end(), PropFind(nameType));
+   auto pi = std::find_if(propDataMap.begin(), propDataMap.end(), PropFind(nameType));//同名同类型
     if (pi != propDataMap.end()) {
         //name type均相同
         pi->propList.push_back(prop);
@@ -430,51 +430,26 @@ void PropertyView::onTimer() {
         vp->getPropertyMap(viewList);
 
         // store the properties with <name,id> as key in a map
-        {
-            for (auto prop : dataList) {
-                if (isPropertyHidden(prop))
-                    continue;
-                const auto typeKey = prop->getTypeId().getKey();
-#if 0
-                if (typeKey == App::PropertyDataSpecs::getClassTypeId().getKey()) {
-                    const auto& items = reinterpret_cast<App::PropertyDataSpecs*>(prop)->getPropertyAdaptors();
-                    for (auto item : items) {
-                        auto propertyAdaptor = item.second;
-                        classifyProperties(typeKey, propertyAdaptor, propDataMap);
-                    }
-                }
-#endif
-                classifyProperties(typeKey, prop, propDataMap);
-            }
+        for (auto prop : dataList) {
+            if (isPropertyHidden(prop))
+                continue;
+            const auto typeKey = prop->getTypeId().getKey();
+            classifyProperties(typeKey, prop, propDataMap);
         }
         // the same for the view properties
-        {
-            std::map<std::string, App::Property*>::iterator pt;
-            for (pt = viewList.begin(); pt != viewList.end(); ++pt) {
-                if (isPropertyHidden(pt->second))
-                    continue;
-
-                PropInfo nameType;
-                nameType.propName = pt->first;
-                nameType.propId = pt->second->getTypeId().getKey();
-
-                std::vector<PropInfo>::iterator pi = std::find_if(propViewMap.begin(), propViewMap.end(), PropFind(nameType));
-                if (pi != propViewMap.end()) {
-                    pi->propList.push_back(pt->second);
-                }
-                else {
-                    nameType.propList.push_back(pt->second);
-                    propViewMap.push_back(nameType);
-                }
-            }
+        for (auto pt = viewList.begin(); pt != viewList.end(); ++pt) {
+            if (isPropertyHidden(pt->second))
+                continue;
+            auto prop = pt->second;
+            const auto typeKey = prop->getTypeId().getKey();
+            classifyProperties(typeKey, prop, propViewMap);
         }
-    }
+    }//for(sel:sels)
 
     // the property must be part of each selected object, i.e. the number
     // of selected objects is equal to the number of properties with same
     // name and id
-    std::vector<PropInfo>::const_iterator it;
-    PropertyModel::PropertyList dataProps;
+    PropertyModel::PropertyList dataProps;//vector<  pair<string, vector<Property*>>  > 
     std::map<std::string, std::vector<App::Property*> > dataPropsMap;
     PropertyModel::PropertyList viewProps;
 
@@ -526,7 +501,7 @@ void PropertyView::onTimer() {
 
     dataPropsMap.clear();
 
-    for (it = propDataMap.begin(); it != propDataMap.end(); ++it) {
+    for (auto it = propDataMap.begin(); it != propDataMap.end(); ++it) {
         if (it->propList.size() == sels.size()) {//* it propInfo 
             if (it->propList[0]->testStatus(App::Property::PropDynamic))
                 dataPropsMap.emplace(it->propName, std::move(it->propList));
@@ -542,7 +517,7 @@ void PropertyView::onTimer() {
 
     propertyEditorData->buildUp(std::move(dataProps), true);
 
-    for (it = propViewMap.begin(); it != propViewMap.end(); ++it) {
+    for (auto it = propViewMap.begin(); it != propViewMap.end(); ++it) {
         if (it->propList.size() == sels.size())
             viewProps.emplace_back(it->propName, std::move(it->propList));
     }

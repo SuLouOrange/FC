@@ -258,7 +258,6 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
     };
     */
     // sort the properties into their groups
-    const auto& propertyDataSpecType = App::PropertyDataSpecs::getClassTypeId();
     std::map<std::string, std::vector<PropItemInfo> > propGroup;
     for (auto jt = props.begin(); jt != props.end(); ++jt) {
         FC_MSG(__FUNCTION__ << ", " << jt->first << ",size: " << jt->second.size());
