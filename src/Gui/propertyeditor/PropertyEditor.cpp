@@ -378,7 +378,7 @@ void PropertyEditor::buildUp(PropertyModel::PropertyList &&props, bool checkDocu
     QModelIndex index = this->currentIndex();
     FC_TRACE(__FUNCTION__ << ", currentIndex: " << index.row() << ", " << index.column());
     QStringList propertyPath = propertyModel->propertyPathFromIndex(index);
-    qDebug() << "propertyPath: " << propertyPath;
+    //qDebug() << "propertyPath: " << propertyPath;
     if (!propertyPath.isEmpty())
         this->selectedProperty = propertyPath;
     propertyModel->buildUp(props);

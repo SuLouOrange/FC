@@ -139,6 +139,8 @@ FC_LOG_LEVEL_INIT("Sketch",true,true)
 
 using namespace SketcherGui;
 using namespace Sketcher;
+//using namespace Base;
+using namespace std;
 namespace bp = boost::placeholders;
 
 SbColor ViewProviderSketch::VertexColor                             (1.0f,0.149f,0.0f);   // #FF2600 -> (255, 38,  0)
@@ -1540,8 +1542,8 @@ void ViewProviderSketch::moveConstraint(int constNum, const Base::Vector2d &toPo
                 const Part::GeomLineSegment *lineSeg1 = static_cast<const Part::GeomLineSegment *>(geo1);
                 const Part::GeomLineSegment *lineSeg2 = static_cast<const Part::GeomLineSegment *>(geo2);
 
-                bool flip1 = (Constr->FirstPos == end);
-                bool flip2 = (Constr->SecondPos == end);
+                bool flip1 = (Constr->FirstPos == Sketcher::end);
+                bool flip2 = (Constr->SecondPos == Sketcher::end);
                 dir1 = (flip1 ? -1. : 1.) * (lineSeg1->getEndPoint()-lineSeg1->getStartPoint());
                 dir2 = (flip2 ? -1. : 1.) * (lineSeg2->getEndPoint()-lineSeg2->getStartPoint());
                 Base::Vector3d pnt1 = flip1 ? lineSeg1->getEndPoint() : lineSeg1->getStartPoint();
@@ -3938,15 +3940,15 @@ void ViewProviderSketch::draw(bool temp /*=false*/, bool rebuildinformationlayer
     assert(edit);
 
     // Render Geometry ===================================================
-    std::vector<Base::Vector3d> Coords;
-    std::vector<Base::Vector3d> Points;
-    std::vector<unsigned int> Index;
+    vector<Base::Vector3d> Coords;
+    vector<Base::Vector3d> Points;
+    vector<unsigned int> Index;
 
     int intGeoCount = getSketchObject()->getHighestCurveIndex() + 1;
     int extGeoCount = getSketchObject()->getExternalGeometryCount();
 
-    const std::vector<Part::Geometry *> *geomlist;
-    std::vector<Part::Geometry *> tempGeo;
+    const vector<Part::Geometry *> *geomlist;
+    vector<Part::Geometry *> tempGeo;
     if (temp)
         tempGeo = getSolvedSketch().extractGeometry(true, true); // with memory allocation
     else
@@ -5681,8 +5683,8 @@ Restart:
                                 const Part::GeomLineSegment *lineSeg1 = static_cast<const Part::GeomLineSegment *>(geo1);
                                 const Part::GeomLineSegment *lineSeg2 = static_cast<const Part::GeomLineSegment *>(geo2);
 
-                                bool flip1 = (Constr->FirstPos == end);
-                                bool flip2 = (Constr->SecondPos == end);
+                                bool flip1 = (Constr->FirstPos == Sketcher::end);
+                                bool flip2 = (Constr->SecondPos == Sketcher::end);
                                 dir1 = (flip1 ? -1. : 1.) * (lineSeg1->getEndPoint()-lineSeg1->getStartPoint());
                                 dir2 = (flip2 ? -1. : 1.) * (lineSeg2->getEndPoint()-lineSeg2->getStartPoint());
                                 Base::Vector3d pnt1 = flip1 ? lineSeg1->getEndPoint() : lineSeg1->getStartPoint();

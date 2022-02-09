@@ -3418,7 +3418,7 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
             FC_WARN("Ignore document recompute on undo/redo");
         return 0;
     }
-    FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") use console\n");
+    //FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") use console\n");
     int objectCount = 0;
     if (testStatus(Document::PartialDoc)) {
         if(mustExecute())
@@ -3480,6 +3480,7 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
 
     try {
         FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") size of topoSortedObjects "  << topoSortedObjects.size());
+
         // maximum two passes to allow some form of dependency inversion
         for(int passes=0; passes<2 && idx<topoSortedObjects.size(); ++passes) {
             std::unique_ptr<Base::SequencerLauncher> seq;
@@ -4141,6 +4142,7 @@ void Document::removeObject(const char* sName)
         pos->second->unsetupObject();
     }
 
+    FC_MSG(__FUNCTION__ << ", size of App::Document::signalDeletedObject'slots " << signalDeletedObject.num_slots());
     signalDeletedObject(*(pos->second));
 
     // do no transactions if we do a rollback!

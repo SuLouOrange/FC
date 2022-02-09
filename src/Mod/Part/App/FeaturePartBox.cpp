@@ -264,7 +264,7 @@ void Box::Restore(Base::XMLReader &reader)
 
 void Box::onChanged(const App::Property* prop)
 {
-    FC_MSG(prop->getFullName() << " of " << getFullName());
+    FC_MSG(__FUNCTION__ << prop->getFullName() << " of " << getFullName());
     if (prop == &Length || prop == &Width || prop == &Height) {
         if (!isRestoring()) {
             App::DocumentObjectExecReturn *ret = recompute();

@@ -1436,6 +1436,7 @@ void Application::slotNewObject(const App::DocumentObject&O)
 
 void Application::slotDeletedObject(const App::DocumentObject&O)
 {
+    FC_MSG(__FUNCTION__ << ", size of App::Application::signalDeletedObject'slots " << signalDeletedObject.num_slots());
     this->signalDeletedObject(O);
     _objCount = -1;
 }
@@ -1475,6 +1476,8 @@ void Application::slotRedoDocument(const App::Document& d)
 void Application::slotRecomputedObject(const DocumentObject& obj)
 {
     this->signalObjectRecomputed(obj);
+    const auto slotSize = signalObjectRecomputed.num_slots();
+    FC_MSG(__FUNCTION__ << " App:: Application::signalObjectRecomputed slots number:" << slotSize);
 }
 
 void Application::slotRecomputed(const Document& doc)

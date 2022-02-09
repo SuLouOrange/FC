@@ -909,7 +909,7 @@ void Application::slotRelabelObject(const ViewProvider& vp)
 
 void Application::slotActivatedObject(const ViewProvider& vp)
 {
-    FC_MSG("test Relax");
+    FC_MSG(__FUNCTION__ << "test Relax");
     this->signalActivatedObject(vp);
     updateActions();
 }

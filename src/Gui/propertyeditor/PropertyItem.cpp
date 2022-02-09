@@ -1109,7 +1109,7 @@ PROPERTYITEM_SOURCE(Gui::PropertyEditor::PropertyUnitConstraintItem)
 
 PropertyUnitConstraintItem::PropertyUnitConstraintItem()
 {
-    qDebug() << __FUNCTION__ << ", propName:" << propName << "; dispText:" << displayText << "; displayName: " << displayName();
+    //qDebug() << __FUNCTION__ << ", propName:" << propName << "; dispText:" << displayText << "; displayName: " << displayName();
 }
 
 void PropertyUnitConstraintItem::setEditorData(QWidget *editor, const QVariant& data) const

@@ -5084,7 +5084,7 @@ int SketchObject::exposeInternalGeometry(int GeoId)
         std::vector<bool> controlpoints(bsp->countPoles());
         std::vector<int> controlpointgeoids(bsp->countPoles());
 
-        std::vector<bool> knotpoints(bsp->countKnots());
+        std::vector<bool> knotpoints(bsp->countKnots());//非重复的
         std::vector<int> knotgeoids(bsp->countKnots());
 
         bool isfirstweightconstrained = false;
@@ -5105,8 +5105,7 @@ int SketchObject::exposeInternalGeometry(int GeoId)
         const std::vector< Sketcher::Constraint * > &vals = Constraints.getValues();
 
         // search for existing poles
-        for (std::vector< Sketcher::Constraint * >::const_iterator it= vals.begin();
-             it != vals.end(); ++it) {
+        for (std::vector< Sketcher::Constraint * >::const_iterator it= vals.begin();it != vals.end(); ++it) {
             if((*it)->Type == Sketcher::InternalAlignment && (*it)->Second == GeoId)
             {
                 switch((*it)->AlignmentType){
@@ -5239,11 +5238,11 @@ int SketchObject::exposeInternalGeometry(int GeoId)
         this->addGeometry(igeo,true);
         this->addConstraints(icon);
 
-        for (std::vector<Part::Geometry *>::iterator it=igeo.begin(); it != igeo.end(); ++it)
+        for (auto it=igeo.begin(); it != igeo.end(); ++it)
             if (*it)
                 delete *it;
 
-        for (std::vector<Constraint *>::iterator it=icon.begin(); it != icon.end(); ++it)
+        for (auto it=icon.begin(); it != icon.end(); ++it)
             if (*it)
                 delete *it;
 

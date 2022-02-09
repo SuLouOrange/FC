@@ -93,6 +93,7 @@ DocumentObject::~DocumentObject(void)
         // Call before decrementing the reference counter, otherwise a heap error can occur
         obj->setInvalid();
     }
+    FC_MSG(__FUNCTION__<<" JIA TEST, DocumentObject destruct!");
 }
 
 App::DocumentObjectExecReturn *DocumentObject::recompute(void)

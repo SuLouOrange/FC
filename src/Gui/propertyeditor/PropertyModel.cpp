@@ -260,7 +260,7 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
     // sort the properties into their groups
     std::map<std::string, std::vector<PropItemInfo> > propGroup;
     for (auto jt = props.begin(); jt != props.end(); ++jt) {
-        FC_MSG(__FUNCTION__ << ", " << jt->first << ",size: " << jt->second.size());
+        //FC_MSG(__FUNCTION__ << ", " << jt->first << ",size: " << jt->second.size());
         App::Property* prop = jt->second.front();
         const char* group = nullptr;
         if (prop->getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
