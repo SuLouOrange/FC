@@ -120,6 +120,8 @@ recompute path. Also, it enables more complicated dependencies beyond trees.
 #include <zipios++/zipoutputstream.h>
 #include <zipios++/meta-iostreams.h>
 
+#include <easy/profiler.h>
+
 #include "Application.h"
 #include "Transactions.h"
 #include "GeoFeatureGroupExtension.h"
@@ -2686,6 +2688,7 @@ bool Document::isAnyRestoring() {
 void Document::restore (const char *filename,
         bool delaySignal, const std::set<std::string> &objNames)
 {
+    EASY_FUNCTION(profiler::colors::Purple);
     clearUndos();
     d->activeObject = 0;
 

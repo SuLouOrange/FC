@@ -57,9 +57,12 @@ include_directories(
     ${ZLIB_INCLUDE_DIR}
 )
 
+find_package(easy_profiler)
+
 set(FreeCADApp_LIBS
     FreeCADBase
     ${Boost_LIBRARIES}
+    easy_profiler
 )
 
 if (BUILD_QT5)

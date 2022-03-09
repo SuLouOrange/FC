@@ -1968,7 +1968,7 @@ void Application::initConfig(int argc, char ** argv)
     QFileInfo fi(binDir, QString::fromLatin1("branding.xml"));
     if (fi.exists() && brand.readFile(fi.absoluteFilePath())) {
         Branding::XmlConfig cfg = brand.getUserDefines();
-        for (Branding::XmlConfig::iterator it = cfg.begin(); it != cfg.end(); ++it) {
+        for (auto it = cfg.begin(); it != cfg.end(); ++it) {
             App::Application::Config()[it.key()] = it.value();
         }
     }
@@ -2365,7 +2365,7 @@ void Application::LoadParameters(void)
         if (_pcUserParamMngr->LoadOrCreateDocument() && !(mConfig["Verbose"] == "Strict")) {
             // The user parameter file doesn't exist. When an alternative parameter file is offered
             // this will be used.
-            std::map<std::string, std::string>::iterator it = mConfig.find("UserParameterTemplate");
+            auto it = mConfig.find("UserParameterTemplate");
             if (it != mConfig.end()) {
                 QString path = QString::fromUtf8(it->second.c_str());
                 if (QDir(path).isRelative()) {

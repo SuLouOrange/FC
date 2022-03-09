@@ -66,7 +66,7 @@ static void noPrint(const char* format, ...) {
 #include <Gui/BitmapFactory.h>
 #include <Gui/Application.h>
 
-
+#include <easy/profiler.h>
 
 void PrintInitHelp(void);
 
@@ -114,6 +114,8 @@ private:
 
 int main( int argc, char ** argv )
 {
+    //EASY_PROFILER_ENABLE;
+    profiler::startListen();
     dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
     _putenv("PYTHONPATH=");
     // https://forum.freecadweb.org/viewtopic.php?f=4&t=18288

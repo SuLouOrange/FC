@@ -72,6 +72,10 @@ if (BUILD_DYNAMIC_LINK_PYTHON)
     list(APPEND FreeCADBase_LIBS ${PYTHON_LIBRARIES})
 endif (BUILD_DYNAMIC_LINK_PYTHON)
 
+find_package(easy_profiler)
+list(APPEND FreeCADBase_LIBS
+            easy_profiler
+        )
 # needed for OpenSUSE
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
     list(APPEND FreeCADBase_LIBS -lutil -ldl)
