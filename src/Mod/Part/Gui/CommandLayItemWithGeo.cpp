@@ -142,13 +142,14 @@ void CmdPartLayCylinder::activated(int iMsg)
         return;
     }
 
+#if 0
     using namespace std;
     //remove tool bar
     Gui::Workbench* pCurWorkbench = Gui::WorkbenchManager::instance()->active();
     //std::list<std::string> toolBarList = pCurWorkbench->listToolbars();
-    std::list<std::pair<std::string, std::list<std::string>>> toolBarCMD = pCurWorkbench->getToolbarItems();
+    list<pair<string, list<string>>> toolBarCMD = pCurWorkbench->getToolbarItems();
 
-    std::list<std::string> toReplaceCMDList;
+    list<string> toReplaceCMDList;
     const string aimGroupStr = "GenerateLinearSolid";
     for (auto CMD_group : toolBarCMD) {
         if (CMD_group.first == aimGroupStr) {
@@ -165,11 +166,8 @@ void CmdPartLayCylinder::activated(int iMsg)
             FC_MSG(" tool bar " << cnt++ << ":" << cmd << " to be replaced");
         }
     }
-    
-
-        
     //Gui::ToolBarManager* pToolBarManager = Gui::ToolBarManager::getInstance();
-
+#endif
     
     //2.add cb
     p3DViewer->addEventCallback(SoEvent::getClassTypeId(), CBFunction<Part::Cylinder>);

@@ -735,6 +735,9 @@ void Document::slotNewObject(const App::DocumentObject& Obj)
 
         // adding to the tree
         signalNewObject(*pcProvider);
+        const auto slotCnt = signalNewObject.num_slots();
+        FC_MSG("slot sum of the Gui::Document::signalNewObject is : " << slotCnt);
+
         pcProvider->pcDocument = this;
 
         // it is possible that a new viewprovider already claims children
