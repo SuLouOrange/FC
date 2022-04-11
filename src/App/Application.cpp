@@ -113,9 +113,11 @@
 #include "TextDocument.h"
 #include "ExpressionParser.h"
 #include "Transactions.h"
+#include "ExtensionPropertyData.h"
 #include <App/MaterialPy.h>
 #include <Base/GeometryPyCXX.h>
 #include "Link.h"
+#include "PropertyDataSpecs.h"
 
 #include "DocumentPy.h"
 #include "DocumentObjectGroupPy.h"
@@ -141,6 +143,19 @@ using namespace boost;
 using namespace boost::program_options;
 namespace sp = std::placeholders;
 
+//jia_patch
+static void no_print(const char* fmt, ...) {
+    return;
+}
+
+#define DBG_APPLICATION
+#ifdef DBG_APPLICATION
+#define  dbg_print   printf
+#include <cstdio>
+#else
+#define  dbg_print   no_print;
+#endif
+//jia_patch
 
 // scriptings (scripts are built-in but can be overridden by command line option)
 #include <App/InitScript.h>
@@ -163,8 +178,17 @@ FC_LOG_LEVEL_INIT("App",true,true)
 
 //using Base::GetConsole;
 using namespace Base;
-using namespace App;
-using namespace std;
+
+#include <cstdio>
+static void noPrint(const char* para, ...) {
+    return;
+}
+#define DBG_APPLICATION
+#ifdef DBG_APPLICATION
+#define dbgPrint printf
+#else
+#define dbgPrint noPrint
+#endif
 
 //==========================================================================
 // Application
@@ -182,7 +206,7 @@ BaseExport extern PyObject* Base::BaseExceptionFreeCADAbort;
 //**************************************************************************
 // Construction and destruction
 
-PyDoc_STRVAR(FreeCAD_doc,
+PyDoc_STRVAR(FreeCAD_doc, 
      "The functions in the FreeCAD module allow working with documents.\n"
      "The FreeCAD instance provides a list of references of documents which\n"
      "can be addressed by a string. Hence the document name must be unique.\n"
@@ -190,6 +214,7 @@ PyDoc_STRVAR(FreeCAD_doc,
      "The document has the read-only attribute FileName which points to the\n"
      "file the document should be stored to.\n"
     );
+// static const char * FreeCAD_doc = ".....";
 
 PyDoc_STRVAR(Console_doc,
      "FreeCAD Console\n"
@@ -239,17 +264,35 @@ Application::Application(std::map<std::string,std::string> &mConfig)
     mpcPramManager["User parameter"] = _pcUserParamMngr;
 
 
+
+    auto mod = getImportModules();
+    if (!mod.empty())
+        for_each(mod.begin(), mod.end(), [=](const std::string& str) { static int cnt = 0; printf("imported module %d: %s\n", ++cnt, str.c_str()); });
+
     // setting up Python binding
     Base::PyGILStateLocker lock;
     PyObject* modules = PyImport_GetModuleDict();
 
+    if (modules) {
+        PyDictObject* pDict = (PyDictObject*)modules;
+        printf("%s(%d), There are %d imported modules!\n", __FUNCTION__, __LINE__, pDict->ma_used);
+    }
+
     __AppMethods = Application::Methods;
     PyObject* pAppModule = PyImport_ImportModule ("FreeCAD");
     if (!pAppModule) {
+        //printf("%s(%d), pAppModule isn't initialized !it is normal,relax.\n", __FUNCTION__, __LINE__);
         PyErr_Clear();
         pAppModule = init_freecad_module();
         PyDict_SetItemString(modules, "FreeCAD", pAppModule);
     }
+    else
+        //printf("%s(%d), pAppModule is initialized ! It's wired!\n", __FUNCTION__, __LINE__);
+
+    mod = getImportModules();
+    if (!mod.empty())
+        for_each(mod.begin(), mod.end(), [=](const std::string& str) { static int cnt = 0; printf("imported module %d: %s\n", ++cnt, str.c_str()); });
+
     Py::Module(pAppModule).setAttr(std::string("ActiveDocument"),Py::None());
 
     static struct PyModuleDef ConsoleModuleDef = {
@@ -353,6 +396,7 @@ Application::Application(std::map<std::string,std::string> &mConfig)
     Base::Vector2dPy::init_type();
     Base::Interpreter().addType(Base::Vector2dPy::type_object(),
         pBaseModule,"Vector2d");
+
 }
 
 Application::~Application()
@@ -1392,6 +1436,7 @@ void Application::slotNewObject(const App::DocumentObject&O)
 
 void Application::slotDeletedObject(const App::DocumentObject&O)
 {
+    FC_MSG(__FUNCTION__ << ", size of App::Application::signalDeletedObject'slots " << signalDeletedObject.num_slots());
     this->signalDeletedObject(O);
     _objCount = -1;
 }
@@ -1403,7 +1448,9 @@ void Application::slotBeforeChangeObject(const DocumentObject& O, const Property
 
 void Application::slotChangedObject(const App::DocumentObject&O, const App::Property& P)
 {
+    FC_MSG(__FUNCTION__ << " App:: Application::signalChangedObject slots number:" << signalChangedObject.num_slots());
     this->signalChangedObject(O,P);
+
 }
 
 void Application::slotRelabelObject(const App::DocumentObject&O)
@@ -1429,6 +1476,8 @@ void Application::slotRedoDocument(const App::Document& d)
 void Application::slotRecomputedObject(const DocumentObject& obj)
 {
     this->signalObjectRecomputed(obj);
+    const auto slotSize = signalObjectRecomputed.num_slots();
+    FC_MSG(__FUNCTION__ << " App:: Application::signalObjectRecomputed slots number:" << slotSize);
 }
 
 void Application::slotRecomputed(const Document& doc)
@@ -1458,12 +1507,15 @@ void Application::slotAbortTransaction(const Document& d)
 
 void Application::slotStartSaveDocument(const App::Document& doc, const std::string& filename)
 {
+    //setStatus
+    const_cast<App::Document&>(doc).setStatus(App::Document::Saving, true);
     this->signalStartSaveDocument(doc, filename);
 }
 
 void Application::slotFinishSaveDocument(const App::Document& doc, const std::string& filename)
 {
     this->signalFinishSaveDocument(doc, filename);
+    const_cast<App::Document&>(doc).setStatus(App::Document::Saving, false);
 }
 
 void Application::slotChangePropertyEditor(const App::Document &doc, const App::Property &prop)
@@ -1579,51 +1631,6 @@ static void freecadNewHandler ()
 }
 #endif
 
-#if defined(FC_OS_LINUX)
-#include <execinfo.h>
-#include <dlfcn.h>
-#include <cxxabi.h>
-
-#include <cstdio>
-#include <cstdlib>
-#include <string>
-#include <sstream>
-
-// This function produces a stack backtrace with demangled function & method names.
-void printBacktrace(size_t skip=0)
-{
-    void *callstack[128];
-    size_t nMaxFrames = sizeof(callstack) / sizeof(callstack[0]);
-    size_t nFrames = backtrace(callstack, nMaxFrames);
-    char **symbols = backtrace_symbols(callstack, nFrames);
-
-    for (size_t i = skip; i < nFrames; i++) {
-        char *demangled = NULL;
-        int status = -1;
-        Dl_info info;
-        if (dladdr(callstack[i], &info) && info.dli_sname && info.dli_fname) {
-            if (info.dli_sname[0] == '_') {
-                demangled = abi::__cxa_demangle(info.dli_sname, NULL, 0, &status);
-            }
-        }
-
-        std::stringstream str;
-        if (status == 0) {
-            void* offset = (void*)((char*)callstack[i] - (char*)info.dli_saddr);
-            str << "#" << (i-skip) << "  " << callstack[i] << " in " << demangled << " from " << info.dli_fname << "+" << offset << std::endl;
-            free(demangled);
-        }
-        else {
-            str << "#" << (i-skip) << "  " << symbols[i] << std::endl;
-        }
-
-        // cannot directly print to cerr when using --write-log
-        std::cerr << str.str();
-    }
-
-    free(symbols);
-}
-#endif
 
 void segmentation_fault_handler(int sig)
 {
@@ -1631,7 +1638,11 @@ void segmentation_fault_handler(int sig)
     (void)sig;
     std::cerr << "Program received signal SIGSEGV, Segmentation fault.\n";
     printBacktrace(2);
+#if defined(FC_DEBUG)
+    abort();
+#else
     exit(1);
+#endif
 #else
     switch (sig) {
         case SIGSEGV:
@@ -1818,6 +1829,8 @@ void Application::initTypes(void)
     App ::PropertyPythonObject      ::init();
     App ::PropertyExpressionContainer  ::init();
     App ::PropertyExpressionEngine  ::init();
+    App::PropertyAdaptor            ::init();
+    App::PropertyDataSpecs          ::init();
 
     // Extension classes
     App ::Extension                     ::init();
@@ -1867,6 +1880,7 @@ void Application::initTypes(void)
     App ::LinkElementPython         ::init();
     App ::LinkGroup                 ::init();
     App ::LinkGroupPython           ::init();
+    App::ExtensionPropertyData      ::init();
 
     // Expression classes
     App ::Expression                ::init();
@@ -1923,6 +1937,8 @@ void Application::initConfig(int argc, char ** argv)
 {
     // find the home path....
     mConfig["AppHomePath"] = FindHomePath(argv[0]);
+    printf("%s(%d),home path:%s.\n", __FUNCTION__, __LINE__, mConfig["AppHomePath"].c_str());
+
 
     // Version of the application extracted from SubWCRef into src/Build/Version.h
     // We only set these keys if not yet defined. Therefore it suffices to search
@@ -1952,7 +1968,7 @@ void Application::initConfig(int argc, char ** argv)
     QFileInfo fi(binDir, QString::fromLatin1("branding.xml"));
     if (fi.exists() && brand.readFile(fi.absoluteFilePath())) {
         Branding::XmlConfig cfg = brand.getUserDefines();
-        for (Branding::XmlConfig::iterator it = cfg.begin(); it != cfg.end(); ++it) {
+        for (auto it = cfg.begin(); it != cfg.end(); ++it) {
             App::Application::Config()[it.key()] = it.value();
         }
     }
@@ -1970,8 +1986,10 @@ void Application::initConfig(int argc, char ** argv)
     PyImport_AppendInittab ("FreeCAD", init_freecad_module);
     PyImport_AppendInittab ("__FreeCADBase__", init_freecad_base_module);
     const char* pythonpath = Interpreter().init(argc,argv);
-    if (pythonpath)
+    if (pythonpath) {
         mConfig["PythonSearchPath"] = pythonpath;
+        printf("%s(%d),add pythonpath:%s.\n", __FUNCTION__, __LINE__, pythonpath);
+    }
     else
         Base::Console().Warning("Encoding of Python paths failed\n");
 
@@ -2051,6 +2069,10 @@ void Application::initConfig(int argc, char ** argv)
         loglevelParam->SetInt("Default", Base::Console().LogLevel(-1));
 #endif
     }
+
+    //Base::Console().SetDefaultLogLevel();//relax all will be print
+    Base::Console().SetLogLevel("App", FC_LOGLEVEL_TRACE + 1);
+    Base::Console().SetLogLevel("PropertyView", FC_LOGLEVEL_TRACE + 1);
 
     // Change application tmp. directory
     std::string tmpPath = _pcUserParamMngr->GetGroup("BaseApp/Preferences/General")->GetASCII("TempPath");
@@ -2270,10 +2292,13 @@ void Application::runApplication()
 {
     // process all files given through command line interface
     processCmdLineFiles();
+    dbgPrint("%s(%d),RunMode:%s\n", __FUNCTION__, __LINE__, mConfig["RunMode"].c_str());
 
     if (mConfig["RunMode"] == "Cmd") {
         // Run the commandline interface
-        Interpreter().runCommandLine("FreeCAD Console mode");
+        dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
+        Interpreter().runCommandLine("FreeCAD Console mode");//驻留
+        dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
     }
     else if (mConfig["RunMode"] == "Internal") {
         // run internal script
@@ -2309,6 +2334,7 @@ void Application::LoadParameters(void)
     if (mConfig.find("SystemParameter") == mConfig.end())
         mConfig["SystemParameter"] = mConfig["UserAppData"] + "system.cfg";
 
+    printf("%s(%d),UserParameter:%s\n", __FUNCTION__, __LINE__, mConfig["UserParameter"].c_str());
     // create standard parameter sets
     _pcSysParamMngr = new ParameterManager();
     _pcSysParamMngr->SetSerializer(new ParameterSerializer(mConfig["SystemParameter"]));
@@ -2339,7 +2365,7 @@ void Application::LoadParameters(void)
         if (_pcUserParamMngr->LoadOrCreateDocument() && !(mConfig["Verbose"] == "Strict")) {
             // The user parameter file doesn't exist. When an alternative parameter file is offered
             // this will be used.
-            std::map<std::string, std::string>::iterator it = mConfig.find("UserParameterTemplate");
+            auto it = mConfig.find("UserParameterTemplate");
             if (it != mConfig.end()) {
                 QString path = QString::fromUtf8(it->second.c_str());
                 if (QDir(path).isRelative()) {
@@ -2770,92 +2796,6 @@ void Application::ExtractUserPath()
         mConfig["AppTempPath"] = tmp.toUtf8().data();
     }
 
-#if defined(FC_OS_LINUX) || defined(FC_OS_CYGWIN) || defined(FC_OS_BSD)
-    // Default paths for the user specific stuff
-    struct passwd *pwd = getpwuid(getuid());
-    if (pwd == NULL)
-        throw Base::RuntimeError("Getting HOME path from system failed!");
-    mConfig["UserHomePath"] = pwd->pw_dir;
-    if (!userHome.isEmpty()) {
-        mConfig["UserHomePath"] = userHome.toUtf8().data();
-    }
-
-    boost::filesystem::path appData(pwd->pw_dir);
-    if (!userData.isEmpty())
-        appData = userData.toUtf8().data();
-
-    if (!boost::filesystem::exists(appData)) {
-        // This should never ever happen
-        throw Base::FileSystemError("Application data directory " + appData.string() + " does not exist!");
-    }
-
-    // If 'AppDataSkipVendor' is defined, the value of 'ExeVendor' must not be part of
-    // the path.
-    if (mConfig.find("AppDataSkipVendor") == mConfig.end()) {
-        appData /= "." + mConfig["ExeVendor"];
-        appData /= mConfig["ExeName"];
-    } else {
-        appData /= "." + mConfig["ExeName"];
-    }
-
-    // Actually the name of the directory where the parameters are stored should be the name of
-    // the application due to branding reasons.
-        
-    // In order to write to our data path, we must create some directories, first.
-    if (!boost::filesystem::exists(appData) && !Py_IsInitialized()) {
-        try {
-            boost::filesystem::create_directories(appData);
-        } catch (const boost::filesystem::filesystem_error& e) {
-            throw Base::FileSystemError("Could not create app data directories. Failed with: " + e.code().message());
-        }
-    }
-
-    mConfig["UserAppData"] = appData.string() + PATHSEP;
-
-#elif defined(FC_OS_MACOSX)
-    // Default paths for the user specific stuff on the platform
-    struct passwd *pwd = getpwuid(getuid());
-    if (pwd == NULL)
-        throw Base::RuntimeError("Getting HOME path from system failed!");
-    mConfig["UserHomePath"] = pwd->pw_dir;
-    if (!userHome.isEmpty()) {
-        mConfig["UserHomePath"] = userHome.toUtf8().data();
-    }
-
-    boost::filesystem::path appData(pwd->pw_dir);
-    if (!userData.isEmpty())
-        appData = userData.toUtf8().data();
-
-    appData = appData / "Library" / "Preferences";
-
-    if (!boost::filesystem::exists(appData)) {
-        // This should never ever happen
-        throw Base::FileSystemError("Application data directory " + appData.string() + " does not exist!");
-    }
-
-    // If 'AppDataSkipVendor' is defined, the value of 'ExeVendor' must not be part of
-    // the path.
-    if (mConfig.find("AppDataSkipVendor") == mConfig.end()) {
-        appData /= mConfig["ExeVendor"];
-    }
-    appData /= mConfig["ExeName"];
-
-
-    // Actually the name of the directory where the parameters are stored should be the name of
-    // the application due to branding reasons.
-        
-    // In order to write to our data path, we must create some directories, first.
-    if (!boost::filesystem::exists(appData) && !Py_IsInitialized()) {
-        try {
-            boost::filesystem::create_directories(appData);
-        } catch (const boost::filesystem::filesystem_error& e) {
-            throw Base::FileSystemError("Could not create app data directories. Failed with: " + e.code().message());
-        }
-    }
-
-    mConfig["UserAppData"] = appData.string() + PATHSEP;
-
-#elif defined(FC_OS_WIN32)
     WCHAR szPath[MAX_PATH];
     std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
     // Get the default path where we can save our documents. It seems that
@@ -2916,107 +2856,9 @@ void Application::ExtractUserPath()
             }
         }
     }
-#else
-# error "Implement ExtractUserPath() for your platform."
-#endif
 }
 
-#if defined (FC_OS_LINUX) || defined(FC_OS_CYGWIN) || defined(FC_OS_BSD)
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/param.h>
 
-std::string Application::FindHomePath(const char* sCall)
-{
-    // We have three ways to start this application either use one of the two executables or
-    // import the FreeCAD.so module from a running Python session. In the latter case the
-    // Python interpreter is already initialized.
-    std::string absPath;
-    std::string homePath;
-    if (Py_IsInitialized()) {
-        // Note: realpath is known to cause a buffer overflow because it
-        // expands the given path to an absolute path of unknown length.
-        // Even setting PATH_MAX does not necessarily solve the problem
-        // for sure but the risk of overflow is rather small.
-        char resolved[PATH_MAX];
-        char* path = realpath(sCall, resolved);
-        if (path)
-            absPath = path;
-    }
-    else {
-        // Find the path of the executable. Theoretically, there could occur a
-        // race condition when using readlink, but we only use this method to
-        // get the absolute path of the executable to compute the actual home
-        // path. In the worst case we simply get q wrong path and FreeCAD is not
-        // able to load its modules.
-        char resolved[PATH_MAX];
-#if defined(FC_OS_BSD)
-        int mib[4];
-        mib[0] = CTL_KERN;
-        mib[1] = KERN_PROC;
-        mib[2] = KERN_PROC_PATHNAME;
-        mib[3] = -1;
-        size_t cb = sizeof(resolved);
-        sysctl(mib, 4, resolved, &cb, NULL, 0);
-        int nchars = strlen(resolved);
-#else
-        int nchars = readlink("/proc/self/exe", resolved, PATH_MAX);
-#endif
-        if (nchars < 0 || nchars >= PATH_MAX)
-            throw Base::FileSystemError("Cannot determine the absolute path of the executable");
-        resolved[nchars] = '\0'; // enforce null termination
-        absPath = resolved;
-    }
-
-    // should be an absolute path now
-    std::string::size_type pos = absPath.find_last_of("/");
-    homePath.assign(absPath,0,pos);
-    pos = homePath.find_last_of("/");
-    homePath.assign(homePath,0,pos+1);
-
-    return homePath;
-}
-
-#elif defined(FC_OS_MACOSX)
-#include <mach-o/dyld.h>
-#include <string>
-#include <stdlib.h>
-#include <sys/param.h>
-
-std::string Application::FindHomePath(const char* call)
-{
-    // If Python is initialized at this point, then we're being run from
-    // MainPy.cpp, which hopefully rewrote argv[0] to point at the
-    // FreeCAD shared library.
-    if (!Py_IsInitialized()) {
-        uint32_t sz = 0;
-        char *buf;
-
-        _NSGetExecutablePath(NULL, &sz); //function only returns "sz" if first arg is to small to hold value
-        buf = new char[++sz];
-
-        if (_NSGetExecutablePath(buf, &sz) == 0) {
-            char resolved[PATH_MAX];
-            char* path = realpath(buf, resolved);
-            delete [] buf;
-
-            if (path) {
-                std::string Call(resolved), TempHomePath;
-                std::string::size_type pos = Call.find_last_of(PATHSEP);
-                TempHomePath.assign(Call,0,pos);
-                pos = TempHomePath.find_last_of(PATHSEP);
-                TempHomePath.assign(TempHomePath,0,pos+1);
-                return TempHomePath;
-            }
-        } else {
-            delete [] buf;
-        }
-    }
-
-    return call;
-}
-
-#elif defined (FC_OS_WIN32)
 std::string Application::FindHomePath(const char* sCall)
 {
     // We have several ways to start this application:
@@ -3027,13 +2869,17 @@ std::string Application::FindHomePath(const char* sCall)
     //   In this case the calling name should be set to FreeCADBase.dll or FreeCADApp.dll in order
     //   to locate the correct home directory
     wchar_t szFileName [MAX_PATH];
+    printf("%s(%d),relax para:%s\n", __FUNCTION__, __LINE__, sCall);
     QString dll(QString::fromUtf8(sCall));
     if (Py_IsInitialized() || dll.endsWith(QLatin1String(".dll"))) {
         GetModuleFileNameW(GetModuleHandleA(sCall),szFileName, MAX_PATH-1);
     }
     else {
+        printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
         GetModuleFileNameW(0, szFileName, MAX_PATH-1);
     }
+
+
 
     std::wstring Call(szFileName), homePath;
     std::wstring::size_type pos = Call.find_last_of(PATHSEP);
@@ -3061,7 +2907,3 @@ std::string Application::FindHomePath(const char* sCall)
     // convert to utf-8
     return str.toUtf8().data();
 }
-
-#else
-# error "std::string Application::FindHomePath(const char*) not implemented"
-#endif

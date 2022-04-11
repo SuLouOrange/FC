@@ -205,6 +205,18 @@ PyMethodDef Application::Methods[] = {
     {"removeDocumentObserver",  (PyCFunction) Application::sRemoveDocObserver, METH_VARARGS,
      "removeDocumentObserver() -> None\n\n"
      "Remove an added document observer."},
+    
+    {"listUserEditModes", (PyCFunction) Application::sListUserEditModes, METH_VARARGS,
+     "listUserEditModes() -> list\n\n"
+     "List available user edit modes"},
+     
+    {"getUserEditMode", (PyCFunction) Application::sGetUserEditMode, METH_VARARGS,
+     "getUserEditMode() -> string\n\n"
+     "Get current user edit mode"},
+     
+    {"setUserEditMode", (PyCFunction) Application::sSetUserEditMode, METH_VARARGS,
+     "setUserEditMode(string=mode) -> Bool\n\n"
+     "Set user edit mode to 'mode', returns True if exists, false otherwise"},
 
   {"reload",                    (PyCFunction) Application::sReload, METH_VARARGS,
    "reload(name) -> doc\n\n"
@@ -885,7 +897,7 @@ PyObject* Application::sAddWorkbenchHandler(PyObject * /*self*/, PyObject *args)
     std::string item;
     if (!PyArg_ParseTuple(args, "O", &pcObject))
         return NULL;
-
+    printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, Instance->_pcWorkbenchDictionary, PyDict_Size(Instance->_pcWorkbenchDictionary));
     try {
         // get the class object 'Workbench' from the main module that is expected
         // to be base class for all workbench classes
@@ -902,6 +914,7 @@ PyObject* Application::sAddWorkbenchHandler(PyObject * /*self*/, PyObject *args)
             Py::Tuple arg;
             Py::Callable creation(object);
             object = creation.apply(arg);
+            
         }
         else if (PyObject_IsInstance(object.ptr(), baseclass.ptr()) == 1) {
             // extract the class name of the instance
@@ -1485,3 +1498,29 @@ PyObject* Application::sCoinRemoveAllChildren(PyObject * /*self*/, PyObject *arg
     }PY_CATCH;
 }
 
+PyObject* Application::sListUserEditModes(PyObject * /*self*/, PyObject *args)
+{
+    Py::List ret;
+    if (!PyArg_ParseTuple(args, ""))
+        return NULL;
+    for (auto const &uem : Instance->listUserEditModes()) {
+        ret.append(Py::String(uem.second));
+    }
+    return Py::new_reference_to(ret);
+}
+
+PyObject* Application::sGetUserEditMode(PyObject * /*self*/, PyObject *args)
+{
+    if (!PyArg_ParseTuple(args, ""))
+        return NULL;
+    return Py::new_reference_to(Py::String(Instance->getUserEditModeName()));
+}
+
+PyObject* Application::sSetUserEditMode(PyObject * /*self*/, PyObject *args)
+{
+    char *mode = "";
+    if (!PyArg_ParseTuple(args, "s", &mode))
+        return NULL;
+    bool ok = Instance->setUserEditMode(std::string(mode));
+    return Py::new_reference_to(Py::Boolean(ok));
+}

@@ -190,6 +190,8 @@ SET(Features_SRCS
     AttachExtension.cpp
     PrismExtension.cpp
     PrismExtension.h
+    FeatureRelax.cpp
+    FeatureRelax.h
 )
 SOURCE_GROUP("Features" FILES ${Features_SRCS})
 

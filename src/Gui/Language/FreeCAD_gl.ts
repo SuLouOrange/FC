@@ -277,6 +277,36 @@
     </message>
   </context>
   <context>
+    <name>EditMode</name>
+    <message>
+      <source>Default</source>
+      <translation>Por defecto</translation>
+    </message>
+    <message>
+      <source>Transform</source>
+      <translation>Transformar</translation>
+    </message>
+    <message>
+      <source>Cutting</source>
+      <translation>Tallado</translation>
+    </message>
+    <message>
+      <source>Color</source>
+      <translation>Cor</translation>
+    </message>
+  </context>
+  <context>
+    <name>ExpressionLabel</name>
+    <message>
+      <source>Enter an expression...</source>
+      <translation type="unfinished">Enter an expression...</translation>
+    </message>
+    <message>
+      <source>Expression: </source>
+      <translation type="unfinished">Expression: </translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::AccelLineEdit</name>
     <message>
       <source>none</source>
@@ -465,14 +495,6 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Tamaño de palabra</translation>
     </message>
     <message>
-      <source>Credits</source>
-      <translation>Créditos</translation>
-    </message>
-    <message>
-      <source>FreeCAD would be nowhere without their efforts:</source>
-      <translation>FreeCAD non sería nada sen os seus esforzos:</translation>
-    </message>
-    <message>
       <source>License</source>
       <translation>Licenza</translation>
     </message>
@@ -494,6 +516,25 @@ while doing a left or right click and move the mouse up or down</source>
     <message>
       <source>Collection</source>
       <translation>Colección</translation>
+    </message>
+    <message>
+      <source>Credits</source>
+      <extracomment>Header for the Credits tab of the About screen</extracomment>
+      <translation>Créditos</translation>
+    </message>
+    <message>
+      <source>FreeCAD would not be possible without the contributions of</source>
+      <translation type="unfinished">FreeCAD would not be possible without the contributions of</translation>
+    </message>
+    <message>
+      <source>Individuals</source>
+      <extracomment>Header for the list of individual people in the Credits list.</extracomment>
+      <translation type="unfinished">Individuals</translation>
+    </message>
+    <message>
+      <source>Organizations</source>
+      <extracomment>Header for the list of companies/organizations in the Credits list.</extracomment>
+      <translation type="unfinished">Organizations</translation>
     </message>
   </context>
   <context>
@@ -1363,10 +1404,6 @@ Se non marca esta opción, entón a propiedade debe nomearse de forma única, e 
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Code lines will be numbered </source>
-      <translation>As liñas de código serán numeradas </translation>
-    </message>
-    <message>
       <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
       <translation>Premendo &lt;Tab&gt; inserirá a cantidade do tamaño do sangrado definido</translation>
     </message>
@@ -1401,6 +1438,10 @@ Se non marca esta opción, entón a propiedade debe nomearse de forma única, e 
     <message>
       <source>Color:</source>
       <translation>Cor:</translation>
+    </message>
+    <message>
+      <source>Code lines will be numbered</source>
+      <translation type="unfinished">Code lines will be numbered</translation>
     </message>
   </context>
   <context>
@@ -1918,19 +1959,19 @@ Por favor, especifique outro directorio.</translation>
     </message>
     <message>
       <source>Sorted</source>
-      <translation type="unfinished">Sorted</translation>
+      <translation>Ordenado</translation>
     </message>
     <message>
       <source>Quick search</source>
-      <translation type="unfinished">Quick search</translation>
+      <translation>Procura rápida</translation>
     </message>
     <message>
       <source>Type in a group name to find it</source>
-      <translation type="unfinished">Type in a group name to find it</translation>
+      <translation>Escriba o nome dun grupo para encontralo</translation>
     </message>
     <message>
       <source>Search Group</source>
-      <translation type="unfinished">Search Group</translation>
+      <translation>Procura un grupo</translation>
     </message>
   </context>
   <context>
@@ -2012,7 +2053,7 @@ Por favor, especifique outro directorio.</translation>
     </message>
     <message>
       <source>Search Group</source>
-      <translation type="unfinished">Search Group</translation>
+      <translation>Procura un grupo</translation>
     </message>
   </context>
   <context>
@@ -2109,7 +2150,7 @@ Por favor, especifique outro directorio.</translation>
     </message>
     <message>
       <source>Program version:</source>
-      <translation type="unfinished">Program version:</translation>
+      <translation>Versión do programa:</translation>
     </message>
   </context>
   <context>
@@ -2183,11 +2224,11 @@ Por favor, especifique outro directorio.</translation>
     </message>
     <message>
       <source>Filter by type</source>
-      <translation type="unfinished">Filter by type</translation>
+      <translation>Filtrar por tipo</translation>
     </message>
     <message>
       <source>Sync sub-object selection</source>
-      <translation type="unfinished">Sync sub-object selection</translation>
+      <translation>Sincronizar a selección de subobxectos</translation>
     </message>
     <message>
       <source>Reset</source>
@@ -2199,7 +2240,7 @@ Por favor, especifique outro directorio.</translation>
     </message>
     <message>
       <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
-      <translation type="unfinished">If enabled, then 3D view selection will be synchronized with full object hierarchy.</translation>
+      <translation>Se está activada, a selección da vista 3D sincronizarase coa xerarquía completa de obxectos.</translation>
     </message>
   </context>
   <context>
@@ -2262,15 +2303,15 @@ Por favor, especifique outro directorio.</translation>
     </message>
     <message>
       <source>Log messages will be recorded</source>
-      <translation type="unfinished">Log messages will be recorded</translation>
+      <translation>Gravarase o rexistro de mensaxes</translation>
     </message>
     <message>
       <source>Warnings will be recorded</source>
-      <translation type="unfinished">Warnings will be recorded</translation>
+      <translation>Gravaranse os avisos</translation>
     </message>
     <message>
       <source>Error messages will be recorded</source>
-      <translation type="unfinished">Error messages will be recorded</translation>
+      <translation>Gravaranse as mensaxes de erros</translation>
     </message>
     <message>
       <source>When an error has occurred, the Report View dialog becomes visible
@@ -2541,10 +2582,6 @@ but slower response to any scene changes.</translation>
       <translation type="unfinished">Centralized</translation>
     </message>
     <message>
-      <source>What kind of multisample anti-aliasing is used </source>
-      <translation type="unfinished">What kind of multisample anti-aliasing is used </translation>
-    </message>
-    <message>
       <source>Transparent objects:</source>
       <translation type="unfinished">Transparent objects:</translation>
     </message>
@@ -2567,14 +2604,6 @@ but slower response to any scene changes.</translation>
     <message>
       <source>Eye to eye distance for stereo modes</source>
       <translation type="unfinished">Eye to eye distance for stereo modes</translation>
-    </message>
-    <message>
-      <source>Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed. </source>
-      <translation type="unfinished">Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed. </translation>
     </message>
     <message>
       <source>Backlight is enabled with the defined color</source>
@@ -2633,6 +2662,18 @@ Changing this option requires a restart of the application.</translation>
     <message>
       <source>Use software OpenGL</source>
       <translation type="unfinished">Use software OpenGL</translation>
+    </message>
+    <message>
+      <source>What kind of multisample anti-aliasing is used</source>
+      <translation type="unfinished">What kind of multisample anti-aliasing is used</translation>
+    </message>
+    <message>
+      <source>Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</source>
+      <translation type="unfinished">Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</translation>
     </message>
   </context>
   <context>
@@ -3248,10 +3289,6 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <source>Framebuffer (as is)</source>
       <translation type="unfinished">Framebuffer (as is)</translation>
     </message>
-    <message>
-      <source>Pixel buffer</source>
-      <translation type="unfinished">Pixel buffer</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
@@ -3260,20 +3297,51 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation type="unfinished">Unloaded Workbenches</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load the selected workbenches, adding their preference windows to the preferences dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load the selected workbenches, adding their preference windows to the preferences dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Workbench Name</source>
+      <translation type="unfinished">Workbench Name</translation>
     </message>
     <message>
-      <source>Load Selected</source>
-      <translation type="unfinished">Load Selected</translation>
+      <source>Autoload?</source>
+      <translation type="unfinished">Autoload?</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Available unloaded workbenches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Available unloaded workbenches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Load Now</source>
+      <translation type="unfinished">Load Now</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation, but are not yet loaded:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation, but are not yet loaded:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsLazyLoadedImp</name>
+    <message>
+      <source>Workbench</source>
+      <translation>Banco de traballo</translation>
+    </message>
+    <message>
+      <source>Autoload</source>
+      <translation type="unfinished">Autoload</translation>
+    </message>
+    <message>
+      <source>If checked</source>
+      <translation type="unfinished">If checked</translation>
+    </message>
+    <message>
+      <source>will be loaded automatically when FreeCAD starts up</source>
+      <translation type="unfinished">will be loaded automatically when FreeCAD starts up</translation>
+    </message>
+    <message>
+      <source>This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</source>
+      <translation type="unfinished">This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</translation>
+    </message>
+    <message>
+      <source>Loaded</source>
+      <translation type="unfinished">Loaded</translation>
+    </message>
+    <message>
+      <source>Load now</source>
+      <translation type="unfinished">Load now</translation>
     </message>
   </context>
   <context>
@@ -3490,12 +3558,6 @@ The value is the diameter of the sphere to fit on the screen.</translation>
       <translation>Factor de zoom</translation>
     </message>
     <message>
-      <source>How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step. </source>
-      <translation type="unfinished">How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step. </translation>
-    </message>
-    <message>
       <source>Direction of zoom operations will be inverted</source>
       <translation type="unfinished">Direction of zoom operations will be inverted</translation>
     </message>
@@ -3582,6 +3644,28 @@ Mouse tilting is not disabled by this setting.</translation>
     <message>
       <source>Object center</source>
       <translation type="unfinished">Object center</translation>
+    </message>
+    <message>
+      <source>Rotates to nearest possible state when clicking a cube face</source>
+      <translation type="unfinished">Rotates to nearest possible state when clicking a cube face</translation>
+    </message>
+    <message>
+      <source>Rotate to nearest</source>
+      <translation type="unfinished">Rotate to nearest</translation>
+    </message>
+    <message>
+      <source>Cube size</source>
+      <translation type="unfinished">Cube size</translation>
+    </message>
+    <message>
+      <source>Size of the navigation cube</source>
+      <translation type="unfinished">Size of the navigation cube</translation>
+    </message>
+    <message>
+      <source>How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
+      <translation type="unfinished">How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
     </message>
   </context>
   <context>
@@ -3894,12 +3978,12 @@ The preference system is the one set in the general preferences.</translation>
   <context>
     <name>Gui::Dialog::DlgUnitsCalculator</name>
     <message>
-      <source>unknown unit: </source>
-      <translation type="unfinished">unknown unit: </translation>
-    </message>
-    <message>
       <source>unit mismatch</source>
       <translation type="unfinished">unit mismatch</translation>
+    </message>
+    <message>
+      <source>unknown unit:</source>
+      <translation type="unfinished">unknown unit:</translation>
     </message>
   </context>
   <context>
@@ -4613,6 +4697,16 @@ A columna 'Estado' amosa se é posible recuperar o documento.</translation>
     <message>
       <source>Partial</source>
       <translation>Parcial</translation>
+    </message>
+    <message>
+      <source>&amp;Use Original Selections</source>
+      <translation type="unfinished">&amp;Use Original Selections</translation>
+    </message>
+    <message>
+      <source>Ignore dependencies and proceed with objects
+originally selected prior to opening this dialog</source>
+      <translation type="unfinished">Ignore dependencies and proceed with objects
+originally selected prior to opening this dialog</translation>
     </message>
   </context>
   <context>
@@ -6892,14 +6986,6 @@ Please check report view for more...</translation>
     </message>
     <message>
       <source>
-
-Pyhsical path: </source>
-      <translation type="unfinished">
-
-Pyhsical path: </translation>
-    </message>
-    <message>
-      <source>
 Document: </source>
       <translation type="unfinished">
 Document: </translation>
@@ -6929,6 +7015,14 @@ Document: </translation>
     <message>
       <source>Workbenches</source>
       <translation>Bancos de traballo</translation>
+    </message>
+    <message>
+      <source>
+
+Physical path: </source>
+      <translation type="unfinished">
+
+Physical path: </translation>
     </message>
   </context>
   <context>
@@ -8700,6 +8794,17 @@ Document: </translation>
     <message>
       <source>Start the units calculator</source>
       <translation>Arrincar a calculadora de unidades</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdUserEditMode</name>
+    <message>
+      <source>Edit mode</source>
+      <translation type="unfinished">Edit mode</translation>
+    </message>
+    <message>
+      <source>Defines behavior when editing an object from tree</source>
+      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
     </message>
   </context>
   <context>

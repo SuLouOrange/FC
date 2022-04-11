@@ -57,9 +57,12 @@ include_directories(
     ${ZLIB_INCLUDE_DIR}
 )
 
+find_package(easy_profiler)
+
 set(FreeCADApp_LIBS
     FreeCADBase
     ${Boost_LIBRARIES}
+    easy_profiler
 )
 
 if (BUILD_QT5)
@@ -167,6 +170,7 @@ SET(Document_CPP_SRCS
     TextDocument.cpp
     Link.cpp
     LinkBaseExtensionPyImp.cpp
+    ExtensionPropertyData.cpp
 )
 
 SET(Document_HPP_SRCS
@@ -207,6 +211,7 @@ SET(Document_HPP_SRCS
     MergeDocuments.h
     TextDocument.h
     Link.h
+    ExtensionPropertyData.h
 )
 SET(Document_SRCS
     ${Document_CPP_SRCS}
@@ -228,6 +233,7 @@ SET(Properties_CPP_SRCS
     PropertyStandard.cpp
     PropertyUnits.cpp
     PropertyExpressionEngine.cpp
+	PropertyDataSpecs.cpp
 )
 SET(Properties_HPP_SRCS
     DynamicProperty.h
@@ -241,6 +247,7 @@ SET(Properties_HPP_SRCS
     PropertyStandard.h
     PropertyUnits.h
     PropertyExpressionEngine.h
+	PropertyDataSpecs.h
 )
 SET(Properties_SRCS
     ${Properties_CPP_SRCS}

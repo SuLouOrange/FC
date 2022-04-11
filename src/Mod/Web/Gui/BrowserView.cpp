@@ -368,6 +368,7 @@ BrowserView::BrowserView(QWidget* parent)
       WindowParameter( "Browser" ),
       isLoading(false)
 {
+    qDebug() << __FUNCTION__ << __LINE__;
 #if defined(QTWEBENGINE)
     // Otherwise cause crash on exit, probably due to double deletion
     setAttribute(Qt::WA_DeleteOnClose,false);

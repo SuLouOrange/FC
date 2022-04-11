@@ -29,6 +29,7 @@
 
 # imports the one and only
 import FreeCAD
+import time
 
 def removeFromPath(module_name):
 	"""removes the module from the sys.path. The entry point for imports
@@ -80,7 +81,18 @@ def setupSearchPaths(PathExtension):
 	except KeyError:
 		os.environ["PATH"] = PathEnvironment
 
+stagePhaseCnt = 0
+print("global stage Phase cnt", stagePhaseCnt)
+stagePhaseCnt += 1
+print("name of", __name__, dir(__name__))
+print("name of FreeCAD", dir(FreeCAD))
+#time.sleep(5)
+
 FreeCAD._importFromFreeCAD = removeFromPath
+
+print("global stage Phase cnt", stagePhaseCnt)
+stagePhaseCnt += 1
+print("name of FreeCAD", dir(FreeCAD))
 
 
 def InitApplications():
@@ -252,6 +264,8 @@ App.__cmake__ = cmake;
 App.__unit_test__ = []
 
 Log ('Init: starting App::FreeCADInit.py\n')
+
+
 
 try:
     import sys,os,traceback,inspect
@@ -631,6 +645,8 @@ class FCADLogger(object):
 
 FreeCAD.Logger = FCADLogger
 
+#以上只是简单的赋值,导入
+
 # init every application by importing Init.py
 try:
 	InitApplications()
@@ -706,6 +722,11 @@ App.Units.Newton        = App.Units.Quantity('N')
 App.Units.MilliNewton   = App.Units.Quantity('mN')
 App.Units.KiloNewton    = App.Units.Quantity('kN')
 App.Units.MegaNewton    = App.Units.Quantity('MN')
+
+App.Units.NewtonPerMeter        = App.Units.Quantity('N/m')
+App.Units.MilliNewtonPerMeter   = App.Units.Quantity('mN/m')
+App.Units.KiloNewtonPerMeter    = App.Units.Quantity('kN/m')
+App.Units.MegaNewtonPerMeter    = App.Units.Quantity('MN/m')
 
 App.Units.Pascal        = App.Units.Quantity('Pa')
 App.Units.KiloPascal    = App.Units.Quantity('kPa')
@@ -827,6 +848,8 @@ App.Units.YoungsModulus           = App.Units.Unit(-1,1,-2)
 App.Units.Force         = App.Units.Unit(1,1,-2)
 App.Units.Work          = App.Units.Unit(2,1,-2)
 App.Units.Power         = App.Units.Unit(2,1,-3)
+
+App.Units.Stiffness     = App.Units.Unit(0,1,-2)
 
 App.Units.SpecificEnergy               = App.Units.Unit(2,0,-2)
 App.Units.ThermalConductivity          = App.Units.Unit(1,1,-3,0,-1)

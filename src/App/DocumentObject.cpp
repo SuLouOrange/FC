@@ -93,11 +93,13 @@ DocumentObject::~DocumentObject(void)
         // Call before decrementing the reference counter, otherwise a heap error can occur
         obj->setInvalid();
     }
+    FC_MSG(__FUNCTION__<<" JIA TEST, DocumentObject destruct!");
 }
 
 App::DocumentObjectExecReturn *DocumentObject::recompute(void)
 {
     //check if the links are valid before making the recompute
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     if(!GeoFeatureGroupExtension::areLinksValid(this)) {
 #if 1
         Base::Console().Warning("%s / %s: Links go out of the allowed scope\n", getTypeId().getName(), getNameInDocument());
@@ -111,12 +113,13 @@ App::DocumentObjectExecReturn *DocumentObject::recompute(void)
 
     // mark the object to recompute its extensions
     this->setStatus(App::RecomputeExtension, true);
-
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     auto ret = this->execute();
     if (ret == StdReturn) {
         // most feature classes don't call the execute() method of its base class
         // so execute the extensions now
         if (this->testStatus(App::RecomputeExtension)) {
+            FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
             ret = executeExtensions();
         }
     }
@@ -126,12 +129,14 @@ App::DocumentObjectExecReturn *DocumentObject::recompute(void)
 
 DocumentObjectExecReturn *DocumentObject::execute(void)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     return executeExtensions();
 }
 
 App::DocumentObjectExecReturn* DocumentObject::executeExtensions()
 {
     //execute extensions but stop on error
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     this->setStatus(App::RecomputeExtension, false); // reset the flag
     auto vector = getExtensionsDerivedFromType<App::DocumentObjectExtension>();
     for(auto ext : vector) {
@@ -145,6 +150,7 @@ App::DocumentObjectExecReturn* DocumentObject::executeExtensions()
 
 bool DocumentObject::recomputeFeature(bool recursive)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     Document* doc = this->getDocument();
     if (doc)
         return doc->recomputeFeature(this,recursive);
@@ -743,13 +749,17 @@ void DocumentObject::onChanged(const Property* prop)
             && !(prop->getType() & Prop_Output) 
             && !prop->testStatus(Property::Output)) 
     {
+        FC_MSG("obj !NoTouch");
         if(!StatusBits.test(ObjectStatus::Touch)) {
+            FC_MSG("obj not set touch");
             FC_TRACE("touch '" << getFullName() << "' on change of '" << prop->getName() << "'");
             StatusBits.set(ObjectStatus::Touch);
         }
         // must execute on document recompute
-        if (!(prop->getType() & Prop_NoRecompute))
+        if (!(prop->getType() & Prop_NoRecompute)) {
             StatusBits.set(ObjectStatus::Enforce);
+            FC_MSG("set enforce bit");
+        }
     }
 
     //call the parent for appropriate handling
@@ -790,6 +800,7 @@ DocumentObject *DocumentObject::getSubObject(const char *subname,
     std::string name;
     const char *dot=0;
     if(!subname || !(dot=strchr(subname,'.'))) {
+        FC_MSG("subName is nullptr");
         ret = const_cast<DocumentObject*>(this);
     }else if(subname[0]=='$') {
         name = std::string(subname+1,dot);

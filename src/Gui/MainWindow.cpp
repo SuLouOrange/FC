@@ -118,6 +118,9 @@
 #include "DlgObjectSelection.h"
 #include "Tools.h"
 
+#include<thread>
+#include<chrono> 
+
 FC_LOG_LEVEL_INIT("MainWindow",false,true,true)
 
 #if defined(Q_OS_WIN32)
@@ -274,6 +277,7 @@ protected:
 MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags f)
   : QMainWindow( parent, f/*WDestructiveClose*/ )
 {
+    //qDebug() << __FUNCTION__ << __LINE__ << "start *****************************->";
     d = new MainWindowP;
     d->splashscreen = 0;
     d->activeView = 0;
@@ -512,6 +516,7 @@ MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags f)
     // accept drops on the window, get handled in dropEvent, dragEnterEvent
     setAcceptDrops(true);
     statusBar()->showMessage(tr("Ready"), 2001);
+    qDebug() << __FUNCTION__ << __LINE__ << "end *****************************<-";
 }
 
 MainWindow::~MainWindow()
@@ -681,6 +686,7 @@ void MainWindow::activatePreviousWindow ()
 
 void MainWindow::activateWorkbench(const QString& name)
 {
+    qDebug() << __FUNCTION__ << __LINE__ << name;
     ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/View");
     bool saveWB = hGrp->GetBool("SaveWBbyTab", false);
     QMdiSubWindow* subWin = d->mdiArea->activeSubWindow();
@@ -715,6 +721,7 @@ void MainWindow::showDocumentation(const QString& help)
 
 bool MainWindow::event(QEvent *e)
 {
+   // qDebug() << __FUNCTION__ << __LINE__ << ":    " << e->type();
     if (e->type() == QEvent::EnterWhatsThisMode) {
         // Unfortunately, for top-level widgets such as menus or dialogs we
         // won't be notified when the user clicks the link in the hypertext of
@@ -788,11 +795,14 @@ bool MainWindow::event(QEvent *e)
         if(std::abs(d->currentStatusType) <= MainWindow::Wrn)
             return true;
     }
+   // qDebug() << __FUNCTION__ << __LINE__ << ":    " << e;
     return QMainWindow::event(e);
 }
 
 bool MainWindow::eventFilter(QObject* o, QEvent* e)
 {
+    if(e->type() == QEvent::Enter)
+        //qDebug() << __FUNCTION__ << __LINE__ << ":    " << o << " " << e;
     if (o != this) {
         if (e->type() == QEvent::WindowStateChange) {
             // notify all mdi views when the active view receives a show normal, show minimized
@@ -873,6 +883,7 @@ bool MainWindow::eventFilter(QObject* o, QEvent* e)
 
 void MainWindow::addWindow(MDIView* view)
 {
+    qDebug() << __FUNCTION__ << __LINE__ << view;
     // make workspace parent of view
     bool isempty = d->mdiArea->subWindowList().isEmpty();
     QMdiSubWindow* child = qobject_cast<QMdiSubWindow*>(view->parentWidget());
@@ -987,6 +998,7 @@ void MainWindow::tabCloseRequested(int index)
 
 void MainWindow::onSetActiveSubWindow(QWidget *window)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     if (!window)
         return;
     d->mdiArea->setActiveSubWindow(qobject_cast<QMdiSubWindow *>(window));
@@ -1162,6 +1174,7 @@ void MainWindow::closeEvent (QCloseEvent * e)
         if (Workbench* wb = WorkbenchManager::instance()->active())
             wb->removeTaskWatcher();
 
+        /*emit*/ mainWindowClosed();
         d->activityTimer->stop();
         saveWindowSettings();
         delete d->assistant;
@@ -1175,7 +1188,6 @@ void MainWindow::closeEvent (QCloseEvent * e)
                 fi.deleteFile();
         }
 
-        /*emit*/ mainWindowClosed();
         if (this->property("QuitOnClosed").isValid()) {
             QApplication::closeAllWindows();
             qApp->quit(); // stop the event loop
@@ -1185,6 +1197,8 @@ void MainWindow::closeEvent (QCloseEvent * e)
 
 void MainWindow::showEvent(QShowEvent* e)
 {
+    // needed for logging
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     std::clog << "Show main window" << std::endl;
     QMainWindow::showEvent(e);
 }
@@ -1198,6 +1212,7 @@ void MainWindow::hideEvent(QHideEvent* e)
 void MainWindow::processMessages(const QList<QByteArray> & msg)
 {
     // handle all the messages to open files
+    qDebug() << __FUNCTION__ << __LINE__;
     try {
         WaitCursor wc;
         std::list<std::string> files;
@@ -1209,6 +1224,8 @@ void MainWindow::processMessages(const QList<QByteArray> & msg)
         files = App::Application::processFiles(files);
         for (std::list<std::string>::iterator it = files.begin(); it != files.end(); ++it) {
             QString filename = QString::fromUtf8(it->c_str(), it->size());
+            qDebug() << __FUNCTION__ << __LINE__ << ":   FILE " << filename;
+            printf("%s(%d)\n", __FUNCTION__, __LINE__);
             FileDialog::setWorkingDirectory(filename);
         }
     }
@@ -1219,7 +1236,14 @@ void MainWindow::processMessages(const QList<QByteArray> & msg)
 void MainWindow::delayedStartup()
 {
     // automatically run unit tests in Gui
+
+    printf("%s(%d), RUN MODE:%s\n", __FUNCTION__, __LINE__, App::Application::Config()["RunMode"].c_str());
+    std::chrono::milliseconds dura(5000);
+   // std::this_thread::sleep_for(dura);
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
+
     if (App::Application::Config()["RunMode"] == "Internal") {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         try {
             Base::Interpreter().runString(Base::ScriptFactory().ProduceScript("FreeCADTest"));
         }
@@ -1236,7 +1260,9 @@ void MainWindow::delayedStartup()
     try {
         std::list<std::string> files = App::Application::getCmdLineFiles();
         files = App::Application::processFiles(files);
+        int i = 0;
         for (std::list<std::string>::iterator it = files.begin(); it != files.end(); ++it) {
+            printf("%s(%d), file %d:%s\n", __FUNCTION__, __LINE__, ++i, it->c_str());
             QString filename = QString::fromUtf8(it->c_str(), it->size());
             FileDialog::setWorkingDirectory(filename);
         }
@@ -1255,14 +1281,17 @@ void MainWindow::delayedStartup()
     // Create new document?
     ParameterGrp::handle hGrp = WindowParameter::getDefaultParameter()->GetGroup("Document");
     if (hGrp->GetBool("CreateNewDoc", false)) {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         if (App::GetApplication().getDocuments().size()==0){
             App::GetApplication().newDocument();
         }
     }
 
     if (hGrp->GetBool("RecoveryEnabled", true)) {
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         Application::Instance->checkForPreviousCrashes();
     }
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
 }
 
 void MainWindow::appendRecentFile(const QString& filename)
@@ -1285,6 +1314,7 @@ void MainWindow::appendRecentMacro(const QString& filename)
 
 void MainWindow::updateActions(bool delay)
 {
+   // qDebug() << __FUNCTION__ << __LINE__;
     //make it safe to call before the main window is actually created
     if (!instance)
         return;
@@ -1310,8 +1340,10 @@ void MainWindow::updateActions(bool delay)
     }
 }
 
+static unsigned long long cnt = 0;//add by JiaYangyang 2021.7.15
 void MainWindow::_updateActions()
 {
+    //FC_MSG(cnt++);
     if (isVisible() && d->actionUpdateDelay <= 0) {
         FC_LOG("update actions");
         d->activityTimer->stop();
@@ -1343,6 +1375,7 @@ void MainWindow::updateEditorActions()
 
 void MainWindow::switchToTopLevelMode()
 {
+    qDebug() << __FUNCTION__ << __LINE__;
     QList<QDockWidget*> dw = this->findChildren<QDockWidget*>();
     for (QList<QDockWidget*>::Iterator it = dw.begin(); it != dw.end(); ++it) {
         (*it)->setParent(0, Qt::Window);
@@ -1580,6 +1613,7 @@ QPixmap MainWindow::splashImage() const
  */
 void MainWindow::dropEvent (QDropEvent* e)
 {
+    qDebug() << __FUNCTION__ << __LINE__;
     const QMimeData* data = e->mimeData();
     if (data->hasUrls()) {
         // load the files into the active document if there is one, otherwise let create one
@@ -1850,6 +1884,7 @@ void MainWindow::loadUrls(App::Document* doc, const QList<QUrl>& urls)
 
 void MainWindow::changeEvent(QEvent *e)
 {
+    //qDebug() << __FUNCTION__ << __LINE__;
     if (e->type() == QEvent::LanguageChange) {
         d->sizeLabel->setText(tr("Dimension"));
 
@@ -1885,6 +1920,7 @@ void MainWindow::clearStatus() {
 }
 
 void MainWindow::statusMessageChanged() {
+    //qDebug() << __FUNCTION__ << __LINE__;
     if(d->currentStatusType<0)
         d->currentStatusType = -d->currentStatusType;
     else {
@@ -1897,6 +1933,7 @@ void MainWindow::statusMessageChanged() {
 }
 
 void MainWindow::showMessage(const QString& message, int timeout) {
+    //qDebug() << __FUNCTION__ << __LINE__ << message;
     if(QApplication::instance()->thread() != QThread::currentThread()) {
         QApplication::postEvent(this, new CustomMessageEvent(MainWindow::Tmp,message,timeout));
         return;
@@ -1959,6 +1996,7 @@ void MainWindow::setPaneText(int i, QString text)
 
 void MainWindow::customEvent(QEvent* e)
 {
+    //qDebug() << __FUNCTION__ << __LINE__;
     if (e->type() == QEvent::User) {
         Gui::CustomMessageEvent* ce = static_cast<Gui::CustomMessageEvent*>(e);
         QString msg = ce->message();

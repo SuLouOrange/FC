@@ -48,11 +48,12 @@
 #include <Base/Tools.h>
 #include <Base/Exception.h>
 #include "Part2DObject.h"
+#include <Base/Console.h>
 
 
 
 using namespace Part;
-
+FC_LOG_LEVEL_INIT("PartExtrusion", true, true)
 
 PROPERTY_SOURCE(Part::Extrusion, Part::Feature)
 
@@ -64,6 +65,7 @@ const char* Extrusion::eDirModeStrings[]= {
 
 Extrusion::Extrusion()
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     ADD_PROPERTY_TYPE(Base,(0), "Extrude", App::Prop_None, "Shape to extrude");
     ADD_PROPERTY_TYPE(Dir,(Base::Vector3d(0.0,0.0,1.0)), "Extrude", App::Prop_None, "Direction of extrusion (also magnitude, if both lengths are zero).");
     ADD_PROPERTY_TYPE(DirMode, (dmCustom), "Extrude", App::Prop_None, "Sets, how Dir is updated.");
@@ -237,6 +239,7 @@ Base::Vector3d Extrusion::calculateShapeNormal(const App::PropertyLink& shapeLin
 
 TopoShape Extrusion::extrudeShape(const TopoShape& source, const Extrusion::ExtrusionParameters& params)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     TopoDS_Shape result;
     gp_Vec vec = gp_Vec(params.dir).Multiplied(params.lengthFwd+params.lengthRev);//total vector of extrusion
 
@@ -317,9 +320,16 @@ TopoShape Extrusion::extrudeShape(const TopoShape& source, const Extrusion::Extr
 
 App::DocumentObjectExecReturn *Extrusion::execute(void)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     App::DocumentObject* link = Base.getValue();
-    if (!link)
+    if (!link) {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         return new App::DocumentObjectExecReturn("No object linked");
+    }
+    else {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") link obj: "<< link->getNameInDocument());
+    }
+
 
     try {
         Extrusion::ExtrusionParameters params = computeFinalParameters();

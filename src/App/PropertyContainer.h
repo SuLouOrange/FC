@@ -56,6 +56,7 @@ enum PropertyType
 
 struct AppExport PropertyData
 {
+  PropertyData();
   struct PropertySpec
   {
     const char * Name;

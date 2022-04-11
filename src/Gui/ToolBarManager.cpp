@@ -33,9 +33,12 @@
 #include "MainWindow.h"
 #include "Application.h"
 #include "Command.h"
+#include <Base/Console.h>
 
 using namespace Gui;
+static const char* logKey = "ToolBarManager";
 
+FC_LOG_LEVEL_INIT(logKey, false, true)
 ToolBarItem::ToolBarItem()
 {
 }
@@ -186,8 +189,9 @@ void ToolBarManager::setup(ToolBarItem* toolBarItems)
 
     ParameterGrp::handle hPref = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
                                ->GetGroup("MainWindow")->GetGroup("Toolbars");
-    QList<ToolBarItem*> items = toolBarItems->getItems();
-    QList<QToolBar*> toolbars = toolBars();
+    QList<ToolBarItem*> items = toolBarItems->getItems();//root
+    QList<QToolBar*> toolbars = toolBars();//exsiting toolbar
+    int i = 0;
     for (QList<ToolBarItem*>::ConstIterator it = items.begin(); it != items.end(); ++it) {
         // search for the toolbar
         QString name = QString::fromUtf8((*it)->command().c_str());
@@ -196,7 +200,7 @@ void ToolBarManager::setup(ToolBarItem* toolBarItems)
         std::string toolbarName = (*it)->command();
         bool visible = hPref->GetBool(toolbarName.c_str(), true);
         bool toolbar_added = false;
-
+        FC_MSG("find toolbar " << i++ << " : " << toolbarName);
         if (!toolbar) {
             toolbar = getMainWindow()->addToolBar(
                 QApplication::translate("Workbench",

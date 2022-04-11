@@ -1,4 +1,4 @@
-/***************************************************************************
+﻿/***************************************************************************
  *   Copyright (c) 2002 Jürgen Riegel <juergen.riegel@web.de>              *
  *                                                                         *
  *   This file is part of the FreeCAD CAx development system.              *
@@ -509,7 +509,18 @@ void InterpreterSingleton::addPythonPath(const char* Path)
 
 const char* InterpreterSingleton::init(int argc,char *argv[])
 {
+    printf("%s(%d),准备初始化python!\n", __FUNCTION__, __LINE__);
     if (!Py_IsInitialized()) {
+        printf("%s(%d),检测到python未被初始化!\n", __FUNCTION__, __LINE__);
+#if PY_MAJOR_VERSION >= 3
+#if PY_MINOR_VERSION >= 5
+        Py_SetProgramName(Py_DecodeLocale(argv[0],NULL));
+#else
+        Py_SetProgramName(_Py_char2wchar(argv[0],NULL));
+#endif
+#else
+        Py_SetProgramName(argv[0]);
+#endif
         Py_SetProgramName(Py_DecodeLocale(argv[0],nullptr));
         // There is a serious bug in VS from 2010 until 2013 where the file descriptor for stdin, stdout or stderr
         // returns a valid value for GUI applications (i.e. subsystem = Windows) where it shouldn't.
@@ -520,6 +531,7 @@ const char* InterpreterSingleton::init(int argc,char *argv[])
         Py_Initialize();
         const char* virtualenv = getenv("VIRTUAL_ENV");
         if (virtualenv) {
+            printf("%s(%d),python运行在虚拟环境!\n", __FUNCTION__, __LINE__);
             PyRun_SimpleString(
                 "# Check for virtualenv, and activate if present.\n"
                 "# See https://virtualenv.pypa.io/en/latest/userguide/#using-virtualenv-without-bin-python\n"
@@ -539,6 +551,13 @@ const char* InterpreterSingleton::init(int argc,char *argv[])
         size_t size = argc;
         static std::vector<wchar_t *> _argv(size);
         for (int i = 0; i < argc; i++) {
+            printf("%s(%d),argv[%d]:%s.\n", __FUNCTION__, __LINE__, i, argv[i]);
+#if PY_MINOR_VERSION >= 5
+            _argv[i] = Py_DecodeLocale(argv[i],NULL);
+#else
+            _argv[i] = _Py_char2wchar(argv[i],NULL);
+            
+#endif
             _argv[i] = Py_DecodeLocale(argv[i],nullptr);
         }
         PySys_SetArgv(argc, _argv.data());

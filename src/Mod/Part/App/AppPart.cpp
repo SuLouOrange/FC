@@ -58,6 +58,7 @@
 #include "FeatureChamfer.h"
 #include "FeatureCompound.h"
 #include "FeatureFace.h"
+#include "FeatureRelax.h"
 #include "FeatureExtrusion.h"
 #include "FeatureFillet.h"
 #include "FeatureMirroring.h"
@@ -166,6 +167,7 @@ PyObject* Part::PartExceptionOCCDimensionError;
 
 PyMOD_INIT_FUNC(Part)
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     Base::Console().Log("Module: Part\n");
 
     // This is highly experimental and we should keep an eye on it
@@ -178,6 +180,7 @@ PyMOD_INIT_FUNC(Part)
 #endif
 
     PyObject* partModule = Part::initModule();
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     Base::Console().Log("Loading Part module... done\n");
 
     Py::Object module(partModule);
@@ -470,6 +473,8 @@ PyMOD_INIT_FUNC(Part)
     Part::Geom2dLineSegment       ::init();
     Part::Geom2dOffsetCurve       ::init();
     Part::Geom2dTrimmedCurve      ::init();
+
+    Part::FeatureRelax            ::init();
 
     IGESControl_Controller::Init();
     STEPControl_Controller::Init();

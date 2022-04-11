@@ -46,9 +46,13 @@ import FreeCAD
 import FreeCADGui
 from FreeCAD import Vector
 
+FreeCAD.Console.PrintWarning("draftTools, before import Draft\n")
 import Draft
+FreeCAD.Console.PrintWarning("draftTools, after import Draft\n")
 import Draft_rc
+FreeCAD.Console.PrintWarning("draftTools, after import Draft_rc\n")
 import DraftGui  # Initializes the DraftToolBar class
+FreeCAD.Console.PrintWarning("draftTools, after import DraftGui\n")
 import DraftVecUtils
 import WorkingPlane
 from draftutils.todo import ToDo
@@ -74,7 +78,9 @@ if not hasattr(FreeCAD, "DraftWorkingPlane"):
 # ---------------------------------------------------------------------------
 # Commands that have been migrated to their own modules
 # ---------------------------------------------------------------------------
+FreeCAD.Console.PrintWarning("draftTools, before import draftguitools.gui_edit\n")
 import draftguitools.gui_edit
+FreeCAD.Console.PrintWarning("draftTools, after import draftguitools.gui_edit\n")
 import draftguitools.gui_selectplane
 import draftguitools.gui_setstyle
 import draftguitools.gui_planeproxy
@@ -105,7 +111,7 @@ FreeCADGui.updateLocale()
 # sets the default working plane
 plane = WorkingPlane.plane()
 FreeCAD.DraftWorkingPlane = plane
-defaultWP = Draft.getParam("defaultWP",1)
+defaultWP = Draft.getParam("defaultWP",0)
 if defaultWP == 1: plane.alignToPointAndAxis(Vector(0,0,0), Vector(0,0,1), 0)
 elif defaultWP == 2: plane.alignToPointAndAxis(Vector(0,0,0), Vector(0,1,0), 0)
 elif defaultWP == 3: plane.alignToPointAndAxis(Vector(0,0,0), Vector(1,0,0), 0)
@@ -168,6 +174,7 @@ from draftguitools.gui_shapestrings import ShapeString
 from draftguitools.gui_points import Point
 from draftguitools.gui_facebinders import Draft_Facebinder
 from draftguitools.gui_labels import Draft_Label
+from draftguitools.gui_hatch import Draft_Hatch
 
 # ---------------------------------------------------------------------------
 # Modifier functions

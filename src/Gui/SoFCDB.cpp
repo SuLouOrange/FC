@@ -71,6 +71,7 @@
 #include "SoMouseWheelEvent.h"
 
 #include "propertyeditor/PropertyItem.h"
+#include "propertyeditor/PropertyAdaptorItem.h"
 #include "NavigationStyle.h"
 #include "GestureNavigationStyle.h"
 #include "Flag.h"
@@ -173,6 +174,7 @@ void Gui::SoFCDB::init()
     PropertyTransientFileItem       ::init();
     PropertyLinkItem                ::init();
     PropertyLinkListItem            ::init();
+    PropertyAdaptorItem             ::init();
 
     NavigationStyle                 ::init();
     UserNavigationStyle             ::init();

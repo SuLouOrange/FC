@@ -27,9 +27,18 @@
 #   undef _PreComp_
 #endif
 
-#ifdef FC_OS_LINUX
-#   include <unistd.h>
+static void noPrint(const char* format, ...) {
+    return;
+}
+
+#define DBG_MainGui
+#ifndef DBG_MainGui
+#define dbgPrint noPrint
+#else
+#include <cstdio>
+#define dbgPrint printf
 #endif
+
 
 #if HAVE_CONFIG_H
 #   include <config.h>
@@ -56,6 +65,8 @@
 #include <App/Application.h>
 #include <Gui/BitmapFactory.h>
 #include <Gui/Application.h>
+
+#include <easy/profiler.h>
 
 void PrintInitHelp(void);
 
@@ -100,48 +111,21 @@ private:
     FILE* file;
 };
 
-#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
-QString myDecoderFunc(const QByteArray &localFileName)
-{
-    QTextCodec* codec = QTextCodec::codecForName("UTF-8");
-    return codec->toUnicode(localFileName);
-}
-
-QByteArray myEncoderFunc(const QString &fileName)
-{
-    QTextCodec* codec = QTextCodec::codecForName("UTF-8");
-    return codec->fromUnicode(fileName);
-}
-#endif
 
 int main( int argc, char ** argv )
 {
-#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
-    // Make sure to setup the Qt locale system before setting LANG and LC_ALL to C.
-    // which is needed to use the system locale settings.
-    (void)QLocale::system();
-    // See https://forum.freecadweb.org/viewtopic.php?f=18&t=20600
-    // See Gui::Application::runApplication()
-    putenv("LC_NUMERIC=C");
-    putenv("PYTHONPATH=");
-#elif defined(FC_OS_MACOSX)
-    (void)QLocale::system();
-    putenv("PYTHONPATH=");
-#else
+    //EASY_PROFILER_ENABLE;
+    profiler::startListen();
+    dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
     _putenv("PYTHONPATH=");
     // https://forum.freecadweb.org/viewtopic.php?f=4&t=18288
     // https://forum.freecadweb.org/viewtopic.php?f=3&t=20515
     const char* fc_py_home = getenv("FC_PYTHONHOME");
+    dbgPrint("%s(%d),fc_py_home: %s\n", __FUNCTION__, __LINE__, fc_py_home);
     if (fc_py_home)
         _putenv_s("PYTHONHOME", fc_py_home);
     else
         _putenv("PYTHONHOME=");
-#endif
-
-#if defined (FC_OS_WIN32)
-    // we need to force Coin not to use Freetype in order to find installed fonts on Windows
-    // see https://forum.freecadweb.org/viewtopic.php?p=485142#p485016
-    _putenv("COIN_FORCE_FREETYPE_OFF=1");
 
     int argc_ = argc;
     QVector<QByteArray> data;
@@ -157,7 +141,6 @@ int main( int argc, char ** argv )
         }
         argv_.push_back(0); // 0-terminated string
     }
-#endif
 
 #if defined(_MSC_VER) && _MSC_VER <= 1800
     // See InterpreterSingleton::init
@@ -181,6 +164,7 @@ int main( int argc, char ** argv )
     App::Application::Config()["SplashTextColor" ] = "#ffffff"; // white
     App::Application::Config()["SplashInfoColor" ] = "#c8c8c8"; // light grey
 
+
     QGuiApplication::setDesktopFileName(QStringLiteral("org.freecadweb.FreeCAD.desktop"));
 
     try {
@@ -191,11 +175,7 @@ int main( int argc, char ** argv )
         App::Application::Config()["LoggingConsole"] = "1";
 
         // Inits the Application
-#if defined (FC_OS_WIN32)
         App::Application::init(argc_, argv_.data());
-#else
-        App::Application::init(argc, argv);
-#endif
 #if defined(_MSC_VER)
         // create a dump file when the application crashes
         std::string dmpfile = App::Application::getUserAppDataDir();
@@ -271,6 +251,8 @@ int main( int argc, char ** argv )
         exit(101);
     }
 
+    dbgPrint("%s(%d),Console:%s, RunMode:%s\n", __FUNCTION__, __LINE__, App::Application::Config()["Console"].c_str(), App::Application::Config()["RunMode"].c_str());
+
     // Run phase ===========================================================
     Base::RedirectStdOutput stdcout;
     Base::RedirectStdLog    stdclog;
@@ -278,6 +260,7 @@ int main( int argc, char ** argv )
     std::streambuf* oldcout = std::cout.rdbuf(&stdcout);
     std::streambuf* oldclog = std::clog.rdbuf(&stdclog);
     std::streambuf* oldcerr = std::cerr.rdbuf(&stdcerr);
+
 
     try {
         // if console option is set then run in cmd mode

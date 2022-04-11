@@ -20,7 +20,7 @@
 # ***************************************************************************
 """Initialization of the Draft workbench (graphical interface)."""
 
-import os
+import os, time
 
 import FreeCAD
 import FreeCADGui
@@ -44,12 +44,18 @@ class DraftWorkbench(FreeCADGui.Workbench):
                                            "DraftWorkbench.svg")
         self.__class__.MenuText = QT_TRANSLATE_NOOP("draft", "Draft")
         self.__class__.ToolTip = QT_TRANSLATE_NOOP("draft", _tooltip)
+        
+        print("sleep 5s in DraftWorkbench")
+        Log("sleep 5s in DraftWorkbench")
+        #time.sleep(60)
+
 
     def Initialize(self):
         """When the workbench is first loaded."""
 
         def QT_TRANSLATE_NOOP(context, text):
             return text
+        FreeCAD.Console.PrintWarning("1.draft workbench Initialize\n")
 
         # Run self-tests
         dependencies_OK = False
@@ -79,8 +85,11 @@ class DraftWorkbench(FreeCADGui.Workbench):
         # Import Draft tools, icons
         try:
             import Draft_rc
+            FreeCAD.Console.PrintWarning("draft workbench Initialize,after import Draft_rc\n")
             import DraftTools
-            import DraftGui
+            FreeCAD.Console.PrintWarning("draft workbench Initialize,after import DraftTools\n")
+            import DraftGui#do many
+            FreeCAD.Console.PrintWarning("draft workbench Initialize,after import DraftGui\n")
             import DraftFillet
             FreeCADGui.addLanguagePath(":/translations")
             FreeCADGui.addIconPath(":/icons")
@@ -93,18 +102,21 @@ class DraftWorkbench(FreeCADGui.Workbench):
         # Set up command lists
         import draftutils.init_tools as it
         self.drawing_commands = it.get_draft_drawing_commands()
+        FreeCAD.Console.PrintWarning("draft workbench Initialize, add draft_drawing_commands\n")
         self.annotation_commands = it.get_draft_annotation_commands()
         self.modification_commands = it.get_draft_modification_commands()
         self.context_commands = it.get_draft_context_commands()
         self.line_commands = it.get_draft_line_commands()
         self.utility_commands = it.get_draft_utility_commands()
         self.utility_small = it.get_draft_small_commands()
+        FreeCAD.Console.PrintWarning("2.draft workbench Initialize\n")
 
         # Set up toolbars
         self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft creation tools"), self.drawing_commands)
         self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft annotation tools"), self.annotation_commands)
         self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft modification tools"), self.modification_commands)
         self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft utility tools"), self.utility_small)
+        FreeCAD.Console.PrintWarning("3.draft workbench Initialize\n")
 
         # Set up menus
         self.appendMenu(QT_TRANSLATE_NOOP("Draft", "&Drafting"), self.drawing_commands)
@@ -121,7 +133,7 @@ class DraftWorkbench(FreeCADGui.Workbench):
                 FreeCADGui.addPreferencePage(":/ui/preferences-draftvisual.ui", QT_TRANSLATE_NOOP("Draft", "Draft"))
                 FreeCADGui.addPreferencePage(":/ui/preferences-drafttexts.ui", QT_TRANSLATE_NOOP("Draft", "Draft"))
                 FreeCADGui.draftToolBar.loadedPreferences = True
-
+        FreeCAD.Console.PrintWarning("4.draft workbench Initialize\n")
         FreeCAD.Console.PrintLog('Loading Draft workbench, done.\n')
 
     def Activated(self):

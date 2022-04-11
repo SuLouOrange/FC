@@ -38,6 +38,8 @@
 
 using namespace Gui;
 
+FC_LOG_LEVEL_INIT("", false, true)
+
 WorkbenchManager* WorkbenchManager::_instance = 0;
 
 WorkbenchManager* WorkbenchManager::instance()
@@ -73,6 +75,7 @@ WorkbenchManager::~WorkbenchManager()
 Workbench* WorkbenchManager::createWorkbench (const std::string& name, const std::string& className)
 {
     Workbench* wb = getWorkbench(name);
+    FC_MSG(__FUNCTION__ << " name:" << name << ";class name " << className);
 
     if (!wb) {
         // try to create an instance now

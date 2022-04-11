@@ -2285,6 +2285,7 @@ private:
 
 PyObject* initModule()
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     return (new Module)->module().ptr();
 }
 

@@ -50,6 +50,7 @@ private:
 
 PyObject* initModule()
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     return (new Module)->module().ptr();
 }
 
@@ -58,6 +59,7 @@ PyObject* initModule()
 /* Python entry */
 PyMOD_INIT_FUNC(Start)
 {
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     PyObject* mod = Start::initModule();
     Base::Console().Log("Loading Start module... done\n");
     PyMOD_Return(mod);

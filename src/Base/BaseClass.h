@@ -114,7 +114,7 @@ public:
   virtual PyObject *getPyObject(void);
   virtual void setPyObject(PyObject *);
 
-  static void *create(void){return nullptr;}
+  static void* create(void) { printf("%s(%d)\n", __FUNCTION__, __LINE__); return nullptr; }
 private:
   static Type classTypeId;
 protected:

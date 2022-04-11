@@ -303,13 +303,16 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
         return false;
     }
 
+    int i = 0;
     std::string _subname;
     if(!subname || !subname[0]) {
         // No subname reference is given, we try to extract one from the current
         // selection in order to obtain the correct transformation matrix below
         auto sels = Gui::Selection().getCompleteSelection(false);
         App::DocumentObject *parentObj = 0;
+       
         for(auto &sel : sels) {
+            FC_MSG(i++<<": " << sel.FeatName << "; subName:" << sel.SubName);
             if(!sel.pObject || !sel.pObject->getNameInDocument())
                 continue;
             if(!parentObj)
@@ -341,7 +344,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
                 return vp->getDocument()->setEdit(vp,ModNum,subname);
         }
     }
-
+    FC_MSG("exit selection loop i = " << i);
     if (d->_ViewProviderMap.find(obj) == d->_ViewProviderMap.end()) {
         // We can actually support editing external object, by calling
         // View3DInventViewer::setupEditingRoot() before exiting from
@@ -366,7 +369,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
                 << "'" << getDocument()->getName() << "'");
         return false;
     }
-
+    //FC_MSG("subName " << subname); maybe this is a nullptr
     d->_editingTransform = Base::Matrix4D();
     // Geo feature group now handles subname like link group. So no need of the
     // following code.
@@ -378,6 +381,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
     //         d->_editingTransform = ext->globalGroupPlacement().toMatrix();
     //     }
     // }
+
     auto sobj = obj->getSubObject(subname,0,&d->_editingTransform);
     if(!sobj || !sobj->getNameInDocument()) {
         FC_ERR("Invalid sub object '" << obj->getFullName()
@@ -392,6 +396,9 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
             FC_ERR("Cannot edit '" << sobj->getFullName() << "' without view provider");
             return false;
         }
+    }
+    else {
+        FC_MSG("subObj is obj");
     }
 
     View3DInventor *view3d = dynamic_cast<View3DInventor *>(getActiveView());
@@ -660,13 +667,15 @@ void Document::slotNewObject(const App::DocumentObject& Obj)
     ViewProviderDocumentObject* pcProvider = static_cast<ViewProviderDocumentObject*>(getViewProvider(&Obj));
     if (!pcProvider) {
         //Base::Console().Log("Document::slotNewObject() called\n");
+        FC_MSG("pcProvider is nullptr!");
         std::string cName = Obj.getViewProviderNameStored();
         for(;;) {
             if (cName.empty()) {
                 // handle document object with no view provider specified
-                FC_LOG(Obj.getFullName() << " has no view provider specified");
+                FC_MSG(Obj.getFullName() << " has no view provider specified");
                 return;
             }
+            FC_MSG(Obj.getFullName() << " has view provider name: " << cName);
             Base::BaseClass* base = static_cast<Base::BaseClass*>(
                     Base::Type::createInstanceByName(cName.c_str(),true));
             pcProvider = Base::freecad_dynamic_cast<ViewProviderDocumentObject>(base);
@@ -726,6 +735,9 @@ void Document::slotNewObject(const App::DocumentObject& Obj)
 
         // adding to the tree
         signalNewObject(*pcProvider);
+        const auto slotCnt = signalNewObject.num_slots();
+        FC_MSG("slot sum of the Gui::Document::signalNewObject is : " << slotCnt);
+
         pcProvider->pcDocument = this;
 
         // it is possible that a new viewprovider already claims children
@@ -1695,12 +1707,16 @@ MDIView *Document::createView(const Base::Type& typeId)
         QtGLWidget* shareWidget = 0;
         // VBO rendering doesn't work correctly when we don't share the OpenGL widgets
         if (!theViews.empty()) {
+            printf("%s(%d), the Views isn't empty.**********\n", __FUNCTION__, __LINE__);
             View3DInventor* firstView = static_cast<View3DInventor*>(theViews.front());
             shareWidget = qobject_cast<QtGLWidget*>(firstView->getViewer()->getGLWidget());
 
             const char *ppReturn = 0;
             firstView->onMsg("GetCamera",&ppReturn);
             saveCameraSettings(ppReturn);
+        }
+        else {
+            printf("%s(%d), the Views is empty.**********\n", __FUNCTION__, __LINE__);
         }
 
         View3DInventor* view3D = new View3DInventor(this, getMainWindow(), shareWidget);

@@ -1031,6 +1031,10 @@ XERCES_CPP_NAMESPACE_QUALIFIER DOMElement *ParameterGrp::FindOrCreateElement(XER
 {
     // first try to find it
     DOMElement *pcElem = FindElement(Start,Type,Name);
+    std::string testName("FontFamily");
+    if (std::string(Name) == testName) {
+        printf("find parameter : editor ->> font\n");
+    }
     if (pcElem)
         return pcElem;
 
@@ -1045,7 +1049,10 @@ XERCES_CPP_NAMESPACE_QUALIFIER DOMElement *ParameterGrp::FindOrCreateElement(XER
     pcElem = pDocument->createElement(XStr(Type).unicodeForm());
     pcElem-> setAttribute(XStr("Name").unicodeForm(), XStr(Name).unicodeForm());
     Start->appendChild(pcElem);
-
+    printf("%s(%d), create a dom element, name : %s, type : %s\n", __FUNCTION__, __LINE__, Name, Type);
+    if (std::string(Name) == testName) {
+        printf("create dom element for editor ->> font\n");
+    }
     return pcElem;
 }
 

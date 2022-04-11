@@ -34,7 +34,7 @@ namespace Part
 
 class PartExport Box :public Part::Primitive
 {
-    PROPERTY_HEADER(Part::Box);
+    PROPERTY_HEADER_WITH_EXTENSIONS(Part::Box);
 
 public:
     Box();

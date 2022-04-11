@@ -53,6 +53,7 @@ TYPESYSTEM_SOURCE(StartGui::Workbench, Gui::StdWorkbench)
 
 StartGui::Workbench::Workbench()
 {
+    printf("%s(%d), construct\n", __FUNCTION__, __LINE__);
 }
 
 StartGui::Workbench::~Workbench()
@@ -62,6 +63,7 @@ StartGui::Workbench::~Workbench()
 void StartGui::Workbench::activated()
 {
     // Automatically display the StartPage only the very first time
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     static bool first = true;
     if (first) {
         loadStartPage();
@@ -72,6 +74,7 @@ void StartGui::Workbench::activated()
 void StartGui::Workbench::loadStartPage()
 {
     // Ensure that we don't open the Start page multiple times
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     QString title = QCoreApplication::translate("Workbench", "Start page");
     QList<QWidget*> ch = Gui::getMainWindow()->windows();
     for (QList<QWidget*>::const_iterator c = ch.begin(); c != ch.end(); ++c) {

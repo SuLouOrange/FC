@@ -188,7 +188,7 @@ void DlgSettingsEditorImp::saveSettings()
     }
 
     hGrp->SetInt( "FontSize", ui->fontSize->value() );
-    hGrp->SetASCII( "Font", ui->fontFamily->currentText().toLatin1() );
+    hGrp->SetASCII( "Font", ui->fontFamily->currentText().toUtf8());
 }
 
 void DlgSettingsEditorImp::loadSettings()
@@ -229,12 +229,34 @@ void DlgSettingsEditorImp::loadSettings()
     ui->fontSize->setValue( hGrp->GetInt("FontSize", ui->fontSize->value()) );
 
     QByteArray fontName = this->font().family().toLatin1();
-
+    qDebug() << "the font of the dialog : " << fontName;
     QFontDatabase fdb;
     QStringList familyNames = fdb.families( QFontDatabase::Any );
+#if 0
+    QString toEraseFont = QStringLiteral("AcadEref");
+    auto it = std::find_if(familyNames.begin(), familyNames.end(), [&](QString fontName) {return fontName == toEraseFont; });
+    if (it != familyNames.end()) {
+        familyNames.erase(it);
+        qDebug() << "Erase the invalid font : " << toEraseFont;
+    }
+    else {
+        qDebug() << "There is no invalid font: " << toEraseFont;
+    }
+#endif
+    qDebug() << "font family pool: "<<familyNames;
     ui->fontFamily->addItems(familyNames);
-    int index = familyNames.indexOf(QString::fromLatin1(hGrp->GetASCII("Font", fontName).c_str()));
-    if (index < 0) index = 0;
+    //QString::fromUtf8
+    //QString::fromUtf8(hGrp->GetASCII("Font", fontName));
+    //qDebug() << "current font name: " << QString::fromStdString(curFontName);
+    QString curFontName = QString::fromStdString(hGrp->GetASCII("Font", fontName));
+    int index = familyNames.indexOf(curFontName);
+    if (index < 0) {
+        index = 0; 
+        qDebug() << "can't find the index for font : " << curFontName;
+    }
+    else {
+        qDebug() << "find the index for font : " <<curFontName << ", index : " << index;
+    }
     ui->fontFamily->setCurrentIndex(index);
     on_fontFamily_activated(ui->fontFamily->currentText());
 

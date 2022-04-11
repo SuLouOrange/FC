@@ -1,4 +1,4 @@
-/***************************************************************************
+﻿/***************************************************************************
  *   Copyright (c) 2004 Werner Mayer <wmayer[at]users.sourceforge.net>     *
  *                                                                         *
  *   This file is part of the FreeCAD CAx development system.              *
@@ -33,9 +33,13 @@
 #include "PropertyItem.h"
 #include "PropertyView.h"
 
+#include <App/PropertyDataSpecs.h>
+
+#include <Base/Console.h>
+
 using namespace Gui::PropertyEditor;
 
-
+FC_LOG_LEVEL_INIT("PropertyView", false, true);
 /* TRANSLATOR Gui::PropertyEditor::PropertyModel */
 
 PropertyModel::PropertyModel(QObject* parent)
@@ -76,6 +80,7 @@ QVariant PropertyModel::data ( const QModelIndex & index, int role ) const
 
 bool PropertyModel::setData(const QModelIndex& index, const QVariant & value, int role)
 {
+    qDebug() << __FUNCTION__ << ", index: " << index.row() << ", column: " << index.column() << "; variant: " << value;
     if (!index.isValid())
         return false;
 
@@ -227,24 +232,46 @@ static void setPropertyItemName(PropertyItem *item, const char *propName, QStrin
     item->setPropertyName(name);
 }
 
+
+//typedef vector<pair<string, vector<App::Property*>>> PropertyList;
 void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 {
+
+    FC_TRACE(__FUNCTION__);
     beginResetModel();
+    if (!props.empty()) {
+        FC_TRACE(__FUNCTION__ << ", size of props:" << props.size());
+    }
+    else
+        FC_TRACE(__FUNCTION__ << "props is empty.");
 
     // fill up the listview with the properties
     rootItem->reset();
+    /*
+    struct PropItemInfo {
+        const std::string& name;
+        const std::vector<App::Property*>& props;
 
+        PropItemInfo(const std::string& n, const std::vector<App::Property*>& p)
+            :name(n), props(p)
+        {}
+    };
+    */
     // sort the properties into their groups
     std::map<std::string, std::vector<PropItemInfo> > propGroup;
-    PropertyModel::PropertyList::const_iterator jt;
-    for (jt = props.begin(); jt != props.end(); ++jt) {
+    for (auto jt = props.begin(); jt != props.end(); ++jt) {
+        //FC_MSG(__FUNCTION__ << ", " << jt->first << ",size: " << jt->second.size());
         App::Property* prop = jt->second.front();
-        const char* group = prop->getGroup();
+        const char* group = nullptr;
+        if (prop->getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
+            group = reinterpret_cast<const App::PropertyAdaptor*>(prop)->getGroup();
+        else
+            group = prop->getGroup();
         bool isEmpty = (group == 0 || group[0] == '\0');
         std::string grp = isEmpty ? QT_TRANSLATE_NOOP("App::Property", "Base") : group;
         propGroup[grp].emplace_back(jt->first,jt->second);
     }
-
+    //*kt pair<string,vector<PropItemInfo>>
     for (auto kt = propGroup.begin(); kt != propGroup.end(); ++kt) {
         // set group item
         PropertyItem* group = static_cast<PropertyItem*>(PropertySeparatorItem::create());
@@ -253,7 +280,8 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
         QString groupName = QString::fromLatin1(kt->first.c_str());
         group->setPropertyName(groupName);
 
-        // setup the items for the properties
+        // setup the items for the properties kt->second
+        //*it PropItemInfo
         for (auto it = kt->second.begin(); it != kt->second.end(); ++it) {
             const auto &info = *it;
             App::Property* prop = info.props.front();
@@ -267,15 +295,16 @@ void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
                     continue;
                 }
                 else {
-                    if(boost::ends_with(info.name,"*"))
+                    if (boost::ends_with(info.name, "*"))
                         item->setLinked(true);
                     PropertyItem* child = (PropertyItem*)item;
                     child->setParent(rootItem);
                     rootItem->appendChild(child);
 
-                    setPropertyItemName(child,prop->getName(),groupName);
-
+                    setPropertyItemName(child, prop->getName(), groupName);
+                    FC_TRACE(__FUNCTION__ << ", to set Data. prop name:" << prop->getName());
                     child->setPropertyData(info.props);
+
                 }
             }
         }
@@ -288,6 +317,7 @@ void PropertyModel::updateProperty(const App::Property& prop)
 {
     int column = 1;
     int numChild = rootItem->childCount();
+    FC_TRACE(__FUNCTION__ << ", " << prop.getName() << ", numChild:" << numChild);
     for (int row=0; row<numChild; row++) {
         PropertyItem* child = rootItem->child(row);
         if (child->hasProperty(&prop)) {
@@ -314,8 +344,11 @@ void PropertyModel::appendProperty(const App::Property& prop)
             qWarning("No property item for type %s found\n", editor.c_str());
             return;
         }
-
-        const char* group = prop.getGroup();
+        const char* group = nullptr;
+        //if (prop.getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
+          //  group = reinterpret_cast<const App::PropertyAdaptor &>(prop).getGroup();
+        //else
+        group = prop.getGroup();
         bool isEmpty = (group == 0 || group[0] == '\0');
         std::string grp = isEmpty ? QT_TRANSLATE_NOOP("App::Property", "Base") : group;
         QString groupName = QString::fromStdString(grp);

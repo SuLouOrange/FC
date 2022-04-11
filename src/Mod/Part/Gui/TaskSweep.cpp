@@ -59,6 +59,8 @@
 
 using namespace PartGui;
 
+static const char* logKeyStr = "sweep";
+FC_LOG_LEVEL_INIT(logKeyStr, true, true)
 class SweepWidget::Private
 {
 public:
@@ -126,20 +128,21 @@ public:
 SweepWidget::SweepWidget(QWidget* parent)
   : d(new Private())
 {
+    FC_MSG("");
     Q_UNUSED(parent);
     Gui::Command::runCommand(Gui::Command::App, "from FreeCAD import Base");
     Gui::Command::runCommand(Gui::Command::App, "import Part");
-
+    FC_MSG("");
     d->ui.setupUi(this);
     d->ui.selector->setAvailableLabel(tr("Available profiles"));
     d->ui.selector->setSelectedLabel(tr("Selected profiles"));
     d->ui.labelPath->clear();
-
+    FC_MSG("");
     connect(d->ui.selector->availableTreeWidget(), SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)),
             this, SLOT(onCurrentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)));
     connect(d->ui.selector->selectedTreeWidget(), SIGNAL(currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)),
             this, SLOT(onCurrentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)));
-
+    FC_MSG("");
     findShapes();
 }
 
@@ -271,6 +274,7 @@ bool SweepWidget::isPathValid(const Gui::SelectionObject& sel) const
 
 bool SweepWidget::accept()
 {
+    FC_MSG(__FUNCTION__);
     if (d->ui.buttonPath->isChecked())
         return false;
     Gui::SelectionFilter edgeFilter  ("SELECT Part::Feature SUBELEMENT Edge COUNT 1..");
@@ -379,6 +383,7 @@ void SweepWidget::onCurrentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem
 
 void SweepWidget::on_buttonPath_toggled(bool on)
 {
+    FC_MSG(__FUNCTION__ << " : " << on);
     if (on) {
         QList<QWidget*> c = this->findChildren<QWidget*>();
         for (QList<QWidget*>::iterator it = c.begin(); it != c.end(); ++it)

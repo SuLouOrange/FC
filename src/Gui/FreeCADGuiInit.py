@@ -28,9 +28,14 @@
 # runs when the gui is up
 
 # imports the one and only
-import FreeCAD, FreeCADGui
+import FreeCAD, FreeCADGui, time
 
 # shortcuts
+print("FreeCADGuiInit start run! sleep 5s to show this msg. Relax!")
+print("1.j test name in FreeCADGui, size {:}:".format(len(dir(FreeCADGui))), dir(FreeCADGui))
+#stagePhaseCnt += 1
+#time.sleep(5)
+
 Gui = FreeCADGui
 
 # this is to keep old code working
@@ -105,6 +110,8 @@ class NoneWorkbench ( Workbench ):
         return "Gui::NoneWorkbench"
 
 def InitApplications():
+    print("FreeCADGuiInit Func start run sleep 3s! ")
+    #time.sleep(3)
     import sys,os,traceback
     try:
         # Python3
@@ -179,7 +186,6 @@ Log ('Init: Running FreeCADGuiInit.py start script...\n')
 App.GuiUp = 1
 App.Gui = FreeCADGui
 FreeCADGui.Workbench = Workbench
-
 Gui.addWorkbench(NoneWorkbench())
 
 # Monkey patching pivy.coin.SoGroup.removeAllChildren to work around a bug
@@ -201,7 +207,7 @@ except Exception:
 InitApplications()
 
 # set standard workbench (needed as fallback)
-Gui.activateWorkbench("NoneWorkbench")
+#Gui.activateWorkbench("NoneWorkbench")
 
 # Register .py, .FCScript and .FCMacro
 FreeCAD.addImportType("Inventor V2.1 (*.iv)","FreeCADGui")
@@ -218,6 +224,9 @@ FreeCAD.addExportType("Portable Document Format (*.pdf)","FreeCADGui")
 del(InitApplications)
 del(NoneWorkbench)
 del(StandardWorkbench)
+
+print("2.j test name in FreeCADGui, size {:}:".format(len(dir(Gui))), dir(Gui))
+print("3.j test name in WorkBench, size {:}:".format(len(dir(Gui.Workbench))), dir(Gui.Workbench))
 
 
 Log ('Init: Running FreeCADGuiInit.py start script... done\n')

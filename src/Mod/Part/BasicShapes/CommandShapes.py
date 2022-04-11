@@ -27,6 +27,7 @@ __doc__ = "Basic shapes"
 
 
 import FreeCAD
+import time
 from FreeCAD import Qt
 import FreeCADGui
 
@@ -48,13 +49,17 @@ class CommandTube:
                 'ToolTip': Qt.QT_TRANSLATE_NOOP("Part_Tube","Creates a tube")}
 
     def Activated(self):
+        FreeCAD.Console.PrintWarning("JY command tube activate, source edit\n")
         text = FreeCAD.Qt.translate("QObject", "Create tube")
         FreeCAD.ActiveDocument.openTransaction(text)
         tube = FreeCAD.ActiveDocument.addObject("Part::FeaturePython","Tube")
         Shapes.TubeFeature(tube)
         vp = ViewProviderShapes.ViewProviderTube(tube.ViewObject)
         FreeCAD.ActiveDocument.recompute()
-        vp.startDefaultEditMode(tube.ViewObject)
+        FreeCAD.Console.PrintWarning("JY ****waiting for excuting vp.startDefaultEditMode(tube.ViewObject) ****\n")
+        #time.sleep(10)
+        FreeCAD.Console.PrintWarning("JY ****excuting vp.startDefaultEditMode(tube.ViewObject) finish ****\n")
+        #vp.startDefaultEditMode(tube.ViewObject)
 
     def IsActive(self):
         return not FreeCAD.ActiveDocument is None

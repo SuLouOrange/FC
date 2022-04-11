@@ -26,6 +26,7 @@
 
 import six
 import sys,os,FreeCAD,FreeCADGui,tempfile,time,zipfile,re
+import urllib.parse
 from . import TranslationTexts
 from PySide import QtCore,QtGui
 
@@ -109,8 +110,8 @@ def getInfo(filename):
             import gnomevfs
         except Exception:
             # alternative method
-            import hashlib
-            fhash = hashlib.md5(("file://"+path).encode("utf8")).hexdigest()
+            import hashlib,urllib.parse
+            fhash = hashlib.md5(bytes(urllib.parse.quote("file://"+path,safe=":/"),"ascii")).hexdigest()
             thumb = os.path.join(os.path.expanduser("~"),".thumbnails","normal",fhash+".png")
         else:
             uri = gnomevfs.get_uri_from_local_path(path)
@@ -248,7 +249,7 @@ def buildCard(filename,method,arg=None):
                 infostring += "\n\n" + encode(finfo[5])
             if size:
                 result += '<li class="icon">'
-                result += '<a href="'+method+arg+'" title="'+infostring+'">'
+                result += '<a href="'+method+urllib.parse.quote(arg)+'" title="'+infostring+'">'
                 result += '<img src="file:///'+image.replace('\\','/')+'" alt="'+encode(basename)+'">'
                 result += '<div class="caption">'
                 result += '<h4>'+encode(basename)+'</h4>'
@@ -415,15 +416,18 @@ def handle():
         for cfolder in cfolders.split(";;"): # allow several paths separated by ;;
             if not os.path.isdir(cfolder):
                 cfolder = os.path.dirname(cfolder)
-            SECTION_CUSTOM += encode("<h2>"+os.path.basename(os.path.normpath(cfolder))+"</h2>")
-            SECTION_CUSTOM += "<ul>"
-            for basename in os.listdir(cfolder):
-                filename = os.path.join(cfolder,basename)
-                SECTION_CUSTOM += encode(buildCard(filename,method="LoadCustom.py?filename="+str(dn)+"_"))
-            SECTION_CUSTOM += "</ul>"
-            # hide the custom section tooltip if custom section is set (users know about it if they enabled it)
-            HTML = HTML.replace("id=\"customtip\"","id=\"customtip\" style=\"display:none;\"")
-            dn += 1
+            if not os.path.exists(cfolder):
+                FreeCAD.Console.PrintWarning("Custom folder not found: %s" % cfolder)
+            else:
+                SECTION_CUSTOM += encode("<h2>"+os.path.basename(os.path.normpath(cfolder))+"</h2>")
+                SECTION_CUSTOM += "<ul>"
+                for basename in os.listdir(cfolder):
+                    filename = os.path.join(cfolder,basename)
+                    SECTION_CUSTOM += encode(buildCard(filename,method="LoadCustom.py?filename="+str(dn)+"_"))
+                SECTION_CUSTOM += "</ul>"
+                # hide the custom section tooltip if custom section is set (users know about it if they enabled it)
+                HTML = HTML.replace("id=\"customtip\" class","id=\"customtip\" style=\"display:none;\" class")
+                dn += 1
     HTML = HTML.replace("SECTION_CUSTOM",SECTION_CUSTOM)
 
     # build IMAGE_SRC paths

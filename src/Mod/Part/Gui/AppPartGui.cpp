@@ -74,9 +74,14 @@
 // #include "Resources/icons/Part_FeatureImport.xpm"
 
 // use a different name to CreateCommand()
+
+
+
 void CreatePartCommands(void);
 void CreateSimplePartCommands(void);
 void CreateParamPartCommands(void);
+void CreateLayPartCommands(void);
+void CreatePartGenerateLinearSolidCommands(void);
 
 void loadPartResource()
 {
@@ -108,11 +113,13 @@ PyObject* initModule()
 
 PyMOD_INIT_FUNC(PartGui)
 {
+    printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     if (!Gui::Application::Instance) {
         PyErr_SetString(PyExc_ImportError, "Cannot load Gui module in console application.");
         PyMOD_Return(0);
     }
 
+    Base::ConsoleSingleton::Instance().SetLogLevel("sweep", FC_LOGLEVEL_TRACE);
     // load needed modules
     try {
         Base::Interpreter().runString("import Part");
@@ -209,6 +216,8 @@ PyMOD_INIT_FUNC(PartGui)
     CreatePartCommands();
     CreateSimplePartCommands();
     CreateParamPartCommands();
+    CreateLayPartCommands();
+    CreatePartGenerateLinearSolidCommands();
     try{
         Py::Object ae = Base::Interpreter().runStringObject("__import__('AttachmentEditor.Commands').Commands");
         Py::Module(partGuiModule).setAttr(std::string("AttachmentEditor"),ae);

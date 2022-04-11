@@ -35,6 +35,8 @@
 #include <Base/PyObjectBase.h>
 #include <ExtensionPy.h>
 
+const char* logKey = "Extension";
+FC_LOG_LEVEL_INIT(logKey, false, true, false, true, true);
 /* We do not use a standard property macro for type initiation. The reason is that we have the first
  * PropertyData in the extension chain, there is no parent property data.
  */
@@ -72,16 +74,32 @@ Extension::~Extension()
 }
 
 void Extension::initExtensionType(Base::Type type) {
-
+    FC_MSG("******   " << __FUNCTION__ << "; type name " << type.getName());
     m_extensionType = type;
     if (m_extensionType.isBad())
         throw Base::RuntimeError("Extension: Extension type not set");
 }
 
 void Extension::initExtension(ExtensionContainer* obj) {
-
-    if (m_extensionType.isBad())
+    auto typeNameStr = obj->getTypeId().getName();
+    const char* objName = nullptr;
+    auto documentObject = dynamic_cast<App::DocumentObject*>(obj);
+    if (documentObject) {
+        objName = documentObject->getNameInDocument();
+        if (objName)
+            FC_MSG("******   " << __FUNCTION__ << "; object name " << objName);
+        else
+            FC_MSG("******   " << __FUNCTION__ << "; object name is nullptr ");
+    }
+    else {
+        FC_MSG("obj is not deprived  from App::DocumentObject");
+    }
+    FC_MSG("******   " << __FUNCTION__ << " type name " << typeNameStr);
+    
+    if (m_extensionType.isBad()) {
+        //init();
         throw Base::RuntimeError("Extension: Extension type not set");
+    }
 
     //all properties are initialised without PropertyContainer father. Now that we know it we can
     //finally finish the property initialisation

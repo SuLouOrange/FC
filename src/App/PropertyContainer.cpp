@@ -48,6 +48,12 @@ using namespace std;
 
 TYPESYSTEM_SOURCE(App::PropertyContainer,Base::Persistence)
 
+namespace {
+    int cnt = 0;
+}
+PropertyData::PropertyData() {
+    std::cout << __FUNCTION__ << " " << __LINE__ << "  cnt:" << cnt++ << "; addr of this: " << this << std::endl;
+}
 
 //**************************************************************************
 // Construction/Destruction
@@ -150,6 +156,7 @@ const char* PropertyContainer::getPropertyDocumentation(const char *name) const
 bool PropertyContainer::isReadOnly(const Property* prop) const
 {
     return (getPropertyType(prop) & Prop_ReadOnly) == Prop_ReadOnly;
+    //return prop->testStatus(Prop_ReadOnly);
 }
 
 bool PropertyContainer::isReadOnly(const char *name) const
@@ -318,7 +325,10 @@ void PropertyContainer::Restore(Base::XMLReader &reader)
     int transientCount = 0;
     if(reader.hasAttribute("TransientCount"))
         transientCount = reader.getAttributeAsUnsigned("TransientCount");
-
+    FC_TRACE("Cnt from reader" << Cnt);
+    FC_TRACE("transientCount from reader: " << transientCount);
+    FC_TRACE("PropertyContainer::dynamicProps Of doccument size: " << dynamicProps.size());
+    FC_TRACE("\n\n read _Property(transient) start *********");
     for (int i=0;i<transientCount; ++i) {
         reader.readElement("_Property");
         Property* prop = getPropertyByName(reader.getAttribute("name"));
@@ -327,15 +337,25 @@ void PropertyContainer::Restore(Base::XMLReader &reader)
         if(prop && reader.hasAttribute("status"))
             prop->setStatusValue(reader.getAttributeAsUnsigned("status"));
     }
+    FC_TRACE("read _Property(transient) end*********");
 
+    FC_TRACE("\n\n read Property start *********");
     for (int i=0 ;i<Cnt ;i++) {
         reader.readElement("Property");
         std::string PropName = reader.getAttribute("name");
         std::string TypeName = reader.getAttribute("type");
+        FC_TRACE("loop " << i << ", propName:" << PropName << "; TypeName: " << TypeName);
         auto prop = dynamicProps.restore(*this,PropName.c_str(),TypeName.c_str(),reader);
-        if(!prop)
+        if (!prop) {
+            FC_TRACE("dynamicProps.restore() failed,then  try to get from memory");
             prop = getPropertyByName(PropName.c_str());
-
+            if(!prop)
+                FC_TRACE("get prop from memory failed");
+            else
+                FC_TRACE("get prop from memory success");
+        }
+        else
+            FC_TRACE("dynamicProps.restore() get a valid property");
         decltype(Property::StatusBits) status;
         if(reader.hasAttribute("status")) {
             status = decltype(status)(reader.getAttributeAsUnsigned("status"));
@@ -398,6 +418,7 @@ void PropertyContainer::Restore(Base::XMLReader &reader)
 #endif
         reader.readEndElement("Property");
     }
+    FC_TRACE("read Property end *********");
     reader.readEndElement("Properties");
 }
 
@@ -482,6 +503,8 @@ const PropertyData::PropertySpec *PropertyData::findProperty(OffsetBase offsetBa
     if(diff<0)
         return 0;
 
+
+    //auto & indexBySequence = propertyData.get<1>();
     auto &index = propertyData.get<2>();
     auto it = index.find(diff);
     if(it!=index.end())
@@ -493,7 +516,6 @@ const PropertyData::PropertySpec *PropertyData::findProperty(OffsetBase offsetBa
 const char* PropertyData::getName(OffsetBase offsetBase,const Property* prop) const
 {
   const PropertyData::PropertySpec* Spec = findProperty(offsetBase,prop);
-
   if(Spec)
     return Spec->Name;
   else

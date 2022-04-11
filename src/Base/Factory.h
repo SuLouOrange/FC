@@ -31,6 +31,9 @@
 #include<list>
 #include"../FCConfig.h"
 
+#include <iostream>
+#include<fstream>
+
 
 namespace Base
 {
@@ -110,6 +113,19 @@ public:
     ScriptProducer (const char* name, const char* script) : mScript(script)
     {
         ScriptFactorySingleton::Instance().AddProducer(name, this);
+
+        // print the script
+       
+        using namespace std;
+        //cout << __FUNCTION__ << "(" << __LINE__ << ") : " << name << endl;
+        string destPath("D:\\\\FC_script\\\\");
+        destPath += string(name) + string(".py");
+        ofstream fDest(destPath.c_str(), ios::binary | ios::out);
+        if (!fDest) {
+            //cout << __FUNCTION__ << "(" << __LINE__ << ") open file failed! " << destPath << endl;
+            return;
+        }
+        fDest << script;
     }
 
     virtual ~ScriptProducer (void){}

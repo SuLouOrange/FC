@@ -148,6 +148,7 @@ const Type Type::createType(const Type parent, const char *name, instantiationMe
 
   // add to dictionary for fast lookup
   Type::typemap[name] = newType.getKey();
+  printf("%s(%d), name:%s\n", __FUNCTION__, __LINE__, name);
 
   return newType;
 }
@@ -177,11 +178,16 @@ Type Type::fromName(const char *name)
 {
   std::map<std::string,unsigned int>::const_iterator pos;
 
-  pos = typemap.find(name);
-  if (pos != typemap.end())
-    return typedata[pos->second]->type;
-  else
-    return Type::badType();
+    pos = typemap.find(name);
+    if (pos != typemap.end()) {
+        //printf("%s(%d), find the type %s\n", __FUNCTION__, __LINE__, name);
+        return typedata[pos->second]->type;
+    }
+    else
+    {
+        //printf("%s(%d), not find name:%s\n", __FUNCTION__, __LINE__, name);
+        return Type::badType();
+    }
 }
 
 Type Type::fromKey(unsigned int key)

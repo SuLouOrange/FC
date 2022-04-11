@@ -162,6 +162,7 @@ bool PropertyEditor::event(QEvent* event)
 
 void PropertyEditor::commitData (QWidget * editor)
 {
+    FC_TRACE(__FUNCTION__);
     committing = true;
     QTreeView::commitData(editor);
     committing = false;
@@ -255,6 +256,7 @@ void PropertyEditor::setupTransaction(const QModelIndex &index) {
 
 void PropertyEditor::onItemActivated ( const QModelIndex & index )
 {
+    FC_TRACE(__FUNCTION__ << " index:" << index.row() <<", " << index.column());
     if(index.column() != 1)
         return;
     edit(model()->buddy(index),AllEditTriggers,0);
@@ -364,6 +366,7 @@ void PropertyEditor::drawBranches(QPainter *painter, const QRect &rect, const QM
 
 void PropertyEditor::buildUp(PropertyModel::PropertyList &&props, bool checkDocument)
 {
+    FC_TRACE(__FUNCTION__ << ", commtting: " << committing << ",checkDocument: " << checkDocument << ", size of props:" << props.size());
     if (committing) {
         Base::Console().Warning("While committing the data to the property the selection has changed.\n");
         delaybuild = true;
@@ -373,7 +376,9 @@ void PropertyEditor::buildUp(PropertyModel::PropertyList &&props, bool checkDocu
     closeTransaction();
 
     QModelIndex index = this->currentIndex();
+    FC_TRACE(__FUNCTION__ << ", currentIndex: " << index.row() << ", " << index.column());
     QStringList propertyPath = propertyModel->propertyPathFromIndex(index);
+    //qDebug() << "propertyPath: " << propertyPath;
     if (!propertyPath.isEmpty())
         this->selectedProperty = propertyPath;
     propertyModel->buildUp(props);
@@ -402,6 +407,7 @@ void PropertyEditor::buildUp(PropertyModel::PropertyList &&props, bool checkDocu
 
 void PropertyEditor::updateProperty(const App::Property& prop)
 {
+    FC_TRACE(__FUNCTION__ << " committing: " << committing);
     // forward this to the model if the property is changed from outside
     if (!committing)
         propertyModel->updateProperty(prop);

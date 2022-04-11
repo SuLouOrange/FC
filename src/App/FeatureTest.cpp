@@ -75,6 +75,9 @@ FeatureTest::FeatureTest()
 
   ADD_PROPERTY(Distance,(47.11f) );
   ADD_PROPERTY(Angle   ,(3.0f) );
+  ADD_PROPERTY(Position, (Base::Vector3d(0,0,0)));
+  ADD_PROPERTY(VectorDistance, (Base::Vector3d(0, 0, 0)));
+
 
   ADD_PROPERTY(IntegerList,(4711)  );
   ADD_PROPERTY(FloatList  ,(47.11f) );

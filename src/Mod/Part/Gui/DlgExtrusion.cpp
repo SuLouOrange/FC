@@ -400,6 +400,7 @@ bool DlgExtrusion::canExtrude(const TopoDS_Shape& shape) const
 void DlgExtrusion::accept()
 {
     try{
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         apply();
         QDialog::accept();
     } catch (Base::AbortException&){
@@ -448,6 +449,7 @@ void DlgExtrusion::apply()
             }
 
             FCMD_OBJ_DOC_CMD(sourceObj,"addObject('Part::Extrusion','" << name << "')");
+            printf("%s(%d)\n", __FUNCTION__, __LINE__);
             auto newObj = sourceObj->getDocument()->getObject(name.c_str());
 
             this->writeParametersToFeature(*newObj, sourceObj);
@@ -458,9 +460,10 @@ void DlgExtrusion::apply()
 
             FCMD_OBJ_HIDE(sourceObj);
         }
-
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         activeDoc->commitTransaction();
         Gui::Command::updateActive();
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
     }
     catch (Base::AbortException&){
         throw;

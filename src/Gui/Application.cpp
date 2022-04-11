@@ -141,6 +141,19 @@ using namespace std;
 namespace sp = std::placeholders;
 
 
+static void noPrint(const char* format, ...) {
+    return;
+}
+#include <cstdio>
+#define DBG_MainGui
+#ifndef DBG_MainGui
+#define dbgPrint noPrint
+#else
+#define dbgPrint printf
+#endif
+
+static const char* logKey = "Gui_Application";
+FC_LOG_LEVEL_INIT(logKey,false,true)
 Application* Application::Instance = 0L;
 
 namespace Gui {
@@ -459,12 +472,15 @@ Application::Application(bool GUIenabled)
     Instance = this;
 
     // instantiate the workbench dictionary
+    printf("%s(%d), before init, value of _pcWorkbenchDictionary %p\n", __FUNCTION__, __LINE__, _pcWorkbenchDictionary);
     _pcWorkbenchDictionary = PyDict_New();
+    printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, _pcWorkbenchDictionary, PyDict_Size(_pcWorkbenchDictionary));
 
     if (GUIenabled) {
         createStandardOperations();
         MacroCommand::load();
     }
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(_pcWorkbenchDictionary));
 }
 
 Application::~Application()
@@ -881,6 +897,7 @@ void Application::slotDeletedObject(const ViewProvider& vp)
 
 void Application::slotChangedObject(const ViewProvider& vp, const App::Property& prop)
 {
+    FC_MSG("test Relax,maybe receive signal from App::Application::signalChangedObject");
     this->signalChangedObject(vp,prop);
     updateActions(true);
 }
@@ -892,6 +909,7 @@ void Application::slotRelabelObject(const ViewProvider& vp)
 
 void Application::slotActivatedObject(const ViewProvider& vp)
 {
+    FC_MSG(__FUNCTION__ << "test Relax");
     this->signalActivatedObject(vp);
     updateActions();
 }
@@ -1244,6 +1262,50 @@ void Application::tryClose(QCloseEvent * e)
     }
 }
 
+int Application::getUserEditMode(const std::string &mode) const
+{
+    if (mode.empty()) {
+        return userEditMode;
+    }
+    for (auto const &uem : userEditModes) {
+        if (uem.second == mode) {
+            return uem.first;
+        }
+    }
+    return -1;
+}
+
+std::string Application::getUserEditModeName(int mode) const
+{
+    if (mode == -1) {
+        return userEditModes.at(userEditMode);
+    }
+    if (userEditModes.find(mode) != userEditModes.end()) {
+        return userEditModes.at(mode);
+    }
+    return "";
+}
+
+bool Application::setUserEditMode(int mode)
+{
+    if (userEditModes.find(mode) != userEditModes.end() && userEditMode != mode) {
+        userEditMode = mode;
+        this->signalUserEditModeChanged(userEditMode);
+        return true;
+    }
+    return false;
+}
+
+bool Application::setUserEditMode(const std::string &mode)
+{
+    for (auto const &uem : userEditModes) {
+        if (uem.second == mode) {
+            return setUserEditMode(uem.first);
+        }
+    }
+    return false;
+}
+
 /**
  * Activate the matching workbench to the registered workbench handler with name \a name.
  * The handler must be an instance of a class written in Python.
@@ -1255,6 +1317,7 @@ void Application::tryClose(QCloseEvent * e)
  */
 bool Application::activateWorkbench(const char* name)
 {
+    printf("%s(%d),relax, %s\n", __FUNCTION__, __LINE__, name);
     bool ok = false;
     WaitCursor wc;
     Workbench* oldWb = WorkbenchManager::instance()->active();
@@ -1286,6 +1349,7 @@ bool Application::activateWorkbench(const char* name)
             Py::String result(method.apply(args));
             type = result.as_std_string("ascii");
             if (Base::Type::fromName(type.c_str()).isDerivedFrom(Gui::PythonBaseWorkbench::getClassTypeId())) {
+
                 Workbench* wb = WorkbenchManager::instance()->createWorkbench(name, type);
                 if (!wb)
                     throw Py::RuntimeError("Failed to instantiate workbench of type " + type);
@@ -1799,8 +1863,9 @@ void Application::runApplication(void)
 {
     const std::map<std::string,std::string>& cfg = App::Application::Config();
     std::map<std::string,std::string>::const_iterator it;
-
+    printf("%s(%d)\n", __FUNCTION__, __LINE__);
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
+
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
     QCoreApplication::setAttribute(Qt::AA_UseDesktopOpenGL);
@@ -1848,27 +1913,32 @@ void Application::runApplication(void)
     #endif
 
     // A new QApplication
+    Base::Console().Log("***************j relax , work fine ********************\n");
+
     Base::Console().Log("Init: Creating Gui::Application and QApplication\n");
 
     // if application not yet created by the splasher
     int argc = App::Application::GetARGC();
+
+    //**************j patch
+    printf("%s(%d), argc:%d, ", __FUNCTION__, __LINE__, argc);
+    char** argv = App::Application::GetARGV();
+    for (int i = 0; i < argc; i++)
+        printf("argv%d:%s  ", i, argv[i]);
+    printf("\n");
+
+    //************** j patch
     GUISingleApplication mainApp(argc, App::Application::GetARGV());
     // http://forum.freecadweb.org/viewtopic.php?f=3&t=15540
     mainApp.setAttribute(Qt::AA_DontShowIconsInMenus, false);
 
-#ifdef Q_OS_UNIX
-    // Make sure that we use '.' as decimal point. See also
-    // http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=559846
-    // and issue #0002891
-    // http://doc.qt.io/qt-5/qcoreapplication.html#locale-settings
-    setlocale(LC_NUMERIC, "C");
-#endif
 
     // check if a single or multiple instances can run
     it = cfg.find("SingleInstance");
     if (it != cfg.end() && mainApp.isRunning()) {
         // send the file names to be opened to the server application so that this
         // opens them
+        printf("%s(%d)\n", __FUNCTION__, __LINE__);
         QDir cwd = QDir::current();
         std::list<std::string> files = App::Application::getCmdLineFiles();
         for (std::list<std::string>::iterator jt = files.begin(); jt != files.end(); ++jt) {
@@ -1899,9 +1969,6 @@ void Application::runApplication(void)
     else {
         mainApp.setApplicationName(QString::fromUtf8(App::GetApplication().getExecutableName()));
     }
-#ifndef Q_OS_MACX
-    mainApp.setWindowIcon(Gui::BitmapFactory().pixmap(App::Application::Config()["AppIcon"].c_str()));
-#endif
     QString plugin;
     plugin = QString::fromUtf8(App::GetApplication().getHomePath());
     plugin += QLatin1String("/plugins");
@@ -1997,23 +2064,10 @@ void Application::runApplication(void)
 
     Application app(true);
     MainWindow mw;
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(Instance->_pcWorkbenchDictionary));
     mw.setProperty("QuitOnClosed", true);
 
-    // allow to disable version number
-    ParameterGrp::handle hGen = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/General");
-    bool showVersion = hGen->GetBool("ShowVersionInTitle",true);
-
-    if (showVersion) {
-        // set main window title with FreeCAD Version
-        std::map<std::string, std::string>& config = App::Application::Config();
-        QString major  = QString::fromLatin1(config["BuildVersionMajor"].c_str());
-        QString minor  = QString::fromLatin1(config["BuildVersionMinor"].c_str());
-        QString title = QString::fromLatin1("%1 %2.%3").arg(mainApp.applicationName(), major, minor);
-        mw.setWindowTitle(title);
-    } else {
-        mw.setWindowTitle(mainApp.applicationName());
-    }
-
+   
     QObject::connect(&mainApp, SIGNAL(messageReceived(const QList<QByteArray> &)),
                      &mw, SLOT(processMessages(const QList<QByteArray> &)));
 
@@ -2064,7 +2118,7 @@ void Application::runApplication(void)
     initOpenInventor();
 
     QString home = QString::fromUtf8(App::GetApplication().getHomePath());
-
+#if 0 //j remove 
     it = cfg.find("WindowTitle");
     if (it != cfg.end()) {
         QString title = QString::fromUtf8(it->second.c_str());
@@ -2078,6 +2132,7 @@ void Application::runApplication(void)
         }
         QApplication::setWindowIcon(QIcon(path));
     }
+#endif //j remove
     it = cfg.find("ProgramLogo");
     if (it != cfg.end()) {
         QString path = QString::fromUtf8(it->second.c_str());
@@ -2100,27 +2155,30 @@ void Application::runApplication(void)
 
     // show splasher while initializing the GUI
     if (!hidden)
-        mw.startSplasher();
-
+       // mw.startSplasher();
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(Instance->_pcWorkbenchDictionary));
     // running the GUI init script
     try {
         Base::Console().Log("Run Gui init script\n");
+        printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, Instance->_pcWorkbenchDictionary, PyDict_Size(Instance->_pcWorkbenchDictionary));
         runInitGuiScript();
+        printf("%s(%d),  value of _pcWorkbenchDictionary %p, size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, Instance->_pcWorkbenchDictionary, PyDict_Size(Instance->_pcWorkbenchDictionary));
     }
     catch (const Base::Exception& e) {
         Base::Console().Error("Error in FreeCADGuiInit.py: %s\n", e.what());
-        mw.stopSplasher();
+        //mw.stopSplasher();
         throw;
     }
 
     // stop splash screen and set immediately the active window that may be of interest
     // for scripts using Python binding for Qt
-    mw.stopSplasher();
+    //mw.stopSplasher();
     mainApp.setActiveWindow(&mw);
 
     // Activate the correct workbench
     std::string start = App::Application::Config()["StartWorkbench"];
     Base::Console().Log("Init: Activating default workbench %s\n", start.c_str());
+    printf("%s(%d),Init: Activating default workbench %s\n", __FUNCTION__, __LINE__, start.c_str());
     std::string autoload = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/General")->
                            GetASCII("AutoloadModule", start.c_str());
     if ("$LastModule" == autoload) {
@@ -2131,8 +2189,10 @@ void Application::runApplication(void)
     }
     // if the auto workbench is not visible then force to use the default workbech
     // and replace the wrong entry in the parameters
+    printf("%s(%d),Init: Activating default workbench %s\n", __FUNCTION__, __LINE__, start.c_str());
     QStringList wb = app.workbenches();
     if (!wb.contains(QString::fromLatin1(start.c_str()))) {
+        printf("%s(%d),Init: Activating default workbench %s\n", __FUNCTION__, __LINE__, start.c_str());//NOT RUN
         start = App::Application::Config()["StartWorkbench"];
         if ("$LastModule" == autoload) {
             App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/General")->
@@ -2143,6 +2203,7 @@ void Application::runApplication(void)
         }
     }
 
+    printf("%s(%d), size of WorkbenchDictionary %d\n", __FUNCTION__, __LINE__, PyDict_Size(Instance->_pcWorkbenchDictionary));
     // Call this before showing the main window because otherwise:
     // 1. it shows a white window for a few seconds which doesn't look nice
     // 2. the layout of the toolbars is completely broken
@@ -2173,6 +2234,21 @@ void Application::runApplication(void)
     SoDebugError::setHandlerCallback( messageHandlerCoin, 0 );
 #endif
 
+    // Now run the background autoload, for workbenches that should be loaded at startup, but not
+    // displayed to the user immediately
+    std::string autoloadCSV = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/General")->
+        GetASCII("BackgroundAutoloadModules", "");
+
+    // Tokenize the comma-separated list and load the requested workbenches if they exist in this installation
+    std::vector<std::string> backgroundAutoloadedModules;
+    std::stringstream stream(autoloadCSV);
+    std::string workbench;
+    while (std::getline(stream, workbench, ','))
+        if (wb.contains(QString::fromLatin1(workbench.c_str())))
+            app.activateWorkbench(workbench.c_str());
+
+    // Reactivate the startup workbench
+    app.activateWorkbench(start.c_str());
 
     Instance->d->startingUp = false;
 

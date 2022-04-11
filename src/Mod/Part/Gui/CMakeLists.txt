@@ -15,11 +15,13 @@ include_directories(
     ${PYTHON_INCLUDE_DIRS}
     ${XercesC_INCLUDE_DIRS}
     ${ZLIB_INCLUDE_DIR}
+    ${EIGEN3_INCLUDE_DIR}
 )
 link_directories(${OCC_LIBRARY_DIR})
 
 set(PartGui_LIBS
     Part
+    Sketcher
     FreeCADGui
 )
 
@@ -88,6 +90,8 @@ SET(PartGui_SRCS
     Command.cpp
     CommandSimple.cpp
     CommandParametric.cpp
+    CommandLayItemWithGeo.cpp
+    CommandGenerateLinearSolid.cpp
     CrossSections.cpp
     CrossSections.h
     CrossSections.ui

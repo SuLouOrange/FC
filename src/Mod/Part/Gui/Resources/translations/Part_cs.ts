@@ -322,6 +322,24 @@ Klikněte 'Pokračovat' chcete-li přesto prvek vytvořit, nebo "Přerušit" pro
       <translation>Vyberte nejprve alespoň dva objekty nebo jednu či více složenin! Je-li vybrána jen jedna složenina, pak bude vytvořen průnik tvarů složeniny (jinak jsou sebe-protínající se složeniny neplatné).</translation>
     </message>
     <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="479"/>
+      <source>Bad selection</source>
+      <translation>Špatný výběr</translation>
+    </message>
+    <message>
+      <location filename="../../../BOPTools/SplitFeatures.py" line="501"/>
+      <source>Computing the result failed with an error:
+
+{err}
+
+Click 'Continue' to create the feature anyway, or 'Abort' to cancel.</source>
+      <translation>Výpočet výsledku selhal s chybou: 
+
+{err}
+
+Klikněte 'Pokračovat' chcete-li přesto prvek vytvořit, nebo "Přerušit" pro ukončení.</translation>
+    </message>
+    <message>
       <location filename="../../../BOPTools/SplitFeatures.py" line="543"/>
       <source>Select at least two objects, or one or more compounds. If only one compound is selected, the compounded shapes will be intersected between each other (otherwise, compounds with self-intersections are invalid).</source>
       <translation>Vyberte alespoň dva objekty nebo jednu či více složenin. Je-li vybrána jen jedna složenina, pak bude vytvořen průnik tvarů složeniny (jinak jsou sebe-protínající se složeniny neplatné).</translation>
@@ -377,24 +395,6 @@ A 'Compound Filter' can be used to extract the remaining pieces.</source>
 nebo s tvary uvnitř složeniny.
 To znamená, že budou odstraněny překrývající se objemy tvarů.
 K extrakci zbývajících částí může být použitý 'Filtr složenin'.</translation>
-    </message>
-    <message>
-      <location filename="../../../BOPTools/SplitFeatures.py" line="479"/>
-      <source>Bad selection</source>
-      <translation>Špatný výběr</translation>
-    </message>
-    <message>
-      <location filename="../../../BOPTools/SplitFeatures.py" line="501"/>
-      <source>Computing the result failed with an error:
-
-{err}
-
-Click 'Continue' to create the feature anyway, or 'Abort' to cancel.</source>
-      <translation>Výpočet výsledku selhal s chybou: 
-
-{err}
-
-Klikněte 'Pokračovat' chcete-li přesto prvek vytvořit, nebo "Přerušit" pro ukončení.</translation>
     </message>
     <message>
       <location filename="../../../CompoundTools/_CommandCompoundFilter.py" line="107"/>

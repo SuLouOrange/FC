@@ -1,4 +1,4 @@
-/***************************************************************************
+﻿/***************************************************************************
  *   Copyright (c) 2007 Werner Mayer <wmayer[at]users.sourceforge.net>     *
  *                                                                         *
  *   This file is part of the FreeCAD CAx development system.              *
@@ -73,6 +73,8 @@
 #define M_PI       3.14159265358979323846
 #endif
 
+static const char* logKey = "PrimitiveFeature";
+FC_LOG_LEVEL_INIT(logKey, false,true)
 
 namespace Part {
     const App::PropertyQuantityConstraint::Constraints apexRange   = {-90.0,90.0,0.1};
@@ -189,6 +191,7 @@ void Primitive::Restore(Base::XMLReader &reader)
 
 void Primitive::onChanged(const App::Property* prop)
 {
+    FC_MSG(prop->getFullName());
     if (!isRestoring()) {
         // Do not support sphere, ellipsoid and torus because the creation
         // takes too long and thus is not feasible
@@ -532,6 +535,24 @@ Cylinder::Cylinder(void)
     Angle.setConstraints(&angleRangeU);
 
     PrismExtension::initExtension(this);
+}
+
+void Cylinder::onChanged(const App::Property* prop)
+{
+
+    if (!isRestoring()) {
+        std::string grp = (prop->getGroup() ? prop->getGroup() : "");
+        if (grp == "Cylinder" ) {//排除基类
+            try {
+                App::DocumentObjectExecReturn* ret = recompute();
+                delete ret;
+            }
+            catch (...) {
+            }
+        }
+    }
+
+    Part::Feature::onChanged(prop);
 }
 
 short Cylinder::mustExecute() const

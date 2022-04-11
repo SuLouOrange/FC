@@ -33,6 +33,7 @@
 
 using namespace PartGui;
 
+
 #if 0 // needed for Qt's lupdate utility
     qApp->translate("Workbench", "&Part");
     qApp->translate("Workbench", "&Simple");
@@ -183,6 +184,14 @@ Gui::ToolBarItem* Workbench::setupToolBars() const
             << "Part_Tube"
             << "Part_Primitives"
             << "Part_Builder";
+
+    Gui::ToolBarItem* layItem = new Gui::ToolBarItem(root);
+    layItem->setCommand("LayItem");
+    *layItem << "Part_LayCylinder" << "Part_LayBox";
+
+    Gui::ToolBarItem* generateLinearSolid = new Gui::ToolBarItem(root);
+    generateLinearSolid->setCommand("GenerateLinearSolid");
+    *generateLinearSolid << "Part_GenerateLinearSolid" << "Part_DrawLinearSolid";
 
     Gui::ToolBarItem* tool = new Gui::ToolBarItem(root);
     tool->setCommand("Part tools");

@@ -120,6 +120,8 @@ recompute path. Also, it enables more complicated dependencies beyond trees.
 #include <zipios++/zipoutputstream.h>
 #include <zipios++/meta-iostreams.h>
 
+#include <easy/profiler.h>
+
 #include "Application.h"
 #include "Transactions.h"
 #include "GeoFeatureGroupExtension.h"
@@ -1518,6 +1520,7 @@ void Document::onBeforeChangeProperty(const TransactionalObject *Who, const Prop
 
 void Document::onChangedProperty(const DocumentObject *Who, const Property *What)
 {
+    FC_MSG(__FUNCTION__<<" " << Who->getNameInDocument() << ", " << What->getFullName());
     signalChangedObject(*Who, *What);
 }
 
@@ -2685,6 +2688,7 @@ bool Document::isAnyRestoring() {
 void Document::restore (const char *filename,
         bool delaySignal, const std::set<std::string> &objNames)
 {
+    EASY_FUNCTION(profiler::colors::Purple);
     clearUndos();
     d->activeObject = 0;
 
@@ -3417,7 +3421,7 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
             FC_WARN("Ignore document recompute on undo/redo");
         return 0;
     }
-
+    //FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") use console\n");
     int objectCount = 0;
     if (testStatus(Document::PartialDoc)) {
         if(mustExecute())
@@ -3478,12 +3482,15 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
     FC_TIME_INIT(t2);
 
     try {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") size of topoSortedObjects "  << topoSortedObjects.size());
+
         // maximum two passes to allow some form of dependency inversion
         for(int passes=0; passes<2 && idx<topoSortedObjects.size(); ++passes) {
             std::unique_ptr<Base::SequencerLauncher> seq;
             if(canAbort)
                 seq.reset(new Base::SequencerLauncher("Recompute...", topoSortedObjects.size()));
-            FC_LOG("Recompute pass " << passes);
+            FC_MSG("Recompute pass " << passes);
+           // FC_LOG("Recompute pass " << passes);
             for (; idx < topoSortedObjects.size(); ++idx) {
                 auto obj = topoSortedObjects[idx];
                 if(!obj->getNameInDocument() || filter.find(obj)!=filter.end())
@@ -3491,10 +3498,12 @@ int Document::recompute(const std::vector<App::DocumentObject*> &objs, bool forc
                 // ask the object if it should be recomputed
                 bool doRecompute = false;
                 if (obj->mustRecompute()) {
+                    FC_MSG(__FUNCTION__ << "(" << __LINE__ << ") must recompute " << idx);
                     doRecompute = true;
                     ++objectCount;
                     int res = _recomputeFeature(obj);
                     if(res) {
+                        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
                         if(hasError)
                             *hasError = true;
                         if(res < 0) {
@@ -3738,16 +3747,24 @@ const char * Document::getErrorDescription(const App::DocumentObject*Obj) const
 // call the recompute of the Feature and handle the exceptions and errors.
 int Document::_recomputeFeature(DocumentObject* Feat)
 {
-    FC_LOG("Recomputing " << Feat->getFullName());
+    FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")  " << "Recomputing " << Feat->getFullName());
 
     DocumentObjectExecReturn  *returnCode = 0;
     try {
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         returnCode = Feat->ExpressionEngine.execute(PropertyExpressionEngine::ExecuteNonOutput);
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         if (returnCode == DocumentObject::StdReturn) {
+            FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
             returnCode = Feat->recompute();
-            if(returnCode == DocumentObject::StdReturn)
+            FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+            if (returnCode == DocumentObject::StdReturn) {
                 returnCode = Feat->ExpressionEngine.execute(PropertyExpressionEngine::ExecuteOutput);
+                FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
+            }
+            FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
         }
+        FC_MSG(__FUNCTION__ << "(" << __LINE__ << ")");
     }
     catch(Base::AbortException &e){
         e.ReportException();
@@ -3814,18 +3831,20 @@ bool Document::recomputeFeature(DocumentObject* Feat, bool recursive)
 DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
                                      bool isNew, const char* viewType, bool isPartial)
 {
+    FC_MSG(__FUNCTION__ << " entry ");
     Base::BaseClass* base = static_cast<Base::BaseClass*>(Base::Type::createInstanceByName(sType,true));
 
     string ObjectName;
     if (!base)
         return 0;
+    FC_MSG(__FUNCTION__ << " 1 ");
     if (!base->getTypeId().isDerivedFrom(App::DocumentObject::getClassTypeId())) {
         delete base;
         std::stringstream str;
         str << "'" << sType << "' is not a document object type";
         throw Base::TypeError(str.str());
     }
-
+    FC_MSG(__FUNCTION__ << " 2 ");
     App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(base);
     pcObject->setDocument(this);
 
@@ -3836,7 +3855,7 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
         if (d->activeUndoTransaction)
             d->activeUndoTransaction->addObjectDel(pcObject);
     }
-
+    FC_MSG(__FUNCTION__ << " 3 ");
     // get Unique name
     if (pObjectName && pObjectName[0] != '\0')
         ObjectName = getUniqueObjectName(pObjectName);
@@ -3862,7 +3881,7 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     // label conflicts later.
     if (!d->StatusBits.test(Restoring))
         pcObject->Label.setValue( ObjectName );
-
+    FC_MSG(__FUNCTION__ << " 4 ");
     // Call the object-specific initialization
     if (!d->undoing && !d->rollback && isNew) {
         pcObject->setupObject ();
@@ -3878,16 +3897,16 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
 
     if (viewType && viewType[0] != '\0')
         pcObject->_pcViewProviderName = viewType;
-
+    FC_MSG(__FUNCTION__ << " 5 "<< " to emit  signalNewObject");
     signalNewObject(*pcObject);
 
     // do no transactions if we do a rollback!
     if (!d->rollback && d->activeUndoTransaction) {
         signalTransactionAppend(*pcObject, d->activeUndoTransaction);
     }
-
+    FC_MSG(__FUNCTION__ << " 6 " << " to emit  signalActivatedObject");
     signalActivatedObject(*pcObject);
-
+    FC_MSG(__FUNCTION__ << " 7 end! ");
     // return the Object
     return pcObject;
 }
@@ -4022,7 +4041,9 @@ void Document::addObject(DocumentObject* pcObject, const char* pObjectName)
     // insert in the vector
     d->objectArray.push_back(pcObject);
 
+    FC_MSG("before Label set value to: " << ObjectName);
     pcObject->Label.setValue( ObjectName );
+    FC_MSG("after Label set value to: " << ObjectName);
 
     // mark the object as new (i.e. set status bit 2) and send the signal
     pcObject->setStatus(ObjectStatus::New, true);
@@ -4124,6 +4145,7 @@ void Document::removeObject(const char* sName)
         pos->second->unsetupObject();
     }
 
+    FC_MSG(__FUNCTION__ << ", size of App::Document::signalDeletedObject'slots " << signalDeletedObject.num_slots());
     signalDeletedObject(*(pos->second));
 
     // do no transactions if we do a rollback!

@@ -1,4 +1,4 @@
-/***************************************************************************
+﻿/***************************************************************************
  *   Copyright (c) 2002 Jürgen Riegel <juergen.riegel@web.de>              *
  *                                                                         *
  *   This file is part of the FreeCAD CAx development system.              *
@@ -39,6 +39,7 @@
 #include <App/PropertyContainer.h>
 #include <App/DocumentObject.h>
 #include <App/Document.h>
+#include <App/PropertyDataSpecs.h>
 #include <Base/Console.h>
 
 #include "PropertyView.h"
@@ -67,6 +68,8 @@ static ParameterGrp::handle _GetParam() {
     }
     return hGrp;
 }
+
+
 
 /* TRANSLATOR Gui::PropertyView */
 
@@ -332,6 +335,22 @@ struct PropertyView::PropFind {
     }
 };
 
+void PropertyView::classifyProperties(short typeKey, App::Property* prop, std::vector<PropInfo>& propDataMap) {
+    PropInfo nameType;
+    nameType.propName = prop->getName();
+    nameType.propId = typeKey;
+
+   auto pi = std::find_if(propDataMap.begin(), propDataMap.end(), PropFind(nameType));//同名同类型
+    if (pi != propDataMap.end()) {
+        //name type均相同
+        pi->propList.push_back(prop);
+    }
+    else {
+        nameType.propList.push_back(prop);
+        propDataMap.push_back(nameType);
+    }
+}
+
 void PropertyView::onSelectionChanged(const SelectionChanges& msg)
 {
     if (msg.Type != SelectionChanges::AddSelection &&
@@ -351,56 +370,56 @@ void PropertyView::onTimer() {
     clearPropertyItemSelection();
     timer->stop();
 
-    if(!this->isConnectionAttached())
+    if (!this->isConnectionAttached())
         return;
 
-    if(!Gui::Selection().hasSelection()) {
+    if (!Gui::Selection().hasSelection()) {
         auto gdoc = TreeWidget::selectedDocument();
-        if(!gdoc || !gdoc->getDocument())
+        if (!gdoc || !gdoc->getDocument())
             return;
 
         PropertyModel::PropertyList docProps;
 
         auto doc = gdoc->getDocument();
-        std::map<std::string,App::Property*> props;
+        std::map<std::string, App::Property*> props;
         doc->getPropertyMap(props);
-        for(auto &v : props)
+        for (auto& v : props)
             docProps.emplace_back(v.first,
-                    std::vector<App::Property*>(1,v.second));
+                std::vector<App::Property*>(1, v.second));
         propertyEditorData->buildUp(std::move(docProps));
         tabs->setCurrentIndex(1);
         return;
     }
 
-    std::set<App::DocumentObject *> objSet;
+    std::set<App::DocumentObject*> objSet;
 
     // group the properties by <name,id>
     std::vector<PropInfo> propDataMap;
     std::vector<PropInfo> propViewMap;
     bool checkLink = true;
-    ViewProviderDocumentObject *vpLast = 0;
+    ViewProviderDocumentObject* vpLast = 0;
     auto sels = Gui::Selection().getSelectionEx("*");
-    for(auto &sel : sels) {
-        App::DocumentObject *ob = sel.getObject();
-        if(!ob) continue;
+    for (auto& sel : sels) {
+        App::DocumentObject* ob = sel.getObject();
+        if (!ob) continue;
 
         // Do not process an object more than once
-        if(!objSet.insert(ob).second)
+        if (!objSet.insert(ob).second)
             continue;
 
         std::vector<App::Property*> dataList;
         std::map<std::string, App::Property*> viewList;
 
         auto vp = Application::Instance->getViewProvider(ob);
-        if(!vp) {
+        if (!vp) {
             checkLink = false;
             ob->getPropertyList(dataList);
             continue;
         }
 
-        if(vp->isDerivedFrom(ViewProviderDocumentObject::getClassTypeId())) {
+        if (vp->isDerivedFrom(ViewProviderDocumentObject::getClassTypeId())) {
             auto cvp = static_cast<ViewProviderDocumentObject*>(vp);
-            if(vpLast && cvp!=vpLast)
+            if (vpLast && cvp != vpLast)
                 checkLink = false;
             vpLast = cvp;
         }
@@ -411,119 +430,94 @@ void PropertyView::onTimer() {
         vp->getPropertyMap(viewList);
 
         // store the properties with <name,id> as key in a map
-        {
-            for (auto prop : dataList) {
-                if (isPropertyHidden(prop))
-                    continue;
-
-                PropInfo nameType;
-                nameType.propName = prop->getName();
-                nameType.propId = prop->getTypeId().getKey();
-
-                std::vector<PropInfo>::iterator pi = std::find_if(propDataMap.begin(), propDataMap.end(), PropFind(nameType));
-                if (pi != propDataMap.end()) {
-                    pi->propList.push_back(prop);
-                }
-                else {
-                    nameType.propList.push_back(prop);
-                    propDataMap.push_back(nameType);
-                }
-            }
+        for (auto prop : dataList) {
+            if (isPropertyHidden(prop))
+                continue;
+            const auto typeKey = prop->getTypeId().getKey();
+            classifyProperties(typeKey, prop, propDataMap);
         }
         // the same for the view properties
-        {
-            std::map<std::string, App::Property*>::iterator pt;
-            for (pt = viewList.begin(); pt != viewList.end(); ++pt) {
-                if (isPropertyHidden(pt->second))
-                    continue;
-
-                PropInfo nameType;
-                nameType.propName = pt->first;
-                nameType.propId = pt->second->getTypeId().getKey();
-
-                std::vector<PropInfo>::iterator pi = std::find_if(propViewMap.begin(), propViewMap.end(), PropFind(nameType));
-                if (pi != propViewMap.end()) {
-                    pi->propList.push_back(pt->second);
-                }
-                else {
-                    nameType.propList.push_back(pt->second);
-                    propViewMap.push_back(nameType);
-                }
-            }
+        for (auto pt = viewList.begin(); pt != viewList.end(); ++pt) {
+            if (isPropertyHidden(pt->second))
+                continue;
+            auto prop = pt->second;
+            const auto typeKey = prop->getTypeId().getKey();
+            classifyProperties(typeKey, prop, propViewMap);
         }
-    }
+    }//for(sel:sels)
 
     // the property must be part of each selected object, i.e. the number
     // of selected objects is equal to the number of properties with same
     // name and id
-    std::vector<PropInfo>::const_iterator it;
-    PropertyModel::PropertyList dataProps;
+    PropertyModel::PropertyList dataProps;//vector<  pair<string, vector<Property*>>  > 
     std::map<std::string, std::vector<App::Property*> > dataPropsMap;
     PropertyModel::PropertyList viewProps;
 
-    if(checkLink && vpLast) {
+    if (checkLink && vpLast) {
         // In case the only selected object is a link, insert the link's own
         // property before the linked object
-        App::DocumentObject *obj = vpLast->getObject();
+        App::DocumentObject* obj = vpLast->getObject();
         auto linked = obj;
-        if(obj && obj->canLinkProperties() && (linked=obj->getLinkedObject(true))!=obj && linked) {
+        if (obj && obj->canLinkProperties() && (linked = obj->getLinkedObject(true)) != obj && linked) {
             std::vector<App::Property*> dataList;
             std::map<std::string, App::Property*> propMap;
             obj->getPropertyMap(propMap);
             linked->getPropertyList(dataList);
-            for(auto prop : dataList) {
-                if(isPropertyHidden(prop))
+            for (auto prop : dataList) {
+                if (isPropertyHidden(prop))
                     continue;
                 std::string name(prop->getName());
                 auto it = propMap.find(name);
-                if(it!=propMap.end() && !isPropertyHidden(it->second))
+                if (it != propMap.end() && !isPropertyHidden(it->second))
                     continue;
-                std::vector<App::Property*> items(1,prop);
-                if(prop->testStatus(App::Property::PropDynamic))
-                    dataPropsMap.emplace(name+"*",std::move(items));
+                std::vector<App::Property*> items(1, prop);
+                if (prop->testStatus(App::Property::PropDynamic))
+                    dataPropsMap.emplace(name + "*", std::move(items));
                 else
-                    dataProps.emplace_back(name+"*", std::move(items));
+                    dataProps.emplace_back(name + "*", std::move(items));
             }
             auto vpLinked = Application::Instance->getViewProvider(linked);
-            if(vpLinked) {
+            if (vpLinked) {
                 propMap.clear();
                 vpLast->getPropertyMap(propMap);
                 dataList.clear();
                 vpLinked->getPropertyList(dataList);
-                for(auto prop : dataList) {
-                    if(isPropertyHidden(prop))
+                for (auto prop : dataList) {
+                    if (isPropertyHidden(prop))
                         continue;
                     std::string name(prop->getName());
                     auto it = propMap.find(name);
-                    if(it!=propMap.end() && !isPropertyHidden(it->second))
+                    if (it != propMap.end() && !isPropertyHidden(it->second))
                         continue;
-                    std::vector<App::Property*> items(1,prop);
-                    viewProps.emplace_back(name+"*", std::move(items));
+                    std::vector<App::Property*> items(1, prop);
+                    viewProps.emplace_back(name + "*", std::move(items));
                 }
             }
         }
     }
 
-    for(auto &v : dataPropsMap)
-        dataProps.emplace_back(v.first,std::move(v.second));
+    for (auto& v : dataPropsMap)
+        dataProps.emplace_back(v.first, std::move(v.second));
 
     dataPropsMap.clear();
 
-    for (it = propDataMap.begin(); it != propDataMap.end(); ++it) {
-        if (it->propList.size() == sels.size()) {
-            if(it->propList[0]->testStatus(App::Property::PropDynamic))
+    for (auto it = propDataMap.begin(); it != propDataMap.end(); ++it) {
+        if (it->propList.size() == sels.size()) {//* it propInfo 
+            if (it->propList[0]->testStatus(App::Property::PropDynamic))
                 dataPropsMap.emplace(it->propName, std::move(it->propList));
             else
                 dataProps.emplace_back(it->propName, std::move(it->propList));
+
         }
     }
 
-    for(auto &v : dataPropsMap)
-        dataProps.emplace_back(v.first,std::move(v.second));
 
-    propertyEditorData->buildUp(std::move(dataProps),true);
+    for (auto& v : dataPropsMap)
+        dataProps.emplace_back(v.first, std::move(v.second));
 
-    for (it = propViewMap.begin(); it != propViewMap.end(); ++it) {
+    propertyEditorData->buildUp(std::move(dataProps), true);
+
+    for (auto it = propViewMap.begin(); it != propViewMap.end(); ++it) {
         if (it->propList.size() == sels.size())
             viewProps.emplace_back(it->propName, std::move(it->propList));
     }

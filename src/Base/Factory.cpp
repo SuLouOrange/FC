@@ -54,6 +54,11 @@ void* Factory::Produce (const char *sClassName) const
 
 void Factory::AddProducer (const char *sClassName, AbstractProducer *pcProducer)
 {
+    printf("%s, producer name: %s\n", __FUNCTION__, sClassName);
+    if (std::string(sClassName) == "Gui::Dialog::DlgSettingsEditorImp") {
+        int i = 0;
+        i++;
+    }
   _mpcProducers[sClassName] = pcProducer;
 }
 

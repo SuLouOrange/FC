@@ -97,6 +97,7 @@ short Feature::mustExecute(void) const
 
 App::DocumentObjectExecReturn *Feature::recompute(void)
 {
+
     try {
         return App::GeoFeature::recompute();
     }
@@ -236,6 +237,7 @@ struct ShapeCache {
 
     void slotChanged(const App::DocumentObject &obj, const App::Property &prop) {
         const char *propName = prop.getName();
+        FC_MSG("test Relax,maybe receive signal from App::Application::signalChangedObject");
         if(!propName)
             return;
         if(strcmp(propName,"Shape")==0 

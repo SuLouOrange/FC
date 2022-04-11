@@ -139,6 +139,8 @@ FC_LOG_LEVEL_INIT("Sketch",true,true)
 
 using namespace SketcherGui;
 using namespace Sketcher;
+//using namespace Base;
+using namespace std;
 namespace bp = boost::placeholders;
 
 SbColor ViewProviderSketch::VertexColor                             (1.0f,0.149f,0.0f);   // #FF2600 -> (255, 38,  0)
@@ -335,6 +337,7 @@ ViewProviderSketch::ViewProviderSketch()
     ADD_PROPERTY_TYPE(ShowLinks,(true),"Visibility automation",(App::PropertyType)(App::Prop_None),"If true, all objects used in links to external geometry are shown when opening sketch.");
     ADD_PROPERTY_TYPE(ShowSupport,(true),"Visibility automation",(App::PropertyType)(App::Prop_None),"If true, all objects this sketch is attached to are shown when opening sketch.");
     ADD_PROPERTY_TYPE(RestoreCamera,(true),"Visibility automation",(App::PropertyType)(App::Prop_None),"If true, camera position before entering sketch is remembered, and restored after closing it.");
+    ADD_PROPERTY_TYPE(ForceOrtho,(false),"Visibility automation",(App::PropertyType)(App::Prop_None),"If true, camera type will be forced to orthographic view when entering editing mode.");
     ADD_PROPERTY_TYPE(SectionView,(false),"Visibility automation",(App::PropertyType)(App::Prop_None),"If true, only objects (or part of) located behind the sketch plane are visible.");
     ADD_PROPERTY_TYPE(EditingWorkbench,("SketcherWorkbench"),"Visibility automation",(App::PropertyType)(App::Prop_None),"Name of the workbench to activate when editing this sketch.");
 
@@ -344,6 +347,7 @@ ViewProviderSketch::ViewProviderSketch()
         this->ShowLinks.setValue(hGrp->GetBool("ShowLinks", true));
         this->ShowSupport.setValue(hGrp->GetBool("ShowSupport", true));
         this->RestoreCamera.setValue(hGrp->GetBool("RestoreCamera", true));
+        this->ForceOrtho.setValue(hGrp->GetBool("ForceOrtho", false));
         this->SectionView.setValue(hGrp->GetBool("SectionView", false));
 
         // well it is not visibility automation but a good place nevertheless
@@ -657,6 +661,7 @@ bool ViewProviderSketch::mouseButtonPressed(int Button, bool pressed, const SbVe
 {
     assert(edit);
 
+    printf("%s(%d)*****************************\n", __FUNCTION__, __LINE__);
     // Calculate 3d point to the mouse position
     SbLine line;
     getProjectingLine(cursorPos, viewer, line);
@@ -1537,8 +1542,8 @@ void ViewProviderSketch::moveConstraint(int constNum, const Base::Vector2d &toPo
                 const Part::GeomLineSegment *lineSeg1 = static_cast<const Part::GeomLineSegment *>(geo1);
                 const Part::GeomLineSegment *lineSeg2 = static_cast<const Part::GeomLineSegment *>(geo2);
 
-                bool flip1 = (Constr->FirstPos == end);
-                bool flip2 = (Constr->SecondPos == end);
+                bool flip1 = (Constr->FirstPos == Sketcher::end);
+                bool flip2 = (Constr->SecondPos == Sketcher::end);
                 dir1 = (flip1 ? -1. : 1.) * (lineSeg1->getEndPoint()-lineSeg1->getStartPoint());
                 dir2 = (flip2 ? -1. : 1.) * (lineSeg2->getEndPoint()-lineSeg2->getStartPoint());
                 Base::Vector3d pnt1 = flip1 ? lineSeg1->getEndPoint() : lineSeg1->getStartPoint();
@@ -3162,23 +3167,35 @@ bool ViewProviderSketch::doubleClicked(void)
 
 QString ViewProviderSketch::getPresentationString(const Constraint *constraint)
 {
-    Base::Reference<ParameterGrp>   hGrpSketcher; // param group that includes HideUnits option
-    bool                            iHideUnits;
-    QString                         userStr; // final return string
+    Base::Reference<ParameterGrp>   hGrpSketcher; // param group that includes HideUnits and ShowDimensionalName option
+    bool                            iHideUnits; // internal HideUnits setting
+    bool                            iShowDimName; // internal ShowDimensionalName setting
+    QString                         nameStr; // name parameter string
+    QString                         valueStr; // dimensional value string
+    QString                         presentationStr; // final return string
     QString                         unitStr;  // the actual unit string
     QString                         baseUnitStr; // the expected base unit string
+    QString                         formatStr; // the user defined format for the representation string
     double                          factor; // unit scaling factor, currently not used
     Base::UnitSystem                unitSys; // current unit system
 
     if(!constraint->isActive)
         return QString::fromLatin1(" ");
 
-    // Get value of HideUnits option. Default is false.
+    // get parameter group for Sketcher display settings
     hGrpSketcher = App::GetApplication().GetUserParameter().GetGroup("BaseApp")->GetGroup("Preferences")->GetGroup("Mod/Sketcher");
+    // Get value of HideUnits option. Default is false.
     iHideUnits = hGrpSketcher->GetBool("HideUnits", 0);
+    // Get Value of ShowDimensionalName option. Default is true.
+    iShowDimName = hGrpSketcher->GetBool("ShowDimensionalName", false);
+    // Get the defined format string
+    formatStr = QString::fromStdString(hGrpSketcher->GetASCII("DimensionalStringFormat", "%N = %V"));
 
-    // Get the current display string including units
-    userStr = constraint->getPresentationValue().getUserString(factor, unitStr);
+    // Get the current name parameter string of the constraint
+    nameStr = QString::fromStdString(constraint->Name);
+
+    // Get the current value string including units
+    valueStr = constraint->getPresentationValue().getUserString(factor, unitStr);
 
     // Hide units if user has requested it, is being displayed in the base
     // units, and the schema being used has a clear base unit in the first
@@ -3223,19 +3240,45 @@ QString ViewProviderSketch::getPresentationString(const Constraint *constraint)
             {
                 // Example code from: Mod/TechDraw/App/DrawViewDimension.cpp:372
                 QRegExp rxUnits(QString::fromUtf8(" \\D*$"));  //space + any non digits at end of string
-                userStr.remove(rxUnits);              //getUserString(defaultDecimals) without units
+                valueStr.remove(rxUnits);                      //getUserString(defaultDecimals) without units
             }
         }
     }
 
     if (constraint->Type == Sketcher::Diameter){
-        userStr.insert(0, QChar(8960)); // Diameter sign
+        valueStr.insert(0, QChar(8960)); // Diameter sign
     }
     else if (constraint->Type == Sketcher::Radius){
-        userStr.insert(0, QChar(82)); // Capital letter R
+        valueStr.insert(0, QChar(82)); // Capital letter R
     }
 
-    return userStr;
+    /**
+    Create the representation string from the user defined format string
+    Format options are:
+    %N - the constraint name parameter
+    %V - the value of the dimensional constraint, including any unit characters
+    */
+    if (iShowDimName && !nameStr.isEmpty())
+    {
+        if (formatStr.contains(QLatin1String("%V")) || formatStr.contains(QLatin1String("%N")))
+        {
+            presentationStr = formatStr;
+            presentationStr.replace(QLatin1String("%N"), nameStr);
+            presentationStr.replace(QLatin1String("%V"), valueStr);
+        }
+        else
+        {
+            // user defined format string does not contain any valid parameter, using default format "%N = %V"
+            presentationStr = nameStr + QLatin1String(" = ") + valueStr;
+            FC_WARN("When parsing dimensional format string \""
+                    << QString(formatStr).toStdString()
+                    << "\", no valid parameter found, using default format.");
+        }
+
+        return presentationStr;
+    }
+
+    return valueStr;
 }
 
 QString ViewProviderSketch::iconTypeFromConstraint(Constraint *constraint)
@@ -3897,15 +3940,15 @@ void ViewProviderSketch::draw(bool temp /*=false*/, bool rebuildinformationlayer
     assert(edit);
 
     // Render Geometry ===================================================
-    std::vector<Base::Vector3d> Coords;
-    std::vector<Base::Vector3d> Points;
-    std::vector<unsigned int> Index;
+    vector<Base::Vector3d> Coords;
+    vector<Base::Vector3d> Points;
+    vector<unsigned int> Index;
 
     int intGeoCount = getSketchObject()->getHighestCurveIndex() + 1;
     int extGeoCount = getSketchObject()->getExternalGeometryCount();
 
-    const std::vector<Part::Geometry *> *geomlist;
-    std::vector<Part::Geometry *> tempGeo;
+    const vector<Part::Geometry *> *geomlist;
+    vector<Part::Geometry *> tempGeo;
     if (temp)
         tempGeo = getSolvedSketch().extractGeometry(true, true); // with memory allocation
     else
@@ -5640,8 +5683,8 @@ Restart:
                                 const Part::GeomLineSegment *lineSeg1 = static_cast<const Part::GeomLineSegment *>(geo1);
                                 const Part::GeomLineSegment *lineSeg2 = static_cast<const Part::GeomLineSegment *>(geo2);
 
-                                bool flip1 = (Constr->FirstPos == end);
-                                bool flip2 = (Constr->SecondPos == end);
+                                bool flip1 = (Constr->FirstPos == Sketcher::end);
+                                bool flip2 = (Constr->SecondPos == Sketcher::end);
                                 dir1 = (flip1 ? -1. : 1.) * (lineSeg1->getEndPoint()-lineSeg1->getStartPoint());
                                 dir2 = (flip2 ? -1. : 1.) * (lineSeg2->getEndPoint()-lineSeg2->getStartPoint());
                                 Base::Vector3d pnt1 = flip1 ? lineSeg1->getEndPoint() : lineSeg1->getStartPoint();
@@ -6248,6 +6291,9 @@ bool ViewProviderSketch::setEdit(int ModNum)
     // object unsets and sets its edit mode without closing
     // the task panel
     Gui::TaskView::TaskDialog *dlg = Gui::Control().activeDialog();
+    if (!dlg) {
+        FC_MSG("no active dialog");
+    }
     TaskDlgEditSketch *sketchDlg = qobject_cast<TaskDlgEditSketch *>(dlg);
     if (sketchDlg && sketchDlg->getSketchView() != this)
         sketchDlg = 0; // another sketch left open its task panel
@@ -6889,6 +6935,8 @@ void ViewProviderSketch::setEditViewer(Gui::View3DInventorViewer* viewer, int Mo
                         "ActiveSketch = App.getDocument('%1').getObject('%2')\n"
                         "if ActiveSketch.ViewObject.RestoreCamera:\n"
                         "  ActiveSketch.ViewObject.TempoVis.saveCamera()\n"
+                        "  if ActiveSketch.ViewObject.ForceOrtho:\n"
+                        "    ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')\n"
                         ).arg(QString::fromLatin1(getDocument()->getDocument()->getName())).arg(
                               QString::fromLatin1(getSketchObject()->getNameInDocument()));
             QByteArray cmdstr_bytearray = cmdstr.toLatin1();

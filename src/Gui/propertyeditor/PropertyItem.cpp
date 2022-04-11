@@ -48,6 +48,7 @@
 #include <App/PropertyGeo.h>
 #include <App/PropertyFile.h>
 #include <App/PropertyUnits.h>
+#include <App/PropertyDataSpecs.h>
 #include <Gui/Application.h>
 #include <Gui/Control.h>
 #include <Gui/Widgets.h>
@@ -65,6 +66,10 @@
 #include "PropertyItem.h"
 #include "PropertyView.h"
 #include <Gui/SpinBox.h>
+
+#include <Base/Console.h>
+
+FC_LOG_LEVEL_INIT("PropertyView", false, true);
 
 using namespace Gui::PropertyEditor;
 using namespace Gui::Dialog;
@@ -108,6 +113,7 @@ PropertyItem::~PropertyItem()
 
 void PropertyItem::initialize()
 {
+
 }
 
 void PropertyItem::reset()
@@ -332,8 +338,13 @@ QVariant PropertyItem::displayName() const
 
 QVariant PropertyItem::toolTip(const App::Property* prop) const
 {
+    const char *docu = nullptr;
+    if (prop->getTypeId().isDerivedFrom(App::PropertyAdaptor::getClassTypeId()))
+        docu = reinterpret_cast<const App::PropertyAdaptor*>(prop)->getDocumentation();
+    else
+        docu = prop->getDocumentation();
     QString str = QApplication::translate("App::Property",
-                                          prop->getDocumentation());
+                                          docu);
     return QVariant(str);
 }
 
@@ -1051,7 +1062,7 @@ void PropertyUnitItem::setValue(const QVariant& value)
             return;
         const Base::Quantity& val = value.value<Base::Quantity>();
 
-        Base::QuantityFormat format(Base::QuantityFormat::Default, decimals());
+        Base::QuantityFormat format(Base::QuantityFormat::Fixed, decimals());
         QString unit = Base::UnitsApi::toString(val, format);
         setPropertyValue(unit);
     }
@@ -1098,7 +1109,7 @@ PROPERTYITEM_SOURCE(Gui::PropertyEditor::PropertyUnitConstraintItem)
 
 PropertyUnitConstraintItem::PropertyUnitConstraintItem()
 {
-
+    //qDebug() << __FUNCTION__ << ", propName:" << propName << "; dispText:" << displayText << "; displayName: " << displayName();
 }
 
 void PropertyUnitConstraintItem::setEditorData(QWidget *editor, const QVariant& data) const
@@ -1644,7 +1655,7 @@ void PropertyVectorDistanceItem::setValue(const QVariant& variant)
     Base::Quantity y = Base::Quantity(value.y, Base::Unit::Length);
     Base::Quantity z = Base::Quantity(value.z, Base::Unit::Length);
 
-    Base::QuantityFormat format(Base::QuantityFormat::Default, decimals());
+    Base::QuantityFormat format(Base::QuantityFormat::Fixed, decimals());
     QString data = QString::fromLatin1("(%1, %2, %3)")
                     .arg(Base::UnitsApi::toNumber(x, format))
                     .arg(Base::UnitsApi::toNumber(y, format))
@@ -2370,7 +2381,7 @@ void PropertyPlacementItem::setValue(const QVariant& value)
     const Base::Placement& val = value.value<Base::Placement>();
     Base::Vector3d pos = val.getPosition();
 
-    Base::QuantityFormat format(Base::QuantityFormat::Default, decimals());
+    Base::QuantityFormat format(Base::QuantityFormat::Fixed, decimals());
     QString data = QString::fromLatin1("App.Placement("
                                       "App.Vector(%1,%2,%3),"
                                       "App.Rotation(App.Vector(%4,%5,%6),%7))")

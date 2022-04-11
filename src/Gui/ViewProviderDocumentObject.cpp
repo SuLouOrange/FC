@@ -301,7 +301,7 @@ void ViewProviderDocumentObject::updateView()
     // Hide the object temporarily to speed up the update
     bool vis = ViewProvider::isShow();
     if (vis) ViewProvider::hide();
-    for (std::map<std::string, App::Property*>::iterator it = Map.begin(); it != Map.end(); ++it) {
+    for (auto it = Map.begin(); it != Map.end(); ++it) {
         updateData(it->second);
     }
     if (vis && Visibility.getValue()) ViewProvider::show();
@@ -338,7 +338,9 @@ void ViewProviderDocumentObject::attach(App::DocumentObject *pcObj)
     }
 
     //attach the extensions
+    
     auto vector = getExtensionsDerivedFromType<Gui::ViewProviderExtension>();
+    FC_MSG("ViewProviderExtensions sum " << vector.size());
     for (Gui::ViewProviderExtension* ext : vector)
         ext->extensionAttach(pcObj);
 }
