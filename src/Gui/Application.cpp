@@ -123,7 +123,6 @@ using namespace std;
 namespace sp = std::placeholders;
 
 
-<<<<<<< HEAD
 static void noPrint(const char* format, ...) {
     return;
 }
@@ -137,10 +136,8 @@ static void noPrint(const char* format, ...) {
 
 static const char* logKey = "Gui_Application";
 FC_LOG_LEVEL_INIT(logKey,false,true)
-Application* Application::Instance = 0L;
-=======
+
 Application* Application::Instance = nullptr;
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 namespace Gui {
 
@@ -1958,14 +1955,12 @@ void Application::runApplication(void)
     // http://forum.freecadweb.org/viewtopic.php?f=3&t=15540
     mainApp.setAttribute(Qt::AA_DontShowIconsInMenus, false);
 
-<<<<<<< HEAD
-=======
+
     // Make sure that we use '.' as decimal point. See also
     // http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=559846
     // and issue #0002891
     // http://doc.qt.io/qt-5/qcoreapplication.html#locale-settings
     setlocale(LC_NUMERIC, "C");
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
     // check if a single or multiple instances can run
     it = cfg.find("SingleInstance");
@@ -2134,8 +2129,7 @@ void Application::runApplication(void)
     // init the Inventor subsystem
     initOpenInventor();
 
-<<<<<<< HEAD
-    QString home = QString::fromUtf8(App::GetApplication().getHomePath());
+    QString home = QString::fromUtf8(App::GetApplication().getHomePath().c_str());
 #if 0 //j remove 
 =======
     QString home = QString::fromStdString(App::Application::getHomePath());

@@ -298,14 +298,9 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
     if(!subname || !subname[0]) {
         // No subname reference is given, we try to extract one from the current
         // selection in order to obtain the correct transformation matrix below
-<<<<<<< HEAD
-        auto sels = Gui::Selection().getCompleteSelection(false);
-        App::DocumentObject *parentObj = 0;
-       
-=======
         auto sels = Gui::Selection().getCompleteSelection(ResolveMode::NoResolve);
         App::DocumentObject *parentObj = nullptr;
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
+
         for(auto &sel : sels) {
             FC_MSG(i++<<": " << sel.FeatName << "; subName:" << sel.SubName);
             if(!sel.pObject || !sel.pObject->getNameInDocument())
@@ -376,12 +371,7 @@ bool Document::setEdit(Gui::ViewProvider* p, int ModNum, const char *subname)
     //         d->_editingTransform = ext->globalGroupPlacement().toMatrix();
     //     }
     // }
-<<<<<<< HEAD
-
-    auto sobj = obj->getSubObject(subname,0,&d->_editingTransform);
-=======
     auto sobj = obj->getSubObject(subname,nullptr,&d->_editingTransform);
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
     if(!sobj || !sobj->getNameInDocument()) {
         FC_ERR("Invalid sub object '" << obj->getFullName()
                 << '.' << (subname?subname:"") << "'");

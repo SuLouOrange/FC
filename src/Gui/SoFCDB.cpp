@@ -74,16 +74,13 @@
 #include "Inventor/SoAutoZoomTranslation.h"
 #include "Inventor/SoDrawingGrid.h"
 #include "propertyeditor/PropertyItem.h"
-<<<<<<< HEAD
+
 #include "propertyeditor/PropertyAdaptorItem.h"
 #include "NavigationStyle.h"
 #include "GestureNavigationStyle.h"
 #include "Flag.h"
 #include "SelectionObject.h"
 #include "View3DPy.h"
-=======
-
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 using namespace Gui;
 using namespace Gui::Inventor;

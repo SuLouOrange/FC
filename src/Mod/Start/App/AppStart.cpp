@@ -43,12 +43,8 @@ private:
 
 PyObject* initModule()
 {
-<<<<<<< HEAD
     printf("%s(%d)\n", __FUNCTION__, __LINE__);
-    return (new Module)->module().ptr();
-=======
     return Base::Interpreter().addModule(new Module);
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 }
 
 } // namespace Start

@@ -30,15 +30,12 @@
 #include "PropertyModel.h"
 #include "PropertyView.h"
 
-<<<<<<< HEAD
+
 #include <App/PropertyDataSpecs.h>
 
 #include <Base/Console.h>
 
-=======
-
 using namespace Gui;
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 using namespace Gui::PropertyEditor;
 
 FC_LOG_LEVEL_INIT("PropertyView", false, true);
@@ -289,8 +286,6 @@ PropertyModel::GroupInfo &PropertyModel::getGroupInfo(App::Property *prop)
 //typedef vector<pair<string, vector<App::Property*>>> PropertyList;
 void PropertyModel::buildUp(const PropertyModel::PropertyList& props)
 {
-<<<<<<< HEAD
-
     FC_TRACE(__FUNCTION__);
     beginResetModel();
     if (!props.empty()) {

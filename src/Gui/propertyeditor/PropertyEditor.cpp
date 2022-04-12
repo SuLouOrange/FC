@@ -517,12 +517,9 @@ void PropertyEditor::drawBranches(QPainter *painter, const QRect &rect, const QM
 
 void PropertyEditor::buildUp(PropertyModel::PropertyList &&props, bool _checkDocument)
 {
-<<<<<<< HEAD
     FC_TRACE(__FUNCTION__ << ", commtting: " << committing << ",checkDocument: " << checkDocument << ", size of props:" << props.size());
-=======
     checkDocument = _checkDocument;
 
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
     if (committing) {
         Base::Console().Warning("While committing the data to the property the selection has changed.\n");
         delaybuild = true;

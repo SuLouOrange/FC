@@ -28,13 +28,11 @@
 #endif
 
 #include <App/Document.h>
-<<<<<<< HEAD
 #include <App/PropertyDataSpecs.h>
 #include <Base/Console.h>
-=======
 #include <App/DocumentObject.h>
 #include <Base/Parameter.h>
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
+
 
 #include "PropertyView.h"
 #include "Application.h"
@@ -357,27 +355,21 @@ void PropertyView::onTimer() {
 
     timer->stop();
 
-<<<<<<< HEAD
-    if (!this->isConnectionAttached())
-=======
+
+  
     if(!this->isSelectionAttached()) {
         propertyEditorData->buildUp();
         propertyEditorView->buildUp();
         clearPropertyItemSelection();
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
         return;
     }
 
     if (!Gui::Selection().hasSelection()) {
         auto gdoc = TreeWidget::selectedDocument();
-<<<<<<< HEAD
-        if (!gdoc || !gdoc->getDocument())
-=======
         if(!gdoc || !gdoc->getDocument()) {
             propertyEditorData->buildUp();
             propertyEditorView->buildUp();
             clearPropertyItemSelection();
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
             return;
         }
 
@@ -400,11 +392,8 @@ void PropertyView::onTimer() {
     std::vector<PropInfo> propDataMap;
     std::vector<PropInfo> propViewMap;
     bool checkLink = true;
-<<<<<<< HEAD
-    ViewProviderDocumentObject* vpLast = 0;
-=======
+
     ViewProviderDocumentObject *vpLast = nullptr;
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
     auto sels = Gui::Selection().getSelectionEx("*");
     for (auto& sel : sels) {
         App::DocumentObject* ob = sel.getObject();

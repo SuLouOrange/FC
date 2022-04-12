@@ -31,12 +31,11 @@
 #include "ToolBarManager.h"
 #include "Application.h"
 #include "Command.h"
-<<<<<<< HEAD
 #include <Base/Console.h>
-=======
+
 #include "MainWindow.h"
 
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
+
 
 using namespace Gui;
 static const char* logKey = "ToolBarManager";
@@ -192,16 +191,15 @@ void ToolBarManager::setup(ToolBarItem* toolBarItems)
 
     ParameterGrp::handle hPref = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
                                ->GetGroup("MainWindow")->GetGroup("Toolbars");
-<<<<<<< HEAD
+
     QList<ToolBarItem*> items = toolBarItems->getItems();//root
     QList<QToolBar*> toolbars = toolBars();//exsiting toolbar
     int i = 0;
-=======
     bool nameAsToolTip = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
             ->GetGroup("Preferences")->GetGroup("MainWindow")->GetBool("ToolBarNameAsToolTip",true);
     QList<ToolBarItem*> items = toolBarItems->getItems();
     QList<QToolBar*> toolbars = toolBars();
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
+
     for (QList<ToolBarItem*>::ConstIterator it = items.begin(); it != items.end(); ++it) {
         // search for the toolbar
         QString name = QString::fromUtf8((*it)->command().c_str());
