@@ -476,7 +476,7 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Release date</source>
@@ -704,7 +704,7 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -765,7 +765,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Username:</source>
@@ -920,7 +920,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -994,7 +994,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Clear</source>
@@ -1131,7 +1131,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Global</source>
@@ -1231,7 +1231,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Line transparency:</source>
@@ -1397,7 +1397,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
@@ -1592,7 +1592,7 @@ horizontal space in Python console</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1873,7 +1873,7 @@ Note: your changes will be applied when you next switch workbenches
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Emissive color:</source>
@@ -2041,7 +2041,7 @@ Specify another directory, please.</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2107,7 +2107,7 @@ Specify another directory, please.</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>UUID:</source>
@@ -2264,7 +2264,7 @@ Specify another directory, please.</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Redirect internal Python errors to report view</source>
@@ -2428,7 +2428,7 @@ from Python console to Report view panel</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Anti-Aliasing</source>
@@ -2746,7 +2746,7 @@ bounding box size of the 3D object that is currently displayed.</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Color-gradient settings</source>
@@ -3229,10 +3229,6 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</source>
 <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-        <source>Unloaded Workbenches</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Workbench Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3246,6 +3242,10 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Available Workbenches</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3822,7 +3822,7 @@ Zoom step of &apos;1&apos; means a factor of 7.5 for every zoom step.</source>
     <name>Gui::Dialog::DlgTipOfTheDay</name>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4435,31 +4435,31 @@ The &apos;Status&apos; column shows whether the document could be recovered.</so
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Around y-axis:</source>
+        <source>Pitch (around y-axis):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Around z-axis:</source>
+        <source>Roll (around x-axis):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Around x-axis:</source>
+        <source>Yaw (around z-axis):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Rotation around the x-axis</source>
+        <source>Yaw (around z-axis)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Rotation around the y-axis</source>
+        <source>Pitch (around y-axis)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Rotation around the z-axis</source>
+        <source>Roll (around the x-axis)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Euler angles (xy&apos;z&apos;&apos;)</source>
+        <source>Euler angles (zy&apos;x&apos;&apos;)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4645,7 +4645,7 @@ originally selected prior to opening this dialog</source>
     </message>
     <message>
         <source></source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5973,6 +5973,18 @@ Do you want to specify another directory?</source>
         <source>Vietnamese</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bulgarian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spanish, Argentina</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Gui::TreeDockWidget</name>
@@ -6917,6 +6929,34 @@ Document: </source>
         <source>
 
 Physical path: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not save document</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+&quot;%1&quot;
+
+Would you like to save the file with a different name?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Document not saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 Document(s) not saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some documents could not be saved. Do you want to cancel closing?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9717,6 +9757,10 @@ Do you still want to proceed?</source>
     </message>
     <message>
         <source>Special Ops</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Axonometric</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

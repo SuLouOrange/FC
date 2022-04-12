@@ -2,6 +2,103 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="de" sourcelanguage="en">
   <context>
+    <name>Spreadsheet</name>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="739"/>
+      <source>Spreadsheet</source>
+      <translation>Kalkulationstabelle</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="874"/>
+      <source>Cell</source>
+      <translation>Zelle</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="751"/>
+      <source>Apply</source>
+      <translation>Übernehmen</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="753"/>
+      <source>Apply the changes to the current cell</source>
+      <translation>Änderungen an der aktuellen Zelle anwenden</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="755"/>
+      <source>Delete</source>
+      <translation>Löschen</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="757"/>
+      <source>Deletes the contents of the current cell</source>
+      <translation>Löscht den Inhalt der aktuellen Zelle</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="759"/>
+      <source>Compute</source>
+      <translation>Berechnen</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="761"/>
+      <source>Updates the values handled by controllers</source>
+      <translation>Aktualisiert die Controller-verwalteten Werte</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="907"/>
+      <source>Create Spreadsheet</source>
+      <translation>Kalkulationstabelle erstellen</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="933"/>
+      <source>Add controller</source>
+      <translation>Controller hinzufügen</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="973"/>
+      <source>Add property controller</source>
+      <translation>Eigenschafts-Controller hinzufügen</translation>
+    </message>
+  </context>
+  <context>
+    <name>Spreadsheet_Controller</name>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="919"/>
+      <source>Add controller</source>
+      <translation>Controller hinzufügen</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="922"/>
+      <source>Adds a cell controller to a selected spreadsheet</source>
+      <translation>Einen Zellen-Controller zur ausgewählten Tabelle hinzufügen</translation>
+    </message>
+  </context>
+  <context>
+    <name>Spreadsheet_Create</name>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="902"/>
+      <source>Spreadsheet</source>
+      <translation>Kalkulationstabelle</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="905"/>
+      <source>Adds a spreadsheet object to the active document</source>
+      <translation>Ein Tabellen-Objekt zum aktiven Dokument hinzufügen</translation>
+    </message>
+  </context>
+  <context>
+    <name>Spreadsheet_PropertyController</name>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="944"/>
+      <source>Add property controller</source>
+      <translation>Eigenschafts-Controller hinzufügen</translation>
+    </message>
+    <message>
+      <location filename="Spreadsheet_legacy.py" line="947"/>
+      <source>Adds a property controller to a selected spreadsheet</source>
+      <translation>Einen Eigenschaften-Controller zur ausgewählten Tabelle hinzufügen</translation>
+    </message>
+  </context>
+  <context>
     <name>CmdCreateSpreadsheet</name>
     <message>
       <source>Spreadsheet</source>
@@ -148,7 +245,7 @@
     </message>
     <message>
       <source>Merge selected cells</source>
-      <translation>Ausgewählte Zellen zusammenführen</translation>
+      <translation>Verbindet die ausgewählten Zellen</translation>
     </message>
   </context>
   <context>
@@ -193,7 +290,7 @@
     </message>
     <message>
       <source>Set text in selected cells bold</source>
-      <translation>Text in ausgewählten Zellen fett</translation>
+      <translation>Stellt den Text in den ausgewählten Zellen fett dar</translation>
     </message>
   </context>
   <context>
@@ -208,7 +305,7 @@
     </message>
     <message>
       <source>Set text in selected cells italic</source>
-      <translation>Text in ausgewählten Zellen kursiv</translation>
+      <translation>Stellt den Text in den ausgewählten Zellen kursiv dar</translation>
     </message>
   </context>
   <context>
@@ -223,7 +320,7 @@
     </message>
     <message>
       <source>Underline text in selected cells</source>
-      <translation>Unterstreiche Text in den ausgewählten Zellen</translation>
+      <translation>Unterstreicht den Text in den markierten Zellen</translation>
     </message>
   </context>
   <context>
@@ -265,7 +362,7 @@
     </message>
     <message>
       <source>Vertically center cells</source>
-      <translation>Zellen Vertikal zentrieren</translation>
+      <translation>Zellen vertikal zentrieren</translation>
     </message>
     <message>
       <source>Set bold text</source>
@@ -305,7 +402,7 @@
     </message>
     <message>
       <source>Clear cell(s)</source>
-      <translation>Zell(en) löschen</translation>
+      <translation>Zelle(n) löschen</translation>
     </message>
     <message>
       <source>Set foreground color</source>
@@ -340,7 +437,7 @@
     </message>
     <message>
       <source>Horizontal</source>
-      <translation>Horizontale</translation>
+      <translation>Horizontal</translation>
     </message>
     <message>
       <source>Left</source>
@@ -356,7 +453,7 @@
     </message>
     <message>
       <source>Vertical</source>
-      <translation>Vertikale</translation>
+      <translation>Vertikal</translation>
     </message>
     <message>
       <source>Top</source>
@@ -384,7 +481,7 @@
     </message>
     <message>
       <source>&amp;Display unit</source>
-      <translation>&amp;Zeige Einheit</translation>
+      <translation>&amp;Einheit anzeigen</translation>
     </message>
     <message>
       <source>Unit string</source>
@@ -415,11 +512,11 @@
     </message>
     <message>
       <source>Show spreadsheet</source>
-      <translation>Zeige Kalkulationstabelle</translation>
+      <translation>Kalkulationstabelle anzeigen</translation>
     </message>
     <message>
       <source>Set cell(s) foreground color</source>
-      <translation>Vordergrundfarbe der Zelle(n) einstellen</translation>
+      <translation>Stellt die Vordergrundfarbe der Zelle(n) ein</translation>
     </message>
     <message>
       <source>Sets the Spreadsheet cell(s) foreground color</source>
@@ -427,7 +524,7 @@
     </message>
     <message>
       <source>Set cell(s) background color</source>
-      <translation>Hintergrundfarbe der Zelle(n) einstellen</translation>
+      <translation>Stellt die Hintergrundfarbe der Zelle(n) ein</translation>
     </message>
     <message>
       <source>Sets the Spreadsheet cell(s) background color</source>
@@ -555,6 +652,61 @@ Tabelle.my_Alias_name anstelle von Tabelle.B1</translation>
     </message>
   </context>
   <context>
+    <name>SpreadsheetGui::DlgSettings</name>
+    <message>
+      <source>Spreadsheet</source>
+      <translation>Kalkulationstabelle</translation>
+    </message>
+    <message>
+      <source>Import/Export Settings</source>
+      <translation>Import/Export-Einstellungen</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Character used to delimit strings, typically is single quote (') or double quote (&amp;quot;). Must be a single character.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zeichen, das verwendet wird, um Zeichenketten abzugrenzen, typischerweise ein einfaches Anführungszeichen (') oder ein doppeltes Anführungszeichen (&amp;quot;). Muss ein einzelnes Zeichen sein.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>"</source>
+      <translation>"</translation>
+    </message>
+    <message>
+      <source>Delimiter Character: </source>
+      <translation>Trennzeichen: </translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escape character, typically the backslash (\), used to indicate special unprintable characters, e.g. \t = tab. Must be a single character.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escape-Zeichen, typischerweise der Backslash (\), verwendet um spezielle nicht druckbare Zeichen anzugeben, z.B. \t = tab. Muss ein einzelnes Zeichen sein.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>\</source>
+      <translation>\</translation>
+    </message>
+    <message>
+      <source>Escape Character: </source>
+      <translation>Escape-Zeichen: </translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Character to use as field delimiter.  Default is tab, but also commonly used are commas (,) and semicolons (;). Select from the list or enter your own in the field. Must be a single character or the words &lt;span style=" font-style:italic;"&gt;tab&lt;/span&gt;, &lt;span style=" font-style:italic;"&gt;comma&lt;/span&gt;, or &lt;span style=" font-style:italic;"&gt;semicolon&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zeichen, das als Feldtrenner verwendet wird. Standard ist tab, oft wird aber auch ein Komma (,) oder ein Semikolon (;) benutzt. Aus der Liste auswählen oder ein eigenes Zeichen  eingeben. Es muss ein einzelnes Zeichen sein oder eines der Wörter &lt;span style=" font-style:italic;"&gt;tab&lt;/span&gt;, &lt;span style=" font-style:italic;"&gt;comma&lt;/span&gt;oder &lt;span style=" font-style:italic;"&gt;semicolon&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>tab</source>
+      <translation>tab</translation>
+    </message>
+    <message>
+      <source>;</source>
+      <translation>;</translation>
+    </message>
+    <message>
+      <source>,</source>
+      <translation>,</translation>
+    </message>
+    <message>
+      <source>Quote Character: </source>
+      <translation>Anführungszeichen: </translation>
+    </message>
+  </context>
+  <context>
     <name>SpreadsheetGui::Module</name>
     <message>
       <source>Unnamed</source>
@@ -571,7 +723,7 @@ Tabelle.my_Alias_name anstelle von Tabelle.B1</translation>
       <source>Insert %n row(s) above</source>
       <translation>
         <numerusform>%n Zeile darüber einfügen</numerusform>
-        <numerusform>%n Zeilen darüber einfügen</numerusform>
+        <numerusform>%n Zeile(n) darüber einfügen</numerusform>
       </translation>
     </message>
     <message numerus="yes">

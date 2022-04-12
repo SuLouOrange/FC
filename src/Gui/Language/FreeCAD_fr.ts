@@ -2656,7 +2656,7 @@ La modification de cette option nécessite un redémarrage de l'application.</tr
     </message>
     <message>
       <source>Use software OpenGL</source>
-      <translation>Utiliser OpenGL</translation>
+      <translation>Utiliser OpenGL logiciel</translation>
     </message>
     <message>
       <source>What kind of multisample anti-aliasing is used</source>
@@ -2962,7 +2962,7 @@ exécutera automatiquement une récupération de fichier au démarrage.</transla
     </message>
     <message>
       <source>Size</source>
-      <translation>Taille</translation>
+      <translation>Dimension</translation>
     </message>
     <message>
       <source>Sets the size of the thumbnail that is stored in the document.
@@ -3288,10 +3288,6 @@ Vous pouvez également utiliser la forme : John Doe &lt;john@doe.com&gt;</transl
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Ateliers non chargés</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Nom de l'atelier</translation>
     </message>
@@ -3306,6 +3302,10 @@ Vous pouvez également utiliser la forme : John Doe &lt;john@doe.com&gt;</transl
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pour préserver les ressources, FreeCAD ne charge pas les ateliers avant qu'ils soient utilisés. Les charger peut permettre d'accéder à des préférences supplémentaires en lien avec leurs fonctionnalités.&lt;/p&gt;&lt;p&gt;Les ateliers suivants sont disponibles dans votre installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Ateliers disponibles</translation>
     </message>
   </context>
   <context>
@@ -4503,32 +4503,32 @@ La colonne « État » indique si le document peut être récupéré.</translati
       <translation>Veuillez sélectionner 1, 2 ou 3 points avant de cliquer sur ce bouton.  Un point peut être sur un sommet, une face ou une arête.  S'il est sur une face ou une arête, le point utilisé sera le point à la position de la souris le long de la face ou de l'arête.  Si 1 point est sélectionné il sera utilisé comme centre de rotation.  Si 2 points sont choisis le point médian sera le centre de rotation et un nouvel axe personnalisé sera créé, si nécessaire.  Si 3 points sont choisis le premier point devient le centre de rotation et se trouve sur le vecteur qui est perpendiculaire au plan défini par les 3 points.  Des informations de distance et d’angle sont fournies dans la vue rapport, ce qui peut être utile pour aligner des objets.  Pour plus de commodité, lors de l'utilisation de Maj + clic la distance appropriée ou l’angle sont copiés dans le presse-papiers.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Autour de l'axe y:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Tangage (autour de l'axe Y) :</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Autour de l'axe z:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Roulis (autour de l'axe X) :</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>Autour de l'axe x:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Lacet (autour de l'axe Z) :</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Rotation autour de l'axe X</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Lacet (autour de l'axe Z)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Rotation autour de l'axe Y</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Tangage (autour de l'axe Y)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Rotation autour de l'axe z</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Roulis (autour de l'axe X)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Angle d'Euler (xy'z'')</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Angle d'Euler (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4693,13 +4693,13 @@ La colonne « État » indique si le document peut être récupéré.</translati
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;Utiliser les sélections originales</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Ignorer les dépendances et continuer avec les objets
+initialement sélectionnés avant d'ouvrir ce dialogue</translation>
     </message>
   </context>
   <context>
@@ -5042,7 +5042,7 @@ Voulez enregistrer les modifications ?</translation>
     </message>
     <message>
       <source>Drag screen with one finger OR press left mouse button. In Sketcher &amp;&amp; other edit modes, hold Alt in addition.</source>
-      <translation>Faire glisser l'écran avec un doigt. Ou cliquer le bouton gauche de la souris. Dans l'atelier Esquisseur et les autres modes d'édition, maintenez en plus la touche Alt enfoncée.</translation>
+      <translation>Faire glisser l'écran avec un doigt. Ou cliquer le bouton gauche de la souris. Dans l'atelier Sketch et les autres modes d'édition, maintenez en plus la touche Alt enfoncée.</translation>
     </message>
     <message>
       <source>Pinch (place two fingers on the screen &amp;&amp; drag them apart from || towards each other) OR scroll middle mouse button OR PgUp/PgDown on keyboard.</source>
@@ -5786,7 +5786,7 @@ Do you want to specify another directory?</source>
     </message>
     <message>
       <source>Hide</source>
-      <translation>Cacher</translation>
+      <translation>Caché</translation>
     </message>
     <message>
       <source>Box select</source>
@@ -6048,6 +6048,18 @@ Do you want to specify another directory?</source>
     <message>
       <source>Vietnamese</source>
       <translation>Vietnamien</translation>
+    </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Bulgare</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Grec</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>Espagnol, Argentine</translation>
     </message>
   </context>
   <context>
@@ -7009,6 +7021,38 @@ Physical path: </source>
       <translation>
 
 Chemin physique : </translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Impossible d'enregistrer le document</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Un problème est survenu lors de l'enregistrement du fichier. Cela peut être dû au fait que certains dossiers parents n'existent pas, ou que vous n'avez pas les autorisations suffisantes, ou pour d'autres raisons. Détails de l'erreur :
+
+"%1"
+
+Voulez-vous enregistrer le fichier avec un nom différent ?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Document non enregistré</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>Le document%1 n'a pas pu être enregistré. Voulez-vous annuler sa fermeture ?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>Document(s) %1 non enregistré(s)</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Certains documents n'ont pas pu être enregistrés. Voulez-vous annuler la fermeture ?</translation>
     </message>
   </context>
   <context>
@@ -8786,11 +8830,11 @@ Chemin physique : </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Mode d'édition</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Définit le comportement lors de l'édition d'un objet depuis l'arbre</translation>
     </message>
   </context>
   <context>
@@ -9816,6 +9860,10 @@ Voulez-vous tout de même continuer ?</translation>
     <message>
       <source>Special Ops</source>
       <translation>Opérations spéciales</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Axonométrique</translation>
     </message>
   </context>
   <context>

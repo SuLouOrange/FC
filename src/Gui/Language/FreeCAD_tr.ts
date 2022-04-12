@@ -1687,7 +1687,7 @@ boşluğu aştığında kaydırılacak</translation>
     </message>
     <message>
       <source>Enter a file name, please:</source>
-      <translation>Lütfen bir dosyası adı girin:</translation>
+      <translation>Lütfen bir dosya adı yazın:</translation>
     </message>
     <message>
       <source>Existing file</source>
@@ -2291,7 +2291,7 @@ Lütfen başka bir dizin belirtin.</translation>
     </message>
     <message>
       <source>Redirect internal Python errors to report view</source>
-      <translation>İç Python hatalarını rapor görünümüne yönlendir</translation>
+      <translation>Dahili Python hatalarını rapor görünümüne yönlendir</translation>
     </message>
     <message>
       <source>Redirect internal Python output to report view</source>
@@ -3286,16 +3286,12 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Çalışma Tezgahları Yüklenmedi</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Tezgah Adı</translation>
     </message>
     <message>
       <source>Autoload?</source>
-      <translation type="unfinished">Autoload?</translation>
+      <translation>Otomatik Yükle?</translation>
     </message>
     <message>
       <source>Load Now</source>
@@ -3304,6 +3300,10 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kaynakları korumak için FreeCAD, kullanılıncaya kadar çalışma tezgahlarını yüklemez. Bunları yüklemek, işlevleriyle ilgili ek tercihlere erişim sağlayabilir. &lt;/p&gt; &lt;p&gt; Aşağıdaki çalışma tezgahları kurulumunuzda mevcuttur, ancak henüz yüklenmemiştir: &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Mevcut Çalışma Tezgahları</translation>
     </message>
   </context>
   <context>
@@ -3314,7 +3314,7 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
     </message>
     <message>
       <source>Autoload</source>
-      <translation type="unfinished">Autoload</translation>
+      <translation>Otomatik Yükle</translation>
     </message>
     <message>
       <source>If checked</source>
@@ -4105,7 +4105,7 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete the selected transient directories?</source>
-      <translation>Seçili organizasyonları/tasarımları silmek istediğinizden emin misiniz?</translation>
+      <translation>Seçili geçici dizinleri silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
       <source>When deleting the selected transient directory you won't be able to recover any files afterwards.</source>
@@ -4113,7 +4113,7 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete all transient directories?</source>
-      <translation>Seçili organizasyonları/tasarımları silmek istediğinizden emin misiniz?</translation>
+      <translation>Tüm geçici dizinleri silmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
       <source>Finished</source>
@@ -4121,7 +4121,7 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
     </message>
     <message>
       <source>Transient directories deleted.</source>
-      <translation>Geçici dizinler silinir.</translation>
+      <translation>Geçici dizinler silindi.</translation>
     </message>
     <message>
       <source>Press 'Start Recovery' to start the recovery process of the document listed below.
@@ -4129,7 +4129,7 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
 The 'Status' column shows whether the document could be recovered.</source>
       <translation>Aşağıda listelenen belgenin kurtarma işlemini başlatmak için 'Kurtarmayı Başlat' düğmesine basın.
 
-'Statü' sütunu, dokümanın kurtarılıp kurtarılmayacağını gösterir.</translation>
+'Durum' sütunu, dokümanın kurtarılıp kurtarılmayacağını gösterir.</translation>
     </message>
     <message>
       <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
@@ -4503,32 +4503,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Bu tuşa basmadan önce lütfen 1, 2 veya 3 nokta seçin. Bir nokta, yüzey veya kenarda bir nokta olabilir. Bir yüzey veya kenarda kullanılan nokta, yüzey veya kenar boyunca fare konumunda bulunan nokta olacaktır. 1 nokta seçilirse, dönüş merkezi olarak kullanılacaktır. 2 nokta seçilirse, aralarındaki orta nokta, dönme merkezi olacak ve gerekirse yeni bir özel eksen oluşturulacaktır. 3 nokta seçilirse, ilk nokta dönme merkezi olur ve 3 nokta tarafından tanımlanan düzlemde normal olan vektör üzerinde bulunur. Nesneleri hizalarken faydalı olabilecek, rapor görünümünde bazı mesafe ve açı bilgileri sağlanır. Shift + tıklama kullanıldığında kolaylık için uygun mesafe veya açı panoya kopyalanır.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Y ekseni etrafında:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Eğmek (y-ekseni etrafında):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Z ekseni etrafında:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Yuvarlamak (x-ekseni etrafında):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>X ekseni etrafında:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Sapmak (z-ekseni etrafında):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>X ekseni etrafında dönme</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Sapmak (z-ekseni etrafında)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Y ekseni etrafında dönme</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Eğmek (y-ekseni etrafında)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Z ekseni etrafında dönme</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Yuvarlamak (x-ekseni etrafında)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Euler açıları (xy'z'')</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Euler açıları (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4693,13 +4693,13 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;Orijinal Seçimleri Kullan</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Bağımlılıkları yoksay ve orijinal olarak bu iletişim 
+kutusunu açmadan önce seçilen nesnelerle devam et</translation>
     </message>
   </context>
   <context>
@@ -5990,7 +5990,7 @@ Başka bir dizin belirlemek ister misiniz?</translation>
     </message>
     <message>
       <source>Czech</source>
-      <translation>Çekce</translation>
+      <translation>Çekçe</translation>
     </message>
     <message>
       <source>Hungarian</source>
@@ -6051,6 +6051,18 @@ Başka bir dizin belirlemek ister misiniz?</translation>
     <message>
       <source>Vietnamese</source>
       <translation>Vietnamca</translation>
+    </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Bulgarca</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Yunanca</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>İspanyolca, Arjantin</translation>
     </message>
   </context>
   <context>
@@ -7011,6 +7023,38 @@ Physical path: </source>
 
 Fiziksel yol: </translation>
     </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Belge kaydedilemedi</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Dosyayı kaydetmeye çalışırken bir sorun oluştu. Bunun nedeni, bazı üst klasörlerin mevcut olmaması veya yeterli izne sahip olmamanız veya başka sebepler olabilir. Hata detayları:
+
+"%1"
+
+Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Belge kaydedilmedi</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>%1 belgesi kaydedilemedi. Kapatmayı iptal etmek istiyor musunuz?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 belge kaydedilmedi</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Bazı belgeler kaydedilemedi. Kapatmaktan vazgeçmek ister misiniz?</translation>
+    </message>
   </context>
   <context>
     <name>SelectionFilter</name>
@@ -7379,7 +7423,7 @@ Fiziksel yol: </translation>
     </message>
     <message>
       <source>Panels</source>
-      <translation>Panels</translation>
+      <translation>Paneller</translation>
     </message>
     <message>
       <source>List of available dock panels</source>
@@ -8787,11 +8831,11 @@ Fiziksel yol: </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Düzenleme modu</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Ağaç listesinden bir nesneyi düzenlerken davranışı tanımlar</translation>
     </message>
   </context>
   <context>
@@ -9816,6 +9860,10 @@ Hala ilerlemek istiyor musunuz?</translation>
     <message>
       <source>Special Ops</source>
       <translation>Özel Ops</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Aksonometrik</translation>
     </message>
   </context>
   <context>

@@ -42,6 +42,7 @@ from femmesh import meshsetsgetter
 from femtools import femutils
 from femtools import membertools
 
+SOLVER_TYPES = ["sorcg", "siccg", "choly"]
 
 class Check(run.Check):
 
@@ -102,16 +103,22 @@ class Solve(run.Solve):
         binary = settings.get_binary("Z88")
         if binary is None:
             self.fail()  # a print has been made in settings module
+        
+        prefs = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Mod/Fem/Z88")
+        solver = SOLVER_TYPES
+        solver = prefs.GetInt("Solver", 0)
+        solver = SOLVER_TYPES[solver]
+        self.pushStatus("Used solver: " + solver + "\n")
 
         # run solver test mode
         # AFAIK: z88r needs to be run twice
         # once in test mode and once in real solve mode
         # the subprocess was just copied, it works :-)
-        # TODO: search out for "Vektor GS" and "Vektor KOI" and print values
+        # TODO: search out for "Vector GS" and "Vector KOI" and print values
         # may be compare with the used ones
         self.pushStatus("Executing solver in test mode...\n")
         self._process = subprocess.Popen(
-            [binary, "-t", "-choly"],
+            [binary, "-t", "-" + solver],
             cwd=self.directory,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE)
@@ -123,7 +130,7 @@ class Solve(run.Solve):
         self.pushStatus("Executing solver in real mode...\n")
         binary = settings.get_binary("Z88")
         self._process = subprocess.Popen(
-            [binary, "-c", "-choly"],
+            [binary, "-c", "-" + solver],
             cwd=self.directory,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE)

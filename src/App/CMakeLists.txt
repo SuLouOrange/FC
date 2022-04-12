@@ -48,6 +48,7 @@ fc_copy_file_if_different(
 # -----------------------------------------------------------------------------
 
 include_directories(
+    ${CMAKE_BINARY_DIR}
     ${CMAKE_BINARY_DIR}/src
     ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -95,6 +96,7 @@ generate_from_xml(LinkBaseExtensionPy)
 generate_from_xml(DocumentObjectGroupPy)
 generate_from_xml(GeoFeaturePy)
 generate_from_xml(GeoFeatureGroupExtensionPy)
+generate_from_xml(MetadataPy)
 generate_from_xml(OriginGroupExtensionPy)
 generate_from_xml(PartPy)
 
@@ -111,6 +113,7 @@ SET(FreeCADApp_XML_SRCS
     DocumentObjectExtensionPy.xml
     GroupExtensionPy.xml
     LinkBaseExtensionPy.xml
+    MetadataPy.xml
     DocumentObjectGroupPy.xml
     DocumentObjectPy.xml
     GeoFeaturePy.xml
@@ -268,6 +271,8 @@ SET(FreeCADApp_CPP_SRCS
     Enumeration.cpp
     Material.cpp
     MaterialPyImp.cpp
+    Metadata.cpp
+    MetadataPyImp.cpp
 )
 
 SET(FreeCADApp_HPP_SRCS
@@ -280,6 +285,7 @@ SET(FreeCADApp_HPP_SRCS
     ComplexGeoData.h
     Enumeration.h
     Material.h
+    Metadata.h
 )
 
 SET(FreeCADApp_SRCS

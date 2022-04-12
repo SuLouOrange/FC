@@ -208,9 +208,11 @@ SET(FreeCADBase_CPP_SRCS
     Base64.cpp
     BaseClass.cpp
     BaseClassPyImp.cpp
+    BindingManager.cpp
     BoundBoxPyImp.cpp
     Builder3D.cpp
     Console.cpp
+    ConsoleObserver.cpp
     CoordinateSystem.cpp
     CoordinateSystemPyImp.cpp
     Debugger.cpp
@@ -243,6 +245,7 @@ SET(FreeCADBase_CPP_SRCS
     Rotation.cpp
     RotationPyImp.cpp
     Sequencer.cpp
+    SmartPtrPy.cpp
     Stream.cpp
     Swap.cpp
     ${SWIG_SRCS}
@@ -268,9 +271,12 @@ SET(FreeCADBase_HPP_SRCS
     Axis.h
     Base64.h
     BaseClass.h
+    BindingManager.h
+    Bitmask.h
     BoundBox.h
     Builder3D.h
     Console.h
+    ConsoleObserver.h
     Converter.h
     CoordinateSystem.h
     Debugger.h
@@ -299,6 +305,7 @@ SET(FreeCADBase_HPP_SRCS
     Reader.h
     Rotation.h
     Sequencer.h
+    SmartPtrPy.h
     Stream.h
     Swap.h
     ${SWIG_HEADERS}

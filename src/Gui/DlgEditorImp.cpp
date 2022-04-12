@@ -23,15 +23,13 @@
 
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <QComboBox>
 # include <QFontDatabase>
-# include <QHeaderView>
 #endif
 
 #include "DlgEditorImp.h"
 #include "ui_DlgEditor.h"
-#include "PrefWidgets.h"
 #include "PythonEditor.h"
+
 
 using namespace Gui;
 using namespace Gui::Dialog;
@@ -174,6 +172,7 @@ void DlgSettingsEditorImp::on_colorButton_changed()
 void DlgSettingsEditorImp::saveSettings()
 {
     ui->EnableLineNumber->onSave();
+    ui->EnableBlockCursor->onSave();
     ui->EnableFolding->onSave();
     ui->tabSize->onSave();
     ui->indentSize->onSave();
@@ -194,6 +193,7 @@ void DlgSettingsEditorImp::saveSettings()
 void DlgSettingsEditorImp::loadSettings()
 {
     ui->EnableLineNumber->onRestore();
+    ui->EnableBlockCursor->onRestore();
     ui->EnableFolding->onRestore();
     ui->tabSize->onRestore();
     ui->indentSize->onRestore();
@@ -203,14 +203,16 @@ void DlgSettingsEditorImp::loadSettings()
     ui->textEdit1->setPlainText(QString::fromLatin1(
         "# Short Python sample\n"
         "import sys\n"
-        "def foo(begin, end):\n"
-        "	i=begin\n"
-        "	while (i<end):\n"
-        "		print i\n"
-        "		i=i+1\n"
-        "		print \"Text\"\n"
         "\n"
-        "foo(0, 20))\n"));
+        "def foo(begin, end):\n"
+        "	i = begin\n"
+        "	while i < end:\n"
+        "		print(i)\n"
+        "		i = i + 1\n"
+        "		print(\"Text\")\n"
+        "	return None\n"
+        "\n"
+        "foo(0, 20)\n"));
 
     // Restores the color map
     ParameterGrp::handle hGrp = WindowParameter::getDefaultParameter()->GetGroup("Editor");

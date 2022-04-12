@@ -197,6 +197,7 @@ SET(Draft_view_providers
     draftviewproviders/view_wire.py
     draftviewproviders/view_wpproxy.py
     draftviewproviders/view_hatch.py
+    draftviewproviders/view_shapestring.py
     draftviewproviders/README.md
 )
 
@@ -265,7 +266,6 @@ SET(Draft_GUI_tools
     draftguitools/gui_edit_part_objects.py
     draftguitools/gui_edit_sketcher_objects.py
     draftguitools/gui_edit.py
-    draftguitools/gui_lineops.py
     draftguitools/gui_togglemodes.py
     draftguitools/gui_groups.py
     draftguitools/gui_grid.py

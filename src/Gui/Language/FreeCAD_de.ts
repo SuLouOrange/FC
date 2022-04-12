@@ -404,7 +404,7 @@
     </message>
     <message>
       <source>Press middle+left or middle+right button</source>
-      <translation>Drücke die mittlere + linke oder die mittlere + rechte Maustaste</translation>
+      <translation>Halte die mittlere + linke oder die mittlere + rechte Maustaste gedrückt</translation>
     </message>
     <message>
       <source>Scroll middle mouse button or keep middle button depressed
@@ -746,9 +746,9 @@ In this case the prefix will be automatically trimmed when shown in the property
 However, the property is still used in a script with the full name, like 'obj.Group_Name'.
 
 If this is not ticked, then the property must be uniquely named, and it is accessed like 'obj.Name'.</source>
-      <translation>Stellen Sie dem Eigenschaftsnamen den Gruppennamen in der Form 'Gruppenname' voran, um Konflikte mit einer bestehenden Eigenschaft zu vermeiden.
+      <translation>Dem Eigenschaftsnamen stellt man den Gruppennamen in der Form 'Group_Name' voran, um Konflikte mit einer bestehenden Eigenschaft zu vermeiden.
 In diesem Fall wird das Präfix automatisch gekürzt, wenn es im Eigenschaften-Editor angezeigt wird.
-Die Eigenschaft wird jedoch immer noch in einem Skript mit dem vollen Namen 'obj.Gruppenname' verwendet.
+Die Eigenschaft wird jedoch immer noch in einem Skript mit dem vollen Namen 'obj.Group_Name' verwendet.
 
 Wenn dies nicht ausgewählt ist, muss die Eigenschaft eindeutig benannt sein und wird durch 'obj.Name' aufgerufen.</translation>
     </message>
@@ -1552,7 +1552,8 @@ after FreeCAD launches</source>
     <message>
       <source>Words will be wrapped when they exceed available
 horizontal space in Python console</source>
-      <translation>Automatischer Zeilenumbruch in der Python Umgebung</translation>
+      <translation>Zeilen werden in der Python-Konsole automatisch umbrochen,
+wenn sie die verfügbare Zeilenlänge überschreiten</translation>
     </message>
   </context>
   <context>
@@ -1668,7 +1669,7 @@ horizontal space in Python console</source>
     </message>
     <message>
       <source>Toolbar</source>
-      <translation>Werkzeugleiste</translation>
+      <translation>Symbolleiste</translation>
     </message>
   </context>
   <context>
@@ -2328,7 +2329,7 @@ on-screen while displaying the warning</source>
     <message>
       <source>When a normal message has occurred, the Report View dialog becomes visible
 on-screen while displaying the message</source>
-      <translation>Wenn eine normale Meldung aufgetreten ist, erscheint der Berichtsansicht-Dialog auf dem Bildschirm um die Meldung anzuzeigen</translation>
+      <translation>Wenn eine normale Meldung aufgetreten ist, erscheint der Ausgabefenster-Dialog auf dem Bildschirm um die Meldung anzuzeigen</translation>
     </message>
     <message>
       <source>Show report view on normal message</source>
@@ -2362,14 +2363,14 @@ on-screen while displaying the log message</source>
     <message>
       <source>Internal Python output will be redirected
 from Python console to Report view panel</source>
-      <translation>Die Interne Python-Ausgabe wird
-von der Python-Konsole in das Berichtsfenster umgeleitet</translation>
+      <translation>Die interne Python-Ausgabe wird
+von der Python-Konsole in das Ausgabefenster umgeleitet</translation>
     </message>
     <message>
       <source>Internal Python error messages will be redirected
 from Python console to Report view panel</source>
-      <translation>Die Interne Python-Fehlermeldung wird
-von der Python-Konsole in das Berichtsfenster umgeleitet</translation>
+      <translation>Die internen Python-Fehlermeldungen werden
+von der Python-Konsole in das Ausgabefenster umgeleitet</translation>
     </message>
     <message>
       <source>Include a timecode for each report</source>
@@ -3275,10 +3276,6 @@ Sie können auch das Formular verwenden: John Doe &lt;john@doe.com&gt;</translat
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Nicht geladene Arbeitsbereiche</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Name des Arbeitsbereichs</translation>
     </message>
@@ -3293,6 +3290,10 @@ Sie können auch das Formular verwenden: John Doe &lt;john@doe.com&gt;</translat
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Um Ressourcen zu schonen, lädt FreeCAD keine Arbeitsbereiche solange sie nicht verwendet werden. Wenn sie geladen werden, können sie Zugriff auf weitere Einstellungen bezüglich ihrer Funktionalität freigeben.&lt;/p&gt;&lt;p&gt;Die folgenden Arbeitsbereiche sind in Ihrer Installation verfügbar:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Verfügbare Arbeitsbereiche</translation>
     </message>
   </context>
   <context>
@@ -3342,7 +3343,7 @@ Sie können auch das Formular verwenden: John Doe &lt;john@doe.com&gt;</translat
     </message>
     <message>
       <source>Show script commands in python console</source>
-      <translation>Skript-Befehle in Pythonkonsole anzeigen</translation>
+      <translation>Skript-Befehle in Python-Konsole anzeigen</translation>
     </message>
     <message>
       <source>Log all commands issued by menus to file:</source>
@@ -3507,7 +3508,7 @@ Drehteller: das Teil wird um die z-Achse gedreht.</translation>
     </message>
     <message>
       <source>New document scale</source>
-      <translation>Neue Dokumentskala</translation>
+      <translation>Maßstab für neue Dokumente</translation>
     </message>
     <message>
       <source>Sets camera zoom for new documents.
@@ -4490,32 +4491,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Bitte wählen Sie 1, 2 oder 3 Punkte, bevor Sie auf diese Schaltfläche klicken. Ein Punkt kann sich auf einem Scheitelpunkt, einer Fläche oder einer Kante befinden. Der verwendete Punkt auf einer Fläche oder Kante ist derjenige Punkt, der sich an der Mausposition entlang der Fläche oder Kante befindet. Wenn 1 Punkt ausgewählt ist, wird dieser als Drehpunkt verwendet. Wenn zwei Punkte ausgewählt werden, ist der Mittelpunkt zwischen ihnen der Drehpunkt und falls erforderlich, wird eine neue benutzerdefinierte Achse erstellt. Wenn 3 Punkte ausgewählt werden, wird der erste Punkt zum Drehpunkt und liegt auf dem Vektor, der senkrecht zu der durch die 3 Punkte definierten Ebene liegt. In der Berichtansicht werden einige Entfernungs- und Winkelinformationen bereitgestellt, die beim Ausrichten von Objekten hilfreich sein können. Wenn Sie bei gedrückter Umschalttaste + klicken, wird der entsprechende Abstand oder Winkel in die Zwischenablage kopiert.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Um die y-Achse:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Nicken (um die y-Achse):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Um die z-Achse:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Rollen (um die x-Achse):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>Um die x-Achse:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Gieren (um die z-Achse):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Drehen um die x-Achse</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Gieren (um die z-Achse)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Drehen um die y-Achse</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Nicken (um die y-Achse)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Drehung um die z-Achse</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Rollen (um die x-Achse)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Eulersche Winkel (xy'z'')</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Eulerwinkel (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4680,13 +4681,14 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>Originalauswahl &amp;verwenden</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Abhängigkeiten ignorieren und mit Objekten
+fortfahren die ursprünglich vor dem Öffnen
+dieses Dialogs ausgewählt wurden</translation>
     </message>
   </context>
   <context>
@@ -5819,7 +5821,7 @@ Möchten Sie ein anderes Verzeichnis angeben?</translation>
     <name>Gui::TaskView::TaskDialog</name>
     <message>
       <source>A dialog is already open in the task panel</source>
-      <translation>Ein Dialog im Arbeitspaneele ist bereits geöffnet</translation>
+      <translation>Im Aufgabenbereich ist bereits ein Dialog geöffnet</translation>
     </message>
   </context>
   <context>
@@ -6039,6 +6041,18 @@ Möchten Sie ein anderes Verzeichnis angeben?</translation>
     <message>
       <source>Vietnamese</source>
       <translation>Vietnamesisch</translation>
+    </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Bulgarisch</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Griechisch</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>Spanisch, Argentinien</translation>
     </message>
   </context>
   <context>
@@ -7004,6 +7018,38 @@ Physical path: </source>
 
 Physischer Pfad: </translation>
     </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Dokument konnte nicht gespeichert werden</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Es gab ein Problem beim Speichern der Datei. Dies kann daran liegen, dass einige der übergeordneten Ordner nicht existieren, Sie nicht über ausreichende Berechtigungen verfügen oder aus anderen Gründen. Fehlerdetails:
+
+"%1"
+
+Möchten Sie die Datei mit einem anderen Namen speichern?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Dokument nicht gespeichert</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>Das Dokument%1 konnte nicht gespeichert werden. Möchtest du das Schließen abbrechen?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 Dokument(e) nicht gespeichert</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Einige Dokumente konnten nicht gespeichert werden. Möchtest du das Schließen abbrechen?</translation>
+    </message>
   </context>
   <context>
     <name>SelectionFilter</name>
@@ -7670,7 +7716,7 @@ Physischer Pfad: </translation>
     </message>
     <message>
       <source>Link actions</source>
-      <translation>Verknüpfungsaktionen</translation>
+      <translation>Verknüpfungen...</translation>
     </message>
   </context>
   <context>
@@ -8780,11 +8826,11 @@ Physischer Pfad: </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Bearbeitungsmodus</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Definiert das Verhalten beim Bearbeiten eines Objekts aus dem Baum</translation>
     </message>
   </context>
   <context>
@@ -9140,7 +9186,7 @@ Physischer Pfad: </translation>
     </message>
     <message>
       <source>Rotate Right</source>
-      <translation>Rechtsherum rotieren</translation>
+      <translation>Nach Rechts drehen</translation>
     </message>
     <message>
       <source>Rotate the view by 90° clockwise</source>
@@ -9716,11 +9762,11 @@ Möchten Sie trotzdem fortfahren?</translation>
     <name>ViewOrthographicCmd</name>
     <message>
       <source>Orthographic</source>
-      <translation>Orthographisch</translation>
+      <translation>Orthogonal</translation>
     </message>
     <message>
       <source>Set View to Orthographic mode</source>
-      <translation>Setze die Ansicht auf den orthographischen Modus</translation>
+      <translation>Setze die Ansicht auf den orthogonalen Modus</translation>
     </message>
   </context>
   <context>
@@ -9810,6 +9856,10 @@ Möchten Sie trotzdem fortfahren?</translation>
     <message>
       <source>Special Ops</source>
       <translation>Spezialfunktionen</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Axonometrisch</translation>
     </message>
   </context>
   <context>

@@ -30,7 +30,6 @@ include_directories(
     ${ZLIB_INCLUDE_DIR}
     ${OCC_INCLUDE_DIR}
     ${PYTHON_INCLUDE_DIRS}
-    ${XercesC_INCLUDE_DIRS}
     ${SMESH_INCLUDE_DIR}
     ${VTK_INCLUDE_DIRS}
 )
@@ -42,6 +41,7 @@ link_directories(${SMESH_LIB_PATH})
 set(FemGui_LIBS
     Fem
     FreeCADGui
+    PartGui
 )
 
 
@@ -80,6 +80,7 @@ set(FemGui_UIC_SRCS
     TaskFemConstraintPlaneRotation.ui
     TaskFemConstraintContact.ui
     TaskFemConstraintTransform.ui
+    TaskFemConstraintSpring.ui
     TaskTetParameter.ui
     TaskAnalysisInfo.ui
     TaskDriver.ui
@@ -139,6 +140,8 @@ SET(FemGui_DLG_SRCS
     TaskFemConstraint.ui
     TaskFemConstraint.cpp
     TaskFemConstraint.h
+    TaskFemConstraintOnBoundary.cpp
+    TaskFemConstraintOnBoundary.h
     TaskFemConstraintBearing.ui
     TaskFemConstraintBearing.cpp
     TaskFemConstraintBearing.h
@@ -154,6 +157,9 @@ SET(FemGui_DLG_SRCS
     TaskFemConstraintPressure.ui
     TaskFemConstraintPressure.cpp
     TaskFemConstraintPressure.h
+    TaskFemConstraintSpring.ui
+    TaskFemConstraintSpring.cpp
+    TaskFemConstraintSpring.h
     TaskFemConstraintGear.cpp
     TaskFemConstraintGear.h
     TaskFemConstraintPulley.cpp
@@ -214,6 +220,8 @@ SET(FemGui_SRCS_ViewProvider
     FemSelectionGate.h
     ViewProviderFemConstraint.cpp
     ViewProviderFemConstraint.h
+    ViewProviderFemConstraintOnBoundary.cpp
+    ViewProviderFemConstraintOnBoundary.h
     ViewProviderFemConstraintBearing.cpp
     ViewProviderFemConstraintBearing.h
     ViewProviderFemConstraintFixed.cpp
@@ -224,6 +232,8 @@ SET(FemGui_SRCS_ViewProvider
     ViewProviderFemConstraintFluidBoundary.h
     ViewProviderFemConstraintPressure.cpp
     ViewProviderFemConstraintPressure.h
+    ViewProviderFemConstraintSpring.cpp
+    ViewProviderFemConstraintSpring.h
     ViewProviderFemConstraintGear.cpp
     ViewProviderFemConstraintGear.h
     ViewProviderFemConstraintPulley.cpp
@@ -303,6 +313,8 @@ SET(FemGui_SRCS_Module
     ActiveAnalysisObserver.cpp
     ActiveAnalysisObserver.h
     Command.cpp
+    FemSettings.cpp
+    FemSettings.h
     Resources/Fem.qrc
     PreCompiled.cpp
     PreCompiled.h

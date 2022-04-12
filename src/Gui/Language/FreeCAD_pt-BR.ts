@@ -3281,10 +3281,6 @@ Você também pode usar o formulário: João Silva &lt;joao@silva.com&gt;</trans
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Bancadas não carregadas</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Nome da bancada</translation>
     </message>
@@ -3298,7 +3294,11 @@ Você também pode usar o formulário: João Silva &lt;joao@silva.com&gt;</trans
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Para preservar os recursos, o FreeCAD não carrega bancadas até que sejam usadas. Carregá-las pode fornecer acesso a preferências adicionais relacionadas à sua funcionalidade.&lt;/p&gt;&lt;p&gt;As seguintes bancadas estão disponíveis em sua instalação:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Bancadas de trabalho disponíveis</translation>
     </message>
   </context>
   <context>
@@ -3321,7 +3321,7 @@ Você também pode usar o formulário: João Silva &lt;joao@silva.com&gt;</trans
     </message>
     <message>
       <source>This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</source>
-      <translation type="unfinished">This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</translation>
+      <translation>Este é o módulo de inicialização atual e ele deve ser carregado automaticamente. Veja preferências/Gerais/Carregamento automático para mudar.</translation>
     </message>
     <message>
       <source>Loaded</source>
@@ -4496,32 +4496,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Por favor, selecione 1, 2 ou 3 pontos antes de clicar neste botão. Um ponto pode estar em um vértice, face ou aresta. Se em uma face ou borda, o ponto usado será o ponto na posição do mouse ao longo da face ou da borda. Se 1 ponto for selecionado, ele será usado como centro de rotação. Se 2 pontos forem selecionados, o ponto médio entre eles será o centro de rotação e um novo eixo personalizado será criado, se necessário. Se 3 pontos são selecionados, o primeiro ponto se torna o centro de rotação e fica no vetor que é normal ao plano definido pelos 3 pontos. Algumas informações de distância e ângulo são fornecidas na visão do relatório, o que pode ser útil ao alinhar objetos. Para sua conveniência, quando Shift + clique é usado, a distância ou ângulo apropriado é copiado para a área de transferência.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Em torno do eixo Y:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Passo do dente (em torno do eixo-Y):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Em torno do eixo Z:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Rolagem (em torno do eixo-x):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>Em torno do eixo X:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Guinada (em torno do eixo-z):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Rotação em torno do eixo x</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Guinada (em torno do eixo-z)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Rotação em torno do eixo y</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Passo do dente (em torno do eixo-Y)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Rotação em torno do eixo z</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Rolagem (em torno do eixo-x)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Ângulos de Euler (XY'Z")</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Ângulos de Euler (zy'x)</translation>
     </message>
   </context>
   <context>
@@ -4686,13 +4686,13 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;Usar seleções originais</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Ignorar dependências e prosseguir com objetos
+originalmente selecionados antes de abrir esta caixa de diálogo</translation>
     </message>
   </context>
   <context>
@@ -6041,6 +6041,18 @@ Do you want to specify another directory?</source>
       <source>Vietnamese</source>
       <translation>Vietnamita</translation>
     </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Búlgaro</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Grego</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>Espanhol, Argentina</translation>
+    </message>
   </context>
   <context>
     <name>Gui::TreeDockWidget</name>
@@ -6998,6 +7010,38 @@ Physical path: </source>
       <translation>
 
 Caminho físico: </translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Não foi possível salvar o documento</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Houve um problema ao tentar salvar o arquivo. Isso pode ser devido ao fato de algumas das pastas de origem não existirem ou não possui as permissões necessárias ou por outras razões. Detalhes do erro:
+
+"%1"
+
+Salvar o arquivo com um nome diferente?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Documento não salvo</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>O documento%1 não pode ser salvo. Cancelar o fechamento?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 Documento(s) não foram salvos</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Alguns documentos não puderam ser salvos. Cancelar o fechamento?</translation>
     </message>
   </context>
   <context>
@@ -8775,11 +8819,11 @@ Caminho físico: </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Modo de edição</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Define o comportamento ao editar um objeto da arborescência</translation>
     </message>
   </context>
   <context>
@@ -9805,6 +9849,10 @@ Deseja prosseguir mesmo assim?</translation>
     <message>
       <source>Special Ops</source>
       <translation>Operações especiais</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Axonométrica</translation>
     </message>
   </context>
   <context>

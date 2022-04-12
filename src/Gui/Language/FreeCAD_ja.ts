@@ -3263,24 +3263,24 @@ John Doe &lt;john@doe.com&gt; 形式を使用することもできます。</tra
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>ロードされていないワークベンチ</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
-      <translation type="unfinished">Workbench Name</translation>
+      <translation>ワークベンチ名</translation>
     </message>
     <message>
       <source>Autoload?</source>
-      <translation type="unfinished">Autoload?</translation>
+      <translation>自動読み込みしますか？</translation>
     </message>
     <message>
       <source>Load Now</source>
-      <translation type="unfinished">Load Now</translation>
+      <translation>今すぐ読み込む</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;リソースを節約するため、FreeCAD は使用されるまでワークベンチをロードしません。ワークベンチをロードするとその機能に関係する追加のユーザー設定へアクセスできるようになります。&lt;/p&gt;&lt;p&gt;以下のワークベンチが利用可です:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>利用可能なワークベンチ</translation>
     </message>
   </context>
   <context>
@@ -3291,27 +3291,27 @@ John Doe &lt;john@doe.com&gt; 形式を使用することもできます。</tra
     </message>
     <message>
       <source>Autoload</source>
-      <translation type="unfinished">Autoload</translation>
+      <translation>自動読み込み</translation>
     </message>
     <message>
       <source>If checked</source>
-      <translation type="unfinished">If checked</translation>
+      <translation>チェックされている場合</translation>
     </message>
     <message>
       <source>will be loaded automatically when FreeCAD starts up</source>
-      <translation type="unfinished">will be loaded automatically when FreeCAD starts up</translation>
+      <translation>FreeCAD起動時に自動的に読み込まれます</translation>
     </message>
     <message>
       <source>This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</source>
-      <translation type="unfinished">This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</translation>
+      <translation>これは現在の起動モジュールであり、自動ロードする必要があります。変更するには環境設定/一般/自動ロードを参照してください。</translation>
     </message>
     <message>
       <source>Loaded</source>
-      <translation type="unfinished">Loaded</translation>
+      <translation>読み込まれました</translation>
     </message>
     <message>
       <source>Load now</source>
-      <translation type="unfinished">Load now</translation>
+      <translation>今すぐ読み込む</translation>
     </message>
   </context>
   <context>
@@ -4478,32 +4478,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>このボタンをクリックする前に1つ、2つ、または3つの点を選択してください。 点は頂点、面、またはエッジ上にあります。面またはエッジ上の点を使用する場合は面またはエッジに沿ったマウス位置にある点を使います。1つの点を選択した場合には点が回転中心として使用されます。2つの点を選択した場合にはその中点が回転中心となり、必要に応じて新しいカスタム軸が作成されます。3つの点を選択した場合には1つ目の点が回転中心となり、3点によって定義される平面の法線となるベクトル上に配置されます。距離と角度の情報はレポートビューに表示されます。この情報はオブジェクトを配置する際に便利です。簡単のために Shift + クリックで適切な距離と角度がクリップボードにコピーされます。</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Y軸周り:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>ピッチ（Y軸まわり）</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Z軸周り:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>ロール (X 軸まわり):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>X軸周り:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>ヨー (Z軸まわり):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>X軸周りの回転</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>ヨー (Z軸まわり)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Y軸周りの回転</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>ピッチ（Y軸まわり）</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Z軸周りの回転</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>ロール (X 軸まわり)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>オイラー角度 (xy'z'')</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>オイラー角 (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4668,13 +4668,13 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>元の選択を使用 (&amp;U)</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>依存関係を無視し、このダイアログを開く前に最初に選択されたオブジェクト
+を続行します</translation>
     </message>
   </context>
   <context>
@@ -6024,6 +6024,18 @@ Do you want to specify another directory?</source>
       <source>Vietnamese</source>
       <translation>ベトナム語</translation>
     </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>ブルガリア語</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>ギリシャ語</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>スペイン語 (アルゼンチン)</translation>
+    </message>
   </context>
   <context>
     <name>Gui::TreeDockWidget</name>
@@ -6982,6 +6994,38 @@ Physical path: </source>
       <translation>
 
 物理パス: </translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>ドキュメントを保存できませんでした</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>ファイルを保存しようとする際に問題が発生しました。 これは、いくつかの親フォルダが存在しないか、十分な権限がないか、またはその他の理由によるためです。 エラーの詳細:
+
+"%1"
+
+別名のファイルとして保存しますか?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>ドキュメントが保存されていません</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>ドキュメント%1 を保存できませんでした。閉じることをキャンセルしますか？</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 ドキュメントは保存されていません</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>一部のドキュメントを保存できませんでした。閉じることをキャンセルしますか？</translation>
     </message>
   </context>
   <context>
@@ -8759,11 +8803,11 @@ Physical path: </source>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>編集モード</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>ツリーからオブジェクトを編集するときの動作を定義します。</translation>
     </message>
   </context>
   <context>
@@ -9789,6 +9833,10 @@ Do you still want to proceed?</source>
     <message>
       <source>Special Ops</source>
       <translation>特殊設定</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>不等角投影</translation>
     </message>
   </context>
   <context>

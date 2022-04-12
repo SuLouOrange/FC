@@ -25,27 +25,25 @@ from PySide import QtCore, QtGui
 from collections import Counter
 from contextlib import contextmanager
 from pivy import coin
-import json
-import math
-import traceback
-
 import FreeCAD
 import FreeCADGui
-
+import PathScripts.PathGeom as PathGeom
+import PathScripts.PathGuiInit as PathGuiInit
 import PathScripts.PathJob as PathJob
 import PathScripts.PathJobCmd as PathJobCmd
 import PathScripts.PathJobDlg as PathJobDlg
-import PathScripts.PathGeom as PathGeom
-import PathScripts.PathGuiInit as PathGuiInit
 import PathScripts.PathLog as PathLog
 import PathScripts.PathPreferences as PathPreferences
 import PathScripts.PathSetupSheetGui as PathSetupSheetGui
 import PathScripts.PathStock as PathStock
+import PathScripts.PathToolBitGui as PathToolBitGui
 import PathScripts.PathToolControllerGui as PathToolControllerGui
 import PathScripts.PathToolLibraryEditor as PathToolLibraryEditor
 import PathScripts.PathUtil as PathUtil
 import PathScripts.PathUtils as PathUtils
-import PathScripts.PathToolBitGui as PathToolBitGui
+import json
+import math
+import traceback
 
 # lazily loaded modules
 from lazy_loader.lazy_loader import LazyLoader
@@ -54,14 +52,13 @@ Draft = LazyLoader("Draft", globals(), "Draft")
 Part = LazyLoader("Part", globals(), "Part")
 DraftVecUtils = LazyLoader("DraftVecUtils", globals(), "DraftVecUtils")
 
+translate = FreeCAD.Qt.translate
 
-# Qt translation handling
-def translate(context, text, disambig=None):
-    return QtCore.QCoreApplication.translate(context, text, disambig)
-
-
-PathLog.setLevel(PathLog.Level.INFO, PathLog.thisModule())
-# PathLog.trackModule(PathLog.thisModule())
+if False:
+    PathLog.setLevel(PathLog.Level.DEBUG, PathLog.thisModule())
+    PathLog.trackModule(PathLog.thisModule())
+else:
+    PathLog.setLevel(PathLog.Level.INFO, PathLog.thisModule())
 
 
 def _OpenCloseResourceEditor(obj, vobj, edit):
@@ -167,6 +164,9 @@ class ViewProvider:
     def setEdit(self, vobj=None, mode=0):
         PathLog.track(mode)
         if 0 == mode:
+            job = self.vobj.Object
+            if not job.Proxy.integrityCheck(job):
+                return False
             self.openTaskPanel()
         return True
 
@@ -241,6 +241,7 @@ class ViewProvider:
             self.obj.Stock.ViewObject.Proxy.onEdit(_OpenCloseResourceEditor)
 
     def rememberBaseVisibility(self, obj, base):
+        PathLog.track()
         if base.ViewObject:
             orig = PathUtil.getPublicObject(obj.Proxy.baseObject(obj, base))
             self.baseVisibility[base.Name] = (
@@ -253,6 +254,7 @@ class ViewProvider:
             base.ViewObject.Visibility = True
 
     def forgetBaseVisibility(self, obj, base):
+        PathLog.track()
         if self.baseVisibility.get(base.Name):
             visibility = self.baseVisibility[base.Name]
             visibility[0].ViewObject.Visibility = visibility[1]
@@ -260,6 +262,7 @@ class ViewProvider:
             del self.baseVisibility[base.Name]
 
     def setupEditVisibility(self, obj):
+        PathLog.track()
         self.baseVisibility = {}
         for base in obj.Model.Group:
             self.rememberBaseVisibility(obj, base)
@@ -270,6 +273,7 @@ class ViewProvider:
             self.obj.Stock.ViewObject.Visibility = True
 
     def resetEditVisibility(self, obj):
+        PathLog.track()
         for base in obj.Model.Group:
             self.forgetBaseVisibility(obj, base)
         if obj.Stock and obj.Stock.ViewObject:
@@ -279,7 +283,7 @@ class ViewProvider:
         PathLog.track()
         for action in menu.actions():
             menu.removeAction(action)
-        action = QtGui.QAction(translate("Path", "Edit"), menu)
+        action = QtGui.QAction(translate("Path_Job", "Edit"), menu)
         action.triggered.connect(self.setEdit)
         menu.addAction(action)
 
@@ -384,7 +388,7 @@ class StockFromBaseBoundBoxEdit(StockEdit):
         if self.IsStock(obj):
             self.getFieldsStock(obj.Stock, fields)
         else:
-            PathLog.error(translate("PathJob", "Stock not from Base bound box!"))
+            PathLog.error("Stock not from Base bound box!")
 
     def setFields(self, obj):
         PathLog.track()
@@ -460,7 +464,7 @@ class StockCreateBoxEdit(StockEdit):
 
     def getFields(self, obj, fields=None):
         if fields is None:
-            fields = ["length", "widht", "height"]
+            fields = ["length", "width", "height"]
         try:
             if self.IsStock(obj):
                 if "length" in fields:
@@ -476,7 +480,7 @@ class StockCreateBoxEdit(StockEdit):
                         self.form.stockBoxHeight.text()
                     )
             else:
-                PathLog.error(translate("PathJob", "Stock not a box!"))
+                PathLog.error("Stock not a box!")
         except Exception:
             pass
 
@@ -522,7 +526,7 @@ class StockCreateCylinderEdit(StockEdit):
                         self.form.stockCylinderHeight.text()
                     )
             else:
-                PathLog.error(translate("PathJob", "Stock not a cylinder!"))
+                PathLog.error(translate("Path_Job", "Stock not a cylinder!"))
         except Exception:
             pass
 
@@ -606,7 +610,7 @@ class TaskPanel:
     DataProperty = QtCore.Qt.ItemDataRole.UserRole + 1
 
     def __init__(self, vobj, deleteOnReject):
-        FreeCAD.ActiveDocument.openTransaction(translate("Path_Job", "Edit Job"))
+        FreeCAD.ActiveDocument.openTransaction("Edit Job")
         self.vobj = vobj
         self.vproxy = vobj.Proxy
         self.obj = vobj.Object
@@ -619,8 +623,14 @@ class TaskPanel:
 
         vUnit = FreeCAD.Units.Quantity(1, FreeCAD.Units.Velocity).getUserPreferred()[2]
         self.form.toolControllerList.horizontalHeaderItem(1).setText("#")
-        self.form.toolControllerList.horizontalHeaderItem(2).setText(vUnit)
-        self.form.toolControllerList.horizontalHeaderItem(3).setText(vUnit)
+        self.form.toolControllerList.horizontalHeaderItem(2).setText(
+            translate("Path", "Feed(H)")
+        )
+        self.form.toolControllerList.horizontalHeaderItem(2).setToolTip(vUnit)
+        self.form.toolControllerList.horizontalHeaderItem(3).setText(
+            translate("Path", "Feed(V)")
+        )
+        self.form.toolControllerList.horizontalHeaderItem(3).setToolTip(vUnit)
         self.form.toolControllerList.horizontalHeader().setResizeMode(
             0, QtGui.QHeaderView.Stretch
         )
@@ -641,6 +651,11 @@ class TaskPanel:
             self.form.postProcessorArguments.toolTip()
         )
 
+        # Populate the other comboboxes with enums from the job class
+        comboToPropertyMap = [("orderBy", "OrderOutputBy")]
+        enumTups = PathJob.ObjectJob.propertyEnumerations(dataType="raw")
+        self.populateCombobox(self.form, enumTups, comboToPropertyMap)
+
         self.vproxy.setupEditVisibility(self.obj)
 
         self.stockFromBase = None
@@ -656,6 +671,21 @@ class TaskPanel:
             self.obj.SetupSheet, self.form
         )
 
+    def populateCombobox(self, form, enumTups, comboBoxesPropertyMap):
+        """populateCombobox(form, enumTups, comboBoxesPropertyMap) ... populate comboboxes with translated enumerations
+        ** comboBoxesPropertyMap will be unnecessary if UI files use strict combobox naming protocol.
+        Args:
+            form = UI form
+            enumTups = list of (translated_text, data_string) tuples
+            comboBoxesPropertyMap = list of (translated_text, data_string) tuples
+        """
+        # Load appropriate enumerations in each combobox
+        for cb, prop in comboBoxesPropertyMap:
+            box = getattr(form, cb)  # Get the combobox
+            box.clear()  # clear the combobox
+            for text, data in enumTups[prop]:  #  load enumerations
+                box.addItem(text, data)
+
     def preCleanup(self):
         PathLog.track()
         FreeCADGui.Selection.removeObserver(self)
@@ -664,6 +694,7 @@ class TaskPanel:
 
     def accept(self, resetEdit=True):
         PathLog.track()
+        self._jobIntegrityCheck()  # Check existence of Model and Tools
         self.preCleanup()
         self.getFields()
         self.setupGlobal.accept()
@@ -679,9 +710,7 @@ class TaskPanel:
         FreeCAD.ActiveDocument.abortTransaction()
         if self.deleteOnReject and FreeCAD.ActiveDocument.getObject(self.name):
             PathLog.info("Uncreate Job")
-            FreeCAD.ActiveDocument.openTransaction(
-                translate("Path_Job", "Uncreate Job")
-            )
+            FreeCAD.ActiveDocument.openTransaction("Uncreate Job")
             if self.obj.ViewObject.Proxy.onDelete(self.obj.ViewObject, None):
                 FreeCAD.ActiveDocument.removeObject(self.obj.Name)
             FreeCAD.ActiveDocument.commitTransaction()
@@ -1059,12 +1088,25 @@ class TaskPanel:
             PathLog.track(
                 "Vector(%.2f, %.2f, %.2f)" % (normal.x, normal.y, normal.z), flip
             )
-            vector = axis
+            v = axis
             if flip:
-                vector = axis.negative()
-            r = axis.cross(normal)  # rotation axis
-            a = DraftVecUtils.angle(normal, vector, r) * 180 / math.pi
-            PathLog.debug("oh boy: (%.2f, %.2f, %.2f) -> %.2f" % (r.x, r.y, r.z, a))
+                v = axis.negative()
+
+            if PathGeom.pointsCoincide(abs(v), abs(normal)):
+                # Selection is already aligned with the axis of rotation leading
+                # to a (0,0,0) cross product for rotation.
+                # --> Need to flip the object around one of the "other" axis.
+                # Simplest way to achieve that is to rotate the coordinate system
+                # of the axis and use that to rotate the object.
+                r = FreeCAD.Vector(v.y, v.z, v.x)
+                a = 180
+            else:
+                r = v.cross(normal)  # rotation axis
+                a = DraftVecUtils.angle(normal, v, r) * 180 / math.pi
+            PathLog.debug(
+                "oh boy: (%.2f, %.2f, %.2f) x (%.2f, %.2f, %.2f) -> (%.2f, %.2f, %.2f) -> %.2f"
+                % (v.x, v.y, v.z, normal.x, normal.y, normal.z, r.x, r.y, r.z, a)
+            )
             Draft.rotate(sel.Object, a, axis=r)
 
         selObject = None
@@ -1254,7 +1296,7 @@ class TaskPanel:
                 setupFromExisting()
             else:
                 PathLog.error(
-                    translate("PathJob", "Unsupported stock object %s")
+                    translate("Path_Job", "Unsupported stock object %s")
                     % self.obj.Stock.Label
                 )
         else:
@@ -1270,7 +1312,7 @@ class TaskPanel:
                     index = -1
             else:
                 PathLog.error(
-                    translate("PathJob", "Unsupported stock type %s (%d)")
+                    translate("Path_Job", "Unsupported stock type %s (%d)")
                     % (self.form.stock.currentText(), index)
                 )
         self.stockEdit.activate(self.obj, index == -1)
@@ -1413,7 +1455,10 @@ class TaskPanel:
 
     def setupUi(self, activate):
         self.setupGlobal.setupUi()
-        self.setupOps.setupUi()
+        try:
+            self.setupOps.setupUi()
+        except Exception as ee:
+            PathLog.error(str(ee))
         self.updateStockEditor(-1, False)
         self.setFields()
 
@@ -1538,6 +1583,40 @@ class TaskPanel:
     def open(self):
         FreeCADGui.Selection.addObserver(self)
 
+    def _jobIntegrityCheck(self):
+        """_jobIntegrityCheck() ... Check Job object for existence of Model and Tools
+        If either Model or Tools is empty, change GUI tab, issue appropriate warning,
+        and offer chance to add appropriate item."""
+
+        def _displayWarningWindow(msg):
+            """Display window with warning message and Add action button.
+            Return action state."""
+            txtHeader = translate("Path_Job", "Warning")
+            txtPleaseAddOne = translate("Path_Job", "Please add one.")
+            txtOk = translate("Path_Job", "Ok")
+            txtAdd = translate("Path_Job", "Add")
+
+            msgbox = QtGui.QMessageBox(
+                QtGui.QMessageBox.Warning, txtHeader, msg + " " + txtPleaseAddOne
+            )
+            msgbox.addButton(txtOk, QtGui.QMessageBox.AcceptRole)  # Add 'Ok' button
+            msgbox.addButton(txtAdd, QtGui.QMessageBox.ActionRole)  # Add 'Add' button
+            return msgbox.exec_()
+
+        # Check if at least on base model is present
+        if len(self.obj.Model.Group) == 0:
+            self.form.setCurrentIndex(0)  # Change tab to General tab
+            no_model_txt = translate("Path_Job", "This job has no base model.")
+            if _displayWarningWindow(no_model_txt) == 1:
+                self.jobModelEdit()
+
+        # Check if at least one tool is present
+        if len(self.obj.Tools.Group) == 0:
+            self.form.setCurrentIndex(3)  # Change tab to Tools tab
+            no_tool_txt = translate("Path_Job", "This job has no tool.")
+            if _displayWarningWindow(no_tool_txt) == 1:
+                self.toolControllerAdd()
+
     # SelectionObserver interface
     def addSelection(self, doc, obj, sub, pnt):
         self.updateSelection()
@@ -1552,17 +1631,21 @@ class TaskPanel:
         self.updateSelection()
 
 
-def Create(base, template=None):
+def Create(base, template=None, openTaskPanel=True):
     """Create(base, template) ... creates a job instance for the given base object
     using template to configure it."""
     FreeCADGui.addModule("PathScripts.PathJob")
-    FreeCAD.ActiveDocument.openTransaction(translate("Path_Job", "Create Job"))
+    FreeCAD.ActiveDocument.openTransaction("Create Job")
     try:
         obj = PathJob.Create("Job", base, template)
         obj.ViewObject.Proxy = ViewProvider(obj.ViewObject)
+        obj.ViewObject.addExtension("Gui::ViewProviderGroupExtensionPython")
         FreeCAD.ActiveDocument.commitTransaction()
         obj.Document.recompute()
-        obj.ViewObject.Proxy.editObject(obj.Stock)
+        if openTaskPanel:
+            obj.ViewObject.Proxy.editObject(obj.Stock)
+        else:
+            obj.ViewObject.Proxy.deleteOnReject = False
         return obj
     except Exception as exc:
         PathLog.error(exc)

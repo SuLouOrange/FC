@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="1.1" language="ru" sourcelanguage="en">
+<TS version="2.1" language="ru" sourcelanguage="en">
   <context>
     <name>App::Property</name>
     <message>
@@ -127,6 +127,11 @@ Leave this property empty to be able to set 'Axis' and 'Center' manually.</sourc
     </message>
     <message>
       <location filename="array.py" line="291"/>
+      <source>A parameter that determines how many symmetry planes the circular array will have.</source>
+      <translation>Допустимое количество плоскостей симметрии для кругового массива.</translation>
+    </message>
+    <message>
+      <location filename="array.py" line="291"/>
       <source>A parameter that determines how many symmetry planes  the circular array will have.</source>
       <translation>Допустимое количество плоскостей симметрии для кругового массива.</translation>
     </message>
@@ -193,6 +198,26 @@ This property is read-only, as the number depends on the parameters of the array
       <translation>Площадь объекта</translation>
     </message>
     <message>
+      <location filename="pathtwistedarray.py" line="86"/>
+      <source>The base object that will be duplicated.</source>
+      <translation>Базовый объект, который будет продублирован.</translation>
+    </message>
+    <message>
+      <location filename="patharray.py" line="177"/>
+      <source>The object along which the copies will be distributed. It must contain 'Edges'.</source>
+      <translation>Объект вдоль которого будут распространяться копии. Он должен содержать 'Рёбра'.</translation>
+    </message>
+    <message>
+      <location filename="pathtwistedarray.py" line="100"/>
+      <source>Number of copies to create.</source>
+      <translation>Количество копий для создания.</translation>
+    </message>
+    <message>
+      <location filename="pathtwistedarray.py" line="107"/>
+      <source>Rotation factor of the twisted array.</source>
+      <translation>Коэффициент поворота закрученного массива.</translation>
+    </message>
+    <message>
       <location filename="dimension.py" line="137"/>
       <source>The normal direction of the text of the dimension</source>
       <translation>Нормальное направление размерного текста</translation>
@@ -201,6 +226,24 @@ This property is read-only, as the number depends on the parameters of the array
       <location filename="dimension.py" line="150"/>
       <source>The object measured by this dimension object</source>
       <translation>Объект измерения размера</translation>
+    </message>
+    <message>
+      <location filename="dimension.py" line="167"/>
+      <source>The object, and specific subelements of it,
+that this dimension object is measuring.
+
+There are various possibilities:
+- An object, and one of its edges.
+- An object, and two of its vertices.
+- An arc object, and its edge.</source>
+      <translation>Объект и его конкретные субэлементы,
+которые этот размер измеряет.
+
+Есть различные возможности:
+- Объект, и один из его краев.
+- Объект, и две его вершины.
+- Дуговой объект и его край.
+</translation>
     </message>
     <message>
       <location filename="dimension.py" line="167"/>
@@ -515,6 +558,16 @@ or from the subelement 'VertexN', 'EdgeN', or 'FaceN', respectively, if it is sp
       <translation>Межсимвольное расстояние</translation>
     </message>
     <message>
+      <location filename="shapestring.py" line="59"/>
+      <source>Fill letters with faces</source>
+      <translation>Заполнить буквы гранями</translation>
+    </message>
+    <message>
+      <location filename="draftlink.py" line="99"/>
+      <source>Force sync pattern placements even when array elements are expanded</source>
+      <translation>Принудительная синхронизация размещения деталей, даже при расширении элементов массива</translation>
+    </message>
+    <message>
       <location filename="draftlink.py" line="104"/>
       <source>Show the individual array elements</source>
       <translation>Показать отдельные элементы массива</translation>
@@ -599,6 +652,44 @@ This property is read-only, as the number depends on the points contained within
       <translation>Тесселлировать эллипсы и B-сплайны в сегменты линии</translation>
     </message>
     <message>
+      <location filename="shape2dview.py" line="98"/>
+      <source>For Cutlines and Cutfaces modes, 
+                    this leaves the faces at the cut location</source>
+      <translation>Для режимов обрезки линий и обрезки граней,
+                    это оставляет грани в месте разрезания</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="105"/>
+      <source>Length of line segments if tessellating Ellipses or B-splines 
+                    into line segments</source>
+      <translation>Длина сегментов линии при тесселяции Эллипсов или B-Сплайнов в линейные сегменты</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="111"/>
+      <source>If this is True, this object will include only visible objects</source>
+      <translation>Если значение = True, данный объект будет включать в себя только видимые объекты </translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="117"/>
+      <source>A list of exclusion points. Any edge touching any of those points will not be drawn.</source>
+      <translation>Список точек исключения. Любое ребро коснувшееся любой из этих точек не будет рисоваться.</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="122"/>
+      <source>If this is True, only solid geometry is handled. This overrides the base object's Only Solids property</source>
+      <translation>Если это истина, обрабатывается только твердотельная геометрия. Это переопределяет свойство только твердое тело базового объекта</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="127"/>
+      <source>If this is True, the contents are clipped to the borders of the section plane, if applicable. This overrides the base object's Clip property</source>
+      <translation>Если это истина, содержимое обрезается по границам плоскости сечения, если применимо. Это переопределяет свойство срез базового объекта</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="132"/>
+      <source>This object will be recomputed only if this is True.</source>
+      <translation>Данный объект будет пересчитан только если значение = True.</translation>
+    </message>
+    <message>
       <location filename="ellipse.py" line="45"/>
       <source>Start angle of the elliptical arc</source>
       <translation>Начальный угол эллиптической дуги</translation>
@@ -626,6 +717,41 @@ This property is read-only, as the number depends on the points contained within
       <location filename="ellipse.py" line="61"/>
       <source>Area of this object</source>
       <translation>Площадь объекта</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="52"/>
+      <source>The base object used by this object</source>
+      <translation>Базовый объект, используется данным объектом</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="55"/>
+      <source>The PAT file used by this object</source>
+      <translation>PAT-файл, используется данным объектом</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="58"/>
+      <source>The pattern name used by this object</source>
+      <translation>Название штриховки, используемой этим объектом</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="61"/>
+      <source>The pattern scale used by this object</source>
+      <translation>Масштабирование штриховки, используемой этим объектом</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="49"/>
+      <source>The shape of this object</source>
+      <translation>Форма этого объекта</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="64"/>
+      <source>The pattern rotation used by this object</source>
+      <translation>Угол наклона штриховки, используемой этим объектом</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="67"/>
+      <source>If set to False, hatch is applied as is to the faces, without translation (this might give wrong results for non-XY faces)</source>
+      <translation>Если установлено значение False, штриховка применяется к граням как есть, без преобразования (это может дать неверные результаты для граней, расположенных не по оси XY)</translation>
     </message>
     <message>
       <location filename="bezcurve.py" line="46"/>
@@ -656,11 +782,6 @@ This property is read-only, as the number depends on the points contained within
       <location filename="bezcurve.py" line="66"/>
       <source>The length of this object</source>
       <translation>Длина этого объекта</translation>
-    </message>
-    <message>
-      <location filename="patharray.py" line="177"/>
-      <source>The object along which the copies will be distributed. It must contain 'Edges'.</source>
-      <translation>Объект вдоль которого будут распространяться копии. Он должен содержать 'Рёбра'.</translation>
     </message>
     <message>
       <location filename="patharray.py" line="192"/>
@@ -919,6 +1040,15 @@ Write '$dim' so that it is replaced by the dimension length.</source>
       <translation>Показать единицу измерения</translation>
     </message>
     <message>
+      <location filename="view_dimension.py" line="216"/>
+      <source>A unit to express the measurement.
+Leave blank for system default.
+Use 'arch' to force US arch notation</source>
+      <translation>Единица измерения.
+Оставьте пустым для системы по умолчанию.
+Используйте 'arch' для обозначения архитектурной США</translation>
+    </message>
+    <message>
       <location filename="view_dimension.py" line="230"/>
       <source>Arrow size</source>
       <translation>Размер стрелки</translation>
@@ -956,9 +1086,14 @@ beyond the dimension line</source>
       <translation>Отображать размерную линию и стрелки</translation>
     </message>
     <message>
-      <location filename="view_layer.py" line="77"/>
+      <location filename="view_layer.py" line="66"/>
       <source>If it is true, the objects contained within this layer will adopt the line color of the layer</source>
       <translation>Если истина, объекты данного слоя будут иметь цвет линий слоя</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="77"/>
+      <source>If it is true, the objects contained within this layer will adopt the shape color of the layer</source>
+      <translation>Если истина, объекты данного слоя будут иметь цвет фигур слоя</translation>
     </message>
     <message>
       <location filename="view_layer.py" line="88"/>
@@ -973,27 +1108,27 @@ beyond the dimension line</source>
     <message>
       <location filename="view_layer.py" line="116"/>
       <source>The shape color of the objects contained within this layer</source>
-      <translation type="unfinished">The shape color of the objects contained within this layer</translation>
+      <translation>Цвет фигур объектов этого слоя</translation>
     </message>
     <message>
       <location filename="view_layer.py" line="130"/>
       <source>The line width of the objects contained within this layer</source>
-      <translation type="unfinished">The line width of the objects contained within this layer</translation>
+      <translation>Толщина линий объектов этого слоя</translation>
     </message>
     <message>
       <location filename="view_layer.py" line="142"/>
       <source>The draw style of the objects contained within this layer</source>
-      <translation type="unfinished">The draw style of the objects contained within this layer</translation>
+      <translation>Стиль рисования объектов в пределах этого слоя</translation>
     </message>
     <message>
       <location filename="view_layer.py" line="153"/>
       <source>The transparency of the objects contained within this layer</source>
-      <translation type="unfinished">The transparency of the objects contained within this layer</translation>
+      <translation>Прозрачность объектов, содержащихся в этом слое</translation>
     </message>
     <message>
       <location filename="view_layer.py" line="164"/>
       <source>The line color of the objects contained within this layer, when used on a TechDraw page</source>
-      <translation type="unfinished">The line color of the objects contained within this layer, when used on a TechDraw page</translation>
+      <translation>Цвет линии объектов, содержащихся в этом слое, при использовании на странице TechDraw</translation>
     </message>
     <message>
       <location filename="view_label.py" line="176"/>
@@ -1004,6 +1139,16 @@ beyond the dimension line</source>
       <location filename="view_label.py" line="185"/>
       <source>Line color</source>
       <translation>Цвет линии</translation>
+    </message>
+    <message>
+      <location filename="view_base.py" line="106"/>
+      <source>Defines an SVG pattern.</source>
+      <translation>Определяет SVG шаблон.</translation>
+    </message>
+    <message>
+      <location filename="view_base.py" line="116"/>
+      <source>Defines the size of the SVG pattern.</source>
+      <translation>Определяет размер SVG шаблона.</translation>
     </message>
     <message>
       <location filename="view_label.py" line="73"/>
@@ -1055,405 +1200,33 @@ beyond the dimension line</source>
       <source>Display a leader line or not</source>
       <translation>Отображать выносную линию или нет</translation>
     </message>
-    <message>
-      <location filename="pathtwistedarray.py" line="86"/>
-      <source>The base object that will be duplicated.</source>
-      <translation type="unfinished">The base object that will be duplicated.</translation>
-    </message>
-    <message>
-      <location filename="pathtwistedarray.py" line="100"/>
-      <source>Number of copies to create.</source>
-      <translation>Количество копий для создания.</translation>
-    </message>
-    <message>
-      <location filename="pathtwistedarray.py" line="107"/>
-      <source>Rotation factor of the twisted array.</source>
-      <translation>Коэффициент поворота закрученного массива.</translation>
-    </message>
-    <message>
-      <location filename="shapestring.py" line="59"/>
-      <source>Fill letters with faces</source>
-      <translation>Заполнить буквы гранями</translation>
-    </message>
-    <message>
-      <location filename="view_dimension.py" line="216"/>
-      <source>A unit to express the measurement.
-Leave blank for system default.
-Use 'arch' to force US arch notation</source>
-      <translation type="unfinished">A unit to express the measurement.
-Leave blank for system default.
-Use 'arch' to force US arch notation</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="117"/>
-      <source>A list of exclusion points. Any edge touching any of those points will not be drawn.</source>
-      <translation>Список точек исключения. Любое ребро коснувшееся любой из этих точек не будет рисоваться.</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="98"/>
-      <source>For Cutlines and Cutfaces modes, 
-                    this leaves the faces at the cut location</source>
-      <translation>Для режимов обрезки линий и обрезки граней,
-                    это оставляет грани в месте разрезания</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="105"/>
-      <source>Length of line segments if tessellating Ellipses or B-splines 
-                    into line segments</source>
-      <translation>Длина сегментов линии при тесселяции Эллипсов или B-Сплайнов в линейные сегменты</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="122"/>
-      <source>If this is True, only solid geometry is handled. This overrides the base object's Only Solids property</source>
-      <translation>Если это истина, обрабатывается только твердотельная геометрия. Это переопределяет свойство только твердое тело базового объекта</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="127"/>
-      <source>If this is True, the contents are clipped to the borders of the section plane, if applicable. This overrides the base object's Clip property</source>
-      <translation>Если это истина, содержимое обрезается по границам плоскости сечения, если применимо. Это переопределяет свойство срез базового объекта</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="111"/>
-      <source>If this is True, this object will include only visible objects</source>
-      <translation>Если значение = True, данный объект будет включать в себя только видимые объекты </translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="132"/>
-      <source>This object will be recomputed only if this is True.</source>
-      <translation>Данный объект будет пересчитан только если значение = True.</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="49"/>
-      <source>The shape of this object</source>
-      <translation>Форма этого объекта</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="52"/>
-      <source>The base object used by this object</source>
-      <translation type="unfinished">The base object used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="55"/>
-      <source>The PAT file used by this object</source>
-      <translation type="unfinished">The PAT file used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="58"/>
-      <source>The pattern name used by this object</source>
-      <translation type="unfinished">The pattern name used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="61"/>
-      <source>The pattern scale used by this object</source>
-      <translation type="unfinished">The pattern scale used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="64"/>
-      <source>The pattern rotation used by this object</source>
-      <translation type="unfinished">The pattern rotation used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="67"/>
-      <source>If set to False, hatch is applied as is to the faces, without translation (this might give wrong results for non-XY faces)</source>
-      <translation type="unfinished">If set to False, hatch is applied as is to the faces, without translation (this might give wrong results for non-XY faces)</translation>
-    </message>
-  </context>
-  <context>
-    <name>Dialog</name>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="14"/>
-      <source>Annotation Styles Editor</source>
-      <translation>Редактор стилей заметок</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="20"/>
-      <source>Style name</source>
-      <translation>Название стиля</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="50"/>
-      <source>Add new...</source>
-      <translation>Добавить новый...</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="79"/>
-      <source>Renames the selected style</source>
-      <translation>Переименовывает выбранный стиль</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="82"/>
-      <source>Rename</source>
-      <translation>Переименовать</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="110"/>
-      <source>Deletes the selected style</source>
-      <translation>Удаляет выбранный стиль</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="113"/>
-      <source>Delete</source>
-      <translation>Удалить</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="164"/>
-      <source>Text</source>
-      <translation>Текст</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="173"/>
-      <source>Font size</source>
-      <translation>Размер шрифта</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="183"/>
-      <source>Line spacing</source>
-      <translation>Межстрочный интервал</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="193"/>
-      <source>Font name</source>
-      <translation>Шрифт</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="212"/>
-      <source>The font to use for texts and dimensions</source>
-      <translation>Шрифт для текстов и размеров</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="239"/>
-      <source>Units</source>
-      <translation>Единицы измерения</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="248"/>
-      <source>Scale multiplier</source>
-      <translation>Масштабный коэффициент</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="258"/>
-      <source>Decimals</source>
-      <translation>Десятичные</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="268"/>
-      <source>Unit override</source>
-      <translation>Единица переопределения</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="278"/>
-      <source>Show unit</source>
-      <translation>Показать единицы</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="331"/>
-      <source>Line and arrows</source>
-      <translation>Линия и стрелки</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="340"/>
-      <source>Line width</source>
-      <translation>Ширина линии</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="350"/>
-      <source>Extension overshoot</source>
-      <translation>Дополнительное расширение</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="360"/>
-      <source>Arrow size</source>
-      <translation>Размер стрелки</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="370"/>
-      <source>Show lines</source>
-      <translation>Показать линии</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="380"/>
-      <source>Dimension overshoot</source>
-      <translation>Нахлёст размерной линии</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="390"/>
-      <source>Extension lines</source>
-      <translation>Выносные линии</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="400"/>
-      <source>Arrow type</source>
-      <translation>Тип стрелки</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="410"/>
-      <source>Line / text color</source>
-      <translation>Цвет линии/текста</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="433"/>
-      <source>The width of the dimension lines</source>
-      <translation>Ширина размерных линий</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="436"/>
-      <source>px</source>
-      <translation>пикс.</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="446"/>
-      <source>The color of dimension lines, arrows and texts</source>
-      <translation>Цвет размерных линий, стрелок и текста</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="476"/>
-      <source>Dot</source>
-      <translation>Точка</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="486"/>
-      <source>Arrow</source>
-      <translation>Стрелка</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="491"/>
-      <source>Tick</source>
-      <translation>Зацеп</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="38"/>
-      <source>The name of your style. Existing style names can be edited.</source>
-      <translation>Название Вашего стиля. Существующие имена стилей могут быть изменены.</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="219"/>
-      <source>Font size in the system units</source>
-      <translation>Размер шрифта в единицах системы</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="180"/>
-      <source>Line spacing in system units</source>
-      <translation>Расстояние между линиями в единицах системы</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="285"/>
-      <source>A multiplier factor that affects the size of texts and markers</source>
-      <translation>Множитель, влияющий на размер текстов и маркеров</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="305"/>
-      <source>The number of decimals to show for dimension values</source>
-      <translation>Количество десятичных знаков для отображения размеров</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="298"/>
-      <source>Specify a valid length unit like mm, m, in, ft, to force displaying the dimension value in this unit</source>
-      <translation>Укажите допустимые единицы длины - мм, дюйм, фут, чтобы заставить отображать размер в этой единице</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="315"/>
-      <source>If it is checked it will show the unit next to the dimension value</source>
-      <translation>Если флажок установлен, то единица измерения будет отображена рядом со значением размера</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="534"/>
-      <source>The distance that the extension lines are additionally extended beyond the dimension line</source>
-      <translation>Расстояние на которое выносные линии дополнительно расширяют размерную линию</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="504"/>
-      <source>The size of the dimension arrows or markers in system units</source>
-      <translation>Размер размерных стрелок или маркеров в системных единицах</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="417"/>
-      <source>If it is checked it will display the dimension line</source>
-      <translation>Если флажок установлен, то будет отображена размерная линия</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="514"/>
-      <source>The distance that the dimension line is additionally extended</source>
-      <translation>Расстояние, на которое размерная линия дополнительно увеличена</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="524"/>
-      <source>The length of the extension lines</source>
-      <translation>Длина выносных линий</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="472"/>
-      <source>The type of arrows or markers to use at the end of dimension lines</source>
-      <translation>Тип стрелок или маркеров для использования в конце размерных линий</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="481"/>
-      <source>Circle</source>
-      <translation>Окружность</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="496"/>
-      <source>Tick-2</source>
-      <translation>Зацепление-2</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="120"/>
-      <source>Import styles from json file</source>
-      <translation>Импорт стилей из файла JSON</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="130"/>
-      <source>Export styles to json file</source>
-      <translation>Экспорт стилей в файл JSON</translation>
-    </message>
   </context>
   <context>
     <name>Draft</name>
     <message>
-      <location filename="importDXF.py" line="129"/>
-      <source>Download of dxf libraries failed.
-Please install the dxf Library addon manually
-from menu Tools -&gt; Addon Manager</source>
-      <translation>Ошибка при загрузке dxf библиотек. Пожалуйта установите библиотеку расширения dxf вручную из меню Инструменты-&gt; менеджер расширений</translation>
+      <location filename="pointarray.py" line="305"/>
+      <source>Point object doesn't have a discrete point, it cannot be used for an array.</source>
+      <translation>Выбранный объект не имеет дискретной точки, он не может быть использован для массива.</translation>
     </message>
     <message>
-      <location filename="init_tools.py" line="145"/>
-      <source>Draft creation tools</source>
-      <translation>Инструменты создания черновиков</translation>
+      <location filename="bspline.py" line="106"/>
+      <source>_BSpline.createGeometry: Closed with same first/last Point. Geometry not updated.</source>
+      <translation>_BSpline.createGeometry: Замкнут с той же первой/последней точкой. Геометрия не обновлена.</translation>
     </message>
     <message>
-      <location filename="init_tools.py" line="148"/>
-      <source>Draft annotation tools</source>
-      <translation>Инструменты заметок для Draft</translation>
+      <location filename="view_wpproxy.py" line="102"/>
+      <source>Writing camera position</source>
+      <translation>Записать позицию камеры</translation>
     </message>
     <message>
-      <location filename="init_tools.py" line="151"/>
-      <source>Draft modification tools</source>
-      <translation>Инструменты модификации черновика</translation>
+      <location filename="view_wpproxy.py" line="119"/>
+      <source>Writing objects shown/hidden state</source>
+      <translation>Запись состояния объектов показан/скрыт</translation>
     </message>
     <message>
       <location filename="InitGui.py" line="107"/>
       <source>Draft utility tools</source>
       <translation>Инструменты верстака набросок</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="166"/>
-      <source>&amp;Drafting</source>
-      <translation>&amp;Черчение</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="168"/>
-      <source>&amp;Annotation</source>
-      <translation>&amp;Заметка</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="170"/>
-      <source>&amp;Modification</source>
-      <translation>&amp;Модификация</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="172"/>
-      <source>&amp;Utilities</source>
-      <translation>&amp;Утилиты</translation>
     </message>
     <message>
       <location filename="InitGui.py" line="122"/>
@@ -1466,64 +1239,29 @@ from menu Tools -&gt; Addon Manager</source>
       <translation>Импорт/экспорт</translation>
     </message>
     <message>
-      <location filename="pointarray.py" line="305"/>
-      <source>Point object doesn't have a discrete point, it cannot be used for an array.</source>
-      <translation type="unfinished">Point object doesn't have a discrete point, it cannot be used for an array.</translation>
-    </message>
-    <message>
-      <location filename="bspline.py" line="106"/>
-      <source>_BSpline.createGeometry: Closed with same first/last Point. Geometry not updated.</source>
-      <translation type="unfinished">_BSpline.createGeometry: Closed with same first/last Point. Geometry not updated.</translation>
-    </message>
-    <message>
-      <location filename="view_wpproxy.py" line="102"/>
-      <source>Writing camera position</source>
-      <translation>Записать позицию камеры</translation>
-    </message>
-    <message>
-      <location filename="view_wpproxy.py" line="119"/>
-      <source>Writing objects shown/hidden state</source>
-      <translation type="unfinished">Writing objects shown/hidden state</translation>
-    </message>
-    <message>
-      <location filename="view_layer.py" line="402"/>
-      <source>Merge layer duplicates</source>
-      <translation>Объединить дубликаты слоя</translation>
-    </message>
-    <message>
-      <location filename="view_layer.py" line="407"/>
-      <source>Add new layer</source>
-      <translation>Добавить новый слой</translation>
-    </message>
-    <message>
-      <location filename="init_draft_statusbar.py" line="244"/>
+      <location filename="init_draft_statusbar.py" line="252"/>
       <source>Toggles Grid On/Off</source>
       <translation>Вкл/выкл Сетку</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="262"/>
+      <location filename="init_draft_statusbar.py" line="270"/>
       <source>Object snapping</source>
       <translation>Привязка к объекту</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="294"/>
+      <location filename="init_draft_statusbar.py" line="302"/>
       <source>Toggles Visual Aid Dimensions On/Off</source>
-      <translation type="unfinished">Toggles Visual Aid Dimensions On/Off</translation>
+      <translation>Вкл/выкл визуальные подсказки размеров</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="314"/>
+      <location filename="init_draft_statusbar.py" line="322"/>
       <source>Toggles Ortho On/Off</source>
-      <translation type="unfinished">Toggles Ortho On/Off</translation>
+      <translation>Вкл/выкл ортографический вид</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="332"/>
+      <location filename="init_draft_statusbar.py" line="340"/>
       <source>Toggles Constrain to Working Plane On/Off</source>
-      <translation type="unfinished">Toggles Constrain to Working Plane On/Off</translation>
-    </message>
-    <message>
-      <location filename="gui_utils.py" line="154"/>
-      <source>Unable to insert new object into a scaled part</source>
-      <translation>Невозможно вставить новый объект в масштабированную деталь</translation>
+      <translation>Включение/выключение ограничений на рабочей плоскости</translation>
     </message>
     <message>
       <location filename="task_orthoarray.py" line="157"/>
@@ -1586,6 +1324,13 @@ from menu Tools -&gt; Addon Manager</source>
       <translation>Создать клон</translation>
     </message>
     <message>
+      <location filename="importDXF.py" line="129"/>
+      <source>Download of dxf libraries failed.
+Please install the dxf Library addon manually
+from menu Tools -&gt; Addon Manager</source>
+      <translation>Ошибка при загрузке dxf библиотек. Пожалуйта установите библиотеку расширения dxf вручную из меню Инструменты-&gt; менеджер расширений</translation>
+    </message>
+    <message>
       <location filename="gui_clone.py" line="91"/>
       <source>Clone</source>
       <translation>Клонировать</translation>
@@ -1594,6 +1339,116 @@ from menu Tools -&gt; Addon Manager</source>
       <location filename="gui_lineslope.py" line="91"/>
       <source>Slope</source>
       <translation>Наклон</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="273"/>
+      <source>Save style</source>
+      <translation>Сохранить стиль</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="274"/>
+      <source>Name of this new style:</source>
+      <translation>Название текущего нового стиля:</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="281"/>
+      <source>Warning</source>
+      <translation>Внимание</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="282"/>
+      <source>Name exists. Overwrite?</source>
+      <translation>Указанное название уже существует. Перезаписать?</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="317"/>
+      <source>Error: json module not found. Unable to save style</source>
+      <translation>Ошибка: модуль json не найден. Невзможно сохранить стиль</translation>
+    </message>
+    <message>
+      <location filename="gui_hatch.py" line="48"/>
+      <source>You must choose a base object before using this command</source>
+      <translation>Вы должны выбрать базовый объект перед использованием этой команды</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="65"/>
+      <source>Fillet</source>
+      <translation>Скругление</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="68"/>
+      <source>Creates a fillet between two selected wires or edges.</source>
+      <translation>Создаёт скругление между двумя ломанными или рёбрами.</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="90"/>
+      <source>Delete original objects</source>
+      <translation>Удалить оригинальные объекты</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="96"/>
+      <source>Create chamfer</source>
+      <translation>Создать фаску</translation>
+    </message>
+    <message>
+      <location filename="gui_offset.py" line="329"/>
+      <source>Offset direction is not defined. Please move the mouse on either side of the object first to indicate a direction</source>
+      <translation>Направление смещения не определено. Пожалуйста, сначала переместите мышку в любую сторону от объекта, чтобы указать направление</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="48"/>
+      <source>Arc tools</source>
+      <translation>Инструменты построения дуги</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="56"/>
+      <source>Bezier tools</source>
+      <translation>Инструменты Безье</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="145"/>
+      <source>Draft creation tools</source>
+      <translation>Инструменты создания черновиков</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="148"/>
+      <source>Draft annotation tools</source>
+      <translation>Инструменты заметок для Draft</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="151"/>
+      <source>Draft modification tools</source>
+      <translation>Инструменты модификации черновика</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="166"/>
+      <source>&amp;Drafting</source>
+      <translation>&amp;Черчение</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="168"/>
+      <source>&amp;Annotation</source>
+      <translation>&amp;Заметка</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="170"/>
+      <source>&amp;Modification</source>
+      <translation>&amp;Модификация</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="172"/>
+      <source>&amp;Utilities</source>
+      <translation>&amp;Утилиты</translation>
+    </message>
+    <message>
+      <location filename="gui_arrays.py" line="65"/>
+      <source>Array tools</source>
+      <translation>Инструменты для работы с массивами</translation>
+    </message>
+    <message>
+      <location filename="gui_arrays.py" line="68"/>
+      <source>Create various types of arrays, including rectangular, polar, circular, path, and point</source>
+      <translation>Создать различные типы массивов, включая прямоугольный, полярный, круговой, по пути и по точкам</translation>
     </message>
     <message>
       <location filename="gui_circulararray.py" line="66"/>
@@ -1606,10 +1461,10 @@ from menu Tools -&gt; Addon Manager</source>
 creating various circular layers.
 
 The array can be turned into an orthogonal or a polar array by changing its type.</source>
-      <translation type="unfinished">Creates copies of the selected object, and places the copies in a radial pattern
-creating various circular layers.
+      <translation>Создает копии выбранного объекта, и размещает копии в радиальном шаблоне
+создавая различные круглые слои.
 
-The array can be turned into an orthogonal or a polar array by changing its type.</translation>
+Массив может быть преобразован в ортогональный или полярный массив, изменяя его тип.</translation>
     </message>
     <message>
       <location filename="gui_polararray.py" line="66"/>
@@ -1628,16 +1483,6 @@ The array can be turned into an orthogonal or a circular array by changing its t
 Массив может быть преобразован в ортогональный или круговой массив, если изменить его тип.</translation>
     </message>
     <message>
-      <location filename="gui_arrays.py" line="65"/>
-      <source>Array tools</source>
-      <translation>Инструменты для работы с массивами</translation>
-    </message>
-    <message>
-      <location filename="gui_arrays.py" line="68"/>
-      <source>Create various types of arrays, including rectangular, polar, circular, path, and point</source>
-      <translation type="unfinished">Create various types of arrays, including rectangular, polar, circular, path, and point</translation>
-    </message>
-    <message>
       <location filename="gui_orthoarray.py" line="66"/>
       <source>Array</source>
       <translation>Массив</translation>
@@ -1648,470 +1493,25 @@ The array can be turned into an orthogonal or a circular array by changing its t
 meaning the copies follow the specified direction in the X, Y, Z axes.
 
 The array can be turned into a polar or a circular array by changing its type.</source>
-      <translation type="unfinished">Creates copies of the selected object, and places the copies in an orthogonal pattern,
-meaning the copies follow the specified direction in the X, Y, Z axes.
+      <translation>Создает копии выбранного объекта и размещает копии в ортогональном шаблоне,
+означает копии следуют указанному направлению в осях X, Y, Z.
 
-The array can be turned into a polar or a circular array by changing its type.</translation>
+Массив может быть преобразован в полярный или круговой массив путем изменения его типа.</translation>
     </message>
     <message>
-      <location filename="gui_fillets.py" line="65"/>
-      <source>Fillet</source>
-      <translation>Скругление</translation>
+      <location filename="gui_utils.py" line="154"/>
+      <source>Unable to insert new object into a scaled part</source>
+      <translation>Невозможно вставить новый объект в масштабированную деталь</translation>
     </message>
     <message>
-      <location filename="gui_fillets.py" line="68"/>
-      <source>Creates a fillet between two selected wires or edges.</source>
-      <translation type="unfinished">Creates a fillet between two selected wires or edges.</translation>
+      <location filename="view_layer.py" line="402"/>
+      <source>Merge layer duplicates</source>
+      <translation>Объединить дубликаты слоя</translation>
     </message>
     <message>
-      <location filename="gui_fillets.py" line="90"/>
-      <source>Delete original objects</source>
-      <translation>Удалить оригинальные объекты</translation>
-    </message>
-    <message>
-      <location filename="gui_fillets.py" line="96"/>
-      <source>Create chamfer</source>
-      <translation>Создать фаску</translation>
-    </message>
-    <message>
-      <location filename="gui_offset.py" line="329"/>
-      <source>Offset direction is not defined. Please move the mouse on either side of the object first to indicate a direction</source>
-      <translation type="unfinished">Offset direction is not defined. Please move the mouse on either side of the object first to indicate a direction</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="273"/>
-      <source>Save style</source>
-      <translation>Сохранить стиль</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="274"/>
-      <source>Name of this new style:</source>
-      <translation>Название текущего нового стиля:</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="282"/>
-      <source>Name exists. Overwrite?</source>
-      <translation>Указанное название уже существует. Перезаписать?</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="317"/>
-      <source>Error: json module not found. Unable to save style</source>
-      <translation>Ошибка: модуль json не найден. Невзможно сохранить стиль</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="281"/>
-      <source>Warning</source>
-      <translation>Внимание</translation>
-    </message>
-    <message>
-      <location filename="gui_hatch.py" line="48"/>
-      <source>You must choose a base object before using this command</source>
-      <translation type="unfinished">You must choose a base object before using this command</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftCircularArrayTaskPanel</name>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="26"/>
-      <source>Circular array</source>
-      <translation>Круговой массив</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="57"/>
-      <source>The coordinates of the point through which the axis of rotation passes.
-Change the direction of the axis itself in the property editor.</source>
-      <translation>Координаты точки, через которую проходит ось вращения.
-Измените направление оси в редакторе свойств.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="61"/>
-      <source>Center of rotation</source>
-      <translation>Центр вращения</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="69"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="76"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="83"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="131"/>
-      <source>Reset the coordinates of the center of rotation.</source>
-      <translation>Сбросить координаты центра вращения.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="134"/>
-      <source>Reset point</source>
-      <translation>Сбросить точку</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="146"/>
-      <source>If checked, the resulting objects in the array will be fused if they touch each other.
-This only works if "Link array" is off.</source>
-      <translation>Если отмечено, то результирующие объекты в массиве будут слиты, если касаются друг друга.
-Это работает только в том случае, если "Связь массивов" отключена.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="150"/>
-      <source>Fuse</source>
-      <translation>Объединение</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="157"/>
-      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
-A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
-      <translation>Если отмечено, результирующим объектом будет "Массив ссылок" вместо обычного массива.
-Массив ссылок более эффективен при создании нескольких копий, но к нему нельзя применить операцию слияния.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="161"/>
-      <source>Link array</source>
-      <translation>Массив ссылок</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="186"/>
-      <source>Distance from one element in one ring of the array to the next element in the same ring.
-It cannot be zero.</source>
-      <translation>Расстояние от одного элемента в одном кольце массива до следующего элемента в этом же кольце. Оно не может быть нулем.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="179"/>
-      <source>Tangential distance</source>
-      <translation>Тангенциальное расстояние</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="210"/>
-      <source>Distance from one layer of objects to the next layer of objects.</source>
-      <translation>Расстояние от одного слоя объектов до следующего слоя объектов.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="203"/>
-      <source>Radial distance</source>
-      <translation>Радиальное расстояние</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="261"/>
-      <source>The number of symmetry lines in the circular array.</source>
-      <translation>Количество линий симметрии в круговом массиве.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="250"/>
-      <source>Number of circular layers or rings to create, including a copy of the original object.
-It must be at least 2.</source>
-      <translation>Количество создаваемых круговых массивов или колец, включая копию исходного объекта.
-Оно должно быть не менее 2.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="254"/>
-      <source>Number of circular layers</source>
-      <translation>Количество круговых слоев</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="264"/>
-      <source>Symmetry</source>
-      <translation>Симметрия</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="273"/>
-      <source>(Placeholder for the icon)</source>
-      <translation>(Держатель места для значка)</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftOrthoArrayTaskPanel</name>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="26"/>
-      <source>Orthogonal array</source>
-      <translation>Ортогональный массив</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="44"/>
-      <source>Distance between the elements in the Z direction.
-Normally, only the Z value is necessary; the other two values can give an additional shift in their respective directions.
-Negative values will result in copies produced in the negative direction.</source>
-      <translation>Расстояние между элементами в направлении Z.
-Обычно требуется только значение Z. Остальные два значения могут дать дополнительный сдвиг в их соответствующих направлениях.
-Отрицательные значения приводят к созданию копий в отрицательном направлении.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="49"/>
-      <source>Z intervals</source>
-      <translation>Z интервалы</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="385"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="392"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="378"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="353"/>
-      <source>Reset the distances.</source>
-      <translation>Сбросить расстояния.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="125"/>
-      <source>Reset Z</source>
-      <translation>Сбросить Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="137"/>
-      <source>If checked, the resulting objects in the array will be fused if they touch each other.
-This only works if "Link array" is off.</source>
-      <translation>Если отмечено, то результирующие объекты в массиве будут слиты, если касаются друг друга.
-Это работает только в том случае, если "Связь массивов" отключена.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="141"/>
-      <source>Fuse</source>
-      <translation>Объединение</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="148"/>
-      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
-A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
-      <translation>Если отмечено, результирующим объектом будет "Массив ссылок" вместо обычного массива.
-Массив ссылок более эффективен при создании нескольких копий, но к нему нельзя применить операцию слияния.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="152"/>
-      <source>Link array</source>
-      <translation>Массив ссылок</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="177"/>
-      <source>(Placeholder for the icon)</source>
-      <translation>(Держатель места для значка)</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="184"/>
-      <source>Distance between the elements in the X direction.
-Normally, only the X value is necessary; the other two values can give an additional shift in their respective directions.
-Negative values will result in copies produced in the negative direction.</source>
-      <translation>Расстояние между элементами в направлении X.
-Обычно требуется только значение X. Остальные два значения могут дать дополнительный сдвиг в их соответствующих направлениях.
-Отрицательные значения приводят к созданию копий в отрицательном направлении.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="189"/>
-      <source>X intervals</source>
-      <translation>X интервалы</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="265"/>
-      <source>Reset X</source>
-      <translation>Сбросить X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="275"/>
-      <source>Distance between the elements in the Y direction.
-Normally, only the Y value is necessary; the other two values can give an additional shift in their respective directions.
-Negative values will result in copies produced in the negative direction.</source>
-      <translation>Расстояние между элементами в направлении Y.
-Обычно требуется только значение Y. Остальные два значения могут дать дополнительный сдвиг в их соответствующих направлениях.
-Отрицательные значения приводят к созданию копий в отрицательном направлении.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="280"/>
-      <source>Y intervals</source>
-      <translation>Y интервалы</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="356"/>
-      <source>Reset Y</source>
-      <translation>Сбросить Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="366"/>
-      <source>Number of elements in the array in the specified direction, including a copy of the original object.
-The number must be at least 1 in each direction.</source>
-      <translation>Количество элементов массива в указанном направлении, включая копию исходного объекта. Количество должно быть не менее 1 в каждом направлении.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="370"/>
-      <source>Number of elements</source>
-      <translation>Количество элементов</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftPolarArrayTaskPanel</name>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="26"/>
-      <source>Polar array</source>
-      <translation>Массив вращения</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="57"/>
-      <source>The coordinates of the point through which the axis of rotation passes.
-Change the direction of the axis itself in the property editor.</source>
-      <translation>Координаты точки, через которую проходит ось вращения.
-Измените направление оси в редакторе свойств.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="61"/>
-      <source>Center of rotation</source>
-      <translation>Центр вращения</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="69"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="115"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="122"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="131"/>
-      <source>Reset the coordinates of the center of rotation.</source>
-      <translation>Сбросить координаты центра вращения.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="134"/>
-      <source>Reset point</source>
-      <translation>Сбросить точку</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="146"/>
-      <source>If checked, the resulting objects in the array will be fused if they touch each other.
-This only works if "Link array" is off.</source>
-      <translation>Если отмечено, то результирующие объекты в массиве будут слиты, если касаются друг друга.
-Это работает только в том случае, если "Связь массивов" отключена.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="150"/>
-      <source>Fuse</source>
-      <translation>Объединение</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="157"/>
-      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
-A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
-      <translation>Если отмечено, результирующим объектом будет "Массив ссылок" вместо обычного массива.
-Массив ссылок более эффективен при создании нескольких копий, но к нему нельзя применить операцию слияния.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="161"/>
-      <source>Link array</source>
-      <translation>Массив ссылок</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="187"/>
-      <source>Sweeping angle of the polar distribution.
-A negative angle produces a polar pattern in the opposite direction.
-The maximum absolute value is 360 degrees.</source>
-      <translation>Угол сектора круга.
-Отрицательное значение начертит чектор в противоположном направлении.
-Максимальное абсолютное значение составляет 360 градусов.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="180"/>
-      <source>Polar angle</source>
-      <translation>Полярный угол</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="219"/>
-      <source>Number of elements in the array, including a copy of the original object.
-It must be at least 2.</source>
-      <translation>Количество элементов массива, включая исходную копию объекта.
-Оно должно быть не менее 2.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="212"/>
-      <source>Number of elements</source>
-      <translation>Количество элементов</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="235"/>
-      <source>(Placeholder for the icon)</source>
-      <translation>(Держатель места для значка)</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftShapeStringGui</name>
-    <message>
-      <location filename="TaskShapeString.ui" line="26"/>
-      <source>ShapeString</source>
-      <translation>Текст в кривую</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="115"/>
-      <source>Text to be made into ShapeString</source>
-      <translation>Текст, преобразуемый в ShapeString</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="122"/>
-      <source>String</source>
-      <translation>Строка</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="133"/>
-      <source>Height</source>
-      <translation>Высота</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="140"/>
-      <source>Height of the result</source>
-      <translation>Высота результата</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="66"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="83"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="90"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="101"/>
-      <source>Font file</source>
-      <translation>Файл шрифта</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="73"/>
-      <source>Enter coordinates or select point with mouse.</source>
-      <translation>Введите координаты или выберите точку мышкой.</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="186"/>
-      <source>Reset 3d point selection</source>
-      <translation>Сбросить выбор трёхмерной точки</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="192"/>
-      <source>Reset Point</source>
-      <translation>Сбросить точку</translation>
+      <location filename="view_layer.py" line="407"/>
+      <source>Add new layer</source>
+      <translation>Добавить новый слой</translation>
     </message>
   </context>
   <context>
@@ -2129,6 +1529,19 @@ It creates a construction group if it doesn't exist.</source>
       <translation>Добавляет выбранные объекты в группу Конструкция,
 и изменяет их отображение в соответствии со стилем данной группы.
 Данное действие создаст группу Конструкция, если ее ещё не было.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_AddNamedGroup</name>
+    <message>
+      <location filename="gui_groups.py" line="361"/>
+      <source>Add a new named group</source>
+      <translation>Добавить новую названо группу</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="365"/>
+      <source>Add a new group with a given name.</source>
+      <translation>Добавить новую группу с заданный название.</translation>
     </message>
   </context>
   <context>
@@ -2171,6 +1584,11 @@ Create a group first to use this tool.</source>
       <source>Annotation styles...</source>
       <translation>Стили заметок...</translation>
     </message>
+    <message>
+      <location filename="gui_annotationstyleeditor.py" line="82"/>
+      <source>Manage or create annotation styles</source>
+      <translation>Управление или создание стилей заметок</translation>
+    </message>
   </context>
   <context>
     <name>Draft_ApplyStyle</name>
@@ -2182,7 +1600,7 @@ Create a group first to use this tool.</source>
     <message>
       <location filename="gui_styles.py" line="50"/>
       <source>Applies the current style defined in the toolbar (line width and colors) to the selected objects and groups.</source>
-      <translation type="unfinished">Applies the current style defined in the toolbar (line width and colors) to the selected objects and groups.</translation>
+      <translation>Применяет текущий стиль, определенный на панели инструментов (ширина и цвета) к выбранным объектам и группам.</translation>
     </message>
   </context>
   <context>
@@ -2213,6 +1631,21 @@ CTRL to snap, SHIFT to constrain.</source>
     </message>
   </context>
   <context>
+    <name>Draft_Arc_3Points</name>
+    <message>
+      <location filename="gui_arcs.py" line="487"/>
+      <source>Arc by 3 points</source>
+      <translation>Дуга по 3 точкам</translation>
+    </message>
+    <message>
+      <location filename="gui_arcs.py" line="490"/>
+      <source>Creates a circular arc by picking 3 points.
+CTRL to snap, SHIFT to constrain.</source>
+      <translation>Создаёт дугу окружности, выбрав 3 точки.
+CTRL для привязки, SHIFT для ограничения.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_Array</name>
     <message>
       <location filename="gui_array_simple.py" line="68"/>
@@ -2225,10 +1658,34 @@ CTRL to snap, SHIFT to constrain.</source>
 By default, it is a 2x2 orthogonal array.
 Once the array is created its type can be changed
 to polar or circular, and its properties can be modified.</source>
-      <translation type="unfinished">Creates an array from a selected object.
-By default, it is a 2x2 orthogonal array.
-Once the array is created its type can be changed
-to polar or circular, and its properties can be modified.</translation>
+      <translation>Создает массив из выбранного объекта.
+По умолчанию это ортогональный массив 2x2.
+После создания массива его тип может быть изменен
+на полярный или круговой, и его свойства могут быть изменены.</translation>
+    </message>
+    <message>
+      <location filename="gui_orthoarray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in an orthogonal pattern,
+meaning the copies follow the specified direction in the X, Y, Z axes.
+
+The array can be turned into a polar or a circular array by changing its type.</source>
+      <translation>Создает копии выбранного объекта и размещает копии в ортогональном шаблоне,
+означает копии следуют указанному направлению в осях X, Y, Z.
+
+Массив может быть преобразован в полярный или круговой массив путем изменения его типа.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_ArrayTools</name>
+    <message>
+      <location filename="gui_arrays.py" line="65"/>
+      <source>Array tools</source>
+      <translation>Инструменты для работы с массивами</translation>
+    </message>
+    <message>
+      <location filename="gui_arrays.py" line="68"/>
+      <source>Create various types of arrays, including rectangular, polar, circular, path, and point</source>
+      <translation>Создать различные типы массивов, включая прямоугольный, полярный, круговой, по пути и по точкам</translation>
     </message>
   </context>
   <context>
@@ -2241,7 +1698,7 @@ to polar or circular, and its properties can be modified.</translation>
     <message>
       <location filename="gui_groups.py" line="266"/>
       <source>Select a group to add all Draft and Arch objects to.</source>
-      <translation type="unfinished">Select a group to add all Draft and Arch objects to.</translation>
+      <translation>Выберите группу к которой добавить все объекты типа Эскиз и Архитектурный.</translation>
     </message>
   </context>
   <context>
@@ -2254,15 +1711,27 @@ to polar or circular, and its properties can be modified.</translation>
     <message>
       <location filename="gui_splines.py" line="63"/>
       <source>Creates a multiple-point B-spline. CTRL to snap, SHIFT to constrain.</source>
-      <translation type="unfinished">Creates a multiple-point B-spline. CTRL to snap, SHIFT to constrain.</translation>
+      <translation>Создает многоточечный В-сплайн. CTRL - привязать, SHIFT - ограничить.</translation>
     </message>
   </context>
   <context>
     <name>Draft_BezCurve</name>
     <message>
       <location filename="gui_beziers.py" line="64"/>
+      <source>BÃ©zier curve</source>
+      <translation>Кривая Безье</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="64"/>
       <source>Bezier curve</source>
       <translation>Кривая Безье</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="67"/>
+      <source>Creates an N-degree BÃ©zier curve. The more points you pick, the higher the degree.
+CTRL to snap, SHIFT to constrain.</source>
+      <translation>Создает кривую Безье N-степени. Чем больше точек вы укажете, тем выше будет степень.
+CTRL для привязки, SHIFT для ограничения.</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="67"/>
@@ -2276,8 +1745,18 @@ CTRL для привязки, SHIFT для ограничения.</translation>
     <name>Draft_BezierTools</name>
     <message>
       <location filename="gui_beziers.py" line="475"/>
+      <source>BÃ©zier tools</source>
+      <translation>Инструменты кривой Безье</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="475"/>
       <source>Bezier tools</source>
       <translation>Инструменты Безье</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="478"/>
+      <source>Create various types of BÃ©zier curves.</source>
+      <translation>Создать различные типы кривых Безье.</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="478"/>
@@ -2300,6 +1779,25 @@ CTRL to snap, ALT to select tangent objects.</source>
     </message>
   </context>
   <context>
+    <name>Draft_CircularArray</name>
+    <message>
+      <location filename="gui_circulararray.py" line="65"/>
+      <source>Circular array</source>
+      <translation>Круговой массив</translation>
+    </message>
+    <message>
+      <location filename="gui_circulararray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in a radial pattern
+creating various circular layers.
+
+The array can be turned into an orthogonal or a polar array by changing its type.</source>
+      <translation>Создает копии выбранного объекта, и размещает копии в радиальном шаблоне
+создавая различные круглые слои.
+
+Массив может быть преобразован в ортогональный или полярный массив, изменяя его тип.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_Clone</name>
     <message>
       <location filename="gui_clone.py" line="70"/>
@@ -2310,25 +1808,17 @@ CTRL to snap, ALT to select tangent objects.</source>
       <location filename="gui_clone.py" line="73"/>
       <source>Creates a clone of the selected objects.
 The resulting clone can be scaled in each of its three directions.</source>
-      <translation type="unfinished">Creates a clone of the selected objects.
-The resulting clone can be scaled in each of its three directions.</translation>
-    </message>
-  </context>
-  <context>
-    <name>Draft_CloseLine</name>
-    <message>
-      <location filename="gui_lineops.py" line="124"/>
-      <source>Close Line</source>
-      <translation>Замкнуть линию</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="125"/>
-      <source>Closes the line being drawn, and finishes the operation.</source>
-      <translation type="unfinished">Closes the line being drawn, and finishes the operation.</translation>
+      <translation>Создаёт клон выбранных объектов.
+Результирующий клон можно масштабировать в каждом из трех направлений.</translation>
     </message>
   </context>
   <context>
     <name>Draft_CubicBezCurve</name>
+    <message>
+      <location filename="gui_beziers.py" line="242"/>
+      <source>Cubic BÃ©zier curve</source>
+      <translation>Кубическая кривая Безье</translation>
+    </message>
     <message>
       <location filename="gui_beziers.py" line="242"/>
       <source>Cubic bezier curve</source>
@@ -2336,12 +1826,21 @@ The resulting clone can be scaled in each of its three directions.</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="245"/>
+      <source>Creates a BÃ©zier curve made of 2nd degree (quadratic) and 3rd degree (cubic) segments. Click and drag to define each segment.
+After the curve is created you can go back to edit each control point and set the properties of each knot.
+CTRL to snap, SHIFT to constrain.</source>
+      <translation>Создает кривую Безье из 2-й степени (квадратичных) и 3-й степени (кубических) сегментов. Нажмите и перетащите для определения каждого сегмента.
+После создания кривой вы можете вернуться к редактированию каждой контрольной точки и задать свойства каждого узла.
+CTRL для привязки, SHIFT для ограничения.</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="245"/>
       <source>Creates a Bezier curve made of 2nd degree (quadratic) and 3rd degree (cubic) segments. Click and drag to define each segment.
 After the curve is created you can go back to edit each control point and set the properties of each knot.
 CTRL to snap, SHIFT to constrain.</source>
-      <translation type="unfinished">Creates a Bezier curve made of 2nd degree (quadratic) and 3rd degree (cubic) segments. Click and drag to define each segment.
-After the curve is created you can go back to edit each control point and set the properties of each knot.
-CTRL to snap, SHIFT to constrain.</translation>
+      <translation>Создает кривую Безье из 2-й степени (квадратичных) и 3-й степени (кубических) сегментов. Нажмите и перетащите для определения каждого сегмента.
+После создания кривой вы можете вернуться к редактированию каждой контрольной точки и задать свойства каждого узла.
+CTRL для привязки, SHIFT для ограничения.</translation>
     </message>
   </context>
   <context>
@@ -2378,18 +1877,17 @@ You may select a single line or single circular arc before launching this comman
 to create the corresponding linked dimension.
 You may also select an 'App::MeasureDistance' object before launching this command
 to turn it into a 'Draft Dimension' object.</source>
-      <translation type="unfinished">Creates a dimension.
+      <translation>Создать размер.
 
-- Pick three points to create a simple linear dimension.
-- Select a straight line to create a linear dimension linked to that line.
-- Select an arc or circle to create a radius or diameter dimension linked to that arc.
-- Select two straight lines to create an angular dimension between them.
-CTRL to snap, SHIFT to constrain, ALT to select an edge or arc.
+- Выберите три точки, чтобы создать простой линейный размер.
+- Выберите прямую линию для создания линейного размера, связанного с этой линией.
+- Выберите дугу или круг, чтобы создать радиус или размер диаметра, связанный с этой дугой.
+- Выберите две прямые линии, чтобы создать угловой размер между ними.
+CTRL для привязки, SHIFT для ограничения, ALT для выбора ребра или дуги.
 
-You may select a single line or single circular arc before launching this command
-to create the corresponding linked dimension.
-You may also select an 'App::MeasureDistance' object before launching this command
-to turn it into a 'Draft Dimension' object.</translation>
+Вы можете выбрать одну линию или одну круговую дугу перед запуском этой команды
+для создания соответствующего связанного измерения.
+Вы также можете выбрать объект 'App::MeasureDistance' перед запуском этой команды чтобы превратить его в объект 'Эскизный размер'.</translation>
     </message>
   </context>
   <context>
@@ -2421,9 +1919,9 @@ For example, it explodes the selected polylines into simpler faces, wires, and t
       <source>Convert bidirectionally between Draft objects and Sketches.
 Many Draft objects will be converted into a single non-constrained Sketch.
 However, a single sketch with disconnected traces will be converted into several individual Draft objects.</source>
-      <translation type="unfinished">Convert bidirectionally between Draft objects and Sketches.
-Many Draft objects will be converted into a single non-constrained Sketch.
-However, a single sketch with disconnected traces will be converted into several individual Draft objects.</translation>
+      <translation>Конвертирует двунаправленно между объектами чертежа и эскизами.
+Многие объекты чертежа будут преобразованы в один неограниченный эскиз.
+Однако один эскиз с отсоединенными трассировками будет преобразован в несколько отдельных объектов чертежа.</translation>
     </message>
   </context>
   <context>
@@ -2438,9 +1936,9 @@ However, a single sketch with disconnected traces will be converted into several
       <source>Creates a 2D projection on a Drawing Workbench page from the selected objects.
 This command is OBSOLETE since the Drawing Workbench became obsolete in 0.17.
 Use TechDraw Workbench instead for generating technical drawings.</source>
-      <translation type="unfinished">Creates a 2D projection on a Drawing Workbench page from the selected objects.
-This command is OBSOLETE since the Drawing Workbench became obsolete in 0.17.
-Use TechDraw Workbench instead for generating technical drawings.</translation>
+      <translation>Создает 2D проекцию на листе верстака Drawing из выбранных объектов.
+Эта команда УСТАРЕВШАЯ с момента устаревания верстака Drawing в 0.17.
+Вместо этого используйте верстак TechDraw для создания технических рисунков.</translation>
     </message>
   </context>
   <context>
@@ -2470,7 +1968,7 @@ on supported nodes and on supported objects.</source>
     <message>
       <location filename="gui_ellipses.py" line="62"/>
       <source>Creates an ellipse. CTRL to snap.</source>
-      <translation type="unfinished">Creates an ellipse. CTRL to snap.</translation>
+      <translation>Создать эллипс. CTRL для привязки.</translation>
     </message>
   </context>
   <context>
@@ -2483,20 +1981,20 @@ on supported nodes and on supported objects.</source>
     <message>
       <location filename="gui_facebinders.py" line="62"/>
       <source>Creates a facebinder object from selected faces.</source>
-      <translation type="unfinished">Creates a facebinder object from selected faces.</translation>
+      <translation>Создает объект граневяз, состоящий из выбранных граней.</translation>
     </message>
   </context>
   <context>
-    <name>Draft_FinishLine</name>
+    <name>Draft_Fillet</name>
     <message>
-      <location filename="gui_lineops.py" line="98"/>
-      <source>Finish line</source>
-      <translation type="unfinished">Finish line</translation>
+      <location filename="gui_fillets.py" line="64"/>
+      <source>Fillet</source>
+      <translation>Скругление</translation>
     </message>
     <message>
-      <location filename="gui_lineops.py" line="99"/>
-      <source>Finishes a line without closing it.</source>
-      <translation type="unfinished">Finishes a line without closing it.</translation>
+      <location filename="gui_fillets.py" line="67"/>
+      <source>Creates a fillet between two selected wires or edges.</source>
+      <translation>Создаёт скругление между двумя ломанными или рёбрами.</translation>
     </message>
   </context>
   <context>
@@ -2525,6 +2023,11 @@ If other objects are selected they are ignored.</source>
       <location filename="gui_hatch.py" line="41"/>
       <source>Create hatches on selected faces</source>
       <translation type="unfinished">Create hatches on selected faces</translation>
+    </message>
+    <message>
+      <location filename="gui_hatch.py" line="42"/>
+      <source>Creates hatches on the faces of a selected object</source>
+      <translation type="unfinished">Creates hatches on the faces of a selected object</translation>
     </message>
   </context>
   <context>
@@ -2679,6 +2182,25 @@ CTRL to snap, SHIFT to constrain. Hold ALT and click to create a copy with each 
     </message>
   </context>
   <context>
+    <name>Draft_OrthoArray</name>
+    <message>
+      <location filename="gui_orthoarray.py" line="65"/>
+      <source>Array</source>
+      <translation>Массив</translation>
+    </message>
+    <message>
+      <location filename="gui_orthoarray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in an orthogonal pattern,
+meaning the copies follow the specified direction in the X, Y, Z axes.
+
+The array can be turned into a polar or a circular array by changing its type.</source>
+      <translation>Создает копии выбранного объекта и размещает копии в ортогональном шаблоне,
+означает копии следуют указанному направлению в осях X, Y, Z.
+
+Массив может быть преобразован в полярный или круговой массив путем изменения его типа.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_PathArray</name>
     <message>
       <location filename="gui_patharray.py" line="73"/>
@@ -2796,6 +2318,25 @@ A 'Point link array' is more efficient when handling many copies.</translation>
     </message>
   </context>
   <context>
+    <name>Draft_PolarArray</name>
+    <message>
+      <location filename="gui_polararray.py" line="65"/>
+      <source>Polar array</source>
+      <translation>Массив вращения</translation>
+    </message>
+    <message>
+      <location filename="gui_polararray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in a polar pattern
+defined by a center of rotation and its angle.
+
+The array can be turned into an orthogonal or a circular array by changing its type.</source>
+      <translation>Создает копии выбранного объекта и размещает копии в виде сегмента окружности,
+определенного центром вращения и его углами.
+
+Массив может быть преобразован в ортогональный или круговой массив, если изменить его тип.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_Polygon</name>
     <message>
       <location filename="gui_polygons.py" line="57"/>
@@ -2873,6 +2414,11 @@ those that are at the same level as this object, including the upper group that 
 If the selection is a simple object inside a group, it will select the "brother" objects, that is,
 those that are at the same level as this object, including the upper group that contains them all.</translation>
     </message>
+    <message>
+      <location filename="gui_groups.py" line="167"/>
+      <source>Selects the contents of selected groups. For selected non-group objects, the contents of the group they are in is selected.</source>
+      <translation>Выбирает содержимое выбранных групп. Для выбранных объектов вне группы выбирается содержимое группы, в которой они находятся.</translation>
+    </message>
   </context>
   <context>
     <name>Draft_SelectPlane</name>
@@ -2899,7 +2445,7 @@ You may also select a three vertices or a Working Plane Proxy.</translation>
     <message>
       <location filename="gui_setstyle.py" line="57"/>
       <source>Sets default styles</source>
-      <translation type="unfinished">Sets default styles</translation>
+      <translation>Устанавливает стили по умолчанию</translation>
     </message>
   </context>
   <context>
@@ -2907,7 +2453,7 @@ You may also select a three vertices or a Working Plane Proxy.</translation>
     <message>
       <location filename="gui_shape2dview.py" line="59"/>
       <source>Shape 2D view</source>
-      <translation type="unfinished">Shape 2D view</translation>
+      <translation>2D вид</translation>
     </message>
     <message>
       <location filename="gui_shape2dview.py" line="62"/>
@@ -2968,19 +2514,6 @@ If a polyline is selected, it will apply the slope transformation to each of its
 
 The slope will always change the Z value, therefore this command only works well for
 straight Draft lines that are drawn in the XY plane. Selected objects that aren't single lines will be ignored.</translation>
-    </message>
-  </context>
-  <context>
-    <name>Draft_Snap</name>
-    <message>
-      <location filename="gui_snapper.py" line="1535"/>
-      <source>Toggles Grid On/Off</source>
-      <translation>Вкл/выкл Сетку</translation>
-    </message>
-    <message>
-      <location filename="gui_snapper.py" line="1536"/>
-      <source>Toggle Draft Grid</source>
-      <translation>Вкл/выкл сетку Draft</translation>
     </message>
   </context>
   <context>
@@ -3319,19 +2852,6 @@ CTRL привязка, SHIFT ограничивает текущий сегме�
     </message>
   </context>
   <context>
-    <name>Draft_UndoLine</name>
-    <message>
-      <location filename="gui_lineops.py" line="151"/>
-      <source>Undo last segment</source>
-      <translation>Отменить последний сегмент</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="152"/>
-      <source>Undoes the last drawn segment of the line being drawn.</source>
-      <translation>Отменить последний нарисованный сегмент рисуемой линии.</translation>
-    </message>
-  </context>
-  <context>
     <name>Draft_Upgrade</name>
     <message>
       <location filename="gui_upgrade.py" line="58"/>
@@ -3394,1907 +2914,11 @@ Then you can use it to save a different camera position and objects' states any 
     </message>
   </context>
   <context>
-    <name>Form</name>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="14"/>
-      <source>Working plane setup</source>
-      <translation>Установка рабочей плоскости</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="20"/>
-      <source>Select a face or working plane proxy or 3 vertices.
-Or choose one of the options below</source>
-      <translation>Выберите грань или рабочую плоскость прокси или 3 вершины, или выберите один из вариантов ниже</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="31"/>
-      <source>Sets the working plane to the XY plane (ground plane)</source>
-      <translation>Задает рабочую плоскость к плоскости XY (плоскость земли)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="34"/>
-      <source>Top (XY)</source>
-      <translation>Верх (XY)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="41"/>
-      <source>Sets the working plane to the XZ plane (front plane)</source>
-      <translation>Задаёт рабочую плоскость к плоскости XZ (передняя плоскость)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="44"/>
-      <source>Front (XZ)</source>
-      <translation>Фронт (XZ)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="51"/>
-      <source>Sets the working plane to the YZ plane (side plane)</source>
-      <translation>Задаёт рабочую плоскость к плоскости YZ (боковой плоскости)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="54"/>
-      <source>Side (YZ)</source>
-      <translation>Вбок (YZ)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="61"/>
-      <source>Sets the working plane facing the current view</source>
-      <translation>Задаёт рабочую плоскость перпендикулярно текущему виду</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="64"/>
-      <source>Align to view</source>
-      <translation>Выровнять для просмотра</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="71"/>
-      <source>The working plane will align to the current
-view each time a command is started</source>
-      <translation>Рабочая плоскость будет выравниваться к текущему виду
-каждый раз при запуске команды</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="78"/>
-      <source>Automatic</source>
-      <translation>Автоматически</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="87"/>
-      <source>An optional offset to give to the working plane
-above its base position. Use this together with one
-of the buttons above</source>
-      <translation>Дополнительное смещение для рабочей плоскости
-над её базовым положением. Используйте вместе с одной
-из кнопок выше</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="99"/>
-      <source>Offset</source>
-      <translation>Смещение</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="118"/>
-      <source>If this is selected, the working plane will be
-centered on the current view when pressing one
-of the buttons above</source>
-      <translation>Если выбрано, рабочая плоскость будет
-центрирована в текущем виде при нажатии на одну
-кнопок выше</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="111"/>
-      <source>Center plane on view</source>
-      <translation>Центрировать плоскость вида</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="135"/>
-      <source>Or select a single vertex to move the current
-working plane without changing its orientation.
-Then, press the button below</source>
-      <translation>Или выберите одну вершину, чтобы переместить текущую рабочую
-плоскость без изменения ее ориентации.
-Затем нажмите кнопку ниже</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="147"/>
-      <source>Moves the working plane without changing its
-orientation. If no point is selected, the plane
-will be moved to the center of the view</source>
-      <translation>Перемещает рабочую плоскость без изменения ее ориентации. Если точка не выбрана, плоскость будет перемещена в центр вида</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="152"/>
-      <source>Move working plane</source>
-      <translation>Переместить рабочую плоскость</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="171"/>
-      <source>The spacing between the smaller grid lines</source>
-      <translation>Расстояние между меньшими линиями сетки</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="164"/>
-      <source>Grid spacing</source>
-      <translation>Шаг сетки</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="191"/>
-      <source>The number of squares between each main line of the grid</source>
-      <translation>Количество квадратов между каждой основной линией сетки</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="184"/>
-      <source>Main line every</source>
-      <translation>Основные линии каждые</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="207"/>
-      <source>The distance at which a point can be snapped to
-when approaching the mouse. You can also change this
-value by using the [ and ] keys while drawing</source>
-      <translation>Расстояние, при котором точка может быть привязана при приближении к мыши. Вы также можете изменить это значение
-с помощью клавиш [ и ] при рисовании</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="212"/>
-      <source>Snapping radius</source>
-      <translation>Радиус привязки</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="241"/>
-      <source>Centers the view on the current working plane</source>
-      <translation>Центрировать вид на текущей рабочей плоскости</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="244"/>
-      <source>Center view</source>
-      <translation>Центрировать вид</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="251"/>
-      <source>Resets the working plane to its previous position</source>
-      <translation>Сбросить рабочую плоскость к предыдущему положению</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="254"/>
-      <source>Previous</source>
-      <translation>Предыдущий</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="219"/>
-      <source>Grid extension</source>
-      <translation>Расширение сетки</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="226"/>
-      <source> lines</source>
-      <translation> линии</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="14"/>
-      <source>Style settings</source>
-      <translation>Настройки стиля</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="244"/>
-      <source>Text color</source>
-      <translation>Цвет текста</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="169"/>
-      <source>Shape color</source>
-      <translation>Цвет фигуры</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="87"/>
-      <source>Line width</source>
-      <translation>Ширина линии</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="66"/>
-      <source>The color of faces</source>
-      <translation>Цвет граней</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="205"/>
-      <source>The type of dimension arrows</source>
-      <translation>Тип стрелок размерных линий</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="209"/>
-      <source>Dot</source>
-      <translation>Точка</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="214"/>
-      <source>Circle</source>
-      <translation>Окружность</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="219"/>
-      <source>Arrow</source>
-      <translation>Стрелка</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="224"/>
-      <source>Tick</source>
-      <translation>Зацеп</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="229"/>
-      <source>Tick-2</source>
-      <translation>Зацепление-2</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="271"/>
-      <source>The color of texts and dimension texts</source>
-      <translation>Цвет текста и текста размеров</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="278"/>
-      <source>The size of texts and dimension texts</source>
-      <translation>Размер текста и текста размера</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="318"/>
-      <source>Show unit</source>
-      <translation>Показать единицы</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="80"/>
-      <source>Line color</source>
-      <translation>Цвет линии</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="308"/>
-      <source>The size of dimension arrows</source>
-      <translation>Размер стрелок размерных линий</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="257"/>
-      <source>The font to use for texts and dimensions</source>
-      <translation>Шрифт для текстов и размеров</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="101"/>
-      <source>The line style</source>
-      <translation>Стиль линий</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="105"/>
-      <source>Solid</source>
-      <translation>Твердотельный объект</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="110"/>
-      <source>Dashed</source>
-      <translation>Штриховая</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="115"/>
-      <source>Dotted</source>
-      <translation>Пунктирная</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="120"/>
-      <source>DashDot</source>
-      <translation>Штрихпунктир</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="264"/>
-      <source>Text size</source>
-      <translation>Размер текста</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="332"/>
-      <source>Unit override</source>
-      <translation>Единица переопределения</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="339"/>
-      <source>The unit to use for dimensions. Leave blank to use current FreeCAD unit</source>
-      <translation>Единица измерения размеров. Оставьте пустым, чтобы использовать текущие единицы измерения FreeCAD</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="183"/>
-      <source>The transparency of faces</source>
-      <translation>Прозрачность граней</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="186"/>
-      <source> %</source>
-      <translation>%</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="176"/>
-      <source>Transparency</source>
-      <translation>Прозрачность</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="135"/>
-      <source>Display mode</source>
-      <translation>Режим отображения</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="237"/>
-      <source>Text font</source>
-      <translation>Шрифт текста</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="325"/>
-      <source>Arrow size</source>
-      <translation>Размер стрелки</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="142"/>
-      <source>The display mode for faces</source>
-      <translation>Режим отображения для граней</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="146"/>
-      <source>Flat Lines</source>
-      <translation>Плоские линии</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="151"/>
-      <source>Wireframe</source>
-      <translation>Каркас</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="156"/>
-      <source>Shaded</source>
-      <translation>Только грани</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="161"/>
-      <source>Points</source>
-      <translation>Точки</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="73"/>
-      <source>Draw style</source>
-      <translation>Стиль представления</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="94"/>
-      <source>The color of lines</source>
-      <translation>Цвет линий</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="288"/>
-      <source>Arrow style</source>
-      <translation>Стиль стрелки</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="128"/>
-      <source> px</source>
-      <translation> пикс.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="57"/>
-      <source>Lines and faces</source>
-      <translation>Линии и грани</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="199"/>
-      <source>Annotations</source>
-      <translation>Заметки</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="295"/>
-      <source>If the unit suffix is shown on dimension texts or not</source>
-      <translation>Если суффикс единицы измерения отображается в тексте измерения или нет</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="22"/>
-      <source>Fills the values below with a stored style preset</source>
-      <translation type="unfinished">Fills the values below with a stored style preset</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="26"/>
-      <source>Load preset</source>
-      <translation type="unfinished">Load preset</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="40"/>
-      <source>Save current style as a preset...</source>
-      <translation type="unfinished">Save current style as a preset...</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="382"/>
-      <source>Apply above style to selected object(s)</source>
-      <translation type="unfinished">Apply above style to selected object(s)</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="385"/>
-      <source>Selected</source>
-      <translation>Выбрано</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="397"/>
-      <source>Texts/dims</source>
-      <translation type="unfinished">Texts/dims</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="346"/>
-      <source>Text spacing</source>
-      <translation>Интервал текста</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="353"/>
-      <source>The space between the text and the dimension line</source>
-      <translation>Расстояние между текстом и размерной линией</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="363"/>
-      <source>Line spacing</source>
-      <translation>Межстрочный интервал</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="370"/>
-      <source>The spacing between different lines of text</source>
-      <translation>Межстрочный интервал в тексте</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="14"/>
-      <source>Form</source>
-      <translation>Форма</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="23"/>
-      <source>pattern files (*.pat)</source>
-      <translation type="unfinished">pattern files (*.pat)</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="30"/>
-      <source>PAT file:</source>
-      <translation type="unfinished">PAT file:</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="37"/>
-      <source>Scale</source>
-      <translation>Масштаб</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="44"/>
-      <source>Pattern:</source>
-      <translation type="unfinished">Pattern:</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="64"/>
-      <source>Rotation:</source>
-      <translation>Вращение:</translation>
-    </message>
-    <message encoding="UTF-8">
-      <location filename="dialogHatch.ui" line="71"/>
-      <source>°</source>
-      <translation>°</translation>
-    </message>
-  </context>
-  <context>
-    <name>Gui::Dialog::DlgAddProperty</name>
-    <message>
-      <location filename="gui_groups.py" line="452"/>
-      <source>Group</source>
-      <translation>Группа</translation>
-    </message>
-  </context>
-  <context>
-    <name>Gui::Dialog::DlgSettingsDraft</name>
-    <message>
-      <location filename="preferences-draft.ui" line="32"/>
-      <source>General Draft Settings</source>
-      <translation>Основные параметры черчения</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="427"/>
-      <source>This is the default color for objects being drawn while in construction mode.</source>
-      <translation>Цвет по умолчанию для объектов, обрабатываемых в режиме конструктора.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="387"/>
-      <source>This is the default group name for construction geometry</source>
-      <translation>Имя группы по умолчанию для конструктора геометрии</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="390"/>
-      <source>Construction</source>
-      <translation>Конструктор</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="114"/>
-      <source>Save current color and linewidth across sessions</source>
-      <translation>Сохранить текущий цвет и толщину линии между сессиями</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="304"/>
-      <source>Global copy mode</source>
-      <translation>Глобальный режим копирования</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="40"/>
-      <source>Default working plane</source>
-      <translation>Рабочая плоскость по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="67"/>
-      <source>None</source>
-      <translation>Ничего</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="72"/>
-      <source>XY (Top)</source>
-      <translation>XY (cверху)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="77"/>
-      <source>XZ (Front)</source>
-      <translation>XZ (спереди)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="82"/>
-      <source>YZ (Side)</source>
-      <translation>YZ (сбоку)</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="89"/>
-      <source>Default height for texts and dimensions</source>
-      <translation>Высота текста и размеров по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="47"/>
-      <source>This is the default font name for all Draft texts and dimensions.
-It can be a font name such as "Arial", a default style such as "sans", "serif"
-or "mono", or a family such as "Arial,Helvetica,sans" or a name with a style
-such as "Arial:Bold"</source>
-      <translation>Это имя шрифта по умолчанию для всех чертежных текстов и размеров. Это может быть имя шрифта, такок, как «Arial», стиль по умолчанию, такой как «sans», «serif» или «моно» или семейство как "Arial, Helvetica, sans» или имя со стилем, такое, как" Arial:Bold»</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="151"/>
-      <source>Default template sheet</source>
-      <translation>Шаблон листа по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="177"/>
-      <source>The default template to use when creating a new drawing sheet</source>
-      <translation>Шаблон по умолчанию, используемый при создании нового листа чертежа</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="40"/>
-      <source>Import style</source>
-      <translation>Импорт стиля</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="60"/>
-      <source>None (fastest)</source>
-      <translation>Нет (быстрый)</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="65"/>
-      <source>Use default color and linewidth</source>
-      <translation>Использовать цвет и толщину линии по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="70"/>
-      <source>Original color and linewidth</source>
-      <translation>Оригинальный цвет и толщина линии</translation>
-    </message>
-    <message>
-      <location filename="preferences-oca.ui" line="46"/>
-      <source>Check this if you want the areas (3D faces) to be imported too.</source>
-      <translation>Установите этот флажок, если вы хотите также импортировать области (3D грани).</translation>
-    </message>
-    <message>
-      <location filename="preferences-oca.ui" line="49"/>
-      <source>Import OCA areas</source>
-      <translation>Импорт ОСА областей</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="14"/>
-      <source>General settings</source>
-      <translation>Общие настройки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="380"/>
-      <source>Construction group name</source>
-      <translation>Имя конструкционной группы</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="143"/>
-      <source>Tolerance</source>
-      <translation>Точность</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="363"/>
-      <source>Join geometry</source>
-      <translation>Присоединить геометрию</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="194"/>
-      <source>Alternate SVG Patterns location</source>
-      <translation>Альтернативное расположение SVG шаблонов</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="220"/>
-      <source>Here you can specify a directory containing SVG files containing &lt;pattern&gt; definitions that can be added to the standard Draft hatch patterns</source>
-      <translation>Здесь можно указать каталог, содержащий файлы SVG, содержащие определения &lt;шаблонов&gt;, которые могут быть добавлены в стандартные шаблоны типов штриховок модуля Черчения</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="57"/>
-      <source>Constrain mod</source>
-      <translation>Режим ограничений</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="77"/>
-      <source>The Constraining modifier key</source>
-      <translation>Клавиша-модификатор Ограничения</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="109"/>
-      <source>Snap mod</source>
-      <translation>Режим привязки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="129"/>
-      <source>The snap modifier key</source>
-      <translation>Клавиша модификатор привязки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="164"/>
-      <source>Alt mod</source>
-      <translation>Режим alt</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="287"/>
-      <source>Select base objects after copying</source>
-      <translation>Выбор базовых объектов после копирования</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="269"/>
-      <source>If checked, a grid will appear when drawing</source>
-      <translation>Если флажок установлен, при черчении будет отображаться сетка</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="272"/>
-      <source>Use grid</source>
-      <translation>Использовать сетку</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="402"/>
-      <source>Grid spacing</source>
-      <translation>Шаг сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="425"/>
-      <source>The spacing between each grid line</source>
-      <translation>Расстояние между каждой линией сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="353"/>
-      <source>Main lines every</source>
-      <translation>Основные линии каждые</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="376"/>
-      <source>Mainlines will be drawn thicker. Specify here how many squares between mainlines.</source>
-      <translation>Основные линии рисуются толще. Укажите здесь, сколько квадратов между основными линиями.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="94"/>
-      <source>Internal precision level</source>
-      <translation>Уровень внутренней точности</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="395"/>
-      <source>This is the orientation of the dimension texts when those dimensions are vertical. Default is left, which is the ISO standard.</source>
-      <translation>Это ориентация размерных надписей, когда эти надписи вертикальны. По умолчанию - слева, согласно стандарту ISO.</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="405"/>
-      <source>Left (ISO standard)</source>
-      <translation>Слева (стандарт ISO)</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="410"/>
-      <source>Right</source>
-      <translation>Вправо</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="384"/>
-      <source>Group layers into blocks</source>
-      <translation>Группировать слои в блоки</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="570"/>
-      <source>Export 3D objects as polyface meshes</source>
-      <translation>Экспорт 3D объектов как многогранные сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="219"/>
-      <source>If checked, the Snap toolbar will be shown whenever you use snapping</source>
-      <translation>Если этот параметр выбран, то панель Параметров привязки будет показываться всякий раз когда будет использоваться привязка</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="222"/>
-      <source>Show Draft Snap toolbar</source>
-      <translation>Показать панель инструментов привязки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="242"/>
-      <source>Hide Draft snap toolbar after use</source>
-      <translation>Скрыть панель инструментов привязки после использования</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="134"/>
-      <source>Show Working Plane tracker</source>
-      <translation>Показать трекер Рабочей плоскости</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="291"/>
-      <source>If checked, the Draft grid will always be visible when the Draft workbench is active. Otherwise only when using a command</source>
-      <translation>Если флажок установлен, сетка всегда будет видна при активном верстаке черчения. В любом другом случае только при использовании соответствующей команды</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="405"/>
-      <source>Use standard font size for texts</source>
-      <translation>Использовать стандартный размер шрифта для текстов</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="448"/>
-      <source>Import hatch boundaries as wires</source>
-      <translation>Импорт областей штриховки в виде ломаных</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="469"/>
-      <source>Render polylines with width</source>
-      <translation>Отображение полилиний с использованием толшины</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="141"/>
-      <source>Translated (for print &amp; display)</source>
-      <translation>Перенос (для печати &amp; показа)</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="146"/>
-      <source>Raw (for CAM)</source>
-      <translation>Сырые данные (для CAM)</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="161"/>
-      <source>Translate white line color to black</source>
-      <translation>Преобразование белых линий в черные</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="324"/>
-      <source>Use Part Primitives when available</source>
-      <translation>Использовать примитивы Деталь по возможности</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="26"/>
-      <source>Snapping</source>
-      <translation>Привязка</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="34"/>
-      <source>If this is checked, snapping is activated without the need to press the snap mod key</source>
-      <translation>Если включить, то привязки будут работать без необходимости нажатия клавиши модификатора привязки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="37"/>
-      <source>Always snap (disable snap mod)</source>
-      <translation>Всегда привязывать (отключить модификатор привязки)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="407"/>
-      <source>Construction geometry color</source>
-      <translation>Цвет вспомогательной геометрии</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="149"/>
-      <source>Import</source>
-      <translation>Импорт</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="159"/>
-      <source>texts and dimensions</source>
-      <translation>текст и размеры</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="175"/>
-      <source>points</source>
-      <translation>точки</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="191"/>
-      <source>layouts</source>
-      <translation>шаблоны</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="207"/>
-      <source>*blocks</source>
-      <translation>*блоки</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="614"/>
-      <source>Project exported objects along current view direction</source>
-      <translation>Проецировать объекты относительно текущего вида</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="14"/>
-      <source>Visual settings</source>
-      <translation>Настройки визуализации</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="26"/>
-      <source>Visual Settings</source>
-      <translation>Настройки Визуализации</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="34"/>
-      <source>Snap symbols style</source>
-      <translation>Стиль символа привязки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="54"/>
-      <source>Draft classic style</source>
-      <translation>Классический стиль Черчения</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="59"/>
-      <source>Bitsnpieces style</source>
-      <translation>Стиль мелочовка (Bitsnpieces)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="80"/>
-      <source>Color</source>
-      <translation>Цвет</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="237"/>
-      <source>Hatch patterns resolution</source>
-      <translation>Разрешение шаблонов штриховки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="263"/>
-      <source>Grid</source>
-      <translation>Сетка</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="294"/>
-      <source>Always show the grid</source>
-      <translation>Всегда показывать сетку</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="14"/>
-      <source>Texts and dimensions</source>
-      <translation>Текст и размеры</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="59"/>
-      <source>Internal font</source>
-      <translation>встроенный шрифт</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="323"/>
-      <source>Dot</source>
-      <translation>Точка</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="328"/>
-      <source>Circle</source>
-      <translation>Окружность</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="333"/>
-      <source>Arrow</source>
-      <translation>Стрелка</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="362"/>
-      <source>The default size of arrows</source>
-      <translation>Размер стрелок по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="208"/>
-      <source>The default size of dimensions extension lines</source>
-      <translation>Длина выносных размерных линий по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="429"/>
-      <source>The space between the dimension line and the dimension text</source>
-      <translation>Отступ между размерной линией и текстом</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="534"/>
-      <source>Select a font file</source>
-      <translation>Выберите файл шрифта</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="267"/>
-      <source>Fill objects with faces whenever possible</source>
-      <translation>Залить объекты поверхностями, если это возможно</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="224"/>
-      <source>Create</source>
-      <translation>Создать</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="234"/>
-      <source>simple Part shapes</source>
-      <translation>простые фигуры Деталей</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="253"/>
-      <source>Draft objects</source>
-      <translation>Объекты эскиза</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="269"/>
-      <source>Sketches</source>
-      <translation>Наброски (Sketches)</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="342"/>
-      <source>Get original colors from the DXF file</source>
-      <translation>Использовать цвета из файла DXF</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="489"/>
-      <source>Treat ellipses and splines as polylines</source>
-      <translation>Считать эллипсы и сплайны полилиниями</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="121"/>
-      <source>Export style</source>
-      <translation>Экспорт стиля</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="455"/>
-      <source>Show the unit suffix in dimensions</source>
-      <translation>Показать суффикс единиц для размеров</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="101"/>
-      <source>Allow FreeCAD to automatically download and update the DXF libraries</source>
-      <translation>Автоматически загружать и обновлять библиотеки DXF</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="209"/>
-      <source>mm</source>
-      <translation>мм</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="457"/>
-      <source>Grid size</source>
-      <translation>Размер сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="483"/>
-      <source> lines</source>
-      <translation> линии</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="144"/>
-      <source>text above (2D)</source>
-      <translation>текст выше (2D)</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="149"/>
-      <source> text inside (3D)</source>
-      <translation> текст внутри (3D)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="375"/>
-      <source>Dashed line definition</source>
-      <translation>Задание штриховой линии</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="398"/>
-      <source>0.09,0.05</source>
-      <translation>0.09,0.05</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="418"/>
-      <source>Dashdot line definition</source>
-      <translation>Задание штрихпунктирной линии</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="441"/>
-      <source>0.09,0.05,0.02,0.05</source>
-      <translation>0.09,0.05,0.02,0.05</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="461"/>
-      <source>Dotted line definition</source>
-      <translation>Задание пунктирной линии</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="484"/>
-      <source>0.02,0.02</source>
-      <translation>0.02,0.02</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="14"/>
-      <source>Grid and snapping</source>
-      <translation>Сетка и привязка</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="26"/>
-      <source>Text settings</source>
-      <translation>Настройки текста</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="34"/>
-      <source>Font family</source>
-      <translation>Шрифт</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="76"/>
-      <source>Font size</source>
-      <translation>Размер шрифта</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="116"/>
-      <source>Dimension settings</source>
-      <translation>Настройки размеров</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="124"/>
-      <source>Display mode</source>
-      <translation>Режим отображения</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="309"/>
-      <source>Arrows style</source>
-      <translation>Стиль стрелки</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="355"/>
-      <source>Arrows size</source>
-      <translation>Размер стрелки</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="388"/>
-      <source>Text orientation</source>
-      <translation>Ориентация текста</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="422"/>
-      <source>Text spacing</source>
-      <translation>Интервал текста</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="513"/>
-      <source>ShapeString settings</source>
-      <translation>Настройки инструмента Текст в кривую</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="521"/>
-      <source>Default ShapeString font file</source>
-      <translation>Файл шрифта по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="367"/>
-      <source>Drawing view line definitions</source>
-      <translation>Настройки линий чертежа</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="14"/>
-      <source>DWG</source>
-      <translation>DWG</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="26"/>
-      <source>DWG conversion</source>
-      <translation>Преобразование DWG</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="56"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; DXF options apply to DWG files as well.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style="font-weight:600;"&gt;Примечание:&lt;/span&gt; параметры DXF также применяются для файлов DWG.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="14"/>
-      <source>DXF</source>
-      <translation>DXF</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="26"/>
-      <source>Import options</source>
-      <translation>Параметры импорта</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="55"/>
-      <source>Use legacy python importer</source>
-      <translation>Использовать устаревший импортер Python</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="107"/>
-      <source>Export options</source>
-      <translation>Параметры экспорта</translation>
-    </message>
-    <message>
-      <location filename="preferences-oca.ui" line="14"/>
-      <source>OCA</source>
-      <translation>OCA</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="14"/>
-      <source>SVG</source>
-      <translation>SVG</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="86"/>
-      <source>Disable units scaling</source>
-      <translation>Отключить масштабирование единиц измерения</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="591"/>
-      <source>Export Drawing Views as blocks</source>
-      <translation>Экспортировать виды чертежа как блоки</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="140"/>
-      <source>Note: Not all the options below are used by the new importer yet</source>
-      <translation>Замечание: ещё не все параметры ниже используются в новом импортёре</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="38"/>
-      <source>Show this dialog when importing and exporting</source>
-      <translation>Показывать этот диалог при импорте и экспорте</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="88"/>
-      <source>Automatic update (legacy importer only)</source>
-      <translation>Автоматическое обновление (только для устаревшего импортёра)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="341"/>
-      <source>Prefix labels of Clones with:</source>
-      <translation>Префикс меток клонов:</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="289"/>
-      <source>Scale factor to apply to imported files</source>
-      <translation>Коэффициент масштабирования для импортируемых файлов</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="181"/>
-      <source>Max segment length for discretized arcs</source>
-      <translation>Максимальная длина сегмента дискретизации дуг</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="161"/>
-      <source>Number of decimals</source>
-      <translation>Количество десятичных знаков</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="197"/>
-      <source>Shift</source>
-      <translation>Shift</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="202"/>
-      <source>Ctrl</source>
-      <translation>Ctrl</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="207"/>
-      <source>Alt</source>
-      <translation>Alt</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="184"/>
-      <source>The Alt modifier key</source>
-      <translation>Клавиша Alt</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="477"/>
-      <source>The number of horizontal or vertical lines of the grid</source>
-      <translation>Количество горизонтальных или вертикальных линий сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="87"/>
-      <source>The default color for snap symbols</source>
-      <translation>Цвет по умолчанию для символов привязки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="111"/>
-      <source>Check this if you want to use the color/linewidth from the toolbar as default</source>
-      <translation>Установите флажок, если вы хотите использовать цвет/толщину линии из панели инструментов по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="131"/>
-      <source>If checked, a widget indicating the current working plane orientation appears during drawing operations</source>
-      <translation>Если этот параметр выбран, то во время операций рисования появляется виджет, указывающий текущую ориентацию рабочего чертежа</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="481"/>
-      <source>An SVG linestyle definition</source>
-      <translation>Определение стилей линий SVG</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="201"/>
-      <source>Extension lines size</source>
-      <translation>Размер выносной линий</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="237"/>
-      <source>Extension line overshoot</source>
-      <translation>Нахлёст линии расширения</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="244"/>
-      <source>The default length of extension line above dimension line</source>
-      <translation>Длина выносной линии над размерной линией по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="273"/>
-      <source>Dimension line overshoot</source>
-      <translation>Нахлёст размерной линии</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="280"/>
-      <source>The default distance the dimension line is extended past extension lines</source>
-      <translation>Расстояние по умолчанию, на которое размерная линия расширена за выносные линии</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="338"/>
-      <source>Tick</source>
-      <translation>Зацеп</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="343"/>
-      <source>Tick-2</source>
-      <translation>Зацепление-2</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="326"/>
-      <source>Check this if you want to preserve colors of faces while doing downgrade and upgrade (splitFaces and makeShell only)</source>
-      <translation>Отметьте это если хотите предотвратить раскрашивание граней во время операций разделения и объединения (только для РазделитьГрани и СделатьОболочку)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="329"/>
-      <source>Preserve colors of faces during downgrade/upgrade</source>
-      <translation>Предотвратить раскрашивание граней при разделении/объединении</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="346"/>
-      <source>Check this if you want the face names to derive from the originating object name and vice versa while doing downgrade/upgrade (splitFaces and makeShell only)</source>
-      <translation>Установите этот флажок, если хотите, чтобы имена граней были производными от имени исходного объекта и наоборот при выполнении операций разъединение/объединение (только для РазделитьГрани и Сделатьоболочку)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="349"/>
-      <source>Preserve names of faces during downgrade/upgrade</source>
-      <translation>Предотвратить названия граней при разделении/объединении</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="41"/>
-      <source>The path to your ODA (formerly Teigha) File Converter executable</source>
-      <translation>Путь к исполняемому файлу конвертера ODA (ранее Teigha) файлов</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="486"/>
-      <source>Ellipse export is poorly supported. Use this to export them as polylines instead.</source>
-      <translation>Экспорт эллипсов плохо реализован. Экспортируйте эллипсы как полилинии.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="518"/>
-      <source>Max Spline Segment:</source>
-      <translation>Макс сплайн сегментов:</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="120"/>
-      <source>The number of decimals in internal coordinates operations (for ex. 3 = 0.001). Values between 6 and 8 are usually considered the best trade-off among FreeCAD users.</source>
-      <translation>Количество десятичных знаков во внутренних координатах (например, 3 = 0,001). Значения между 6 и 8 обычно считаются хорошим тоном среди пользователей FreeCAD.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="169"/>
-      <source>This is the value used by functions that use a tolerance.
-Values with differences below this value will be treated as same. This value will be obsoleted soon so the precision level above controls both.</source>
-      <translation>Это значение используется функциями, которые используют допуск.
-Значения с различиями меньше этого значения будут рассматриваться как одинаковые. Это значение в ближайшее время будет выведено из использования, взамен уровень точности выше будет выражать оба значения.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="75"/>
-      <source>Use legacy python exporter</source>
-      <translation>Использовать устаревший импортер Python</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="247"/>
-      <source>If this option is set, when creating Draft objects on top of an existing face of another object, the "Support" property of the Draft object will be set to the base object. This was the standard behaviour before FreeCAD 0.19</source>
-      <translation>Если эта опция установлена, при создании объектов Наброска (Draft) в верхней части существующей грани другого объекта, то свойство "Поддержка" объекта наброска будет ссылаться на базовый объект. Это было стандартное поведение до FreeCAD 0.19</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="372"/>
-      <source>Construction Geometry</source>
-      <translation>Вспомогательная геометрия</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="26"/>
-      <source>In-Command Shortcuts</source>
-      <translation>Горячие клавиши командного режима</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="118"/>
-      <source>Relative</source>
-      <translation>Относительно</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="140"/>
-      <source>R</source>
-      <translation>R</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="236"/>
-      <source>Continue</source>
-      <translation>Продолжить</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="214"/>
-      <source>T</source>
-      <translation>T</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="111"/>
-      <source>Close</source>
-      <translation>Закрыть</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="177"/>
-      <source>O</source>
-      <translation>O</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="243"/>
-      <source>Copy</source>
-      <translation>Копировать</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="469"/>
-      <source>P</source>
-      <translation>P</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="498"/>
-      <source>Subelement Mode</source>
-      <translation>Поэлементный режим</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="381"/>
-      <source>D</source>
-      <translation>D</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="491"/>
-      <source>Fill</source>
-      <translation>Заполнить</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="425"/>
-      <source>L</source>
-      <translation>L</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="447"/>
-      <source>Exit</source>
-      <translation>Выход</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="638"/>
-      <source>A</source>
-      <translation>A</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="579"/>
-      <source>Select Edge</source>
-      <translation>Выбрать ребро</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="520"/>
-      <source>E</source>
-      <translation>E</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="403"/>
-      <source>Add Hold</source>
-      <translation>+ держатель</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="675"/>
-      <source>Q</source>
-      <translation>Q</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="352"/>
-      <source>Length</source>
-      <translation>Длина</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="557"/>
-      <source>H</source>
-      <translation>H</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="359"/>
-      <source>Wipe</source>
-      <translation>Стереть</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="601"/>
-      <source>W</source>
-      <translation>W</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="697"/>
-      <source>Set WP</source>
-      <translation>Задать РП</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="719"/>
-      <source>U</source>
-      <translation>U</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="257"/>
-      <source>Cycle Snap</source>
-      <translation>Последовательная привязка</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="52"/>
-      <source>`</source>
-      <translation>`</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="338"/>
-      <source>Snap</source>
-      <translation>Привязка</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="89"/>
-      <source>S</source>
-      <translation>S</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="250"/>
-      <source>Increase Radius</source>
-      <translation>Увеличить радиус</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="279"/>
-      <source>[</source>
-      <translation>[</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="345"/>
-      <source>Decrease Radius</source>
-      <translation>Уменьшить радиус</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="316"/>
-      <source>]</source>
-      <translation>]</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="741"/>
-      <source>Restrict X</source>
-      <translation>Ограничить по X</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="763"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="785"/>
-      <source>Restrict Y</source>
-      <translation>Ограничить по Y</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="807"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="829"/>
-      <source>Restrict Z</source>
-      <translation>Ограничить по Z</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="851"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="194"/>
-      <source>If this option is checked, the layers drop-down list will also show groups, allowing you to automatically add objects to groups too.</source>
-      <translation>Если этот флажок установлен, выпадающий список слоёв также будет показывать группы, позволяя автоматически добавлять объекты в группы.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="197"/>
-      <source>Show groups in layers list drop-down button</source>
-      <translation>Показывать группы в выпадающем списке слоев</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="216"/>
-      <source>Draft tools options</source>
-      <translation>Настройки инструментов верстака набросок</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="230"/>
-      <source>When drawing lines, set focus on Length instead of X coordinate.
-This allows to point the direction and type the distance.</source>
-      <translation>При черчении линий, установить фокус на длине вместо координаты X. Это позволит указать направление и ввести расстояние.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="234"/>
-      <source>Set focus on Length instead of X coordinate</source>
-      <translation>Установить фокус на длине вместо координаты X</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="250"/>
-      <source>Set the Support property when possible</source>
-      <translation>Установить свойство "Поддержка", когда это возможно</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="263"/>
-      <source>If this is checked, objects will appear as filled by default.
-Otherwise, they will appear as wireframe</source>
-      <translation>Если этот параметр выбран, по умолчанию объекты будут отображаться как заполненные. В противном случае они будут отображаться как каркас</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="283"/>
-      <source>Normally, after copying objects, the copies get selected.
-If this option is checked, the base objects will be selected instead.</source>
-      <translation>Как правило, после копирования объектов будут выбраны полученные копии. Если установить этот параметр, будут выбираться базовые объекты.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="300"/>
-      <source>If this is checked, copy mode will be kept across command,
-otherwise commands will always start in no-copy mode</source>
-      <translation>Если выбран этот пункт, режим копирования будет применен для поледующих команд, в противном случае выполнение команд всегда будет начинаться без режима копирования</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="320"/>
-      <source>Force Draft Tools to create Part primitives instead of Draft objects.
-Note that this is not fully supported, and many object will be not editable with Draft Modifiers.</source>
-      <translation>Заставить инструменты набросков создавать примитивы детали вместо объектов наброска.
-Обратите внимание, что это не полностью поддерживается, и многие объекты не будут редактироваться с помощью модификаторов верстака набросок.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="14"/>
-      <source>User interface settings</source>
-      <translation>Настройки интерфейса пользователя</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="928"/>
-      <source>Enable draft statusbar customization</source>
-      <translation>Включить настройку строки состояния верстака набросок</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="931"/>
-      <source>Draft Statusbar</source>
-      <translation>Строка состояния наброска</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="951"/>
-      <source>Enable snap statusbar widget</source>
-      <translation>Включить привязку строки состояния</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="954"/>
-      <source>Draft snap widget</source>
-      <translation>Привязка строки состояния наброска</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="970"/>
-      <source>Enable draft statusbar annotation scale widget</source>
-      <translation>Включить строку состояния отметки масштаба верстака набросок</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="973"/>
-      <source>Annotation scale widget</source>
-      <translation>Отметка масштаба</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="567"/>
-      <source>Draft Edit preferences</source>
-      <translation>Изменить настройки Наброска</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="570"/>
-      <source>Edit</source>
-      <translation>Редактировать</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="584"/>
-      <source>Maximum number of contemporary edited objects</source>
-      <translation>Максимальное количество одновременно редактируемых объектов</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="607"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the maximum number of objects Draft Edit&lt;/p&gt;&lt;p&gt;can process at the same time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Устанавливает максимальное количество одновременно редактируемых объектов наброска &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="645"/>
-      <source>Draft edit pick radius</source>
-      <translation>Радиус выбора наброска</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="668"/>
-      <source>Controls pick radius of edit nodes</source>
-      <translation>Управление радиусом выбора узлов редактирования</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="34"/>
-      <source>Path to ODA file converter</source>
-      <translation>Путь к файловому конвертеру ODA</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="35"/>
-      <source>This preferences dialog will be shown when importing/ exporting DXF files</source>
-      <translation>Этот диалог настроек будет показан при импорте/экспорте DXF файлов</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="51"/>
-      <source>Python importer is used, otherwise the newer C++ is used.
-Note: C++ importer is faster, but is not as featureful yet</source>
-      <translation>Использован импорт Python, в противном случае используется более новая версия C++.
-Примечание: импортер C++ быстрее, но еще не является функциональным</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="96"/>
-      <source>Allow FreeCAD to download the Python converter for DXF import and export.
-You can also do this manually by installing the "dxf_library" workbench
-from the Addon Manager.</source>
-      <translation>Разрешить FreeCAD загружать Python конвертер для импорта и экспорта DXF.
-Вы также можете сделать это вручную, установив верстак "dxf_library"
-из Менеджера дополнений.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="156"/>
-      <source>If unchecked, texts and mtexts won't be imported</source>
-      <translation>Если этот пункт не выбран, тексты/мультитексты импортированы не будут</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="172"/>
-      <source>If unchecked, points won't be imported</source>
-      <translation>Если этот пункт не выбран, точки импортированы не будут</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="188"/>
-      <source>If checked, paper space objects will be imported too</source>
-      <translation>Если флажок установлен, пустые объекты будут также импортированы</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="204"/>
-      <source>If you want the non-named blocks (beginning with a *) to be imported too</source>
-      <translation>Отметьте это, если вы хотите чтобы импортировались и безымянные блоки (начинающиеся с *)</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="231"/>
-      <source>Only standard Part objects will be created (fastest)</source>
-      <translation>Создавать только объекты стандартных деталей (самое быстрое)</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="250"/>
-      <source>Parametric Draft objects will be created whenever possible</source>
-      <translation>Параметрические объекты наброска будут создаваться, когда это возможно,</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="266"/>
-      <source>Sketches will be created whenever possible</source>
-      <translation>Эскизы будут создаваться по возможности</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="309"/>
-      <source>Scale factor to apply to DXF files on import.
-The factor is the conversion between the unit of your DXF file and millimeters.
-Example: for files in millimeters: 1, in centimeters: 10,
-                             in meters: 1000, in inches: 25.4, in feet: 304.8</source>
-      <translation>Коэффициент масштабирования для применения к импорту DXF файлов. Коэффициентом является преобразование между единицей измерения файла DXF и миллиметрами. Например: для файлов в миллиметрах: 1, в сантиметрах: 10, в м: 1000, в дюймах: 25,4, в футах: 304,8</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="338"/>
-      <source>Colors will be retrieved from the DXF objects whenever possible.
-Otherwise default colors will be applied. </source>
-      <translation>Цвета будут получены из объектов DXF, если это возможно.
-В противном случае будут применены цвета по умолчанию. </translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="359"/>
-      <source>FreeCAD will try to join coincident objects into wires.
-Note that this can take a while!</source>
-      <translation>FreeCAD попытается присоединиться к объектам совпадения в проводах.
-Обратите внимание, что это может занять некоторое время!</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="380"/>
-      <source>Objects from the same layers will be joined into Draft Blocks,
-turning the display faster, but making them less easily editable </source>
-      <translation>Объекты из одного и того же слоя будут объединены в чертежные блоки, ускоряя перерисовку дисплея, но делая их менее редактируемыми </translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="401"/>
-      <source>Imported texts will get the standard Draft Text size,
-instead of the size they have in the DXF document</source>
-      <translation>Импортированные тексты получат стандартный размер текста наброска, вместо размера в документе DXF</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="422"/>
-      <source>If this is checked, DXF layers will be imported as Draft Layers</source>
-      <translation>Импортировать слои DXF как слои наброска</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="425"/>
-      <source>Use Layers</source>
-      <translation>Использовать слои</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="445"/>
-      <source>Hatches will be converted into simple wires</source>
-      <translation>Штриховки будут преобразованы в простые провода</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="465"/>
-      <source>If polylines have a width defined, they will be rendered
-as closed wires with correct width</source>
-      <translation>Если для полилиний определена ширина, они будут визуализированы как замкнутые провода с правильной шириной</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="528"/>
-      <source>Maximum length of each of the polyline segments.
-If it is set to '0' the whole spline is treated as a straight segment.</source>
-      <translation>Максимальная длина каждого из сегментов полилинии.
-Если задано значение «0», весь сплайн рассматривается как прямой отрезок.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="567"/>
-      <source>All objects containing faces will be exported as 3D polyfaces</source>
-      <translation>Все объекты, содержащие грани, будут экспортированы в виде трёхмерных полиграней</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="587"/>
-      <source>Drawing Views will be exported as blocks.
-This might fail for post DXF R12 templates.</source>
-      <translation>Виды чертежей будут экспортированы в виде блоков.
-Это может не удаться для шаблонов DXF R12.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="611"/>
-      <source>Exported objects will be projected to reflect the current view direction</source>
-      <translation>Экспортированные объекты будут проецироваться с учётом текущего направления зрения</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="47"/>
-      <source>Method chosen for importing SVG object color to FreeCAD</source>
-      <translation>Метод выбран для импорта SVG цвета объекта во FreeCAD</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="82"/>
-      <source>If checked, no units conversion will occur.
-One unit in the SVG file will translate as one millimeter. </source>
-      <translation>Если этот флажок установлен, преобразование единиц не произойдет.
-Одна единица в файле SVG будет переведена как один миллиметр.</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="128"/>
-      <source>Style of SVG file to write when exporting a sketch</source>
-      <translation>Стиль SVG файла для записи при экспорте эскиза</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="158"/>
-      <source>All white lines will appear in black in the SVG for better readability against white backgrounds</source>
-      <translation>Все белые линии появятся в чёрном цвете SVG для лучшей читаемости по сравнению с белым фоном</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="204"/>
-      <source>Versions of Open CASCADE older than version 6.8 don't support arc projection.
-In this case arcs will be discretized into small line segments.
-This value is the maximum segment length. </source>
-      <translation>Версии Open CASCADE старее версии 6.8 не поддерживают дуги проекции.
-В этом случае дуги будут дискретизированы в маленькие сегменты.
-Это значение является максимальной длиной звена. </translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="310"/>
-      <source>If checked, an additional border is displayed around the grid, showing the main square size in the bottom left border</source>
-      <translation>При отмеченной опции отображается дополнительная граница сетки, показывающая размер основного квадрата в левом нижнем углу</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="313"/>
-      <source>Show grid border</source>
-      <translation>Показать границу сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="475"/>
-      <source>Override unit</source>
-      <translation>Переопределить единицу измерения</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="495"/>
-      <source>By leaving this field blank, the dimension measurements will be shown in the current unit defined in FreeCAD. By indicating a unit here such as m or cm, you can force new dimensions to be shown in that unit.</source>
-      <translation>Если оставить это поле пустым, то будут показаны те единицы измерения, какие указаны в FreeCAD. Указывая единицу измерения здесь как м или см, Вы можете указать новые единицы измерения.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="257"/>
-      <source>The resolution to draw the patterns in. Default value is 128. Higher values give better resolutions, lower values make drawing faster</source>
-      <translation>Разрешение для рисования штриховки. Значение по умолчанию — 128. Большее значение даст лучшее разрешение, меньшее значение сделает отрисовку быстрее</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="280"/>
-      <source>Hatch Pattern default size</source>
-      <translation>Размер Шаблона штриховки по умолчанию</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="300"/>
-      <source>The default size of hatch patterns</source>
-      <translation>Размер по умолчанию для шаблонов штриховки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="329"/>
-      <source>If set, the grid will have its two main axes colored in red, green or blue when they match global axes</source>
-      <translation>Если задано, две главные оси сетки будут окрашены в красный, зеленый или синий цвет, когда они совпадают с глобальными осями</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="332"/>
-      <source>Use colored axes</source>
-      <translation>Использовать цветные оси</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="506"/>
-      <source>Grid color and transparency</source>
-      <translation>Цвет и прозрачность сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="526"/>
-      <source>The color of the grid</source>
-      <translation>Цвет сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="546"/>
-      <source>The overall transparency of the grid</source>
-      <translation>Общая прозрачность сетки</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="873"/>
-      <source>Global</source>
-      <translation>Глобальный</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="895"/>
-      <source>G</source>
-      <translation type="unfinished">G</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="71"/>
-      <source>Python exporter is used, otherwise the newer C++ is used.
-Note: C++ exporter is faster, but is not as featureful yet</source>
-      <translation type="unfinished">Python exporter is used, otherwise the newer C++ is used.
-Note: C++ exporter is faster, but is not as featureful yet</translation>
-    </message>
-  </context>
-  <context>
     <name>ImportAirfoilDAT</name>
     <message>
       <location filename="importAirfoilDAT.py" line="186"/>
       <source>Did not find enough coordinates</source>
       <translation type="unfinished">Did not find enough coordinates</translation>
-    </message>
-  </context>
-  <context>
-    <name>ImportDWG</name>
-    <message>
-      <location filename="importDWG.py" line="233"/>
-      <source>Conversion successful</source>
-      <translation>Конвертация прошла успешно</translation>
-    </message>
-    <message>
-      <location filename="importDWG.py" line="277"/>
-      <source>Converting:</source>
-      <translation type="unfinished">Converting:</translation>
     </message>
   </context>
   <context>
@@ -5313,7 +2937,67 @@ Note: C++ exporter is faster, but is not as featureful yet</translation>
   <context>
     <name>Workbench</name>
     <message>
-      <location filename="gui_snapper.py" line="1476"/>
+      <location filename="InitGui.py" line="104"/>
+      <source>Draft creation tools</source>
+      <translation>Инструменты создания черновиков</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="107"/>
+      <source>Draft annotation tools</source>
+      <translation>Инструменты аннотации черновика</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="110"/>
+      <source>Draft modification tools</source>
+      <translation>Инструменты модификации черновика</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="113"/>
+      <source>Draft utility tools</source>
+      <translation>Инструменты верстака набросок</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="118"/>
+      <source>&amp;Drafting</source>
+      <translation>&amp;Черчение</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="121"/>
+      <source>&amp;Annotation</source>
+      <translation>&amp;Заметка</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="124"/>
+      <source>&amp;Modification</source>
+      <translation>&amp;Модификация</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="127"/>
+      <source>&amp;Utilities</source>
+      <translation>&amp;Утилиты</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="50"/>
+      <source>Arc tools</source>
+      <translation>Инструменты построения дуги</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="58"/>
+      <source>BÃ©zier tools</source>
+      <translation>Инструменты кривой Безье</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="58"/>
+      <source>Bezier tools</source>
+      <translation>Инструменты Безье</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="89"/>
+      <source>Array tools</source>
+      <translation>Инструменты для работы с массивами</translation>
+    </message>
+    <message>
+      <location filename="gui_snapper.py" line="1470"/>
       <source>Draft Snap</source>
       <translation type="unfinished">Draft Snap</translation>
     </message>
@@ -5321,322 +3005,14 @@ Note: C++ exporter is faster, but is not as featureful yet</translation>
   <context>
     <name>draft</name>
     <message>
-      <location filename="DraftGui.py" line="330"/>
-      <source>Draft Command Bar</source>
-      <translation>Командная строка черчения</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="832"/>
-      <source>Toggle construction mode</source>
-      <translation>Переключить режим конструирования</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2054"/>
-      <source>Autogroup off</source>
-      <translation>Автогруппирование выключено</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="722"/>
-      <source>active command:</source>
-      <translation>Текущая команда:</translation>
-    </message>
-    <message>
-      <location filename="gui_groups.py" line="299"/>
-      <source>None</source>
-      <translation>Ничего</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="724"/>
-      <source>Active Draft command</source>
-      <translation>Активная команда черчения</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="725"/>
-      <source>X coordinate of next point</source>
-      <translation>абсцисса следующей точки</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1056"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="727"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="728"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="729"/>
-      <source>Y coordinate of next point</source>
-      <translation>ордината следующей точки</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="730"/>
-      <source>Z coordinate of next point</source>
-      <translation>аппликата следующей точки</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="731"/>
-      <source>Enter point</source>
-      <translation>Введите точку</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="733"/>
-      <source>Enter a new point with the given coordinates</source>
-      <translation>Введите новую точку с заданными координатами</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="734"/>
-      <source>Length</source>
-      <translation>Длина</translation>
-    </message>
-    <message>
-      <location filename="gui_trimex.py" line="220"/>
-      <source>Angle</source>
-      <translation>Угол</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="736"/>
-      <source>Length of current segment</source>
-      <translation>Длина текущего сегмента</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="737"/>
-      <source>Angle of current segment</source>
-      <translation>Угол текущего сегмента</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1105"/>
-      <source>Radius</source>
-      <translation>Радиус</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1106"/>
-      <source>Radius of Circle</source>
-      <translation>Радиус окружности</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="766"/>
-      <source>If checked, command will not finish until you press the command button again</source>
-      <translation>Если отмечено, команда не будет завершена до нажатия кнопки снова</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="772"/>
-      <source>&amp;OCC-style offset</source>
-      <translation>Смещение в стиле &amp;OCC</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="792"/>
-      <source>Sides</source>
-      <translation>Стороны</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="793"/>
-      <source>Number of sides</source>
-      <translation>Количество сторон</translation>
-    </message>
-    <message>
-      <location filename="gui_offset.py" line="324"/>
-      <source>Offset</source>
-      <translation>Смещение</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="659"/>
-      <source>Auto</source>
-      <translation>Авто</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="799"/>
-      <source>Text string to draw</source>
-      <translation>Cтрока текста  для рисования</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="800"/>
-      <source>String</source>
-      <translation>Строка</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="801"/>
-      <source>Height of text</source>
-      <translation>Высота текста</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="802"/>
-      <source>Height</source>
-      <translation>Высота</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="803"/>
-      <source>Intercharacter spacing</source>
-      <translation>Межсимвольное расстояние</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="804"/>
-      <source>Tracking</source>
-      <translation>Межсимвольное расстояние</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="805"/>
-      <source>Full path to font file:</source>
-      <translation>Полный путь к файлу шрифта:</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="806"/>
-      <source>Open a FileChooser for font file</source>
-      <translation>Открыть обозреватель файлов для выбора файла шрифта</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="944"/>
-      <source>Line</source>
-      <translation>Линия</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="953"/>
-      <source>DWire</source>
-      <translation>Ломаная</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="971"/>
-      <source>Circle</source>
-      <translation>Окружность</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="980"/>
-      <source>Arc</source>
-      <translation>Дуга</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="987"/>
-      <source>Point</source>
-      <translation>Точка</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1015"/>
-      <source>Label</source>
-      <translation>Метка</translation>
-    </message>
-    <message>
-      <location filename="gui_trimex.py" line="215"/>
-      <source>Distance</source>
-      <translation>Расстояние</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1192"/>
-      <source>Pick Object</source>
-      <translation>Выберите объект</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1198"/>
-      <source>Edit</source>
-      <translation>Редактировать</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1261"/>
-      <source>Global X</source>
-      <translation>Глобальный X</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1262"/>
-      <source>Global Y</source>
-      <translation>Глобальный Y</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1263"/>
-      <source>Global Z</source>
-      <translation>Глобальный Z</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1253"/>
-      <source>Local X</source>
-      <translation>Локальный X</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1254"/>
-      <source>Local Y</source>
-      <translation>Локальный Y</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1255"/>
-      <source>Local Z</source>
-      <translation>Локальный Z</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1496"/>
-      <source>Invalid Size value. Using 200.0.</source>
-      <translation>Неверное значение размера. Используется 200.0.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1504"/>
-      <source>Invalid Tracking value. Using 0.</source>
-      <translation>Неверный интервал между символами. Используется 0.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1518"/>
-      <source>Please enter a text string.</source>
-      <translation>Пожалуйста, введите текст.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1527"/>
-      <source>Select a Font file</source>
-      <translation>Выберите файл шрифта</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1560"/>
-      <source>Please enter a font file.</source>
-      <translation>Пожалуйста, введите файл шрифта.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2374"/>
-      <source>Faces</source>
-      <translation>Грани</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2375"/>
-      <source>Remove</source>
-      <translation>Удалить</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2376"/>
-      <source>Add</source>
-      <translation>Добавить</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2377"/>
-      <source>Facebinder elements</source>
-      <translation>Элементы граневяза</translation>
-    </message>
-    <message>
-      <location filename="gui_rotate.py" line="276"/>
-      <source>Copy</source>
-      <translation>Копировать</translation>
-    </message>
-    <message>
-      <location filename="importDXF.py" line="146"/>
-      <source>The DXF import/export libraries needed by FreeCAD to handle
-the DXF format were not found on this system.
-Please either enable FreeCAD to download these libraries:
-  1 - Load Draft workbench
-  2 - Menu Edit &gt; Preferences &gt; Import-Export &gt; DXF &gt; Enable downloads
-Or download these libraries manually, as explained on
-https://github.com/yorikvanhavre/Draft-dxf-importer
-To enabled FreeCAD to download these libraries, answer Yes.</source>
-      <translation>Библиотека импорта/экспорта DXF, необходимая FreeCAD для обработки формата DXF не была найдена на этой системе. 
-Либо позвольте FreeCAD скачать эту библиотеку: 
- 1 - загрузите верстак Экиз
- 2 - Меню Правка &gt; Параметры&gt; Импорт-Экспорт &gt; DXF &gt; Включить загрузки
-Либо скачайте библиотеку вручную, подробности 
-https://github.com/yorikvanhavre/Draft-dxf-importer
-Чтобы разрешить FreeCAD скачать эту библиотеку, ответьте Да.</translation>
-    </message>
-    <message>
       <location filename="DraftGui.py" line="745"/>
       <source>Relative</source>
       <translation>Относительно</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="750"/>
+      <source>Global</source>
+      <translation>Глобальный</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="768"/>
@@ -5647,6 +3023,16 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="DraftGui.py" line="784"/>
       <source>Close</source>
       <translation>Закрыть</translation>
+    </message>
+    <message>
+      <location filename="gui_rotate.py" line="276"/>
+      <source>Copy</source>
+      <translation>Копировать</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="81"/>
+      <source>Subelement mode</source>
+      <translation>Режим дочернего элемента</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="86"/>
@@ -5719,14 +3105,149 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Выбор объекта по узловым точкам</translation>
     </message>
     <message>
+      <location filename="DraftGui.py" line="156"/>
+      <source>Toggle near snap on/off</source>
+      <translation>Включить привязку вблизи</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="330"/>
+      <source>Draft Command Bar</source>
+      <translation>Командная строка черчения</translation>
+    </message>
+    <message>
+      <location filename="gui_selectplane.py" line="369"/>
+      <source>Top</source>
+      <translation>Сверху</translation>
+    </message>
+    <message>
+      <location filename="gui_selectplane.py" line="381"/>
+      <source>Front</source>
+      <translation>Спереди</translation>
+    </message>
+    <message>
+      <location filename="gui_selectplane.py" line="393"/>
+      <source>Side</source>
+      <translation>Сторона</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="659"/>
+      <source>Auto</source>
+      <translation>Авто</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="299"/>
+      <source>None</source>
+      <translation>Ничего</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="722"/>
+      <source>active command:</source>
+      <translation>Текущая команда:</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="724"/>
+      <source>Active Draft command</source>
+      <translation>Активная команда черчения</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="725"/>
+      <source>X coordinate of next point</source>
+      <translation>абсцисса следующей точки</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1056"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="727"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="728"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="729"/>
+      <source>Y coordinate of next point</source>
+      <translation>ордината следующей точки</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="730"/>
+      <source>Z coordinate of next point</source>
+      <translation>аппликата следующей точки</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="731"/>
+      <source>Enter point</source>
+      <translation>Введите точку</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="733"/>
+      <source>Enter a new point with the given coordinates</source>
+      <translation>Введите новую точку с заданными координатами</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="734"/>
+      <source>Length</source>
+      <translation>Длина</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="220"/>
+      <source>Angle</source>
+      <translation>Угол</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="736"/>
+      <source>Length of current segment</source>
+      <translation>Длина текущего сегмента</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="737"/>
+      <source>Angle of current segment</source>
+      <translation>Угол текущего сегмента</translation>
+    </message>
+    <message>
       <location filename="DraftGui.py" line="741"/>
       <source>Check this to lock the current angle</source>
       <translation>Отметьте чтобы закрепить текущий угол</translation>
     </message>
     <message>
+      <location filename="DraftGui.py" line="1105"/>
+      <source>Radius</source>
+      <translation>Радиус</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1106"/>
+      <source>Radius of Circle</source>
+      <translation>Радиус окружности</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="748"/>
+      <source>Coordinates relative to last point or to coordinate system origin
+if is the first point to set</source>
+      <translation>Координаты будут указаны относительно последней точки или относительно центра системы координат если это первая точка для установки.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="753"/>
+      <source>Coordinates relative to global coordinate system.
+Uncheck to use working plane coordinate system</source>
+      <translation>Координаты будут указаны относительно центра глобальной системы координат.
+Отключите, если хотите использовать систему координат рабочей плоскости</translation>
+    </message>
+    <message>
       <location filename="DraftGui.py" line="755"/>
       <source>Filled</source>
       <translation>Заполненный</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="759"/>
+      <source>Check this if the object should appear as filled, otherwise it will appear as wireframe.
+Not available if Draft preference option 'Use Part Primitives' is enabled</source>
+      <translation type="unfinished">Check this if the object should appear as filled, otherwise it will appear as wireframe.
+Not available if Draft preference option 'Use Part Primitives' is enabled</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="761"/>
@@ -5737,6 +3258,21 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="DraftGui.py" line="763"/>
       <source>Finishes the current drawing or editing operation</source>
       <translation>Завершить текущую операцию черчения или редактирования</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="766"/>
+      <source>If checked, command will not finish until you press the command button again</source>
+      <translation>Если отмечено, команда не будет завершена до нажатия кнопки снова</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="771"/>
+      <source>If checked, an OCC-style offset will be performedinstead of the classic offset</source>
+      <translation type="unfinished">If checked, an OCC-style offset will be performedinstead of the classic offset</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="772"/>
+      <source>&amp;OCC-style offset</source>
+      <translation>Смещение в стиле &amp;OCC</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="782"/>
@@ -5774,14 +3310,19 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Выбирает существующую кромку чтобы измерить размер</translation>
     </message>
     <message>
+      <location filename="DraftGui.py" line="792"/>
+      <source>Sides</source>
+      <translation>Стороны</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="793"/>
+      <source>Number of sides</source>
+      <translation>Количество сторон</translation>
+    </message>
+    <message>
       <location filename="DraftGui.py" line="796"/>
       <source>If checked, objects will be copied instead of moved. Preferences -&gt; Draft -&gt; Global copy mode to keep this mode in next commands</source>
       <translation>Если флажок установлен, объекты будут скопированы, иначе будут перенесены. Настройки-&gt; Чертёж-&gt; Режим глобального копирования сохранить для последующих команд.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="81"/>
-      <source>Subelement mode</source>
-      <translation>Режим дочернего элемента</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="797"/>
@@ -5794,34 +3335,44 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Если флажок установлен, то вместо целых объектов будут изменены дочерние элементы</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="369"/>
-      <source>Top</source>
-      <translation>Сверху</translation>
+      <location filename="DraftGui.py" line="799"/>
+      <source>Text string to draw</source>
+      <translation>Cтрока текста  для рисования</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="381"/>
-      <source>Front</source>
-      <translation>Спереди</translation>
+      <location filename="DraftGui.py" line="800"/>
+      <source>String</source>
+      <translation>Строка</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="393"/>
-      <source>Side</source>
-      <translation>Сторона</translation>
+      <location filename="DraftGui.py" line="801"/>
+      <source>Height of text</source>
+      <translation>Высота текста</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="536"/>
-      <source>Current working plane</source>
-      <translation>Текущая рабочая плоскость</translation>
+      <location filename="DraftGui.py" line="802"/>
+      <source>Height</source>
+      <translation>Высота</translation>
     </message>
     <message>
-      <location filename="InitGui.py" line="46"/>
-      <source>Draft</source>
-      <translation>Осадка</translation>
+      <location filename="DraftGui.py" line="803"/>
+      <source>Intercharacter spacing</source>
+      <translation>Межсимвольное расстояние</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="156"/>
-      <source>Toggle near snap on/off</source>
-      <translation>Включить привязку вблизи</translation>
+      <location filename="DraftGui.py" line="804"/>
+      <source>Tracking</source>
+      <translation>Межсимвольное расстояние</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="805"/>
+      <source>Full path to font file:</source>
+      <translation>Полный путь к файлу шрифта:</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="806"/>
+      <source>Open a FileChooser for font file</source>
+      <translation>Открыть обозреватель файлов для выбора файла шрифта</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="807"/>
@@ -5834,14 +3385,246 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Нажмите эту кнопку, чтобы создать текстовый объект, или закончите ввод текста двумя пустыми строками</translation>
     </message>
     <message>
-      <location filename="gui_trimex.py" line="217"/>
-      <source>Offset distance</source>
-      <translation>Расстояние смещения</translation>
+      <location filename="gui_selectplane.py" line="536"/>
+      <source>Current working plane</source>
+      <translation>Текущая рабочая плоскость</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="831"/>
       <source>Change default style for new objects</source>
       <translation>Цвет по умолчанию для новых объектов</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="832"/>
+      <source>Toggle construction mode</source>
+      <translation>Переключить режим конструирования</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2054"/>
+      <source>Autogroup off</source>
+      <translation>Автогруппирование выключено</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="944"/>
+      <source>Line</source>
+      <translation>Линия</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="953"/>
+      <source>DWire</source>
+      <translation>Ломаная</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="971"/>
+      <source>Circle</source>
+      <translation>Окружность</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="980"/>
+      <source>Arc</source>
+      <translation>Дуга</translation>
+    </message>
+    <message>
+      <location filename="gui_rotate.py" line="279"/>
+      <source>Rotate</source>
+      <translation>Повернуть</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="987"/>
+      <source>Point</source>
+      <translation>Точка</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1015"/>
+      <source>Label</source>
+      <translation>Метка</translation>
+    </message>
+    <message>
+      <location filename="gui_offset.py" line="324"/>
+      <source>Offset</source>
+      <translation>Смещение</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="215"/>
+      <source>Distance</source>
+      <translation>Расстояние</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="217"/>
+      <source>Offset distance</source>
+      <translation>Расстояние смещения</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1094"/>
+      <source>Trimex</source>
+      <translation>Укоротить / Растянуть</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1192"/>
+      <source>Pick Object</source>
+      <translation>Выберите объект</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1198"/>
+      <source>Edit</source>
+      <translation>Редактировать</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1249"/>
+      <source>Local u0394X</source>
+      <translation>Относительное u0394X</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1250"/>
+      <source>Local u0394Y</source>
+      <translation>Относительное u0394Y</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1251"/>
+      <source>Local u0394Z</source>
+      <translation>Относительное u0394Z</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1253"/>
+      <source>Local X</source>
+      <translation>Локальный X</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1254"/>
+      <source>Local Y</source>
+      <translation>Локальный Y</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1255"/>
+      <source>Local Z</source>
+      <translation>Локальный Z</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1257"/>
+      <source>Global u0394X</source>
+      <translation>Абсолютное u0394X</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1258"/>
+      <source>Global u0394Y</source>
+      <translation>Абсолютное u0394Y</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1259"/>
+      <source>Global u0394Z</source>
+      <translation>Абсолютное u0394Z</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1261"/>
+      <source>Global X</source>
+      <translation>Глобальный X</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1262"/>
+      <source>Global Y</source>
+      <translation>Глобальный Y</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1263"/>
+      <source>Global Z</source>
+      <translation>Глобальный Z</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1496"/>
+      <source>Invalid Size value. Using 200.0.</source>
+      <translation>Неверное значение размера. Используется 200.0.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1504"/>
+      <source>Invalid Tracking value. Using 0.</source>
+      <translation>Неверный интервал между символами. Используется 0.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1518"/>
+      <source>Please enter a text string.</source>
+      <translation>Пожалуйста, введите текст.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1527"/>
+      <source>Select a Font file</source>
+      <translation>Выберите файл шрифта</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1560"/>
+      <source>Please enter a font file.</source>
+      <translation>Пожалуйста, введите файл шрифта.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2047"/>
+      <source>Autogroup:</source>
+      <translation type="unfinished">Autogroup:</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2374"/>
+      <source>Faces</source>
+      <translation>Грани</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2375"/>
+      <source>Remove</source>
+      <translation>Удалить</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2376"/>
+      <source>Add</source>
+      <translation>Добавить</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2377"/>
+      <source>Facebinder elements</source>
+      <translation>Элементы граневяза</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="286"/>
+      <source>LibreDWG error</source>
+      <translation>Ошибка LibreDWG</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="295"/>
+      <source>Converting:</source>
+      <translation>Преобразование:</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="228"/>
+      <source>Conversion successful</source>
+      <translation>Конвертация прошла успешно</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="231"/>
+      <source>Error during DWG conversion. Try moving the DWG file to a directory path without spaces and non-english characters, or try saving to a lower DWG version.</source>
+      <translation type="unfinished">Error during DWG conversion. Try moving the DWG file to a directory path without spaces and non-english characters, or try saving to a lower DWG version.</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="300"/>
+      <source>ODA File Converter not found</source>
+      <translation>Конвертер файлов ODA не найден</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="310"/>
+      <source>QCAD error</source>
+      <translation>Ошибка QCAD</translation>
+    </message>
+    <message>
+      <location filename="make_sketch.py" line="139"/>
+      <source>All Shapes must be coplanar</source>
+      <translation type="unfinished">All Shapes must be coplanar</translation>
+    </message>
+    <message>
+      <location filename="WorkingPlane.py" line="696"/>
+      <source>Selected Shapes must define a plane
+</source>
+      <translation type="unfinished">Selected Shapes must define a plane
+</translation>
+    </message>
+    <message>
+      <location filename="WorkingPlane.py" line="704"/>
+      <source>Selected Shapes must define a plane</source>
+      <translation type="unfinished">Selected Shapes must define a plane</translation>
     </message>
     <message>
       <location filename="make_label.py" line="196"/>
@@ -5914,6 +3697,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Found several wires or edges: wiring them</translation>
     </message>
     <message>
+      <location filename="upgrade.py" line="541"/>
+      <source>Found several non-treatable objects: creating compound</source>
+      <translation type="unfinished">Found several non-treatable objects: creating compound</translation>
+    </message>
+    <message>
       <location filename="upgrade.py" line="512"/>
       <source>trying: closing it</source>
       <translation type="unfinished">trying: closing it</translation>
@@ -5934,11 +3722,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Found points: creating compound</translation>
     </message>
     <message>
-      <location filename="upgrade.py" line="541"/>
-      <source>Found several non-treatable objects: creating compound</source>
-      <translation type="unfinished">Found several non-treatable objects: creating compound</translation>
-    </message>
-    <message>
       <location filename="upgrade.py" line="544"/>
       <source>Unable to upgrade these objects.</source>
       <translation type="unfinished">Unable to upgrade these objects.</translation>
@@ -5952,6 +3735,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="mirror.py" line="94"/>
       <source>The two points are coincident</source>
       <translation type="unfinished">The two points are coincident</translation>
+    </message>
+    <message>
+      <location filename="mirror.py" line="113"/>
+      <source>mirrored</source>
+      <translation type="unfinished">mirrored</translation>
     </message>
     <message>
       <location filename="downgrade.py" line="238"/>
@@ -6014,9 +3802,19 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Wrong input: must be a placement, a vector, or a rotation.</translation>
     </message>
     <message>
+      <location filename="make_arc_3points.py" line="130"/>
+      <source>Points:</source>
+      <translation>Точки:</translation>
+    </message>
+    <message>
       <location filename="make_arc_3points.py" line="131"/>
       <source>Wrong input: must be list or tuple of three points exactly.</source>
       <translation type="unfinished">Wrong input: must be list or tuple of three points exactly.</translation>
+    </message>
+    <message>
+      <location filename="make_arc_3points.py" line="138"/>
+      <source>Placement:</source>
+      <translation>Расположение:</translation>
     </message>
     <message>
       <location filename="make_arc_3points.py" line="139"/>
@@ -6027,6 +3825,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="make_arc_3points.py" line="153"/>
       <source>Wrong input: incorrect type of points.</source>
       <translation type="unfinished">Wrong input: incorrect type of points.</translation>
+    </message>
+    <message>
+      <location filename="make_arc_3points.py" line="159"/>
+      <source>Cannot generate shape:</source>
+      <translation type="unfinished">Cannot generate shape:</translation>
     </message>
     <message>
       <location filename="make_arc_3points.py" line="166"/>
@@ -6061,7 +3864,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="make_arc_3points.py" line="198"/>
       <source>Map mode:</source>
-      <translation type="unfinished">Map mode:</translation>
+      <translation>Режим карты:</translation>
     </message>
     <message>
       <location filename="make_fillet.py" line="145"/>
@@ -6076,7 +3879,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="make_fillet.py" line="139"/>
       <source>Radius is too large</source>
-      <translation type="unfinished">Radius is too large</translation>
+      <translation>Радиус слишком большой</translation>
     </message>
     <message>
       <location filename="make_fillet.py" line="145"/>
@@ -6086,7 +3889,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="make_fillet.py" line="165"/>
       <source>Removed original objects.</source>
-      <translation type="unfinished">Removed original objects.</translation>
+      <translation>Удалить оригинальные объекты.</translation>
     </message>
     <message>
       <location filename="make_label.py" line="292"/>
@@ -6246,11 +4049,21 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
 </translation>
     </message>
     <message>
+      <location filename="make_sketch.py" line="104"/>
+      <source>No shape found</source>
+      <translation type="unfinished">No shape found</translation>
+    </message>
+    <message>
       <location filename="make_sketch.py" line="109"/>
       <source>All Shapes must be planar
 </source>
       <translation type="unfinished">All Shapes must be planar
 </translation>
+    </message>
+    <message>
+      <location filename="make_sketch.py" line="111"/>
+      <source>All Shapes must be planar</source>
+      <translation type="unfinished">All Shapes must be planar</translation>
     </message>
     <message>
       <location filename="make_sketch.py" line="135"/>
@@ -6303,6 +4116,16 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="make_label.py" line="264"/>
       <source>Wrong input: subelement not in object.</source>
       <translation type="unfinished">Wrong input: subelement not in object.</translation>
+    </message>
+    <message>
+      <location filename="make_label.py" line="272"/>
+      <source>Wrong input: label_type must be a string.</source>
+      <translation type="unfinished">Wrong input: label_type must be a string.</translation>
+    </message>
+    <message>
+      <location filename="make_label.py" line="277"/>
+      <source>Wrong input: label_type must be one of the following: </source>
+      <translation type="unfinished">Wrong input: label_type must be one of the following: </translation>
     </message>
     <message>
       <location filename="make_label.py" line="278"/>
@@ -6387,7 +4210,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="view_layer.py" line="358"/>
       <source>Activate this layer</source>
-      <translation type="unfinished">Activate this layer</translation>
+      <translation>Активировать этот слой</translation>
     </message>
     <message>
       <location filename="view_layer.py" line="364"/>
@@ -6395,19 +4218,269 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Select layer contents</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="147"/>
+      <location filename="view_layer.py" line="421"/>
+      <source>Merge layer duplicates</source>
+      <translation>Объединить дубликаты слоя</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="469"/>
+      <source>Add new layer</source>
+      <translation>Добавить новый слой</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="454"/>
+      <source>Relabeling layer:</source>
+      <translation type="unfinished">Relabeling layer:</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="458"/>
+      <source>Merging layer:</source>
+      <translation type="unfinished">Merging layer:</translation>
+    </message>
+    <message>
+      <location filename="view_base.py" line="402"/>
+      <source>Please load the Draft Workbench to enable editing this object</source>
+      <translation type="unfinished">Please load the Draft Workbench to enable editing this object</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="46"/>
+      <source>Draft</source>
+      <translation>Осадка</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="155"/>
       <source>custom</source>
       <translation>произвольный, пользовательский</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="133"/>
+      <location filename="init_draft_statusbar.py" line="140"/>
+      <source>Unable to convert input into a  scale factor</source>
+      <translation>Невозможно преобразовать ввод в коэффициент масштаба</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="141"/>
       <source>Unable to convert input into a scale factor</source>
       <translation type="unfinished">Unable to convert input into a scale factor</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="151"/>
+      <location filename="init_draft_statusbar.py" line="155"/>
+      <source>Set custom scale</source>
+      <translation>Установить свой масштаб</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="159"/>
       <source>Set custom annotation scale in format x:x, x=x</source>
       <translation>Задать произвольный масштаб заметки в формате x:x, x=x</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="214"/>
+      <source>Set the scale used by draft annotation tools</source>
+      <translation>Установите масштаб масштаба, используемый черновиками аннотаций</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="650"/>
+      <source>Solids:</source>
+      <translation>Твердотельные объекты:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="651"/>
+      <source>Faces:</source>
+      <translation>Грани:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="652"/>
+      <source>Wires:</source>
+      <translation>Ломаные линии:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="653"/>
+      <source>Edges:</source>
+      <translation>Края:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="654"/>
+      <source>Vertices:</source>
+      <translation>Вершины | Узлы:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="658"/>
+      <source>Face</source>
+      <translation>Грань</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="663"/>
+      <source>Wire</source>
+      <translation>Ломаная</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="699"/>
+      <source>different types</source>
+      <translation>различные типы</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="709"/>
+      <source>Objects have different placements. Distance between the two base points: </source>
+      <translation>Объекты имеют разные размещения. Расстояние между двумя базовыми точками: </translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="712"/>
+      <source>has a different value</source>
+      <translation>имеет другое значение</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="715"/>
+      <source>doesn't exist in one of the objects</source>
+      <translation>нет в одном из объектов</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="827"/>
+      <source>%s shares a base with %d other objects. Please check if you want to modify this.</source>
+      <translation>%s делит базу с %d других объектов. Пожалуйста, проверьте, хотите ли вы изменить это.</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="833"/>
+      <source>%s cannot be modified because its placement is readonly.</source>
+      <translation>%s не может быть изменено, потому что это размещение только для чтения.</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="977"/>
+      <source>Wrong input: unknown document.</source>
+      <translation>Неправильный ввод: неизвестный документ.</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="1055"/>
+      <source>This function will be deprecated in </source>
+      <translation>Эта функция будет устарела через </translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="1059"/>
+      <source>Please use </source>
+      <translation>Пожалуйста, используйте </translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="1059"/>
+      <source>This function will be deprecated. </source>
+      <translation>Эта функция будет устаревшим. </translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="169"/>
+      <source>Snap Lock</source>
+      <translation>Закрепить</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="170"/>
+      <source>Snap Endpoint</source>
+      <translation>Привязка конечной точки</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="171"/>
+      <source>Snap Midpoint</source>
+      <translation>Привязка к середине</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="172"/>
+      <source>Snap Center</source>
+      <translation>Центр привязки</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="173"/>
+      <source>Snap Angle</source>
+      <translation>Угол привязки</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="174"/>
+      <source>Snap Intersection</source>
+      <translation>Привязка пересечение</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="175"/>
+      <source>Snap Perpendicular</source>
+      <translation>Привязка перпендикуляр</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="176"/>
+      <source>Snap Extension</source>
+      <translation>Привязка расширение</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="177"/>
+      <source>Snap Parallel</source>
+      <translation>Привязка параллельно</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="178"/>
+      <source>Snap Special</source>
+      <translation>Специальная привязка</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="179"/>
+      <source>Snap Near</source>
+      <translation>Привязка к ближайшей</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="180"/>
+      <source>Snap Ortho</source>
+      <translation>Привязка орто</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="181"/>
+      <source>Snap Grid</source>
+      <translation>Привязка к сетке</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="182"/>
+      <source>Snap WorkingPlane</source>
+      <translation>Привязка к рабочей плоскости</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="183"/>
+      <source>Snap Dimensions</source>
+      <translation>Привязка к размерам</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="187"/>
+      <source>Toggle Draft Grid</source>
+      <translation>Вкл/выкл сетку Draft</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="81"/>
+      <source>No graphical interface</source>
+      <translation>Нет графического интерфейса</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="161"/>
+      <source>Unable to insert new object into a scaled part</source>
+      <translation>Невозможно вставить новый объект в масштабированную деталь</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="267"/>
+      <source>Symbol not implemented. Using a default symbol.</source>
+      <translation>Символ не реализован. Использование символа по умолчанию.</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="333"/>
+      <source>Visibility off; removed from list: </source>
+      <translation>Видимость выключена; удалена из списка: </translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="603"/>
+      <source>image is Null</source>
+      <translation>изображение пустое</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="609"/>
+      <source>filename does not exist on the system or in the resource file</source>
+      <translation>имя файла не существует в системе или в файле ресурсов</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="668"/>
+      <source>unable to load texture</source>
+      <translation>невозможно загрузить текстуру</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="738"/>
+      <source>Does not have 'ViewObject.RootNode'.</source>
+      <translation>Не имеет 'ViewObject.RootNode'.</translation>
     </message>
     <message>
       <location filename="task_orthoarray.py" line="83"/>
@@ -6595,14 +4668,32 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Create ShapeString</translation>
     </message>
     <message>
-      <location filename="gui_downgrade.py" line="85"/>
-      <source>Downgrade</source>
-      <translation>Упрощающее Преобразование</translation>
+      <location filename="importDXF.py" line="146"/>
+      <source>The DXF import/export libraries needed by FreeCAD to handle
+the DXF format were not found on this system.
+Please either enable FreeCAD to download these libraries:
+  1 - Load Draft workbench
+  2 - Menu Edit &gt; Preferences &gt; Import-Export &gt; DXF &gt; Enable downloads
+Or download these libraries manually, as explained on
+https://github.com/yorikvanhavre/Draft-dxf-importer
+To enabled FreeCAD to download these libraries, answer Yes.</source>
+      <translation>Библиотека импорта/экспорта DXF, необходимая FreeCAD для обработки формата DXF не была найдена на этой системе. 
+Либо позвольте FreeCAD скачать эту библиотеку: 
+ 1 - загрузите верстак Экиз
+ 2 - Меню Правка &gt; Параметры&gt; Импорт-Экспорт &gt; DXF &gt; Включить загрузки
+Либо скачайте библиотеку вручную, подробности 
+https://github.com/yorikvanhavre/Draft-dxf-importer
+Чтобы разрешить FreeCAD скачать эту библиотеку, ответьте Да.</translation>
     </message>
     <message>
       <location filename="gui_upgrade.py" line="67"/>
       <source>Select an object to upgrade</source>
       <translation type="unfinished">Select an object to upgrade</translation>
+    </message>
+    <message>
+      <location filename="gui_downgrade.py" line="85"/>
+      <source>Downgrade</source>
+      <translation>Упрощающее Преобразование</translation>
     </message>
     <message>
       <location filename="gui_clone.py" line="79"/>
@@ -6612,7 +4703,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_rectangles.py" line="69"/>
       <source>Pick first point</source>
-      <translation type="unfinished">Pick first point</translation>
+      <translation>Укажите первую точку</translation>
     </message>
     <message>
       <location filename="gui_ellipses.py" line="138"/>
@@ -6622,7 +4713,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_rectangles.py" line="202"/>
       <source>Pick opposite point</source>
-      <translation type="unfinished">Pick opposite point</translation>
+      <translation>Укажите противоположную точку</translation>
     </message>
     <message>
       <location filename="gui_lines.py" line="167"/>
@@ -6637,7 +4728,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_splines.py" line="140"/>
       <source>Pick next point</source>
-      <translation type="unfinished">Pick next point</translation>
+      <translation>Укажите следующую точку</translation>
     </message>
     <message>
       <location filename="gui_lines.py" line="334"/>
@@ -6700,6 +4791,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Create Dimension (radial)</translation>
     </message>
     <message>
+      <location filename="gui_dimensions.py" line="508"/>
+      <source>Edge too short!</source>
+      <translation type="unfinished">Edge too short!</translation>
+    </message>
+    <message>
       <location filename="gui_dimensions.py" line="511"/>
       <source>Edges don't intersect!</source>
       <translation>Рёбра не пересекаются!</translation>
@@ -6740,11 +4836,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Усложняющее Преобразование</translation>
     </message>
     <message>
-      <location filename="gui_move.py" line="205"/>
-      <source>Move</source>
-      <translation>Переместить</translation>
-    </message>
-    <message>
       <location filename="gui_move.py" line="81"/>
       <source>Select an object to move</source>
       <translation type="unfinished">Select an object to move</translation>
@@ -6760,19 +4851,24 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Указать конечную точку</translation>
     </message>
     <message>
+      <location filename="gui_move.py" line="205"/>
+      <source>Move</source>
+      <translation>Переместить</translation>
+    </message>
+    <message>
       <location filename="gui_rotate.py" line="282"/>
       <source>Some subelements could not be moved.</source>
       <translation type="unfinished">Some subelements could not be moved.</translation>
     </message>
     <message>
-      <location filename="gui_pointarray.py" line="122"/>
-      <source>Point array</source>
-      <translation>Массив Точек</translation>
-    </message>
-    <message>
       <location filename="gui_pointarray.py" line="104"/>
       <source>Please select exactly two objects, the base object and the point object, before calling this command.</source>
       <translation>Перед вызовом этой команды выберите два объекта: базовый объект и объект являющейся точкой.</translation>
+    </message>
+    <message>
+      <location filename="gui_pointarray.py" line="122"/>
+      <source>Point array</source>
+      <translation>Массив Точек</translation>
     </message>
     <message>
       <location filename="gui_togglemodes.py" line="73"/>
@@ -6787,12 +4883,12 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_togglemodes.py" line="125"/>
       <source>Continue mode</source>
-      <translation type="unfinished">Continue mode</translation>
+      <translation>Непрерывный режим</translation>
     </message>
     <message>
       <location filename="gui_togglemodes.py" line="159"/>
       <source>Toggle display mode</source>
-      <translation type="unfinished">Toggle display mode</translation>
+      <translation>Переключить режим отображения</translation>
     </message>
     <message>
       <location filename="gui_snaps.py" line="126"/>
@@ -6875,14 +4971,14 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Show snap toolbar</translation>
     </message>
     <message>
+      <location filename="gui_array_simple.py" line="77"/>
+      <source>Select an object to array</source>
+      <translation>Выберите объект для создания массива</translation>
+    </message>
+    <message>
       <location filename="gui_array_simple.py" line="101"/>
       <source>Array</source>
       <translation>Массив</translation>
-    </message>
-    <message>
-      <location filename="gui_array_simple.py" line="77"/>
-      <source>Select an object to array</source>
-      <translation type="unfinished">Select an object to array</translation>
     </message>
     <message>
       <location filename="gui_arcs.py" line="89"/>
@@ -6905,11 +5001,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Create Polygon</translation>
     </message>
     <message>
-      <location filename="gui_mirror.py" line="123"/>
-      <source>Mirror</source>
-      <translation>Отразить</translation>
-    </message>
-    <message>
       <location filename="gui_mirror.py" line="73"/>
       <source>Select an object to mirror</source>
       <translation type="unfinished">Select an object to mirror</translation>
@@ -6918,6 +5009,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="gui_mirror.py" line="93"/>
       <source>Pick start point of mirror line</source>
       <translation type="unfinished">Pick start point of mirror line</translation>
+    </message>
+    <message>
+      <location filename="gui_mirror.py" line="123"/>
+      <source>Mirror</source>
+      <translation>Отразить</translation>
     </message>
     <message>
       <location filename="gui_mirror.py" line="204"/>
@@ -6930,11 +5026,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Создать Точку</translation>
     </message>
     <message>
-      <location filename="gui_scale.py" line="353"/>
-      <source>Scale</source>
-      <translation>Масштаб</translation>
-    </message>
-    <message>
       <location filename="gui_scale.py" line="87"/>
       <source>Select an object to scale</source>
       <translation type="unfinished">Select an object to scale</translation>
@@ -6942,7 +5033,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_scale.py" line="108"/>
       <source>Pick base point</source>
-      <translation type="unfinished">Pick base point</translation>
+      <translation>Выберите базовую точку</translation>
     </message>
     <message>
       <location filename="gui_scale.py" line="130"/>
@@ -6950,9 +5041,24 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Pick reference distance from base point</translation>
     </message>
     <message>
+      <location filename="gui_scale.py" line="353"/>
+      <source>Scale</source>
+      <translation>Масштаб</translation>
+    </message>
+    <message>
       <location filename="gui_scale.py" line="203"/>
       <source>Some subelements could not be scaled.</source>
       <translation type="unfinished">Some subelements could not be scaled.</translation>
+    </message>
+    <message>
+      <location filename="gui_scale.py" line="333"/>
+      <source>Unable to scale object:</source>
+      <translation type="unfinished">Unable to scale object:</translation>
+    </message>
+    <message>
+      <location filename="gui_scale.py" line="337"/>
+      <source>Unable to scale objects:</source>
+      <translation type="unfinished">Unable to scale objects:</translation>
     </message>
     <message>
       <location filename="gui_scale.py" line="340"/>
@@ -6965,14 +5071,24 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Pick new distance from base point</translation>
     </message>
     <message>
+      <location filename="gui_snapper.py" line="1543"/>
+      <source>(ON)</source>
+      <translation>(ВКЛ)</translation>
+    </message>
+    <message>
+      <location filename="gui_snapper.py" line="1546"/>
+      <source>(OFF)</source>
+      <translation>(ОТКЛ)</translation>
+    </message>
+    <message>
       <location filename="gui_shape2dview.py" line="109"/>
       <source>Create 2D view</source>
       <translation type="unfinished">Create 2D view</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="332"/>
-      <source>Bezier curve has been closed</source>
-      <translation type="unfinished">Bezier curve has been closed</translation>
+      <source>BÃ©zier curve has been closed</source>
+      <translation type="unfinished">BÃ©zier curve has been closed</translation>
     </message>
     <message>
       <location filename="gui_splines.py" line="131"/>
@@ -6995,6 +5111,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Click and drag to define next knot</translation>
     </message>
     <message>
+      <location filename="gui_beziers.py" line="332"/>
+      <source>Bezier curve has been closed</source>
+      <translation type="unfinished">Bezier curve has been closed</translation>
+    </message>
+    <message>
       <location filename="gui_beziers.py" line="382"/>
       <source>Click and drag to define next knot, or finish (A) or close (O)</source>
       <translation type="unfinished">Click and drag to define next knot, or finish (A) or close (O)</translation>
@@ -7003,11 +5124,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="gui_dimension_ops.py" line="55"/>
       <source>Flip dimension</source>
       <translation>Обратить размер</translation>
-    </message>
-    <message>
-      <location filename="gui_stretch.py" line="478"/>
-      <source>Stretch</source>
-      <translation>Растянуть</translation>
     </message>
     <message>
       <location filename="gui_stretch.py" line="75"/>
@@ -7040,6 +5156,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">Turning one Rectangle into a Wire</translation>
     </message>
     <message>
+      <location filename="gui_stretch.py" line="478"/>
+      <source>Stretch</source>
+      <translation>Растянуть</translation>
+    </message>
+    <message>
       <location filename="gui_grid.py" line="51"/>
       <source>Toggle grid</source>
       <translation>Переключить сетку</translation>
@@ -7055,11 +5176,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Создать Прямоугольник</translation>
     </message>
     <message>
-      <location filename="gui_draft2sketch.py" line="143"/>
-      <source>Convert Draft/Sketch</source>
-      <translation type="unfinished">Convert Draft/Sketch</translation>
-    </message>
-    <message>
       <location filename="gui_draft2sketch.py" line="66"/>
       <source>Select an object to convert.</source>
       <translation type="unfinished">Select an object to convert.</translation>
@@ -7073,6 +5189,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="gui_draft2sketch.py" line="114"/>
       <source>Convert to Draft</source>
       <translation>Преобразовать в Draft</translation>
+    </message>
+    <message>
+      <location filename="gui_draft2sketch.py" line="143"/>
+      <source>Convert Draft/Sketch</source>
+      <translation type="unfinished">Convert Draft/Sketch</translation>
     </message>
     <message>
       <location filename="gui_heal.py" line="51"/>
@@ -7110,14 +5231,14 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation type="unfinished">No edit point found for selected object</translation>
     </message>
     <message>
+      <location filename="gui_edit.py" line="815"/>
+      <source>Too many objects selected, max number set to:</source>
+      <translation type="unfinished">Too many objects selected, max number set to:</translation>
+    </message>
+    <message>
       <location filename="gui_edit.py" line="823"/>
       <source>: this object is not editable</source>
       <translation>: данный объект недоступен для редактирования</translation>
-    </message>
-    <message>
-      <location filename="gui_patharray.py" line="143"/>
-      <source>Path array</source>
-      <translation type="unfinished">Path array</translation>
     </message>
     <message>
       <location filename="gui_pathtwistedarray.py" line="79"/>
@@ -7125,14 +5246,14 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Перед вызовом этой команды выберите два объекта: базовый объект и объект являющейся путем.</translation>
     </message>
     <message>
+      <location filename="gui_patharray.py" line="143"/>
+      <source>Path array</source>
+      <translation type="unfinished">Path array</translation>
+    </message>
+    <message>
       <location filename="gui_pathtwistedarray.py" line="101"/>
       <source>Path twisted array</source>
       <translation>Массив объектов закрученных по указанному пути</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1094"/>
-      <source>Trimex</source>
-      <translation>Укоротить / Растянуть</translation>
     </message>
     <message>
       <location filename="gui_trimex.py" line="94"/>
@@ -7143,6 +5264,11 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="gui_offset.py" line="143"/>
       <source>Pick distance</source>
       <translation type="unfinished">Pick distance</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="222"/>
+      <source>Offset angle</source>
+      <translation>Угол смещения</translation>
     </message>
     <message>
       <location filename="gui_trimex.py" line="483"/>
@@ -7210,26 +5336,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Дополнительно</translation>
     </message>
     <message>
-      <location filename="gui_lineops.py" line="73"/>
-      <source>No active command.</source>
-      <translation type="unfinished">No active command.</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="92"/>
-      <source>Finish line</source>
-      <translation type="unfinished">Finish line</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="118"/>
-      <source>Close line</source>
-      <translation type="unfinished">Close line</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="144"/>
-      <source>Undo line</source>
-      <translation type="unfinished">Undo line</translation>
-    </message>
-    <message>
       <location filename="gui_split.py" line="64"/>
       <source>Click anywhere on a line to split it.</source>
       <translation type="unfinished">Click anywhere on a line to split it.</translation>
@@ -7242,12 +5348,12 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_fillets.py" line="77"/>
       <source>Fillet radius</source>
-      <translation type="unfinished">Fillet radius</translation>
+      <translation>Радиус скругления</translation>
     </message>
     <message>
       <location filename="gui_fillets.py" line="80"/>
       <source>Radius of fillet</source>
-      <translation type="unfinished">Radius of fillet</translation>
+      <translation>Радиус скругления</translation>
     </message>
     <message>
       <location filename="gui_fillets.py" line="113"/>
@@ -7262,12 +5368,12 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_fillets.py" line="137"/>
       <source>Chamfer mode:</source>
-      <translation type="unfinished">Chamfer mode:</translation>
+      <translation>Тип фаски:</translation>
     </message>
     <message>
       <location filename="gui_fillets.py" line="154"/>
       <source>Two elements needed.</source>
-      <translation type="unfinished">Two elements needed.</translation>
+      <translation>Необходимы два элемента.</translation>
     </message>
     <message>
       <location filename="gui_fillets.py" line="161"/>
@@ -7305,9 +5411,19 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Добавить в группу</translation>
     </message>
     <message>
+      <location filename="gui_groups.py" line="70"/>
+      <source>Add new group</source>
+      <translation>Добавить новую группу</translation>
+    </message>
+    <message>
       <location filename="gui_groups.py" line="183"/>
       <source>Select group</source>
       <translation>Выбрать группу</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="193"/>
+      <source>No new selection. You must select non-empty groups or objects inside groups.</source>
+      <translation>Новый выделение отсутствует. Вы должны выбрать непустые группы или объекты внутри групп.</translation>
     </message>
     <message>
       <location filename="gui_groups.py" line="257"/>
@@ -7323,6 +5439,26 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <location filename="gui_groups.py" line="359"/>
       <source>Add to construction group</source>
       <translation type="unfinished">Add to construction group</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="355"/>
+      <source>Add a new group with a given name</source>
+      <translation>Добавить новую группу с заданный название</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="383"/>
+      <source>Add group</source>
+      <translation>Добавить группу</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="385"/>
+      <source>Group name</source>
+      <translation>Название группы</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="392"/>
+      <source>Group</source>
+      <translation>Группа</translation>
     </message>
     <message>
       <location filename="gui_offset.py" line="76"/>
@@ -7347,7 +5483,7 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
     <message>
       <location filename="gui_arcs.py" line="448"/>
       <source>Start angle</source>
-      <translation type="unfinished">Start angle</translation>
+      <translation>Начальный угол</translation>
     </message>
     <message>
       <location filename="gui_arcs.py" line="453"/>
@@ -7405,11 +5541,6 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
       <translation>Создать текст</translation>
     </message>
     <message>
-      <location filename="gui_rotate.py" line="279"/>
-      <source>Rotate</source>
-      <translation>Повернуть</translation>
-    </message>
-    <message>
       <location filename="gui_rotate.py" line="79"/>
       <source>Select an object to rotate</source>
       <translation type="unfinished">Select an object to rotate</translation>
@@ -7452,116 +5583,24 @@ The final angle will be the base angle plus this amount.</translation>
       <translation type="unfinished">Pick rotation angle</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="750"/>
-      <source>Global</source>
-      <translation>Глобальный</translation>
+      <location filename="gui_lineops.py" line="73"/>
+      <source>No active command.</source>
+      <translation type="unfinished">No active command.</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="748"/>
-      <source>Coordinates relative to last point or to coordinate system origin
-if is the first point to set</source>
-      <translation>Координаты будут указаны относительно последней точки или относительно центра системы координат если это первая точка для установки.</translation>
+      <location filename="gui_lineops.py" line="92"/>
+      <source>Finish line</source>
+      <translation type="unfinished">Finish line</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="753"/>
-      <source>Coordinates relative to global coordinate system.
-Uncheck to use working plane coordinate system</source>
-      <translation>Координаты будут указаны относительно центра глобальной системы координат.
-Отключите, если хотите использовать систему координат рабочей плоскости</translation>
+      <location filename="gui_lineops.py" line="118"/>
+      <source>Close line</source>
+      <translation type="unfinished">Close line</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="759"/>
-      <source>Check this if the object should appear as filled, otherwise it will appear as wireframe.
-Not available if Draft preference option 'Use Part Primitives' is enabled</source>
-      <translation type="unfinished">Check this if the object should appear as filled, otherwise it will appear as wireframe.
-Not available if Draft preference option 'Use Part Primitives' is enabled</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="771"/>
-      <source>If checked, an OCC-style offset will be performedinstead of the classic offset</source>
-      <translation type="unfinished">If checked, an OCC-style offset will be performedinstead of the classic offset</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1249"/>
-      <source>Local u0394X</source>
-      <translation>Относительное u0394X</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1250"/>
-      <source>Local u0394Y</source>
-      <translation>Относительное u0394Y</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1251"/>
-      <source>Local u0394Z</source>
-      <translation>Относительное u0394Z</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1257"/>
-      <source>Global u0394X</source>
-      <translation>Абсолютное u0394X</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1258"/>
-      <source>Global u0394Y</source>
-      <translation>Абсолютное u0394Y</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1259"/>
-      <source>Global u0394Z</source>
-      <translation>Абсолютное u0394Z</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2047"/>
-      <source>Autogroup:</source>
-      <translation type="unfinished">Autogroup:</translation>
-    </message>
-    <message>
-      <location filename="make_arc_3points.py" line="130"/>
-      <source>Points:</source>
-      <translation type="unfinished">Points:</translation>
-    </message>
-    <message>
-      <location filename="make_arc_3points.py" line="138"/>
-      <source>Placement:</source>
-      <translation type="unfinished">Placement:</translation>
-    </message>
-    <message>
-      <location filename="gui_scale.py" line="333"/>
-      <source>Unable to scale object:</source>
-      <translation type="unfinished">Unable to scale object:</translation>
-    </message>
-    <message>
-      <location filename="gui_scale.py" line="337"/>
-      <source>Unable to scale objects:</source>
-      <translation type="unfinished">Unable to scale objects:</translation>
-    </message>
-    <message>
-      <location filename="gui_edit.py" line="815"/>
-      <source>Too many objects selected, max number set to:</source>
-      <translation type="unfinished">Too many objects selected, max number set to:</translation>
-    </message>
-    <message>
-      <location filename="mirror.py" line="113"/>
-      <source>mirrored</source>
-      <translation type="unfinished">mirrored</translation>
-    </message>
-    <message>
-      <location filename="make_arc_3points.py" line="159"/>
-      <source>Cannot generate shape:</source>
-      <translation type="unfinished">Cannot generate shape:</translation>
-    </message>
-    <message>
-      <location filename="WorkingPlane.py" line="696"/>
-      <source>Selected Shapes must define a plane
-</source>
-      <translation type="unfinished">Selected Shapes must define a plane
-</translation>
-    </message>
-    <message>
-      <location filename="gui_trimex.py" line="222"/>
-      <source>Offset angle</source>
-      <translation>Угол смещения</translation>
+      <location filename="gui_lineops.py" line="144"/>
+      <source>Undo line</source>
+      <translation type="unfinished">Undo line</translation>
     </message>
   </context>
   <context>
@@ -7580,6 +5619,2663 @@ Not available if Draft preference option 'Use Part Primitives' is enabled</trans
       <location filename="importOCA.py" line="492"/>
       <source>successfully exported</source>
       <translation>успешно экспортировано</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgAddProperty</name>
+    <message>
+      <location filename="gui_groups.py" line="452"/>
+      <source>Group</source>
+      <translation>Группа</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_Snap</name>
+    <message>
+      <location filename="gui_snapper.py" line="1529"/>
+      <source>Toggles Grid On/Off</source>
+      <translation>Вкл/выкл Сетку</translation>
+    </message>
+    <message>
+      <location filename="gui_snapper.py" line="1530"/>
+      <source>Toggle Draft Grid</source>
+      <translation>Вкл/выкл сетку Draft</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_CloseLine</name>
+    <message>
+      <location filename="gui_lineops.py" line="124"/>
+      <source>Close Line</source>
+      <translation>Замкнуть линию</translation>
+    </message>
+    <message>
+      <location filename="gui_lineops.py" line="125"/>
+      <source>Closes the line being drawn, and finishes the operation.</source>
+      <translation type="unfinished">Closes the line being drawn, and finishes the operation.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_FinishLine</name>
+    <message>
+      <location filename="gui_lineops.py" line="98"/>
+      <source>Finish line</source>
+      <translation type="unfinished">Finish line</translation>
+    </message>
+    <message>
+      <location filename="gui_lineops.py" line="99"/>
+      <source>Finishes a line without closing it.</source>
+      <translation type="unfinished">Finishes a line without closing it.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_UndoLine</name>
+    <message>
+      <location filename="gui_lineops.py" line="151"/>
+      <source>Undo last segment</source>
+      <translation>Отменить последний сегмент</translation>
+    </message>
+    <message>
+      <location filename="gui_lineops.py" line="152"/>
+      <source>Undoes the last drawn segment of the line being drawn.</source>
+      <translation>Отменить последний нарисованный сегмент рисуемой линии.</translation>
+    </message>
+  </context>
+  <context>
+    <name>ImportDWG</name>
+    <message>
+      <location filename="importDWG.py" line="233"/>
+      <source>Conversion successful</source>
+      <translation>Конвертация прошла успешно</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="277"/>
+      <source>Converting:</source>
+      <translation>Преобразование:</translation>
+    </message>
+  </context>
+  <context>
+    <name>Dialog</name>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="14"/>
+      <source>Annotation Styles Editor</source>
+      <translation>Редактор стилей заметок</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="20"/>
+      <source>Style name</source>
+      <translation>Название стиля</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="38"/>
+      <source>The name of your style. Existing style names can be edited.</source>
+      <translation>Название Вашего стиля. Существующие имена стилей могут быть изменены.</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="50"/>
+      <source>Add new...</source>
+      <translation>Добавить новый...</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="79"/>
+      <source>Renames the selected style</source>
+      <translation>Переименовывает выбранный стиль</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="82"/>
+      <source>Rename</source>
+      <translation>Переименовать</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="110"/>
+      <source>Deletes the selected style</source>
+      <translation>Удаляет выбранный стиль</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="113"/>
+      <source>Delete</source>
+      <translation>Удалить</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="120"/>
+      <source>Import styles from json file</source>
+      <translation>Импорт стилей из файла JSON</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="130"/>
+      <source>Export styles to json file</source>
+      <translation>Экспорт стилей в файл JSON</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="164"/>
+      <source>Text</source>
+      <translation>Текст</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="170"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="219"/>
+      <source>Font size in the system units</source>
+      <translation>Размер шрифта в единицах системы</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="173"/>
+      <source>Font size</source>
+      <translation>Размер шрифта</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="180"/>
+      <source>Line spacing in system units</source>
+      <translation>Расстояние между линиями в единицах системы</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="183"/>
+      <source>Line spacing</source>
+      <translation>Межстрочный интервал</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="190"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="212"/>
+      <source>The font to use for texts and dimensions</source>
+      <translation>Шрифт для текстов и размеров</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="193"/>
+      <source>Font name</source>
+      <translation>Шрифт</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="239"/>
+      <source>Units</source>
+      <translation>Единицы измерения</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="245"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="285"/>
+      <source>A multiplier factor that affects the size of texts and markers</source>
+      <translation>Множитель, влияющий на размер текстов и маркеров</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="248"/>
+      <source>Scale multiplier</source>
+      <translation>Масштабный коэффициент</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="255"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="305"/>
+      <source>The number of decimals to show for dimension values</source>
+      <translation>Количество десятичных знаков для отображения размеров</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="258"/>
+      <source>Decimals</source>
+      <translation>Десятичные</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="265"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="298"/>
+      <source>Specify a valid length unit like mm, m, in, ft, to force displaying the dimension value in this unit</source>
+      <translation>Укажите допустимые единицы длины - мм, дюйм, фут, чтобы заставить отображать размер в этой единице</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="268"/>
+      <source>Unit override</source>
+      <translation>Единица переопределения</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="275"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="315"/>
+      <source>If it is checked it will show the unit next to the dimension value</source>
+      <translation>Если флажок установлен, то единица измерения будет отображена рядом со значением размера</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="278"/>
+      <source>Show unit</source>
+      <translation>Показать единицы</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="331"/>
+      <source>Line and arrows</source>
+      <translation>Линия и стрелки</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="337"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="433"/>
+      <source>The width of the dimension lines</source>
+      <translation>Ширина размерных линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="340"/>
+      <source>Line width</source>
+      <translation>Ширина линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="347"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="534"/>
+      <source>The distance that the extension lines are additionally extended beyond the dimension line</source>
+      <translation>Расстояние на которое выносные линии дополнительно расширяют размерную линию</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="350"/>
+      <source>Extension overshoot</source>
+      <translation>Дополнительное расширение</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="357"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="504"/>
+      <source>The size of the dimension arrows or markers in system units</source>
+      <translation>Размер размерных стрелок или маркеров в системных единицах</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="360"/>
+      <source>Arrow size</source>
+      <translation>Размер стрелки</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="367"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="417"/>
+      <source>If it is checked it will display the dimension line</source>
+      <translation>Если флажок установлен, то будет отображена размерная линия</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="370"/>
+      <source>Show lines</source>
+      <translation>Показать линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="377"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="514"/>
+      <source>The distance that the dimension line is additionally extended</source>
+      <translation>Расстояние, на которое размерная линия дополнительно увеличена</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="380"/>
+      <source>Dimension overshoot</source>
+      <translation>Нахлёст размерной линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="387"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="524"/>
+      <source>The length of the extension lines</source>
+      <translation>Длина выносных линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="390"/>
+      <source>Extension lines</source>
+      <translation>Выносные линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="397"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="472"/>
+      <source>The type of arrows or markers to use at the end of dimension lines</source>
+      <translation>Тип стрелок или маркеров для использования в конце размерных линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="400"/>
+      <source>Arrow type</source>
+      <translation>Тип стрелки</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="407"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="446"/>
+      <source>The color of dimension lines, arrows and texts</source>
+      <translation>Цвет размерных линий, стрелок и текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="410"/>
+      <source>Line / text color</source>
+      <translation>Цвет линии/текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="436"/>
+      <source>px</source>
+      <translation>пикс.</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="476"/>
+      <source>Dot</source>
+      <translation>Точка</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="481"/>
+      <source>Circle</source>
+      <translation>Окружность</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="486"/>
+      <source>Arrow</source>
+      <translation>Стрелка</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="491"/>
+      <source>Tick</source>
+      <translation>Зацеп</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="496"/>
+      <source>Tick-2</source>
+      <translation>Зацепление-2</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftCircularArrayTaskPanel</name>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="26"/>
+      <source>Circular array</source>
+      <translation>Круговой массив</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="57"/>
+      <source>The coordinates of the point through which the axis of rotation passes.
+Change the direction of the axis itself in the property editor.</source>
+      <translation>Координаты точки, через которую проходит ось вращения.
+Измените направление оси в редакторе свойств.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="61"/>
+      <source>Center of rotation</source>
+      <translation>Центр вращения</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="69"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="76"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="83"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="131"/>
+      <source>Reset the coordinates of the center of rotation.</source>
+      <translation>Сбросить координаты центра вращения.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="134"/>
+      <source>Reset point</source>
+      <translation>Сбросить точку</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="146"/>
+      <source>If checked, the resulting objects in the array will be fused if they touch each other.
+This only works if "Link array" is off.</source>
+      <translation>Если отмечено, то результирующие объекты в массиве будут слиты, если касаются друг друга.
+Это работает только в том случае, если "Связь массивов" отключена.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="150"/>
+      <source>Fuse</source>
+      <translation>Объединение</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="157"/>
+      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
+A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
+      <translation>Если отмечено, результирующим объектом будет "Массив ссылок" вместо обычного массива.
+Массив ссылок более эффективен при создании нескольких копий, но к нему нельзя применить операцию слияния.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="161"/>
+      <source>Link array</source>
+      <translation>Массив ссылок</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="175"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="186"/>
+      <source>Distance from one element in one ring of the array to the next element in the same ring.
+It cannot be zero.</source>
+      <translation>Расстояние от одного элемента в одном кольце массива до следующего элемента в этом же кольце. Оно не может быть нулем.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="179"/>
+      <source>Tangential distance</source>
+      <translation>Тангенциальное расстояние</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="200"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="210"/>
+      <source>Distance from one layer of objects to the next layer of objects.</source>
+      <translation>Расстояние от одного слоя объектов до следующего слоя объектов.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="203"/>
+      <source>Radial distance</source>
+      <translation>Радиальное расстояние</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="223"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="261"/>
+      <source>The number of symmetry lines in the circular array.</source>
+      <translation>Количество линий симметрии в круговом массиве.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="236"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="250"/>
+      <source>Number of circular layers or rings to create, including a copy of the original object.
+It must be at least 2.</source>
+      <translation>Количество создаваемых круговых массивов или колец, включая копию исходного объекта.
+Оно должно быть не менее 2.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="254"/>
+      <source>Number of circular layers</source>
+      <translation>Количество круговых слоев</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="264"/>
+      <source>Symmetry</source>
+      <translation>Симметрия</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="273"/>
+      <source>(Placeholder for the icon)</source>
+      <translation>(Держатель места для значка)</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftOrthoArrayTaskPanel</name>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="26"/>
+      <source>Orthogonal array</source>
+      <translation>Ортогональный массив</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="44"/>
+      <source>Distance between the elements in the Z direction.
+Normally, only the Z value is necessary; the other two values can give an additional shift in their respective directions.
+Negative values will result in copies produced in the negative direction.</source>
+      <translation>Расстояние между элементами в направлении Z.
+Обычно требуется только значение Z. Остальные два значения могут дать дополнительный сдвиг в их соответствующих направлениях.
+Отрицательные значения приводят к созданию копий в отрицательном направлении.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="49"/>
+      <source>Z intervals</source>
+      <translation>Z интервалы</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="57"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="197"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="302"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="385"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="64"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="253"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="295"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="392"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="71"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="246"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="288"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="378"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="122"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="262"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="353"/>
+      <source>Reset the distances.</source>
+      <translation>Сбросить расстояния.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="125"/>
+      <source>Reset Z</source>
+      <translation>Сбросить Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="137"/>
+      <source>If checked, the resulting objects in the array will be fused if they touch each other.
+This only works if "Link array" is off.</source>
+      <translation>Если отмечено, то результирующие объекты в массиве будут слиты, если касаются друг друга.
+Это работает только в том случае, если "Связь массивов" отключена.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="141"/>
+      <source>Fuse</source>
+      <translation>Объединение</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="148"/>
+      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
+A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
+      <translation>Если отмечено, результирующим объектом будет "Массив ссылок" вместо обычного массива.
+Массив ссылок более эффективен при создании нескольких копий, но к нему нельзя применить операцию слияния.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="152"/>
+      <source>Link array</source>
+      <translation>Массив ссылок</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="177"/>
+      <source>(Placeholder for the icon)</source>
+      <translation>(Держатель места для значка)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="184"/>
+      <source>Distance between the elements in the X direction.
+Normally, only the X value is necessary; the other two values can give an additional shift in their respective directions.
+Negative values will result in copies produced in the negative direction.</source>
+      <translation>Расстояние между элементами в направлении X.
+Обычно требуется только значение X. Остальные два значения могут дать дополнительный сдвиг в их соответствующих направлениях.
+Отрицательные значения приводят к созданию копий в отрицательном направлении.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="189"/>
+      <source>X intervals</source>
+      <translation>X интервалы</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="265"/>
+      <source>Reset X</source>
+      <translation>Сбросить X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="275"/>
+      <source>Distance between the elements in the Y direction.
+Normally, only the Y value is necessary; the other two values can give an additional shift in their respective directions.
+Negative values will result in copies produced in the negative direction.</source>
+      <translation>Расстояние между элементами в направлении Y.
+Обычно требуется только значение Y. Остальные два значения могут дать дополнительный сдвиг в их соответствующих направлениях.
+Отрицательные значения приводят к созданию копий в отрицательном направлении.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="280"/>
+      <source>Y intervals</source>
+      <translation>Y интервалы</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="356"/>
+      <source>Reset Y</source>
+      <translation>Сбросить Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="366"/>
+      <source>Number of elements in the array in the specified direction, including a copy of the original object.
+The number must be at least 1 in each direction.</source>
+      <translation>Количество элементов массива в указанном направлении, включая копию исходного объекта. Количество должно быть не менее 1 в каждом направлении.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="370"/>
+      <source>Number of elements</source>
+      <translation>Количество элементов</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftPolarArrayTaskPanel</name>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="26"/>
+      <source>Polar array</source>
+      <translation>Массив вращения</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="57"/>
+      <source>The coordinates of the point through which the axis of rotation passes.
+Change the direction of the axis itself in the property editor.</source>
+      <translation>Координаты точки, через которую проходит ось вращения.
+Измените направление оси в редакторе свойств.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="61"/>
+      <source>Center of rotation</source>
+      <translation>Центр вращения</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="69"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="115"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="122"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="131"/>
+      <source>Reset the coordinates of the center of rotation.</source>
+      <translation>Сбросить координаты центра вращения.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="134"/>
+      <source>Reset point</source>
+      <translation>Сбросить точку</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="146"/>
+      <source>If checked, the resulting objects in the array will be fused if they touch each other.
+This only works if "Link array" is off.</source>
+      <translation>Если отмечено, то результирующие объекты в массиве будут слиты, если касаются друг друга.
+Это работает только в том случае, если "Связь массивов" отключена.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="150"/>
+      <source>Fuse</source>
+      <translation>Объединение</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="157"/>
+      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
+A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
+      <translation>Если отмечено, результирующим объектом будет "Массив ссылок" вместо обычного массива.
+Массив ссылок более эффективен при создании нескольких копий, но к нему нельзя применить операцию слияния.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="161"/>
+      <source>Link array</source>
+      <translation>Массив ссылок</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="175"/>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="187"/>
+      <source>Sweeping angle of the polar distribution.
+A negative angle produces a polar pattern in the opposite direction.
+The maximum absolute value is 360 degrees.</source>
+      <translation>Угол сектора круга.
+Отрицательное значение начертит чектор в противоположном направлении.
+Максимальное абсолютное значение составляет 360 градусов.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="180"/>
+      <source>Polar angle</source>
+      <translation>Полярный угол</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="208"/>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="219"/>
+      <source>Number of elements in the array, including a copy of the original object.
+It must be at least 2.</source>
+      <translation>Количество элементов массива, включая исходную копию объекта.
+Оно должно быть не менее 2.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="212"/>
+      <source>Number of elements</source>
+      <translation>Количество элементов</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="235"/>
+      <source>(Placeholder for the icon)</source>
+      <translation>(Держатель места для значка)</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftShapeStringGui</name>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="26"/>
+      <source>ShapeString</source>
+      <translation>Текст в кривую</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="46"/>
+      <location filename="../ui/TaskShapeString.ui" line="56"/>
+      <location filename="../ui/TaskShapeString.ui" line="73"/>
+      <source>Enter coordinates or select point with mouse.</source>
+      <translation>Введите координаты или выберите точку мышкой.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="66"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="83"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="90"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="101"/>
+      <source>Font file</source>
+      <translation>Файл шрифта</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="115"/>
+      <source>Text to be made into ShapeString</source>
+      <translation>Текст, преобразуемый в ShapeString</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="122"/>
+      <source>String</source>
+      <translation>Строка</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="133"/>
+      <source>Height</source>
+      <translation>Высота</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="140"/>
+      <source>Height of the result</source>
+      <translation>Высота результата</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="186"/>
+      <source>Reset 3d point selection</source>
+      <translation>Сбросить выбор трёхмерной точки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="192"/>
+      <source>Reset Point</source>
+      <translation>Сбросить точку</translation>
+    </message>
+  </context>
+  <context>
+    <name>Form</name>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="14"/>
+      <source>Working plane setup</source>
+      <translation>Установка рабочей плоскости</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="20"/>
+      <source>Select a face or working plane proxy or 3 vertices.
+Or choose one of the options below</source>
+      <translation>Выберите грань или рабочую плоскость прокси или 3 вершины, или выберите один из вариантов ниже</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="31"/>
+      <source>Sets the working plane to the XY plane (ground plane)</source>
+      <translation>Задает рабочую плоскость к плоскости XY (плоскость земли)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="34"/>
+      <source>Top (XY)</source>
+      <translation>Верх (XY)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="41"/>
+      <source>Sets the working plane to the XZ plane (front plane)</source>
+      <translation>Задаёт рабочую плоскость к плоскости XZ (передняя плоскость)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="44"/>
+      <source>Front (XZ)</source>
+      <translation>Фронт (XZ)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="51"/>
+      <source>Sets the working plane to the YZ plane (side plane)</source>
+      <translation>Задаёт рабочую плоскость к плоскости YZ (боковой плоскости)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="54"/>
+      <source>Side (YZ)</source>
+      <translation>Вбок (YZ)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="61"/>
+      <source>Sets the working plane facing the current view</source>
+      <translation>Задаёт рабочую плоскость перпендикулярно текущему виду</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="64"/>
+      <source>Align to view</source>
+      <translation>Выровнять для просмотра</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="71"/>
+      <source>The working plane will align to the current
+view each time a command is started</source>
+      <translation>Рабочая плоскость будет выравниваться к текущему виду
+каждый раз при запуске команды</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="78"/>
+      <source>Automatic</source>
+      <translation>Автоматически</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="87"/>
+      <source>An optional offset to give to the working plane
+above its base position. Use this together with one
+of the buttons above</source>
+      <translation>Дополнительное смещение для рабочей плоскости
+над её базовым положением. Используйте вместе с одной
+из кнопок выше</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="99"/>
+      <source>Offset</source>
+      <translation>Смещение</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="106"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="118"/>
+      <source>If this is selected, the working plane will be
+centered on the current view when pressing one
+of the buttons above</source>
+      <translation>Если выбрано, рабочая плоскость будет
+центрирована в текущем виде при нажатии на одну
+кнопок выше</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="111"/>
+      <source>Center plane on view</source>
+      <translation>Центрировать плоскость вида</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="135"/>
+      <source>Or select a single vertex to move the current
+working plane without changing its orientation.
+Then, press the button below</source>
+      <translation>Или выберите одну вершину, чтобы переместить текущую рабочую
+плоскость без изменения ее ориентации.
+Затем нажмите кнопку ниже</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="147"/>
+      <source>Moves the working plane without changing its
+orientation. If no point is selected, the plane
+will be moved to the center of the view</source>
+      <translation>Перемещает рабочую плоскость без изменения ее ориентации. Если точка не выбрана, плоскость будет перемещена в центр вида</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="152"/>
+      <source>Move working plane</source>
+      <translation>Переместить рабочую плоскость</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="161"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="171"/>
+      <source>The spacing between the smaller grid lines</source>
+      <translation>Расстояние между меньшими линиями сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="164"/>
+      <source>Grid spacing</source>
+      <translation>Шаг сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="181"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="191"/>
+      <source>The number of squares between each main line of the grid</source>
+      <translation>Количество квадратов между каждой основной линией сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="184"/>
+      <source>Main line every</source>
+      <translation>Основные линии каждые</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="198"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="207"/>
+      <source>The distance at which a point can be snapped to
+when approaching the mouse. You can also change this
+value by using the [ and ] keys while drawing</source>
+      <translation>Расстояние, при котором точка может быть привязана при приближении к мыши. Вы также можете изменить это значение
+с помощью клавиш [ и ] при рисовании</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="212"/>
+      <source>Snapping radius</source>
+      <translation>Радиус привязки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="219"/>
+      <source>Grid extension</source>
+      <translation>Расширение сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="226"/>
+      <source> lines</source>
+      <translation> линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="241"/>
+      <source>Centers the view on the current working plane</source>
+      <translation>Центрировать вид на текущей рабочей плоскости</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="244"/>
+      <source>Center view</source>
+      <translation>Центрировать вид</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="251"/>
+      <source>Resets the working plane to its previous position</source>
+      <translation>Сбросить рабочую плоскость к предыдущему положению</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="254"/>
+      <source>Previous</source>
+      <translation>Предыдущий</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="14"/>
+      <source>Style settings</source>
+      <translation>Настройки стиля</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="22"/>
+      <source>Fills the values below with a stored style preset</source>
+      <translation type="unfinished">Fills the values below with a stored style preset</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="26"/>
+      <source>Load preset</source>
+      <translation type="unfinished">Load preset</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="40"/>
+      <source>Save current style as a preset...</source>
+      <translation type="unfinished">Save current style as a preset...</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="57"/>
+      <source>Lines and faces</source>
+      <translation>Линии и грани</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="66"/>
+      <source>The color of faces</source>
+      <translation>Цвет граней</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="73"/>
+      <source>Draw style</source>
+      <translation>Стиль представления</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="80"/>
+      <source>Line color</source>
+      <translation>Цвет линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="87"/>
+      <source>Line width</source>
+      <translation>Ширина линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="94"/>
+      <source>The color of lines</source>
+      <translation>Цвет линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="101"/>
+      <source>The line style</source>
+      <translation>Стиль линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="105"/>
+      <source>Solid</source>
+      <translation>Твердотельный объект</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="110"/>
+      <source>Dashed</source>
+      <translation>Штриховая</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="115"/>
+      <source>Dotted</source>
+      <translation>Пунктирная</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="120"/>
+      <source>DashDot</source>
+      <translation>Штрихпунктир</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="128"/>
+      <source> px</source>
+      <translation> пикс.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="135"/>
+      <source>Display mode</source>
+      <translation>Режим отображения</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="142"/>
+      <source>The display mode for faces</source>
+      <translation>Режим отображения для граней</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="146"/>
+      <source>Flat Lines</source>
+      <translation>Плоские линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="151"/>
+      <source>Wireframe</source>
+      <translation>Каркас</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="156"/>
+      <source>Shaded</source>
+      <translation>Только грани</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="161"/>
+      <source>Points</source>
+      <translation>Точки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="169"/>
+      <source>Shape color</source>
+      <translation>Цвет фигуры</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="176"/>
+      <source>Transparency</source>
+      <translation>Прозрачность</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="183"/>
+      <source>The transparency of faces</source>
+      <translation>Прозрачность граней</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="186"/>
+      <source> %</source>
+      <translation>%</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="199"/>
+      <source>Annotations</source>
+      <translation>Заметки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="205"/>
+      <source>The type of dimension arrows</source>
+      <translation>Тип стрелок размерных линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="209"/>
+      <source>Dot</source>
+      <translation>Точка</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="214"/>
+      <source>Circle</source>
+      <translation>Окружность</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="219"/>
+      <source>Arrow</source>
+      <translation>Стрелка</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="224"/>
+      <source>Tick</source>
+      <translation>Зацеп</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="229"/>
+      <source>Tick-2</source>
+      <translation>Зацепление-2</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="237"/>
+      <source>Text font</source>
+      <translation>Шрифт текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="244"/>
+      <source>Text color</source>
+      <translation>Цвет текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="257"/>
+      <source>The font to use for texts and dimensions</source>
+      <translation>Шрифт для текстов и размеров</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="264"/>
+      <source>Text size</source>
+      <translation>Размер текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="271"/>
+      <source>The color of texts and dimension texts</source>
+      <translation>Цвет текста и текста размеров</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="278"/>
+      <source>The size of texts and dimension texts</source>
+      <translation>Размер текста и текста размера</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="288"/>
+      <source>Arrow style</source>
+      <translation>Стиль стрелки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="295"/>
+      <source>If the unit suffix is shown on dimension texts or not</source>
+      <translation>Если суффикс единицы измерения отображается в тексте измерения или нет</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="308"/>
+      <source>The size of dimension arrows</source>
+      <translation>Размер стрелок размерных линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="318"/>
+      <source>Show unit</source>
+      <translation>Показать единицы</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="325"/>
+      <source>Arrow size</source>
+      <translation>Размер стрелки</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="332"/>
+      <source>Unit override</source>
+      <translation>Единица переопределения</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="339"/>
+      <source>The unit to use for dimensions. Leave blank to use current FreeCAD unit</source>
+      <translation>Единица измерения размеров. Оставьте пустым, чтобы использовать текущие единицы измерения FreeCAD</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="346"/>
+      <source>Text spacing</source>
+      <translation>Интервал текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="353"/>
+      <source>The space between the text and the dimension line</source>
+      <translation>Расстояние между текстом и размерной линией</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="363"/>
+      <source>Line spacing</source>
+      <translation>Межстрочный интервал</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="370"/>
+      <source>The spacing between different lines of text</source>
+      <translation>Межстрочный интервал в тексте</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="382"/>
+      <source>Apply above style to selected object(s)</source>
+      <translation type="unfinished">Apply above style to selected object(s)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="385"/>
+      <source>Selected</source>
+      <translation>Выбрано</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="397"/>
+      <source>Texts/dims</source>
+      <translation type="unfinished">Texts/dims</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="14"/>
+      <source>Form</source>
+      <translation>Форма</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="23"/>
+      <source>pattern files (*.pat)</source>
+      <translation>файлы шаблонов (*.pat)</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="30"/>
+      <source>PAT file:</source>
+      <translation>PAT файл:</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="37"/>
+      <source>Scale</source>
+      <translation>Масштаб</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="44"/>
+      <source>Pattern:</source>
+      <translation>Шаблон:</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="64"/>
+      <source>Rotation:</source>
+      <translation>Вращение:</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="71"/>
+      <source>°</source>
+      <translation>°</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsDraft</name>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="14"/>
+      <source>General settings</source>
+      <translation>Основные настройки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="32"/>
+      <source>General Draft Settings</source>
+      <translation>Основные параметры черчения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="40"/>
+      <source>Default working plane</source>
+      <translation>Рабочая плоскость по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="67"/>
+      <source>None</source>
+      <translation>Ничего</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="72"/>
+      <source>XY (Top)</source>
+      <translation>XY (cверху)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="77"/>
+      <source>XZ (Front)</source>
+      <translation>XZ (спереди)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="82"/>
+      <source>YZ (Side)</source>
+      <translation>YZ (сбоку)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="94"/>
+      <source>Internal precision level</source>
+      <translation>Уровень внутренней точности</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="120"/>
+      <source>The number of decimals in internal coordinates operations (for ex. 3 = 0.001). Values between 6 and 8 are usually considered the best trade-off among FreeCAD users.</source>
+      <translation>Количество десятичных знаков во внутренних координатах (например, 3 = 0,001). Значения между 6 и 8 обычно считаются хорошим тоном среди пользователей FreeCAD.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="143"/>
+      <source>Tolerance</source>
+      <translation>Точность</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="169"/>
+      <source>This is the value used by functions that use a tolerance.
+Values with differences below this value will be treated as same. This value will be obsoleted soon so the precision level above controls both.</source>
+      <translation>Это значение используется функциями, которые используют допуск.
+Значения с различиями меньше этого значения будут рассматриваться как одинаковые. Это значение в ближайшее время будет выведено из использования, взамен уровень точности выше будет выражать оба значения.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="194"/>
+      <source>If this option is checked, the layers drop-down list will also show groups, allowing you to automatically add objects to groups too.</source>
+      <translation>Если этот флажок установлен, выпадающий список слоёв также будет показывать группы, позволяя автоматически добавлять объекты в группы.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="197"/>
+      <source>Show groups in layers list drop-down button</source>
+      <translation>Показывать группы в выпадающем списке слоев</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="216"/>
+      <source>Draft tools options</source>
+      <translation>Настройки инструментов верстака набросок</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="230"/>
+      <source>When drawing lines, set focus on Length instead of X coordinate.
+This allows to point the direction and type the distance.</source>
+      <translation>При черчении линий, установить фокус на длине вместо координаты X. Это позволит указать направление и ввести расстояние.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="234"/>
+      <source>Set focus on Length instead of X coordinate</source>
+      <translation>Установить фокус на длине вместо координаты X</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="247"/>
+      <source>If this option is set, when creating Draft objects on top of an existing face of another object, the "Support" property of the Draft object will be set to the base object. This was the standard behaviour before FreeCAD 0.19</source>
+      <translation>Если эта опция установлена, при создании объектов Наброска (Draft) в верхней части существующей грани другого объекта, то свойство "Поддержка" объекта наброска будет ссылаться на базовый объект. Это было стандартное поведение до FreeCAD 0.19</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="250"/>
+      <source>Set the Support property when possible</source>
+      <translation>Установить свойство "Поддержка", когда это возможно</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="263"/>
+      <source>If this is checked, objects will appear as filled by default.
+Otherwise, they will appear as wireframe</source>
+      <translation>Если этот параметр выбран, по умолчанию объекты будут отображаться как заполненные. В противном случае они будут отображаться как каркас</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="267"/>
+      <source>Fill objects with faces whenever possible</source>
+      <translation>Залить объекты поверхностями, если это возможно</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="283"/>
+      <source>Normally, after copying objects, the copies get selected.
+If this option is checked, the base objects will be selected instead.</source>
+      <translation>Как правило, после копирования объектов будут выбраны полученные копии. Если установить этот параметр, будут выбираться базовые объекты.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="287"/>
+      <source>Select base objects after copying</source>
+      <translation>Выбор базовых объектов после копирования</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="300"/>
+      <source>If this is checked, copy mode will be kept across command,
+otherwise commands will always start in no-copy mode</source>
+      <translation>Если выбран этот пункт, режим копирования будет применен для поледующих команд, в противном случае выполнение команд всегда будет начинаться без режима копирования</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="304"/>
+      <source>Global copy mode</source>
+      <translation>Глобальный режим копирования</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="320"/>
+      <source>Force Draft Tools to create Part primitives instead of Draft objects.
+Note that this is not fully supported, and many object will be not editable with Draft Modifiers.</source>
+      <translation>Заставить инструменты набросков создавать примитивы детали вместо объектов наброска.
+Обратите внимание, что это не полностью поддерживается, и многие объекты не будут редактироваться с помощью модификаторов верстака набросок.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="324"/>
+      <source>Use Part Primitives when available</source>
+      <translation>Использовать примитивы Деталь по возможности</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="341"/>
+      <source>Prefix labels of Clones with:</source>
+      <translation>Префикс меток клонов:</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="372"/>
+      <source>Construction Geometry</source>
+      <translation>Вспомогательная геометрия</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="380"/>
+      <source>Construction group name</source>
+      <translation>Имя конструкционной группы</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="387"/>
+      <source>This is the default group name for construction geometry</source>
+      <translation>Имя группы по умолчанию для конструктора геометрии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="390"/>
+      <source>Construction</source>
+      <translation>Конструктор</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="407"/>
+      <source>Construction geometry color</source>
+      <translation>Цвет вспомогательной геометрии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="427"/>
+      <source>This is the default color for objects being drawn while in construction mode.</source>
+      <translation>Цвет по умолчанию для объектов, обрабатываемых в режиме конструктора.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="14"/>
+      <source>Visual settings</source>
+      <translation>Настройки визуализации</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="26"/>
+      <source>Visual Settings</source>
+      <translation>Настройки Визуализации</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="34"/>
+      <source>Snap symbols style</source>
+      <translation>Стиль символа привязки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="54"/>
+      <source>Draft classic style</source>
+      <translation>Классический стиль Черчения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="59"/>
+      <source>Bitsnpieces style</source>
+      <translation>Стиль мелочовка (Bitsnpieces)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="80"/>
+      <source>Color</source>
+      <translation>Цвет</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="87"/>
+      <source>The default color for snap symbols</source>
+      <translation>Цвет по умолчанию для символов привязки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="111"/>
+      <source>Check this if you want to use the color/linewidth from the toolbar as default</source>
+      <translation>Установите флажок, если вы хотите использовать цвет/толщину линии из панели инструментов по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="114"/>
+      <source>Save current color and linewidth across sessions</source>
+      <translation>Сохранить текущий цвет и толщину линии между сессиями</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="131"/>
+      <source>If checked, a widget indicating the current working plane orientation appears during drawing operations</source>
+      <translation>Если этот параметр выбран, то во время операций рисования появляется виджет, указывающий текущую ориентацию рабочего чертежа</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="134"/>
+      <source>Show Working Plane tracker</source>
+      <translation>Показать трекер Рабочей плоскости</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="151"/>
+      <source>Default template sheet</source>
+      <translation>Шаблон листа по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="177"/>
+      <source>The default template to use when creating a new drawing sheet</source>
+      <translation>Шаблон по умолчанию, используемый при создании нового листа чертежа</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="194"/>
+      <source>Alternate SVG patterns location</source>
+      <translation type="unfinished">Alternate SVG patterns location</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="220"/>
+      <source>Here you can specify a directory with custom SVG files containing &lt;pattern&gt; definitions to be added to the standard patterns</source>
+      <translation type="unfinished">Here you can specify a directory with custom SVG files containing &lt;pattern&gt; definitions to be added to the standard patterns</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="237"/>
+      <source>SVG pattern resolution</source>
+      <translation type="unfinished">SVG pattern resolution</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="257"/>
+      <source>The resolution to draw the patterns in. Default value is 128. Higher values give better resolutions, lower values make drawing faster</source>
+      <translation>Разрешение для рисования штриховки. Значение по умолчанию — 128. Большее значение даст лучшее разрешение, меньшее значение сделает отрисовку быстрее</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="280"/>
+      <source>SVG pattern default size</source>
+      <translation type="unfinished">SVG pattern default size</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="300"/>
+      <source>The default size for SVG patterns</source>
+      <translation type="unfinished">The default size for SVG patterns</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="326"/>
+      <source>Check this if you want to preserve colors of faces while doing downgrade and upgrade (splitFaces and makeShell only)</source>
+      <translation>Отметьте это если хотите предотвратить раскрашивание граней во время операций разделения и объединения (только для РазделитьГрани и СделатьОболочку)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="329"/>
+      <source>Preserve colors of faces during downgrade/upgrade</source>
+      <translation>Предотвратить раскрашивание граней при разделении/объединении</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="346"/>
+      <source>Check this if you want the face names to derive from the originating object name and vice versa while doing downgrade/upgrade (splitFaces and makeShell only)</source>
+      <translation>Установите этот флажок, если хотите, чтобы имена граней были производными от имени исходного объекта и наоборот при выполнении операций разъединение/объединение (только для РазделитьГрани и Сделатьоболочку)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="349"/>
+      <source>Preserve names of faces during downgrade/upgrade</source>
+      <translation>Предотвратить названия граней при разделении/объединении</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="367"/>
+      <source>Drawing view line definitions</source>
+      <translation>Настройки линий чертежа</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="375"/>
+      <source>Dashed line definition</source>
+      <translation>Задание штриховой линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="395"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="438"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="481"/>
+      <source>An SVG linestyle definition</source>
+      <translation>Определение стилей линий SVG</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="398"/>
+      <source>0.09,0.05</source>
+      <translation>0.09,0.05</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="418"/>
+      <source>Dashdot line definition</source>
+      <translation>Задание штрихпунктирной линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="441"/>
+      <source>0.09,0.05,0.02,0.05</source>
+      <translation>0.09,0.05,0.02,0.05</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="461"/>
+      <source>Dotted line definition</source>
+      <translation>Задание пунктирной линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="484"/>
+      <source>0.02,0.02</source>
+      <translation>0.02,0.02</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="14"/>
+      <source>Texts and dimensions</source>
+      <translation>Текст и размеры</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="26"/>
+      <source>Text settings</source>
+      <translation>Настройки текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="34"/>
+      <source>Font family</source>
+      <translation>Шрифт</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="47"/>
+      <source>This is the default font name for all Draft texts and dimensions.
+It can be a font name such as "Arial", a default style such as "sans", "serif"
+or "mono", or a family such as "Arial,Helvetica,sans" or a name with a style
+such as "Arial:Bold"</source>
+      <translation>Это имя шрифта по умолчанию для всех чертежных текстов и размеров. Это может быть имя шрифта, такок, как «Arial», стиль по умолчанию, такой как «sans», «serif» или «моно» или семейство как "Arial, Helvetica, sans» или имя со стилем, такое, как" Arial:Bold»</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="59"/>
+      <source>Internal font</source>
+      <translation>встроенный шрифт</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="76"/>
+      <source>Font size</source>
+      <translation>Размер шрифта</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="89"/>
+      <source>Default height for texts and dimensions</source>
+      <translation>Высота текста и размеров по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="116"/>
+      <source>Dimension settings</source>
+      <translation>Настройки размеров</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="124"/>
+      <source>Display mode</source>
+      <translation>Режим отображения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="144"/>
+      <source>text above (2D)</source>
+      <translation>текст выше (2D)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="149"/>
+      <source> text inside (3D)</source>
+      <translation> текст внутри (3D)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="161"/>
+      <source>Number of decimals</source>
+      <translation>Количество десятичных знаков</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="201"/>
+      <source>Extension lines size</source>
+      <translation>Размер выносной линий</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="208"/>
+      <source>The default size of dimensions extension lines</source>
+      <translation>Длина выносных размерных линий по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="237"/>
+      <source>Extension line overshoot</source>
+      <translation>Нахлёст линии расширения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="244"/>
+      <source>The default length of extension line above dimension line</source>
+      <translation>Длина выносной линии над размерной линией по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="273"/>
+      <source>Dimension line overshoot</source>
+      <translation>Нахлёст размерной линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="280"/>
+      <source>The default distance the dimension line is extended past extension lines</source>
+      <translation>Расстояние по умолчанию, на которое размерная линия расширена за выносные линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="309"/>
+      <source>Arrows style</source>
+      <translation>Стиль стрелки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="323"/>
+      <source>Dot</source>
+      <translation>Точка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="328"/>
+      <source>Circle</source>
+      <translation>Окружность</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="333"/>
+      <source>Arrow</source>
+      <translation>Стрелка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="338"/>
+      <source>Tick</source>
+      <translation>Зацеп</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="343"/>
+      <source>Tick-2</source>
+      <translation>Зацепление-2</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="355"/>
+      <source>Arrows size</source>
+      <translation>Размер стрелки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="362"/>
+      <source>The default size of arrows</source>
+      <translation>Размер стрелок по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="388"/>
+      <source>Text orientation</source>
+      <translation>Ориентация текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="395"/>
+      <source>This is the orientation of the dimension texts when those dimensions are vertical. Default is left, which is the ISO standard.</source>
+      <translation>Это ориентация размерных надписей, когда эти надписи вертикальны. По умолчанию - слева, согласно стандарту ISO.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="405"/>
+      <source>Left (ISO standard)</source>
+      <translation>Слева (стандарт ISO)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="410"/>
+      <source>Right</source>
+      <translation>Вправо</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="422"/>
+      <source>Text spacing</source>
+      <translation>Интервал текста</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="429"/>
+      <source>The space between the dimension line and the dimension text</source>
+      <translation>Отступ между размерной линией и текстом</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="455"/>
+      <source>Show the unit suffix in dimensions</source>
+      <translation>Показать суффикс единиц для размеров</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="475"/>
+      <source>Override unit</source>
+      <translation>Переопределить единицу измерения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="495"/>
+      <source>By leaving this field blank, the dimension measurements will be shown in the current unit defined in FreeCAD. By indicating a unit here such as m or cm, you can force new dimensions to be shown in that unit.</source>
+      <translation>Если оставить это поле пустым, то будут показаны те единицы измерения, какие указаны в FreeCAD. Указывая единицу измерения здесь как м или см, Вы можете указать новые единицы измерения.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="513"/>
+      <source>ShapeString settings</source>
+      <translation>Настройки инструмента Текст в кривую</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="521"/>
+      <source>Default ShapeString font file</source>
+      <translation>Файл шрифта по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="534"/>
+      <source>Select a font file</source>
+      <translation>Выберите файл шрифта</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="14"/>
+      <source>SVG</source>
+      <translation>SVG</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="40"/>
+      <source>Import style</source>
+      <translation>Импорт стиля</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="47"/>
+      <source>Method chosen for importing SVG object color to FreeCAD</source>
+      <translation>Метод выбран для импорта SVG цвета объекта во FreeCAD</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="60"/>
+      <source>None (fastest)</source>
+      <translation>Нет (быстрый)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="65"/>
+      <source>Use default color and linewidth</source>
+      <translation>Использовать цвет и толщину линии по умолчанию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="70"/>
+      <source>Original color and linewidth</source>
+      <translation>Оригинальный цвет и толщина линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="82"/>
+      <source>If checked, no units conversion will occur.
+One unit in the SVG file will translate as one millimeter. </source>
+      <translation>Если этот флажок установлен, преобразование единиц не произойдет.
+Одна единица в файле SVG будет переведена как один миллиметр.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="86"/>
+      <source>Disable units scaling</source>
+      <translation>Отключить масштабирование единиц измерения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="121"/>
+      <source>Export style</source>
+      <translation>Экспорт стиля</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="128"/>
+      <source>Style of SVG file to write when exporting a sketch</source>
+      <translation>Стиль SVG файла для записи при экспорте эскиза</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="141"/>
+      <source>Translated (for print &amp; display)</source>
+      <translation>Перенос (для печати &amp; показа)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="146"/>
+      <source>Raw (for CAM)</source>
+      <translation>Сырые данные (для CAM)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="158"/>
+      <source>All white lines will appear in black in the SVG for better readability against white backgrounds</source>
+      <translation>Все белые линии появятся в чёрном цвете SVG для лучшей читаемости по сравнению с белым фоном</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="161"/>
+      <source>Translate white line color to black</source>
+      <translation>Преобразование белых линий в черные</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="181"/>
+      <source>Max segment length for discretized arcs</source>
+      <translation>Максимальная длина сегмента дискретизации дуг</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="204"/>
+      <source>Versions of Open CASCADE older than version 6.8 don't support arc projection.
+In this case arcs will be discretized into small line segments.
+This value is the maximum segment length. </source>
+      <translation>Версии Open CASCADE старее версии 6.8 не поддерживают дуги проекции.
+В этом случае дуги будут дискретизированы в маленькие сегменты.
+Это значение является максимальной длиной звена. </translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-oca.ui" line="14"/>
+      <source>OCA</source>
+      <translation>OCA</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-oca.ui" line="46"/>
+      <source>Check this if you want the areas (3D faces) to be imported too.</source>
+      <translation>Установите этот флажок, если вы хотите также импортировать области (3D грани).</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-oca.ui" line="49"/>
+      <source>Import OCA areas</source>
+      <translation>Импорт ОСА областей</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="14"/>
+      <source>DXF</source>
+      <translation>DXF</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="35"/>
+      <source>This preferences dialog will be shown when importing/ exporting DXF files</source>
+      <translation>Этот диалог настроек будет показан при импорте/экспорте DXF файлов</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="38"/>
+      <source>Show this dialog when importing and exporting</source>
+      <translation>Показывать этот диалог при импорте и экспорте</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="51"/>
+      <source>Python importer is used, otherwise the newer C++ is used.
+Note: C++ importer is faster, but is not as featureful yet</source>
+      <translation>Использован импорт Python, в противном случае используется более новая версия C++.
+Примечание: импортер C++ быстрее, но еще не является функциональным</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="55"/>
+      <source>Use legacy python importer</source>
+      <translation>Использовать устаревший импортер Python</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="71"/>
+      <source>Python exporter is used, otherwise the newer C++ is used.
+Note: C++ exporter is faster, but is not as featureful yet</source>
+      <translation type="unfinished">Python exporter is used, otherwise the newer C++ is used.
+Note: C++ exporter is faster, but is not as featureful yet</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="75"/>
+      <source>Use legacy python exporter</source>
+      <translation>Использовать устаревший импортер Python</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="88"/>
+      <source>Automatic update (legacy importer only)</source>
+      <translation>Автоматическое обновление (только для устаревшего импортёра)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="96"/>
+      <source>Allow FreeCAD to download the Python converter for DXF import and export.
+You can also do this manually by installing the "dxf_library" workbench
+from the Addon Manager.</source>
+      <translation>Разрешить FreeCAD загружать Python конвертер для импорта и экспорта DXF.
+Вы также можете сделать это вручную, установив верстак "dxf_library"
+из Менеджера дополнений.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="101"/>
+      <source>Allow FreeCAD to automatically download and update the DXF libraries</source>
+      <translation>Автоматически загружать и обновлять библиотеки DXF</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="119"/>
+      <location filename="../ui/preferences-oca.ui" line="26"/>
+      <location filename="../ui/preferences-svg.ui" line="26"/>
+      <source>Import options</source>
+      <translation>Параметры импорта</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="140"/>
+      <source>Note: Not all the options below are used by the new importer yet</source>
+      <translation>Замечание: ещё не все параметры ниже используются в новом импортёре</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="149"/>
+      <source>Import</source>
+      <translation>Импорт</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="156"/>
+      <source>If unchecked, texts and mtexts won't be imported</source>
+      <translation>Если этот пункт не выбран, тексты/мультитексты импортированы не будут</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="159"/>
+      <source>texts and dimensions</source>
+      <translation>текст и размеры</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="172"/>
+      <source>If unchecked, points won't be imported</source>
+      <translation>Если этот пункт не выбран, точки импортированы не будут</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="175"/>
+      <source>points</source>
+      <translation>точки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="188"/>
+      <source>If checked, paper space objects will be imported too</source>
+      <translation>Если флажок установлен, пустые объекты будут также импортированы</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="191"/>
+      <source>layouts</source>
+      <translation>шаблоны</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="204"/>
+      <source>If you want the non-named blocks (beginning with a *) to be imported too</source>
+      <translation>Отметьте это, если вы хотите чтобы импортировались и безымянные блоки (начинающиеся с *)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="207"/>
+      <source>*blocks</source>
+      <translation>*блоки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="224"/>
+      <source>Create</source>
+      <translation>Создать</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="231"/>
+      <source>Only standard Part objects will be created (fastest)</source>
+      <translation>Создавать только объекты стандартных деталей (самое быстрое)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="234"/>
+      <source>simple Part shapes</source>
+      <translation>простые фигуры Деталей</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="250"/>
+      <source>Parametric Draft objects will be created whenever possible</source>
+      <translation>Параметрические объекты наброска будут создаваться, когда это возможно,</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="253"/>
+      <source>Draft objects</source>
+      <translation>Объекты эскиза</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="266"/>
+      <source>Sketches will be created whenever possible</source>
+      <translation>Эскизы будут создаваться по возможности</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="269"/>
+      <source>Sketches</source>
+      <translation>Наброски (Sketches)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="289"/>
+      <source>Scale factor to apply to imported files</source>
+      <translation>Коэффициент масштабирования для импортируемых файлов</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="309"/>
+      <source>Scale factor to apply to DXF files on import.
+The factor is the conversion between the unit of your DXF file and millimeters.
+Example: for files in millimeters: 1, in centimeters: 10,
+                             in meters: 1000, in inches: 25.4, in feet: 304.8</source>
+      <translation>Коэффициент масштабирования для применения к импорту DXF файлов. Коэффициентом является преобразование между единицей измерения файла DXF и миллиметрами. Например: для файлов в миллиметрах: 1, в сантиметрах: 10, в м: 1000, в дюймах: 25,4, в футах: 304,8</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="338"/>
+      <source>Colors will be retrieved from the DXF objects whenever possible.
+Otherwise default colors will be applied. </source>
+      <translation>Цвета будут получены из объектов DXF, если это возможно.
+В противном случае будут применены цвета по умолчанию. </translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="342"/>
+      <source>Get original colors from the DXF file</source>
+      <translation>Использовать цвета из файла DXF</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="359"/>
+      <source>FreeCAD will try to join coincident objects into wires.
+Note that this can take a while!</source>
+      <translation>FreeCAD попытается присоединиться к объектам совпадения в проводах.
+Обратите внимание, что это может занять некоторое время!</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="363"/>
+      <source>Join geometry</source>
+      <translation>Присоединить геометрию</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="380"/>
+      <source>Objects from the same layers will be joined into Draft Blocks,
+turning the display faster, but making them less easily editable </source>
+      <translation>Объекты из одного и того же слоя будут объединены в чертежные блоки, ускоряя перерисовку дисплея, но делая их менее редактируемыми </translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="384"/>
+      <source>Group layers into blocks</source>
+      <translation>Группировать слои в блоки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="401"/>
+      <source>Imported texts will get the standard Draft Text size,
+instead of the size they have in the DXF document</source>
+      <translation>Импортированные тексты получат стандартный размер текста наброска, вместо размера в документе DXF</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="405"/>
+      <source>Use standard font size for texts</source>
+      <translation>Использовать стандартный размер шрифта для текстов</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="422"/>
+      <source>If this is checked, DXF layers will be imported as Draft Layers</source>
+      <translation>Импортировать слои DXF как слои наброска</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="425"/>
+      <source>Use Layers</source>
+      <translation>Использовать слои</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="445"/>
+      <source>Hatches will be converted into simple wires</source>
+      <translation>Штриховки будут преобразованы в простые провода</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="448"/>
+      <source>Import hatch boundaries as wires</source>
+      <translation>Импорт областей штриховки в виде ломаных</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="465"/>
+      <source>If polylines have a width defined, they will be rendered
+as closed wires with correct width</source>
+      <translation>Если для полилиний определена ширина, они будут визуализированы как замкнутые провода с правильной шириной</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="469"/>
+      <source>Render polylines with width</source>
+      <translation>Отображение полилиний с использованием толшины</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="486"/>
+      <source>Ellipse export is poorly supported. Use this to export them as polylines instead.</source>
+      <translation>Экспорт эллипсов плохо реализован. Экспортируйте эллипсы как полилинии.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="489"/>
+      <source>Treat ellipses and splines as polylines</source>
+      <translation>Считать эллипсы и сплайны полилиниями</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="518"/>
+      <source>Max Spline Segment:</source>
+      <translation>Макс сплайн сегментов:</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="528"/>
+      <source>Maximum length of each of the polyline segments.
+If it is set to '0' the whole spline is treated as a straight segment.</source>
+      <translation>Максимальная длина каждого из сегментов полилинии.
+Если задано значение «0», весь сплайн рассматривается как прямой отрезок.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="559"/>
+      <location filename="../ui/preferences-svg.ui" line="107"/>
+      <source>Export options</source>
+      <translation>Параметры экспорта</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="567"/>
+      <source>All objects containing faces will be exported as 3D polyfaces</source>
+      <translation>Все объекты, содержащие грани, будут экспортированы в виде трёхмерных полиграней</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="570"/>
+      <source>Export 3D objects as polyface meshes</source>
+      <translation>Экспорт 3D объектов как многогранные сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="587"/>
+      <source>Drawing Views will be exported as blocks.
+This might fail for post DXF R12 templates.</source>
+      <translation>Виды чертежей будут экспортированы в виде блоков.
+Это может не удаться для шаблонов DXF R12.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="591"/>
+      <source>Export Drawing Views as blocks</source>
+      <translation>Экспортировать виды чертежа как блоки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="611"/>
+      <source>Exported objects will be projected to reflect the current view direction</source>
+      <translation>Экспортированные объекты будут проецироваться с учётом текущего направления зрения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="614"/>
+      <source>Project exported objects along current view direction</source>
+      <translation>Проецировать объекты относительно текущего вида</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="14"/>
+      <source>Grid and snapping</source>
+      <translation>Сетка и привязка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="26"/>
+      <source>Snapping</source>
+      <translation>Привязка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="34"/>
+      <source>If this is checked, snapping is activated without the need to press the snap mod key</source>
+      <translation>Если включить, то привязки будут работать без необходимости нажатия клавиши модификатора привязки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="37"/>
+      <source>Always snap (disable snap mod)</source>
+      <translation>Всегда привязывать (отключить модификатор привязки)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="57"/>
+      <source>Constrain mod</source>
+      <translation>Режим ограничений</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="77"/>
+      <source>The Constraining modifier key</source>
+      <translation>Клавиша-модификатор Ограничения</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="87"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="142"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="197"/>
+      <source>Shift</source>
+      <translation>Shift</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="92"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="147"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="202"/>
+      <source>Ctrl</source>
+      <translation>Ctrl</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="97"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="152"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="207"/>
+      <source>Alt</source>
+      <translation>Alt</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="109"/>
+      <source>Snap mod</source>
+      <translation>Режим привязки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="129"/>
+      <source>The snap modifier key</source>
+      <translation>Клавиша модификатор привязки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="164"/>
+      <source>Alt mod</source>
+      <translation>Режим alt</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="184"/>
+      <source>The Alt modifier key</source>
+      <translation>Клавиша Alt</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="219"/>
+      <source>If checked, the Snap toolbar will be shown whenever you use snapping</source>
+      <translation>Если этот параметр выбран, то панель Параметров привязки будет показываться всякий раз когда будет использоваться привязка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="222"/>
+      <source>Show Draft Snap toolbar</source>
+      <translation>Показать панель инструментов привязки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="242"/>
+      <source>Hide Draft snap toolbar after use</source>
+      <translation>Скрыть панель инструментов привязки после использования</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="263"/>
+      <source>Grid</source>
+      <translation>Сетка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="269"/>
+      <source>If checked, a grid will appear when drawing</source>
+      <translation>Если флажок установлен, при черчении будет отображаться сетка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="272"/>
+      <source>Use grid</source>
+      <translation>Использовать сетку</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="291"/>
+      <source>If checked, the Draft grid will always be visible when the Draft workbench is active. Otherwise only when using a command</source>
+      <translation>Если флажок установлен, сетка всегда будет видна при активном верстаке черчения. В любом другом случае только при использовании соответствующей команды</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="294"/>
+      <source>Always show the grid</source>
+      <translation>Всегда показывать сетку</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="310"/>
+      <source>If checked, an additional border is displayed around the grid, showing the main square size in the bottom left border</source>
+      <translation>При отмеченной опции отображается дополнительная граница сетки, показывающая размер основного квадрата в левом нижнем углу</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="313"/>
+      <source>Show grid border</source>
+      <translation>Показать границу сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="329"/>
+      <source>If set, the grid will have its two main axes colored in red, green or blue when they match global axes</source>
+      <translation>Если задано, две главные оси сетки будут окрашены в красный, зеленый или синий цвет, когда они совпадают с глобальными осями</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="332"/>
+      <source>Use colored axes</source>
+      <translation>Использовать цветные оси</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="353"/>
+      <source>Main lines every</source>
+      <translation>Основные линии каждые</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="376"/>
+      <source>Mainlines will be drawn thicker. Specify here how many squares between mainlines.</source>
+      <translation>Основные линии рисуются толще. Укажите здесь, сколько квадратов между основными линиями.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="402"/>
+      <source>Grid spacing</source>
+      <translation>Шаг сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="425"/>
+      <source>The spacing between each grid line</source>
+      <translation>Расстояние между каждой линией сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="431"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="92"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="211"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="247"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="283"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="365"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="432"/>
+      <location filename="../ui/preferences-dxf.ui" line="535"/>
+      <location filename="../ui/preferences-svg.ui" line="209"/>
+      <source>mm</source>
+      <translation>мм</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="457"/>
+      <source>Grid size</source>
+      <translation>Размер сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="477"/>
+      <source>The number of horizontal or vertical lines of the grid</source>
+      <translation>Количество горизонтальных или вертикальных линий сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="483"/>
+      <source> lines</source>
+      <translation> линии</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="506"/>
+      <source>Grid color and transparency</source>
+      <translation>Цвет и прозрачность сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="526"/>
+      <source>The color of the grid</source>
+      <translation>Цвет сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="546"/>
+      <source>The overall transparency of the grid</source>
+      <translation>Общая прозрачность сетки</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="567"/>
+      <source>Draft Edit preferences</source>
+      <translation>Изменить настройки Наброска</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="570"/>
+      <source>Edit</source>
+      <translation>Редактировать</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="584"/>
+      <source>Maximum number of contemporary edited objects</source>
+      <translation>Максимальное количество одновременно редактируемых объектов</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="607"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the maximum number of objects Draft Edit&lt;/p&gt;&lt;p&gt;can process at the same time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Устанавливает максимальное количество одновременно редактируемых объектов наброска &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="645"/>
+      <source>Draft edit pick radius</source>
+      <translation>Радиус выбора наброска</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="668"/>
+      <source>Controls pick radius of edit nodes</source>
+      <translation>Управление радиусом выбора узлов редактирования</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="14"/>
+      <source>DWG</source>
+      <translation>DWG</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="26"/>
+      <source>DWG conversion</source>
+      <translation>Преобразование DWG</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="34"/>
+      <source>Path to ODA file converter</source>
+      <translation>Путь к файловому конвертеру ODA</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="41"/>
+      <source>The path to your ODA (formerly Teigha) File Converter executable</source>
+      <translation>Путь к исполняемому файлу конвертера ODA (ранее Teigha) файлов</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="56"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; DXF options apply to DWG files as well.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style="font-weight:600;"&gt;Примечание:&lt;/span&gt; параметры DXF также применяются для файлов DWG.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="14"/>
+      <source>User interface settings</source>
+      <translation>Настройки интерфейса пользователя</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="26"/>
+      <source>In-Command Shortcuts</source>
+      <translation>Горячие клавиши командного режима</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="52"/>
+      <source>`</source>
+      <translation>`</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="89"/>
+      <source>S</source>
+      <translation>S</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="111"/>
+      <source>Close</source>
+      <translation>Закрыть</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="118"/>
+      <source>Relative</source>
+      <translation>Относительно</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="140"/>
+      <source>R</source>
+      <translation>R</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="177"/>
+      <source>O</source>
+      <translation>O</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="214"/>
+      <source>T</source>
+      <translation>T</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="236"/>
+      <source>Continue</source>
+      <translation>Продолжить</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="243"/>
+      <source>Copy</source>
+      <translation>Копировать</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="250"/>
+      <source>Increase Radius</source>
+      <translation>Увеличить радиус</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="257"/>
+      <source>Cycle Snap</source>
+      <translation>Последовательная привязка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="279"/>
+      <source>[</source>
+      <translation>[</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="316"/>
+      <source>]</source>
+      <translation>]</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="338"/>
+      <source>Snap</source>
+      <translation>Привязка</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="345"/>
+      <source>Decrease Radius</source>
+      <translation>Уменьшить радиус</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="352"/>
+      <source>Length</source>
+      <translation>Длина</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="359"/>
+      <source>Wipe</source>
+      <translation>Стереть</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="381"/>
+      <source>D</source>
+      <translation>D</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="403"/>
+      <source>Add Hold</source>
+      <translation>+ держатель</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="425"/>
+      <source>L</source>
+      <translation>L</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="447"/>
+      <source>Exit</source>
+      <translation>Выход</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="469"/>
+      <source>P</source>
+      <translation>P</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="491"/>
+      <source>Fill</source>
+      <translation>Заполнить</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="498"/>
+      <source>Subelement Mode</source>
+      <translation>Поэлементный режим</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="520"/>
+      <source>E</source>
+      <translation>E</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="557"/>
+      <source>H</source>
+      <translation>H</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="579"/>
+      <source>Select Edge</source>
+      <translation>Выбрать ребро</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="601"/>
+      <source>W</source>
+      <translation>W</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="638"/>
+      <source>A</source>
+      <translation>A</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="675"/>
+      <source>Q</source>
+      <translation>Q</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="697"/>
+      <source>Set WP</source>
+      <translation>Задать РП</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="719"/>
+      <source>U</source>
+      <translation>U</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="741"/>
+      <source>Restrict X</source>
+      <translation>Ограничить по X</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="763"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="785"/>
+      <source>Restrict Y</source>
+      <translation>Ограничить по Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="807"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="829"/>
+      <source>Restrict Z</source>
+      <translation>Ограничить по Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="851"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="873"/>
+      <source>Global</source>
+      <translation>Глобальный</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="895"/>
+      <source>G</source>
+      <translation>G</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="928"/>
+      <source>Enable draft statusbar customization</source>
+      <translation>Включить настройку строки состояния верстака набросок</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="931"/>
+      <source>Draft Statusbar</source>
+      <translation>Строка состояния наброска</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="951"/>
+      <source>Enable snap statusbar widget</source>
+      <translation>Включить привязку строки состояния</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="954"/>
+      <source>Draft snap widget</source>
+      <translation>Привязка строки состояния наброска</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="970"/>
+      <source>Enable draft statusbar annotation scale widget</source>
+      <translation>Включить строку состояния отметки масштаба верстака набросок</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="973"/>
+      <source>Annotation scale widget</source>
+      <translation>Отметка масштаба</translation>
     </message>
   </context>
 </TS>

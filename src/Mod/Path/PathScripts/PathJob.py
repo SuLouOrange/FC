@@ -22,6 +22,7 @@
 
 from PathScripts.PathPostProcessor import PostProcessor
 from PySide import QtCore
+from PySide.QtCore import QT_TRANSLATE_NOOP
 import FreeCAD
 import PathScripts.PathLog as PathLog
 import PathScripts.PathPreferences as PathPreferences
@@ -31,6 +32,8 @@ import PathScripts.PathToolController as PathToolController
 import PathScripts.PathUtil as PathUtil
 import json
 import time
+import Path
+
 
 # lazily loaded modules
 from lazy_loader.lazy_loader import LazyLoader
@@ -38,17 +41,18 @@ from lazy_loader.lazy_loader import LazyLoader
 Draft = LazyLoader("Draft", globals(), "Draft")
 
 
-PathLog.setLevel(PathLog.Level.INFO, PathLog.thisModule())
+if False:
+    PathLog.setLevel(PathLog.Level.DEBUG, PathLog.thisModule())
+    PathLog.trackModule(PathLog.thisModule())
+else:
+    PathLog.setLevel(PathLog.Level.INFO, PathLog.thisModule())
 
-
-# Qt translation handling
-def translate(context, text, disambig=None):
-    return QtCore.QCoreApplication.translate(context, text, disambig)
+translate = FreeCAD.Qt.translate
 
 
 class JobTemplate:
-    # pylint: disable=no-init
     """Attribute and sub element strings for template export/import."""
+
     Description = "Desc"
     GeometryTolerance = "Tolerance"
     Job = "Job"
@@ -66,7 +70,6 @@ class JobTemplate:
 
 
 def isResourceClone(obj, propLink, resourceName):
-    # pylint: disable=unused-argument
     if hasattr(propLink, "PathResource") and (
         resourceName is None or resourceName == propLink.PathResource
     ):
@@ -75,7 +78,6 @@ def isResourceClone(obj, propLink, resourceName):
 
 
 def createResourceClone(obj, orig, name, icon):
-
     clone = Draft.clone(orig)
     clone.Label = "%s-%s" % (name, orig.Label)
     clone.addProperty("App::PropertyString", "PathResource")
@@ -102,41 +104,45 @@ Notification = NotificationClass()
 
 
 class ObjectJob:
-
     def __init__(self, obj, models, templateFile=None):
         self.obj = obj
+        self.tooltip = None
+        self.tooltipArgs = None
+        obj.Proxy = self
+
         obj.addProperty(
             "App::PropertyFile",
             "PostProcessorOutputFile",
             "Output",
-            QtCore.QT_TRANSLATE_NOOP("PathJob", "The NC output file for this project"),
+            QT_TRANSLATE_NOOP("App::Property", "The NC output file for this project"),
         )
         obj.addProperty(
             "App::PropertyEnumeration",
             "PostProcessor",
             "Output",
-            QtCore.QT_TRANSLATE_NOOP("PathJob", "Select the Post Processor"),
+            QT_TRANSLATE_NOOP("App::Property", "Select the Post Processor"),
         )
         obj.addProperty(
             "App::PropertyString",
             "PostProcessorArgs",
             "Output",
-            QtCore.QT_TRANSLATE_NOOP(
-                "PathJob", "Arguments for the Post Processor (specific to the script)"
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Arguments for the Post Processor (specific to the script)",
             ),
         )
         obj.addProperty(
             "App::PropertyString",
             "LastPostProcessDate",
             "Output",
-            QtCore.QT_TRANSLATE_NOOP("PathJob", "Last Time the Job was post-processed"),
+            QT_TRANSLATE_NOOP("App::Property", "Last Time the Job was post-processed"),
         )
         obj.setEditorMode("LastPostProcessDate", 2)  # Hide
         obj.addProperty(
             "App::PropertyString",
             "LastPostProcessOutput",
             "Output",
-            QtCore.QT_TRANSLATE_NOOP("PathJob", "Last Time the Job was post-processed"),
+            QT_TRANSLATE_NOOP("App::Property", "Last Time the Job was post-processed"),
         )
         obj.setEditorMode("LastPostProcessOutput", 2)  # Hide
 
@@ -144,21 +150,21 @@ class ObjectJob:
             "App::PropertyString",
             "Description",
             "Path",
-            QtCore.QT_TRANSLATE_NOOP("PathJob", "An optional description for this job"),
+            QT_TRANSLATE_NOOP("App::Property", "An optional description for this job"),
         )
         obj.addProperty(
             "App::PropertyString",
             "CycleTime",
             "Path",
-            QtCore.QT_TRANSLATE_NOOP("PathOp", "Job Cycle Time Estimation"),
+            QT_TRANSLATE_NOOP("App::Property", "Job Cycle Time Estimation"),
         )
         obj.setEditorMode("CycleTime", 1)  # read-only
         obj.addProperty(
             "App::PropertyDistance",
             "GeometryTolerance",
             "Geometry",
-            QtCore.QT_TRANSLATE_NOOP(
-                "PathJob",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
                 "For computing Paths; smaller increases accuracy, but slows down computation",
             ),
         )
@@ -167,44 +173,55 @@ class ObjectJob:
             "App::PropertyLink",
             "Stock",
             "Base",
-            QtCore.QT_TRANSLATE_NOOP("PathJob", "Solid object to be used as stock."),
+            QT_TRANSLATE_NOOP("App::Property", "Solid object to be used as stock."),
         )
         obj.addProperty(
             "App::PropertyLink",
             "Operations",
             "Base",
-            QtCore.QT_TRANSLATE_NOOP(
-                "PathJob",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
                 "Compound path of all operations in the order they are processed.",
             ),
         )
 
         obj.addProperty(
+            "App::PropertyEnumeration",
+            "JobType",
+            "Base",
+            QT_TRANSLATE_NOOP("App::Property", "Select the Type of Job"),
+        )
+        obj.setEditorMode("JobType", 2)  # Hide
+
+        obj.addProperty(
             "App::PropertyBool",
             "SplitOutput",
             "Output",
-            QtCore.QT_TRANSLATE_NOOP(
-                "PathJob", "Split output into multiple gcode files"
+            QT_TRANSLATE_NOOP(
+                "App::Property", "Split output into multiple gcode files"
             ),
         )
         obj.addProperty(
             "App::PropertyEnumeration",
             "OrderOutputBy",
             "WCS",
-            QtCore.QT_TRANSLATE_NOOP(
-                "PathJob", "If multiple WCS, order the output this way"
+            QT_TRANSLATE_NOOP(
+                "App::Property", "If multiple WCS, order the output this way"
             ),
         )
         obj.addProperty(
             "App::PropertyStringList",
             "Fixtures",
             "WCS",
-            QtCore.QT_TRANSLATE_NOOP(
-                "PathJob", "The Work Coordinate Systems for the Job"
+            QT_TRANSLATE_NOOP(
+                "App::Property", "The Work Coordinate Systems for the Job"
             ),
         )
-        obj.OrderOutputBy = ["Fixture", "Tool", "Operation"]
+
         obj.Fixtures = ["G54"]
+
+        for n in self.propertyEnumerations():
+            setattr(obj, n[0], n[1])
 
         obj.PostProcessorOutputFile = PathPreferences.defaultOutputFile()
         obj.PostProcessor = postProcessors = PathPreferences.allEnabledPostProcessors()
@@ -217,46 +234,77 @@ class ObjectJob:
         obj.PostProcessorArgs = PathPreferences.defaultPostProcessorArgs()
         obj.GeometryTolerance = PathPreferences.defaultGeometryTolerance()
 
-        ops = FreeCAD.ActiveDocument.addObject(
-            "Path::FeatureCompoundPython", "Operations"
-        )
+        self.setupOperations(obj)
+        self.setupSetupSheet(obj)
+        self.setupBaseModel(obj, models)
+        self.setupToolTable(obj)
+        self.setFromTemplateFile(obj, templateFile)
+        self.setupStock(obj)
+
+    @classmethod
+    def propertyEnumerations(self, dataType="data"):
+        """propertyEnumerations(dataType="data")... return property enumeration lists of specified dataType.
+        Args:
+            dataType = 'data', 'raw', 'translated'
+        Notes:
+        'data' is list of internal string literals used in code
+        'raw' is list of (translated_text, data_string) tuples
+        'translated' is list of translated string literals
+        """
+
+        enums = {
+            "OrderOutputBy": [
+                (translate("Path_Job", "Fixture"), "Fixture"),
+                (translate("Path_Job", "Tool"), "Tool"),
+                (translate("Path_Job", "Operation"), "Operation"),
+            ],
+            "JobType": [
+                (translate("Path_Job", "2D"), "2D"),
+                (translate("Path_Job", "2.5D"), "2.5D"),
+                (translate("Path_Job", "Lathe"), "Lathe"),
+                (translate("Path_Job", "Multiaxis"), "Multiaxis"),
+            ],
+        }
+
+        if dataType == "raw":
+            return enums
+
+        data = list()
+        idx = 0 if dataType == "translated" else 1
+
+        PathLog.debug(enums)
+
+        for k, v in enumerate(enums):
+            data.append((v, [tup[idx] for tup in enums[v]]))
+        PathLog.debug(data)
+
+        return data
+
+    def setupOperations(self, obj):
+        """setupOperations(obj)... setup the Operations group for the Job object."""
+        # ops = FreeCAD.ActiveDocument.addObject(
+        #     "Path::FeatureCompoundPython", "Operations"
+        # )
+        ops = FreeCAD.ActiveDocument.addObject("App::DocumentObjectGroup", "Operations")
         if ops.ViewObject:
-            ops.ViewObject.Proxy = 0
-            ops.ViewObject.Visibility = False
+            # ops.ViewObject.Proxy = 0
+            ops.ViewObject.Visibility = True
 
         obj.Operations = ops
         obj.setEditorMode("Operations", 2)  # hide
         obj.setEditorMode("Placement", 2)
 
-        self.setupSetupSheet(obj)
-        self.setupBaseModel(obj, models)
-        self.setupToolTable(obj)
-
-        self.tooltip = None
-        self.tooltipArgs = None
-
-        obj.Proxy = self
-
-        self.setFromTemplateFile(obj, templateFile)
-        if not obj.Stock:
-            stockTemplate = PathPreferences.defaultStockTemplate()
-            if stockTemplate:
-                obj.Stock = PathStock.CreateFromTemplate(obj, json.loads(stockTemplate))
-            if not obj.Stock:
-                obj.Stock = PathStock.CreateFromBase(obj)
-        if obj.Stock.ViewObject:
-            obj.Stock.ViewObject.Visibility = False
-
     def setupSetupSheet(self, obj):
         if not getattr(obj, "SetupSheet", None):
-            obj.addProperty(
-                "App::PropertyLink",
-                "SetupSheet",
-                "Base",
-                QtCore.QT_TRANSLATE_NOOP(
-                    "PathJob", "SetupSheet holding the settings for this job"
-                ),
-            )
+            if not hasattr(obj, "SetupSheet"):
+                obj.addProperty(
+                    "App::PropertyLink",
+                    "SetupSheet",
+                    "Base",
+                    QT_TRANSLATE_NOOP(
+                        "App::Property", "SetupSheet holding the settings for this job"
+                    ),
+                )
             obj.SetupSheet = PathSetupSheet.Create()
             if obj.SetupSheet.ViewObject:
                 import PathScripts.PathIconViewProvider
@@ -264,19 +312,27 @@ class ObjectJob:
                 PathScripts.PathIconViewProvider.Attach(
                     obj.SetupSheet.ViewObject, "SetupSheet"
                 )
+            obj.SetupSheet.Label = "SetupSheet"
         self.setupSheet = obj.SetupSheet.Proxy
 
     def setupBaseModel(self, obj, models=None):
         PathLog.track(obj.Label, models)
+        addModels = False
+
         if not hasattr(obj, "Model"):
             obj.addProperty(
                 "App::PropertyLink",
                 "Model",
                 "Base",
-                QtCore.QT_TRANSLATE_NOOP(
-                    "PathJob", "The base objects for all operations"
+                QT_TRANSLATE_NOOP(
+                    "App::Property", "The base objects for all operations"
                 ),
             )
+            addModels = True
+        elif obj.Model is None:
+            addModels = True
+
+        if addModels:
             model = FreeCAD.ActiveDocument.addObject(
                 "App::DocumentObjectGroup", "Model"
             )
@@ -287,6 +343,7 @@ class ObjectJob:
                     [createModelResourceClone(obj, base) for base in models]
                 )
             obj.Model = model
+            obj.Model.Label = "Model"
 
         if hasattr(obj, "Base"):
             PathLog.info(
@@ -297,15 +354,21 @@ class ObjectJob:
             obj.removeProperty("Base")
 
     def setupToolTable(self, obj):
+        addTable = False
         if not hasattr(obj, "Tools"):
             obj.addProperty(
                 "App::PropertyLink",
                 "Tools",
                 "Base",
-                QtCore.QT_TRANSLATE_NOOP(
-                    "PathJob", "Collection of all tool controllers for the job"
+                QT_TRANSLATE_NOOP(
+                    "App::Property", "Collection of all tool controllers for the job"
                 ),
             )
+            addTable = True
+        elif obj.Tools is None:
+            addTable = True
+
+        if addTable:
             toolTable = FreeCAD.ActiveDocument.addObject(
                 "App::DocumentObjectGroup", "Tools"
             )
@@ -316,6 +379,17 @@ class ObjectJob:
                 toolTable.addObjects(obj.ToolController)
                 obj.removeProperty("ToolController")
             obj.Tools = toolTable
+
+    def setupStock(self, obj):
+        """setupStock(obj)... setup the Stock for the Job object."""
+        if not obj.Stock:
+            stockTemplate = PathPreferences.defaultStockTemplate()
+            if stockTemplate:
+                obj.Stock = PathStock.CreateFromTemplate(obj, json.loads(stockTemplate))
+            if not obj.Stock:
+                obj.Stock = PathStock.CreateFromBase(obj)
+        if obj.Stock.ViewObject:
+            obj.Stock.ViewObject.Visibility = False
 
     def removeBase(self, obj, base, removeFromModel):
         if isResourceClone(obj, base, None):
@@ -392,7 +466,7 @@ class ObjectJob:
         if getattr(obj.Operations, "ViewObject", None):
             try:
                 obj.Operations.ViewObject.DisplayMode
-            except Exception:  # pylint: disable=broad-except
+            except Exception:
                 name = obj.Operations.Name
                 label = obj.Operations.Label
                 ops = FreeCAD.ActiveDocument.addObject(
@@ -403,13 +477,17 @@ class ObjectJob:
                 obj.Operations.Group = []
                 obj.Operations = ops
                 FreeCAD.ActiveDocument.removeObject(name)
-                ops.Label = label
+                if label == "Unnamed":
+                    ops.Label = "Operations"
+                else:
+                    ops.Label = label
 
     def onDocumentRestored(self, obj):
         self.setupBaseModel(obj)
         self.fixupOperations(obj)
         self.setupSetupSheet(obj)
         self.setupToolTable(obj)
+        self.integrityCheck(obj)
 
         obj.setEditorMode("Operations", 2)  # hide
         obj.setEditorMode("Placement", 2)
@@ -419,7 +497,7 @@ class ObjectJob:
                 "App::PropertyString",
                 "CycleTime",
                 "Path",
-                QtCore.QT_TRANSLATE_NOOP("PathOp", "Operations Cycle Time Estimation"),
+                QT_TRANSLATE_NOOP("App::Property", "Operations Cycle Time Estimation"),
             )
             obj.setEditorMode("CycleTime", 1)  # read-only
 
@@ -428,8 +506,8 @@ class ObjectJob:
                 "App::PropertyStringList",
                 "Fixtures",
                 "WCS",
-                QtCore.QT_TRANSLATE_NOOP(
-                    "PathJob", "The Work Coordinate Systems for the Job"
+                QT_TRANSLATE_NOOP(
+                    "App::Property", "The Work Coordinate Systems for the Job"
                 ),
             )
             obj.Fixtures = ["G54"]
@@ -439,8 +517,8 @@ class ObjectJob:
                 "App::PropertyEnumeration",
                 "OrderOutputBy",
                 "WCS",
-                QtCore.QT_TRANSLATE_NOOP(
-                    "PathJob", "If multiple WCS, order the output this way"
+                QT_TRANSLATE_NOOP(
+                    "App::Property", "If multiple WCS, order the output this way"
                 ),
             )
             obj.OrderOutputBy = ["Fixture", "Tool", "Operation"]
@@ -450,11 +528,31 @@ class ObjectJob:
                 "App::PropertyBool",
                 "SplitOutput",
                 "Output",
-                QtCore.QT_TRANSLATE_NOOP(
-                    "PathJob", "Split output into multiple gcode files"
+                QT_TRANSLATE_NOOP(
+                    "App::Property", "Split output into multiple gcode files"
                 ),
             )
             obj.SplitOutput = False
+
+        if not hasattr(obj, "JobType"):
+            obj.addProperty(
+                "App::PropertyEnumeration",
+                "JobType",
+                "Base",
+                QT_TRANSLATE_NOOP("App::Property", "Select the Type of Job"),
+            )
+            obj.setEditorMode("JobType", 2)  # Hide
+
+        for n in self.propertyEnumerations():
+            setattr(obj, n[0], n[1])
+
+        if True in [isinstance(t.Tool, Path.Tool) for t in obj.Tools.Group]:
+            FreeCAD.Console.PrintWarning(
+                translate(
+                    "Path",
+                    "This job contains Legacy tools. Legacy tools are deprecated. They will be removed after version 0.20",
+                )
+            )
 
     def onChanged(self, obj, prop):
         if prop == "PostProcessor" and obj.PostProcessor:
@@ -534,9 +632,11 @@ class ObjectJob:
                 obj.Tools.Group = tcs
             else:
                 PathLog.error(
-                    translate("PathJob", "Unsupported PathJob template version %s")
-                    % attrs.get(JobTemplate.Version)
+                    "Unsupported PathJob template version {}".format(
+                        attrs.get(JobTemplate.Version)
+                    )
                 )
+
         if not tcs:
             self.addToolController(PathToolController.Create())
 
@@ -569,7 +669,7 @@ class ObjectJob:
 
     def execute(self, obj):
         if getattr(obj, "Operations", None):
-            obj.Path = obj.Operations.Path
+            # obj.Path = obj.Operations.Path
             self.getCycleTime()
 
     def getCycleTime(self):
@@ -613,18 +713,21 @@ class ObjectJob:
                     group.insert(group.index(before), op)
                     if removeBefore:
                         group.remove(before)
-                except Exception as e:  # pylint: disable=broad-except
+                except Exception as e:
                     PathLog.error(e)
                     group.append(op)
             else:
                 group.append(op)
             self.obj.Operations.Group = group
-            op.Path.Center = self.obj.Operations.Path.Center
+            # op.Path.Center = self.obj.Operations.Path.Center
 
     def nextToolNumber(self):
         # returns the next available toolnumber in the job
         group = self.obj.Tools.Group
-        return sorted([t.ToolNumber for t in group])[-1] + 1
+        if len(group) > 0:
+            return sorted([t.ToolNumber for t in group])[-1] + 1
+        else:
+            return 1
 
     def addToolController(self, tc):
         group = self.obj.Tools.Group
@@ -680,6 +783,47 @@ class ObjectJob:
             for op in self.allOperations():
                 op.Path.Center = center
 
+    def integrityCheck(self, job):
+        """integrityCheck(job)... Return True if job has all expected children objects.  Attempts to restore any missing children."""
+        suffix = ""
+        if len(job.Name) > 3:
+            suffix = job.Name[3:]
+
+        def errorMessage(grp, job):
+            PathLog.error("{} corrupt in {} job.".format(grp, job.Name))
+
+        if not job.Operations:
+            self.setupOperations(job)
+            job.Operations.Label = "Operations" + suffix
+            if not job.Operations:
+                errorMessage("Operations", job)
+                return False
+        if not job.SetupSheet:
+            self.setupSetupSheet(job)
+            job.SetupSheet.Label = "SetupSheet" + suffix
+            if not job.SetupSheet:
+                errorMessage("SetupSheet", job)
+                return False
+        if not job.Model:
+            self.setupBaseModel(job)
+            job.Model.Label = "Model" + suffix
+            if not job.Model:
+                errorMessage("Model", job)
+                return False
+        if not job.Stock:
+            self.setupStock(job)
+            job.Stock.Label = "Stock" + suffix
+            if not job.Stock:
+                errorMessage("Stock", job)
+                return False
+        if not job.Tools:
+            self.setupToolTable(job)
+            job.Tools.Label = "Tools" + suffix
+            if not job.Tools:
+                errorMessage("Tools", job)
+                return False
+        return True
+
     @classmethod
     def baseCandidates(cls):
         """Answer all objects in the current document which could serve as a Base for a job."""
@@ -715,5 +859,6 @@ def Create(name, base, templateFile=None):
     else:
         models = base
     obj = FreeCAD.ActiveDocument.addObject("Path::FeaturePython", name)
+    obj.addExtension("App::GroupExtensionPython")
     obj.Proxy = ObjectJob(obj, models, templateFile)
     return obj

@@ -20,53 +20,47 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 
 #ifndef _PreComp_
+# include <Inventor/actions/SoSearchAction.h>
+# include <Inventor/draggers/SoCenterballDragger.h>
+# include <Inventor/draggers/SoHandleBoxDragger.h>
+# include <Inventor/manips/SoCenterballManip.h>
+# include <Inventor/manips/SoHandleBoxManip.h>
+# include <Inventor/manips/SoTransformManip.h>
 # include <Inventor/nodes/SoCoordinate3.h>
-# include <Inventor/nodes/SoMaterial.h>
-# include <Inventor/nodes/SoSurroundScale.h>
 # include <Inventor/nodes/SoLineSet.h>
+# include <Inventor/nodes/SoMaterial.h>
 # include <Inventor/nodes/SoSeparator.h>
 # include <Inventor/nodes/SoTransform.h>
-# include <Inventor/nodes/SoMatrixTransform.h>
-# include <Inventor/nodes/SoSphere.h>
-# include <Inventor/manips/SoTransformManip.h>
-# include <Inventor/manips/SoCenterballManip.h>
-# include <Inventor/manips/SoTransformerManip.h>
-# include <Inventor/manips/SoTransformBoxManip.h>
-# include <Inventor/manips/SoHandleBoxManip.h>
-# include <Inventor/manips/SoTabBoxManip.h>
-# include <Inventor/actions/SoSearchAction.h>
-# include <Inventor/engines/SoDecomposeMatrix.h>
-# include <Inventor/draggers/SoCenterballDragger.h>
-# include <Inventor/draggers/SoTransformerDragger.h>
-# include <Inventor/draggers/SoTransformBoxDragger.h>
-# include <Inventor/draggers/SoHandleBoxDragger.h>
 
+# include <QApplication>
 # include <QMessageBox>
+# include <QTextStream>
 
 # include <boost_bind_bind.hpp>
 
-# include <math.h>
+# include <cmath>
 #endif
 
-#include "ViewProviderFemPostFunction.h"
-#include "TaskPostBoxes.h"
-#include <Mod/Fem/App/FemPostFunction.h>
-#include <Base/Console.h>
-#include <Base/Interpreter.h>
-#include <Gui/Application.h>
-#include <Gui/Document.h>
-#include <Gui/SoNavigationDragger.h>
-#include <Gui/Macro.h>
-#include <Gui/TaskView/TaskDialog.h>
-#include <Gui/Control.h>
+#include <App/Document.h>
 #include <App/PropertyUnits.h>
+#include <Gui/Application.h>
+#include <Gui/Control.h>
+#include <Gui/Document.h>
+#include <Gui/MainWindow.h>
+#include <Gui/TaskView/TaskDialog.h>
+#include <Mod/Fem/App/FemAnalysis.h>
+
+#include "ViewProviderFemPostFunction.h"
+#include "ActiveAnalysisObserver.h"
+#include "FemSettings.h"
+#include "TaskPostBoxes.h"
 
 #include "ui_PlaneWidget.h"
 #include "ui_SphereWidget.h"
+
 
 using namespace FemGui;
 namespace bp = boost::placeholders;
@@ -80,7 +74,7 @@ void FunctionWidget::setViewProvider(ViewProviderFemPostFunction* view) {
 
 void FunctionWidget::onObjectsChanged(const App::DocumentObject& obj, const App::Property& p) {
 
-    if(&obj == m_object)
+    if (&obj == m_object)
         onChange(p);
 }
 
@@ -113,7 +107,7 @@ void ViewProviderFemPostFunctionProvider::onChanged(const App::Property* prop) {
 void ViewProviderFemPostFunctionProvider::updateData(const App::Property* prop) {
     Gui::ViewProviderDocumentObject::updateData(prop);
 
-    if(strcmp(prop->getName(), "Functions") == 0) {
+    if (strcmp(prop->getName(), "Functions") == 0) {
         updateSize();
     }
 }
@@ -121,9 +115,9 @@ void ViewProviderFemPostFunctionProvider::updateData(const App::Property* prop) 
 void ViewProviderFemPostFunctionProvider::updateSize() {
 
     std::vector< App::DocumentObject* > vec = claimChildren();
-    for(std::vector< App::DocumentObject* >::iterator it = vec.begin(); it != vec.end(); ++it) {
+    for (std::vector< App::DocumentObject* >::iterator it = vec.begin(); it != vec.end(); ++it) {
 
-        if(!(*it)->isDerivedFrom(Fem::FemPostFunction::getClassTypeId()))
+        if (!(*it)->isDerivedFrom(Fem::FemPostFunction::getClassTypeId()))
             continue;
 
         ViewProviderFemPostFunction* vp = static_cast<FemGui::ViewProviderFemPostFunction*>(Gui::Application::Instance->getViewProvider(*it));
@@ -133,7 +127,47 @@ void ViewProviderFemPostFunctionProvider::updateSize() {
     }
 }
 
+bool ViewProviderFemPostFunctionProvider::onDelete(const std::vector<std::string>&)
+{
+    // warn the user if the object has childs
 
+    auto objs = claimChildren();
+    if (!objs.empty())
+    {
+        // generate dialog
+        QString bodyMessage;
+        QTextStream bodyMessageStream(&bodyMessage);
+        bodyMessageStream << qApp->translate("Std_Delete",
+            "The functions list is not empty, therefore the\nfollowing referencing objects might be lost:");
+        bodyMessageStream << '\n';
+        for (auto ObjIterator : objs)
+            bodyMessageStream << '\n' << QString::fromUtf8(ObjIterator->Label.getValue());
+        bodyMessageStream << "\n\n" << QObject::tr("Are you sure you want to continue?");
+        // show and evaluate the dialog
+        int DialogResult = QMessageBox::warning(Gui::getMainWindow(),
+            qApp->translate("Std_Delete", "Object dependencies"), bodyMessage,
+            QMessageBox::Yes, QMessageBox::No);
+        if (DialogResult == QMessageBox::Yes)
+            return true;
+        else
+            return false;
+    }
+    else {
+        return true;
+    }
+}
+
+bool ViewProviderFemPostFunctionProvider::canDelete(App::DocumentObject* obj) const
+{
+    // deletions of objects from a FemFunction don't necesarily destroy anything
+    // thus we can pass this action
+    // we can warn the user if necessary in the object's ViewProvider in the onDelete() function
+    Q_UNUSED(obj)
+        return true;
+}
+
+
+// ***************************************************************************
 
 PROPERTY_SOURCE(FemGui::ViewProviderFemPostFunction, Gui::ViewProviderDocumentObject)
 
@@ -153,7 +187,7 @@ ViewProviderFemPostFunction::ViewProviderFemPostFunction()
 
     m_scale = new SoScale();
     m_scale->ref();
-    m_scale->scaleFactor = SbVec3f(1,1,1);
+    m_scale->scaleFactor = SbVec3f(1, 1, 1);
 }
 
 ViewProviderFemPostFunction::~ViewProviderFemPostFunction()
@@ -164,13 +198,13 @@ ViewProviderFemPostFunction::~ViewProviderFemPostFunction()
     //transform is unref'd when it is replaced by the dragger
 }
 
-void ViewProviderFemPostFunction::attach(App::DocumentObject *pcObj)
+void ViewProviderFemPostFunction::attach(App::DocumentObject* pcObj)
 {
     ViewProviderDocumentObject::attach(pcObj);
 
     // setup the graph for editing the function unit geometry
     SoMaterial* color = new SoMaterial();
-    color->diffuseColor.setValue(0,0,1);
+    color->diffuseColor.setValue(0, 0, 1);
     color->transparency.setValue(0.5);
 
     m_transform = new SoTransform;
@@ -196,7 +230,7 @@ void ViewProviderFemPostFunction::attach(App::DocumentObject *pcObj)
     sa.setSearchingAll(FALSE);
     sa.setNode(m_transform);
     sa.apply(pcEditNode);
-    SoPath * path = sa.getPath();
+    SoPath* path = sa.getPath();
     if (path) {
         m_manip->replaceNode(path);
 
@@ -216,12 +250,10 @@ bool ViewProviderFemPostFunction::doubleClicked(void) {
     return true;
 }
 
-
 SoTransformManip* ViewProviderFemPostFunction::setupManipulator() {
 
     return new SoCenterballManip;
 }
-
 
 std::vector<std::string> ViewProviderFemPostFunction::getDisplayModes(void) const
 {
@@ -230,35 +262,34 @@ std::vector<std::string> ViewProviderFemPostFunction::getDisplayModes(void) cons
     return StrList;
 }
 
-void ViewProviderFemPostFunction::dragStartCallback(void *data, SoDragger *)
+void ViewProviderFemPostFunction::dragStartCallback(void* data, SoDragger*)
 {
     // This is called when a manipulator is about to manipulating
     Gui::Application::Instance->activeDocument()->openCommand(QT_TRANSLATE_NOOP("Command", "Edit Mirror"));
     reinterpret_cast<ViewProviderFemPostFunction*>(data)->m_isDragging = true;
 
     ViewProviderFemPostFunction* that = reinterpret_cast<ViewProviderFemPostFunction*>(data);
-    ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/Mod/Fem");
-    that->m_autoRecompute = hGrp->GetBool("PostAutoRecompute", false);
+    that->m_autoRecompute = FemSettings().getPostAutoRecompute();
 }
 
-void ViewProviderFemPostFunction::dragFinishCallback(void *data, SoDragger *)
+void ViewProviderFemPostFunction::dragFinishCallback(void* data, SoDragger*)
 {
     // This is called when a manipulator has done manipulating
     Gui::Application::Instance->activeDocument()->commitCommand();
 
     ViewProviderFemPostFunction* that = reinterpret_cast<ViewProviderFemPostFunction*>(data);
-    if(that->m_autoRecompute)
+    if (that->m_autoRecompute)
         that->getObject()->getDocument()->recompute();
 
     reinterpret_cast<ViewProviderFemPostFunction*>(data)->m_isDragging = false;
 }
 
-void ViewProviderFemPostFunction::dragMotionCallback(void *data, SoDragger *drag)
+void ViewProviderFemPostFunction::dragMotionCallback(void* data, SoDragger* drag)
 {
     ViewProviderFemPostFunction* that = reinterpret_cast<ViewProviderFemPostFunction*>(data);
     that->draggerUpdate(drag);
 
-    if(that->m_autoRecompute)
+    if (that->m_autoRecompute)
         that->getObject()->getDocument()->recompute();
 }
 
@@ -266,12 +297,12 @@ void ViewProviderFemPostFunction::dragMotionCallback(void *data, SoDragger *drag
 bool ViewProviderFemPostFunction::setEdit(int ModNum) {
 
 
-     if (ModNum == ViewProvider::Default || ModNum == 1 ) {
+    if (ModNum == ViewProvider::Default || ModNum == 1) {
 
-        Gui::TaskView::TaskDialog *dlg = Gui::Control().activeDialog();
-        TaskDlgPost *postDlg = qobject_cast<TaskDlgPost*>(dlg);
+        Gui::TaskView::TaskDialog* dlg = Gui::Control().activeDialog();
+        TaskDlgPost* postDlg = qobject_cast<TaskDlgPost*>(dlg);
         if (postDlg && postDlg->getView() != this)
-            postDlg = 0; // another pad left open its task panel
+            postDlg = nullptr; // another pad left open its task panel
         if (dlg && !postDlg) {
             QMessageBox msgBox;
             msgBox.setText(QObject::tr("A dialog is already open in the task panel"));
@@ -316,10 +347,9 @@ void ViewProviderFemPostFunction::onChanged(const App::Property* prop) {
 
     Gui::ViewProviderDocumentObject::onChanged(prop);
 
-    if(m_autoscale)
+    if (m_autoscale)
         m_scale->scaleFactor = SbVec3f(AutoScaleFactorX.getValue(), AutoScaleFactorY.getValue(), AutoScaleFactorZ.getValue());
 }
-
 
 
 // ***************************************************************************
@@ -336,9 +366,9 @@ ViewProviderFemPostPlaneFunction::ViewProviderFemPostPlaneFunction() {
     SoCoordinate3* points = new SoCoordinate3();
     points->point.setNum(4);
     points->point.set1Value(0, -0.5, -0.5, 0);
-    points->point.set1Value(1, -0.5,  0.5, 0);
-    points->point.set1Value(2,  0.5,  0.5, 0);
-    points->point.set1Value(3,  0.5, -0.5, 0);
+    points->point.set1Value(1, -0.5, 0.5, 0);
+    points->point.set1Value(2, 0.5, 0.5, 0);
+    points->point.set1Value(3, 0.5, -0.5, 0);
     points->point.set1Value(4, -0.5, -0.5, 0);
     SoLineSet* line = new SoLineSet();
     getGeometryNode()->addChild(points);
@@ -358,28 +388,28 @@ void ViewProviderFemPostPlaneFunction::draggerUpdate(SoDragger* m) {
     SbRotation rot, scaleDir;
     const SbVec3f& center = dragger->center.getValue();
 
-    SbVec3f norm(0,0,1);
-    dragger->rotation.getValue().multVec(norm,norm);
+    SbVec3f norm(0, 0, 1);
+    dragger->rotation.getValue().multVec(norm, norm);
     func->Origin.setValue(center[0], center[1], center[2]);
-    func->Normal.setValue(norm[0],norm[1],norm[2]);
+    func->Normal.setValue(norm[0], norm[1], norm[2]);
 
     SbVec3f t = static_cast<SoCenterballManip*>(getManipulator())->translation.getValue();
     SbVec3f rt, irt;
-    dragger->rotation.getValue().multVec(t,rt);
-    dragger->rotation.getValue().inverse().multVec(t,irt);
+    dragger->rotation.getValue().multVec(t, rt);
+    dragger->rotation.getValue().inverse().multVec(t, irt);
 }
 
 void ViewProviderFemPostPlaneFunction::updateData(const App::Property* p) {
 
     Fem::FemPostPlaneFunction* func = static_cast<Fem::FemPostPlaneFunction*>(getObject());
 
-    if(!isDragging() && (p == &func->Origin || p == &func->Normal)) {
+    if (!isDragging() && (p == &func->Origin || p == &func->Normal)) {
 
         Base::Vector3d trans = func->Origin.getValue();
         Base::Vector3d norm = func->Normal.getValue();
 
         norm = norm / norm.Length();
-        SbRotation rot(SbVec3f(0.,0.,1.), SbVec3f(norm.x, norm.y, norm.z));
+        SbRotation rot(SbVec3f(0., 0., 1.), SbVec3f(norm.x, norm.y, norm.z));
 
         SbMatrix t, translate;
         t.setRotate(rot);
@@ -428,13 +458,13 @@ void PlaneWidget::setViewProvider(ViewProviderFemPostFunction* view) {
 void PlaneWidget::onChange(const App::Property& p) {
 
     setBlockObjectUpdates(true);
-    if(strcmp(p.getName(), "Normal") == 0) {
+    if (strcmp(p.getName(), "Normal") == 0) {
         const Base::Vector3d& vec = static_cast<const App::PropertyVector*>(&p)->getValue();
         ui->normalX->setValue(vec.x);
         ui->normalY->setValue(vec.y);
         ui->normalZ->setValue(vec.z);
     }
-    else if(strcmp(p.getName(), "Origin") == 0) {
+    else if (strcmp(p.getName(), "Origin") == 0) {
         const Base::Vector3d& vec = static_cast<const App::PropertyVectorDistance*>(&p)->getValue();
         ui->originX->setValue(vec.x);
         ui->originY->setValue(vec.y);
@@ -445,20 +475,19 @@ void PlaneWidget::onChange(const App::Property& p) {
 
 void PlaneWidget::normalChanged(double) {
 
-     if(!blockObjectUpdates()) {
+    if (!blockObjectUpdates()) {
         Base::Vector3d vec(ui->normalX->value(), ui->normalY->value(), ui->normalZ->value());
         static_cast<Fem::FemPostPlaneFunction*>(getObject())->Normal.setValue(vec);
-     }
+    }
 }
 
 void PlaneWidget::originChanged(double) {
 
-    if(!blockObjectUpdates()) {
+    if (!blockObjectUpdates()) {
         Base::Vector3d vec(ui->originX->value(), ui->originY->value(), ui->originZ->value());
         static_cast<Fem::FemPostPlaneFunction*>(getObject())->Origin.setValue(vec);
     }
 }
-
 
 
 // ***************************************************************************
@@ -473,21 +502,21 @@ ViewProviderFemPostSphereFunction::ViewProviderFemPostSphereFunction() {
 
     //setup the visualisation geometry
     SoCoordinate3* points = new SoCoordinate3();
-    points->point.setNum(2*84);
+    points->point.setNum(2 * 84);
     int idx = 0;
-    for(int i=0; i<4; i++) {
-        for(int j=0; j<21; j++) {
-            points->point.set1Value(idx, SbVec3f(std::sin(2*M_PI/20*j) * std::cos(M_PI/4*i),
-                                                 std::sin(2*M_PI/20*j) * std::sin(M_PI/4*i),
-                                                 std::cos(2*M_PI/20*j) ));
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 21; j++) {
+            points->point.set1Value(idx, SbVec3f(std::sin(2 * M_PI / 20 * j) * std::cos(M_PI / 4 * i),
+                std::sin(2 * M_PI / 20 * j) * std::sin(M_PI / 4 * i),
+                std::cos(2 * M_PI / 20 * j)));
             ++idx;
         }
     }
-    for(int i=0; i<4; i++) {
-        for(int j=0; j<21; j++) {
-            points->point.set1Value(idx, SbVec3f(std::sin(M_PI/4*i) * std::cos(2*M_PI/20*j),
-                                                 std::sin(M_PI/4*i) * std::sin(2*M_PI/20*j),
-                                                 std::cos(M_PI/4*i) ));
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 21; j++) {
+            points->point.set1Value(idx, SbVec3f(std::sin(M_PI / 4 * i) * std::cos(2 * M_PI / 20 * j),
+                std::sin(M_PI / 4 * i) * std::sin(2 * M_PI / 20 * j),
+                std::cos(M_PI / 4 * i)));
             ++idx;
         }
     }
@@ -528,7 +557,7 @@ void ViewProviderFemPostSphereFunction::draggerUpdate(SoDragger* m) {
     SbRotation rot, scaleDir;
     const SbVec3f& center = dragger->translation.getValue();
 
-    SbVec3f norm(0,0,1);
+    SbVec3f norm(0, 0, 1);
     func->Center.setValue(center[0], center[1], center[2]);
     func->Radius.setValue(dragger->scaleFactor.getValue()[0]);
 }
@@ -537,7 +566,7 @@ void ViewProviderFemPostSphereFunction::updateData(const App::Property* p) {
 
     Fem::FemPostSphereFunction* func = static_cast<Fem::FemPostSphereFunction*>(getObject());
 
-    if(!isDragging() && (p == &func->Center || p == &func->Radius)) {
+    if (!isDragging() && (p == &func->Center || p == &func->Radius)) {
 
         Base::Vector3d trans = func->Center.getValue();
         double radius = func->Radius.getValue();
@@ -547,16 +576,13 @@ void ViewProviderFemPostSphereFunction::updateData(const App::Property* p) {
         translate.setTranslate(SbVec3f(trans.x, trans.y, trans.z));
         t.multRight(translate);
         getManipulator()->setMatrix(t);
-
     }
     Gui::ViewProviderDocumentObject::updateData(p);
 }
 
-
 FunctionWidget* ViewProviderFemPostSphereFunction::createControlWidget() {
     return new SphereWidget();
 }
-
 
 SphereWidget::SphereWidget() {
 
@@ -587,11 +613,11 @@ void SphereWidget::setViewProvider(ViewProviderFemPostFunction* view) {
 void SphereWidget::onChange(const App::Property& p) {
 
     setBlockObjectUpdates(true);
-    if(strcmp(p.getName(), "Radius") == 0) {
+    if (strcmp(p.getName(), "Radius") == 0) {
         double val = static_cast<const App::PropertyDistance*>(&p)->getValue();
         ui->radius->setValue(val);
     }
-    else if(strcmp(p.getName(), "Center") == 0) {
+    else if (strcmp(p.getName(), "Center") == 0) {
         const Base::Vector3d& vec = static_cast<const App::PropertyVectorDistance*>(&p)->getValue();
         ui->centerX->setValue(vec.x);
         ui->centerY->setValue(vec.y);
@@ -602,15 +628,15 @@ void SphereWidget::onChange(const App::Property& p) {
 
 void SphereWidget::centerChanged(double) {
 
-     if(!blockObjectUpdates()) {
+    if (!blockObjectUpdates()) {
         Base::Vector3d vec(ui->centerX->value(), ui->centerY->value(), ui->centerZ->value());
         static_cast<Fem::FemPostSphereFunction*>(getObject())->Center.setValue(vec);
-     }
+    }
 }
 
 void SphereWidget::radiusChanged(double) {
 
-    if(!blockObjectUpdates()) {
+    if (!blockObjectUpdates()) {
         static_cast<Fem::FemPostSphereFunction*>(getObject())->Radius.setValue(ui->radius->value());
     }
 }

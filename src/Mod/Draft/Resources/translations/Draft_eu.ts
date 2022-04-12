@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="1.1" language="eu" sourcelanguage="en">
+<TS version="2.1" language="eu" sourcelanguage="en">
   <context>
     <name>App::Property</name>
     <message>
@@ -127,6 +127,11 @@ Utzi propietate hau hutsik 'Ardatza' eta 'Zentroa' eskuz ezarri ahal izateko.</t
     </message>
     <message>
       <location filename="array.py" line="291"/>
+      <source>A parameter that determines how many symmetry planes the circular array will have.</source>
+      <translation>Matrize zirkularrak zenbat simetria-plano izango dituen zehazten duen parametroa.</translation>
+    </message>
+    <message>
+      <location filename="array.py" line="291"/>
       <source>A parameter that determines how many symmetry planes  the circular array will have.</source>
       <translation>Matrize zirkularrak zenbat simetria-plano izango dituen zehazten duen parametroa.</translation>
     </message>
@@ -193,6 +198,26 @@ Propietate hau irakurtzeko soilik da, kopuru hori matrizeko parametroen araberak
       <translation>Objektuaren area</translation>
     </message>
     <message>
+      <location filename="pathtwistedarray.py" line="86"/>
+      <source>The base object that will be duplicated.</source>
+      <translation>Bikoiztuko den oinarri-objektua.</translation>
+    </message>
+    <message>
+      <location filename="patharray.py" line="177"/>
+      <source>The object along which the copies will be distributed. It must contain 'Edges'.</source>
+      <translation>Kopiak banatzeko erabiliko den objektua. 'Ertzak' eduki behar ditu.</translation>
+    </message>
+    <message>
+      <location filename="pathtwistedarray.py" line="100"/>
+      <source>Number of copies to create.</source>
+      <translation>Sortuko den kopia kopurua.</translation>
+    </message>
+    <message>
+      <location filename="pathtwistedarray.py" line="107"/>
+      <source>Rotation factor of the twisted array.</source>
+      <translation>Matrize kiribilduaren biraketa-faktorea.</translation>
+    </message>
+    <message>
       <location filename="dimension.py" line="137"/>
       <source>The normal direction of the text of the dimension</source>
       <translation>Kotaren testuaren norabide normala</translation>
@@ -201,6 +226,23 @@ Propietate hau irakurtzeko soilik da, kopuru hori matrizeko parametroen araberak
       <location filename="dimension.py" line="150"/>
       <source>The object measured by this dimension object</source>
       <translation>Objektu honek neurtzen duen objektua</translation>
+    </message>
+    <message>
+      <location filename="dimension.py" line="167"/>
+      <source>The object, and specific subelements of it,
+that this dimension object is measuring.
+
+There are various possibilities:
+- An object, and one of its edges.
+- An object, and two of its vertices.
+- An arc object, and its edge.</source>
+      <translation>Kota-objektu hau neurtzen ari den objektua
+eta haren azpielementu zehatzak.
+
+Aukera bat baino gehiago dago:
+- Objektu bat eta bere ertz bat.
+- Objektu bat eta bere bi erpin.
+- Arku-objektu bat eta bere ertza.</translation>
     </message>
     <message>
       <location filename="dimension.py" line="167"/>
@@ -517,6 +559,16 @@ nagusitik erauziko dira, edo 'ErpinaN', 'ErtzaN' edo 'AurpegiaN' azpielementutik
       <translation>Karaktere arteko espazioa</translation>
     </message>
     <message>
+      <location filename="shapestring.py" line="59"/>
+      <source>Fill letters with faces</source>
+      <translation>Bete letrak aurpegiekin</translation>
+    </message>
+    <message>
+      <location filename="draftlink.py" line="99"/>
+      <source>Force sync pattern placements even when array elements are expanded</source>
+      <translation>Behartu ereduen kokapenaren sinkronizazioa matrize-elementuak hedatuta daudenean ere</translation>
+    </message>
+    <message>
       <location filename="draftlink.py" line="104"/>
       <source>Show the individual array elements</source>
       <translation>Erakutsi matrizeko banakako elementuak</translation>
@@ -601,6 +653,45 @@ Propietate hau irakurtzeko soilik da, kopuru hori 'Puntu-objektua' elementuak di
       <translation>Teselatu elipseak eta B-spline elementuak lerro-segmentuetara</translation>
     </message>
     <message>
+      <location filename="shape2dview.py" line="98"/>
+      <source>For Cutlines and Cutfaces modes, 
+                    this leaves the faces at the cut location</source>
+      <translation>Mozketa-lerroen eta mozketa-aurpegien moduetarako, 
+                honek mozketa-tokian uzten ditu aurpegiak</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="105"/>
+      <source>Length of line segments if tessellating Ellipses or B-splines 
+                    into line segments</source>
+      <translation>Lerro-segmentuen luzera, elipseak edo B-spline kurbak 
+                lerro-segmentuetara teselatzen badira</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="111"/>
+      <source>If this is True, this object will include only visible objects</source>
+      <translation>Hau egia bada, objektu honek ikusgai dauden objektuak soilik hartuko ditu</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="117"/>
+      <source>A list of exclusion points. Any edge touching any of those points will not be drawn.</source>
+      <translation>Esklusio-puntuen zerrenda bat. Puntu horietako edozein ukitzen duten ertzak ez dira marraztuko.</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="122"/>
+      <source>If this is True, only solid geometry is handled. This overrides the base object's Only Solids property</source>
+      <translation>Hau egia bada, geometria solidoa soilik maneiatuko da. Honek oinarri-objektuaren 'Solidoak soilik' propietatea gainidazten du</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="127"/>
+      <source>If this is True, the contents are clipped to the borders of the section plane, if applicable. This overrides the base object's Clip property</source>
+      <translation>Hau egia bada, edukiak sekzio-planoaren ertzetatik ebakitzen da, aplikagarria bada. Honek oinarri-objektuaren 'Ebaki' propietatea gainidazten du</translation>
+    </message>
+    <message>
+      <location filename="shape2dview.py" line="132"/>
+      <source>This object will be recomputed only if this is True.</source>
+      <translation>Objektua birkalkulatu egingo da hau egia bada soilik.</translation>
+    </message>
+    <message>
       <location filename="ellipse.py" line="45"/>
       <source>Start angle of the elliptical arc</source>
       <translation>Arku eliptikoaren hasierako angelua</translation>
@@ -627,6 +718,41 @@ Propietate hau irakurtzeko soilik da, kopuru hori 'Puntu-objektua' elementuak di
       <location filename="ellipse.py" line="61"/>
       <source>Area of this object</source>
       <translation>Objektuaren area</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="52"/>
+      <source>The base object used by this object</source>
+      <translation>Objektu honek darabilen oinarri-objektua</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="55"/>
+      <source>The PAT file used by this object</source>
+      <translation>Objektu honek darabilen PAT fitxategia</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="58"/>
+      <source>The pattern name used by this object</source>
+      <translation>Objektu honek darabilen eredu-izena</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="61"/>
+      <source>The pattern scale used by this object</source>
+      <translation>Objektu honek darabilen eredu-eskala</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="49"/>
+      <source>The shape of this object</source>
+      <translation>Objektu honen forma</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="64"/>
+      <source>The pattern rotation used by this object</source>
+      <translation>Objektu honek darabilen eredu-biraketa</translation>
+    </message>
+    <message>
+      <location filename="hatch.py" line="67"/>
+      <source>If set to False, hatch is applied as is to the faces, without translation (this might give wrong results for non-XY faces)</source>
+      <translation>Faltsua bada, itzaleztadura bere horretan aplikatuko zaie aurpegiei, translaziorik gabe (horrek emaitza okerrak eman baititzake XY ez diren aurpegietan)</translation>
     </message>
     <message>
       <location filename="bezcurve.py" line="46"/>
@@ -657,11 +783,6 @@ Propietate hau irakurtzeko soilik da, kopuru hori 'Puntu-objektua' elementuak di
       <location filename="bezcurve.py" line="66"/>
       <source>The length of this object</source>
       <translation>Objektu honen luzera</translation>
-    </message>
-    <message>
-      <location filename="patharray.py" line="177"/>
-      <source>The object along which the copies will be distributed. It must contain 'Edges'.</source>
-      <translation>Kopiak banatzeko erabiliko den objektua. 'Ertzak' eduki behar ditu.</translation>
     </message>
     <message>
       <location filename="patharray.py" line="192"/>
@@ -921,6 +1042,15 @@ Idatzi '$dim' kota-luzerarekin ordezkatua izan dadin.</translation>
       <translation>Erakutsi unitate-atzizkia</translation>
     </message>
     <message>
+      <location filename="view_dimension.py" line="216"/>
+      <source>A unit to express the measurement.
+Leave blank for system default.
+Use 'arch' to force US arch notation</source>
+      <translation>Neurketa adierazteko unitate bat.
+Utzi hutsik sistemaren unitate lehenetsia erabiltzeko.
+Erabili 'arch' US arku-notazioa behartzeko.</translation>
+    </message>
+    <message>
       <location filename="view_dimension.py" line="230"/>
       <source>Arrow size</source>
       <translation>Gezi-tamaina</translation>
@@ -960,9 +1090,14 @@ haratago duen luzera</translation>
       <translation>Kota-lerroak eta geziak erakusten ditu</translation>
     </message>
     <message>
-      <location filename="view_layer.py" line="77"/>
+      <location filename="view_layer.py" line="66"/>
       <source>If it is true, the objects contained within this layer will adopt the line color of the layer</source>
       <translation>Egia bada, geruza honek dituen objektuek geruzaren lerro-kolorea hartuko dute</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="77"/>
+      <source>If it is true, the objects contained within this layer will adopt the shape color of the layer</source>
+      <translation>Egia bada, geruza honek dituen objektuek geruzaren forma-kolorea hartuko dute</translation>
     </message>
     <message>
       <location filename="view_layer.py" line="88"/>
@@ -1008,6 +1143,16 @@ haratago duen luzera</translation>
       <location filename="view_label.py" line="185"/>
       <source>Line color</source>
       <translation>Lerro-kolorea</translation>
+    </message>
+    <message>
+      <location filename="view_base.py" line="106"/>
+      <source>Defines an SVG pattern.</source>
+      <translation>SVG eredu bat definitzen du.</translation>
+    </message>
+    <message>
+      <location filename="view_base.py" line="116"/>
+      <source>Defines the size of the SVG pattern.</source>
+      <translation>SVG ereduaren tamaina definitzen du.</translation>
     </message>
     <message>
       <location filename="view_label.py" line="73"/>
@@ -1059,419 +1204,9 @@ haratago duen luzera</translation>
       <source>Display a leader line or not</source>
       <translation>Bistaratu gida-marra bat edo ez</translation>
     </message>
-    <message>
-      <location filename="pathtwistedarray.py" line="86"/>
-      <source>The base object that will be duplicated.</source>
-      <translation>Bikoiztuko den oinarri-objektua.</translation>
-    </message>
-    <message>
-      <location filename="pathtwistedarray.py" line="100"/>
-      <source>Number of copies to create.</source>
-      <translation>Sortuko den kopia kopurua.</translation>
-    </message>
-    <message>
-      <location filename="pathtwistedarray.py" line="107"/>
-      <source>Rotation factor of the twisted array.</source>
-      <translation>Matrize kiribilduaren biraketa-faktorea.</translation>
-    </message>
-    <message>
-      <location filename="shapestring.py" line="59"/>
-      <source>Fill letters with faces</source>
-      <translation>Bete letrak aurpegiekin</translation>
-    </message>
-    <message>
-      <location filename="view_dimension.py" line="216"/>
-      <source>A unit to express the measurement.
-Leave blank for system default.
-Use 'arch' to force US arch notation</source>
-      <translation>Neurketa adierazteko unitate bat.
-Utzi hutsik sistemaren unitate lehenetsia erabiltzeko.
-Erabili 'arch' US arku-notazioa behartzeko.</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="117"/>
-      <source>A list of exclusion points. Any edge touching any of those points will not be drawn.</source>
-      <translation>Esklusio-puntuen zerrenda bat. Puntu horietako edozein ukitzen duten ertzak ez dira marraztuko.</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="98"/>
-      <source>For Cutlines and Cutfaces modes, 
-                    this leaves the faces at the cut location</source>
-      <translation>Mozketa-lerroen eta mozketa-aurpegien moduetarako, 
-                honek mozketa-tokian uzten ditu aurpegiak</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="105"/>
-      <source>Length of line segments if tessellating Ellipses or B-splines 
-                    into line segments</source>
-      <translation>Lerro-segmentuen luzera, elipseak edo B-spline kurbak 
-                lerro-segmentuetara teselatzen badira</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="122"/>
-      <source>If this is True, only solid geometry is handled. This overrides the base object's Only Solids property</source>
-      <translation>Hau egia bada, geometria solidoa soilik maneiatuko da. Honek oinarri-objektuaren 'Solidoak soilik' propietatea gainidazten du</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="127"/>
-      <source>If this is True, the contents are clipped to the borders of the section plane, if applicable. This overrides the base object's Clip property</source>
-      <translation>Hau egia bada, edukiak sekzio-planoaren ertzetatik ebakitzen da, aplikagarria bada. Honek oinarri-objektuaren 'Ebaki' propietatea gainidazten du</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="111"/>
-      <source>If this is True, this object will include only visible objects</source>
-      <translation>Hau egia bada, objektu honek ikusgai dauden objektuak soilik hartuko ditu</translation>
-    </message>
-    <message>
-      <location filename="shape2dview.py" line="132"/>
-      <source>This object will be recomputed only if this is True.</source>
-      <translation>Objektua birkalkulatu egingo da hau egia bada soilik.</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="49"/>
-      <source>The shape of this object</source>
-      <translation>Objektu honen forma</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="52"/>
-      <source>The base object used by this object</source>
-      <translation type="unfinished">The base object used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="55"/>
-      <source>The PAT file used by this object</source>
-      <translation type="unfinished">The PAT file used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="58"/>
-      <source>The pattern name used by this object</source>
-      <translation type="unfinished">The pattern name used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="61"/>
-      <source>The pattern scale used by this object</source>
-      <translation type="unfinished">The pattern scale used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="64"/>
-      <source>The pattern rotation used by this object</source>
-      <translation type="unfinished">The pattern rotation used by this object</translation>
-    </message>
-    <message>
-      <location filename="hatch.py" line="67"/>
-      <source>If set to False, hatch is applied as is to the faces, without translation (this might give wrong results for non-XY faces)</source>
-      <translation type="unfinished">If set to False, hatch is applied as is to the faces, without translation (this might give wrong results for non-XY faces)</translation>
-    </message>
-  </context>
-  <context>
-    <name>Dialog</name>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="14"/>
-      <source>Annotation Styles Editor</source>
-      <translation>Oharpen-estiloen editorea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="20"/>
-      <source>Style name</source>
-      <translation>Estilo-izena</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="50"/>
-      <source>Add new...</source>
-      <translation>Gehitu berria...</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="79"/>
-      <source>Renames the selected style</source>
-      <translation>Hautatutako estiloaren izena aldatzen du</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="82"/>
-      <source>Rename</source>
-      <translation>Aldatu izena</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="110"/>
-      <source>Deletes the selected style</source>
-      <translation>Hautatutako estiloa ezabatzen du</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="113"/>
-      <source>Delete</source>
-      <translation>Ezabatu</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="164"/>
-      <source>Text</source>
-      <translation>Testua</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="173"/>
-      <source>Font size</source>
-      <translation>Letra-tamaina</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="183"/>
-      <source>Line spacing</source>
-      <translation>Lerro-tartea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="193"/>
-      <source>Font name</source>
-      <translation>Letra-tipoaren izena</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="212"/>
-      <source>The font to use for texts and dimensions</source>
-      <translation>Testuetarako eta kotetarako erabiliko den letra-tipoa</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="239"/>
-      <source>Units</source>
-      <translation>Unitateak</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="248"/>
-      <source>Scale multiplier</source>
-      <translation>Eskalaren biderkatzailea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="258"/>
-      <source>Decimals</source>
-      <translation>Dezimalak</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="268"/>
-      <source>Unit override</source>
-      <translation>Unitatea gainidaztea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="278"/>
-      <source>Show unit</source>
-      <translation>Erakutsi unitatea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="331"/>
-      <source>Line and arrows</source>
-      <translation>Lerroa eta geziak</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="340"/>
-      <source>Line width</source>
-      <translation>Lerro-zabalera</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="350"/>
-      <source>Extension overshoot</source>
-      <translation>Luzapenaren soberakina</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="360"/>
-      <source>Arrow size</source>
-      <translation>Gezi-tamaina</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="370"/>
-      <source>Show lines</source>
-      <translation>Erakutsi lerroak</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="380"/>
-      <source>Dimension overshoot</source>
-      <translation>Kota-lerroaren soberakina</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="390"/>
-      <source>Extension lines</source>
-      <translation>Luzapen-lerroak</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="400"/>
-      <source>Arrow type</source>
-      <translation>Gezi mota</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="410"/>
-      <source>Line / text color</source>
-      <translation>Lerroaren / testuaren kolorea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="433"/>
-      <source>The width of the dimension lines</source>
-      <translation>Kota-lerroen zabalera</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="436"/>
-      <source>px</source>
-      <translation>px</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="446"/>
-      <source>The color of dimension lines, arrows and texts</source>
-      <translation>Kota-lerroen, gezien eta testuen kolorea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="476"/>
-      <source>Dot</source>
-      <translation>Puntua</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="486"/>
-      <source>Arrow</source>
-      <translation>Gezia</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="491"/>
-      <source>Tick</source>
-      <translation>Tika</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="38"/>
-      <source>The name of your style. Existing style names can be edited.</source>
-      <translation>Estiloaren izena. Lehendik dauden estilo-izenak editatu daitezke.</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="219"/>
-      <source>Font size in the system units</source>
-      <translation>Letra-tamaina sistemaren unitateetan</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="180"/>
-      <source>Line spacing in system units</source>
-      <translation>Lerroartea sistemaren unitateetan</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="285"/>
-      <source>A multiplier factor that affects the size of texts and markers</source>
-      <translation>Testuen eta markatzaileen tamainan eragina duen faktore biderkatzailea</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="305"/>
-      <source>The number of decimals to show for dimension values</source>
-      <translation>Kota-lerroetan erakutsiko den dezimal kopurua</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="298"/>
-      <source>Specify a valid length unit like mm, m, in, ft, to force displaying the dimension value in this unit</source>
-      <translation>Adierazi luzera-unitate baliozko bat, adibidez milimetroak, metroak, hazbeteak edo oinak, kota-lerroa unitate horretan bistaratu dadin</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="315"/>
-      <source>If it is checked it will show the unit next to the dimension value</source>
-      <translation>Markatuta badago, unitatea kota-balioaren alboan erakutsiko du</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="534"/>
-      <source>The distance that the extension lines are additionally extended beyond the dimension line</source>
-      <translation>Luzapen-lerroak zein distantziara luzatzen diren kota-lerrotik haratago</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="504"/>
-      <source>The size of the dimension arrows or markers in system units</source>
-      <translation>Kota-gezien edo -markatzaileen tamaina sistema-unitatetan</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="417"/>
-      <source>If it is checked it will display the dimension line</source>
-      <translation>Markatuta badago, kota-lerroa bistaratuko da</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="514"/>
-      <source>The distance that the dimension line is additionally extended</source>
-      <translation>Kota-lerroa zein distantziara luzatzen den</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="524"/>
-      <source>The length of the extension lines</source>
-      <translation>Luzatze-lerroen luzera</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="472"/>
-      <source>The type of arrows or markers to use at the end of dimension lines</source>
-      <translation>Kota-lerroen amaieran erabiliko diren gezien edo markatzaileen mota</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="481"/>
-      <source>Circle</source>
-      <translation>Zirkulua</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="496"/>
-      <source>Tick-2</source>
-      <translation>Tika-2</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="120"/>
-      <source>Import styles from json file</source>
-      <translation>Inportatu estiloak JSON fitxategitik</translation>
-    </message>
-    <message>
-      <location filename="dialog_AnnotationStyleEditor.ui" line="130"/>
-      <source>Export styles to json file</source>
-      <translation>Esportatu estiloak JSON fitxategira</translation>
-    </message>
   </context>
   <context>
     <name>Draft</name>
-    <message>
-      <location filename="importDXF.py" line="129"/>
-      <source>Download of dxf libraries failed.
-Please install the dxf Library addon manually
-from menu Tools -&gt; Addon Manager</source>
-      <translation>DXF liburutegien deskargak huts egin du.
-Instalatu DXF liburutegiaren gehigarria eskuz
-'Tresnak -&gt; Gehigarri-kudeatzailea' menutik</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="145"/>
-      <source>Draft creation tools</source>
-      <translation>Zirriborroak sortzeko tresnak</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="148"/>
-      <source>Draft annotation tools</source>
-      <translation>Zirriborroetan oharpenak sartzeko tresnak</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="151"/>
-      <source>Draft modification tools</source>
-      <translation>Zirriborroak aldatzeko tresnak</translation>
-    </message>
-    <message>
-      <location filename="InitGui.py" line="107"/>
-      <source>Draft utility tools</source>
-      <translation>Zirriborroen utilitate-tresnak</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="166"/>
-      <source>&amp;Drafting</source>
-      <translation>&amp;Zirriborroa</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="168"/>
-      <source>&amp;Annotation</source>
-      <translation>&amp;Oharpena</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="170"/>
-      <source>&amp;Modification</source>
-      <translation>&amp;Aldaketa</translation>
-    </message>
-    <message>
-      <location filename="init_tools.py" line="172"/>
-      <source>&amp;Utilities</source>
-      <translation>&amp;Utilitateak</translation>
-    </message>
-    <message>
-      <location filename="InitGui.py" line="122"/>
-      <source>Draft</source>
-      <translation>Zirriborroa</translation>
-    </message>
-    <message>
-      <location filename="InitGui.py" line="183"/>
-      <source>Import-Export</source>
-      <translation>Inportatu-Esportatu</translation>
-    </message>
     <message>
       <location filename="pointarray.py" line="305"/>
       <source>Point object doesn't have a discrete point, it cannot be used for an array.</source>
@@ -1493,44 +1228,44 @@ Instalatu DXF liburutegiaren gehigarria eskuz
       <translation>Objektuen ezkutuko/bistako egoera idazten</translation>
     </message>
     <message>
-      <location filename="view_layer.py" line="402"/>
-      <source>Merge layer duplicates</source>
-      <translation>Fusionatu geruza bikoiztuak</translation>
+      <location filename="InitGui.py" line="107"/>
+      <source>Draft utility tools</source>
+      <translation>Zirriborroen utilitate-tresnak</translation>
     </message>
     <message>
-      <location filename="view_layer.py" line="407"/>
-      <source>Add new layer</source>
-      <translation>Gehitu geruza berria</translation>
+      <location filename="InitGui.py" line="122"/>
+      <source>Draft</source>
+      <translation>Zirriborroa</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="244"/>
+      <location filename="InitGui.py" line="183"/>
+      <source>Import-Export</source>
+      <translation>Inportatu-Esportatu</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="252"/>
       <source>Toggles Grid On/Off</source>
       <translation>Sareta aktibatzen/desaktibatzen du</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="262"/>
+      <location filename="init_draft_statusbar.py" line="270"/>
       <source>Object snapping</source>
       <translation>Objektu-atxikitzea</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="294"/>
+      <location filename="init_draft_statusbar.py" line="302"/>
       <source>Toggles Visual Aid Dimensions On/Off</source>
       <translation>Ikusizko laguntza-kotak aktibatzen/desaktibatzen ditu</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="314"/>
+      <location filename="init_draft_statusbar.py" line="322"/>
       <source>Toggles Ortho On/Off</source>
       <translation>Ortogonala aktibatzen/desaktibatzen du</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="332"/>
+      <location filename="init_draft_statusbar.py" line="340"/>
       <source>Toggles Constrain to Working Plane On/Off</source>
       <translation>Laneko planora murriztea aktibatzen/desaktibatzen du</translation>
-    </message>
-    <message>
-      <location filename="gui_utils.py" line="154"/>
-      <source>Unable to insert new object into a scaled part</source>
-      <translation>Ezin izan da objektu berria txertatu eskalatutako piezan</translation>
     </message>
     <message>
       <location filename="task_orthoarray.py" line="157"/>
@@ -1593,6 +1328,15 @@ Instalatu DXF liburutegiaren gehigarria eskuz
       <translation>Sortu klon bat</translation>
     </message>
     <message>
+      <location filename="importDXF.py" line="129"/>
+      <source>Download of dxf libraries failed.
+Please install the dxf Library addon manually
+from menu Tools -&gt; Addon Manager</source>
+      <translation>DXF liburutegien deskargak huts egin du.
+Instalatu DXF liburutegiaren gehigarria eskuz
+'Tresnak -&gt; Gehigarri-kudeatzailea' menutik</translation>
+    </message>
+    <message>
       <location filename="gui_clone.py" line="91"/>
       <source>Clone</source>
       <translation>Klonatu</translation>
@@ -1601,6 +1345,116 @@ Instalatu DXF liburutegiaren gehigarria eskuz
       <location filename="gui_lineslope.py" line="91"/>
       <source>Slope</source>
       <translation>Malda</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="273"/>
+      <source>Save style</source>
+      <translation>Gorde estiloa</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="274"/>
+      <source>Name of this new style:</source>
+      <translation>Estilo berriaren izena:</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="281"/>
+      <source>Warning</source>
+      <translation>Abisua</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="282"/>
+      <source>Name exists. Overwrite?</source>
+      <translation>Izena badago lehendik. Gainidatzi?</translation>
+    </message>
+    <message>
+      <location filename="gui_setstyle.py" line="317"/>
+      <source>Error: json module not found. Unable to save style</source>
+      <translation>Errorea: Ez da aurkitu JSON modulua. Ezin izan da estiloa gorde</translation>
+    </message>
+    <message>
+      <location filename="gui_hatch.py" line="48"/>
+      <source>You must choose a base object before using this command</source>
+      <translation>Oinarri-objektu bat hautatu behar da komando hau erabili baino lehen</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="65"/>
+      <source>Fillet</source>
+      <translation>Biribiltzea</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="68"/>
+      <source>Creates a fillet between two selected wires or edges.</source>
+      <translation>Biribiltze bat sortzen du hautatutako bi alanbre edo ertzen artean.</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="90"/>
+      <source>Delete original objects</source>
+      <translation>Ezabatu jatorrizko objektuak</translation>
+    </message>
+    <message>
+      <location filename="gui_fillets.py" line="96"/>
+      <source>Create chamfer</source>
+      <translation>Sortu alaka</translation>
+    </message>
+    <message>
+      <location filename="gui_offset.py" line="329"/>
+      <source>Offset direction is not defined. Please move the mouse on either side of the object first to indicate a direction</source>
+      <translation>Desplazamenduaren norabidea ez dago definituta. Eraman sagua objektuaren aldeetako batera, norabide bat adierazteko</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="48"/>
+      <source>Arc tools</source>
+      <translation>Arku-tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="56"/>
+      <source>Bezier tools</source>
+      <translation>Bezier tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="145"/>
+      <source>Draft creation tools</source>
+      <translation>Zirriborroak sortzeko tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="148"/>
+      <source>Draft annotation tools</source>
+      <translation>Zirriborroetan oharpenak sartzeko tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="151"/>
+      <source>Draft modification tools</source>
+      <translation>Zirriborroak aldatzeko tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="166"/>
+      <source>&amp;Drafting</source>
+      <translation>&amp;Zirriborroa</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="168"/>
+      <source>&amp;Annotation</source>
+      <translation>&amp;Oharpena</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="170"/>
+      <source>&amp;Modification</source>
+      <translation>&amp;Aldaketa</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="172"/>
+      <source>&amp;Utilities</source>
+      <translation>&amp;Utilitateak</translation>
+    </message>
+    <message>
+      <location filename="gui_arrays.py" line="65"/>
+      <source>Array tools</source>
+      <translation>Matrize-tresnak</translation>
+    </message>
+    <message>
+      <location filename="gui_arrays.py" line="68"/>
+      <source>Create various types of arrays, including rectangular, polar, circular, path, and point</source>
+      <translation>Matrize mota anitz sortzen ditu, besteak beste laukizuzena, polarra, zirkularra, bidea eta puntua</translation>
     </message>
     <message>
       <location filename="gui_circulararray.py" line="66"/>
@@ -1635,16 +1489,6 @@ jarraituta kokatzen ditu, biraketa-zentro baten eta angelu baten arabera definit
 Matrizearen mota aldatu daiteke, ortogonala edo zirkularra izan dadin.</translation>
     </message>
     <message>
-      <location filename="gui_arrays.py" line="65"/>
-      <source>Array tools</source>
-      <translation>Matrize-tresnak</translation>
-    </message>
-    <message>
-      <location filename="gui_arrays.py" line="68"/>
-      <source>Create various types of arrays, including rectangular, polar, circular, path, and point</source>
-      <translation>Matrize mota anitz sortzen ditu, besteak beste laukizuzena, polarra, zirkularra, bidea eta puntua</translation>
-    </message>
-    <message>
       <location filename="gui_orthoarray.py" line="66"/>
       <source>Array</source>
       <translation>Matrizea</translation>
@@ -1661,465 +1505,19 @@ jarraituta kokatzen ditu, kopiek X, Y, Z ardatzetan zehaztutako norabidea jarrai
 Matrizearen mota aldatu daiteke, polarra edo zirkularra izan dadin.</translation>
     </message>
     <message>
-      <location filename="gui_fillets.py" line="65"/>
-      <source>Fillet</source>
-      <translation>Biribiltzea</translation>
+      <location filename="gui_utils.py" line="154"/>
+      <source>Unable to insert new object into a scaled part</source>
+      <translation>Ezin izan da objektu berria txertatu eskalatutako piezan</translation>
     </message>
     <message>
-      <location filename="gui_fillets.py" line="68"/>
-      <source>Creates a fillet between two selected wires or edges.</source>
-      <translation>Biribiltze bat sortzen du hautatutako bi alanbre edo ertzen artean.</translation>
+      <location filename="view_layer.py" line="402"/>
+      <source>Merge layer duplicates</source>
+      <translation>Fusionatu geruza bikoiztuak</translation>
     </message>
     <message>
-      <location filename="gui_fillets.py" line="90"/>
-      <source>Delete original objects</source>
-      <translation>Ezabatu jatorrizko objektuak</translation>
-    </message>
-    <message>
-      <location filename="gui_fillets.py" line="96"/>
-      <source>Create chamfer</source>
-      <translation>Sortu alaka</translation>
-    </message>
-    <message>
-      <location filename="gui_offset.py" line="329"/>
-      <source>Offset direction is not defined. Please move the mouse on either side of the object first to indicate a direction</source>
-      <translation>Desplazamenduaren norabidea ez dago definituta. Eraman sagua objektuaren aldeetako batera, norabide bat adierazteko</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="273"/>
-      <source>Save style</source>
-      <translation>Gorde estiloa</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="274"/>
-      <source>Name of this new style:</source>
-      <translation>Estilo berriaren izena:</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="282"/>
-      <source>Name exists. Overwrite?</source>
-      <translation>Izena badago lehendik. Gainidatzi?</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="317"/>
-      <source>Error: json module not found. Unable to save style</source>
-      <translation>Errorea: Ez da aurkitu JSON modulua. Ezin izan da estiloa gorde</translation>
-    </message>
-    <message>
-      <location filename="gui_setstyle.py" line="281"/>
-      <source>Warning</source>
-      <translation>Abisua</translation>
-    </message>
-    <message>
-      <location filename="gui_hatch.py" line="48"/>
-      <source>You must choose a base object before using this command</source>
-      <translation type="unfinished">You must choose a base object before using this command</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftCircularArrayTaskPanel</name>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="26"/>
-      <source>Circular array</source>
-      <translation>Matrize zirkularra</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="57"/>
-      <source>The coordinates of the point through which the axis of rotation passes.
-Change the direction of the axis itself in the property editor.</source>
-      <translation>Biraketa-ardatza igarotzen den puntuaren koordenatuak.
-Aldatu ardatzaren beraren norabidea propietateen editorean.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="61"/>
-      <source>Center of rotation</source>
-      <translation>Biraketa-zentroa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="69"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="76"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="83"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="131"/>
-      <source>Reset the coordinates of the center of rotation.</source>
-      <translation>Berrezarri biraketa-zentroaren koordenatuak.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="134"/>
-      <source>Reset point</source>
-      <translation>Berrezarri puntua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="146"/>
-      <source>If checked, the resulting objects in the array will be fused if they touch each other.
-This only works if "Link array" is off.</source>
-      <translation>Markatuta badago, matrizeko emaitza-objektuak fusionatu egingo dira elkarri ukitzen badaude.
-Honek funtzionatzeko, "Esteka-matrizea" aukerak desaktibatuta egon behar du.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="150"/>
-      <source>Fuse</source>
-      <translation>Fusionatu</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="157"/>
-      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
-A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
-      <translation>Markatuta badago, emaitza-objektua "Esteka-matrizea! izango da, matrize arrunt bat izan ordez.
-Esteka-matrizea eraginkorragoa da kopia anitz sortzean, baina ezin da fusionatu.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="161"/>
-      <source>Link array</source>
-      <translation>Esteka-matrizea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="186"/>
-      <source>Distance from one element in one ring of the array to the next element in the same ring.
-It cannot be zero.</source>
-      <translation>Distantzia matrizeko eraztun bateko elementu batetik geruza bereko eraztun bereko hurrengora. Ezin da zero izan.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="179"/>
-      <source>Tangential distance</source>
-      <translation>Distantzia tangentziala</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="210"/>
-      <source>Distance from one layer of objects to the next layer of objects.</source>
-      <translation>Distatnzia objektuen geruza batetik objektuen hurrengo geruzara.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="203"/>
-      <source>Radial distance</source>
-      <translation>Distantzia erradiala</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="261"/>
-      <source>The number of symmetry lines in the circular array.</source>
-      <translation>Simetria-lerroen kopurua matrize zirkularrean.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="250"/>
-      <source>Number of circular layers or rings to create, including a copy of the original object.
-It must be at least 2.</source>
-      <translation>Sortuko diren geruza zirkularren edo eraztunen kopurua, jatorrizko objektuaren kopia barne.
-Gutxienez 2 izan behar dute.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="254"/>
-      <source>Number of circular layers</source>
-      <translation>Geruza zirkularren kopurua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="264"/>
-      <source>Symmetry</source>
-      <translation>Simetria</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_CircularArray.ui" line="273"/>
-      <source>(Placeholder for the icon)</source>
-      <translation>(Ikonoaren lekua)</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftOrthoArrayTaskPanel</name>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="26"/>
-      <source>Orthogonal array</source>
-      <translation>Matrize ortogonala</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="44"/>
-      <source>Distance between the elements in the Z direction.
-Normally, only the Z value is necessary; the other two values can give an additional shift in their respective directions.
-Negative values will result in copies produced in the negative direction.</source>
-      <translation>Elementuen arteko distantzia Z norabidean.
-Normalean, Z balioak soilik behar da; beste bi balioek desplazamendu gehigarria eman dezakete nork bere norabidean.
-Balio negatiboek norabide negatiboan sortuko dituzte kopiak.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="49"/>
-      <source>Z intervals</source>
-      <translation>Z tarteak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="385"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="392"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="378"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="353"/>
-      <source>Reset the distances.</source>
-      <translation>Berrezarri distantziak.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="125"/>
-      <source>Reset Z</source>
-      <translation>Berrezarri Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="137"/>
-      <source>If checked, the resulting objects in the array will be fused if they touch each other.
-This only works if "Link array" is off.</source>
-      <translation>Markatuta badago, matrizeko emaitza-objektuak fusionatu egingo dira elkarri ukitzen badaude.
-Honek funtzionatzeko, "Esteka-matrizea" aukerak desaktibatuta egon behar du.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="141"/>
-      <source>Fuse</source>
-      <translation>Fusionatu</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="148"/>
-      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
-A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
-      <translation>Markatuta badago, emaitza-objektua "Esteka-matrizea! izango da, matrize arrunt bat izan ordez.
-Esteka-matrizea eraginkorragoa da kopia anitz sortzean, baina ezin da fusionatu.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="152"/>
-      <source>Link array</source>
-      <translation>Esteka-matrizea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="177"/>
-      <source>(Placeholder for the icon)</source>
-      <translation>(Ikonoaren lekua)</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="184"/>
-      <source>Distance between the elements in the X direction.
-Normally, only the X value is necessary; the other two values can give an additional shift in their respective directions.
-Negative values will result in copies produced in the negative direction.</source>
-      <translation>Elementuen arteko distantzia X norabidean.
-Normalean, X balioak soilik behar da; beste bi balioek desplazamendu gehigarria eman dezakete nork bere norabidean.
-Balio negatiboek norabide negatiboan sortuko dituzte kopiak.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="189"/>
-      <source>X intervals</source>
-      <translation>X tarteak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="265"/>
-      <source>Reset X</source>
-      <translation>Berrezarri X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="275"/>
-      <source>Distance between the elements in the Y direction.
-Normally, only the Y value is necessary; the other two values can give an additional shift in their respective directions.
-Negative values will result in copies produced in the negative direction.</source>
-      <translation>Elementuen arteko distantzia Y norabidean.
-Normalean, Y balioak soilik behar da; beste bi balioek desplazamendu gehigarria eman dezakete nork bere norabidean.
-Balio negatiboek norabide negatiboan sortuko dituzte kopiak.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="280"/>
-      <source>Y intervals</source>
-      <translation>Y tarteak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="356"/>
-      <source>Reset Y</source>
-      <translation>Berrezarri Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="366"/>
-      <source>Number of elements in the array in the specified direction, including a copy of the original object.
-The number must be at least 1 in each direction.</source>
-      <translation>Zehaztutako norabidean dagoen matrizeko elementu kopurua, jatorrizko objektuaren kopia barne.
-Zenbakiak norabide bakoitzean 1 izan behar du gutxienez.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_OrthoArray.ui" line="370"/>
-      <source>Number of elements</source>
-      <translation>Elementu kopurua</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftPolarArrayTaskPanel</name>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="26"/>
-      <source>Polar array</source>
-      <translation>Matrize polarra</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="57"/>
-      <source>The coordinates of the point through which the axis of rotation passes.
-Change the direction of the axis itself in the property editor.</source>
-      <translation>Biraketa-ardatza igarotzen den puntuaren koordenatuak.
-Aldatu ardatzaren beraren norabidea propietateen editorean.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="61"/>
-      <source>Center of rotation</source>
-      <translation>Biraketa-zentroa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="69"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="115"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="122"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="131"/>
-      <source>Reset the coordinates of the center of rotation.</source>
-      <translation>Berrezarri biraketa-zentroaren koordenatuak.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="134"/>
-      <source>Reset point</source>
-      <translation>Berrezarri puntua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="146"/>
-      <source>If checked, the resulting objects in the array will be fused if they touch each other.
-This only works if "Link array" is off.</source>
-      <translation>Markatuta badago, matrizeko emaitza-objektuak fusionatu egingo dira elkarri ukitzen badaude.
-Honek funtzionatzeko, "Esteka-matrizea" aukerak desaktibatuta egon behar du.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="150"/>
-      <source>Fuse</source>
-      <translation>Fusionatu</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="157"/>
-      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
-A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
-      <translation>Markatuta badago, emaitza-objektua "Esteka-matrizea! izango da, matrize arrunt bat izan ordez.
-Esteka-matrizea eraginkorragoa da kopia anitz sortzean, baina ezin da fusionatu.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="161"/>
-      <source>Link array</source>
-      <translation>Esteka-matrizea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="187"/>
-      <source>Sweeping angle of the polar distribution.
-A negative angle produces a polar pattern in the opposite direction.
-The maximum absolute value is 360 degrees.</source>
-      <translation>Banaketa polarraren ekortze-angelua.
-Angelu negatiboak aurkako norabideko eredu polarra sortzen du.
-Balio absolutu maximoa 360 gradu dira.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="180"/>
-      <source>Polar angle</source>
-      <translation>Angelu polarra</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="219"/>
-      <source>Number of elements in the array, including a copy of the original object.
-It must be at least 2.</source>
-      <translation>Matrizeko elementu kopurua, jatorrizko objektuaren kopia bat barne.
-Gutxienez 2 izan behar du.</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="212"/>
-      <source>Number of elements</source>
-      <translation>Elementu kopurua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_PolarArray.ui" line="235"/>
-      <source>(Placeholder for the icon)</source>
-      <translation>(Ikonoaren lekua)</translation>
-    </message>
-  </context>
-  <context>
-    <name>DraftShapeStringGui</name>
-    <message>
-      <location filename="TaskShapeString.ui" line="26"/>
-      <source>ShapeString</source>
-      <translation>Testu-forma</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="115"/>
-      <source>Text to be made into ShapeString</source>
-      <translation>Testu-forma bilakatuko den testua</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="122"/>
-      <source>String</source>
-      <translation>Katea</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="133"/>
-      <source>Height</source>
-      <translation>Altuera</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="140"/>
-      <source>Height of the result</source>
-      <translation>Emaitzaren altuera</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="66"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="83"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="90"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="101"/>
-      <source>Font file</source>
-      <translation>Letra-tipoaren fitxategia</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="73"/>
-      <source>Enter coordinates or select point with mouse.</source>
-      <translation>Sartu koordenatuak edo hautatu puntua saguarekin.</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="186"/>
-      <source>Reset 3d point selection</source>
-      <translation>Berrezarri 3d puntuaren hautapena</translation>
-    </message>
-    <message>
-      <location filename="TaskShapeString.ui" line="192"/>
-      <source>Reset Point</source>
-      <translation>Berrezarri puntua</translation>
+      <location filename="view_layer.py" line="407"/>
+      <source>Add new layer</source>
+      <translation>Gehitu geruza berria</translation>
     </message>
   </context>
   <context>
@@ -2137,6 +1535,19 @@ It creates a construction group if it doesn't exist.</source>
       <translation>Hautatutako objektuak eraikuntza-taldeari gehitzen dizkio,
 eta haien itxura aldatzen du eraikuntza-estiloan-
 Eraikutzan-talde bat sortzen du, lehendik ez badago.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_AddNamedGroup</name>
+    <message>
+      <location filename="gui_groups.py" line="361"/>
+      <source>Add a new named group</source>
+      <translation>Gehitu izendun talde berria</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="365"/>
+      <source>Add a new group with a given name.</source>
+      <translation>Gehitu talde berria emandako izen batekin.</translation>
     </message>
   </context>
   <context>
@@ -2178,6 +1589,11 @@ Sortu talde bat tresna hau erabili nahi baduzu.</translation>
       <location filename="gui_annotationstyleeditor.py" line="80"/>
       <source>Annotation styles...</source>
       <translation>Oharpen-estiloak...</translation>
+    </message>
+    <message>
+      <location filename="gui_annotationstyleeditor.py" line="82"/>
+      <source>Manage or create annotation styles</source>
+      <translation>Kudeatu edo sortu oharpen-estiloak</translation>
     </message>
   </context>
   <context>
@@ -2222,6 +1638,21 @@ Ctrl atxikitzeko, Shift murrizteko.</translation>
     </message>
   </context>
   <context>
+    <name>Draft_Arc_3Points</name>
+    <message>
+      <location filename="gui_arcs.py" line="487"/>
+      <source>Arc by 3 points</source>
+      <translation>Arkua 3 punturen arabera</translation>
+    </message>
+    <message>
+      <location filename="gui_arcs.py" line="490"/>
+      <source>Creates a circular arc by picking 3 points.
+CTRL to snap, SHIFT to constrain.</source>
+      <translation>Arku zirkular bat sortzen du hiru puntu erabilita.
+Ctrl atxikitzeko, Shift murrizteko.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_Array</name>
     <message>
       <location filename="gui_array_simple.py" line="68"/>
@@ -2238,6 +1669,30 @@ to polar or circular, and its properties can be modified.</source>
 Modu lehenetsian, 2x2 matrize ortogonala izango da.
 Matrizea sortu ondoren, bere mota polarrera edo zirkularrera
 aldatu daiteke, eta bere propietateak ere aldatu daitezke.</translation>
+    </message>
+    <message>
+      <location filename="gui_orthoarray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in an orthogonal pattern,
+meaning the copies follow the specified direction in the X, Y, Z axes.
+
+The array can be turned into a polar or a circular array by changing its type.</source>
+      <translation>Hautatutako objektuaren kopiak sortzen ditu, eta kopiak eredu ortogonal bati
+jarraituta kokatzen ditu, kopiek X, Y, Z ardatzetan zehaztutako norabidea jarraitu dezaten.
+
+Matrizearen mota aldatu daiteke, polarra edo zirkularra izan dadin.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_ArrayTools</name>
+    <message>
+      <location filename="gui_arrays.py" line="65"/>
+      <source>Array tools</source>
+      <translation>Matrize-tresnak</translation>
+    </message>
+    <message>
+      <location filename="gui_arrays.py" line="68"/>
+      <source>Create various types of arrays, including rectangular, polar, circular, path, and point</source>
+      <translation>Matrize mota anitz sortzen ditu, besteak beste laukizuzena, polarra, zirkularra, bidea eta puntua</translation>
     </message>
   </context>
   <context>
@@ -2270,8 +1725,20 @@ aldatu daiteke, eta bere propietateak ere aldatu daitezke.</translation>
     <name>Draft_BezCurve</name>
     <message>
       <location filename="gui_beziers.py" line="64"/>
+      <source>BÃ©zier curve</source>
+      <translation>Bezier kurba</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="64"/>
       <source>Bezier curve</source>
       <translation>Bezier kurba</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="67"/>
+      <source>Creates an N-degree BÃ©zier curve. The more points you pick, the higher the degree.
+CTRL to snap, SHIFT to constrain.</source>
+      <translation>N graduko Bezier kurba bat sortzen du. Puntu gehiago aukeratzen badira, gradua altuagoa izango da.
+Ctrl atxikitzeko, Shift murrizteko.</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="67"/>
@@ -2285,8 +1752,18 @@ Ctrl atxikitzeko, Shift murrizteko.</translation>
     <name>Draft_BezierTools</name>
     <message>
       <location filename="gui_beziers.py" line="475"/>
+      <source>BÃ©zier tools</source>
+      <translation>Bezier tresnak</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="475"/>
       <source>Bezier tools</source>
       <translation>Bezier tresnak</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="478"/>
+      <source>Create various types of BÃ©zier curves.</source>
+      <translation>Sortu Bezier kurben hainbat mota.</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="478"/>
@@ -2310,6 +1787,25 @@ Ctrl atxikitzeko, Alt objektu tangenteak hautatzeko.</translation>
     </message>
   </context>
   <context>
+    <name>Draft_CircularArray</name>
+    <message>
+      <location filename="gui_circulararray.py" line="65"/>
+      <source>Circular array</source>
+      <translation>Matrize zirkularra</translation>
+    </message>
+    <message>
+      <location filename="gui_circulararray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in a radial pattern
+creating various circular layers.
+
+The array can be turned into an orthogonal or a polar array by changing its type.</source>
+      <translation>Hautatutako objektuaren kopiak sortzen ditu, eta kopiak eredu erradial bati
+jarraituta kokatzen ditu, hainbat geruza zirkular sortuta.
+
+Matrizearen mota aldatu daiteke, ortogonala edo polarra izan dadin.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_Clone</name>
     <message>
       <location filename="gui_clone.py" line="70"/>
@@ -2325,24 +1821,25 @@ Sortutako klona hiru norabideetan eskalatu daiteke.</translation>
     </message>
   </context>
   <context>
-    <name>Draft_CloseLine</name>
-    <message>
-      <location filename="gui_lineops.py" line="124"/>
-      <source>Close Line</source>
-      <translation>Itxi lerroa</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="125"/>
-      <source>Closes the line being drawn, and finishes the operation.</source>
-      <translation>Marrazten ari den lerroa ixten du eta eragiketa amaitzen du.</translation>
-    </message>
-  </context>
-  <context>
     <name>Draft_CubicBezCurve</name>
+    <message>
+      <location filename="gui_beziers.py" line="242"/>
+      <source>Cubic BÃ©zier curve</source>
+      <translation>Bezier kurba kubikoa</translation>
+    </message>
     <message>
       <location filename="gui_beziers.py" line="242"/>
       <source>Cubic bezier curve</source>
       <translation>Bezier kurba kubikoa</translation>
+    </message>
+    <message>
+      <location filename="gui_beziers.py" line="245"/>
+      <source>Creates a BÃ©zier curve made of 2nd degree (quadratic) and 3rd degree (cubic) segments. Click and drag to define each segment.
+After the curve is created you can go back to edit each control point and set the properties of each knot.
+CTRL to snap, SHIFT to constrain.</source>
+      <translation>2. graduko segmentuekin (kuadratikoak) eta 3. gradukoekin (kubikoak) egindako Bezier kurba bat sortzen du. Klik eta arrastatu segmentu bakoitza definitzeko.
+Kurba sortu ondoren, atzera egin eta kontrol-puntu bakoitza editatu daiteke eta adabegi bakoitzaren propietateak ezarri daitezke.
+Ctrl atxikitzeko, Shift murrizteko.</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="245"/>
@@ -2497,16 +1994,16 @@ onartutako nodoetan eta onartutako objektuetan.</translation>
     </message>
   </context>
   <context>
-    <name>Draft_FinishLine</name>
+    <name>Draft_Fillet</name>
     <message>
-      <location filename="gui_lineops.py" line="98"/>
-      <source>Finish line</source>
-      <translation>Amaitu lerroa</translation>
+      <location filename="gui_fillets.py" line="64"/>
+      <source>Fillet</source>
+      <translation>Biribiltzea</translation>
     </message>
     <message>
-      <location filename="gui_lineops.py" line="99"/>
-      <source>Finishes a line without closing it.</source>
-      <translation>Lerro bat amaitzen du hura itxi gabe.</translation>
+      <location filename="gui_fillets.py" line="67"/>
+      <source>Creates a fillet between two selected wires or edges.</source>
+      <translation>Biribiltze bat sortzen du hautatutako bi alanbre edo ertzen artean.</translation>
     </message>
   </context>
   <context>
@@ -2534,7 +2031,12 @@ Beste objektu batzuk hautatuta badude, ez ikusiarena egiten zaie.</translation>
     <message>
       <location filename="gui_hatch.py" line="41"/>
       <source>Create hatches on selected faces</source>
-      <translation type="unfinished">Create hatches on selected faces</translation>
+      <translation>Sortu itzaleztadurak aurpegi hautatuetan</translation>
+    </message>
+    <message>
+      <location filename="gui_hatch.py" line="42"/>
+      <source>Creates hatches on the faces of a selected object</source>
+      <translation>Itzaleztadurak sortzen ditu hautatutako objektu baten aurpegietan</translation>
     </message>
   </context>
   <context>
@@ -2689,6 +2191,25 @@ Ctrl atxikitzeko, Shift murrizteko. Eutsi Alt sakatuta eta egin klik kopia bat s
     </message>
   </context>
   <context>
+    <name>Draft_OrthoArray</name>
+    <message>
+      <location filename="gui_orthoarray.py" line="65"/>
+      <source>Array</source>
+      <translation>Matrizea</translation>
+    </message>
+    <message>
+      <location filename="gui_orthoarray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in an orthogonal pattern,
+meaning the copies follow the specified direction in the X, Y, Z axes.
+
+The array can be turned into a polar or a circular array by changing its type.</source>
+      <translation>Hautatutako objektuaren kopiak sortzen ditu, eta kopiak eredu ortogonal bati
+jarraituta kokatzen ditu, kopiek X, Y, Z ardatzetan zehaztutako norabidea jarraitu dezaten.
+
+Matrizearen mota aldatu daiteke, polarra edo zirkularra izan dadin.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_PathArray</name>
     <message>
       <location filename="gui_patharray.py" line="73"/>
@@ -2807,6 +2328,25 @@ A 'Point link array' is more efficient when handling many copies.</source>
     </message>
   </context>
   <context>
+    <name>Draft_PolarArray</name>
+    <message>
+      <location filename="gui_polararray.py" line="65"/>
+      <source>Polar array</source>
+      <translation>Matrize polarra</translation>
+    </message>
+    <message>
+      <location filename="gui_polararray.py" line="68"/>
+      <source>Creates copies of the selected object, and places the copies in a polar pattern
+defined by a center of rotation and its angle.
+
+The array can be turned into an orthogonal or a circular array by changing its type.</source>
+      <translation>Hautatutako objektuaren kopiak sortzen ditu, eta kopiak eredu polar bati
+jarraituta kokatzen ditu, biraketa-zentro baten eta angelu baten arabera definituta..
+
+Matrizearen mota aldatu daiteke, ortogonala edo zirkularra izan dadin.</translation>
+    </message>
+  </context>
+  <context>
     <name>Draft_Polygon</name>
     <message>
       <location filename="gui_polygons.py" line="57"/>
@@ -2883,6 +2423,11 @@ those that are at the same level as this object, including the upper group that 
       <translation>Hautapena talde bat bada, taldearen barruko objektu guztiak hautatuko dira, baita habiaratutako azpitaldeetan daudenak ere.
 
 Hautapena talde bateko objektu sinple bat bada, objektu "anaiak" hautatuko dira, alegia, objektuaren maila berean daudenak, baita haiek denen edukiontzia den goiko taldekoak ere.</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="167"/>
+      <source>Selects the contents of selected groups. For selected non-group objects, the contents of the group they are in is selected.</source>
+      <translation>Hautatutako taldeen edukiak hautatzen ditu. Taldekoak ez diren objektuak hautatuetarako, haiek dauden taldeko edukiak hautatzen dira.</translation>
     </message>
   </context>
   <context>
@@ -2979,19 +2524,6 @@ Polilerro bat hautatuta badago, bere segmentu guztiei aplikatuko die malda-trans
 
 Maldak beti aldatuko du Z balioa, eta beraz, komando honek XY planoan marraztutako zirriborro-lerro
 zuzenetan soilik funtzionatuko du ongi. Lerro bakunak ez diren hautatutako objektuei ez ikusiarena egingo zaie.</translation>
-    </message>
-  </context>
-  <context>
-    <name>Draft_Snap</name>
-    <message>
-      <location filename="gui_snapper.py" line="1535"/>
-      <source>Toggles Grid On/Off</source>
-      <translation>Sareta aktibatzen/desaktibatzen du</translation>
-    </message>
-    <message>
-      <location filename="gui_snapper.py" line="1536"/>
-      <source>Toggle Draft Grid</source>
-      <translation>Txandakatu zirriborro-sareta</translation>
     </message>
   </context>
   <context>
@@ -3331,19 +2863,6 @@ Ctrl atxikitzeko, Shift uneko segmentura edo normalera murrizteko, Alt alderantz
     </message>
   </context>
   <context>
-    <name>Draft_UndoLine</name>
-    <message>
-      <location filename="gui_lineops.py" line="151"/>
-      <source>Undo last segment</source>
-      <translation>Desegin azken segmentua</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="152"/>
-      <source>Undoes the last drawn segment of the line being drawn.</source>
-      <translation>Marrazten ari den lerroaren azken segmentua desegiten du.</translation>
-    </message>
-  </context>
-  <context>
     <name>Draft_Upgrade</name>
     <message>
       <location filename="gui_upgrade.py" line="58"/>
@@ -3407,1909 +2926,11 @@ Ondoren, kameraren kokapen desberdina eta objektuen egoera desberdinak gorde dai
     </message>
   </context>
   <context>
-    <name>Form</name>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="14"/>
-      <source>Working plane setup</source>
-      <translation>Laneko planoaren konfigurazioa</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="20"/>
-      <source>Select a face or working plane proxy or 3 vertices.
-Or choose one of the options below</source>
-      <translation>Aukeratu aurpegi bat, laneko planoaren proxya edo 3 erpin. Edo hautatu beheko aukeretako bat</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="31"/>
-      <source>Sets the working plane to the XY plane (ground plane)</source>
-      <translation>Lan planoa XY planoan (lur planoan) ezartzen du</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="34"/>
-      <source>Top (XY)</source>
-      <translation>Goia (XY)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="41"/>
-      <source>Sets the working plane to the XZ plane (front plane)</source>
-      <translation>Lan planoa XZ planoan (aurreko planoan) ezartzen du</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="44"/>
-      <source>Front (XZ)</source>
-      <translation>Aurrea (XZ)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="51"/>
-      <source>Sets the working plane to the YZ plane (side plane)</source>
-      <translation>Lan planoa YZ planoan (alboko planoan) ezartzen du</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="54"/>
-      <source>Side (YZ)</source>
-      <translation>Alboa (YZ)</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="61"/>
-      <source>Sets the working plane facing the current view</source>
-      <translation>Laneko planoa uneko bistaren aurrean ezartzen du</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="64"/>
-      <source>Align to view</source>
-      <translation>Lerrokatu ikusteko</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="71"/>
-      <source>The working plane will align to the current
-view each time a command is started</source>
-      <translation>Lan-planoa uneko bistarekin lerrokatuko da
-ikusi komando bat abiarazten den bakoitzean</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="78"/>
-      <source>Automatic</source>
-      <translation>Automatikoa</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="87"/>
-      <source>An optional offset to give to the working plane
-above its base position. Use this together with one
-of the buttons above</source>
-      <translation>Laneko planoari emateko aukerako desplazamendu bat
-bere oinarriaren posizioaren gainetik. Erabili hau goiko botoietako batekin batera</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="99"/>
-      <source>Offset</source>
-      <translation>Desplazamendua</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="118"/>
-      <source>If this is selected, the working plane will be
-centered on the current view when pressing one
-of the buttons above</source>
-      <translation>Hautatuta badago, laneko planoa uneko bistan erdiratuko da goiko botoietako bat sakatzean</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="111"/>
-      <source>Center plane on view</source>
-      <translation>Zentratu planoa bistan</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="135"/>
-      <source>Or select a single vertex to move the current
-working plane without changing its orientation.
-Then, press the button below</source>
-      <translation>Edo hautatu erpin bakar bat uneko laneko planoa mugitzeko bere orientazioa aldatu gabe. Ondoren, sakatu beheko botoia</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="147"/>
-      <source>Moves the working plane without changing its
-orientation. If no point is selected, the plane
-will be moved to the center of the view</source>
-      <translation>Laneko planoa mugitzen du haren orientazioa aldatu gabe. Punturik hautatzen ez bada planoa bistaren zentrora mugituko da</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="152"/>
-      <source>Move working plane</source>
-      <translation>Mugitu laneko planoa</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="171"/>
-      <source>The spacing between the smaller grid lines</source>
-      <translation>Sareko lerro txikienen arteko tartea</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="164"/>
-      <source>Grid spacing</source>
-      <translation>Sareta-tarteak</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="191"/>
-      <source>The number of squares between each main line of the grid</source>
-      <translation>Sareko lerro nagusien arteko karratu kopurua</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="184"/>
-      <source>Main line every</source>
-      <translation>Lerro nagusiaren maiztasuna</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="207"/>
-      <source>The distance at which a point can be snapped to
-when approaching the mouse. You can also change this
-value by using the [ and ] keys while drawing</source>
-      <translation>Zein distantziara lotuko da puntu bat sagua hurbiltzerakoan. Balio hau ere alda dezakezu
- [ eta ] teklak erabiltzen marrazten ari zarenean</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="212"/>
-      <source>Snapping radius</source>
-      <translation>Atxikitze-erradioa</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="241"/>
-      <source>Centers the view on the current working plane</source>
-      <translation>Bista uneko laneko planoan zentratzen du</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="244"/>
-      <source>Center view</source>
-      <translation>Zentratu bista</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="251"/>
-      <source>Resets the working plane to its previous position</source>
-      <translation>Laneko planoa aurreko posiziora berrezartzen du</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="254"/>
-      <source>Previous</source>
-      <translation>Aurrekoa</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="219"/>
-      <source>Grid extension</source>
-      <translation>Saretaren hedadura</translation>
-    </message>
-    <message>
-      <location filename="TaskSelectPlane.ui" line="226"/>
-      <source> lines</source>
-      <translation> lerroak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="14"/>
-      <source>Style settings</source>
-      <translation>Estilo-ezarpenak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="244"/>
-      <source>Text color</source>
-      <translation>Testu-kolorea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="169"/>
-      <source>Shape color</source>
-      <translation>Formaren kolorea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="87"/>
-      <source>Line width</source>
-      <translation>Lerro-zabalera</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="66"/>
-      <source>The color of faces</source>
-      <translation>Aurpegien kolorea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="205"/>
-      <source>The type of dimension arrows</source>
-      <translation>Kota-gezien mota</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="209"/>
-      <source>Dot</source>
-      <translation>Puntua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="214"/>
-      <source>Circle</source>
-      <translation>Zirkulua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="219"/>
-      <source>Arrow</source>
-      <translation>Gezia</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="224"/>
-      <source>Tick</source>
-      <translation>Tika</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="229"/>
-      <source>Tick-2</source>
-      <translation>Tika-2</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="271"/>
-      <source>The color of texts and dimension texts</source>
-      <translation>Testuen eta kota-testuen kolorea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="278"/>
-      <source>The size of texts and dimension texts</source>
-      <translation>Testuen eta kota-testuen tamaina</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="318"/>
-      <source>Show unit</source>
-      <translation>Erakutsi unitatea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="80"/>
-      <source>Line color</source>
-      <translation>Lerro-kolorea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="308"/>
-      <source>The size of dimension arrows</source>
-      <translation>Kota-gezien tamaina</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="257"/>
-      <source>The font to use for texts and dimensions</source>
-      <translation>Testuetarako eta kotetarako erabiliko den letra-tipoa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="101"/>
-      <source>The line style</source>
-      <translation>Lerro-estiloa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="105"/>
-      <source>Solid</source>
-      <translation>Solidoa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="110"/>
-      <source>Dashed</source>
-      <translation>Marratua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="115"/>
-      <source>Dotted</source>
-      <translation>Puntukatua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="120"/>
-      <source>DashDot</source>
-      <translation>MarraPuntua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="264"/>
-      <source>Text size</source>
-      <translation>Testu-tamaina</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="332"/>
-      <source>Unit override</source>
-      <translation>Unitatea gainidaztea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="339"/>
-      <source>The unit to use for dimensions. Leave blank to use current FreeCAD unit</source>
-      <translation>Kota-lerroetan erabiliko den unitatea. Utzi hutsik FreeCAden uneko unitatea erabiltzeko</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="183"/>
-      <source>The transparency of faces</source>
-      <translation>Aurpegien gardentasuna</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="186"/>
-      <source> %</source>
-      <translation> %</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="176"/>
-      <source>Transparency</source>
-      <translation>Gardentasuna</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="135"/>
-      <source>Display mode</source>
-      <translation>Bistaratze modua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="237"/>
-      <source>Text font</source>
-      <translation>Testuaren letra-tipoa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="325"/>
-      <source>Arrow size</source>
-      <translation>Gezi-tamaina</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="142"/>
-      <source>The display mode for faces</source>
-      <translation>Aurpegien bistaratze modua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="146"/>
-      <source>Flat Lines</source>
-      <translation>Lerro lauak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="151"/>
-      <source>Wireframe</source>
-      <translation>Alanbre-bilbea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="156"/>
-      <source>Shaded</source>
-      <translation>Itzaldurarekin</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="161"/>
-      <source>Points</source>
-      <translation>Puntuak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="73"/>
-      <source>Draw style</source>
-      <translation>Marrazte-estiloa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="94"/>
-      <source>The color of lines</source>
-      <translation>Lerroen kolorea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="288"/>
-      <source>Arrow style</source>
-      <translation>Gezi-estiloa</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="128"/>
-      <source> px</source>
-      <translation> px</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="57"/>
-      <source>Lines and faces</source>
-      <translation>Lerroak eta aurpegiak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="199"/>
-      <source>Annotations</source>
-      <translation>Oharpenak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="295"/>
-      <source>If the unit suffix is shown on dimension texts or not</source>
-      <translation>Kota-testuetan atzizki-unitatea erakutsiko den ala ez</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="22"/>
-      <source>Fills the values below with a stored style preset</source>
-      <translation>Beheko balioak biltegiratutako estilo-aurrezarpen batekin betetzen ditu</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="26"/>
-      <source>Load preset</source>
-      <translation>Kargatu aurrezarpena</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="40"/>
-      <source>Save current style as a preset...</source>
-      <translation>Gorde uneko estiloa aurrezarpen gisa...</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="382"/>
-      <source>Apply above style to selected object(s)</source>
-      <translation>Aplikatu goiko estiloa hautatutako objektuei</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="385"/>
-      <source>Selected</source>
-      <translation>Hautatua</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="397"/>
-      <source>Texts/dims</source>
-      <translation>Testuak/kotak</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="346"/>
-      <source>Text spacing</source>
-      <translation>Testu-tartea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="353"/>
-      <source>The space between the text and the dimension line</source>
-      <translation>Testuaren eta kota-lerroaren arteko tartea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="363"/>
-      <source>Line spacing</source>
-      <translation>Lerro-tartea</translation>
-    </message>
-    <message>
-      <location filename="TaskPanel_SetStyle.ui" line="370"/>
-      <source>The spacing between different lines of text</source>
-      <translation>Testu-lerro desberdinen arteko tartea</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="14"/>
-      <source>Form</source>
-      <translation>Inprimakia</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="23"/>
-      <source>pattern files (*.pat)</source>
-      <translation type="unfinished">pattern files (*.pat)</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="30"/>
-      <source>PAT file:</source>
-      <translation type="unfinished">PAT file:</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="37"/>
-      <source>Scale</source>
-      <translation>Eskala</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="44"/>
-      <source>Pattern:</source>
-      <translation type="unfinished">Pattern:</translation>
-    </message>
-    <message>
-      <location filename="dialogHatch.ui" line="64"/>
-      <source>Rotation:</source>
-      <translation>Biraketa:</translation>
-    </message>
-    <message encoding="UTF-8">
-      <location filename="dialogHatch.ui" line="71"/>
-      <source>°</source>
-      <translation>°</translation>
-    </message>
-  </context>
-  <context>
-    <name>Gui::Dialog::DlgAddProperty</name>
-    <message>
-      <location filename="gui_groups.py" line="452"/>
-      <source>Group</source>
-      <translation>Taldea</translation>
-    </message>
-  </context>
-  <context>
-    <name>Gui::Dialog::DlgSettingsDraft</name>
-    <message>
-      <location filename="preferences-draft.ui" line="32"/>
-      <source>General Draft Settings</source>
-      <translation>Zirriborro-ezarpen orokorrak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="427"/>
-      <source>This is the default color for objects being drawn while in construction mode.</source>
-      <translation>Hau objektuen kolore lehenetsia da, eraikuntza moduan marrazten ari badira.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="387"/>
-      <source>This is the default group name for construction geometry</source>
-      <translation>Hau talde-izen lehenetsia da eraikuntza-geometriarako</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="390"/>
-      <source>Construction</source>
-      <translation>Eraikuntza</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="114"/>
-      <source>Save current color and linewidth across sessions</source>
-      <translation>Gorde uneko kolorea eta lerro-zabalera saio batetik hurrengora</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="304"/>
-      <source>Global copy mode</source>
-      <translation>Kopiatze modu globala</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="40"/>
-      <source>Default working plane</source>
-      <translation>Laneko plano lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="67"/>
-      <source>None</source>
-      <translation>Bat ere ez</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="72"/>
-      <source>XY (Top)</source>
-      <translation>XY (goialdea)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="77"/>
-      <source>XZ (Front)</source>
-      <translation>XZ (aurrealdea)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="82"/>
-      <source>YZ (Side)</source>
-      <translation>YZ (alboa)</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="89"/>
-      <source>Default height for texts and dimensions</source>
-      <translation>Altuera lehenetsia testuetarako eta kotetarako</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="47"/>
-      <source>This is the default font name for all Draft texts and dimensions.
-It can be a font name such as "Arial", a default style such as "sans", "serif"
-or "mono", or a family such as "Arial,Helvetica,sans" or a name with a style
-such as "Arial:Bold"</source>
-      <translation>Zirriborroen testu eta kota guztietarako letra-tipo lehenetsiaren izena da hau. Letra-tipo baten izena izan daiteke, esaterako "Arial"; estilo lehenetsi bat izan daiteke, esaterako "sans", "serif" edo "mono"; familia bat izan daiteke, esaterako "Arial,Helvetica,sans"; edo izen bat estilo batekin izan daiteke, esaterako "Arial:Bold"</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="151"/>
-      <source>Default template sheet</source>
-      <translation>Txantiloi-orri lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="177"/>
-      <source>The default template to use when creating a new drawing sheet</source>
-      <translation>Marrazki-orri berria sortzean erabiliko den txantiloi lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="40"/>
-      <source>Import style</source>
-      <translation>Inportatu estiloa</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="60"/>
-      <source>None (fastest)</source>
-      <translation>Bat ere ez (azkarrena)</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="65"/>
-      <source>Use default color and linewidth</source>
-      <translation>Erabili kolore eta lerro-zabalera lehenetsiak</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="70"/>
-      <source>Original color and linewidth</source>
-      <translation>Jatorrizko kolorea eta lerro-zabalera</translation>
-    </message>
-    <message>
-      <location filename="preferences-oca.ui" line="46"/>
-      <source>Check this if you want the areas (3D faces) to be imported too.</source>
-      <translation>Markatu hau areak ere (3D aurpegiak) inporta daitezen nahi baduzu.</translation>
-    </message>
-    <message>
-      <location filename="preferences-oca.ui" line="49"/>
-      <source>Import OCA areas</source>
-      <translation>Inportatu OCA areak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="14"/>
-      <source>General settings</source>
-      <translation>Ezarpen orokorrak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="380"/>
-      <source>Construction group name</source>
-      <translation>Eraikuntza-taldearen izena</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="143"/>
-      <source>Tolerance</source>
-      <translation>Tolerantzia</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="363"/>
-      <source>Join geometry</source>
-      <translation>Elkartu geometria</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="194"/>
-      <source>Alternate SVG Patterns location</source>
-      <translation>SVG ereduen kokaleku alternatiboa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="220"/>
-      <source>Here you can specify a directory containing SVG files containing &lt;pattern&gt; definitions that can be added to the standard Draft hatch patterns</source>
-      <translation>SVG fitxategidun direktorio bat adieraz dezakezu hemen, zirriborroen itzaleztadura-eredu estandarrei gehi dakizkiekeen &lt;pattern&gt; definizioak dituzten SVGak gordetzeko</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="57"/>
-      <source>Constrain mod</source>
-      <translation>Murrizketa ald.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="77"/>
-      <source>The Constraining modifier key</source>
-      <translation>Murrizketen tekla aldatzailea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="109"/>
-      <source>Snap mod</source>
-      <translation>Atxikitze ald.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="129"/>
-      <source>The snap modifier key</source>
-      <translation>Atxikitzeko tekla aldatzailea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="164"/>
-      <source>Alt mod</source>
-      <translation>Alt ald.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="287"/>
-      <source>Select base objects after copying</source>
-      <translation>Hautatu oinarri-objektuak kopia egin ondoren</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="269"/>
-      <source>If checked, a grid will appear when drawing</source>
-      <translation>Markatuta badago, sareta bat agertuko da marraztean</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="272"/>
-      <source>Use grid</source>
-      <translation>Erabili sareta</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="402"/>
-      <source>Grid spacing</source>
-      <translation>Sareta-tarteak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="425"/>
-      <source>The spacing between each grid line</source>
-      <translation>Sareta-lerroen arteko tartea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="353"/>
-      <source>Main lines every</source>
-      <translation>Lerro nagusien maiztasuna</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="376"/>
-      <source>Mainlines will be drawn thicker. Specify here how many squares between mainlines.</source>
-      <translation>Lerro nagusiak lodiago marraztuko dira. Adierazi hemen zenbat lauki utziko diren lerro nagusien artean.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="94"/>
-      <source>Internal precision level</source>
-      <translation>Barneko prezisio-maila</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="395"/>
-      <source>This is the orientation of the dimension texts when those dimensions are vertical. Default is left, which is the ISO standard.</source>
-      <translation>Kota-testuen orientazioa da, kotak bertikalak direnean. Lehenetsia ezkerra da, horixe baita ISO estandarra.</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="405"/>
-      <source>Left (ISO standard)</source>
-      <translation>Ezkerra (ISO estandarra)</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="410"/>
-      <source>Right</source>
-      <translation>Eskuinekoa</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="384"/>
-      <source>Group layers into blocks</source>
-      <translation>Multzokatu geruzak blokeetan</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="570"/>
-      <source>Export 3D objects as polyface meshes</source>
-      <translation>Esportatu 3D objektuak amaraun poligonal gisa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="219"/>
-      <source>If checked, the Snap toolbar will be shown whenever you use snapping</source>
-      <translation>Markatuta badago, atxikitzerako tresna-barra erakutsi egingo da atxikitzea erabiltzen ari bazara</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="222"/>
-      <source>Show Draft Snap toolbar</source>
-      <translation>Erakutsi zirriborro-atxikipenaren tresna barra</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="242"/>
-      <source>Hide Draft snap toolbar after use</source>
-      <translation>Ezkutatu zirriborro-atxikipenaren tresna barra, hura erabili ondoren</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="134"/>
-      <source>Show Working Plane tracker</source>
-      <translation>Erakutsi laneko planoaren jarraitzailea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="291"/>
-      <source>If checked, the Draft grid will always be visible when the Draft workbench is active. Otherwise only when using a command</source>
-      <translation>Markatuta badago, zirriborro-sareta ikusgai egongo da beti zirriborroen lan-mahaia aktibo dagoenean. Bestela, komando bat erabiltzean soilik ikusiko da</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="405"/>
-      <source>Use standard font size for texts</source>
-      <translation>Erabili letra-tamaina estandarra testuetan</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="448"/>
-      <source>Import hatch boundaries as wires</source>
-      <translation>Inportatu itzaleztadura-mugak alanbre gisa</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="469"/>
-      <source>Render polylines with width</source>
-      <translation>Errendatu zabalera duten polilerroak</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="141"/>
-      <source>Translated (for print &amp; display)</source>
-      <translation>Itzulia (inprimatzeko eta bistaratzeko)</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="146"/>
-      <source>Raw (for CAM)</source>
-      <translation>RAW (CAMerako)</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="161"/>
-      <source>Translate white line color to black</source>
-      <translation>Itzuli kolore zuria beltzera</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="324"/>
-      <source>Use Part Primitives when available</source>
-      <translation>Erabili piezen jatorrizkoak, eskuragarri daudenean</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="26"/>
-      <source>Snapping</source>
-      <translation>Atxikitzea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="34"/>
-      <source>If this is checked, snapping is activated without the need to press the snap mod key</source>
-      <translation>Hau markatuta badago, atxikitzea aktibatuko da atxikitzeko tekla aldatzailea sakatu behar izan gabe</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="37"/>
-      <source>Always snap (disable snap mod)</source>
-      <translation>Atxiki beti (desgaitu atxikitze modua)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="407"/>
-      <source>Construction geometry color</source>
-      <translation>Eraikuntza-geometriaren kolorea</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="149"/>
-      <source>Import</source>
-      <translation>Inportatu</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="159"/>
-      <source>texts and dimensions</source>
-      <translation>testuak eta kotak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="175"/>
-      <source>points</source>
-      <translation>puntuak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="191"/>
-      <source>layouts</source>
-      <translation>diseinuak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="207"/>
-      <source>*blocks</source>
-      <translation>*blokeak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="614"/>
-      <source>Project exported objects along current view direction</source>
-      <translation>Proiektatu esportatutako objektuak uneko bista-norabidearen luzeran</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="14"/>
-      <source>Visual settings</source>
-      <translation>Ikusizko ezarpenak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="26"/>
-      <source>Visual Settings</source>
-      <translation>Ikusizko ezarpenak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="34"/>
-      <source>Snap symbols style</source>
-      <translation>Atxikitze-ikurren estiloa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="54"/>
-      <source>Draft classic style</source>
-      <translation>Zirriborro-estilo klasikoa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="59"/>
-      <source>Bitsnpieces style</source>
-      <translation>Bitsnpieces estiloa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="80"/>
-      <source>Color</source>
-      <translation>Kolorea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="237"/>
-      <source>Hatch patterns resolution</source>
-      <translation>Itzaleztadura-ereduen bereizmena</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="263"/>
-      <source>Grid</source>
-      <translation>Sareta</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="294"/>
-      <source>Always show the grid</source>
-      <translation>Erakutsi sareta beti</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="14"/>
-      <source>Texts and dimensions</source>
-      <translation>Testuak eta kotak</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="59"/>
-      <source>Internal font</source>
-      <translation>Barneko letra-tipoa</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="323"/>
-      <source>Dot</source>
-      <translation>Puntua</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="328"/>
-      <source>Circle</source>
-      <translation>Zirkulua</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="333"/>
-      <source>Arrow</source>
-      <translation>Gezia</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="362"/>
-      <source>The default size of arrows</source>
-      <translation>Gezien tamaina lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="208"/>
-      <source>The default size of dimensions extension lines</source>
-      <translation>Koten luzapen-lerroen tamaina lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="429"/>
-      <source>The space between the dimension line and the dimension text</source>
-      <translation>Kota-lerroaren eta kota-testuaren arteko espazioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="534"/>
-      <source>Select a font file</source>
-      <translation>Hautatu letra-tipo fitxategi bat</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="267"/>
-      <source>Fill objects with faces whenever possible</source>
-      <translation>Bete objektuak aurpegiekin, posible denean</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="224"/>
-      <source>Create</source>
-      <translation>Sortu</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="234"/>
-      <source>simple Part shapes</source>
-      <translation>pieza-forma sinpleak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="253"/>
-      <source>Draft objects</source>
-      <translation>Zirriborro-objektuak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="269"/>
-      <source>Sketches</source>
-      <translation>Krokisak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="342"/>
-      <source>Get original colors from the DXF file</source>
-      <translation>Eskuratu DXF fitxategiko jatorrizko koloreak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="489"/>
-      <source>Treat ellipses and splines as polylines</source>
-      <translation>Tratatu elipseak eta spline-ak polilerroak bailiran</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="121"/>
-      <source>Export style</source>
-      <translation>Esportatu estiloa</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="455"/>
-      <source>Show the unit suffix in dimensions</source>
-      <translation>Erakutsi unitate-atzizkia kotetan</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="101"/>
-      <source>Allow FreeCAD to automatically download and update the DXF libraries</source>
-      <translation>Onartu FreeCADek automatikoki deskarga eta egunera ditzan DXF liburutegiak</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="209"/>
-      <source>mm</source>
-      <translation>mm</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="457"/>
-      <source>Grid size</source>
-      <translation>Sareta-tamaina</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="483"/>
-      <source> lines</source>
-      <translation> lerroak</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="144"/>
-      <source>text above (2D)</source>
-      <translation>testua gainean (2D)</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="149"/>
-      <source> text inside (3D)</source>
-      <translation> testua barruan (3D)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="375"/>
-      <source>Dashed line definition</source>
-      <translation>Marraz osatutako lerroen definizioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="398"/>
-      <source>0.09,0.05</source>
-      <translation>0.09,0.05</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="418"/>
-      <source>Dashdot line definition</source>
-      <translation>Marra-puntuz osatutako lerroen definizioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="441"/>
-      <source>0.09,0.05,0.02,0.05</source>
-      <translation>0.09,0.05,0.02,0.05</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="461"/>
-      <source>Dotted line definition</source>
-      <translation>Puntuz osatutako lerroen definizioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="484"/>
-      <source>0.02,0.02</source>
-      <translation>0.02,0.02</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="14"/>
-      <source>Grid and snapping</source>
-      <translation>Sareta eta atxikitzea</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="26"/>
-      <source>Text settings</source>
-      <translation>Testu-ezarpenak</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="34"/>
-      <source>Font family</source>
-      <translation>Letra-tipoa</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="76"/>
-      <source>Font size</source>
-      <translation>Letra-tamaina</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="116"/>
-      <source>Dimension settings</source>
-      <translation>Kota-ezarpenak</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="124"/>
-      <source>Display mode</source>
-      <translation>Bistaratze modua</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="309"/>
-      <source>Arrows style</source>
-      <translation>Gezi-estiloa</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="355"/>
-      <source>Arrows size</source>
-      <translation>Gezi-tamaina</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="388"/>
-      <source>Text orientation</source>
-      <translation>Testu-orientazioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="422"/>
-      <source>Text spacing</source>
-      <translation>Testu-tartea</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="513"/>
-      <source>ShapeString settings</source>
-      <translation>Testu-formen ezarpenak</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="521"/>
-      <source>Default ShapeString font file</source>
-      <translation>Testu-formaren letra-tipo lehenetsiaren fitxategia</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="367"/>
-      <source>Drawing view line definitions</source>
-      <translation>Marrizki-bistaren lerro-definizioak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="14"/>
-      <source>DWG</source>
-      <translation>DWG</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="26"/>
-      <source>DWG conversion</source>
-      <translation>DWG bihurketa</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="56"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; DXF options apply to DWG files as well.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; DXF aukerek DWG fitxategietan ere aplikatuko dira.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="14"/>
-      <source>DXF</source>
-      <translation>DXF</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="26"/>
-      <source>Import options</source>
-      <translation>Inportazio-aukerak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="55"/>
-      <source>Use legacy python importer</source>
-      <translation>Erabili Python inportatzaile zaharra</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="107"/>
-      <source>Export options</source>
-      <translation>Esportazio-aukerak</translation>
-    </message>
-    <message>
-      <location filename="preferences-oca.ui" line="14"/>
-      <source>OCA</source>
-      <translation>OCA</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="14"/>
-      <source>SVG</source>
-      <translation>SVG</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="86"/>
-      <source>Disable units scaling</source>
-      <translation>Desgaitu unitateen eskalatzea</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="591"/>
-      <source>Export Drawing Views as blocks</source>
-      <translation>Esportatu marrazki-bistak bloke modura</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="140"/>
-      <source>Note: Not all the options below are used by the new importer yet</source>
-      <translation>Oharra: Beheko aukera guztiak ez daude oraindik erabilgarri inportatzaile berriarekin</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="38"/>
-      <source>Show this dialog when importing and exporting</source>
-      <translation>Erakutsi elkarrizketa-koadro hau inportatzean eta esportatzean</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="88"/>
-      <source>Automatic update (legacy importer only)</source>
-      <translation>Eguneratze automatikoa (inportatzaile zaharkitua soilik)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="341"/>
-      <source>Prefix labels of Clones with:</source>
-      <translation>Klonen etiketetan, erabili aurrizki gisa honako hau:</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="289"/>
-      <source>Scale factor to apply to imported files</source>
-      <translation>Inportatutako fitxategiei aplikatuko zaien eskala-faktorea</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="181"/>
-      <source>Max segment length for discretized arcs</source>
-      <translation>Segmentu-luzera maximoa diskretizatutako arkuetarako</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="161"/>
-      <source>Number of decimals</source>
-      <translation>Dezimal kopurua</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="197"/>
-      <source>Shift</source>
-      <translation>Shift</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="202"/>
-      <source>Ctrl</source>
-      <translation>Ctrl</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="207"/>
-      <source>Alt</source>
-      <translation>Alt</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="184"/>
-      <source>The Alt modifier key</source>
-      <translation>Alt tekla aldatzailea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="477"/>
-      <source>The number of horizontal or vertical lines of the grid</source>
-      <translation>Saretaren lerro horizontalen edo bertikalen kopurua</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="87"/>
-      <source>The default color for snap symbols</source>
-      <translation>Atxikitze-ikurren kolore lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="111"/>
-      <source>Check this if you want to use the color/linewidth from the toolbar as default</source>
-      <translation>Markatu hau tresna-barrako kolorea/lerro-zabalera balio lehenetsi gisa erabili nahi baduzu</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="131"/>
-      <source>If checked, a widget indicating the current working plane orientation appears during drawing operations</source>
-      <translation>Markatuta badago, uneko lan-planoaren orientazioa adierazten duen widget bat agertuko da marrazte-eragiketetan</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="481"/>
-      <source>An SVG linestyle definition</source>
-      <translation>SVG lerro-estiloaren definizio bat</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="201"/>
-      <source>Extension lines size</source>
-      <translation>Luzapen-lerroen tamaina</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="237"/>
-      <source>Extension line overshoot</source>
-      <translation>Luzapen-lerroaren soberakina</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="244"/>
-      <source>The default length of extension line above dimension line</source>
-      <translation>Luzapen-lerroak kota-lerroaren gainetik duen luzera lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="273"/>
-      <source>Dimension line overshoot</source>
-      <translation>Kota-lerroaren soberakina</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="280"/>
-      <source>The default distance the dimension line is extended past extension lines</source>
-      <translation>Kota-lerroa luzapen-lerroez haratago luzatzen den distantzia lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="338"/>
-      <source>Tick</source>
-      <translation>Tika</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="343"/>
-      <source>Tick-2</source>
-      <translation>Tika-2</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="326"/>
-      <source>Check this if you want to preserve colors of faces while doing downgrade and upgrade (splitFaces and makeShell only)</source>
-      <translation>Markatu hau aurpegien koloreak mantendu nahi badituzu zaharkitzean edo eguneratzean (splitFaces eta makeShell soilik)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="329"/>
-      <source>Preserve colors of faces during downgrade/upgrade</source>
-      <translation>Mantendu aurpegien koloreak zaharkitzean/eguneratzean</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="346"/>
-      <source>Check this if you want the face names to derive from the originating object name and vice versa while doing downgrade/upgrade (splitFaces and makeShell only)</source>
-      <translation>Markatu hau aurpegien izenak jatorrizko objektuen izenetatik eratorri nahi badituzu, edo alderantziz, zaharkitzean edo eguneratzean (splitFaces eta makeShell soilik)</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="349"/>
-      <source>Preserve names of faces during downgrade/upgrade</source>
-      <translation>Mantendu aurpegien izenak zaharkitzean/eguneratzean</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="41"/>
-      <source>The path to your ODA (formerly Teigha) File Converter executable</source>
-      <translation>Zure ODA (lehen Teigha) File Converter exekutagarriaren bidea</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="486"/>
-      <source>Ellipse export is poorly supported. Use this to export them as polylines instead.</source>
-      <translation>Elipseeen esportazioaren euskarria ez da oso ona. Erabili hau elipseak polilerro gisa esportatzeko.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="518"/>
-      <source>Max Spline Segment:</source>
-      <translation>Spline-segmentu maximoa:</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="120"/>
-      <source>The number of decimals in internal coordinates operations (for ex. 3 = 0.001). Values between 6 and 8 are usually considered the best trade-off among FreeCAD users.</source>
-      <translation>Dezimal kopurua barneko koordenatuen eragiketetan (adib. 3 = 0,001). Baliorik orekatuenak 6 eta 8 artekoak direla kontsideratzen da FreeCAD erabiltzaileen artean.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="169"/>
-      <source>This is the value used by functions that use a tolerance.
-Values with differences below this value will be treated as same. This value will be obsoleted soon so the precision level above controls both.</source>
-      <translation>Tolerantzia bat erabiltzen duten funtzioek darabilten balioa.
-Horren azpiko diferentziak dituzten balioak horretarako berdintzen dira. Balio hori laster zaharkituta geratuko da, goiko doitasun-mailak biak kontrolatuko baititu.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="75"/>
-      <source>Use legacy python exporter</source>
-      <translation>Erabili Python esportatzaile zaharra</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="247"/>
-      <source>If this option is set, when creating Draft objects on top of an existing face of another object, the "Support" property of the Draft object will be set to the base object. This was the standard behaviour before FreeCAD 0.19</source>
-      <translation>Aukera hau ezarrita badago, zirriborro-objektuak sortzen badira lehendik dagoen aurpegi baten edo beste objektu baten gainean, zirriborro-objektuaren 'Euskarria' propietatean oinarri-objektua ezarriko da. Hori zen portaera estandarra FreeCAD 0.19 baino lehen.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="372"/>
-      <source>Construction Geometry</source>
-      <translation>Eraikuntza-geometria</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="26"/>
-      <source>In-Command Shortcuts</source>
-      <translation>Komandoen lasterbideak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="118"/>
-      <source>Relative</source>
-      <translation>Erlatiboa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="140"/>
-      <source>R</source>
-      <translation>R</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="236"/>
-      <source>Continue</source>
-      <translation>Jarraitu</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="214"/>
-      <source>T</source>
-      <translation>T</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="111"/>
-      <source>Close</source>
-      <translation>Itxi</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="177"/>
-      <source>O</source>
-      <translation>O</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="243"/>
-      <source>Copy</source>
-      <translation>Kopiatu</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="469"/>
-      <source>P</source>
-      <translation>P</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="498"/>
-      <source>Subelement Mode</source>
-      <translation>Azpi-elementuen modua</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="381"/>
-      <source>D</source>
-      <translation>D</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="491"/>
-      <source>Fill</source>
-      <translation>Bete</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="425"/>
-      <source>L</source>
-      <translation>L</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="447"/>
-      <source>Exit</source>
-      <translation>Irten</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="638"/>
-      <source>A</source>
-      <translation>A</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="579"/>
-      <source>Select Edge</source>
-      <translation>Hautatu ertza</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="520"/>
-      <source>E</source>
-      <translation>E</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="403"/>
-      <source>Add Hold</source>
-      <translation>Gehitu eustea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="675"/>
-      <source>Q</source>
-      <translation>Q</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="352"/>
-      <source>Length</source>
-      <translation>Luzera</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="557"/>
-      <source>H</source>
-      <translation>H</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="359"/>
-      <source>Wipe</source>
-      <translation>Garbitu</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="601"/>
-      <source>W</source>
-      <translation>W</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="697"/>
-      <source>Set WP</source>
-      <translation>Ezarri WPa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="719"/>
-      <source>U</source>
-      <translation>U</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="257"/>
-      <source>Cycle Snap</source>
-      <translation>Ziklo-atxikitzea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="52"/>
-      <source>`</source>
-      <translation>`</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="338"/>
-      <source>Snap</source>
-      <translation>Atxikitu</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="89"/>
-      <source>S</source>
-      <translation>S</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="250"/>
-      <source>Increase Radius</source>
-      <translation>Handitu erradioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="279"/>
-      <source>[</source>
-      <translation>[</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="345"/>
-      <source>Decrease Radius</source>
-      <translation>Txikitu erradioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="316"/>
-      <source>]</source>
-      <translation>]</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="741"/>
-      <source>Restrict X</source>
-      <translation>Murriztu X</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="763"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="785"/>
-      <source>Restrict Y</source>
-      <translation>Murriztu Y</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="807"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="829"/>
-      <source>Restrict Z</source>
-      <translation>Murriztu Z</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="851"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="194"/>
-      <source>If this option is checked, the layers drop-down list will also show groups, allowing you to automatically add objects to groups too.</source>
-      <translation>Aukera hau markatuta badago, geruzen goitibeherako zerrendak taldeak ere erakutsiko ditu, objektuak taldeei automatikoki gehitzeko aukera emanda.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="197"/>
-      <source>Show groups in layers list drop-down button</source>
-      <translation>Erakutsi taldeak geruzen zerrendaren goitibeherako botoian</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="216"/>
-      <source>Draft tools options</source>
-      <translation>Zirriborro-tresnen aukerak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="230"/>
-      <source>When drawing lines, set focus on Length instead of X coordinate.
-This allows to point the direction and type the distance.</source>
-      <translation>Lerroak marraztean, ezarri fokua luzeran, X koordenatuan ezarri ordez.
-Horrek ahalbidetzen du distantziaren norabidea eta mota seinalatzea.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="234"/>
-      <source>Set focus on Length instead of X coordinate</source>
-      <translation>Ezarri fokua luzeran, X koordenatuan ezarri ordez</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="250"/>
-      <source>Set the Support property when possible</source>
-      <translation>Ezarri 'Euskarria' propietatea posible denean</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="263"/>
-      <source>If this is checked, objects will appear as filled by default.
-Otherwise, they will appear as wireframe</source>
-      <translation>Hau markatuta badago, objektuak beteta agertuko dira modu lehenetsian.
-Bestela, alanbre-bilbe modura agertuko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="283"/>
-      <source>Normally, after copying objects, the copies get selected.
-If this option is checked, the base objects will be selected instead.</source>
-      <translation>Normalean, objektuak kopiatu ondoren, kopiak hautatu egiten dira.
-Aukera hau markatuta badago, kopien ordez oinarri-objektuak hautatuko dira.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="300"/>
-      <source>If this is checked, copy mode will be kept across command,
-otherwise commands will always start in no-copy mode</source>
-      <translation>Hau markatuta badago, kopiatze modua komandoz komando mantenduko da;
-bestela, komandoak beti ez kopiatzeko moduan abiaraziko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-draft.ui" line="320"/>
-      <source>Force Draft Tools to create Part primitives instead of Draft objects.
-Note that this is not fully supported, and many object will be not editable with Draft Modifiers.</source>
-      <translation>Behartu zirriborro-tresnek piezen jatorrizkoak sortu ditzaten, zirriborro-objektuak sortu ordez.
-Kontuan izan eragiketa horren euskarria ez dela osoa, eta zenbait objektu ez direla editagarriak izango zirriborro-aldatzaileekin.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="14"/>
-      <source>User interface settings</source>
-      <translation>Erabiltzaile-interfazearen ezarpenak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="928"/>
-      <source>Enable draft statusbar customization</source>
-      <translation>Gaitu zirriborren egoera-barraren pertsonalizazioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="931"/>
-      <source>Draft Statusbar</source>
-      <translation>Zirriborroen egoera-barra</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="951"/>
-      <source>Enable snap statusbar widget</source>
-      <translation>Gaitu egoera-barra atxikitzeko trepeta</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="954"/>
-      <source>Draft snap widget</source>
-      <translation>Zirriborroa atxikitzeko trepeta</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="970"/>
-      <source>Enable draft statusbar annotation scale widget</source>
-      <translation>Gaitu zirriborroaren egoera-barraren oharpenen eskalaren trepeta</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="973"/>
-      <source>Annotation scale widget</source>
-      <translation>Oharpenen eskalaren trepeta</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="567"/>
-      <source>Draft Edit preferences</source>
-      <translation>Zirriborro-edizioaren hobespenak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="570"/>
-      <source>Edit</source>
-      <translation>Editatu</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="584"/>
-      <source>Maximum number of contemporary edited objects</source>
-      <translation>Aldi berean editatutako objektuen kopuru maximoa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="607"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the maximum number of objects Draft Edit&lt;/p&gt;&lt;p&gt;can process at the same time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zirriborro-edizioak aldi berean prozesatu dezakeen&lt;/p&gt;&lt;p&gt;objektu kopuru maximoa ezartzen du&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="645"/>
-      <source>Draft edit pick radius</source>
-      <translation>Zirriborro-edizioaren aukeratze-erradioa</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="668"/>
-      <source>Controls pick radius of edit nodes</source>
-      <translation>Edizio-nodoen aukeratze-erradioa kontrolatzen du</translation>
-    </message>
-    <message>
-      <location filename="preferences-dwg.ui" line="34"/>
-      <source>Path to ODA file converter</source>
-      <translation>ODA fitxategi-bihurtzailearen bidea</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="35"/>
-      <source>This preferences dialog will be shown when importing/ exporting DXF files</source>
-      <translation>Hobespenen elkarrizketa-koadro hau DXF fitxategiak inportatzean/esportatzean erakutsiko da</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="51"/>
-      <source>Python importer is used, otherwise the newer C++ is used.
-Note: C++ importer is faster, but is not as featureful yet</source>
-      <translation>Python inportatzailea erabiltzen da, bestela C++ berriagoa erabiltzen da.
-Oharra: C++ inportatzailea azkarragoa da, baina oraindik eginbide gutxiago ditu.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="96"/>
-      <source>Allow FreeCAD to download the Python converter for DXF import and export.
-You can also do this manually by installing the "dxf_library" workbench
-from the Addon Manager.</source>
-      <translation>Onartu FreeCADek DXFak inportatzeko eta esportatzeko Pyhton bihurtzailea deskargatu dezan.
-Eskuz ere egin daiteke, "dxf_library" lan-mahaia instalatuta gehigarrien kudeatzailetik.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="156"/>
-      <source>If unchecked, texts and mtexts won't be imported</source>
-      <translation>Markatu gabe badago, testuak/mtestuak ez dira inportatuko</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="172"/>
-      <source>If unchecked, points won't be imported</source>
-      <translation>Markatu gabe badago, puntuak ez dira inportatuko</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="188"/>
-      <source>If checked, paper space objects will be imported too</source>
-      <translation>Markatuta badago, paper-espazioko objektuak ere inportatuko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="204"/>
-      <source>If you want the non-named blocks (beginning with a *) to be imported too</source>
-      <translation>Izenik gabeko blokeak ere (* batekin hasten direnak) inportatu nahi dituzun</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="231"/>
-      <source>Only standard Part objects will be created (fastest)</source>
-      <translation>Pieza-objektu estandarrak soilik sortuko dira (azkarrena)</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="250"/>
-      <source>Parametric Draft objects will be created whenever possible</source>
-      <translation>Zirriborro-objektu parametrikoak sortuko dira ahal den guztietan</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="266"/>
-      <source>Sketches will be created whenever possible</source>
-      <translation>Krokisak sortuko dira ahal den guztietan</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="309"/>
-      <source>Scale factor to apply to DXF files on import.
-The factor is the conversion between the unit of your DXF file and millimeters.
-Example: for files in millimeters: 1, in centimeters: 10,
-                             in meters: 1000, in inches: 25.4, in feet: 304.8</source>
-      <translation>DXF fitxategien inportazioan aplikatuko den eskala-faktorea.
-Zure DXF fitxategiaren unitatea milimetroetara bihurtzeko faktorea da.
-Adibidea: milimetroetan dauden fitxategietarako: 1, zentimetroetarako: 10, metroetarako: 1000, hazbeteetarako: 25.4, oinetarako: 304.8</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="338"/>
-      <source>Colors will be retrieved from the DXF objects whenever possible.
-Otherwise default colors will be applied. </source>
-      <translation>Koloreak DXF objektuetatik hartuko dira, posible bada. Bestela, kolore lehenetsiak aplikatuko dira. </translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="359"/>
-      <source>FreeCAD will try to join coincident objects into wires.
-Note that this can take a while!</source>
-      <translation>Bat datozen objektuak alanbreetan elkartzen saiatuko da FreeCAD.
-Kontuan izan horrek denbora asko behar dezake!</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="380"/>
-      <source>Objects from the same layers will be joined into Draft Blocks,
-turning the display faster, but making them less easily editable </source>
-      <translation>Geruza bereko objektuak zirriborro-blokeetan bilduko dira,
-bistaratzea azkartuz, baina edizioa zailduz </translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="401"/>
-      <source>Imported texts will get the standard Draft Text size,
-instead of the size they have in the DXF document</source>
-      <translation>Inportatutako testuek zirriborroen testu-tamaina estandarra hartuko dute,
-DXF dokumentuan duten tamaina erabili ordez</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="422"/>
-      <source>If this is checked, DXF layers will be imported as Draft Layers</source>
-      <translation>Hau markatuta badago, DXF geruzak zirriborro-geruza gisa inportatuko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="425"/>
-      <source>Use Layers</source>
-      <translation>Erabili geruzak</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="445"/>
-      <source>Hatches will be converted into simple wires</source>
-      <translation>Itzalak alanbre sinple bihurtuko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="465"/>
-      <source>If polylines have a width defined, they will be rendered
-as closed wires with correct width</source>
-      <translation>Polilerroek zabalera definituta badute, zabalera zuzena duten
-alanbre itxi modura errendatuko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="528"/>
-      <source>Maximum length of each of the polyline segments.
-If it is set to '0' the whole spline is treated as a straight segment.</source>
-      <translation>Polilerro-segmentu bakoitzaren luzera maximoa.
-Hemen '0' ezarri bada, spline osoa segmentu zuzen gisa tratatuko da.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="567"/>
-      <source>All objects containing faces will be exported as 3D polyfaces</source>
-      <translation>Aurpegiak dituzten objektu guztiak 3D poligono gisa esportatuko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="587"/>
-      <source>Drawing Views will be exported as blocks.
-This might fail for post DXF R12 templates.</source>
-      <translation>Marrazki-bistak bloke modura esportatuko dira.
-Horrek huts egin dezake DXF R12 ondoko txantiloiekin.</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="611"/>
-      <source>Exported objects will be projected to reflect the current view direction</source>
-      <translation>Esportatutako objektuak uneko bistaren norabidea islatzeko moduan proiektatuko dira</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="47"/>
-      <source>Method chosen for importing SVG object color to FreeCAD</source>
-      <translation>SVG objektuen kolorea FreeCADera inportatzeko hautatutako metodoa</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="82"/>
-      <source>If checked, no units conversion will occur.
-One unit in the SVG file will translate as one millimeter. </source>
-      <translation>Markatuta badago, unitateak ez dira bihurtuko.
-SVG fitxategiko unitate bat milimetro bat izango da. </translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="128"/>
-      <source>Style of SVG file to write when exporting a sketch</source>
-      <translation>Krokis bat esportatzean idatziko den SVG fitxategiaren estiloa</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="158"/>
-      <source>All white lines will appear in black in the SVG for better readability against white backgrounds</source>
-      <translation>Lerro zuri guztiak beltz agertuko dira SVG fitxategian, atzeko plano zuriekin hobeto irakurri daitezen</translation>
-    </message>
-    <message>
-      <location filename="preferences-svg.ui" line="204"/>
-      <source>Versions of Open CASCADE older than version 6.8 don't support arc projection.
-In this case arcs will be discretized into small line segments.
-This value is the maximum segment length. </source>
-      <translation>Open CASCADE 6.8 baino zaharragoak diren bertsioek ez dute arkuen proiekzioa onartzen.
-Kasu horretan, arkuak lerro-segmentu txikien bidez marraztuko dira.
-Balio hau segmentu-luzera maximoa da. </translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="310"/>
-      <source>If checked, an additional border is displayed around the grid, showing the main square size in the bottom left border</source>
-      <translation>Markatuta badago, ertz gehigarria bistaratuko da saretaren inguruan, lauki nagusiaren tamaina beheko ezkerreko ertzean erakutsita</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="313"/>
-      <source>Show grid border</source>
-      <translation>Erakutsi saretaren ertza</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="475"/>
-      <source>Override unit</source>
-      <translation>Gainidatzi unitatea</translation>
-    </message>
-    <message>
-      <location filename="preferences-drafttexts.ui" line="495"/>
-      <source>By leaving this field blank, the dimension measurements will be shown in the current unit defined in FreeCAD. By indicating a unit here such as m or cm, you can force new dimensions to be shown in that unit.</source>
-      <translation>Eremu hau hutsik uzten bada, koten neurketak FreeCADek definitutako uneko unitatean erakutsiko dira. Hemen unitate bat adierazten bada, adibidez m edo cm, kota berriak unitate horretan erakutsi daitezen behartu daiteke.</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="257"/>
-      <source>The resolution to draw the patterns in. Default value is 128. Higher values give better resolutions, lower values make drawing faster</source>
-      <translation>Ereduak marrazteko erabiliko den bereizmena. Balio lehenetsia 128 da. Balio altuagoek bereizmen hobeak ematen dituzte, balio baxuagoek marraztea azkartzen dute</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="280"/>
-      <source>Hatch Pattern default size</source>
-      <translation>Itzaleztadura-ereduaren tamaina lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftvisual.ui" line="300"/>
-      <source>The default size of hatch patterns</source>
-      <translation>Itzaleztadura-ereduaren tamaina lehenetsia</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="329"/>
-      <source>If set, the grid will have its two main axes colored in red, green or blue when they match global axes</source>
-      <translation>Ezarrita badago, saretaren bi ardatz nagusiak gorriz, berdez edo urdinez margotuko dira ardatz globalekin bat datozenean</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="332"/>
-      <source>Use colored axes</source>
-      <translation>Erabili ardatz koloredunak</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="506"/>
-      <source>Grid color and transparency</source>
-      <translation>Saretaren kolorea eta gardentasuna</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="526"/>
-      <source>The color of the grid</source>
-      <translation>Saretaren kolorea</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftsnap.ui" line="546"/>
-      <source>The overall transparency of the grid</source>
-      <translation>Saretaren gardentasun orokorra</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="873"/>
-      <source>Global</source>
-      <translation>Globala</translation>
-    </message>
-    <message>
-      <location filename="preferences-draftinterface.ui" line="895"/>
-      <source>G</source>
-      <translation>G</translation>
-    </message>
-    <message>
-      <location filename="preferences-dxf.ui" line="71"/>
-      <source>Python exporter is used, otherwise the newer C++ is used.
-Note: C++ exporter is faster, but is not as featureful yet</source>
-      <translation>Python esportatzailea erabiliko da, bestela C++ berriagoa erabiliko da.
-Oharra: C++ esportatzailea azkarragoa da, baina oraindik eginbide gutxiago ditu.</translation>
-    </message>
-  </context>
-  <context>
     <name>ImportAirfoilDAT</name>
     <message>
       <location filename="importAirfoilDAT.py" line="186"/>
       <source>Did not find enough coordinates</source>
-      <translation type="unfinished">Did not find enough coordinates</translation>
-    </message>
-  </context>
-  <context>
-    <name>ImportDWG</name>
-    <message>
-      <location filename="importDWG.py" line="233"/>
-      <source>Conversion successful</source>
-      <translation>Bihurketa ongi egin da</translation>
-    </message>
-    <message>
-      <location filename="importDWG.py" line="277"/>
-      <source>Converting:</source>
-      <translation>Bihurtzen:</translation>
+      <translation>Ez da koordenatu nahikorik aurkitu</translation>
     </message>
   </context>
   <context>
@@ -5328,7 +2949,67 @@ Oharra: C++ esportatzailea azkarragoa da, baina oraindik eginbide gutxiago ditu.
   <context>
     <name>Workbench</name>
     <message>
-      <location filename="gui_snapper.py" line="1476"/>
+      <location filename="InitGui.py" line="104"/>
+      <source>Draft creation tools</source>
+      <translation>Zirriborroak sortzeko tresnak</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="107"/>
+      <source>Draft annotation tools</source>
+      <translation>Zirriborroetan oharpenak sartzeko tresnak</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="110"/>
+      <source>Draft modification tools</source>
+      <translation>Zirriborroak aldatzeko tresnak</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="113"/>
+      <source>Draft utility tools</source>
+      <translation>Zirriborroen utilitate-tresnak</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="118"/>
+      <source>&amp;Drafting</source>
+      <translation>&amp;Zirriborroa</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="121"/>
+      <source>&amp;Annotation</source>
+      <translation>&amp;Oharpena</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="124"/>
+      <source>&amp;Modification</source>
+      <translation>&amp;Aldaketa</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="127"/>
+      <source>&amp;Utilities</source>
+      <translation>&amp;Utilitateak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="50"/>
+      <source>Arc tools</source>
+      <translation>Arku-tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="58"/>
+      <source>BÃ©zier tools</source>
+      <translation>Bezier tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="58"/>
+      <source>Bezier tools</source>
+      <translation>Bezier tresnak</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="89"/>
+      <source>Array tools</source>
+      <translation>Matrize-tresnak</translation>
+    </message>
+    <message>
+      <location filename="gui_snapper.py" line="1470"/>
       <source>Draft Snap</source>
       <translation>Zirriborro-atxikitzea</translation>
     </message>
@@ -5336,323 +3017,14 @@ Oharra: C++ esportatzailea azkarragoa da, baina oraindik eginbide gutxiago ditu.
   <context>
     <name>draft</name>
     <message>
-      <location filename="DraftGui.py" line="330"/>
-      <source>Draft Command Bar</source>
-      <translation>Zirriborroen komando-barra</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="832"/>
-      <source>Toggle construction mode</source>
-      <translation>Txandakatu eraikuntza modua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2054"/>
-      <source>Autogroup off</source>
-      <translation>Talde automatikoa desgaituta</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="722"/>
-      <source>active command:</source>
-      <translation>Komando aktiboa:</translation>
-    </message>
-    <message>
-      <location filename="gui_groups.py" line="299"/>
-      <source>None</source>
-      <translation>Bat ere ez</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="724"/>
-      <source>Active Draft command</source>
-      <translation>Zirriborro-komando aktiboa</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="725"/>
-      <source>X coordinate of next point</source>
-      <translation>Hurrengo puntuaren X koordenatua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1056"/>
-      <source>X</source>
-      <translation>X</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="727"/>
-      <source>Y</source>
-      <translation>Y</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="728"/>
-      <source>Z</source>
-      <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="729"/>
-      <source>Y coordinate of next point</source>
-      <translation>Hurrengo puntuaren Y koordenatua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="730"/>
-      <source>Z coordinate of next point</source>
-      <translation>Hurrengo puntuaren Z koordenatua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="731"/>
-      <source>Enter point</source>
-      <translation>Sartu puntua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="733"/>
-      <source>Enter a new point with the given coordinates</source>
-      <translation>Sartu emandako koordenatuak dituen puntu berri bat</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="734"/>
-      <source>Length</source>
-      <translation>Luzera</translation>
-    </message>
-    <message>
-      <location filename="gui_trimex.py" line="220"/>
-      <source>Angle</source>
-      <translation>Angelua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="736"/>
-      <source>Length of current segment</source>
-      <translation>Uneko segmentuaren luzera</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="737"/>
-      <source>Angle of current segment</source>
-      <translation>Uneko segmentuaren angelua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1105"/>
-      <source>Radius</source>
-      <translation>Erradioa</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1106"/>
-      <source>Radius of Circle</source>
-      <translation>Zirkuluaren erradioa</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="766"/>
-      <source>If checked, command will not finish until you press the command button again</source>
-      <translation>Markatuta badago, komandoa ez da amaituko komando-botoia berriro sakatzen duzun arte</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="772"/>
-      <source>&amp;OCC-style offset</source>
-      <translation>&amp;OCC estiloko desplazamendua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="792"/>
-      <source>Sides</source>
-      <translation>Aldeak</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="793"/>
-      <source>Number of sides</source>
-      <translation>Alde kopurua</translation>
-    </message>
-    <message>
-      <location filename="gui_offset.py" line="324"/>
-      <source>Offset</source>
-      <translation>Desplazamendua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="659"/>
-      <source>Auto</source>
-      <translation>Automatikoa</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="799"/>
-      <source>Text string to draw</source>
-      <translation>Marraztuko den testu-katea</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="800"/>
-      <source>String</source>
-      <translation>Katea</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="801"/>
-      <source>Height of text</source>
-      <translation>Testuaren altuera</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="802"/>
-      <source>Height</source>
-      <translation>Altuera</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="803"/>
-      <source>Intercharacter spacing</source>
-      <translation>Karaktereen arteko tartea</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="804"/>
-      <source>Tracking</source>
-      <translation>Jarraipena</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="805"/>
-      <source>Full path to font file:</source>
-      <translation>Letra-tipoaren fitxategiaren bide osoa:</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="806"/>
-      <source>Open a FileChooser for font file</source>
-      <translation>Ireki fitxategi-hautatzaile bat letra-tipoa aukeratzeko</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="944"/>
-      <source>Line</source>
-      <translation>Lerroa</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="953"/>
-      <source>DWire</source>
-      <translation>DWire</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="971"/>
-      <source>Circle</source>
-      <translation>Zirkulua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="980"/>
-      <source>Arc</source>
-      <translation>Arkua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="987"/>
-      <source>Point</source>
-      <translation>Puntua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1015"/>
-      <source>Label</source>
-      <translation>Etiketa</translation>
-    </message>
-    <message>
-      <location filename="gui_trimex.py" line="215"/>
-      <source>Distance</source>
-      <translation>Distantzia</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1192"/>
-      <source>Pick Object</source>
-      <translation>Aukeratu objektua</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1198"/>
-      <source>Edit</source>
-      <translation>Editatu</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1261"/>
-      <source>Global X</source>
-      <translation>X globala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1262"/>
-      <source>Global Y</source>
-      <translation>Y globala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1263"/>
-      <source>Global Z</source>
-      <translation>Z globala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1253"/>
-      <source>Local X</source>
-      <translation>X lokala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1254"/>
-      <source>Local Y</source>
-      <translation>Y lokala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1255"/>
-      <source>Local Z</source>
-      <translation>Z lokala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1496"/>
-      <source>Invalid Size value. Using 200.0.</source>
-      <translation>Baliogabeko tamaina-balioa. 200.0 erabiliko da.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1504"/>
-      <source>Invalid Tracking value. Using 0.</source>
-      <translation>Jarraipen-balio baliogabea. 0 erabiltzen.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1518"/>
-      <source>Please enter a text string.</source>
-      <translation>Sartu testu-kate bat.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1527"/>
-      <source>Select a Font file</source>
-      <translation>Hautatu letra-tipo fitxategi bat</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1560"/>
-      <source>Please enter a font file.</source>
-      <translation>Sartu letra-tipo fitxategi bat.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2374"/>
-      <source>Faces</source>
-      <translation>Aurpegiak</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2375"/>
-      <source>Remove</source>
-      <translation>Kendu</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2376"/>
-      <source>Add</source>
-      <translation>Gehitu</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2377"/>
-      <source>Facebinder elements</source>
-      <translation>Aurpegi-zorro elementuak</translation>
-    </message>
-    <message>
-      <location filename="gui_rotate.py" line="276"/>
-      <source>Copy</source>
-      <translation>Kopiatu</translation>
-    </message>
-    <message>
-      <location filename="importDXF.py" line="146"/>
-      <source>The DXF import/export libraries needed by FreeCAD to handle
-the DXF format were not found on this system.
-Please either enable FreeCAD to download these libraries:
-  1 - Load Draft workbench
-  2 - Menu Edit &gt; Preferences &gt; Import-Export &gt; DXF &gt; Enable downloads
-Or download these libraries manually, as explained on
-https://github.com/yorikvanhavre/Draft-dxf-importer
-To enabled FreeCAD to download these libraries, answer Yes.</source>
-      <translation>FreeCADek DXFak inportatu eta esportatzeko behar dituen
-liburutegiak ez daude sistema honetan.
-Bi aukera dituzu, FreeCAD gaitu liburutegi horiek deskargatzeko:
-  1 - Kargatu zirriborroen lan-mahaia
-  2 - Aktibatu Editatu &gt; Hobespenak &gt; Inportatu-Esportatu &gt; DXF &gt; Gaitu deskargak
-Edo deskargatu liburutegiak eskuz, honako estekak azaltzen den bezala:
-https://github.com/yorikvanhavre/Draft-dxf-importer
-FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translation>
-    </message>
-    <message>
       <location filename="DraftGui.py" line="745"/>
       <source>Relative</source>
       <translation>Erlatiboa</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="750"/>
+      <source>Global</source>
+      <translation>Globala</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="768"/>
@@ -5663,6 +3035,16 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="DraftGui.py" line="784"/>
       <source>Close</source>
       <translation>Itxi</translation>
+    </message>
+    <message>
+      <location filename="gui_rotate.py" line="276"/>
+      <source>Copy</source>
+      <translation>Kopiatu</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="81"/>
+      <source>Subelement mode</source>
+      <translation>Azpi-elementuen modua</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="86"/>
@@ -5735,14 +3117,150 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Ziklo-atxikitzeko objektua</translation>
     </message>
     <message>
+      <location filename="DraftGui.py" line="156"/>
+      <source>Toggle near snap on/off</source>
+      <translation>Aktibatu/desaktibatu atxikitze hurbila</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="330"/>
+      <source>Draft Command Bar</source>
+      <translation>Zirriborroen komando-barra</translation>
+    </message>
+    <message>
+      <location filename="gui_selectplane.py" line="369"/>
+      <source>Top</source>
+      <translation>Goikoa</translation>
+    </message>
+    <message>
+      <location filename="gui_selectplane.py" line="381"/>
+      <source>Front</source>
+      <translation>Aurrekoa</translation>
+    </message>
+    <message>
+      <location filename="gui_selectplane.py" line="393"/>
+      <source>Side</source>
+      <translation>Aldea</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="659"/>
+      <source>Auto</source>
+      <translation>Automatikoa</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="299"/>
+      <source>None</source>
+      <translation>Bat ere ez</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="722"/>
+      <source>active command:</source>
+      <translation>Komando aktiboa:</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="724"/>
+      <source>Active Draft command</source>
+      <translation>Zirriborro-komando aktiboa</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="725"/>
+      <source>X coordinate of next point</source>
+      <translation>Hurrengo puntuaren X koordenatua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1056"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="727"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="728"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="729"/>
+      <source>Y coordinate of next point</source>
+      <translation>Hurrengo puntuaren Y koordenatua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="730"/>
+      <source>Z coordinate of next point</source>
+      <translation>Hurrengo puntuaren Z koordenatua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="731"/>
+      <source>Enter point</source>
+      <translation>Sartu puntua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="733"/>
+      <source>Enter a new point with the given coordinates</source>
+      <translation>Sartu emandako koordenatuak dituen puntu berri bat</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="734"/>
+      <source>Length</source>
+      <translation>Luzera</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="220"/>
+      <source>Angle</source>
+      <translation>Angelua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="736"/>
+      <source>Length of current segment</source>
+      <translation>Uneko segmentuaren luzera</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="737"/>
+      <source>Angle of current segment</source>
+      <translation>Uneko segmentuaren angelua</translation>
+    </message>
+    <message>
       <location filename="DraftGui.py" line="741"/>
       <source>Check this to lock the current angle</source>
       <translation>Markatu hau uneko angelua blokeatzeko</translation>
     </message>
     <message>
+      <location filename="DraftGui.py" line="1105"/>
+      <source>Radius</source>
+      <translation>Erradioa</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1106"/>
+      <source>Radius of Circle</source>
+      <translation>Zirkuluaren erradioa</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="748"/>
+      <source>Coordinates relative to last point or to coordinate system origin
+if is the first point to set</source>
+      <translation>Koordenatuak azken puntuarekiko edo koordenatu-sistemaren jatorriarekiko,
+ezarriko den lehen puntua bada</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="753"/>
+      <source>Coordinates relative to global coordinate system.
+Uncheck to use working plane coordinate system</source>
+      <translation>Koordenatuak koordenatu-sistema globalarekiko.
+Desmarkatu laneko planoaren koordenatu-sistema erabiltzeko</translation>
+    </message>
+    <message>
       <location filename="DraftGui.py" line="755"/>
       <source>Filled</source>
       <translation>Beteta</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="759"/>
+      <source>Check this if the object should appear as filled, otherwise it will appear as wireframe.
+Not available if Draft preference option 'Use Part Primitives' is enabled</source>
+      <translation>Markatu hau objektuak beteta agertu behar badu, bestela alanbre-bilbe gisa agertuko da.
+Ez dago erabilgarri zirriborroen 'Erabili piezen jatorrizkoak' aukera gaituta badago.</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="761"/>
@@ -5753,6 +3271,21 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="DraftGui.py" line="763"/>
       <source>Finishes the current drawing or editing operation</source>
       <translation>Uneko marrazte- edo editatze-eragiketa amaitzen du</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="766"/>
+      <source>If checked, command will not finish until you press the command button again</source>
+      <translation>Markatuta badago, komandoa ez da amaituko komando-botoia berriro sakatzen duzun arte</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="771"/>
+      <source>If checked, an OCC-style offset will be performedinstead of the classic offset</source>
+      <translation>Markatuta badago, OCC estiloko desplazamendua egingo da, desplazamendu klasikoaren ordez</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="772"/>
+      <source>&amp;OCC-style offset</source>
+      <translation>&amp;OCC estiloko desplazamendua</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="782"/>
@@ -5790,14 +3323,19 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Kota honek neurtuko duen eta lehendik dagoen ertz bat hautatzen du</translation>
     </message>
     <message>
+      <location filename="DraftGui.py" line="792"/>
+      <source>Sides</source>
+      <translation>Aldeak</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="793"/>
+      <source>Number of sides</source>
+      <translation>Alde kopurua</translation>
+    </message>
+    <message>
       <location filename="DraftGui.py" line="796"/>
       <source>If checked, objects will be copied instead of moved. Preferences -&gt; Draft -&gt; Global copy mode to keep this mode in next commands</source>
       <translation>Markatuta badago, objektuak kopiatu egingo dira, ez mugitu. 'Hobespenak -&gt; Zirriborroa -&gt; Kopiatze modu globala' modu hau hurrengo komandoetan mantendu nahi bada</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="81"/>
-      <source>Subelement mode</source>
-      <translation>Azpi-elementuen modua</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="797"/>
@@ -5810,34 +3348,44 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Hautatuta badaude, azpi-elementuek objektu osoa ordeztuko dute</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="369"/>
-      <source>Top</source>
-      <translation>Goikoa</translation>
+      <location filename="DraftGui.py" line="799"/>
+      <source>Text string to draw</source>
+      <translation>Marraztuko den testu-katea</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="381"/>
-      <source>Front</source>
-      <translation>Aurrekoa</translation>
+      <location filename="DraftGui.py" line="800"/>
+      <source>String</source>
+      <translation>Katea</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="393"/>
-      <source>Side</source>
-      <translation>Aldea</translation>
+      <location filename="DraftGui.py" line="801"/>
+      <source>Height of text</source>
+      <translation>Testuaren altuera</translation>
     </message>
     <message>
-      <location filename="gui_selectplane.py" line="536"/>
-      <source>Current working plane</source>
-      <translation>Uneko laneko planoa</translation>
+      <location filename="DraftGui.py" line="802"/>
+      <source>Height</source>
+      <translation>Altuera</translation>
     </message>
     <message>
-      <location filename="InitGui.py" line="46"/>
-      <source>Draft</source>
-      <translation>Zirriborroa</translation>
+      <location filename="DraftGui.py" line="803"/>
+      <source>Intercharacter spacing</source>
+      <translation>Karaktereen arteko tartea</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="156"/>
-      <source>Toggle near snap on/off</source>
-      <translation>Aktibatu/desaktibatu atxikitze hurbila</translation>
+      <location filename="DraftGui.py" line="804"/>
+      <source>Tracking</source>
+      <translation>Jarraipena</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="805"/>
+      <source>Full path to font file:</source>
+      <translation>Letra-tipoaren fitxategiaren bide osoa:</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="806"/>
+      <source>Open a FileChooser for font file</source>
+      <translation>Ireki fitxategi-hautatzaile bat letra-tipoa aukeratzeko</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="807"/>
@@ -5850,14 +3398,246 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Sakatu botoi hau testu-objektua sortzeko, edo amaitu zure testua bi lerro zurirekin</translation>
     </message>
     <message>
-      <location filename="gui_trimex.py" line="217"/>
-      <source>Offset distance</source>
-      <translation>Desplazamendu-distantzia</translation>
+      <location filename="gui_selectplane.py" line="536"/>
+      <source>Current working plane</source>
+      <translation>Uneko laneko planoa</translation>
     </message>
     <message>
       <location filename="DraftGui.py" line="831"/>
       <source>Change default style for new objects</source>
       <translation>Aldatu objektu berrien estilo lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="832"/>
+      <source>Toggle construction mode</source>
+      <translation>Txandakatu eraikuntza modua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2054"/>
+      <source>Autogroup off</source>
+      <translation>Talde automatikoa desgaituta</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="944"/>
+      <source>Line</source>
+      <translation>Lerroa</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="953"/>
+      <source>DWire</source>
+      <translation>DWire</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="971"/>
+      <source>Circle</source>
+      <translation>Zirkulua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="980"/>
+      <source>Arc</source>
+      <translation>Arkua</translation>
+    </message>
+    <message>
+      <location filename="gui_rotate.py" line="279"/>
+      <source>Rotate</source>
+      <translation>Biratu</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="987"/>
+      <source>Point</source>
+      <translation>Puntua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1015"/>
+      <source>Label</source>
+      <translation>Etiketa</translation>
+    </message>
+    <message>
+      <location filename="gui_offset.py" line="324"/>
+      <source>Offset</source>
+      <translation>Desplazamendua</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="215"/>
+      <source>Distance</source>
+      <translation>Distantzia</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="217"/>
+      <source>Offset distance</source>
+      <translation>Desplazamendu-distantzia</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1094"/>
+      <source>Trimex</source>
+      <translation>Muxarratu/luzatu</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1192"/>
+      <source>Pick Object</source>
+      <translation>Aukeratu objektua</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1198"/>
+      <source>Edit</source>
+      <translation>Editatu</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1249"/>
+      <source>Local u0394X</source>
+      <translation>u0394X lokala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1250"/>
+      <source>Local u0394Y</source>
+      <translation>u0394Y lokala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1251"/>
+      <source>Local u0394Z</source>
+      <translation>u0394Z lokala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1253"/>
+      <source>Local X</source>
+      <translation>X lokala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1254"/>
+      <source>Local Y</source>
+      <translation>Y lokala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1255"/>
+      <source>Local Z</source>
+      <translation>Z lokala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1257"/>
+      <source>Global u0394X</source>
+      <translation>u0394X globala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1258"/>
+      <source>Global u0394Y</source>
+      <translation>u0394Y globala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1259"/>
+      <source>Global u0394Z</source>
+      <translation>u0394Z globala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1261"/>
+      <source>Global X</source>
+      <translation>X globala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1262"/>
+      <source>Global Y</source>
+      <translation>Y globala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1263"/>
+      <source>Global Z</source>
+      <translation>Z globala</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1496"/>
+      <source>Invalid Size value. Using 200.0.</source>
+      <translation>Baliogabeko tamaina-balioa. 200.0 erabiliko da.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1504"/>
+      <source>Invalid Tracking value. Using 0.</source>
+      <translation>Jarraipen-balio baliogabea. 0 erabiltzen.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1518"/>
+      <source>Please enter a text string.</source>
+      <translation>Sartu testu-kate bat.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1527"/>
+      <source>Select a Font file</source>
+      <translation>Hautatu letra-tipo fitxategi bat</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="1560"/>
+      <source>Please enter a font file.</source>
+      <translation>Sartu letra-tipo fitxategi bat.</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2047"/>
+      <source>Autogroup:</source>
+      <translation>Talde automatikoa:</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2374"/>
+      <source>Faces</source>
+      <translation>Aurpegiak</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2375"/>
+      <source>Remove</source>
+      <translation>Kendu</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2376"/>
+      <source>Add</source>
+      <translation>Gehitu</translation>
+    </message>
+    <message>
+      <location filename="DraftGui.py" line="2377"/>
+      <source>Facebinder elements</source>
+      <translation>Aurpegi-zorro elementuak</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="286"/>
+      <source>LibreDWG error</source>
+      <translation>LibreDWG errorea</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="295"/>
+      <source>Converting:</source>
+      <translation>Bihurtzen:</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="228"/>
+      <source>Conversion successful</source>
+      <translation>Bihurketa ongi egin da</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="231"/>
+      <source>Error during DWG conversion. Try moving the DWG file to a directory path without spaces and non-english characters, or try saving to a lower DWG version.</source>
+      <translation>Errorea DWGa bihurtzean. Saiatu DWG fitxategia zuriunerik gabeko eta ingelesezkoak ez diren karaktererik gabeko direktorio-bide batera, edo saiatu DGW bertsio zaharrago batean gordetzen.</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="300"/>
+      <source>ODA File Converter not found</source>
+      <translation>Ez da aurkitu ODA fitxategi-bihurtzailea</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="310"/>
+      <source>QCAD error</source>
+      <translation>QCAD errorea</translation>
+    </message>
+    <message>
+      <location filename="make_sketch.py" line="139"/>
+      <source>All Shapes must be coplanar</source>
+      <translation>Forma guztiek planokide izan behar dute</translation>
+    </message>
+    <message>
+      <location filename="WorkingPlane.py" line="696"/>
+      <source>Selected Shapes must define a plane
+</source>
+      <translation>Hautatutako formek plano bat definitu behar dute
+</translation>
+    </message>
+    <message>
+      <location filename="WorkingPlane.py" line="704"/>
+      <source>Selected Shapes must define a plane</source>
+      <translation>Hautatutako formek plano bat definitu behar dute</translation>
     </message>
     <message>
       <location filename="make_label.py" line="196"/>
@@ -5930,6 +3710,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Hainbat alanbre edo ertz aurkitu dira: haiek hari bihurtzen</translation>
     </message>
     <message>
+      <location filename="upgrade.py" line="541"/>
+      <source>Found several non-treatable objects: creating compound</source>
+      <translation>Tratatu ezin daitezkeen hainbat objektu aurkitu dira: konposatua sortzen</translation>
+    </message>
+    <message>
       <location filename="upgrade.py" line="512"/>
       <source>trying: closing it</source>
       <translation>saiatzen: hura ixten</translation>
@@ -5950,11 +3735,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Puntuak aurkitu dira: konposatuak sortzen</translation>
     </message>
     <message>
-      <location filename="upgrade.py" line="541"/>
-      <source>Found several non-treatable objects: creating compound</source>
-      <translation>Tratatu ezin daitezkeen hainbat objektu aurkitu dira: konposatua sortzen</translation>
-    </message>
-    <message>
       <location filename="upgrade.py" line="544"/>
       <source>Unable to upgrade these objects.</source>
       <translation>Ezin izan dira objektu hauek eguneratu.</translation>
@@ -5968,6 +3748,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="mirror.py" line="94"/>
       <source>The two points are coincident</source>
       <translation>Bi puntuak bat datoz</translation>
+    </message>
+    <message>
+      <location filename="mirror.py" line="113"/>
+      <source>mirrored</source>
+      <translation>ispilatua</translation>
     </message>
     <message>
       <location filename="downgrade.py" line="238"/>
@@ -6030,9 +3815,19 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Okerreko sarrera: kokapen bat, bektore bat edo biraketa bat izan behar du.</translation>
     </message>
     <message>
+      <location filename="make_arc_3points.py" line="130"/>
+      <source>Points:</source>
+      <translation>Puntuak:</translation>
+    </message>
+    <message>
       <location filename="make_arc_3points.py" line="131"/>
       <source>Wrong input: must be list or tuple of three points exactly.</source>
       <translation>Okerreko sarrera: hiru puntu zehatzen zerrenda edo tupla izan behar du.</translation>
+    </message>
+    <message>
+      <location filename="make_arc_3points.py" line="138"/>
+      <source>Placement:</source>
+      <translation>Kokapena:</translation>
     </message>
     <message>
       <location filename="make_arc_3points.py" line="139"/>
@@ -6043,6 +3838,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="make_arc_3points.py" line="153"/>
       <source>Wrong input: incorrect type of points.</source>
       <translation>Okerreko sarrera: puntu mota okerra.</translation>
+    </message>
+    <message>
+      <location filename="make_arc_3points.py" line="159"/>
+      <source>Cannot generate shape:</source>
+      <translation>Ezin da forma sortu:</translation>
     </message>
     <message>
       <location filename="make_arc_3points.py" line="166"/>
@@ -6262,11 +4062,21 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
 </translation>
     </message>
     <message>
+      <location filename="make_sketch.py" line="104"/>
+      <source>No shape found</source>
+      <translation>Ez da formarik aurkitu</translation>
+    </message>
+    <message>
       <location filename="make_sketch.py" line="109"/>
       <source>All Shapes must be planar
 </source>
       <translation>Forma guztiek planarrak izan behar dute
 </translation>
+    </message>
+    <message>
+      <location filename="make_sketch.py" line="111"/>
+      <source>All Shapes must be planar</source>
+      <translation>Forma guztiek planar izan behar dute</translation>
     </message>
     <message>
       <location filename="make_sketch.py" line="135"/>
@@ -6319,6 +4129,16 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="make_label.py" line="264"/>
       <source>Wrong input: subelement not in object.</source>
       <translation>Okerreko sarrera: azpielementua ez dago objektuan.</translation>
+    </message>
+    <message>
+      <location filename="make_label.py" line="272"/>
+      <source>Wrong input: label_type must be a string.</source>
+      <translation>Okerreko sarrera: label_type aldagaiak kate bat izan behar du.</translation>
+    </message>
+    <message>
+      <location filename="make_label.py" line="277"/>
+      <source>Wrong input: label_type must be one of the following: </source>
+      <translation>Okerreko sarrera: label_type aldagaiak hurrengoetako bat izan behar du: </translation>
     </message>
     <message>
       <location filename="make_label.py" line="278"/>
@@ -6411,19 +4231,269 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Hautatu geruza-edukiak</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="147"/>
+      <location filename="view_layer.py" line="421"/>
+      <source>Merge layer duplicates</source>
+      <translation>Fusionatu geruza bikoiztuak</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="469"/>
+      <source>Add new layer</source>
+      <translation>Gehitu geruza berria</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="454"/>
+      <source>Relabeling layer:</source>
+      <translation>Berretiketatuko den geruza:</translation>
+    </message>
+    <message>
+      <location filename="view_layer.py" line="458"/>
+      <source>Merging layer:</source>
+      <translation>Fusionatuko den geruza:</translation>
+    </message>
+    <message>
+      <location filename="view_base.py" line="402"/>
+      <source>Please load the Draft Workbench to enable editing this object</source>
+      <translation>Kargatu zirriborroen lan-mahaia objektu honen edizioa gaitzeko</translation>
+    </message>
+    <message>
+      <location filename="InitGui.py" line="46"/>
+      <source>Draft</source>
+      <translation>Zirriborroa</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="155"/>
       <source>custom</source>
       <translation>pertsonalizatua</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="133"/>
+      <location filename="init_draft_statusbar.py" line="140"/>
+      <source>Unable to convert input into a  scale factor</source>
+      <translation>Sarrera ezin izan da eskala-faktore bihurtu</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="141"/>
       <source>Unable to convert input into a scale factor</source>
       <translation>Sarrera ezin izan da eskala-faktore bihurtu</translation>
     </message>
     <message>
-      <location filename="init_draft_statusbar.py" line="151"/>
+      <location filename="init_draft_statusbar.py" line="155"/>
+      <source>Set custom scale</source>
+      <translation>Ezarri eskala pertsonalizatua</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="159"/>
       <source>Set custom annotation scale in format x:x, x=x</source>
       <translation>Ezarri oharpen-eskala pertsonalizatua x:x, x=x formatuan</translation>
+    </message>
+    <message>
+      <location filename="init_draft_statusbar.py" line="214"/>
+      <source>Set the scale used by draft annotation tools</source>
+      <translation>Ezarri zirriborro-oharpenen tresnek erabilitako eskala</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="650"/>
+      <source>Solids:</source>
+      <translation>Solidoak:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="651"/>
+      <source>Faces:</source>
+      <translation>Aurpegiak:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="652"/>
+      <source>Wires:</source>
+      <translation>Alanbreak:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="653"/>
+      <source>Edges:</source>
+      <translation>Ertzak:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="654"/>
+      <source>Vertices:</source>
+      <translation>Erpinak:</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="658"/>
+      <source>Face</source>
+      <translation>Aurpegia</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="663"/>
+      <source>Wire</source>
+      <translation>Alanbrea</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="699"/>
+      <source>different types</source>
+      <translation>mota anitz</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="709"/>
+      <source>Objects have different placements. Distance between the two base points: </source>
+      <translation>Objektuek kokapen desberdinak dituzte. Bi oinarru-puntuen arteko distantzia: </translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="712"/>
+      <source>has a different value</source>
+      <translation>beste balio bat du</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="715"/>
+      <source>doesn't exist in one of the objects</source>
+      <translation>ez da existitzen objektuetako batean</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="827"/>
+      <source>%s shares a base with %d other objects. Please check if you want to modify this.</source>
+      <translation>%s objektuak oinarri bat partekatzen du beste %d objekturekin. Egiaztatu hau aldatu nahi duzun.</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="833"/>
+      <source>%s cannot be modified because its placement is readonly.</source>
+      <translation>%s ezin da aldatu bere kokapena irakurtzeko soilik delako.</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="977"/>
+      <source>Wrong input: unknown document.</source>
+      <translation>Okerreko sarrera: dokumentu ezezaguna.</translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="1055"/>
+      <source>This function will be deprecated in </source>
+      <translation>Funtzio hau zaharkituta geratuko da hemen: </translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="1059"/>
+      <source>Please use </source>
+      <translation>Erabili </translation>
+    </message>
+    <message>
+      <location filename="utils.py" line="1059"/>
+      <source>This function will be deprecated. </source>
+      <translation>Funtzio hau zaharkituta geratuko da laster. </translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="169"/>
+      <source>Snap Lock</source>
+      <translation>Atxiki blokeari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="170"/>
+      <source>Snap Endpoint</source>
+      <translation>Atxiki amaierako puntuari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="171"/>
+      <source>Snap Midpoint</source>
+      <translation>Atxiki erdiko puntuari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="172"/>
+      <source>Snap Center</source>
+      <translation>Atxiki erdiguneari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="173"/>
+      <source>Snap Angle</source>
+      <translation>Atxiki angeluari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="174"/>
+      <source>Snap Intersection</source>
+      <translation>Atxiki ebakidurari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="175"/>
+      <source>Snap Perpendicular</source>
+      <translation>Atxiki perperndikularrari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="176"/>
+      <source>Snap Extension</source>
+      <translation>Atxiki hedadurari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="177"/>
+      <source>Snap Parallel</source>
+      <translation>Atxiki paraleloari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="178"/>
+      <source>Snap Special</source>
+      <translation>Atxiki bereziari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="179"/>
+      <source>Snap Near</source>
+      <translation>Atxiki hurbilari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="180"/>
+      <source>Snap Ortho</source>
+      <translation>Atxiki ortoari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="181"/>
+      <source>Snap Grid</source>
+      <translation>Atxiki saretari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="182"/>
+      <source>Snap WorkingPlane</source>
+      <translation>Atxiki laneko planoari</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="183"/>
+      <source>Snap Dimensions</source>
+      <translation>Atxiki kotei</translation>
+    </message>
+    <message>
+      <location filename="init_tools.py" line="187"/>
+      <source>Toggle Draft Grid</source>
+      <translation>Txandakatu zirriborro-sareta</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="81"/>
+      <source>No graphical interface</source>
+      <translation>Ez dago interfaze grafikorik</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="161"/>
+      <source>Unable to insert new object into a scaled part</source>
+      <translation>Ezin izan da objektu berria txertatu eskalatutako piezan</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="267"/>
+      <source>Symbol not implemented. Using a default symbol.</source>
+      <translation>Ikurra ez dago inplementatuta. Ikur lehenetsia erabiliko da.</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="333"/>
+      <source>Visibility off; removed from list: </source>
+      <translation>Ikusgaitasuna desaktibatuta; zerrendatik kendu da: </translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="603"/>
+      <source>image is Null</source>
+      <translation>Irudia nulua da</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="609"/>
+      <source>filename does not exist on the system or in the resource file</source>
+      <translation>Fitxategi-izena ez da existitzen sisteman edo baliabideen fitxategian</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="668"/>
+      <source>unable to load texture</source>
+      <translation>Ezin da testura kargatu</translation>
+    </message>
+    <message>
+      <location filename="gui_utils.py" line="738"/>
+      <source>Does not have 'ViewObject.RootNode'.</source>
+      <translation>Ez dauka 'ViewObject.RootNode'.</translation>
     </message>
     <message>
       <location filename="task_orthoarray.py" line="83"/>
@@ -6611,14 +4681,33 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Sortu testu-forma</translation>
     </message>
     <message>
-      <location filename="gui_downgrade.py" line="85"/>
-      <source>Downgrade</source>
-      <translation>Degradatu</translation>
+      <location filename="importDXF.py" line="146"/>
+      <source>The DXF import/export libraries needed by FreeCAD to handle
+the DXF format were not found on this system.
+Please either enable FreeCAD to download these libraries:
+  1 - Load Draft workbench
+  2 - Menu Edit &gt; Preferences &gt; Import-Export &gt; DXF &gt; Enable downloads
+Or download these libraries manually, as explained on
+https://github.com/yorikvanhavre/Draft-dxf-importer
+To enabled FreeCAD to download these libraries, answer Yes.</source>
+      <translation>FreeCADek DXFak inportatu eta esportatzeko behar dituen
+liburutegiak ez daude sistema honetan.
+Bi aukera dituzu, FreeCAD gaitu liburutegi horiek deskargatzeko:
+  1 - Kargatu zirriborroen lan-mahaia
+  2 - Aktibatu Editatu &gt; Hobespenak &gt; Inportatu-Esportatu &gt; DXF &gt; Gaitu deskargak
+Edo deskargatu liburutegiak eskuz, honako estekak azaltzen den bezala:
+https://github.com/yorikvanhavre/Draft-dxf-importer
+FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translation>
     </message>
     <message>
       <location filename="gui_upgrade.py" line="67"/>
       <source>Select an object to upgrade</source>
       <translation>Hautatu eguneratuko den objektua</translation>
+    </message>
+    <message>
+      <location filename="gui_downgrade.py" line="85"/>
+      <source>Downgrade</source>
+      <translation>Degradatu</translation>
     </message>
     <message>
       <location filename="gui_clone.py" line="79"/>
@@ -6716,6 +4805,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Sortu kota (erradiala)</translation>
     </message>
     <message>
+      <location filename="gui_dimensions.py" line="508"/>
+      <source>Edge too short!</source>
+      <translation>Ertz laburregia.</translation>
+    </message>
+    <message>
       <location filename="gui_dimensions.py" line="511"/>
       <source>Edges don't intersect!</source>
       <translation>Ertzek ez dute elkar ebakitzen!</translation>
@@ -6756,11 +4850,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Eguneratu</translation>
     </message>
     <message>
-      <location filename="gui_move.py" line="205"/>
-      <source>Move</source>
-      <translation>Mugitu</translation>
-    </message>
-    <message>
       <location filename="gui_move.py" line="81"/>
       <source>Select an object to move</source>
       <translation>Hautatu mugituko den objektua</translation>
@@ -6776,19 +4865,24 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Aukeratu amaiera-puntua</translation>
     </message>
     <message>
+      <location filename="gui_move.py" line="205"/>
+      <source>Move</source>
+      <translation>Mugitu</translation>
+    </message>
+    <message>
       <location filename="gui_rotate.py" line="282"/>
       <source>Some subelements could not be moved.</source>
       <translation>Zenbait azpielementu ezin dira mugitu.</translation>
     </message>
     <message>
-      <location filename="gui_pointarray.py" line="122"/>
-      <source>Point array</source>
-      <translation>Puntu-matrizea</translation>
-    </message>
-    <message>
       <location filename="gui_pointarray.py" line="104"/>
       <source>Please select exactly two objects, the base object and the point object, before calling this command.</source>
       <translation>Hautatu bi objektu, oinarri-objektua eta puntu-objektua, komando hau exekutatu baino lehen.</translation>
+    </message>
+    <message>
+      <location filename="gui_pointarray.py" line="122"/>
+      <source>Point array</source>
+      <translation>Puntu-matrizea</translation>
     </message>
     <message>
       <location filename="gui_togglemodes.py" line="73"/>
@@ -6891,14 +4985,14 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Erakutsi atxikipenen tresna-barra</translation>
     </message>
     <message>
-      <location filename="gui_array_simple.py" line="101"/>
-      <source>Array</source>
-      <translation>Matrizea</translation>
-    </message>
-    <message>
       <location filename="gui_array_simple.py" line="77"/>
       <source>Select an object to array</source>
       <translation>Hautatu matrize bihurtuko den objektua</translation>
+    </message>
+    <message>
+      <location filename="gui_array_simple.py" line="101"/>
+      <source>Array</source>
+      <translation>Matrizea</translation>
     </message>
     <message>
       <location filename="gui_arcs.py" line="89"/>
@@ -6921,11 +5015,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Sortu poligonoa</translation>
     </message>
     <message>
-      <location filename="gui_mirror.py" line="123"/>
-      <source>Mirror</source>
-      <translation>Ispilatu</translation>
-    </message>
-    <message>
       <location filename="gui_mirror.py" line="73"/>
       <source>Select an object to mirror</source>
       <translation>Hautatu ispilatuko den objektua</translation>
@@ -6936,6 +5025,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Aukeratu ispilatze-lerroaren hasiera-puntua</translation>
     </message>
     <message>
+      <location filename="gui_mirror.py" line="123"/>
+      <source>Mirror</source>
+      <translation>Ispilatu</translation>
+    </message>
+    <message>
       <location filename="gui_mirror.py" line="204"/>
       <source>Pick end point of mirror line</source>
       <translation>Aukeratu ispilatze-lerroaren amaiera-puntua</translation>
@@ -6944,11 +5038,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="gui_points.py" line="146"/>
       <source>Create Point</source>
       <translation>Sortu puntua</translation>
-    </message>
-    <message>
-      <location filename="gui_scale.py" line="353"/>
-      <source>Scale</source>
-      <translation>Eskala</translation>
     </message>
     <message>
       <location filename="gui_scale.py" line="87"/>
@@ -6966,9 +5055,24 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Aukeratu erreferentzia-distantzia oinarri-puntutik</translation>
     </message>
     <message>
+      <location filename="gui_scale.py" line="353"/>
+      <source>Scale</source>
+      <translation>Eskala</translation>
+    </message>
+    <message>
       <location filename="gui_scale.py" line="203"/>
       <source>Some subelements could not be scaled.</source>
       <translation>Zenbait azpielementu ezin dira eskalatu.</translation>
+    </message>
+    <message>
+      <location filename="gui_scale.py" line="333"/>
+      <source>Unable to scale object:</source>
+      <translation>Ezin da objektua eskalatu:</translation>
+    </message>
+    <message>
+      <location filename="gui_scale.py" line="337"/>
+      <source>Unable to scale objects:</source>
+      <translation>Ezin dira objektuak eskalatu:</translation>
     </message>
     <message>
       <location filename="gui_scale.py" line="340"/>
@@ -6981,13 +5085,23 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Aukeratu distantzia berria oinarri-puntutik</translation>
     </message>
     <message>
+      <location filename="gui_snapper.py" line="1543"/>
+      <source>(ON)</source>
+      <translation>(ON)</translation>
+    </message>
+    <message>
+      <location filename="gui_snapper.py" line="1546"/>
+      <source>(OFF)</source>
+      <translation>(OFF)</translation>
+    </message>
+    <message>
       <location filename="gui_shape2dview.py" line="109"/>
       <source>Create 2D view</source>
       <translation>Sortu 2D bista</translation>
     </message>
     <message>
       <location filename="gui_beziers.py" line="332"/>
-      <source>Bezier curve has been closed</source>
+      <source>BÃ©zier curve has been closed</source>
       <translation>Bezier kurba itxi da</translation>
     </message>
     <message>
@@ -7011,6 +5125,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Klik eta arrastatu hurrengo adabegia definitzeko</translation>
     </message>
     <message>
+      <location filename="gui_beziers.py" line="332"/>
+      <source>Bezier curve has been closed</source>
+      <translation>Bezier kurba itxi da</translation>
+    </message>
+    <message>
       <location filename="gui_beziers.py" line="382"/>
       <source>Click and drag to define next knot, or finish (A) or close (O)</source>
       <translation>Klik eta arrastatu hurrengo adabegia definitzeko, edo amaitu (A) edo itxi (o)</translation>
@@ -7019,11 +5138,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="gui_dimension_ops.py" line="55"/>
       <source>Flip dimension</source>
       <translation>Irauli kota</translation>
-    </message>
-    <message>
-      <location filename="gui_stretch.py" line="478"/>
-      <source>Stretch</source>
-      <translation>Luzatu</translation>
     </message>
     <message>
       <location filename="gui_stretch.py" line="75"/>
@@ -7056,6 +5170,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Laukizuzen bat alanbre bihurtzen</translation>
     </message>
     <message>
+      <location filename="gui_stretch.py" line="478"/>
+      <source>Stretch</source>
+      <translation>Luzatu</translation>
+    </message>
+    <message>
       <location filename="gui_grid.py" line="51"/>
       <source>Toggle grid</source>
       <translation>Txandakatu sareta</translation>
@@ -7071,11 +5190,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Sortu laukizuzena</translation>
     </message>
     <message>
-      <location filename="gui_draft2sketch.py" line="143"/>
-      <source>Convert Draft/Sketch</source>
-      <translation>Bihurtu zirriborroa/krokisa</translation>
-    </message>
-    <message>
       <location filename="gui_draft2sketch.py" line="66"/>
       <source>Select an object to convert.</source>
       <translation>Hautatu bihurtuko den objektua.</translation>
@@ -7089,6 +5203,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="gui_draft2sketch.py" line="114"/>
       <source>Convert to Draft</source>
       <translation>Bihurtu zirriborro</translation>
+    </message>
+    <message>
+      <location filename="gui_draft2sketch.py" line="143"/>
+      <source>Convert Draft/Sketch</source>
+      <translation>Bihurtu zirriborroa/krokisa</translation>
     </message>
     <message>
       <location filename="gui_heal.py" line="51"/>
@@ -7126,14 +5245,14 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Ez da edizio-punturik aurkitu hautatutako objekturako</translation>
     </message>
     <message>
+      <location filename="gui_edit.py" line="815"/>
+      <source>Too many objects selected, max number set to:</source>
+      <translation>Objektu gehiegi dago hautatuta, kopuru maximoa honakoa izango da:</translation>
+    </message>
+    <message>
       <location filename="gui_edit.py" line="823"/>
       <source>: this object is not editable</source>
       <translation>: objektu hau ezin da editatu</translation>
-    </message>
-    <message>
-      <location filename="gui_patharray.py" line="143"/>
-      <source>Path array</source>
-      <translation>Bide-matrizea</translation>
     </message>
     <message>
       <location filename="gui_pathtwistedarray.py" line="79"/>
@@ -7141,14 +5260,14 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Hautatu bi objektu, oinarri-objektua eta bide-objektua, komando hau exekutatu baino lehen.</translation>
     </message>
     <message>
+      <location filename="gui_patharray.py" line="143"/>
+      <source>Path array</source>
+      <translation>Bide-matrizea</translation>
+    </message>
+    <message>
       <location filename="gui_pathtwistedarray.py" line="101"/>
       <source>Path twisted array</source>
       <translation>Bide kiribilduen matrizea</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1094"/>
-      <source>Trimex</source>
-      <translation>Muxarratu/luzatu</translation>
     </message>
     <message>
       <location filename="gui_trimex.py" line="94"/>
@@ -7159,6 +5278,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="gui_offset.py" line="143"/>
       <source>Pick distance</source>
       <translation>Aukeratu distantzia</translation>
+    </message>
+    <message>
+      <location filename="gui_trimex.py" line="222"/>
+      <source>Offset angle</source>
+      <translation>Desplazamendu-angelua</translation>
     </message>
     <message>
       <location filename="gui_trimex.py" line="483"/>
@@ -7224,26 +5348,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="gui_selectplane.py" line="534"/>
       <source>Custom</source>
       <translation>Pertsonalizatua</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="73"/>
-      <source>No active command.</source>
-      <translation>Ez dago komando aktiborik.</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="92"/>
-      <source>Finish line</source>
-      <translation>Amaitu lerroa</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="118"/>
-      <source>Close line</source>
-      <translation>Itxi lerroa</translation>
-    </message>
-    <message>
-      <location filename="gui_lineops.py" line="144"/>
-      <source>Undo line</source>
-      <translation>Desegin lerroa</translation>
     </message>
     <message>
       <location filename="gui_split.py" line="64"/>
@@ -7321,9 +5425,19 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Gehitu taldeari</translation>
     </message>
     <message>
+      <location filename="gui_groups.py" line="70"/>
+      <source>Add new group</source>
+      <translation>Gehitu talde berria</translation>
+    </message>
+    <message>
       <location filename="gui_groups.py" line="183"/>
       <source>Select group</source>
       <translation>Hautatu taldea</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="193"/>
+      <source>No new selection. You must select non-empty groups or objects inside groups.</source>
+      <translation>Ez dago hautapen berririk. Hutsik ez dauden taldeak edo taldeen barruko objektuak hautatu behar dira.</translation>
     </message>
     <message>
       <location filename="gui_groups.py" line="257"/>
@@ -7339,6 +5453,26 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="gui_groups.py" line="359"/>
       <source>Add to construction group</source>
       <translation>Gehitu eraikuntza taldeari</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="355"/>
+      <source>Add a new group with a given name</source>
+      <translation>Gehitu talde berria emandako izen batekin</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="383"/>
+      <source>Add group</source>
+      <translation>Gehitu taldea</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="385"/>
+      <source>Group name</source>
+      <translation>Taldearen izena</translation>
+    </message>
+    <message>
+      <location filename="gui_groups.py" line="392"/>
+      <source>Group</source>
+      <translation>Taldea</translation>
     </message>
     <message>
       <location filename="gui_offset.py" line="76"/>
@@ -7421,11 +5555,6 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Sortu testua</translation>
     </message>
     <message>
-      <location filename="gui_rotate.py" line="279"/>
-      <source>Rotate</source>
-      <translation>Biratu</translation>
-    </message>
-    <message>
       <location filename="gui_rotate.py" line="79"/>
       <source>Select an object to rotate</source>
       <translation>Hautatu biratuko den objektua</translation>
@@ -7468,117 +5597,24 @@ Amaierako angelua izango da oinarriko angelua gehi kantitate hau.</translation>
       <translation>Aukeratu biraketa-angelua</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="750"/>
-      <source>Global</source>
-      <translation>Globala</translation>
+      <location filename="gui_lineops.py" line="73"/>
+      <source>No active command.</source>
+      <translation>Ez dago komando aktiborik.</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="748"/>
-      <source>Coordinates relative to last point or to coordinate system origin
-if is the first point to set</source>
-      <translation type="unfinished">Coordinates relative to last point or to coordinate system origin
-if is the first point to set</translation>
+      <location filename="gui_lineops.py" line="92"/>
+      <source>Finish line</source>
+      <translation>Amaitu lerroa</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="753"/>
-      <source>Coordinates relative to global coordinate system.
-Uncheck to use working plane coordinate system</source>
-      <translation type="unfinished">Coordinates relative to global coordinate system.
-Uncheck to use working plane coordinate system</translation>
+      <location filename="gui_lineops.py" line="118"/>
+      <source>Close line</source>
+      <translation>Itxi lerroa</translation>
     </message>
     <message>
-      <location filename="DraftGui.py" line="759"/>
-      <source>Check this if the object should appear as filled, otherwise it will appear as wireframe.
-Not available if Draft preference option 'Use Part Primitives' is enabled</source>
-      <translation>Markatu hau objektuak beteta agertu behar badu, bestela alanbre-bilbe gisa agertuko da.
-Ez dago erabilgarri zirriborroen 'Erabili piezen jatorrizkoak' aukera gaituta badago.</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="771"/>
-      <source>If checked, an OCC-style offset will be performedinstead of the classic offset</source>
-      <translation>Markatuta badago, OCC estiloko desplazamendua egingo da, desplazamendu klasikoaren ordez</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1249"/>
-      <source>Local u0394X</source>
-      <translation>u0394X lokala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1250"/>
-      <source>Local u0394Y</source>
-      <translation>u0394Y lokala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1251"/>
-      <source>Local u0394Z</source>
-      <translation>u0394Z lokala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1257"/>
-      <source>Global u0394X</source>
-      <translation>u0394X globala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1258"/>
-      <source>Global u0394Y</source>
-      <translation>u0394Y globala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="1259"/>
-      <source>Global u0394Z</source>
-      <translation>u0394Z globala</translation>
-    </message>
-    <message>
-      <location filename="DraftGui.py" line="2047"/>
-      <source>Autogroup:</source>
-      <translation>Talde automatikoa:</translation>
-    </message>
-    <message>
-      <location filename="make_arc_3points.py" line="130"/>
-      <source>Points:</source>
-      <translation>Puntuak:</translation>
-    </message>
-    <message>
-      <location filename="make_arc_3points.py" line="138"/>
-      <source>Placement:</source>
-      <translation>Kokapena:</translation>
-    </message>
-    <message>
-      <location filename="gui_scale.py" line="333"/>
-      <source>Unable to scale object:</source>
-      <translation>Ezin da objektua eskalatu:</translation>
-    </message>
-    <message>
-      <location filename="gui_scale.py" line="337"/>
-      <source>Unable to scale objects:</source>
-      <translation>Ezin dira objektuak eskalatu:</translation>
-    </message>
-    <message>
-      <location filename="gui_edit.py" line="815"/>
-      <source>Too many objects selected, max number set to:</source>
-      <translation>Objektu gehiegi dago hautatuta, kopuru maximoa honakoa izango da:</translation>
-    </message>
-    <message>
-      <location filename="mirror.py" line="113"/>
-      <source>mirrored</source>
-      <translation>ispilatua</translation>
-    </message>
-    <message>
-      <location filename="make_arc_3points.py" line="159"/>
-      <source>Cannot generate shape:</source>
-      <translation>Ezin da forma sortu:</translation>
-    </message>
-    <message>
-      <location filename="WorkingPlane.py" line="696"/>
-      <source>Selected Shapes must define a plane
-</source>
-      <translation>Hautatutako formek plano bat definitu behar dute
-</translation>
-    </message>
-    <message>
-      <location filename="gui_trimex.py" line="222"/>
-      <source>Offset angle</source>
-      <translation type="unfinished">Offset angle</translation>
+      <location filename="gui_lineops.py" line="144"/>
+      <source>Undo line</source>
+      <translation>Desegin lerroa</translation>
     </message>
   </context>
   <context>
@@ -7597,6 +5633,2666 @@ Ez dago erabilgarri zirriborroen 'Erabili piezen jatorrizkoak' aukera gaituta ba
       <location filename="importOCA.py" line="492"/>
       <source>successfully exported</source>
       <translation>ongi esportatu da</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgAddProperty</name>
+    <message>
+      <location filename="gui_groups.py" line="452"/>
+      <source>Group</source>
+      <translation>Taldea</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_Snap</name>
+    <message>
+      <location filename="gui_snapper.py" line="1529"/>
+      <source>Toggles Grid On/Off</source>
+      <translation>Sareta aktibatzen/desaktibatzen du</translation>
+    </message>
+    <message>
+      <location filename="gui_snapper.py" line="1530"/>
+      <source>Toggle Draft Grid</source>
+      <translation>Txandakatu zirriborro-sareta</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_CloseLine</name>
+    <message>
+      <location filename="gui_lineops.py" line="124"/>
+      <source>Close Line</source>
+      <translation>Itxi lerroa</translation>
+    </message>
+    <message>
+      <location filename="gui_lineops.py" line="125"/>
+      <source>Closes the line being drawn, and finishes the operation.</source>
+      <translation>Marrazten ari den lerroa ixten du eta eragiketa amaitzen du.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_FinishLine</name>
+    <message>
+      <location filename="gui_lineops.py" line="98"/>
+      <source>Finish line</source>
+      <translation>Amaitu lerroa</translation>
+    </message>
+    <message>
+      <location filename="gui_lineops.py" line="99"/>
+      <source>Finishes a line without closing it.</source>
+      <translation>Lerro bat amaitzen du hura itxi gabe.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Draft_UndoLine</name>
+    <message>
+      <location filename="gui_lineops.py" line="151"/>
+      <source>Undo last segment</source>
+      <translation>Desegin azken segmentua</translation>
+    </message>
+    <message>
+      <location filename="gui_lineops.py" line="152"/>
+      <source>Undoes the last drawn segment of the line being drawn.</source>
+      <translation>Marrazten ari den lerroaren azken segmentua desegiten du.</translation>
+    </message>
+  </context>
+  <context>
+    <name>ImportDWG</name>
+    <message>
+      <location filename="importDWG.py" line="233"/>
+      <source>Conversion successful</source>
+      <translation>Bihurketa ongi egin da</translation>
+    </message>
+    <message>
+      <location filename="importDWG.py" line="277"/>
+      <source>Converting:</source>
+      <translation>Bihurtzen:</translation>
+    </message>
+  </context>
+  <context>
+    <name>Dialog</name>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="14"/>
+      <source>Annotation Styles Editor</source>
+      <translation>Oharpen-estiloen editorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="20"/>
+      <source>Style name</source>
+      <translation>Estilo-izena</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="38"/>
+      <source>The name of your style. Existing style names can be edited.</source>
+      <translation>Estiloaren izena. Lehendik dauden estilo-izenak editatu daitezke.</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="50"/>
+      <source>Add new...</source>
+      <translation>Gehitu berria...</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="79"/>
+      <source>Renames the selected style</source>
+      <translation>Hautatutako estiloaren izena aldatzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="82"/>
+      <source>Rename</source>
+      <translation>Aldatu izena</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="110"/>
+      <source>Deletes the selected style</source>
+      <translation>Hautatutako estiloa ezabatzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="113"/>
+      <source>Delete</source>
+      <translation>Ezabatu</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="120"/>
+      <source>Import styles from json file</source>
+      <translation>Inportatu estiloak JSON fitxategitik</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="130"/>
+      <source>Export styles to json file</source>
+      <translation>Esportatu estiloak JSON fitxategira</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="164"/>
+      <source>Text</source>
+      <translation>Testua</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="170"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="219"/>
+      <source>Font size in the system units</source>
+      <translation>Letra-tamaina sistemaren unitateetan</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="173"/>
+      <source>Font size</source>
+      <translation>Letra-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="180"/>
+      <source>Line spacing in system units</source>
+      <translation>Lerroartea sistemaren unitateetan</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="183"/>
+      <source>Line spacing</source>
+      <translation>Lerro-tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="190"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="212"/>
+      <source>The font to use for texts and dimensions</source>
+      <translation>Testuetarako eta kotetarako erabiliko den letra-tipoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="193"/>
+      <source>Font name</source>
+      <translation>Letra-tipoaren izena</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="239"/>
+      <source>Units</source>
+      <translation>Unitateak</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="245"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="285"/>
+      <source>A multiplier factor that affects the size of texts and markers</source>
+      <translation>Testuen eta markatzaileen tamainan eragina duen faktore biderkatzailea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="248"/>
+      <source>Scale multiplier</source>
+      <translation>Eskalaren biderkatzailea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="255"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="305"/>
+      <source>The number of decimals to show for dimension values</source>
+      <translation>Kota-lerroetan erakutsiko den dezimal kopurua</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="258"/>
+      <source>Decimals</source>
+      <translation>Dezimalak</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="265"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="298"/>
+      <source>Specify a valid length unit like mm, m, in, ft, to force displaying the dimension value in this unit</source>
+      <translation>Adierazi luzera-unitate baliozko bat, adibidez milimetroak, metroak, hazbeteak edo oinak, kota-lerroa unitate horretan bistaratu dadin</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="268"/>
+      <source>Unit override</source>
+      <translation>Unitatea gainidaztea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="275"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="315"/>
+      <source>If it is checked it will show the unit next to the dimension value</source>
+      <translation>Markatuta badago, unitatea kota-balioaren alboan erakutsiko du</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="278"/>
+      <source>Show unit</source>
+      <translation>Erakutsi unitatea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="331"/>
+      <source>Line and arrows</source>
+      <translation>Lerroa eta geziak</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="337"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="433"/>
+      <source>The width of the dimension lines</source>
+      <translation>Kota-lerroen zabalera</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="340"/>
+      <source>Line width</source>
+      <translation>Lerro-zabalera</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="347"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="534"/>
+      <source>The distance that the extension lines are additionally extended beyond the dimension line</source>
+      <translation>Luzapen-lerroak zein distantziara luzatzen diren kota-lerrotik haratago</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="350"/>
+      <source>Extension overshoot</source>
+      <translation>Luzapenaren soberakina</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="357"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="504"/>
+      <source>The size of the dimension arrows or markers in system units</source>
+      <translation>Kota-gezien edo -markatzaileen tamaina sistema-unitatetan</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="360"/>
+      <source>Arrow size</source>
+      <translation>Gezi-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="367"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="417"/>
+      <source>If it is checked it will display the dimension line</source>
+      <translation>Markatuta badago, kota-lerroa bistaratuko da</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="370"/>
+      <source>Show lines</source>
+      <translation>Erakutsi lerroak</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="377"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="514"/>
+      <source>The distance that the dimension line is additionally extended</source>
+      <translation>Kota-lerroa zein distantziara luzatzen den</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="380"/>
+      <source>Dimension overshoot</source>
+      <translation>Kota-lerroaren soberakina</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="387"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="524"/>
+      <source>The length of the extension lines</source>
+      <translation>Luzatze-lerroen luzera</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="390"/>
+      <source>Extension lines</source>
+      <translation>Luzapen-lerroak</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="397"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="472"/>
+      <source>The type of arrows or markers to use at the end of dimension lines</source>
+      <translation>Kota-lerroen amaieran erabiliko diren gezien edo markatzaileen mota</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="400"/>
+      <source>Arrow type</source>
+      <translation>Gezi mota</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="407"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="446"/>
+      <source>The color of dimension lines, arrows and texts</source>
+      <translation>Kota-lerroen, gezien eta testuen kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="410"/>
+      <source>Line / text color</source>
+      <translation>Lerroaren / testuaren kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="436"/>
+      <source>px</source>
+      <translation>px</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="476"/>
+      <source>Dot</source>
+      <translation>Puntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="481"/>
+      <source>Circle</source>
+      <translation>Zirkulua</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="486"/>
+      <source>Arrow</source>
+      <translation>Gezia</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="491"/>
+      <source>Tick</source>
+      <translation>Tika</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="496"/>
+      <source>Tick-2</source>
+      <translation>Tika-2</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftCircularArrayTaskPanel</name>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="26"/>
+      <source>Circular array</source>
+      <translation>Matrize zirkularra</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="57"/>
+      <source>The coordinates of the point through which the axis of rotation passes.
+Change the direction of the axis itself in the property editor.</source>
+      <translation>Biraketa-ardatza igarotzen den puntuaren koordenatuak.
+Aldatu ardatzaren beraren norabidea propietateen editorean.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="61"/>
+      <source>Center of rotation</source>
+      <translation>Biraketa-zentroa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="69"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="76"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="83"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="131"/>
+      <source>Reset the coordinates of the center of rotation.</source>
+      <translation>Berrezarri biraketa-zentroaren koordenatuak.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="134"/>
+      <source>Reset point</source>
+      <translation>Berrezarri puntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="146"/>
+      <source>If checked, the resulting objects in the array will be fused if they touch each other.
+This only works if "Link array" is off.</source>
+      <translation>Markatuta badago, matrizeko emaitza-objektuak fusionatu egingo dira elkarri ukitzen badaude.
+Honek funtzionatzeko, "Esteka-matrizea" aukerak desaktibatuta egon behar du.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="150"/>
+      <source>Fuse</source>
+      <translation>Fusionatu</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="157"/>
+      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
+A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
+      <translation>Markatuta badago, emaitza-objektua "Esteka-matrizea! izango da, matrize arrunt bat izan ordez.
+Esteka-matrizea eraginkorragoa da kopia anitz sortzean, baina ezin da fusionatu.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="161"/>
+      <source>Link array</source>
+      <translation>Esteka-matrizea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="175"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="186"/>
+      <source>Distance from one element in one ring of the array to the next element in the same ring.
+It cannot be zero.</source>
+      <translation>Distantzia matrizeko eraztun bateko elementu batetik geruza bereko eraztun bereko hurrengora. Ezin da zero izan.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="179"/>
+      <source>Tangential distance</source>
+      <translation>Distantzia tangentziala</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="200"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="210"/>
+      <source>Distance from one layer of objects to the next layer of objects.</source>
+      <translation>Distatnzia objektuen geruza batetik objektuen hurrengo geruzara.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="203"/>
+      <source>Radial distance</source>
+      <translation>Distantzia erradiala</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="223"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="261"/>
+      <source>The number of symmetry lines in the circular array.</source>
+      <translation>Simetria-lerroen kopurua matrize zirkularrean.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="236"/>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="250"/>
+      <source>Number of circular layers or rings to create, including a copy of the original object.
+It must be at least 2.</source>
+      <translation>Sortuko diren geruza zirkularren edo eraztunen kopurua, jatorrizko objektuaren kopia barne.
+Gutxienez 2 izan behar dute.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="254"/>
+      <source>Number of circular layers</source>
+      <translation>Geruza zirkularren kopurua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="264"/>
+      <source>Symmetry</source>
+      <translation>Simetria</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_CircularArray.ui" line="273"/>
+      <source>(Placeholder for the icon)</source>
+      <translation>(Ikonoaren lekua)</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftOrthoArrayTaskPanel</name>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="26"/>
+      <source>Orthogonal array</source>
+      <translation>Matrize ortogonala</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="44"/>
+      <source>Distance between the elements in the Z direction.
+Normally, only the Z value is necessary; the other two values can give an additional shift in their respective directions.
+Negative values will result in copies produced in the negative direction.</source>
+      <translation>Elementuen arteko distantzia Z norabidean.
+Normalean, Z balioak soilik behar da; beste bi balioek desplazamendu gehigarria eman dezakete nork bere norabidean.
+Balio negatiboek norabide negatiboan sortuko dituzte kopiak.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="49"/>
+      <source>Z intervals</source>
+      <translation>Z tarteak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="57"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="197"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="302"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="385"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="64"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="253"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="295"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="392"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="71"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="246"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="288"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="378"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="122"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="262"/>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="353"/>
+      <source>Reset the distances.</source>
+      <translation>Berrezarri distantziak.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="125"/>
+      <source>Reset Z</source>
+      <translation>Berrezarri Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="137"/>
+      <source>If checked, the resulting objects in the array will be fused if they touch each other.
+This only works if "Link array" is off.</source>
+      <translation>Markatuta badago, matrizeko emaitza-objektuak fusionatu egingo dira elkarri ukitzen badaude.
+Honek funtzionatzeko, "Esteka-matrizea" aukerak desaktibatuta egon behar du.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="141"/>
+      <source>Fuse</source>
+      <translation>Fusionatu</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="148"/>
+      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
+A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
+      <translation>Markatuta badago, emaitza-objektua "Esteka-matrizea! izango da, matrize arrunt bat izan ordez.
+Esteka-matrizea eraginkorragoa da kopia anitz sortzean, baina ezin da fusionatu.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="152"/>
+      <source>Link array</source>
+      <translation>Esteka-matrizea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="177"/>
+      <source>(Placeholder for the icon)</source>
+      <translation>(Ikonoaren lekua)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="184"/>
+      <source>Distance between the elements in the X direction.
+Normally, only the X value is necessary; the other two values can give an additional shift in their respective directions.
+Negative values will result in copies produced in the negative direction.</source>
+      <translation>Elementuen arteko distantzia X norabidean.
+Normalean, X balioak soilik behar da; beste bi balioek desplazamendu gehigarria eman dezakete nork bere norabidean.
+Balio negatiboek norabide negatiboan sortuko dituzte kopiak.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="189"/>
+      <source>X intervals</source>
+      <translation>X tarteak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="265"/>
+      <source>Reset X</source>
+      <translation>Berrezarri X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="275"/>
+      <source>Distance between the elements in the Y direction.
+Normally, only the Y value is necessary; the other two values can give an additional shift in their respective directions.
+Negative values will result in copies produced in the negative direction.</source>
+      <translation>Elementuen arteko distantzia Y norabidean.
+Normalean, Y balioak soilik behar da; beste bi balioek desplazamendu gehigarria eman dezakete nork bere norabidean.
+Balio negatiboek norabide negatiboan sortuko dituzte kopiak.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="280"/>
+      <source>Y intervals</source>
+      <translation>Y tarteak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="356"/>
+      <source>Reset Y</source>
+      <translation>Berrezarri Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="366"/>
+      <source>Number of elements in the array in the specified direction, including a copy of the original object.
+The number must be at least 1 in each direction.</source>
+      <translation>Zehaztutako norabidean dagoen matrizeko elementu kopurua, jatorrizko objektuaren kopia barne.
+Zenbakiak norabide bakoitzean 1 izan behar du gutxienez.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_OrthoArray.ui" line="370"/>
+      <source>Number of elements</source>
+      <translation>Elementu kopurua</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftPolarArrayTaskPanel</name>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="26"/>
+      <source>Polar array</source>
+      <translation>Matrize polarra</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="57"/>
+      <source>The coordinates of the point through which the axis of rotation passes.
+Change the direction of the axis itself in the property editor.</source>
+      <translation>Biraketa-ardatza igarotzen den puntuaren koordenatuak.
+Aldatu ardatzaren beraren norabidea propietateen editorean.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="61"/>
+      <source>Center of rotation</source>
+      <translation>Biraketa-zentroa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="69"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="115"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="122"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="131"/>
+      <source>Reset the coordinates of the center of rotation.</source>
+      <translation>Berrezarri biraketa-zentroaren koordenatuak.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="134"/>
+      <source>Reset point</source>
+      <translation>Berrezarri puntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="146"/>
+      <source>If checked, the resulting objects in the array will be fused if they touch each other.
+This only works if "Link array" is off.</source>
+      <translation>Markatuta badago, matrizeko emaitza-objektuak fusionatu egingo dira elkarri ukitzen badaude.
+Honek funtzionatzeko, "Esteka-matrizea" aukerak desaktibatuta egon behar du.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="150"/>
+      <source>Fuse</source>
+      <translation>Fusionatu</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="157"/>
+      <source>If checked, the resulting object will be a "Link array" instead of a regular array.
+A Link array is more efficient when creating multiple copies, but it cannot be fused together.</source>
+      <translation>Markatuta badago, emaitza-objektua "Esteka-matrizea! izango da, matrize arrunt bat izan ordez.
+Esteka-matrizea eraginkorragoa da kopia anitz sortzean, baina ezin da fusionatu.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="161"/>
+      <source>Link array</source>
+      <translation>Esteka-matrizea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="175"/>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="187"/>
+      <source>Sweeping angle of the polar distribution.
+A negative angle produces a polar pattern in the opposite direction.
+The maximum absolute value is 360 degrees.</source>
+      <translation>Banaketa polarraren ekortze-angelua.
+Angelu negatiboak aurkako norabideko eredu polarra sortzen du.
+Balio absolutu maximoa 360 gradu dira.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="180"/>
+      <source>Polar angle</source>
+      <translation>Angelu polarra</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="208"/>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="219"/>
+      <source>Number of elements in the array, including a copy of the original object.
+It must be at least 2.</source>
+      <translation>Matrizeko elementu kopurua, jatorrizko objektuaren kopia bat barne.
+Gutxienez 2 izan behar du.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="212"/>
+      <source>Number of elements</source>
+      <translation>Elementu kopurua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_PolarArray.ui" line="235"/>
+      <source>(Placeholder for the icon)</source>
+      <translation>(Ikonoaren lekua)</translation>
+    </message>
+  </context>
+  <context>
+    <name>DraftShapeStringGui</name>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="26"/>
+      <source>ShapeString</source>
+      <translation>Testu-forma</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="46"/>
+      <location filename="../ui/TaskShapeString.ui" line="56"/>
+      <location filename="../ui/TaskShapeString.ui" line="73"/>
+      <source>Enter coordinates or select point with mouse.</source>
+      <translation>Sartu koordenatuak edo hautatu puntua saguarekin.</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="66"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="83"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="90"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="101"/>
+      <source>Font file</source>
+      <translation>Letra-tipoaren fitxategia</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="115"/>
+      <source>Text to be made into ShapeString</source>
+      <translation>Testu-forma bilakatuko den testua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="122"/>
+      <source>String</source>
+      <translation>Katea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="133"/>
+      <source>Height</source>
+      <translation>Altuera</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="140"/>
+      <source>Height of the result</source>
+      <translation>Emaitzaren altuera</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="186"/>
+      <source>Reset 3d point selection</source>
+      <translation>Berrezarri 3d puntuaren hautapena</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskShapeString.ui" line="192"/>
+      <source>Reset Point</source>
+      <translation>Berrezarri puntua</translation>
+    </message>
+  </context>
+  <context>
+    <name>Form</name>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="14"/>
+      <source>Working plane setup</source>
+      <translation>Laneko planoaren konfigurazioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="20"/>
+      <source>Select a face or working plane proxy or 3 vertices.
+Or choose one of the options below</source>
+      <translation>Aukeratu aurpegi bat, laneko planoaren proxya edo 3 erpin. Edo hautatu beheko aukeretako bat</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="31"/>
+      <source>Sets the working plane to the XY plane (ground plane)</source>
+      <translation>Lan planoa XY planoan (lur planoan) ezartzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="34"/>
+      <source>Top (XY)</source>
+      <translation>Goia (XY)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="41"/>
+      <source>Sets the working plane to the XZ plane (front plane)</source>
+      <translation>Lan planoa XZ planoan (aurreko planoan) ezartzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="44"/>
+      <source>Front (XZ)</source>
+      <translation>Aurrea (XZ)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="51"/>
+      <source>Sets the working plane to the YZ plane (side plane)</source>
+      <translation>Lan planoa YZ planoan (alboko planoan) ezartzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="54"/>
+      <source>Side (YZ)</source>
+      <translation>Alboa (YZ)</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="61"/>
+      <source>Sets the working plane facing the current view</source>
+      <translation>Laneko planoa uneko bistaren aurrean ezartzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="64"/>
+      <source>Align to view</source>
+      <translation>Lerrokatu ikusteko</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="71"/>
+      <source>The working plane will align to the current
+view each time a command is started</source>
+      <translation>Lan-planoa uneko bistarekin lerrokatuko da
+ikusi komando bat abiarazten den bakoitzean</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="78"/>
+      <source>Automatic</source>
+      <translation>Automatikoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="87"/>
+      <source>An optional offset to give to the working plane
+above its base position. Use this together with one
+of the buttons above</source>
+      <translation>Laneko planoari emateko aukerako desplazamendu bat
+bere oinarriaren posizioaren gainetik. Erabili hau goiko botoietako batekin batera</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="99"/>
+      <source>Offset</source>
+      <translation>Desplazamendua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="106"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="118"/>
+      <source>If this is selected, the working plane will be
+centered on the current view when pressing one
+of the buttons above</source>
+      <translation>Hautatuta badago, laneko planoa uneko bistan erdiratuko da goiko botoietako bat sakatzean</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="111"/>
+      <source>Center plane on view</source>
+      <translation>Zentratu planoa bistan</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="135"/>
+      <source>Or select a single vertex to move the current
+working plane without changing its orientation.
+Then, press the button below</source>
+      <translation>Edo hautatu erpin bakar bat uneko laneko planoa mugitzeko bere orientazioa aldatu gabe. Ondoren, sakatu beheko botoia</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="147"/>
+      <source>Moves the working plane without changing its
+orientation. If no point is selected, the plane
+will be moved to the center of the view</source>
+      <translation>Laneko planoa mugitzen du haren orientazioa aldatu gabe. Punturik hautatzen ez bada planoa bistaren zentrora mugituko da</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="152"/>
+      <source>Move working plane</source>
+      <translation>Mugitu laneko planoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="161"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="171"/>
+      <source>The spacing between the smaller grid lines</source>
+      <translation>Sareko lerro txikienen arteko tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="164"/>
+      <source>Grid spacing</source>
+      <translation>Sareta-tarteak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="181"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="191"/>
+      <source>The number of squares between each main line of the grid</source>
+      <translation>Sareko lerro nagusien arteko karratu kopurua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="184"/>
+      <source>Main line every</source>
+      <translation>Lerro nagusiaren maiztasuna</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="198"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="207"/>
+      <source>The distance at which a point can be snapped to
+when approaching the mouse. You can also change this
+value by using the [ and ] keys while drawing</source>
+      <translation>Zein distantziara lotuko da puntu bat sagua hurbiltzerakoan. Balio hau ere alda dezakezu
+ [ eta ] teklak erabiltzen marrazten ari zarenean</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="212"/>
+      <source>Snapping radius</source>
+      <translation>Atxikitze-erradioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="219"/>
+      <source>Grid extension</source>
+      <translation>Saretaren hedadura</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="226"/>
+      <source> lines</source>
+      <translation> lerroak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="241"/>
+      <source>Centers the view on the current working plane</source>
+      <translation>Bista uneko laneko planoan zentratzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="244"/>
+      <source>Center view</source>
+      <translation>Zentratu bista</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="251"/>
+      <source>Resets the working plane to its previous position</source>
+      <translation>Laneko planoa aurreko posiziora berrezartzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="254"/>
+      <source>Previous</source>
+      <translation>Aurrekoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="14"/>
+      <source>Style settings</source>
+      <translation>Estilo-ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="22"/>
+      <source>Fills the values below with a stored style preset</source>
+      <translation>Beheko balioak biltegiratutako estilo-aurrezarpen batekin betetzen ditu</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="26"/>
+      <source>Load preset</source>
+      <translation>Kargatu aurrezarpena</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="40"/>
+      <source>Save current style as a preset...</source>
+      <translation>Gorde uneko estiloa aurrezarpen gisa...</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="57"/>
+      <source>Lines and faces</source>
+      <translation>Lerroak eta aurpegiak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="66"/>
+      <source>The color of faces</source>
+      <translation>Aurpegien kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="73"/>
+      <source>Draw style</source>
+      <translation>Marrazte-estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="80"/>
+      <source>Line color</source>
+      <translation>Lerro-kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="87"/>
+      <source>Line width</source>
+      <translation>Lerro-zabalera</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="94"/>
+      <source>The color of lines</source>
+      <translation>Lerroen kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="101"/>
+      <source>The line style</source>
+      <translation>Lerro-estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="105"/>
+      <source>Solid</source>
+      <translation>Solidoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="110"/>
+      <source>Dashed</source>
+      <translation>Marratua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="115"/>
+      <source>Dotted</source>
+      <translation>Puntukatua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="120"/>
+      <source>DashDot</source>
+      <translation>MarraPuntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="128"/>
+      <source> px</source>
+      <translation> px</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="135"/>
+      <source>Display mode</source>
+      <translation>Bistaratze modua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="142"/>
+      <source>The display mode for faces</source>
+      <translation>Aurpegien bistaratze modua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="146"/>
+      <source>Flat Lines</source>
+      <translation>Lerro lauak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="151"/>
+      <source>Wireframe</source>
+      <translation>Alanbre-bilbea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="156"/>
+      <source>Shaded</source>
+      <translation>Itzaldurarekin</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="161"/>
+      <source>Points</source>
+      <translation>Puntuak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="169"/>
+      <source>Shape color</source>
+      <translation>Formaren kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="176"/>
+      <source>Transparency</source>
+      <translation>Gardentasuna</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="183"/>
+      <source>The transparency of faces</source>
+      <translation>Aurpegien gardentasuna</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="186"/>
+      <source> %</source>
+      <translation> %</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="199"/>
+      <source>Annotations</source>
+      <translation>Oharpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="205"/>
+      <source>The type of dimension arrows</source>
+      <translation>Kota-gezien mota</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="209"/>
+      <source>Dot</source>
+      <translation>Puntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="214"/>
+      <source>Circle</source>
+      <translation>Zirkulua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="219"/>
+      <source>Arrow</source>
+      <translation>Gezia</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="224"/>
+      <source>Tick</source>
+      <translation>Tika</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="229"/>
+      <source>Tick-2</source>
+      <translation>Tika-2</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="237"/>
+      <source>Text font</source>
+      <translation>Testuaren letra-tipoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="244"/>
+      <source>Text color</source>
+      <translation>Testu-kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="257"/>
+      <source>The font to use for texts and dimensions</source>
+      <translation>Testuetarako eta kotetarako erabiliko den letra-tipoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="264"/>
+      <source>Text size</source>
+      <translation>Testu-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="271"/>
+      <source>The color of texts and dimension texts</source>
+      <translation>Testuen eta kota-testuen kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="278"/>
+      <source>The size of texts and dimension texts</source>
+      <translation>Testuen eta kota-testuen tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="288"/>
+      <source>Arrow style</source>
+      <translation>Gezi-estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="295"/>
+      <source>If the unit suffix is shown on dimension texts or not</source>
+      <translation>Kota-testuetan atzizki-unitatea erakutsiko den ala ez</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="308"/>
+      <source>The size of dimension arrows</source>
+      <translation>Kota-gezien tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="318"/>
+      <source>Show unit</source>
+      <translation>Erakutsi unitatea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="325"/>
+      <source>Arrow size</source>
+      <translation>Gezi-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="332"/>
+      <source>Unit override</source>
+      <translation>Unitatea gainidaztea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="339"/>
+      <source>The unit to use for dimensions. Leave blank to use current FreeCAD unit</source>
+      <translation>Kota-lerroetan erabiliko den unitatea. Utzi hutsik FreeCAden uneko unitatea erabiltzeko</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="346"/>
+      <source>Text spacing</source>
+      <translation>Testu-tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="353"/>
+      <source>The space between the text and the dimension line</source>
+      <translation>Testuaren eta kota-lerroaren arteko tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="363"/>
+      <source>Line spacing</source>
+      <translation>Lerro-tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="370"/>
+      <source>The spacing between different lines of text</source>
+      <translation>Testu-lerro desberdinen arteko tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="382"/>
+      <source>Apply above style to selected object(s)</source>
+      <translation>Aplikatu goiko estiloa hautatutako objektuei</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="385"/>
+      <source>Selected</source>
+      <translation>Hautatua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="397"/>
+      <source>Texts/dims</source>
+      <translation>Testuak/kotak</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="14"/>
+      <source>Form</source>
+      <translation>Inprimakia</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="23"/>
+      <source>pattern files (*.pat)</source>
+      <translation>eredu-fitxategiak (*.pat)</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="30"/>
+      <source>PAT file:</source>
+      <translation>PAT fitxategia:</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="37"/>
+      <source>Scale</source>
+      <translation>Eskala</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="44"/>
+      <source>Pattern:</source>
+      <translation>Eredua:</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="64"/>
+      <source>Rotation:</source>
+      <translation>Biraketa:</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialogHatch.ui" line="71"/>
+      <source>°</source>
+      <translation>°</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsDraft</name>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="14"/>
+      <source>General settings</source>
+      <translation>Ezarpen orokorrak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="32"/>
+      <source>General Draft Settings</source>
+      <translation>Zirriborro-ezarpen orokorrak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="40"/>
+      <source>Default working plane</source>
+      <translation>Laneko plano lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="67"/>
+      <source>None</source>
+      <translation>Bat ere ez</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="72"/>
+      <source>XY (Top)</source>
+      <translation>XY (goialdea)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="77"/>
+      <source>XZ (Front)</source>
+      <translation>XZ (aurrealdea)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="82"/>
+      <source>YZ (Side)</source>
+      <translation>YZ (alboa)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="94"/>
+      <source>Internal precision level</source>
+      <translation>Barneko prezisio-maila</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="120"/>
+      <source>The number of decimals in internal coordinates operations (for ex. 3 = 0.001). Values between 6 and 8 are usually considered the best trade-off among FreeCAD users.</source>
+      <translation>Dezimal kopurua barneko koordenatuen eragiketetan (adib. 3 = 0,001). Baliorik orekatuenak 6 eta 8 artekoak direla kontsideratzen da FreeCAD erabiltzaileen artean.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="143"/>
+      <source>Tolerance</source>
+      <translation>Tolerantzia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="169"/>
+      <source>This is the value used by functions that use a tolerance.
+Values with differences below this value will be treated as same. This value will be obsoleted soon so the precision level above controls both.</source>
+      <translation>Tolerantzia bat erabiltzen duten funtzioek darabilten balioa.
+Horren azpiko diferentziak dituzten balioak horretarako berdintzen dira. Balio hori laster zaharkituta geratuko da, goiko doitasun-mailak biak kontrolatuko baititu.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="194"/>
+      <source>If this option is checked, the layers drop-down list will also show groups, allowing you to automatically add objects to groups too.</source>
+      <translation>Aukera hau markatuta badago, geruzen goitibeherako zerrendak taldeak ere erakutsiko ditu, objektuak taldeei automatikoki gehitzeko aukera emanda.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="197"/>
+      <source>Show groups in layers list drop-down button</source>
+      <translation>Erakutsi taldeak geruzen zerrendaren goitibeherako botoian</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="216"/>
+      <source>Draft tools options</source>
+      <translation>Zirriborro-tresnen aukerak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="230"/>
+      <source>When drawing lines, set focus on Length instead of X coordinate.
+This allows to point the direction and type the distance.</source>
+      <translation>Lerroak marraztean, ezarri fokua luzeran, X koordenatuan ezarri ordez.
+Horrek ahalbidetzen du distantziaren norabidea eta mota seinalatzea.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="234"/>
+      <source>Set focus on Length instead of X coordinate</source>
+      <translation>Ezarri fokua luzeran, X koordenatuan ezarri ordez</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="247"/>
+      <source>If this option is set, when creating Draft objects on top of an existing face of another object, the "Support" property of the Draft object will be set to the base object. This was the standard behaviour before FreeCAD 0.19</source>
+      <translation>Aukera hau ezarrita badago, zirriborro-objektuak sortzen badira lehendik dagoen aurpegi baten edo beste objektu baten gainean, zirriborro-objektuaren 'Euskarria' propietatean oinarri-objektua ezarriko da. Hori zen portaera estandarra FreeCAD 0.19 baino lehen.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="250"/>
+      <source>Set the Support property when possible</source>
+      <translation>Ezarri 'Euskarria' propietatea posible denean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="263"/>
+      <source>If this is checked, objects will appear as filled by default.
+Otherwise, they will appear as wireframe</source>
+      <translation>Hau markatuta badago, objektuak beteta agertuko dira modu lehenetsian.
+Bestela, alanbre-bilbe modura agertuko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="267"/>
+      <source>Fill objects with faces whenever possible</source>
+      <translation>Bete objektuak aurpegiekin, posible denean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="283"/>
+      <source>Normally, after copying objects, the copies get selected.
+If this option is checked, the base objects will be selected instead.</source>
+      <translation>Normalean, objektuak kopiatu ondoren, kopiak hautatu egiten dira.
+Aukera hau markatuta badago, kopien ordez oinarri-objektuak hautatuko dira.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="287"/>
+      <source>Select base objects after copying</source>
+      <translation>Hautatu oinarri-objektuak kopia egin ondoren</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="300"/>
+      <source>If this is checked, copy mode will be kept across command,
+otherwise commands will always start in no-copy mode</source>
+      <translation>Hau markatuta badago, kopiatze modua komandoz komando mantenduko da;
+bestela, komandoak beti ez kopiatzeko moduan abiaraziko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="304"/>
+      <source>Global copy mode</source>
+      <translation>Kopiatze modu globala</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="320"/>
+      <source>Force Draft Tools to create Part primitives instead of Draft objects.
+Note that this is not fully supported, and many object will be not editable with Draft Modifiers.</source>
+      <translation>Behartu zirriborro-tresnek piezen jatorrizkoak sortu ditzaten, zirriborro-objektuak sortu ordez.
+Kontuan izan eragiketa horren euskarria ez dela osoa, eta zenbait objektu ez direla editagarriak izango zirriborro-aldatzaileekin.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="324"/>
+      <source>Use Part Primitives when available</source>
+      <translation>Erabili piezen jatorrizkoak, eskuragarri daudenean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="341"/>
+      <source>Prefix labels of Clones with:</source>
+      <translation>Klonen etiketetan, erabili aurrizki gisa honako hau:</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="372"/>
+      <source>Construction Geometry</source>
+      <translation>Eraikuntza-geometria</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="380"/>
+      <source>Construction group name</source>
+      <translation>Eraikuntza-taldearen izena</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="387"/>
+      <source>This is the default group name for construction geometry</source>
+      <translation>Hau talde-izen lehenetsia da eraikuntza-geometriarako</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="390"/>
+      <source>Construction</source>
+      <translation>Eraikuntza</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="407"/>
+      <source>Construction geometry color</source>
+      <translation>Eraikuntza-geometriaren kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draft.ui" line="427"/>
+      <source>This is the default color for objects being drawn while in construction mode.</source>
+      <translation>Hau objektuen kolore lehenetsia da, eraikuntza moduan marrazten ari badira.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="14"/>
+      <source>Visual settings</source>
+      <translation>Ikusizko ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="26"/>
+      <source>Visual Settings</source>
+      <translation>Ikusizko ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="34"/>
+      <source>Snap symbols style</source>
+      <translation>Atxikitze-ikurren estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="54"/>
+      <source>Draft classic style</source>
+      <translation>Zirriborro-estilo klasikoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="59"/>
+      <source>Bitsnpieces style</source>
+      <translation>Bitsnpieces estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="80"/>
+      <source>Color</source>
+      <translation>Kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="87"/>
+      <source>The default color for snap symbols</source>
+      <translation>Atxikitze-ikurren kolore lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="111"/>
+      <source>Check this if you want to use the color/linewidth from the toolbar as default</source>
+      <translation>Markatu hau tresna-barrako kolorea/lerro-zabalera balio lehenetsi gisa erabili nahi baduzu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="114"/>
+      <source>Save current color and linewidth across sessions</source>
+      <translation>Gorde uneko kolorea eta lerro-zabalera saio batetik hurrengora</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="131"/>
+      <source>If checked, a widget indicating the current working plane orientation appears during drawing operations</source>
+      <translation>Markatuta badago, uneko lan-planoaren orientazioa adierazten duen widget bat agertuko da marrazte-eragiketetan</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="134"/>
+      <source>Show Working Plane tracker</source>
+      <translation>Erakutsi laneko planoaren jarraitzailea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="151"/>
+      <source>Default template sheet</source>
+      <translation>Txantiloi-orri lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="177"/>
+      <source>The default template to use when creating a new drawing sheet</source>
+      <translation>Marrazki-orri berria sortzean erabiliko den txantiloi lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="194"/>
+      <source>Alternate SVG patterns location</source>
+      <translation>SVG ereduen kokaleku alternatiboa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="220"/>
+      <source>Here you can specify a directory with custom SVG files containing &lt;pattern&gt; definitions to be added to the standard patterns</source>
+      <translation>&lt;pattern&gt; definizioak dituzten SVG fitxategi pertsonalizatuak dituen direktorio bat adierazi dezakezu hemen, horiek eredu estandarrei gehitzeko</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="237"/>
+      <source>SVG pattern resolution</source>
+      <translation>SVG ereduaren bereizmena</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="257"/>
+      <source>The resolution to draw the patterns in. Default value is 128. Higher values give better resolutions, lower values make drawing faster</source>
+      <translation>Ereduak marrazteko erabiliko den bereizmena. Balio lehenetsia 128 da. Balio altuagoek bereizmen hobeak ematen dituzte, balio baxuagoek marraztea azkartzen dute</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="280"/>
+      <source>SVG pattern default size</source>
+      <translation>SVG ereduaren tamaina lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="300"/>
+      <source>The default size for SVG patterns</source>
+      <translation>SVG ereduen tamaina lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="326"/>
+      <source>Check this if you want to preserve colors of faces while doing downgrade and upgrade (splitFaces and makeShell only)</source>
+      <translation>Markatu hau aurpegien koloreak mantendu nahi badituzu zaharkitzean edo eguneratzean (splitFaces eta makeShell soilik)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="329"/>
+      <source>Preserve colors of faces during downgrade/upgrade</source>
+      <translation>Mantendu aurpegien koloreak zaharkitzean/eguneratzean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="346"/>
+      <source>Check this if you want the face names to derive from the originating object name and vice versa while doing downgrade/upgrade (splitFaces and makeShell only)</source>
+      <translation>Markatu hau aurpegien izenak jatorrizko objektuen izenetatik eratorri nahi badituzu, edo alderantziz, zaharkitzean edo eguneratzean (splitFaces eta makeShell soilik)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="349"/>
+      <source>Preserve names of faces during downgrade/upgrade</source>
+      <translation>Mantendu aurpegien izenak zaharkitzean/eguneratzean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="367"/>
+      <source>Drawing view line definitions</source>
+      <translation>Marrizki-bistaren lerro-definizioak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="375"/>
+      <source>Dashed line definition</source>
+      <translation>Marraz osatutako lerroen definizioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="395"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="438"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="481"/>
+      <source>An SVG linestyle definition</source>
+      <translation>SVG lerro-estiloaren definizio bat</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="398"/>
+      <source>0.09,0.05</source>
+      <translation>0.09,0.05</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="418"/>
+      <source>Dashdot line definition</source>
+      <translation>Marra-puntuz osatutako lerroen definizioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="441"/>
+      <source>0.09,0.05,0.02,0.05</source>
+      <translation>0.09,0.05,0.02,0.05</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="461"/>
+      <source>Dotted line definition</source>
+      <translation>Puntuz osatutako lerroen definizioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="484"/>
+      <source>0.02,0.02</source>
+      <translation>0.02,0.02</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="14"/>
+      <source>Texts and dimensions</source>
+      <translation>Testuak eta kotak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="26"/>
+      <source>Text settings</source>
+      <translation>Testu-ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="34"/>
+      <source>Font family</source>
+      <translation>Letra-tipoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="47"/>
+      <source>This is the default font name for all Draft texts and dimensions.
+It can be a font name such as "Arial", a default style such as "sans", "serif"
+or "mono", or a family such as "Arial,Helvetica,sans" or a name with a style
+such as "Arial:Bold"</source>
+      <translation>Zirriborroen testu eta kota guztietarako letra-tipo lehenetsiaren izena da hau. Letra-tipo baten izena izan daiteke, esaterako "Arial"; estilo lehenetsi bat izan daiteke, esaterako "sans", "serif" edo "mono"; familia bat izan daiteke, esaterako "Arial,Helvetica,sans"; edo izen bat estilo batekin izan daiteke, esaterako "Arial:Bold"</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="59"/>
+      <source>Internal font</source>
+      <translation>Barneko letra-tipoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="76"/>
+      <source>Font size</source>
+      <translation>Letra-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="89"/>
+      <source>Default height for texts and dimensions</source>
+      <translation>Altuera lehenetsia testuetarako eta kotetarako</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="116"/>
+      <source>Dimension settings</source>
+      <translation>Kota-ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="124"/>
+      <source>Display mode</source>
+      <translation>Bistaratze modua</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="144"/>
+      <source>text above (2D)</source>
+      <translation>testua gainean (2D)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="149"/>
+      <source> text inside (3D)</source>
+      <translation> testua barruan (3D)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="161"/>
+      <source>Number of decimals</source>
+      <translation>Dezimal kopurua</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="201"/>
+      <source>Extension lines size</source>
+      <translation>Luzapen-lerroen tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="208"/>
+      <source>The default size of dimensions extension lines</source>
+      <translation>Koten luzapen-lerroen tamaina lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="237"/>
+      <source>Extension line overshoot</source>
+      <translation>Luzapen-lerroaren soberakina</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="244"/>
+      <source>The default length of extension line above dimension line</source>
+      <translation>Luzapen-lerroak kota-lerroaren gainetik duen luzera lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="273"/>
+      <source>Dimension line overshoot</source>
+      <translation>Kota-lerroaren soberakina</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="280"/>
+      <source>The default distance the dimension line is extended past extension lines</source>
+      <translation>Kota-lerroa luzapen-lerroez haratago luzatzen den distantzia lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="309"/>
+      <source>Arrows style</source>
+      <translation>Gezi-estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="323"/>
+      <source>Dot</source>
+      <translation>Puntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="328"/>
+      <source>Circle</source>
+      <translation>Zirkulua</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="333"/>
+      <source>Arrow</source>
+      <translation>Gezia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="338"/>
+      <source>Tick</source>
+      <translation>Tika</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="343"/>
+      <source>Tick-2</source>
+      <translation>Tika-2</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="355"/>
+      <source>Arrows size</source>
+      <translation>Gezi-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="362"/>
+      <source>The default size of arrows</source>
+      <translation>Gezien tamaina lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="388"/>
+      <source>Text orientation</source>
+      <translation>Testu-orientazioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="395"/>
+      <source>This is the orientation of the dimension texts when those dimensions are vertical. Default is left, which is the ISO standard.</source>
+      <translation>Kota-testuen orientazioa da, kotak bertikalak direnean. Lehenetsia ezkerra da, horixe baita ISO estandarra.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="405"/>
+      <source>Left (ISO standard)</source>
+      <translation>Ezkerra (ISO estandarra)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="410"/>
+      <source>Right</source>
+      <translation>Eskuinekoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="422"/>
+      <source>Text spacing</source>
+      <translation>Testu-tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="429"/>
+      <source>The space between the dimension line and the dimension text</source>
+      <translation>Kota-lerroaren eta kota-testuaren arteko espazioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="455"/>
+      <source>Show the unit suffix in dimensions</source>
+      <translation>Erakutsi unitate-atzizkia kotetan</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="475"/>
+      <source>Override unit</source>
+      <translation>Gainidatzi unitatea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="495"/>
+      <source>By leaving this field blank, the dimension measurements will be shown in the current unit defined in FreeCAD. By indicating a unit here such as m or cm, you can force new dimensions to be shown in that unit.</source>
+      <translation>Eremu hau hutsik uzten bada, koten neurketak FreeCADek definitutako uneko unitatean erakutsiko dira. Hemen unitate bat adierazten bada, adibidez m edo cm, kota berriak unitate horretan erakutsi daitezen behartu daiteke.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="513"/>
+      <source>ShapeString settings</source>
+      <translation>Testu-formen ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="521"/>
+      <source>Default ShapeString font file</source>
+      <translation>Testu-formaren letra-tipo lehenetsiaren fitxategia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="534"/>
+      <source>Select a font file</source>
+      <translation>Hautatu letra-tipo fitxategi bat</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="14"/>
+      <source>SVG</source>
+      <translation>SVG</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="40"/>
+      <source>Import style</source>
+      <translation>Inportatu estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="47"/>
+      <source>Method chosen for importing SVG object color to FreeCAD</source>
+      <translation>SVG objektuen kolorea FreeCADera inportatzeko hautatutako metodoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="60"/>
+      <source>None (fastest)</source>
+      <translation>Bat ere ez (azkarrena)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="65"/>
+      <source>Use default color and linewidth</source>
+      <translation>Erabili kolore eta lerro-zabalera lehenetsiak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="70"/>
+      <source>Original color and linewidth</source>
+      <translation>Jatorrizko kolorea eta lerro-zabalera</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="82"/>
+      <source>If checked, no units conversion will occur.
+One unit in the SVG file will translate as one millimeter. </source>
+      <translation>Markatuta badago, unitateak ez dira bihurtuko.
+SVG fitxategiko unitate bat milimetro bat izango da. </translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="86"/>
+      <source>Disable units scaling</source>
+      <translation>Desgaitu unitateen eskalatzea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="121"/>
+      <source>Export style</source>
+      <translation>Esportatu estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="128"/>
+      <source>Style of SVG file to write when exporting a sketch</source>
+      <translation>Krokis bat esportatzean idatziko den SVG fitxategiaren estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="141"/>
+      <source>Translated (for print &amp; display)</source>
+      <translation>Itzulia (inprimatzeko eta bistaratzeko)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="146"/>
+      <source>Raw (for CAM)</source>
+      <translation>RAW (CAMerako)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="158"/>
+      <source>All white lines will appear in black in the SVG for better readability against white backgrounds</source>
+      <translation>Lerro zuri guztiak beltz agertuko dira SVG fitxategian, atzeko plano zuriekin hobeto irakurri daitezen</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="161"/>
+      <source>Translate white line color to black</source>
+      <translation>Itzuli kolore zuria beltzera</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="181"/>
+      <source>Max segment length for discretized arcs</source>
+      <translation>Segmentu-luzera maximoa diskretizatutako arkuetarako</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-svg.ui" line="204"/>
+      <source>Versions of Open CASCADE older than version 6.8 don't support arc projection.
+In this case arcs will be discretized into small line segments.
+This value is the maximum segment length. </source>
+      <translation>Open CASCADE 6.8 baino zaharragoak diren bertsioek ez dute arkuen proiekzioa onartzen.
+Kasu horretan, arkuak lerro-segmentu txikien bidez marraztuko dira.
+Balio hau segmentu-luzera maximoa da. </translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-oca.ui" line="14"/>
+      <source>OCA</source>
+      <translation>OCA</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-oca.ui" line="46"/>
+      <source>Check this if you want the areas (3D faces) to be imported too.</source>
+      <translation>Markatu hau areak ere (3D aurpegiak) inporta daitezen nahi baduzu.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-oca.ui" line="49"/>
+      <source>Import OCA areas</source>
+      <translation>Inportatu OCA areak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="14"/>
+      <source>DXF</source>
+      <translation>DXF</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="35"/>
+      <source>This preferences dialog will be shown when importing/ exporting DXF files</source>
+      <translation>Hobespenen elkarrizketa-koadro hau DXF fitxategiak inportatzean/esportatzean erakutsiko da</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="38"/>
+      <source>Show this dialog when importing and exporting</source>
+      <translation>Erakutsi elkarrizketa-koadro hau inportatzean eta esportatzean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="51"/>
+      <source>Python importer is used, otherwise the newer C++ is used.
+Note: C++ importer is faster, but is not as featureful yet</source>
+      <translation>Python inportatzailea erabiltzen da, bestela C++ berriagoa erabiltzen da.
+Oharra: C++ inportatzailea azkarragoa da, baina oraindik eginbide gutxiago ditu.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="55"/>
+      <source>Use legacy python importer</source>
+      <translation>Erabili Python inportatzaile zaharra</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="71"/>
+      <source>Python exporter is used, otherwise the newer C++ is used.
+Note: C++ exporter is faster, but is not as featureful yet</source>
+      <translation>Python esportatzailea erabiliko da, bestela C++ berriagoa erabiliko da.
+Oharra: C++ esportatzailea azkarragoa da, baina oraindik eginbide gutxiago ditu.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="75"/>
+      <source>Use legacy python exporter</source>
+      <translation>Erabili Python esportatzaile zaharra</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="88"/>
+      <source>Automatic update (legacy importer only)</source>
+      <translation>Eguneratze automatikoa (inportatzaile zaharkitua soilik)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="96"/>
+      <source>Allow FreeCAD to download the Python converter for DXF import and export.
+You can also do this manually by installing the "dxf_library" workbench
+from the Addon Manager.</source>
+      <translation>Onartu FreeCADek DXFak inportatzeko eta esportatzeko Pyhton bihurtzailea deskargatu dezan.
+Eskuz ere egin daiteke, "dxf_library" lan-mahaia instalatuta gehigarrien kudeatzailetik.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="101"/>
+      <source>Allow FreeCAD to automatically download and update the DXF libraries</source>
+      <translation>Onartu FreeCADek automatikoki deskarga eta egunera ditzan DXF liburutegiak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="119"/>
+      <location filename="../ui/preferences-oca.ui" line="26"/>
+      <location filename="../ui/preferences-svg.ui" line="26"/>
+      <source>Import options</source>
+      <translation>Inportazio-aukerak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="140"/>
+      <source>Note: Not all the options below are used by the new importer yet</source>
+      <translation>Oharra: Beheko aukera guztiak ez daude oraindik erabilgarri inportatzaile berriarekin</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="149"/>
+      <source>Import</source>
+      <translation>Inportatu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="156"/>
+      <source>If unchecked, texts and mtexts won't be imported</source>
+      <translation>Markatu gabe badago, testuak/mtestuak ez dira inportatuko</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="159"/>
+      <source>texts and dimensions</source>
+      <translation>testuak eta kotak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="172"/>
+      <source>If unchecked, points won't be imported</source>
+      <translation>Markatu gabe badago, puntuak ez dira inportatuko</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="175"/>
+      <source>points</source>
+      <translation>puntuak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="188"/>
+      <source>If checked, paper space objects will be imported too</source>
+      <translation>Markatuta badago, paper-espazioko objektuak ere inportatuko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="191"/>
+      <source>layouts</source>
+      <translation>diseinuak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="204"/>
+      <source>If you want the non-named blocks (beginning with a *) to be imported too</source>
+      <translation>Izenik gabeko blokeak ere (* batekin hasten direnak) inportatu nahi dituzun</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="207"/>
+      <source>*blocks</source>
+      <translation>*blokeak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="224"/>
+      <source>Create</source>
+      <translation>Sortu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="231"/>
+      <source>Only standard Part objects will be created (fastest)</source>
+      <translation>Pieza-objektu estandarrak soilik sortuko dira (azkarrena)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="234"/>
+      <source>simple Part shapes</source>
+      <translation>pieza-forma sinpleak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="250"/>
+      <source>Parametric Draft objects will be created whenever possible</source>
+      <translation>Zirriborro-objektu parametrikoak sortuko dira ahal den guztietan</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="253"/>
+      <source>Draft objects</source>
+      <translation>Zirriborro-objektuak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="266"/>
+      <source>Sketches will be created whenever possible</source>
+      <translation>Krokisak sortuko dira ahal den guztietan</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="269"/>
+      <source>Sketches</source>
+      <translation>Krokisak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="289"/>
+      <source>Scale factor to apply to imported files</source>
+      <translation>Inportatutako fitxategiei aplikatuko zaien eskala-faktorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="309"/>
+      <source>Scale factor to apply to DXF files on import.
+The factor is the conversion between the unit of your DXF file and millimeters.
+Example: for files in millimeters: 1, in centimeters: 10,
+                             in meters: 1000, in inches: 25.4, in feet: 304.8</source>
+      <translation>DXF fitxategien inportazioan aplikatuko den eskala-faktorea.
+Zure DXF fitxategiaren unitatea milimetroetara bihurtzeko faktorea da.
+Adibidea: milimetroetan dauden fitxategietarako: 1, zentimetroetarako: 10, metroetarako: 1000, hazbeteetarako: 25.4, oinetarako: 304.8</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="338"/>
+      <source>Colors will be retrieved from the DXF objects whenever possible.
+Otherwise default colors will be applied. </source>
+      <translation>Koloreak DXF objektuetatik hartuko dira, posible bada. Bestela, kolore lehenetsiak aplikatuko dira. </translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="342"/>
+      <source>Get original colors from the DXF file</source>
+      <translation>Eskuratu DXF fitxategiko jatorrizko koloreak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="359"/>
+      <source>FreeCAD will try to join coincident objects into wires.
+Note that this can take a while!</source>
+      <translation>Bat datozen objektuak alanbreetan elkartzen saiatuko da FreeCAD.
+Kontuan izan horrek denbora asko behar dezake!</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="363"/>
+      <source>Join geometry</source>
+      <translation>Elkartu geometria</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="380"/>
+      <source>Objects from the same layers will be joined into Draft Blocks,
+turning the display faster, but making them less easily editable </source>
+      <translation>Geruza bereko objektuak zirriborro-blokeetan bilduko dira,
+bistaratzea azkartuz, baina edizioa zailduz </translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="384"/>
+      <source>Group layers into blocks</source>
+      <translation>Multzokatu geruzak blokeetan</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="401"/>
+      <source>Imported texts will get the standard Draft Text size,
+instead of the size they have in the DXF document</source>
+      <translation>Inportatutako testuek zirriborroen testu-tamaina estandarra hartuko dute,
+DXF dokumentuan duten tamaina erabili ordez</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="405"/>
+      <source>Use standard font size for texts</source>
+      <translation>Erabili letra-tamaina estandarra testuetan</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="422"/>
+      <source>If this is checked, DXF layers will be imported as Draft Layers</source>
+      <translation>Hau markatuta badago, DXF geruzak zirriborro-geruza gisa inportatuko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="425"/>
+      <source>Use Layers</source>
+      <translation>Erabili geruzak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="445"/>
+      <source>Hatches will be converted into simple wires</source>
+      <translation>Itzalak alanbre sinple bihurtuko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="448"/>
+      <source>Import hatch boundaries as wires</source>
+      <translation>Inportatu itzaleztadura-mugak alanbre gisa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="465"/>
+      <source>If polylines have a width defined, they will be rendered
+as closed wires with correct width</source>
+      <translation>Polilerroek zabalera definituta badute, zabalera zuzena duten
+alanbre itxi modura errendatuko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="469"/>
+      <source>Render polylines with width</source>
+      <translation>Errendatu zabalera duten polilerroak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="486"/>
+      <source>Ellipse export is poorly supported. Use this to export them as polylines instead.</source>
+      <translation>Elipseeen esportazioaren euskarria ez da oso ona. Erabili hau elipseak polilerro gisa esportatzeko.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="489"/>
+      <source>Treat ellipses and splines as polylines</source>
+      <translation>Tratatu elipseak eta spline-ak polilerroak bailiran</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="518"/>
+      <source>Max Spline Segment:</source>
+      <translation>Spline-segmentu maximoa:</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="528"/>
+      <source>Maximum length of each of the polyline segments.
+If it is set to '0' the whole spline is treated as a straight segment.</source>
+      <translation>Polilerro-segmentu bakoitzaren luzera maximoa.
+Hemen '0' ezarri bada, spline osoa segmentu zuzen gisa tratatuko da.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="559"/>
+      <location filename="../ui/preferences-svg.ui" line="107"/>
+      <source>Export options</source>
+      <translation>Esportazio-aukerak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="567"/>
+      <source>All objects containing faces will be exported as 3D polyfaces</source>
+      <translation>Aurpegiak dituzten objektu guztiak 3D poligono gisa esportatuko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="570"/>
+      <source>Export 3D objects as polyface meshes</source>
+      <translation>Esportatu 3D objektuak amaraun poligonal gisa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="587"/>
+      <source>Drawing Views will be exported as blocks.
+This might fail for post DXF R12 templates.</source>
+      <translation>Marrazki-bistak bloke modura esportatuko dira.
+Horrek huts egin dezake DXF R12 ondoko txantiloiekin.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="591"/>
+      <source>Export Drawing Views as blocks</source>
+      <translation>Esportatu marrazki-bistak bloke modura</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="611"/>
+      <source>Exported objects will be projected to reflect the current view direction</source>
+      <translation>Esportatutako objektuak uneko bistaren norabidea islatzeko moduan proiektatuko dira</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dxf.ui" line="614"/>
+      <source>Project exported objects along current view direction</source>
+      <translation>Proiektatu esportatutako objektuak uneko bista-norabidearen luzeran</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="14"/>
+      <source>Grid and snapping</source>
+      <translation>Sareta eta atxikitzea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="26"/>
+      <source>Snapping</source>
+      <translation>Atxikitzea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="34"/>
+      <source>If this is checked, snapping is activated without the need to press the snap mod key</source>
+      <translation>Hau markatuta badago, atxikitzea aktibatuko da atxikitzeko tekla aldatzailea sakatu behar izan gabe</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="37"/>
+      <source>Always snap (disable snap mod)</source>
+      <translation>Atxiki beti (desgaitu atxikitze modua)</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="57"/>
+      <source>Constrain mod</source>
+      <translation>Murrizketa ald.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="77"/>
+      <source>The Constraining modifier key</source>
+      <translation>Murrizketen tekla aldatzailea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="87"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="142"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="197"/>
+      <source>Shift</source>
+      <translation>Shift</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="92"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="147"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="202"/>
+      <source>Ctrl</source>
+      <translation>Ctrl</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="97"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="152"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="207"/>
+      <source>Alt</source>
+      <translation>Alt</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="109"/>
+      <source>Snap mod</source>
+      <translation>Atxikitze ald.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="129"/>
+      <source>The snap modifier key</source>
+      <translation>Atxikitzeko tekla aldatzailea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="164"/>
+      <source>Alt mod</source>
+      <translation>Alt ald.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="184"/>
+      <source>The Alt modifier key</source>
+      <translation>Alt tekla aldatzailea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="219"/>
+      <source>If checked, the Snap toolbar will be shown whenever you use snapping</source>
+      <translation>Markatuta badago, atxikitzerako tresna-barra erakutsi egingo da atxikitzea erabiltzen ari bazara</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="222"/>
+      <source>Show Draft Snap toolbar</source>
+      <translation>Erakutsi zirriborro-atxikipenaren tresna barra</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="242"/>
+      <source>Hide Draft snap toolbar after use</source>
+      <translation>Ezkutatu zirriborro-atxikipenaren tresna barra, hura erabili ondoren</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="263"/>
+      <source>Grid</source>
+      <translation>Sareta</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="269"/>
+      <source>If checked, a grid will appear when drawing</source>
+      <translation>Markatuta badago, sareta bat agertuko da marraztean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="272"/>
+      <source>Use grid</source>
+      <translation>Erabili sareta</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="291"/>
+      <source>If checked, the Draft grid will always be visible when the Draft workbench is active. Otherwise only when using a command</source>
+      <translation>Markatuta badago, zirriborro-sareta ikusgai egongo da beti zirriborroen lan-mahaia aktibo dagoenean. Bestela, komando bat erabiltzean soilik ikusiko da</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="294"/>
+      <source>Always show the grid</source>
+      <translation>Erakutsi sareta beti</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="310"/>
+      <source>If checked, an additional border is displayed around the grid, showing the main square size in the bottom left border</source>
+      <translation>Markatuta badago, ertz gehigarria bistaratuko da saretaren inguruan, lauki nagusiaren tamaina beheko ezkerreko ertzean erakutsita</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="313"/>
+      <source>Show grid border</source>
+      <translation>Erakutsi saretaren ertza</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="329"/>
+      <source>If set, the grid will have its two main axes colored in red, green or blue when they match global axes</source>
+      <translation>Ezarrita badago, saretaren bi ardatz nagusiak gorriz, berdez edo urdinez margotuko dira ardatz globalekin bat datozenean</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="332"/>
+      <source>Use colored axes</source>
+      <translation>Erabili ardatz koloredunak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="353"/>
+      <source>Main lines every</source>
+      <translation>Lerro nagusien maiztasuna</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="376"/>
+      <source>Mainlines will be drawn thicker. Specify here how many squares between mainlines.</source>
+      <translation>Lerro nagusiak lodiago marraztuko dira. Adierazi hemen zenbat lauki utziko diren lerro nagusien artean.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="402"/>
+      <source>Grid spacing</source>
+      <translation>Sareta-tarteak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="425"/>
+      <source>The spacing between each grid line</source>
+      <translation>Sareta-lerroen arteko tartea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="431"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="92"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="211"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="247"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="283"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="365"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="432"/>
+      <location filename="../ui/preferences-dxf.ui" line="535"/>
+      <location filename="../ui/preferences-svg.ui" line="209"/>
+      <source>mm</source>
+      <translation>mm</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="457"/>
+      <source>Grid size</source>
+      <translation>Sareta-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="477"/>
+      <source>The number of horizontal or vertical lines of the grid</source>
+      <translation>Saretaren lerro horizontalen edo bertikalen kopurua</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="483"/>
+      <source> lines</source>
+      <translation> lerroak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="506"/>
+      <source>Grid color and transparency</source>
+      <translation>Saretaren kolorea eta gardentasuna</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="526"/>
+      <source>The color of the grid</source>
+      <translation>Saretaren kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="546"/>
+      <source>The overall transparency of the grid</source>
+      <translation>Saretaren gardentasun orokorra</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="567"/>
+      <source>Draft Edit preferences</source>
+      <translation>Zirriborro-edizioaren hobespenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="570"/>
+      <source>Edit</source>
+      <translation>Editatu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="584"/>
+      <source>Maximum number of contemporary edited objects</source>
+      <translation>Aldi berean editatutako objektuen kopuru maximoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="607"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the maximum number of objects Draft Edit&lt;/p&gt;&lt;p&gt;can process at the same time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zirriborro-edizioak aldi berean prozesatu dezakeen&lt;/p&gt;&lt;p&gt;objektu kopuru maximoa ezartzen du&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="645"/>
+      <source>Draft edit pick radius</source>
+      <translation>Zirriborro-edizioaren aukeratze-erradioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="668"/>
+      <source>Controls pick radius of edit nodes</source>
+      <translation>Edizio-nodoen aukeratze-erradioa kontrolatzen du</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="14"/>
+      <source>DWG</source>
+      <translation>DWG</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="26"/>
+      <source>DWG conversion</source>
+      <translation>DWG bihurketa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="34"/>
+      <source>Path to ODA file converter</source>
+      <translation>ODA fitxategi-bihurtzailearen bidea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="41"/>
+      <source>The path to your ODA (formerly Teigha) File Converter executable</source>
+      <translation>Zure ODA (lehen Teigha) File Converter exekutagarriaren bidea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-dwg.ui" line="56"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; DXF options apply to DWG files as well.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; DXF aukerek DWG fitxategietan ere aplikatuko dira.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="14"/>
+      <source>User interface settings</source>
+      <translation>Erabiltzaile-interfazearen ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="26"/>
+      <source>In-Command Shortcuts</source>
+      <translation>Komandoen lasterbideak</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="52"/>
+      <source>`</source>
+      <translation>`</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="89"/>
+      <source>S</source>
+      <translation>S</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="111"/>
+      <source>Close</source>
+      <translation>Itxi</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="118"/>
+      <source>Relative</source>
+      <translation>Erlatiboa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="140"/>
+      <source>R</source>
+      <translation>R</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="177"/>
+      <source>O</source>
+      <translation>O</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="214"/>
+      <source>T</source>
+      <translation>T</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="236"/>
+      <source>Continue</source>
+      <translation>Jarraitu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="243"/>
+      <source>Copy</source>
+      <translation>Kopiatu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="250"/>
+      <source>Increase Radius</source>
+      <translation>Handitu erradioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="257"/>
+      <source>Cycle Snap</source>
+      <translation>Ziklo-atxikitzea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="279"/>
+      <source>[</source>
+      <translation>[</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="316"/>
+      <source>]</source>
+      <translation>]</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="338"/>
+      <source>Snap</source>
+      <translation>Atxikitu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="345"/>
+      <source>Decrease Radius</source>
+      <translation>Txikitu erradioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="352"/>
+      <source>Length</source>
+      <translation>Luzera</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="359"/>
+      <source>Wipe</source>
+      <translation>Garbitu</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="381"/>
+      <source>D</source>
+      <translation>D</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="403"/>
+      <source>Add Hold</source>
+      <translation>Gehitu eustea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="425"/>
+      <source>L</source>
+      <translation>L</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="447"/>
+      <source>Exit</source>
+      <translation>Irten</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="469"/>
+      <source>P</source>
+      <translation>P</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="491"/>
+      <source>Fill</source>
+      <translation>Bete</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="498"/>
+      <source>Subelement Mode</source>
+      <translation>Azpi-elementuen modua</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="520"/>
+      <source>E</source>
+      <translation>E</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="557"/>
+      <source>H</source>
+      <translation>H</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="579"/>
+      <source>Select Edge</source>
+      <translation>Hautatu ertza</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="601"/>
+      <source>W</source>
+      <translation>W</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="638"/>
+      <source>A</source>
+      <translation>A</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="675"/>
+      <source>Q</source>
+      <translation>Q</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="697"/>
+      <source>Set WP</source>
+      <translation>Ezarri WPa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="719"/>
+      <source>U</source>
+      <translation>U</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="741"/>
+      <source>Restrict X</source>
+      <translation>Murriztu X</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="763"/>
+      <source>X</source>
+      <translation>X</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="785"/>
+      <source>Restrict Y</source>
+      <translation>Murriztu Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="807"/>
+      <source>Y</source>
+      <translation>Y</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="829"/>
+      <source>Restrict Z</source>
+      <translation>Murriztu Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="851"/>
+      <source>Z</source>
+      <translation>Z</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="873"/>
+      <source>Global</source>
+      <translation>Globala</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="895"/>
+      <source>G</source>
+      <translation>G</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="928"/>
+      <source>Enable draft statusbar customization</source>
+      <translation>Gaitu zirriborren egoera-barraren pertsonalizazioa</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="931"/>
+      <source>Draft Statusbar</source>
+      <translation>Zirriborroen egoera-barra</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="951"/>
+      <source>Enable snap statusbar widget</source>
+      <translation>Gaitu egoera-barra atxikitzeko trepeta</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="954"/>
+      <source>Draft snap widget</source>
+      <translation>Zirriborroa atxikitzeko trepeta</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="970"/>
+      <source>Enable draft statusbar annotation scale widget</source>
+      <translation>Gaitu zirriborroaren egoera-barraren oharpenen eskalaren trepeta</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftinterface.ui" line="973"/>
+      <source>Annotation scale widget</source>
+      <translation>Oharpenen eskalaren trepeta</translation>
     </message>
   </context>
 </TS>

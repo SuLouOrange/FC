@@ -106,7 +106,7 @@
     </message>
     <message>
       <source>Clear measurement</source>
-      <translation>Borrar medición</translation>
+      <translation>Limpiar medición</translation>
     </message>
   </context>
   <context>
@@ -117,7 +117,7 @@
     </message>
     <message>
       <source>Toggle measurement</source>
-      <translation>Activar medición</translation>
+      <translation>Activa/desactiva la medición</translation>
     </message>
   </context>
   <context>
@@ -481,7 +481,7 @@ mientras hace clic con el botón izquierdo o derecho y mueve el ratón hacia arr
     </message>
     <message>
       <source>Release date</source>
-      <translation>Fecha de la versión</translation>
+      <translation>Fecha de lanzamiento</translation>
     </message>
     <message>
       <source>Copy to clipboard</source>
@@ -604,7 +604,7 @@ mientras hace clic con el botón izquierdo o derecho y mueve el ratón hacia arr
     </message>
     <message>
       <source>Offset</source>
-      <translation>Equidistancia</translation>
+      <translation>Desplazamiento</translation>
     </message>
     <message>
       <source>Clipping Y</source>
@@ -2375,8 +2375,7 @@ desde la consola de Python al panel de la vista de informe</translation>
     <message>
       <source>Internal Python error messages will be redirected
 from Python console to Report view panel</source>
-      <translation>La salida interna de Python se redirigirá
-desde la consola de Python al panel de la vista de informe</translation>
+      <translation>Los mensajes de errores internos de Python serán redireccionados desde la consola de Python al panel de vista de informes</translation>
     </message>
     <message>
       <source>Include a timecode for each report</source>
@@ -2482,11 +2481,11 @@ desde la consola de Python al panel de la vista de informe</translation>
     </message>
     <message>
       <source>Or&amp;thographic rendering</source>
-      <translation>Renderizado ortogonal</translation>
+      <translation>Representación or&amp;togonal</translation>
     </message>
     <message>
       <source>Perspective renderin&amp;g</source>
-      <translation>Renderizado en perspectiva</translation>
+      <translation>Representación en perspectiva</translation>
     </message>
     <message>
       <source>Marker size:</source>
@@ -2620,7 +2619,7 @@ pero una respuesta más lenta a cualquier cambio de escena.</translation>
     </message>
     <message>
       <source>Objects will be projected in orthographic projection</source>
-      <translation>Los objetos se proyectarán en proyección ortográfica</translation>
+      <translation>Los objetos se proyectarán en proyección ortogonal</translation>
     </message>
     <message>
       <source>Objects will appear in a perspective projection</source>
@@ -3287,10 +3286,6 @@ También puede utilizar el formulario: John Doe &lt;john@doe.com&gt;</translatio
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Bancos de trabajo descargados</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Nombre del banco de trabajo</translation>
     </message>
@@ -3305,6 +3300,10 @@ También puede utilizar el formulario: John Doe &lt;john@doe.com&gt;</translatio
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Para preservar recursos, FreeCAD no carga los bancos de trabajo hasta que se usen. Cargarlos puede proporcionar acceso a preferencias adicionales relacionadas con su funcionalidad.&lt;/p&gt;&lt;p&gt;Los siguientes bancos de trabajo están disponibles en su instalación:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Bancos de trabajo disponibles</translation>
     </message>
   </context>
   <context>
@@ -3668,11 +3667,11 @@ El paso de zoom de '1' significa un factor de 7.5 para cada paso de acercamiento
     </message>
     <message>
       <source>Auto switch to the 3D view containing the selected item</source>
-      <translation>Cambiar automáticamente a la vista 3D que contiene el elemento seleccionado</translation>
+      <translation>Cambia automáticamente a la vista 3D que contiene el elemento seleccionado</translation>
     </message>
     <message>
       <source>Auto expand tree item when the corresponding object is selected in 3D view</source>
-      <translation>Auto expandir el elemento del árbol cuando se selecciona el objeto correspondiente en la vista 3D</translation>
+      <translation>Auto expande el elemento del árbol cuando se selecciona el objeto correspondiente en la vista 3D</translation>
     </message>
     <message>
       <source>Preselect the object in 3D view when mouse over the tree item</source>
@@ -3680,7 +3679,7 @@ El paso de zoom de '1' significa un factor de 7.5 para cada paso de acercamiento
     </message>
     <message>
       <source>Record selection in tree view in order to go back/forward using navigation button</source>
-      <translation>Grabar selección en la vista de árbol para retroceder/avanzar usando el botón de navegación</translation>
+      <translation>Graba la selección en la vista de árbol para retroceder/avanzar usando el botón de navegación</translation>
     </message>
     <message>
       <source>Add checkboxes for selection in document tree</source>
@@ -4502,31 +4501,31 @@ La columna 'Estado' muestra si el documento puede ser recuperado.</translation>
       <translation>Por favor, seleccione 1, 2 o 3 puntos antes de hacer clic en este botón. Un punto puede estar en un vértice, cara o arista. Si en una cara o arista, el punto utilizado será el punto en la posición del mouse a lo largo de la cara o la arista. Si se selecciona 1 punto, se utilizará como centro de rotación. Si se seleccionan 2 puntos, el punto medio entre ellos será el centro de rotación y, si es necesario, se creará un nuevo eje personalizado. Si se seleccionan 3 puntos, el primer punto se convierte en el centro de rotación y se encuentra en el vector que es normal al plano definido por los 3 puntos. Se proporciona cierta información de distancia y ángulo en la vista de reporte, que puede ser útil al alinear objetos. Para su comodidad, cuando se usa la tecla Mayús + clic, la distancia o el ángulo apropiados se copian en el portapapeles.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Alrededor del eje Y-:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Elevación (alrededor del eje y):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Alrededor del eje Z:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Balanceo (alrededor del eje x-):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>Alrededor del eje X:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Rumbo (alrededor del eje z):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Rotación alrededor del eje x</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Rumbo (alrededor del eje z)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Rotación alrededor del eje y</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Elevación (alrededor del eje y)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Rotación alrededor del eje z</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Balanceo (alrededor del eje x)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
+      <source>Euler angles (zy'x'')</source>
       <translation>Ángulos de Euler (xy'z'')</translation>
     </message>
   </context>
@@ -4692,13 +4691,12 @@ La columna 'Estado' muestra si el documento puede ser recuperado.</translation>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;Usar las Selecciones Originales</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Ignorar lo precedente y continuar con los objetos seleccionados con prioridad a la apertura de este dialogo</translation>
     </message>
   </context>
   <context>
@@ -5221,7 +5219,7 @@ Desea guardar los cambios?</translation>
     </message>
     <message>
       <source>Toggles this dockable window</source>
-      <translation>Alterna esta ventana acopla-ble</translation>
+      <translation>Alterna esta ventana acoplable</translation>
     </message>
     <message>
       <source>Close All</source>
@@ -5952,7 +5950,7 @@ Do you want to specify another directory?</source>
     </message>
     <message>
       <source>Afrikaans</source>
-      <translation>Africano</translation>
+      <translation>Africaans</translation>
     </message>
     <message>
       <source>Norwegian</source>
@@ -6049,6 +6047,18 @@ Do you want to specify another directory?</source>
     <message>
       <source>Vietnamese</source>
       <translation>Vietnamita</translation>
+    </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Búlgaro</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Griego</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>Español, Argentina</translation>
     </message>
   </context>
   <context>
@@ -7011,6 +7021,38 @@ Physical path: </source>
 
 Trayectoria física: </translation>
     </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>No se pudo guardar el documento</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Hubo un problema al intentar guardar el archivo. Esto puede deberse a que algunas de las carpetas matriz no existen, o no posee permisos suficientes, o por otras razones. Detalles del error:
+
+"%1"
+
+¿Desea guardar el archivo con un nombre diferente?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Documento no guardado</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>El documento%1 no se pudo guardar. ¿Desea cancelar cerrando?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 Documento(s) no guardados</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Algunos documentos no se han podido guardar. ¿Desea cancelar el cierre?</translation>
+    </message>
   </context>
   <context>
     <name>SelectionFilter</name>
@@ -7117,7 +7159,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Align the selected objects</source>
-      <translation>Alinear los objetos seleccionados</translation>
+      <translation>Alinea los objetos seleccionados</translation>
     </message>
   </context>
   <context>
@@ -7173,7 +7215,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Close active window</source>
-      <translation>Cerrar la ventana activa</translation>
+      <translation>Cierra la ventana activa</translation>
     </message>
   </context>
   <context>
@@ -7188,7 +7230,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Close all windows</source>
-      <translation>Cerrar todas las ventanas</translation>
+      <translation>Cierra todas las ventanas</translation>
     </message>
   </context>
   <context>
@@ -7278,7 +7320,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Show the dependency graph of the objects in the active document</source>
-      <translation>Mostrar el gráfico de dependencia de los objetos en el documento activo</translation>
+      <translation>Muestra el gráfico de dependencia de los objetos en el documento activo</translation>
     </message>
   </context>
   <context>
@@ -7413,7 +7455,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Put duplicates of the selected objects to the active document</source>
-      <translation>Ponga los duplicados de los objetos seleccionados en el documento activo</translation>
+      <translation>Pone los duplicados de los objetos seleccionados en el documento activo</translation>
     </message>
   </context>
   <context>
@@ -7447,7 +7489,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Export an object in the active document</source>
-      <translation>Exportar un objeto en el documento activo</translation>
+      <translation>Exporta un objeto en el documento activo</translation>
     </message>
     <message>
       <source>No selection</source>
@@ -7628,7 +7670,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Hide all objects in the document</source>
-      <translation>Ocultar todos los objetos en el documento</translation>
+      <translation>Oculta todos los objetos en el documento</translation>
     </message>
   </context>
   <context>
@@ -7643,7 +7685,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Hide all selected objects</source>
-      <translation>Ocultar todos los objetos seleccionados</translation>
+      <translation>Oculta todos los objetos seleccionados</translation>
     </message>
   </context>
   <context>
@@ -7658,7 +7700,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Import a file in the active document</source>
-      <translation>Importar un archivo en el documento activo</translation>
+      <translation>Importa un archivo en el documento activo</translation>
     </message>
     <message>
       <source>Supported formats</source>
@@ -7965,7 +8007,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Merge project</source>
-      <translation>Fusionar proyecto</translation>
+      <translation>Fusiona el proyecto</translation>
     </message>
     <message>
       <source>Cannot merge project with itself.</source>
@@ -7988,7 +8030,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Create a new empty document</source>
-      <translation>Crear un documento vacío nuevo</translation>
+      <translation>Crea un documento vacío nuevo</translation>
     </message>
     <message>
       <source>Unnamed</source>
@@ -8033,7 +8075,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Open a document or import files</source>
-      <translation>Abrir un documento o importar archivos</translation>
+      <translation>Abre un documento o importa archivos</translation>
     </message>
     <message>
       <source>Supported formats</source>
@@ -8109,7 +8151,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Print the document</source>
-      <translation>Imprimir el documento</translation>
+      <translation>Imprime el documento</translation>
     </message>
   </context>
   <context>
@@ -8124,7 +8166,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Export the document as PDF</source>
-      <translation>Exportar el documento como PDF</translation>
+      <translation>Exporta el documento como PDF</translation>
     </message>
   </context>
   <context>
@@ -8139,7 +8181,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Print the document</source>
-      <translation>Imprimir el documento</translation>
+      <translation>Imprime el documento</translation>
     </message>
     <message>
       <source>Print preview</source>
@@ -8158,7 +8200,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Show details of the currently active project</source>
-      <translation>Mostrar detalles del proyecto activo actual</translation>
+      <translation>Muestra detalles del proyecto activo actual</translation>
     </message>
   </context>
   <context>
@@ -8319,7 +8361,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Save all opened document</source>
-      <translation>Guardar todos los documentos abiertos</translation>
+      <translation>Guarda todos los documentos abiertos</translation>
     </message>
   </context>
   <context>
@@ -8334,7 +8376,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Save the active document under a new file name</source>
-      <translation>Guardar el documento activo con un nuevo nombre de archivo</translation>
+      <translation>Guarda el documento activo con un nombre de archivo nuevo</translation>
     </message>
   </context>
   <context>
@@ -8394,7 +8436,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Show selection bounding box</source>
-      <translation>Mostrar cuadro delimitador de selección</translation>
+      <translation>Muestra el cuadro delimitador de selección</translation>
     </message>
   </context>
   <context>
@@ -8424,7 +8466,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Select all</source>
-      <translation>Seleccionar todo</translation>
+      <translation>Selecciona todo</translation>
     </message>
   </context>
   <context>
@@ -8439,7 +8481,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Select visible objects in the active document</source>
-      <translation>Seleccione objetos visibles en el documento activo</translation>
+      <translation>Selecciona objetos visibles en el documento activo</translation>
     </message>
   </context>
   <context>
@@ -8484,7 +8526,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Show all objects in the document</source>
-      <translation>Mostrar todos los objetos en el documento</translation>
+      <translation>Muestra todos los objetos en el documento</translation>
     </message>
   </context>
   <context>
@@ -8499,7 +8541,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Show all selected objects</source>
-      <translation>Mostrar todos los objetos seleccionados</translation>
+      <translation>Muestra todos los objetos seleccionados</translation>
     </message>
   </context>
   <context>
@@ -8514,7 +8556,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Toggles the status bar</source>
-      <translation>Conmutar la barra de estado</translation>
+      <translation>Activa/desactiva la barra de estado</translation>
     </message>
   </context>
   <context>
@@ -8585,7 +8627,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Toggles clipping plane for active view</source>
-      <translation>Conmuta el plano de recorte para la vista activa</translation>
+      <translation>Conmuta el plano de corte para la vista activa</translation>
     </message>
   </context>
   <context>
@@ -8600,7 +8642,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Toggle between navigation and edit mode</source>
-      <translation>Alternar entre el modo de navegación y edición</translation>
+      <translation>Alterna entre el modo de navegación y edición</translation>
     </message>
   </context>
   <context>
@@ -8660,7 +8702,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Toggles this window</source>
-      <translation>Conmutar esta ventana</translation>
+      <translation>Alternar esta ventana</translation>
     </message>
   </context>
   <context>
@@ -8690,7 +8732,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Transform the selected object in the 3d view</source>
-      <translation>Transformar el objeto seleccionado en la vista 3D</translation>
+      <translation>Transforma el objeto seleccionado en la vista 3d</translation>
     </message>
   </context>
   <context>
@@ -8765,7 +8807,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Undo exactly one action</source>
-      <translation>Deshacer exactamente una acción</translation>
+      <translation>Deshace exactamente una acción</translation>
     </message>
   </context>
   <context>
@@ -8787,11 +8829,11 @@ Trayectoria física: </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Modo edición</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Determina el comportamiento cuando se edita un objeto del árbol</translation>
     </message>
   </context>
   <context>
@@ -8851,7 +8893,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to dimetric view</source>
-      <translation>Establecer vista dimétrica</translation>
+      <translation>Establece vista dimétrica</translation>
     </message>
   </context>
   <context>
@@ -8911,7 +8953,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Fits the whole content on the screen</source>
-      <translation>Ajustar el contenido completo a la pantalla</translation>
+      <translation>Ajusta el contenido completo a la pantalla</translation>
     </message>
   </context>
   <context>
@@ -8926,7 +8968,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Fits the selected content on the screen</source>
-      <translation>Ajustar el contenido seleccionado a la pantalla</translation>
+      <translation>Ajusta el contenido seleccionado a la pantalla</translation>
     </message>
   </context>
   <context>
@@ -8941,7 +8983,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to front view</source>
-      <translation>Establecer vista alzado</translation>
+      <translation>Establece vista de alzado</translation>
     </message>
   </context>
   <context>
@@ -8956,7 +8998,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to default home view</source>
-      <translation>Establecer como vista de inicio por defecto</translation>
+      <translation>Establece por defecto la vista de inicio</translation>
     </message>
   </context>
   <context>
@@ -8971,7 +9013,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to isometric view</source>
-      <translation>Establecer vista isométrica</translation>
+      <translation>Establece vista isométrica</translation>
     </message>
   </context>
   <context>
@@ -8986,7 +9028,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Issue the camera position to the console and to a macro, to easily recall this position</source>
-      <translation>Publicar la posición de la cámara a la consola y a una macro, para rellamar fácilmente a esta posición</translation>
+      <translation>Publica la posición de la cámara a la consola y a una macro, para reutilizar fácilmente esta posición</translation>
     </message>
   </context>
   <context>
@@ -9001,7 +9043,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Switch stereo viewing to Interleaved Columns</source>
-      <translation>Cambiar la visualización estéreo a columnas intercaladas</translation>
+      <translation>Cambia la visualización estéreo a columnas intercaladas</translation>
     </message>
   </context>
   <context>
@@ -9016,7 +9058,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Switch stereo viewing to Interleaved Rows</source>
-      <translation>Cambiar la visualización estéreo a filas intercaladas</translation>
+      <translation>Cambia la visualización estéreo a filas intercaladas</translation>
     </message>
   </context>
   <context>
@@ -9031,7 +9073,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Switch stereo viewing off</source>
-      <translation>Cambiar la visualización estereo a apagado</translation>
+      <translation>Apaga la visualización estereo</translation>
     </message>
   </context>
   <context>
@@ -9046,7 +9088,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Switch stereo viewing to quad buffer</source>
-      <translation>Cambiar la visualización estereo a cuádruple buffer</translation>
+      <translation>Cambia la visualización estereo a cuádruple buffer</translation>
     </message>
   </context>
   <context>
@@ -9061,7 +9103,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Switch stereo viewing to red/cyan</source>
-      <translation>Cambiar a visualización estereo rojo/cian</translation>
+      <translation>Cambia a visualización estereo rojo/cian</translation>
     </message>
   </context>
   <context>
@@ -9076,7 +9118,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to left view</source>
-      <translation>Establecer vista izquierda</translation>
+      <translation>Establece vista izquierda</translation>
     </message>
   </context>
   <context>
@@ -9091,7 +9133,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to rear view</source>
-      <translation>Establecer vista posterior</translation>
+      <translation>Establece vista posterior</translation>
     </message>
   </context>
   <context>
@@ -9121,7 +9163,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to right view</source>
-      <translation>Establecer vista derecha</translation>
+      <translation>Establece vista derecha</translation>
     </message>
   </context>
   <context>
@@ -9136,7 +9178,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Rotate the view by 90° counter-clockwise</source>
-      <translation>Girar la vista a 90° en sentido antihorario</translation>
+      <translation>Gira la vista a 90° en sentido antihorario</translation>
     </message>
   </context>
   <context>
@@ -9151,7 +9193,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Rotate the view by 90° clockwise</source>
-      <translation>Girar la vista a 90° en sentido horario</translation>
+      <translation>Gira la vista a 90° en sentido horario</translation>
     </message>
   </context>
   <context>
@@ -9181,7 +9223,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to top view</source>
-      <translation>Establecer vista en planta</translation>
+      <translation>Establece vista en planta</translation>
     </message>
   </context>
   <context>
@@ -9196,7 +9238,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Set to trimetric view</source>
-      <translation>Establecer vista trimétrica</translation>
+      <translation>Establece vista trimétrica</translation>
     </message>
   </context>
   <context>
@@ -9282,7 +9324,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Display the main window in fullscreen mode</source>
-      <translation>Mostrar la ventana principal en modo de pantalla completa</translation>
+      <translation>Muestra la ventana principal en modo de pantalla completa</translation>
     </message>
   </context>
   <context>
@@ -9293,11 +9335,11 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Orthographic view</source>
-      <translation>Vista ortográfica</translation>
+      <translation>Vista ortogonal</translation>
     </message>
     <message>
       <source>Switches to orthographic view mode</source>
-      <translation>Cambiar a modo de vista ortográfica</translation>
+      <translation>Cambia al modo de vista ortogonal</translation>
     </message>
   </context>
   <context>
@@ -9312,7 +9354,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Switches to perspective view mode</source>
-      <translation>Cambiar a modo de vista perspectiva</translation>
+      <translation>Cambia a modo de vista perspectiva</translation>
     </message>
   </context>
   <context>
@@ -9323,7 +9365,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Expand active document and collapse all others</source>
-      <translation>Expandir documento activo y colapsar todos los demás</translation>
+      <translation>Expande el documento activo y colapsa todos los demás</translation>
     </message>
     <message>
       <source>TreeView</source>
@@ -9342,14 +9384,14 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Initiate dragging of current selected tree items</source>
-      <translation>Iniciar el arrastre de los elementos del árbol seleccionados</translation>
+      <translation>Inicia el arrastre de los elementos del árbol seleccionados</translation>
     </message>
   </context>
   <context>
     <name>StdTreeMultiDocument</name>
     <message>
       <source>Display all documents in the tree view</source>
-      <translation>Mostrar todos los documentos en la vista de árbol</translation>
+      <translation>Muestra todos los documentos en la vista de árbol</translation>
     </message>
     <message>
       <source>TreeView</source>
@@ -9387,7 +9429,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Record selection in tree view in order to go back/forward using navigation button</source>
-      <translation>Grabar selección en la vista de árbol para retroceder/avanzar usando el botón de navegación</translation>
+      <translation>Graba la selección en la vista de árbol para retroceder/avanzar usando el botón de navegación</translation>
     </message>
   </context>
   <context>
@@ -9432,7 +9474,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Auto adjust placement on drag and drop objects across coordinate systems</source>
-      <translation>Ajustar automáticamente la colocación al arrastrar y soltar objetos a través de los sistemas de coordenadas</translation>
+      <translation>Ajusta automáticamente la posición al arrastrar y soltar objetos a través de los sistemas de coordenadas</translation>
     </message>
   </context>
   <context>
@@ -9447,7 +9489,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Auto expand tree item when the corresponding object is selected in 3D view</source>
-      <translation>Auto expandir el elemento del árbol cuando se selecciona el objeto correspondiente en la vista 3D</translation>
+      <translation>Auto expande el elemento del árbol cuando se selecciona el objeto correspondiente en la vista 3D</translation>
     </message>
   </context>
   <context>
@@ -9462,7 +9504,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Auto switch to the 3D view containing the selected item</source>
-      <translation>Cambiar automáticamente a la vista 3D que contiene el elemento seleccionado</translation>
+      <translation>Cambia automáticamente a la vista 3D que contiene el elemento seleccionado</translation>
     </message>
   </context>
   <context>
@@ -9488,7 +9530,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Display the active view either in fullscreen, in undocked or docked mode</source>
-      <translation>Mostrar la vista activa en pantalla completa, en modo desacoplado o acoplado</translation>
+      <translation>Muestra la vista activa a pantalla completa, en modo desacoplado o acoplado</translation>
     </message>
   </context>
   <context>
@@ -9503,7 +9545,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Display the active view either in fullscreen, in undocked or docked mode</source>
-      <translation>Mostrar la vista activa en pantalla completa, en modo desacoplado o acoplado</translation>
+      <translation>Muestra la vista activa a pantalla completa, en modo desacoplado o acoplado</translation>
     </message>
   </context>
   <context>
@@ -9518,7 +9560,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Display the active view either in fullscreen, in undocked or docked mode</source>
-      <translation>Mostrar la vista activa en pantalla completa, en modo desacoplado o acoplado</translation>
+      <translation>Muestra la vista activa a pantalla completa, en modo desacoplado o acoplado</translation>
     </message>
   </context>
   <context>
@@ -9548,7 +9590,7 @@ Trayectoria física: </translation>
     </message>
     <message>
       <source>Display the active view either in fullscreen, in undocked or docked mode</source>
-      <translation>Mostrar la vista activa en pantalla completa, en modo desacoplado o acoplado</translation>
+      <translation>Muestra la vista activa a pantalla completa, en modo desacoplado o acoplado</translation>
     </message>
   </context>
   <context>
@@ -9723,11 +9765,11 @@ Por favor, compruebe la Vista de Reportes para más detalles.
     <name>ViewOrthographicCmd</name>
     <message>
       <source>Orthographic</source>
-      <translation>Ortográfico</translation>
+      <translation>Ortogonal</translation>
     </message>
     <message>
       <source>Set View to Orthographic mode</source>
-      <translation>Configurar Vista a modo Ortográfico</translation>
+      <translation>Establecer Vista a modo Ortogonal</translation>
     </message>
   </context>
   <context>
@@ -9817,6 +9859,10 @@ Por favor, compruebe la Vista de Reportes para más detalles.
     <message>
       <source>Special Ops</source>
       <translation>Operaciones especiales</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Axonométrica</translation>
     </message>
   </context>
   <context>

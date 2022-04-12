@@ -22,19 +22,17 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 
 #include "DlgSettingsFemMystranImp.h"
 #include "ui_DlgSettingsFemMystran.h"
-#include <Gui/Application.h>
-#include <Gui/PrefWidgets.h>
+
 
 using namespace FemGui;
 
-DlgSettingsFemMystranImp::DlgSettingsFemMystranImp( QWidget* parent )
-  : PreferencePage( parent )
-  , ui(new Ui_DlgSettingsFemMystranImp)
+DlgSettingsFemMystranImp::DlgSettingsFemMystranImp(QWidget* parent)
+    : PreferencePage(parent)
+    , ui(new Ui_DlgSettingsFemMystranImp)
 {
     ui->setupUi(this);
 }
@@ -61,7 +59,7 @@ void DlgSettingsFemMystranImp::loadSettings()
 /**
  * Sets the strings of the subwidgets using the current language.
  */
-void DlgSettingsFemMystranImp::changeEvent(QEvent *e)
+void DlgSettingsFemMystranImp::changeEvent(QEvent* e)
 {
     if (e->type() == QEvent::LanguageChange) {
         ui->retranslateUi(this);

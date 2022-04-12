@@ -3,7 +3,7 @@ macro(SetupBoost)
 
     set(_boost_TEST_VERSIONS ${Boost_ADDITIONAL_VERSIONS})
 
-    set (BOOST_COMPONENTS filesystem program_options regex system thread)
+    set (BOOST_COMPONENTS filesystem program_options regex system thread date_time)
     find_package(Boost ${BOOST_MIN_VERSION}
         COMPONENTS ${BOOST_COMPONENTS} REQUIRED PATHS "D:\\thirdParty\\boost_1_78_0\\boost_1_78_0\\stage\\lib\\cmake\\Boost-1.78.0")
 

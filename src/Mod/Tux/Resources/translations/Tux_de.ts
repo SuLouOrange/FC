@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="1.1" language="de" sourcelanguage="en">
+<TS version="2.1" language="de" sourcelanguage="en">
   <context>
     <name>NavigationIndicator</name>
     <message>
@@ -44,6 +44,11 @@
       <translation>Drehpunkt</translation>
     </message>
     <message>
+      <location filename="NavigationIndicatorGui.py" line="71"/>
+      <source>Middle mouse button or H key.</source>
+      <translation>Mittlere Maustaste oder H-Taste.</translation>
+    </message>
+    <message>
       <location filename="NavigationIndicatorGui.py" line="73"/>
       <source>Middle mouse button.</source>
       <translation>Mittlere Maustaste.</translation>
@@ -71,7 +76,7 @@
     <message>
       <location filename="NavigationIndicatorGui.py" line="294"/>
       <source>Tooltip</source>
-      <translation>Tooltip</translation>
+      <translation>Quick-Info</translation>
     </message>
     <message>
       <location filename="NavigationIndicatorGui.py" line="295"/>
@@ -87,11 +92,6 @@
       <location filename="NavigationIndicatorGui.py" line="297"/>
       <source>Undefined</source>
       <translation>Unbestimmt</translation>
-    </message>
-    <message>
-      <location filename="NavigationIndicatorGui.py" line="71"/>
-      <source>Middle mouse button or H key.</source>
-      <translation>Mittlere Maustaste oder H-Taste.</translation>
     </message>
   </context>
 </TS>

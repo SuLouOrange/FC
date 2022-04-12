@@ -90,7 +90,7 @@ LEGACY_NAMING_MAP = {'Draft.ts': 'draft.ts'}
 
 locations = [["AddonManager","../Mod/AddonManager/Resources/translations","../Mod/AddonManager/Resources/AddonManager.qrc"],
              ["Arch","../Mod/Arch/Resources/translations","../Mod/Arch/Resources/Arch.qrc"],
-             ["Assembly","../Mod/Assembly/Gui/Resources/translations","../Mod/Assembly/Gui/Resources/Assembly.qrc"],
+             #["Assembly","../Mod/Assembly/Gui/Resources/translations","../Mod/Assembly/Gui/Resources/Assembly.qrc"],
              ["draft","../Mod/Draft/Resources/translations","../Mod/Draft/Resources/Draft.qrc"],
              ["Drawing","../Mod/Drawing/Gui/Resources/translations","../Mod/Drawing/Gui/Resources/Drawing.qrc"],
              ["Fem","../Mod/Fem/Gui/Resources/translations","../Mod/Fem/Gui/Resources/Fem.qrc"],
@@ -115,7 +115,7 @@ locations = [["AddonManager","../Mod/AddonManager/Resources/translations","../Mo
              ["TechDraw","../Mod/TechDraw/Gui/Resources/translations","../Mod/TechDraw/Gui/Resources/TechDraw.qrc"],
              ]
              
-TRESHOLD = 25 # how many % must be translated for the translation to be included in FreeCAD
+THRESHOLD = 25 # how many % must be translated for the translation to be included in FreeCAD
 
 class CrowdinUpdater:
 
@@ -296,26 +296,24 @@ def updateTranslatorCpp(lncode):
     f.close()
 
     # checking for existing entry
-    for l in cppcode:
+    lastentry = 0
+    for i,l in enumerate(cppcode):
         if l.startswith("    d->mapLanguageTopLevelDomain[QT_TR_NOOP("):
+            lastentry = i
             if "\""+lncode+"\"" in l:
-                print(lnname+" ("+lncode+") already exists in Translator.cpp")
+                #print(lnname+" ("+lncode+") already exists in Translator.cpp")
                 return
 
     # find the position to insert
-    pos = None
-    for i in range(len(cppcode)):
-        if cppcode[i].startswith( "    d->activatedLanguage = "):
-            pos = i-1
-            break
-    if pos is None:
+    pos = lastentry + 1
+    if pos == 1:
         print("ERROR: couldn't update Translator.cpp")
         sys.exit()
 
     # inserting new entry just before the above line
     line = "    d->mapLanguageTopLevelDomain[QT_TR_NOOP(\""+lnname+"\")] = \""+lncode+"\";\n"
     cppcode.insert(pos,line)
-    print(lnname+" ("+lncode+") inserted in Translator.cpp")
+    print(lnname+" ("+lncode+") added Translator.cpp")
 
     # writing the file
     f = open(cppfile,"w")
@@ -408,7 +406,7 @@ if __name__ == "__main__":
     if command == "status":
         status = updater.status()
         status = sorted(status,key=lambda item: item['translationProgress'],reverse=True)
-        print(len([item for item in status if item['translationProgress'] > TRESHOLD])," languages with status > "+str(TRESHOLD)+"%:")
+        print(len([item for item in status if item['translationProgress'] > THRESHOLD])," languages with status > "+str(THRESHOLD)+"%:")
         print("    ")
         sep = False
         prefix = ""
@@ -418,7 +416,7 @@ if __name__ == "__main__":
             suffix = "\033[0m"
         for item in status:
             if item['translationProgress'] > 0:
-                if (item['translationProgress'] < TRESHOLD) and (not sep):
+                if (item['translationProgress'] < THRESHOLD) and (not sep):
                     print("    ")
                     print("Other languages:")
                     print("    ")
@@ -466,7 +464,7 @@ if __name__ == "__main__":
         print("retrieving list of languages...")
         status = updater.status()
         status = sorted(status,key=lambda item: item['translationProgress'],reverse=True)
-        languages = [item['languageId'] for item in status if item['translationProgress'] > TRESHOLD]
+        languages = [item['languageId'] for item in status if item['translationProgress'] > THRESHOLD]
         applyTranslations(languages)
         print("Updating Translator.cpp...")
         for ln in languages:
@@ -476,7 +474,7 @@ if __name__ == "__main__":
         print("retrieving list of languages...")
         status = updater.status()
         status = sorted(status,key=lambda item: item['translationProgress'],reverse=True)
-        languages = [item['languageId'] for item in status if item['translationProgress'] > TRESHOLD]
+        languages = [item['languageId'] for item in status if item['translationProgress'] > THRESHOLD]
         print("Updating Translator.cpp...")
         for ln in languages:
             updateTranslatorCpp(ln)   
