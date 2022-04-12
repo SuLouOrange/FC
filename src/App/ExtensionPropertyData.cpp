@@ -5,6 +5,8 @@
 #include "Document.h"
 #include "Property.h"
 #include <Base/Console.h>
+#include <Base/Writer.h>
+#include <Base/Reader.h>
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>

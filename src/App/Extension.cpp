@@ -28,18 +28,16 @@
 #endif
 
 #include <Base/PyObjectBase.h>
-
+#include "DocumentObject.h"
 #include "Extension.h"
 #include "ExtensionContainer.h"
 #include "ExtensionPython.h"
 #include <ExtensionPy.h>
+#include <Base/Console.h>
 
-<<<<<<< HEAD
 const char* logKey = "Extension";
 FC_LOG_LEVEL_INIT(logKey, false, true, false, true, true);
-=======
 
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 /* We do not use a standard property macro for type initiation. The reason is that we have the first
  * PropertyData in the extension chain, there is no parent property data.
  */

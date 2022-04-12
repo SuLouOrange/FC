@@ -41,16 +41,9 @@ std::string GroupExtensionPy::representation(void) const
 
 PyObject*  GroupExtensionPy::newObject(PyObject *args)
 {
-<<<<<<< HEAD
-    printf("%s(%d)\n", __FUNCTION__, __LINE__);
-    char *sType,*sName=0;
-    if (!PyArg_ParseTuple(args, "s|s", &sType,&sName))     // convert args: Python->C
-        return NULL;
-=======
     char *sType,*sName=nullptr;
     if (!PyArg_ParseTuple(args, "s|s", &sType,&sName))
         return nullptr;
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
     DocumentObject *object = getGroupExtensionPtr()->addObject(sType, sName);
     if ( object ) {

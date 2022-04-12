@@ -7,6 +7,8 @@
 #include "DocumentObject.h"
 
 #include <Base/Console.h>
+#include <Base/Writer.h>
+#include <Base/Reader.h>
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
@@ -70,7 +72,7 @@ namespace App {
 
     PyObject* PropertyDataSpecs::getPyObject()
     {
-        PyObject* dict = PyDict_New();
+        PyObject* dict = nullptr;
 #if 0
         for (auto it = _lValueList.begin(); it != _lValueList.end(); ++it) {
 

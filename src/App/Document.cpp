@@ -3889,9 +3889,7 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     FC_MSG(__FUNCTION__ << " 2 ");
     App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(base);
 
-    void* typeInstance = type.createInstance();
-    if (!typeInstance)
-        return nullptr;
+    
 
     //App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(typeInstance);
 
@@ -3906,7 +3904,6 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     }
     FC_MSG(__FUNCTION__ << " 3 ");
     // get Unique name
-    string ObjectName;
 
     if (pObjectName && pObjectName[0] != '\0')
         ObjectName = getUniqueObjectName(pObjectName);

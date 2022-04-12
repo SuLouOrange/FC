@@ -2896,7 +2896,8 @@ void Application::LoadParameters(void)
 }
 
 
-#if defined(_MSC_VER)
+//#if defined(_MSC_VER)
+#if 0
 // fix weird error while linking boost (all versions of VC)
 // VS2010: https://forum.freecadweb.org/viewtopic.php?f=4&t=1886&p=12553&hilit=boost%3A%3Afilesystem%3A%3Aget#p12553
 namespace boost { namespace program_options { std::string arg="arg"; } }
@@ -3194,16 +3195,19 @@ void Application::ExtractUserPath()
     mConfig["UserCachePath"] = Base::FileInfo::pathToString(cache) + PATHSEP;
 
 
-        // Create the default macro directory
-        boost::filesystem::path macroDir = converter.from_bytes(getUserMacroDir());
-        if (!boost::filesystem::exists(macroDir) && !Py_IsInitialized()) {
-            try {
-                boost::filesystem::create_directories(macroDir);
-            } catch (const boost::filesystem::filesystem_error& e) {
-                throw Base::FileSystemError("Could not create macro directory. Failed with: " + e.code().message());
-            }
-        }
-    }
+    // Set application tmp. directory
+    //
+    std::vector<std::string> empty;
+    boost::filesystem::path tmp = findPath(tempPath, customTemp, empty, true);
+    mConfig["AppTempPath"] = Base::FileInfo::pathToString(tmp) + PATHSEP;
+
+
+    // Set the default macro directory
+    //
+    std::vector<std::string> macrodirs = subdirs;
+    macrodirs.emplace_back("Macro");
+    boost::filesystem::path macro = findPath(dataHome, customData, macrodirs, true);
+    mConfig["UserMacroPath"] = Base::FileInfo::pathToString(macro) + PATHSEP;
 }
 
 

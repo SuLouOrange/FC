@@ -318,9 +318,6 @@ void Property::setStatusValue(unsigned long status) {
         cout << __FUNCTION__ << "(" << __LINE__ << ")" << hex << " mask :0x" << mask << endl;
         flag = false;
     }
-        |(1<<PropHidden)
-        |(1<<PropNoPersist)
-        |(1<<Busy);
 
     status &= ~mask;
     const auto tmp = StatusBits.to_ulong();
