@@ -17,8 +17,7 @@ include_directories(
     ${PYCXX_INCLUDE_DIR}
 )
 
-if(MSVC)
-    set(FreeCADBase_LIBS
+ set(FreeCADBase_LIBS
         ${Boost_LIBRARIES}
         ${XercesC_LIBRARIES}
         ${ZLIB_LIBRARIES}
@@ -28,33 +27,19 @@ if(MSVC)
         optimized MSVCPRT.LIB
         Rpcrt4.lib
         version.lib
-    )
+ )
 
-    #Universal C runtime introduced in VS 2015 (cl version 19)
-    if (NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "19"))
-        list(APPEND FreeCADBase_LIBS
+ #Universal C runtime introduced in VS 2015 (cl version 19)
+ if (NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "19"))
+      list(APPEND FreeCADBase_LIBS
             debug vcruntimed.lib
             debug ucrtd.lib
             debug concrtd.lib
             optimized vcruntime.lib
             optimized ucrt.lib
             optimized concrt.lib
-        )
-    endif()
-elseif(MINGW)
-    set(FreeCADBase_LIBS
-        ${XercesC_LIBRARIES}
-        ${Boost_LIBRARIES}
-        ${ZLIB_LIBRARIES}
-        Rpcrt4.lib
-    )
-else(MSVC)
-    set(FreeCADBase_LIBS
-        ${XercesC_LIBRARIES}
-        ${Boost_LIBRARIES}
-        ${ZLIB_LIBRARIES}
-    )
-endif(MSVC)
+      )
+ endif()
 
 if (BUILD_QT5)
     include_directories(
@@ -70,6 +55,7 @@ endif()
 
 if (BUILD_DYNAMIC_LINK_PYTHON)
     list(APPEND FreeCADBase_LIBS ${PYTHON_LIBRARIES})
+    message(status "APPEND PYTHON_LIBRARIES")
 endif (BUILD_DYNAMIC_LINK_PYTHON)
 
 find_package(easy_profiler)

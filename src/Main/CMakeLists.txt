@@ -52,7 +52,7 @@ if(BUILD_GUI)
     endif(NOT BUILD_DYNAMIC_LINK_PYTHON)
 
     add_executable(FreeCADMain WIN32 ${FreeCAD_SRCS})
-    find_package(easy_profiler PATHS "E:\\install\\easy_profile")
+    find_package(easy_profiler)
     list(APPEND FreeCAD_LIBS
            easy_profiler
         )
