@@ -567,122 +567,22 @@ public:
     void SetConnectionMode(ConnectionMode mode);
 
     int *GetLogLevel(const char *tag, bool create=true);
-
-        public:
-            static const unsigned int BufferSize = 4024;
-            // exported functions goes here +++++++++++++++++++++++++++++++++++++++
-            /// Prints a Message
-            virtual void Message ( const char * pMsg, ... );
-            /// Prints a warning Message
-            virtual void Warning ( const char * pMsg, ... );
-            /// Prints a error Message
-            virtual void Error   ( const char * pMsg, ... );
-            /// Prints a log Message
-            virtual void Log     ( const char * pMsg, ... );
-
-            // observer processing
-            void NotifyMessage(const char *sMsg);
-            void NotifyWarning(const char *sMsg);
-            void NotifyError  (const char *sMsg);
-            void NotifyLog    (const char *sMsg);
-
-            /// Attaches an Observer to FCConsole
-            void AttachObserver(ILogger *pcObserver);
-            /// Detaches an Observer from FCConsole
-            void DetachObserver(ILogger *pcObserver);
-            /// enumaration for the console modes
-            enum ConsoleMode{
-                Verbose = 1,	// suppress Log messages
-            };
-            enum ConnectionMode {
-                Direct = 0,
-                Queued =1
-            };
-
-            enum FreeCAD_ConsoleMsgType {
-                MsgType_Txt = 1,
-                MsgType_Log = 2, // ConsoleObserverStd sends this and higher to stderr
-                MsgType_Wrn = 4,
-                MsgType_Err = 8
-            };
-
-            /// Change mode
-            void SetConsoleMode(ConsoleMode m);
-            /// Change mode
-            void UnsetConsoleMode(ConsoleMode m);
-            /// Enables or disables message types of a certain console observer
-            ConsoleMsgFlags SetEnabledMsgType(const char* sObs, ConsoleMsgFlags type, bool b);
-            /// Enables or disables message types of a certain console observer
-            bool IsMsgTypeEnabled(const char* sObs, FreeCAD_ConsoleMsgType type) const;
-            void SetConnectionMode(ConnectionMode mode);
-
-            int *GetLogLevel(const char *tag, bool create=true);
-            void SetLogLevel(const char* tag, int level);
-
-            void SetDefaultLogLevel(int level) {
-                _defaultLogLevel = level;
-            }
-
-            inline int LogLevel(int level) const{
-                return level<0?_defaultLogLevel:level;
-            }
-
-            /// singleton
-            static ConsoleSingleton &Instance(void);
-
-            // retrieval of an observer by name
-            ILogger *Get(const char *Name) const;
-
-            static PyMethodDef    Methods[];
-
-            void Refresh();
-            void EnableRefresh(bool enable);
-
-        protected:
-            // python exports goes here +++++++++++++++++++++++++++++++++++++++++++
-            // static python wrapper of the exported functions
-            static PyObject *sPyLog      (PyObject *self,PyObject *args);
-            static PyObject *sPyMessage  (PyObject *self,PyObject *args);
-            static PyObject *sPyWarning  (PyObject *self,PyObject *args);
-            static PyObject *sPyError    (PyObject *self,PyObject *args);
-            static PyObject *sPySetStatus(PyObject *self,PyObject *args);
-            static PyObject *sPyGetStatus(PyObject *self,PyObject *args);
-
-            bool _bVerbose;
-            bool _bCanRefresh;
-            ConnectionMode connectionMode;
-
-            // Singleton!
-            ConsoleSingleton(void);
-            virtual ~ConsoleSingleton();
-
-        private:
-            // singleton
-            static void Destruct(void);
-            static ConsoleSingleton *_pcSingleton;
-
-            // observer list
-            std::set<ILogger * > _aclObservers;
-
-            std::map<std::string, int> _logLevels;
-            int _defaultLogLevel;
-
-            friend class ConsoleOutput;
-    };
+    void SetLogLevel(const char* tag, int level);
+    inline int LogLevel(int level) const {
+        return level < 0 ? _defaultLogLevel : level;
+    }
 
     /** Access to the Console
      *  This method is used to gain access to the one and only instance of
      *  the ConsoleSingleton class.
      */
-    inline ConsoleSingleton &Console(void){
-        return ConsoleSingleton::Instance();
+inline ConsoleSingleton& Console(void) {
+    return ConsoleSingleton::Instance();
+}
     void SetDefaultLogLevel(int level) {
         _defaultLogLevel = level;
     }
 
-    inline int LogLevel(int level) const{
-        return level<0?_defaultLogLevel:level;
-    }
 
     /// singleton
     static ConsoleSingleton &Instance();
