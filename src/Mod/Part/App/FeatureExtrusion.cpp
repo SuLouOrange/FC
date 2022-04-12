@@ -39,12 +39,12 @@
 #endif
 
 #include <Base/Exception.h>
-<<<<<<< HEAD
+
 #include "Part2DObject.h"
 #include <Base/Console.h>
-=======
+
 #include <Base/Tools.h>
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
+
 
 #include "FeatureExtrusion.h"
 #include "ExtrusionHelper.h"
@@ -52,10 +52,8 @@
 
 
 using namespace Part;
-<<<<<<< HEAD
+
 FC_LOG_LEVEL_INIT("PartExtrusion", true, true)
-=======
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 PROPERTY_SOURCE(Part::Extrusion, Part::Feature)
 
@@ -67,14 +65,9 @@ const char* Extrusion::eDirModeStrings[] = {
 
 Extrusion::Extrusion()
 {
-<<<<<<< HEAD
-    printf("%s(%d)\n", __FUNCTION__, __LINE__);
-    ADD_PROPERTY_TYPE(Base,(0), "Extrude", App::Prop_None, "Shape to extrude");
-    ADD_PROPERTY_TYPE(Dir,(Base::Vector3d(0.0,0.0,1.0)), "Extrude", App::Prop_None, "Direction of extrusion (also magnitude, if both lengths are zero).");
-=======
+
     ADD_PROPERTY_TYPE(Base, (nullptr), "Extrude", App::Prop_None, "Shape to extrude");
     ADD_PROPERTY_TYPE(Dir, (Base::Vector3d(0.0, 0.0, 1.0)), "Extrude", App::Prop_None, "Direction of extrusion (also magnitude, if both lengths are zero).");
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
     ADD_PROPERTY_TYPE(DirMode, (dmCustom), "Extrude", App::Prop_None, "Sets, how Dir is updated.");
     DirMode.setEnums(eDirModeStrings);
     ADD_PROPERTY_TYPE(DirLink, (nullptr), "Extrude", App::Prop_None, "Link to edge defining extrusion direction.");

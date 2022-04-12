@@ -237,12 +237,10 @@ struct ShapeCache {
 
     void slotChanged(const App::DocumentObject &obj, const App::Property &prop) {
         const char *propName = prop.getName();
-<<<<<<< HEAD
+
         FC_MSG("test Relax,maybe receive signal from App::Application::signalChangedObject");
-        if(!propName)
-=======
+      
         if(!App::Property::isValidName(propName))
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
             return;
         if(strcmp(propName,"Shape")==0 
                 || strcmp(propName,"Group")==0 
