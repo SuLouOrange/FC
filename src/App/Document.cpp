@@ -3879,11 +3879,12 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     FC_MSG(__FUNCTION__ << " 1 ");
     if (!base->getTypeId().isDerivedFrom(App::DocumentObject::getClassTypeId())) {
         delete base;
-    Base::Type type = Base::Type::getTypeIfDerivedFrom(sType, App::DocumentObject::getClassTypeId(), true);
-    if (type.isBad()) {
-        std::stringstream str;
-        str << "'" << sType << "' is not a document object type";
-        throw Base::TypeError(str.str());
+        Base::Type type = Base::Type::getTypeIfDerivedFrom(sType, App::DocumentObject::getClassTypeId(), true);
+        if (type.isBad()) {
+            std::stringstream str;
+            str << "'" << sType << "' is not a document object type";
+            throw Base::TypeError(str.str());
+        }
     }
     FC_MSG(__FUNCTION__ << " 2 ");
     App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(base);
@@ -3892,7 +3893,7 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     if (!typeInstance)
         return nullptr;
 
-    App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(typeInstance);
+    //App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(typeInstance);
 
     pcObject->setDocument(this);
 

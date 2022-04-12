@@ -288,9 +288,11 @@ void Application::setupPythonTypes()
     else
         //printf("%s(%d), pAppModule is initialized ! It's wired!\n", __FUNCTION__, __LINE__);
 
-    mod = getImportModules();
+#if 0
+    const auto& mod = getImportModules();
     if (!mod.empty())
         for_each(mod.begin(), mod.end(), [=](const std::string& str) { static int cnt = 0; printf("imported module %d: %s\n", ++cnt, str.c_str()); });
+#endif
 
     Py::Module(pAppModule).setAttr(std::string("ActiveDocument"),Py::None());
 
@@ -1962,8 +1964,8 @@ void Application::initTypes()
     App ::PropertyPythonObject      ::init();
     App ::PropertyExpressionContainer  ::init();
     App ::PropertyExpressionEngine  ::init();
-    App::PropertyAdaptor            ::init();
-    App::PropertyDataSpecs          ::init();
+    //App::PropertyAdaptor            ::init();
+    //App::PropertyDataSpecs          ::init();
 
     // Extension classes
     App ::Extension                     ::init();
@@ -2013,7 +2015,7 @@ void Application::initTypes()
     App ::LinkElementPython         ::init();
     App ::LinkGroup                 ::init();
     App ::LinkGroupPython           ::init();
-    App::ExtensionPropertyData      ::init();
+   // App::ExtensionPropertyData      ::init();
 
     // Expression classes
     App ::Expression                ::init();
@@ -3093,7 +3095,8 @@ std::tuple<QString, QString, QString> getCustomPaths()
     // 'CSIDL_MYDOCUMENTS' doesn't work on all machines, so we use 'CSIDL_PERSONAL'
     // which does the same.
     if (SUCCEEDED(SHGetFolderPathW(NULL, CSIDL_PERSONAL, NULL, 0, szPath))) {
-        mConfig["UserHomePath"] = converter.to_bytes(szPath);
+        //mConfig["UserHomePath"] = converter.to_bytes(szPath);
+    }
     return std::tuple<QString, QString, QString>(userHome, userData, userTemp);
 }
 
