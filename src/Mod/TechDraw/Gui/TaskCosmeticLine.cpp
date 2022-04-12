@@ -58,7 +58,6 @@
 
 #include <Mod/TechDraw/Gui/ui_TaskCosmeticLine.h>
 
-#include "DrawGuiStd.h"
 #include "PreferencesGui.h"
 #include "QGVPage.h"
 #include "QGIView.h"
@@ -84,11 +83,7 @@ TaskCosmeticLine::TaskCosmeticLine(TechDraw::DrawViewPart* partFeat,
     m_saveCE(nullptr),
     m_createMode(false)
 {
-    if (m_partFeat == nullptr)  {
-        //should be caught in CMD caller
-        Base::Console().Error("TaskCosmeticLine - bad parameters.  Can not proceed.\n");
-        return;
-    }
+    //existence of partFeat is checked in calling command
 
     m_ce = m_partFeat->getCosmeticEdgeBySelection(m_edgeName);
     if (m_ce == nullptr) {
@@ -113,11 +108,7 @@ TaskCosmeticLine::TaskCosmeticLine(TechDraw::DrawViewPart* partFeat,
     m_is3d(is3d),
     m_createMode(true)
 {
-    if (m_partFeat == nullptr)  {
-        //should be caught in CMD caller
-        Base::Console().Error("TaskCosmeticLine - bad parameters.  Can not proceed.\n");
-        return;
-    }
+    //existence of partFeat is checked in calling command
 
     ui->setupUi(this);
 
@@ -253,9 +244,9 @@ void TaskCosmeticLine::updateCosmeticLine(void)
     gp_Pnt gp1(p0.x, p0.y, p0.z);
     gp_Pnt gp2(p1.x, p1.y, p1.z);
     TopoDS_Edge e = BRepBuilderAPI_MakeEdge(gp1, gp2);
-    auto oldGeom = m_ce->m_geometry;
+//    auto oldGeom = m_ce->m_geometry;
     m_ce->m_geometry = TechDraw::BaseGeom::baseFactory(e);
-    delete oldGeom;
+//    delete oldGeom;
 
 //    Gui::Command::updateActive();
 //    Gui::Command::commitCommand();
@@ -299,7 +290,7 @@ TaskDlgCosmeticLine::TaskDlgCosmeticLine(TechDraw::DrawViewPart* partFeat,
 {
     widget  = new TaskCosmeticLine(partFeat, points, is3d);
     taskbox = new Gui::TaskView::TaskBox(Gui::BitmapFactory().pixmap("actions/techdraw-line2points"),
-                                             widget->windowTitle(), true, 0);
+                                             widget->windowTitle(), true, nullptr);
     taskbox->groupLayout()->addWidget(widget);
     Content.push_back(taskbox);
 }
@@ -310,7 +301,7 @@ TaskDlgCosmeticLine::TaskDlgCosmeticLine(TechDraw::DrawViewPart* partFeat,
 {
     widget  = new TaskCosmeticLine(partFeat, edgeName);
     taskbox = new Gui::TaskView::TaskBox(Gui::BitmapFactory().pixmap("actions/techdraw-line2points"),
-                                             widget->windowTitle(), true, 0);
+                                             widget->windowTitle(), true, nullptr);
     taskbox->groupLayout()->addWidget(widget);
     Content.push_back(taskbox);
 }

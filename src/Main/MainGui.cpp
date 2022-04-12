@@ -44,33 +44,31 @@ static void noPrint(const char* format, ...) {
 #   include <config.h>
 #endif // HAVE_CONFIG_H
 
+#include <cstdio>
 #include <map>
-#include <vector>
-#include <algorithm>
 #include <stdexcept>
 
-#include <cstdio>
 #include <QApplication>
-#include <QFile>
-#include <QMessageBox>
 #include <QLocale>
+#include <QMessageBox>
 #include <QTextCodec>
 
 // FreeCAD header
-#include <Base/Console.h>
+#include <App/Application.h>
+#include <Base/ConsoleObserver.h>
 #include <Base/Interpreter.h>
 #include <Base/Parameter.h>
 #include <Base/Exception.h>
-#include <Base/Factory.h>
-#include <App/Application.h>
-#include <Gui/BitmapFactory.h>
 #include <Gui/Application.h>
 
+<<<<<<< HEAD
 #include <easy/profiler.h>
+=======
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 void PrintInitHelp(void);
 
-const char sBanner[] = "\xc2\xa9 Juergen Riegel, Werner Mayer, Yorik van Havre and others 2001-2021\n"\
+const char sBanner[] = "\xc2\xa9 Juergen Riegel, Werner Mayer, Yorik van Havre and others 2001-2022\n"\
 "FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.\n"\
 "FreeCAD wouldn't be possible without FreeCAD community.\n"\
 "  #####                 ####  ###   ####  \n" \
@@ -114,9 +112,29 @@ private:
 
 int main( int argc, char ** argv )
 {
+<<<<<<< HEAD
     //EASY_PROFILER_ENABLE;
     profiler::startListen();
     dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
+=======
+#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
+    // Make sure to setup the Qt locale system before setting LANG and LC_ALL to C.
+    // which is needed to use the system locale settings.
+    (void)QLocale::system();
+    // See https://forum.freecadweb.org/viewtopic.php?f=18&t=20600
+    // See Gui::Application::runApplication()
+    putenv("LC_NUMERIC=C");
+    putenv("PYTHONPATH=");
+#elif defined(FC_OS_MACOSX)
+    (void)QLocale::system();
+    putenv("PYTHONPATH=");
+#elif defined(__MINGW32__)
+    const char* mingw_prefix = getenv("MINGW_PREFIX");
+    const char* py_home = getenv("PYTHONHOME");
+    if (!py_home && mingw_prefix)
+        _putenv_s("PYTHONHOME", mingw_prefix);
+#else
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
     _putenv("PYTHONPATH=");
     // https://forum.freecadweb.org/viewtopic.php?f=4&t=18288
     // https://forum.freecadweb.org/viewtopic.php?f=3&t=20515
@@ -163,6 +181,7 @@ int main( int argc, char ** argv )
     App::Application::Config()["SplashAlignment" ] = "Bottom|Left";
     App::Application::Config()["SplashTextColor" ] = "#ffffff"; // white
     App::Application::Config()["SplashInfoColor" ] = "#c8c8c8"; // light grey
+    App::Application::Config()["SplashInfoPosition" ] = "15.210";
 
 
     QGuiApplication::setDesktopFileName(QStringLiteral("org.freecadweb.FreeCAD.desktop"));
@@ -201,7 +220,7 @@ int main( int argc, char ** argv )
         QString appName = QString::fromLatin1(App::Application::Config()["ExeName"].c_str());
         QString msg = QString::fromLatin1(e.what());
         QString s = QLatin1String("<pre>") + msg + QLatin1String("</pre>");
-        QMessageBox::critical(0, appName, s);
+        QMessageBox::critical(nullptr, appName, s);
         exit(1);
     }
     catch (const Base::ProgramInformation& e) {
@@ -227,7 +246,7 @@ int main( int argc, char ** argv )
                           "Python is searching for its files in the following directories:\n%3\n\n"
                           "Python version information:\n%4\n")
                           .arg(appName, QString::fromUtf8(e.what()),
-                          QString::fromUtf8(Py_EncodeLocale(Py_GetPath(),NULL)), QString::fromLatin1(Py_GetVersion()));
+                          QString::fromUtf8(Py_EncodeLocale(Py_GetPath(),nullptr)), QString::fromLatin1(Py_GetVersion()));
         const char* pythonhome = getenv("PYTHONHOME");
         if (pythonhome) {
             msg += QObject::tr("\nThe environment variable PYTHONHOME is set to '%1'.")
@@ -238,7 +257,7 @@ int main( int argc, char ** argv )
             msg += QObject::tr("\nPlease contact the application's support team for more information.\n\n");
         }
 
-        QMessageBox::critical(0, QObject::tr("Initialization of %1 failed").arg(appName), msg);
+        QMessageBox::critical(nullptr, QObject::tr("Initialization of %1 failed").arg(appName), msg);
         exit(100);
     }
     catch (...) {
@@ -247,7 +266,7 @@ int main( int argc, char ** argv )
         QString appName = QString::fromLatin1(App::Application::Config()["ExeName"].c_str());
         QString msg = QObject::tr("Unknown runtime error occurred while initializing %1.\n\n"
                                   "Please contact the application's support team for more information.\n\n").arg(appName);
-        QMessageBox::critical(0, QObject::tr("Initialization of %1 failed").arg(appName), msg);
+        QMessageBox::critical(nullptr, QObject::tr("Initialization of %1 failed").arg(appName), msg);
         exit(101);
     }
 

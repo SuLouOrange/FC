@@ -832,8 +832,7 @@ class _Wall(ArchComponent.Component):
                         # let pass invalid objects if they have solids...
                         return
                 elif obj.Base.Shape.Solids:
-                    base = obj.Base.Shape.copy()
-
+                    base = Part.Shape(obj.Base.Shape)
                 # blocks calculation
                 elif hasattr(obj,"MakeBlocks") and hasattr(self,"basewires"):
                     if obj.MakeBlocks and self.basewires and extdata and obj.Width and obj.Height:
@@ -878,8 +877,7 @@ class _Wall(ArchComponent.Component):
                                                 else:
                                                     cuts2.append(sh)
                                             offset += (obj.BlockLength.Value + obj.Joint.Value)
-                                        else:
-                                            offset -= (edge.Length - obj.Joint.Value)
+                                        offset -= (edge.Length - obj.Joint.Value)
 
                             if isinstance(bplates,list):
                                 bplates = bplates[0]
@@ -908,9 +906,9 @@ class _Wall(ArchComponent.Component):
                             rest = (interval - entires)
                             for i in range(entires):
                                 if i % 2: # odd
-                                    b = blocks2.copy()
+                                    b = Part.Shape(blocks2)
                                 else:
-                                    b = blocks1.copy()
+                                    b = Part.Shape(blocks1)
                                 if i:
                                     t = FreeCAD.Vector(svec)
                                     t.multiply(i)
@@ -990,6 +988,8 @@ class _Wall(ArchComponent.Component):
         If "Length" has changed, record the old length so that .onChanged() can
         be sure that the base needs to be changed.
 
+        Also call ArchComponent.Component.onBeforeChange().
+
         Parameters
         ----------
         prop: string
@@ -998,6 +998,7 @@ class _Wall(ArchComponent.Component):
 
         if prop == "Length":
             self.oldLength = obj.Length.Value
+        ArchComponent.Component.onBeforeChange(self,obj,prop)
 
     def onChanged(self, obj, prop):
         """Method called when the object has a property changed.
@@ -1713,6 +1714,23 @@ class _ViewProviderWall(ArchComponent.ViewProviderComponent):
             return "Wireframe"
         return ArchComponent.ViewProviderComponent.setDisplayMode(self,mode)
 
+    def setupContextMenu(self,vobj,menu):
+
+        from PySide import QtCore,QtGui
+        action1 = QtGui.QAction(QtGui.QIcon(":/icons/Arch_Wall_Tree.svg"),"Flip direction",menu)
+        QtCore.QObject.connect(action1,QtCore.SIGNAL("triggered()"),self.flipDirection)
+        menu.addAction(action1)
+
+    def flipDirection(self):
+
+       if hasattr(self,"Object") and self.Object:
+           obj = self.Object
+           if obj.Align == "Left":
+                obj.Align = "Right"
+                FreeCAD.ActiveDocument.recompute()
+           elif obj.Align == "Right":
+                obj.Align = "Left"
+                FreeCAD.ActiveDocument.recompute()
 
 if FreeCAD.GuiUp:
     FreeCADGui.addCommand('Arch_Wall',_CommandWall())

@@ -25,9 +25,8 @@
 #define APPLICATION_H
 
 #include <QPixmap>
-#include <string>
-#include <vector>
 #include <map>
+#include <string>
 
 #define  putpix()
 
@@ -44,6 +43,7 @@ class MacroManager;
 class MDIView;
 class MainWindow;
 class MenuItem;
+class PreferencePackManager;
 class ViewProvider;
 class ViewProviderDocumentObject;
 
@@ -75,11 +75,11 @@ public:
     /** @name methods for View handling */
     //@{
     /// send Messages to the active view
-    bool sendMsgToActiveView(const char* pMsg, const char** ppReturn=0);
+    bool sendMsgToActiveView(const char* pMsg, const char** ppReturn=nullptr);
     /// send Messages test to the active view
     bool sendHasMsgToActiveView(const char* pMsg);
     /// send Messages to the focused view
-    bool sendMsgToFocusView(const char* pMsg, const char** ppReturn=0);
+    bool sendMsgToFocusView(const char* pMsg, const char** ppReturn=nullptr);
     /// send Messages test to the focused view
     bool sendHasMsgToFocusView(const char* pMsg);
     /// Attach a view (get called by the FCView constructor)
@@ -219,9 +219,11 @@ public:
     void createStandardOperations();
     //@}
 
+    Gui::PreferencePackManager* prefPackManager(void);
+
     /** @name Init, Destruct an Access methods */
     //@{
-    /// some kind of singelton
+    /// some kind of singleton
     static Application* Instance;
     static void initApplication(void);
     static void initTypes(void);

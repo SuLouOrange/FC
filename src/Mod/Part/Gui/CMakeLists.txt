@@ -13,7 +13,6 @@ include_directories(
     ${COIN3D_INCLUDE_DIRS}
     ${OCC_INCLUDE_DIR}
     ${PYTHON_INCLUDE_DIRS}
-    ${XercesC_INCLUDE_DIRS}
     ${ZLIB_INCLUDE_DIR}
     ${EIGEN3_INCLUDE_DIR}
 )
@@ -65,6 +64,8 @@ set(PartGui_UIC_SRCS
     DlgSettingsGeneral.ui
     DlgSettingsObjectColor.ui
     DlgProjectionOnSurface.ui
+    SectionCutting.ui
+    ShapeFromMesh.ui
     TaskFaceColors.ui
     TaskShapeBuilder.ui
     TaskLoft.ui
@@ -211,6 +212,13 @@ SET(PartGui_SRCS
     ViewProviderPrimitive.h
     Workbench.cpp
     Workbench.h
+    ReferenceHighlighter.cpp
+    ReferenceHighlighter.h
+    SectionCutting.cpp
+    SectionCutting.h
+    SectionCutting.ui
+    ShapeFromMesh.cpp
+    ShapeFromMesh.h
     TaskFaceColors.cpp
     TaskFaceColors.h
     TaskFaceColors.ui
@@ -232,8 +240,8 @@ SET(PartGui_SRCS
     TaskDimension.h
     TaskCheckGeometry.cpp
     TaskCheckGeometry.h
-    TaskAttacher.h 
-    TaskAttacher.cpp 
+    TaskAttacher.h
+    TaskAttacher.cpp
 )
 
 if(FREECAD_USE_PCH)

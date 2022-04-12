@@ -524,12 +524,12 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
     <message>
       <source>FreeCAD would not be possible without the contributions of</source>
-      <translation type="unfinished">FreeCAD would not be possible without the contributions of</translation>
+      <translation>FreeCAD skulle inte vara möjligt utan bidrag från</translation>
     </message>
     <message>
       <source>Individuals</source>
       <extracomment>Header for the list of individual people in the Credits list.</extracomment>
-      <translation type="unfinished">Individuals</translation>
+      <translation>Personer</translation>
     </message>
     <message>
       <source>Organizations</source>
@@ -1441,7 +1441,7 @@ Om detta inte väljs måste egenskapen vara unikt namngiven och den nås som 'ob
     </message>
     <message>
       <source>Code lines will be numbered</source>
-      <translation type="unfinished">Code lines will be numbered</translation>
+      <translation>Kodrader kommer att numreras</translation>
     </message>
   </context>
   <context>
@@ -2665,15 +2665,15 @@ För att ändra detta alternativ krävs en omstart av programmet.</translation>
     </message>
     <message>
       <source>What kind of multisample anti-aliasing is used</source>
-      <translation type="unfinished">What kind of multisample anti-aliasing is used</translation>
+      <translation>Vilken typ av multisamplad anti-aliasing används</translation>
     </message>
     <message>
       <source>Eye-to-eye distance used for stereo projections.
 The specified value is a factor that will be multiplied with the
 bounding box size of the 3D object that is currently displayed.</source>
-      <translation type="unfinished">Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed.</translation>
+      <translation>Öga-till-öga avstånd används för stereoprojektioner.
+Det angivna värdet är en faktor som kommer att multipliceras med
+storleken på det 3D-objekt som visas.</translation>
     </message>
   </context>
   <context>
@@ -3275,42 +3275,42 @@ Du kan också använda formuläret: John Doe &lt;john@doe.com&gt;</translation>
     <name>Gui::Dialog::DlgSettingsImageImp</name>
     <message>
       <source>Offscreen (New)</source>
-      <translation type="unfinished">Offscreen (New)</translation>
+      <translation>Offscreen (Ny)</translation>
     </message>
     <message>
       <source>Offscreen (Old)</source>
-      <translation type="unfinished">Offscreen (Old)</translation>
+      <translation>Offscreen (gammal)</translation>
     </message>
     <message>
       <source>Framebuffer (custom)</source>
-      <translation type="unfinished">Framebuffer (custom)</translation>
+      <translation>Framebuffer (anpassad)</translation>
     </message>
     <message>
       <source>Framebuffer (as is)</source>
-      <translation type="unfinished">Framebuffer (as is)</translation>
+      <translation>Framebuffer (som är)</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Oladdade arbetsbänkar</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
-      <translation type="unfinished">Workbench Name</translation>
+      <translation>Namn på arbetsbänk</translation>
     </message>
     <message>
       <source>Autoload?</source>
-      <translation type="unfinished">Autoload?</translation>
+      <translation>Auto-laddad?</translation>
     </message>
     <message>
       <source>Load Now</source>
-      <translation type="unfinished">Load Now</translation>
+      <translation>Ladda nu</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;För att bevara resurser laddar FreeCAD inte arbetsbänkar förrän de används. Laddar dem kan ge tillgång till ytterligare inställningar relaterade till deras funktionalitet.&lt;/p&gt;&lt;p&gt;Följande arbetsbänkar finns tillgängliga i din installation, men är ännu inte laddade:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Tillgängliga arbetsbänkar</translation>
     </message>
   </context>
   <context>
@@ -3321,27 +3321,27 @@ Du kan också använda formuläret: John Doe &lt;john@doe.com&gt;</translation>
     </message>
     <message>
       <source>Autoload</source>
-      <translation type="unfinished">Autoload</translation>
+      <translation>Autoladda</translation>
     </message>
     <message>
       <source>If checked</source>
-      <translation type="unfinished">If checked</translation>
+      <translation>Om kontrollerad</translation>
     </message>
     <message>
       <source>will be loaded automatically when FreeCAD starts up</source>
-      <translation type="unfinished">will be loaded automatically when FreeCAD starts up</translation>
+      <translation>laddas automatiskt när FreeCAD startas upp</translation>
     </message>
     <message>
       <source>This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</source>
-      <translation type="unfinished">This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</translation>
+      <translation>Detta är den aktuella startmodulen och måste autoladdas. Se Inställningar/Allmän/Autoladda för att ändra.</translation>
     </message>
     <message>
       <source>Loaded</source>
-      <translation type="unfinished">Loaded</translation>
+      <translation>Laddad</translation>
     </message>
     <message>
       <source>Load now</source>
-      <translation type="unfinished">Load now</translation>
+      <translation>Ladda nu</translation>
     </message>
   </context>
   <context>
@@ -3645,25 +3645,25 @@ Mouse tilting is not disabled by this setting.</source>
     </message>
     <message>
       <source>Rotates to nearest possible state when clicking a cube face</source>
-      <translation type="unfinished">Rotates to nearest possible state when clicking a cube face</translation>
+      <translation>Roterar till närmaste möjliga tillstånd när du klickar på en kubsida</translation>
     </message>
     <message>
       <source>Rotate to nearest</source>
-      <translation type="unfinished">Rotate to nearest</translation>
+      <translation>Rotera till närmaste</translation>
     </message>
     <message>
       <source>Cube size</source>
-      <translation type="unfinished">Cube size</translation>
+      <translation>Kubstorlek</translation>
     </message>
     <message>
       <source>Size of the navigation cube</source>
-      <translation type="unfinished">Size of the navigation cube</translation>
+      <translation>Storlek på navigationskuben</translation>
     </message>
     <message>
       <source>How much will be zoomed.
 Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
-      <translation type="unfinished">How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
+      <translation>Hur mycket kommer att zoomas.
+Zoomsteg '1' betyder en faktor på 7,5 för varje zoomsteg.</translation>
     </message>
   </context>
   <context>
@@ -4506,32 +4506,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Vänligen välj en, två eller tre punkter och tryck sedan på denna knapp. En punkt kan antingen vara en hörnpunkt eller ligga på en kant eller yta. Om en kant eller yta väljs, kommer punkten ligga vid musens position på kanten eller ytan. Om en punkt är vald kommer den vara rotationscentrum. Om två punkter är valda kommer mittpunkten mellan dom att vara rotationscentrum, och en ny axel kommer skapas vid behov. Om tre punkter är valda kommer den första punkten att vara rotationscentrum och ligga på normalvektorn mot det plan som definieras av dom tre valda punkterna. Viss distans- och vinkelinformation är tillgänglig i rapport-vyn, vilket kan vara användbart när objekt ska justeras. För enkelhetens skull så kopieras lämplig distans och vinkel vid skift + klick.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Runt y-axeln:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Pitch (runt y-axeln):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Runt z-axeln:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Rulla (runt x-axeln):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>Runt x-axeln:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation type="unfinished">Yaw (around z-axis):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Rotation runt x-axeln</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation type="unfinished">Yaw (around z-axis)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Rotation runt y-axeln</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Pitch (runt y-axeln)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Rotation runt z-axeln</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Rulla (runt x-axeln)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Eulervinklar (xy'z'')</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Euler vinklar (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4696,13 +4696,13 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;Använd ursprungliga val</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Ignorera beroenden och fortsätt med objekt
+som ursprungligen valts innan du öppnar denna dialogruta</translation>
     </message>
   </context>
   <context>
@@ -5778,7 +5778,7 @@ Vill du ange en annan katalog?</translation>
     </message>
     <message>
       <source>Recompute after commit</source>
-      <translation type="unfinished">Recompute after commit</translation>
+      <translation>Omräkna efter ändring</translation>
     </message>
     <message>
       <source>Remove</source>
@@ -6056,6 +6056,18 @@ Vill du ange en annan katalog?</translation>
     <message>
       <source>Vietnamese</source>
       <translation>Vietnamesiska</translation>
+    </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Bulgariska</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Grekiska</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>Spanska, Argentina</translation>
     </message>
   </context>
   <context>
@@ -6845,7 +6857,7 @@ Vänligen kontrollera rapportvyn för mer information.</translation>
     </message>
     <message>
       <source>Failed to paste expressions</source>
-      <translation type="unfinished">Failed to paste expressions</translation>
+      <translation>Misslyckas att klistra in uttryck</translation>
     </message>
     <message>
       <source>Simple group</source>
@@ -7020,6 +7032,38 @@ Physical path: </source>
       <translation type="unfinished">
 
 Physical path: </translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation type="unfinished">Could not save document</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation type="unfinished">There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation type="unfinished">Document not saved</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation type="unfinished">The document%1 could not be saved. Do you want to cancel closing it?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation type="unfinished">%1 Document(s) not saved</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation type="unfinished">Some documents could not be saved. Do you want to cancel closing?</translation>
     </message>
   </context>
   <context>
@@ -8797,7 +8841,7 @@ Physical path: </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Redigeringsläge</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
@@ -9825,6 +9869,10 @@ Vill du fortfarande fortsätta?</translation>
     <message>
       <source>Special Ops</source>
       <translation>Special operationer</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Axonometrisk</translation>
     </message>
   </context>
   <context>

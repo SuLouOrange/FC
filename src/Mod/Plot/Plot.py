@@ -1,7 +1,5 @@
 #***************************************************************************
-#*                                                                         *
-#*   Copyright (c) 2011, 2012                                              *
-#*   Jose Luis Cercos Pita <jlcercos@gmail.com>                            *
+#*   Copyright (c) 2011, 2012 Jose Luis Cercos Pita <jlcercos@gmail.com>   *
 #*                                                                         *
 #*   This program is free software; you can redistribute it and/or modify  *
 #*   it under the terms of the GNU Lesser General Public License (LGPL)    *
@@ -31,7 +29,7 @@ import sys
 try:
     import matplotlib
     matplotlib.use('Qt5Agg')
-    
+
     # Force matplotlib to use PySide backend by temporarily unloading PyQt
     if 'PyQt5.QtCore' in sys.modules:
         del sys.modules['PyQt5.QtCore']
@@ -85,6 +83,7 @@ def getPlot():
             return i
     return None
 
+
 def closePlot():
     """ closePlot(): Close the active plot window. """
     # Get active tab
@@ -98,7 +97,8 @@ def closePlot():
     for i in sub.children():
         if i.metaObject().className() == "Plot":
             sub.close()
-    
+
+
 def figure(winTitle="plot"):
     """Create a new plot subwindow/tab.
 
@@ -199,7 +199,7 @@ def legend(status=True, pos=None, fontsize=None):
             # Get resultant position
             try:
                 fax = axes.get_frame().get_extents()
-            except:
+            except Exception:
                 fax = axes.patch.get_extents()
             fl = l.get_frame()
             plt.legPos = (

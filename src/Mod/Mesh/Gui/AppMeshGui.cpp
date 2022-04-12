@@ -31,6 +31,7 @@
 
 #include <Base/Interpreter.h>
 #include <Base/Console.h>
+#include <Base/PyObjectBase.h>
 
 #include <CXX/Extensions.hxx>
 #include <CXX/Objects.hxx>
@@ -61,7 +62,7 @@
 
 
 // use a different name to CreateCommand()
-void CreateMeshCommands(void);
+void CreateMeshCommands();
 
 void loadMeshResource()
 {
@@ -117,7 +118,7 @@ private:
 
 PyObject* initModule()
 {
-    return (new Module)->module().ptr();
+    return Base::Interpreter().addModule(new Module);
 }
 
 } // namespace MeshGui
@@ -127,7 +128,7 @@ PyMOD_INIT_FUNC(MeshGui)
 {
     if (!Gui::Application::Instance) {
         PyErr_SetString(PyExc_ImportError, "Cannot load Gui module in console application.");
-        PyMOD_Return(0);
+        PyMOD_Return(nullptr);
     }
 
     // load dependent module
@@ -136,7 +137,7 @@ PyMOD_INIT_FUNC(MeshGui)
     }
     catch(const Base::Exception& e) {
         PyErr_SetString(PyExc_ImportError, e.what());
-        PyMOD_Return(0);
+        PyMOD_Return(nullptr);
     }
     PyObject* mod = MeshGui::initModule();
     Base::Console().Log("Loading GUI of Mesh module... done\n");

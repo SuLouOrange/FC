@@ -20,15 +20,14 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #ifndef FEM_VIEWPROVIDERFEMPOSTFUNCTION_H
 #define FEM_VIEWPROVIDERFEMPOSTFUNCTION_H
 
-#include <Gui/ViewProviderDocumentObject.h>
-#include <Mod/Fem/App/FemPostFunction.h>
-#include <Inventor/SbMatrix.h>
 #include <QWidget>
 #include <boost_signals2.hpp>
+#include <Gui/ViewProviderDocumentObject.h>
+#include <Mod/Fem/App/FemPostFunction.h>
+
 
 class SoScale;
 class SoSurroundScale;
@@ -49,7 +48,7 @@ class FemGuiExport FunctionWidget : public QWidget {
 
     Q_OBJECT
 public:
-    FunctionWidget() : m_block(false), m_view(0), m_object(0) {}
+    FunctionWidget() : m_block(false), m_view(nullptr), m_object(nullptr) {}
     virtual ~FunctionWidget() {}
 
     virtual void applyPythonCode() = 0;
@@ -84,6 +83,11 @@ public:
     App::PropertyFloat SizeY;
     App::PropertyFloat SizeZ;
 
+    // handling when object is deleted
+    virtual bool onDelete(const std::vector<std::string>&);
+    /// asks view provider if the given object can be deleted
+    virtual bool canDelete(App::DocumentObject* obj) const;
+
 protected:
     virtual std::vector< App::DocumentObject* > claimChildren(void) const;
     virtual std::vector< App::DocumentObject* > claimChildren3D(void) const;
@@ -112,7 +116,7 @@ public:
 
     //creates the widget used in the task dalogs, either for the function itself or for
     //the filter using it
-    virtual FunctionWidget* createControlWidget() {return NULL;}
+    virtual FunctionWidget* createControlWidget() {return nullptr;}
 
 protected:
     virtual bool setEdit(int ModNum);

@@ -22,15 +22,13 @@
 
 
 #include "PreCompiled.h"
-#ifndef _PreComp_
-# include <cmath>
-# include <climits>
-#endif
 
 #include <boost/algorithm/string/predicate.hpp>
+#include "Base/Exception.h"
+
 #include "Rotation.h"
 #include "Matrix.h"
-#include "Base/Exception.h"
+
 
 using namespace Base;
 
@@ -104,7 +102,7 @@ void Rotation::operator = (const Rotation& rot)
     this->_angle   = rot._angle;
 }
 
-const double * Rotation::getValue(void) const
+const double * Rotation::getValue() const
 {
     return &this->quat[0];
 }
@@ -315,7 +313,7 @@ void Rotation::normalize()
     }
 }
 
-Rotation & Rotation::invert(void)
+Rotation & Rotation::invert()
 {
     this->quat[0] = -this->quat[0];
     this->quat[1] = -this->quat[1];
@@ -328,7 +326,7 @@ Rotation & Rotation::invert(void)
     return *this;
 }
 
-Rotation Rotation::inverse(void) const
+Rotation Rotation::inverse() const
 {
     Rotation rot;
     rot.quat[0] = -this->quat[0];
@@ -366,14 +364,14 @@ Rotation Rotation::operator*(const Rotation & q) const
 
 bool Rotation::operator==(const Rotation & q) const
 {
-     if ((this->quat[0] == q.quat[0] &&
-          this->quat[1] == q.quat[1] &&
-          this->quat[2] == q.quat[2] &&
-          this->quat[3] == q.quat[3]) ||
-         (this->quat[0] == -q.quat[0] &&
-          this->quat[1] == -q.quat[1] &&
-          this->quat[2] == -q.quat[2] &&
-          this->quat[3] == -q.quat[3]))
+    if ((this->quat[0] == q.quat[0] &&
+         this->quat[1] == q.quat[1] &&
+         this->quat[2] == q.quat[2] &&
+         this->quat[3] == q.quat[3]) ||
+        (this->quat[0] == -q.quat[0] &&
+         this->quat[1] == -q.quat[1] &&
+         this->quat[2] == -q.quat[2] &&
+         this->quat[3] == -q.quat[3]))
         return true;
     return false;
 }
@@ -481,7 +479,7 @@ Rotation Rotation::slerp(const Rotation & q0, const Rotation & q1, double t)
     return Rotation(x, y, z, w);
 }
 
-Rotation Rotation::identity(void)
+Rotation Rotation::identity()
 {
     return Rotation(0.0, 0.0, 0.0, 1.0);
 }
@@ -517,7 +515,7 @@ Rotation Rotation::makeRotationByAxes(Vector3d xdir, Vector3d ydir, Vector3d zdi
 
 
     auto dropPriority = [&order](int index){
-        char tmp;
+        int tmp;
         if (index == 0){
             tmp = order[0];
             order[0] = order[1];
@@ -533,7 +531,7 @@ Rotation Rotation::makeRotationByAxes(Vector3d xdir, Vector3d ydir, Vector3d zdi
     //pick up the strict direction
     Vector3d mainDir;
     for (int i = 0; i < 3; ++i){
-        mainDir = *(dirs[order[0]]);
+        mainDir = *(dirs[size_t(order[0])]);
         if (mainDir.Length() > tol)
             break;
         else
@@ -546,7 +544,7 @@ Rotation Rotation::makeRotationByAxes(Vector3d xdir, Vector3d ydir, Vector3d zdi
     //pick up the 2nd priority direction, "hint" direction.
     Vector3d hintDir;
     for (int i = 0; i < 2; ++i){
-        hintDir = *(dirs[order[1]]);
+        hintDir = *(dirs[size_t(order[1])]);
         if ((hintDir.Cross(mainDir)).Length() > tol)
             break;
         else
@@ -673,17 +671,17 @@ void Rotation::getYawPitchRoll(double& y, double& p, double& r) const
     double qd2 = 2.0*(q13-q02);
 
     // handle gimbal lock
-    if (fabs(qd2-1.0) < DBL_EPSILON) {
+    if (fabs(qd2-1.0) <= 16 * DBL_EPSILON) { // Tolerance copied from OCC "gp_Quaternion.cxx"
         // north pole
         y = 0.0;
         p = D_PI/2.0;
         r = 2.0 * atan2(quat[0],quat[3]);
     }
-    else if (fabs(qd2+1.0) < DBL_EPSILON) {
+    else if (fabs(qd2+1.0) <= 16 * DBL_EPSILON) { // Tolerance copied from OCC "gp_Quaternion.cxx"
         // south pole
         y = 0.0;
         p = -D_PI/2.0;
-        r = -2.0 * atan2(quat[0],quat[3]);
+        r = 2.0 * atan2(quat[0],quat[3]);
     }
     else {
         y = atan2(2.0*(q01+q23),(q00+q33)-(q11+q22));
@@ -851,7 +849,7 @@ const char *EulerSequenceNames[] = {
 const char * Rotation::eulerSequenceName(EulerSequence seq)
 {
     if (seq == Invalid || seq >= EulerSequenceLast)
-        return 0;
+        return nullptr;
     return EulerSequenceNames[seq-1];
 }
 

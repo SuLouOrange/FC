@@ -20,20 +20,23 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <QApplication>
 # include <QAction>
+# include <QApplication>
 # include <QToolBar>
 # include <QToolButton>
 #endif
 
 #include "ToolBarManager.h"
-#include "MainWindow.h"
 #include "Application.h"
 #include "Command.h"
+<<<<<<< HEAD
 #include <Base/Console.h>
+=======
+#include "MainWindow.h"
+
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 using namespace Gui;
 static const char* logKey = "ToolBarManager";
@@ -81,7 +84,7 @@ ToolBarItem* ToolBarItem::findItem(const std::string& name)
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 ToolBarItem* ToolBarItem::copy() const
@@ -153,7 +156,7 @@ QList<ToolBarItem*> ToolBarItem::getItems() const
 
 // -----------------------------------------------------------
 
-ToolBarManager* ToolBarManager::_instance=0;
+ToolBarManager* ToolBarManager::_instance=nullptr;
 
 ToolBarManager* ToolBarManager::getInstance()
 {
@@ -165,7 +168,7 @@ ToolBarManager* ToolBarManager::getInstance()
 void ToolBarManager::destruct()
 {
     delete _instance;
-    _instance = 0;
+    _instance = nullptr;
 }
 
 ToolBarManager::ToolBarManager()
@@ -189,9 +192,16 @@ void ToolBarManager::setup(ToolBarItem* toolBarItems)
 
     ParameterGrp::handle hPref = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
                                ->GetGroup("MainWindow")->GetGroup("Toolbars");
+<<<<<<< HEAD
     QList<ToolBarItem*> items = toolBarItems->getItems();//root
     QList<QToolBar*> toolbars = toolBars();//exsiting toolbar
     int i = 0;
+=======
+    bool nameAsToolTip = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
+            ->GetGroup("Preferences")->GetGroup("MainWindow")->GetBool("ToolBarNameAsToolTip",true);
+    QList<ToolBarItem*> items = toolBarItems->getItems();
+    QList<QToolBar*> toolbars = toolBars();
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
     for (QList<ToolBarItem*>::ConstIterator it = items.begin(); it != items.end(); ++it) {
         // search for the toolbar
         QString name = QString::fromUtf8((*it)->command().c_str());
@@ -206,6 +216,12 @@ void ToolBarManager::setup(ToolBarItem* toolBarItems)
                 QApplication::translate("Workbench",
                                         toolbarName.c_str())); // i18n
             toolbar->setObjectName(name);
+            if (nameAsToolTip){
+                auto tooltip = QChar::fromLatin1('[')
+                    + QApplication::translate("Workbench", toolbarName.c_str())
+                    + QChar::fromLatin1(']');
+                toolbar->setToolTip(tooltip);
+            }
             toolbar->setVisible(visible);
             toolbar_added = true;
         }
@@ -254,6 +270,11 @@ void ToolBarManager::setup(ToolBarItem* toolBarItems)
         (*it)->hide();
         (*it)->toggleViewAction()->setVisible(false);
     }
+
+    hPref = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
+        ->GetGroup("Preferences")->GetGroup("General");
+    bool lockToolBars = hPref->GetBool("LockToolBars", false);
+    setMovable(!lockToolBars);
 }
 
 void ToolBarManager::setup(ToolBarItem* item, QToolBar* toolbar) const
@@ -318,6 +339,12 @@ void ToolBarManager::restoreState() const
             toolbar->setVisible(hPref->GetBool(toolbarName.constData(), toolbar->isVisible()));
         }
     }
+
+
+    hPref = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
+        ->GetGroup("Preferences")->GetGroup("General");
+    bool lockToolBars = hPref->GetBool("LockToolBars", false);
+    setMovable(!lockToolBars);
 }
 
 void ToolBarManager::retranslate() const
@@ -331,6 +358,13 @@ void ToolBarManager::retranslate() const
     }
 }
 
+void Gui::ToolBarManager::setMovable(bool moveable) const
+{
+    for (auto& tb : toolBars()) {
+        tb->setMovable(moveable);
+    }
+}
+
 QToolBar* ToolBarManager::findToolBar(const QList<QToolBar*>& toolbars, const QString& item) const
 {
     for (QList<QToolBar*>::ConstIterator it = toolbars.begin(); it != toolbars.end(); ++it) {
@@ -338,7 +372,7 @@ QToolBar* ToolBarManager::findToolBar(const QList<QToolBar*>& toolbars, const QS
             return *it;
     }
 
-    return 0; // no item with the user data found
+    return nullptr; // no item with the user data found
 }
 
 QAction* ToolBarManager::findAction(const QList<QAction*>& acts, const QString& item) const
@@ -348,7 +382,7 @@ QAction* ToolBarManager::findAction(const QList<QAction*>& acts, const QString& 
             return *it;
     }
 
-    return 0; // no item with the user data found
+    return nullptr; // no item with the user data found
 }
 
 QList<QToolBar*> ToolBarManager::toolBars() const

@@ -116,7 +116,7 @@
     <message>
       <location filename="TranslationTexts.py" line="64"/>
       <source>FreeCAD also maintains a public &lt;a href="https://www.freecadweb.org/tracker"&gt;bug tracker&lt;/a&gt; where anybody can submit bugs and propose new features. To avoid causing extra work and give the best chances to see your bug solved, make sure you read the &lt;a href="https://forum.freecadweb.org/viewtopic.php?f=3&amp;t=5236"&gt;bug submission guide&lt;/a&gt; before posting.</source>
-      <translation>FreeCAD также предоставляет публичный &lt;a href="https://www.freecadweb.org/tracker"&gt;баг трэкер&lt;/a&gt; где любой может сообщить об ошибке и предложить новые функции. Для избежания лишней работы и большей вероятности исправления вашего сообщения об ошибке убедитесь, что вы прочитали &lt;a href="https://forum.freecadweb.org/viewtopic.php?f=3&amp;t=5236"&gt;руководство правильного сообщения об ошибке&lt;/a&gt; сначала.</translation>
+      <translation>FreeCAD также предоставляет публичный &lt;a href="https://www.freecadweb.org/tracker"&gt;трэкер ошибок&lt;/a&gt;, где любой может сообщить об ошибке и предложить новые функции. Для избежания лишней работы и большей вероятности увидеть скорое решение вашего сообщения об ошибке, убедитесь, что вы прочитали &lt;a href="https://forum.freecadweb.org/viewtopic.php?f=3&amp;t=5236"&gt;руководство по отправке ошибок&lt;/a&gt; перед публикацией.</translation>
     </message>
     <message>
       <location filename="TranslationTexts.py" line="65"/>
@@ -291,8 +291,8 @@
       <location filename="../../DlgStartPreferences.ui" line="110"/>
       <source>An optional custom folder to be displayed at the bottom of the first page.
 By using ";;" to separate paths, you can add several folders here</source>
-      <translation type="unfinished">An optional custom folder to be displayed at the bottom of the first page.
-By using ";;" to separate paths, you can add several folders here</translation>
+      <translation>Дополнительная папка пользователя для отображения в нижней части первой страницы.
+Используя ";;" для разделения путей, Вы можете добавить несколько папок здесь</translation>
     </message>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="127"/>
@@ -312,7 +312,7 @@ By using ";;" to separate paths, you can add several folders here</translation>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="163"/>
       <source>Displays help tips in the Start workbench Documents tab</source>
-      <translation type="unfinished">Displays help tips in the Start workbench Documents tab</translation>
+      <translation>Отображает подсказки на верстаке Пуск вкладки Документов</translation>
     </message>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="185"/>
@@ -342,7 +342,7 @@ By using ";;" to separate paths, you can add several folders here</translation>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="266"/>
       <source>Background color down gradient</source>
-      <translation type="unfinished">Background color down gradient</translation>
+      <translation>Цвет нижнего градиента фона</translation>
     </message>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="279"/>
@@ -467,12 +467,12 @@ By using ";;" to separate paths, you can add several folders here</translation>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="607"/>
       <source>Choose which workbench to switch to after the program launches</source>
-      <translation type="unfinished">Choose which workbench to switch to after the program launches</translation>
+      <translation>Выберите, на какой верстак переключиться после запуска программы</translation>
     </message>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="614"/>
       <source>If checked, will automatically close the Start page when FreeCAD launches</source>
-      <translation type="unfinished">If checked, will automatically close the Start page when FreeCAD launches</translation>
+      <translation>Если этот флажок установлен, стартовая страница будет автоматически закрыта при запуске FreeCAD</translation>
     </message>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="633"/>
@@ -487,7 +487,7 @@ By using ";;" to separate paths, you can add several folders here</translation>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="647"/>
       <source>Close and switch on opening file</source>
-      <translation type="unfinished">Close and switch on opening file</translation>
+      <translation>Закрыть и переключиться на открытие файла</translation>
     </message>
     <message>
       <location filename="../../DlgStartPreferences.ui" line="654"/>

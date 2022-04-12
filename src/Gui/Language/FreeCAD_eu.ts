@@ -3294,10 +3294,6 @@ Honako forma ere erabili dezakezu: Jon Inor &lt;jon@inor.com&gt;</translation>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Deskargatutako lan-mahaiak</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Lan-mahaiaren izena</translation>
     </message>
@@ -3312,6 +3308,10 @@ Honako forma ere erabili dezakezu: Jon Inor &lt;jon@inor.com&gt;</translation>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Baliabideak aurrezteko, FreeCADek ez ditu laneko mahaiak kargatzen haiek erabili nahi diren arte. Kargatzen direnean, haien funtzionaltasunari lotutako hobespen gehigarriak agertuko dira.&lt;/p&gt;&lt;p&gt;Honako laneko mahaiak daude erabilgarri zure instalazioan:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Lan-mahai erabilgarriak</translation>
     </message>
   </context>
   <context>
@@ -3334,7 +3334,7 @@ Honako forma ere erabili dezakezu: Jon Inor &lt;jon@inor.com&gt;</translation>
     </message>
     <message>
       <source>This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</source>
-      <translation type="unfinished">This is the current startup module, and must be autoloaded. See Preferences/General/Autoload to change.</translation>
+      <translation>Uneko abioko modulua da hau, eta automatikoki kargatu behar da. Ikusi 'Hobespenak - Orokorra - Automatikoki kargatu' hura aldatzeko.</translation>
     </message>
     <message>
       <source>Loaded</source>
@@ -3939,7 +3939,7 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
       <source>List of last used calculations 
 To add a calculation press Return in the value input field</source>
       <translation>Erabilitako azken kalkuluen zerrenda.
-Kalkulu bat gehitzeko, sakatu ⏎</translation>
+Kalkulu bat gehitzeko, sakatu ⏎ balioen sarrera-eremuan</translation>
     </message>
     <message>
       <source>Quantity</source>
@@ -4511,32 +4511,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Hautatu 1, 2 edo 3 puntu botoi hau sakatu baino lehen. Puntuak erpin batean, aurpegi batean edo ertz batean egon daitezke. Aurpegi edo ertz batean badago, erabiliko den puntua saguak aurpegian edo ertzean duen kokapenaren puntua izango da. Puntu bat hautatzen bada, biraketa-zentro gisa erabiliko da. Bi puntu hautatzen badira, bien arteko erdiko puntua izango da biraketa-zentroa eta ardatz pertsonalizatu berria sortuko da, beharrezkoa bada. Hiru puntu hautatzen badira, lehen puntua biraketa-zentroa izango da eta hiru puntuek definitutako planoarekiko normala den bektorean egongo da. Txosten-bistak distantziari eta angeluari buruzko informazioa ematen du. Informazio hori erabilgarria izan daiteke objektuak lerrokatzean. Shift + klik erabiltzen denean, distantzia edo angelu egokia arbelera kopiatuko da.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Y ardatzaren inguruan:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Buruzkatzea (Y ardatzaren inguruan):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Z ardatzaren inguruan:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Kulunkada (X ardatzaren inguruan):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>X ardatzaren inguruan:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Keinada (Z ardatzaren inguruan):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Biraketa X ardatzaren inguruan</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Keinada (Z ardatzaren inguruan)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Biraketa Y ardatzaren inguruan</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Buruzkatzea (Y ardatzaren inguruan)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Biraketa Z ardatzaren inguruan</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Kulunkada (X ardatzaren inguruan)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Euler angeluak (xy'z'')</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Euler angeluak (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4701,13 +4701,14 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>Erabili &amp;jatorrizko hautapenak</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Ez ikusiarena egin mendekotasunei eta jarraitu 
+elkarrizketa-koadro hau ireki baino lehen jatorriz
+hautatutako objektuekin</translation>
     </message>
   </context>
   <context>
@@ -6062,6 +6063,18 @@ Beste direktorio bat aukeratu nahi al duzu?</translation>
       <source>Vietnamese</source>
       <translation>Vietnamiera</translation>
     </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Bulgariera</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Greziera</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>Espainiera, Argentina</translation>
+    </message>
   </context>
   <context>
     <name>Gui::TreeDockWidget</name>
@@ -7025,6 +7038,38 @@ Physical path: </source>
       <translation>
 
 Bide-izen fisikoa: </translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Ezin da dokumentua gorde</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Arazo bat dago fitxategia gordetzen saiatzean. Beharbada karpeta gurasoak ez dira existitzen edo ez duzu aski baimenik. Errorearen xehetasunak:
+
+"%1"
+
+Fitxategia beste izen batekin gorde nahi al duzu?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Dokumentua ez da gorde</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>%1 dokumentua ezin izan da gorde. Hura ixtea bertan behera utzi nahi duzu?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 dokumentu ez dira gorde</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Zenbait dokumentu ezin izan dira gorde. Ixtea bertan behera utzi nahi duzu?</translation>
     </message>
   </context>
   <context>
@@ -8802,11 +8847,11 @@ Bide-izen fisikoa: </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Edizio modua</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Zuhaitzeko objektu bat editatzean izango den portaera definitzen du</translation>
     </message>
   </context>
   <context>
@@ -9832,6 +9877,10 @@ Jarraitu nahi al duzu?</translation>
     <message>
       <source>Special Ops</source>
       <translation>Eragiketa bereziak</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Axonometrikoa</translation>
     </message>
   </context>
   <context>

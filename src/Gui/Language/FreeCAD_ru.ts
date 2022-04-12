@@ -1465,7 +1465,7 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
     <message>
       <source>Language</source>
-      <translation>Язык (Language)</translation>
+      <translation>Язык интерфейса</translation>
     </message>
     <message>
       <source>Change language:</source>
@@ -3290,10 +3290,6 @@ Opening mode: If you defined a hinge in this component or any other earlier in t
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Незагруженные верстаки</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Название верстака</translation>
     </message>
@@ -3308,6 +3304,10 @@ Opening mode: If you defined a hinge in this component or any other earlier in t
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Чтобы сэкономить ресурсы, FreeCAD не загружает верстаки до тех пор, пока они не будут использованы. После загрузки верстака, если это предусмотрено в настройках может появится дополнительный раздел с настройкам, связанным с функциональностью загруженного верстака.&lt;/p&gt;&lt;p&gt;В текущий момент доступны следующие верстаки, которые можно загрузить, если это требуется:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Доступные верстаки</translation>
     </message>
   </context>
   <context>
@@ -4508,32 +4508,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Пожалуйста, выберите 1, 2 или 3 точки, прежде чем нажать эту кнопку. Точка может быть на вершине, грани или кромке. Если используемая точка на грани или кромке, то она будет точкой на позиции мыши вдоль грани или кромки. Если выбрана 1 точка, то она будет использоваться в качестве центра вращения. Если выбраны 2 точки, то посредине между ними будет центр вращения, и, при необходимости, будет создана новая пользовательская ось. Если выбраны 3 точки, то первая точка становится центром вращения, и будет лежать на векторе, который перпендикулярен плоскости, проходящей через эти 3 точки. Некоторые расстояния и углы содержатся в отчёте, который может быть полезен при выравнивании объектов. Для Вашего удобства при использовании Shift + щелчок мыши соответствующее расстояние или угол копируются в буфер обмена.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Вокруг оси y:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Тангаж (вокруг y-оси):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Вокруг оси z:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Крен (вокруг y-оси):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>Вокруг оси x:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Рыскание (вокруг z-оси):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Поворот вокруг оси X</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Рыскание (вокруг z-оси)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Поворот вокруг оси Y</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Тангаж (вокруг y-оси)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Поворот вокруг оси Z</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Крен (вокруг x-оси)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Углы Эйлера (xy'z'')</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Углы Эйлера (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4698,13 +4698,12 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;Использовать выбор оригинала</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Игнорировать зависимости и продолжать работу с объектами, выбранными до открытия этого диалогового окна</translation>
     </message>
   </context>
   <context>
@@ -6055,6 +6054,18 @@ Do you want to specify another directory?</source>
       <source>Vietnamese</source>
       <translation>Вьетнамский</translation>
     </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>Болгарский</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Греческий</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>Испанский, Аргенитна</translation>
+    </message>
   </context>
   <context>
     <name>Gui::TreeDockWidget</name>
@@ -7014,6 +7025,38 @@ Physical path: </source>
       <translation>
 
 Физический путь:</translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Невозможно сохранить документ</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Произошла ошибка при попытке сохранить файл. Это может быть потому, что некоторые из родительских папок не существуют, или вы не имеете достаточных прав, или по другим причинам. Детали ошибки:
+
+"%1"
+
+Хотите сохранить файл под другим именем?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Документ не сохранен</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>Документ %1 не может быть сохранен. Вы хотите отменить его закрытие?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 Документ(ы) не сохранены</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Некоторые документы не удалось сохранить. Вы хотите отменить закрытие?</translation>
     </message>
   </context>
   <context>
@@ -8791,11 +8834,11 @@ Physical path: </source>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Режим редактирования</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Определяет поведение при редактировании объекта из дерева</translation>
     </message>
   </context>
   <context>
@@ -9821,6 +9864,10 @@ Do you still want to proceed?</source>
     <message>
       <source>Special Ops</source>
       <translation>Специальные операции</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Аксонометрия</translation>
     </message>
   </context>
   <context>

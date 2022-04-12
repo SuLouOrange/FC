@@ -1,136 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="1.1" language="es-ES" sourcelanguage="en">
-  <context>
-    <name>Gui::Dialog::DlgSettingsOpenSCAD</name>
-    <message>
-      <location filename="openscadprefs-base.ui" line="14"/>
-      <source>General settings</source>
-      <translation>Opciones generales</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="26"/>
-      <source>General OpenSCAD Settings</source>
-      <translation>Configuración general de OpenSCAD</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="34"/>
-      <source>OpenSCAD executable</source>
-      <translation>Ejecutable OpenSCAD</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="65"/>
-      <source>OpenSCAD import</source>
-      <translation>Importación OpenSCAD</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="93"/>
-      <source>Use ViewProvider in Tree View</source>
-      <translation>Usar Proveedor de Vista en vista de árbol</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="110"/>
-      <source>If this is checked, Multmatrix Object will be Parametric</source>
-      <translation>Si se selecciona, el objeto Multmatriz será paramétrico</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="113"/>
-      <source>Use Multmatrix Feature</source>
-      <translation>Usar la función Multmatrix</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="153"/>
-      <source>The maximum number of faces of a polygon, prism or frustum. If fn is greater than this value the object is considered to be a circular. Set to 0 for no limit</source>
-      <translation>El máximo número de caras de un polígono, prisma o tronco. Si fn es mayor que este valor el objeto es considerado circular. Establezca 0 para ningún límite</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="133"/>
-      <source>Maximum number of faces for polygons (fn)</source>
-      <translation>Número máximo de caras para polígonos (fn)</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="177"/>
-      <source>OpenSCAD export</source>
-      <translation>Exportación OpenSCAD</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="185"/>
-      <source>maximum fragment size</source>
-      <translation>tamaño máximo de fragmento</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="208"/>
-      <source>angular (fa)</source>
-      <translation>angular (fa)</translation>
-    </message>
-    <message encoding="UTF-8">
-      <location filename="openscadprefs-base.ui" line="218"/>
-      <source>°</source>
-      <translation>°</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="250"/>
-      <source>size (fs)</source>
-      <translation>tamaño (fs)</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="278"/>
-      <source>mm</source>
-      <translation>mm</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="304"/>
-      <source>convexity</source>
-      <translation>convexidad</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="341"/>
-      <source>Mesh fallback</source>
-      <translation>Respaldo de malla</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="383"/>
-      <source>Deflection</source>
-      <translation>Deflexión</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="386"/>
-      <source>deflection</source>
-      <translation>deflexión</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="393"/>
-      <source>Triangulation settings</source>
-      <translation>Configuración de triangulación</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="90"/>
-      <source>If this is checked, Features will claim their children in the tree view</source>
-      <translation>Si se selecciona, las Funciones serán demandadas a sus hijos en la vista de árbol</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="73"/>
-      <source>Print debug information in the Console</source>
-      <translation>Imprimir información de depuración en la Consola</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="47"/>
-      <source>The path to the OpenSCAD executable</source>
-      <translation>La ruta de acceso al ejecutable OpenSCAD</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="215"/>
-      <source>Minimum angle for a fragment</source>
-      <translation>Ángulo mínimo de un fragmento</translation>
-    </message>
-    <message>
-      <location filename="openscadprefs-base.ui" line="272"/>
-      <source>Minimum size of a fragment</source>
-      <translation>Tamaño mínimo de un fragmento</translation>
-    </message>
-  </context>
+<TS version="2.1" language="es-ES" sourcelanguage="en">
   <context>
     <name>OpenSCAD</name>
+    <message>
+      <location filename="OpenSCADUtils.py" line="710"/>
+      <source>OpenSCAD file contains both 2D and 3D shapes. That is not supported in this importer, all shapes must have the same dimensionality.</source>
+      <translation>El archivo OpenSCAD contiene formas en 2D y 3D. Esto no está permitido en este importador, todas las formas deben ser de la misma dimensionalidad.</translation>
+    </message>
+    <message>
+      <location filename="OpenSCADUtils.py" line="622"/>
+      <source>Error all shapes must be either 2D or both must be 3D</source>
+      <translation>Error, todas los formas han de ser solo 2D, o bien solo 3D</translation>
+    </message>
+    <message>
+      <location filename="importCSG.py" line="1341"/>
+      <source>Unsupported Function</source>
+      <translation>Fuinciones no soportadas</translation>
+    </message>
+    <message>
+      <location filename="importCSG.py" line="1341"/>
+      <source>Press OK</source>
+      <translation>Presione Aceptar</translation>
+    </message>
+    <message>
+      <location filename="OpenSCADCommands.py" line="102"/>
+      <source>Unable to explode %s</source>
+      <translation>Incapaz de deconstruir %s</translation>
+    </message>
     <message>
       <location filename="OpenSCADCommands.py" line="149"/>
       <source>Convert Edges to Faces</source>
@@ -139,17 +36,7 @@
     <message>
       <location filename="OpenSCADCommands.py" line="309"/>
       <source>Please select 3 objects first</source>
-      <translation>Por favor, seleccione tres objetos primero</translation>
-    </message>
-    <message>
-      <location filename="importCSG.py" line="1341"/>
-      <source>Unsupported Function</source>
-      <translation>Función no admitida</translation>
-    </message>
-    <message>
-      <location filename="importCSG.py" line="1341"/>
-      <source>Press OK</source>
-      <translation>Pulse Aceptar</translation>
+      <translation>Por favor, seleccione primero tres objetos</translation>
     </message>
     <message>
       <location filename="OpenSCADCommands.py" line="364"/>
@@ -160,36 +47,6 @@
       <location filename="OpenSCADCommands.py" line="368"/>
       <source>Clear</source>
       <translation>Limpiar</translation>
-    </message>
-    <message>
-      <location filename="OpenSCADCommands.py" line="369"/>
-      <source>as Mesh</source>
-      <translation>como malla</translation>
-    </message>
-    <message>
-      <location filename="OpenSCADCommands.py" line="370"/>
-      <source>Add OpenSCAD Element</source>
-      <translation>Añadir elemento OpenSCAD</translation>
-    </message>
-    <message>
-      <location filename="OpenSCADCommands.py" line="473"/>
-      <source>Perform</source>
-      <translation>Realizar</translation>
-    </message>
-    <message>
-      <location filename="OpenSCADCommands.py" line="474"/>
-      <source>Mesh Boolean</source>
-      <translation>Malla booleana</translation>
-    </message>
-    <message>
-      <location filename="OpenSCADUtils.py" line="622"/>
-      <source>Error all shapes must be either 2D or both must be 3D</source>
-      <translation>Error, todos los cuerpos han de ser o bien 2D, o bien 3D</translation>
-    </message>
-    <message>
-      <location filename="OpenSCADCommands.py" line="102"/>
-      <source>Unable to explode %s</source>
-      <translation>Incapaz de descomponer %s</translation>
     </message>
     <message>
       <location filename="OpenSCADCommands.py" line="365"/>
@@ -206,13 +63,33 @@
       <source>Refresh</source>
       <translation>Actualizar pantalla</translation>
     </message>
+    <message>
+      <location filename="OpenSCADCommands.py" line="369"/>
+      <source>as Mesh</source>
+      <translation>como Malla</translation>
+    </message>
+    <message>
+      <location filename="OpenSCADCommands.py" line="370"/>
+      <source>Add OpenSCAD Element</source>
+      <translation>Añadir elemento OpenSCAD</translation>
+    </message>
+    <message>
+      <location filename="OpenSCADCommands.py" line="473"/>
+      <source>Perform</source>
+      <translation>Ejecutar</translation>
+    </message>
+    <message>
+      <location filename="OpenSCADCommands.py" line="474"/>
+      <source>Mesh Boolean</source>
+      <translation>Malla booleana</translation>
+    </message>
   </context>
   <context>
     <name>OpenSCAD_AddOpenSCADElement</name>
     <message>
       <location filename="OpenSCADCommands.py" line="517"/>
       <source>Add OpenSCAD Element...</source>
-      <translation>Añadir elemento OpenSCAD...</translation>
+      <translation>Agregar elemento OpenSCAD...</translation>
     </message>
     <message>
       <location filename="OpenSCADCommands.py" line="521"/>
@@ -411,6 +288,138 @@
       <location filename="InitGui.py" line="77"/>
       <source>OpenSCADTools</source>
       <translation>Herramientas OpenSCAD</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsOpenSCAD</name>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="14"/>
+      <source>General settings</source>
+      <translation>Opciones generales</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="26"/>
+      <source>General OpenSCAD Settings</source>
+      <translation>Configuración general de OpenSCAD</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="34"/>
+      <source>OpenSCAD executable</source>
+      <translation>Ejecutable OpenSCAD</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="47"/>
+      <source>The path to the OpenSCAD executable</source>
+      <translation>La ruta de acceso al ejecutable OpenSCAD</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="65"/>
+      <source>OpenSCAD import</source>
+      <translation>Importación OpenSCAD</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="73"/>
+      <source>Print debug information in the Console</source>
+      <translation>Imprimir información de depuración en la Consola</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="90"/>
+      <source>If this is checked, Features will claim their children in the tree view</source>
+      <translation>Si se selecciona, las Funciones serán demandadas a sus hijos en la vista de árbol</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="93"/>
+      <source>Use ViewProvider in Tree View</source>
+      <translation>Usar Proveedor de Vista en vista de árbol</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="110"/>
+      <source>If this is checked, Multmatrix Object will be Parametric</source>
+      <translation>Si se selecciona, el objeto Multmatriz será paramétrico</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="113"/>
+      <source>Use Multmatrix Feature</source>
+      <translation>Usar la función Multmatrix</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="130"/>
+      <location filename="../ui/openscadprefs-base.ui" line="153"/>
+      <source>The maximum number of faces of a polygon, prism or frustum. If fn is greater than this value the object is considered to be a circular. Set to 0 for no limit</source>
+      <translation>El máximo número de caras de un polígono, prisma o tronco. Si fn es mayor que este valor el objeto es considerado circular. Establezca 0 para ningún límite</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="133"/>
+      <source>Maximum number of faces for polygons (fn)</source>
+      <translation>Número máximo de caras para polígonos (fn)</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="177"/>
+      <source>OpenSCAD export</source>
+      <translation>Exportación OpenSCAD</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="185"/>
+      <source>maximum fragment size</source>
+      <translation>tamaño máximo de fragmento</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="205"/>
+      <location filename="../ui/openscadprefs-base.ui" line="215"/>
+      <source>Minimum angle for a fragment</source>
+      <translation>Ángulo mínimo de un fragmento</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="208"/>
+      <source>angular (fa)</source>
+      <translation>angular (fa)</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="218"/>
+      <source>°</source>
+      <translation>°</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="247"/>
+      <location filename="../ui/openscadprefs-base.ui" line="272"/>
+      <source>Minimum size of a fragment</source>
+      <translation>Tamaño mínimo de un fragmento</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="250"/>
+      <source>size (fs)</source>
+      <translation>tamaño (fs)</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="278"/>
+      <source>mm</source>
+      <translation>mm</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="304"/>
+      <source>convexity</source>
+      <translation>convexidad</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="341"/>
+      <source>Mesh fallback</source>
+      <translation>Respaldo de malla</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="361"/>
+      <location filename="../ui/openscadprefs-base.ui" line="383"/>
+      <source>Deflection</source>
+      <translation>Deflexión</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="386"/>
+      <source>deflection</source>
+      <translation>deflexión</translation>
+    </message>
+    <message>
+      <location filename="../ui/openscadprefs-base.ui" line="393"/>
+      <source>Triangulation settings</source>
+      <translation>Configuración de triangulación</translation>
     </message>
   </context>
 </TS>

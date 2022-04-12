@@ -20,53 +20,46 @@
  *                                                                            *
  ******************************************************************************/
 
-
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <BRepBuilderAPI_Transform.hxx>
-# include <BRepAlgoAPI_Fuse.hxx>
-# include <BRepAlgoAPI_Cut.hxx>
-# include <BRep_Builder.hxx>
-# include <TopExp.hxx>
-# include <TopExp_Explorer.hxx>
-# include <TopTools_IndexedMapOfShape.hxx>
-# include <Precision.hxx>
-# include <BRepBuilderAPI_Copy.hxx>
-# include <BRepBndLib.hxx>
 # include <Bnd_Box.hxx>
+# include <BRep_Builder.hxx>
+# include <BRepAlgoAPI_Cut.hxx>
+# include <BRepAlgoAPI_Fuse.hxx>
+# include <BRepBndLib.hxx>
+# include <BRepBuilderAPI_Copy.hxx>
+# include <BRepBuilderAPI_Transform.hxx>
+# include <Precision.hxx>
+# include <TopExp_Explorer.hxx>
 #endif
 
-#ifndef FC_DEBUG
-#include <ctime>
-#endif
+#include <App/Application.h>
+#include <Base/Console.h>
+#include <Base/Exception.h>
+#include <Base/Parameter.h>
+#include <Base/Reader.h>
+#include <Mod/Part/App/modelRefine.h>
 
 #include "FeatureTransformed.h"
-#include "FeatureMultiTransform.h"
+#include "Body.h"
 #include "FeatureAddSub.h"
 #include "FeatureMirrored.h"
 #include "FeatureLinearPattern.h"
 #include "FeaturePolarPattern.h"
 #include "FeatureSketchBased.h"
-#include "Body.h"
 
-#include <Base/Console.h>
-#include <Base/Exception.h>
-#include <Base/Parameter.h>
-#include <Base/Reader.h>
-#include <App/Application.h>
-#include <Mod/Part/App/modelRefine.h>
 
 using namespace PartDesign;
 
 namespace PartDesign {
 
-const char* Transformed::OverlapEnums[] = { "Detect", "Overlap mode", "Non-overlap mode", NULL};
+const char* Transformed::OverlapEnums[] = { "Detect", "Overlap mode", "Non-overlap mode", nullptr};
 
 PROPERTY_SOURCE(PartDesign::Transformed, PartDesign::Feature)
 
 Transformed::Transformed()
 {
-    ADD_PROPERTY(Originals,(0));
+    ADD_PROPERTY(Originals,(nullptr));
     Originals.setSize(0);
     Placement.setStatus(App::Property::ReadOnly, true);
 
@@ -97,7 +90,7 @@ Part::Feature* Transformed::getBaseObject(bool silent) const {
     const char* err = nullptr;
     const std::vector<App::DocumentObject*> & originals = Originals.getValues();
     // NOTE: may be here supposed to be last origin but in order to keep the old behaviour keep here first
-    App::DocumentObject* firstOriginal = originals.empty() ? NULL : originals.front();
+    App::DocumentObject* firstOriginal = originals.empty() ? nullptr : originals.front();
     if (firstOriginal) {
         if(firstOriginal->isDerivedFrom(Part::Feature::getClassTypeId())) {
             rv = static_cast<Part::Feature*>(firstOriginal);
@@ -122,7 +115,7 @@ App::DocumentObject* Transformed::getSketchObject() const
         return (static_cast<PartDesign::ProfileBased*>(originals.front()))->getVerifiedSketch(true);
     }
     else if (!originals.empty() && originals.front()->getTypeId().isDerivedFrom(PartDesign::FeatureAddSub::getClassTypeId())) {
-        return NULL;
+        return nullptr;
     }
     else if (this->getTypeId().isDerivedFrom(LinearPattern::getClassTypeId())) {
         // if Originals is empty then try the linear pattern's Direction property
@@ -140,60 +133,31 @@ App::DocumentObject* Transformed::getSketchObject() const
         return pattern->MirrorPlane.getValue();
     }
     else {
-        return 0;
+        return nullptr;
     }
 }
 
 void Transformed::Restore(Base::XMLReader &reader)
 {
-    reader.readElement("Properties");
-    int Cnt = reader.getAttributeAsInteger("Count");
+    PartDesign::Feature::Restore(reader);
+}
 
-    for (int i=0 ;i<Cnt ;i++) {
-        reader.readElement("Property");
-        const char* PropName = reader.getAttribute("name");
-        const char* TypeName = reader.getAttribute("type");
-        App::Property* prop = getPropertyByName(PropName);
-
-        // The property 'Angle' of PolarPattern has changed from PropertyFloat
-        // to PropertyAngle and the property 'Length' has changed to PropertyLength.
-        try {
-            if (prop && strcmp(prop->getTypeId().getName(), TypeName) == 0) {
-                prop->Restore(reader);
-            }
-            else if (prop) {
-                Base::Type inputType = Base::Type::fromName(TypeName);
-                if (prop->getTypeId().isDerivedFrom(App::PropertyFloat::getClassTypeId()) &&
-                    inputType.isDerivedFrom(App::PropertyFloat::getClassTypeId())) {
-                    // Do not directly call the property's Restore method in case the implementation
-                    // has changed. So, create a temporary PropertyFloat object and assign the value.
-                    App::PropertyFloat floatProp;
-                    floatProp.Restore(reader);
-                    static_cast<App::PropertyFloat*>(prop)->setValue(floatProp.getValue());
-                }
-            }
-        }
-        catch (const Base::XMLParseException&) {
-            throw; // re-throw
-        }
-        catch (const Base::Exception &e) {
-            Base::Console().Error("%s\n", e.what());
-        }
-        catch (const std::exception &e) {
-            Base::Console().Error("%s\n", e.what());
-        }
-        catch (const char* e) {
-            Base::Console().Error("%s\n", e);
-        }
-#ifndef FC_DEBUG
-        catch (...) {
-            Base::Console().Error("Primitive::Restore: Unknown C++ exception thrown\n");
-        }
-#endif
-
-        reader.readEndElement("Property");
+void Transformed::handleChangedPropertyType(Base::XMLReader &reader, const char * TypeName, App::Property * prop)
+{
+    // The property 'Angle' of PolarPattern has changed from PropertyFloat
+    // to PropertyAngle and the property 'Length' has changed to PropertyLength.
+    Base::Type inputType = Base::Type::fromName(TypeName);
+    if (prop->getTypeId().isDerivedFrom(App::PropertyFloat::getClassTypeId()) &&
+        inputType.isDerivedFrom(App::PropertyFloat::getClassTypeId())) {
+        // Do not directly call the property's Restore method in case the implementation
+        // has changed. So, create a temporary PropertyFloat object and assign the value.
+        App::PropertyFloat floatProp;
+        floatProp.Restore(reader);
+        static_cast<App::PropertyFloat*>(prop)->setValue(floatProp.getValue());
     }
-    reader.readEndElement("Properties");
+    else {
+        PartDesign::Feature::handleChangedPropertyType(reader, TypeName, prop);
+    }
 }
 
 short Transformed::mustExecute() const
@@ -207,11 +171,6 @@ App::DocumentObjectExecReturn *Transformed::execute(void)
 {
     std::string overlapMode = Overlap.getValueAsString();
     bool overlapDetectionMode = overlapMode == "Detect";
-
-#ifndef FC_DEBUG
-    std::clock_t start0;
-    start0 = std::clock();
-#endif
 
     std::vector<App::DocumentObject*> originals = Originals.getValues();
     if (originals.empty()) // typically InsideMultiTransform
@@ -278,9 +237,9 @@ App::DocumentObjectExecReturn *Transformed::execute(void)
                 return new App::DocumentObjectExecReturn("Shape of addsub feature is empty");
             gp_Trsf trsf = feature->getLocation().Transformation().Multiplied(trsfInv);
             if (!fuseShape.isNull())
-                fuseShape = fuseShape.makETransform(trsf);
+                fuseShape = fuseShape.makeTransform(trsf);
             if (!cutShape.isNull())
-                cutShape = cutShape.makETransform(trsf);
+                cutShape = cutShape.makeTransform(trsf);
         }
         else {
             return new App::DocumentObjectExecReturn("Only additive and subtractive features can be transformed");
@@ -295,16 +254,19 @@ App::DocumentObjectExecReturn *Transformed::execute(void)
         std::vector<TopoDS_Shape> shapes;
         bool overlapping = false;
 
-        std::vector<gp_Trsf>::const_iterator t = transformations.begin();
-        bool first = true;
-        for (; t != transformations.end(); ++t) {
+        std::vector<gp_Trsf>::const_iterator transformIter = transformations.begin();
+
+        // First transformation is skipped since it should not be part of the toolShape.
+        transformIter++;
+
+        for (; transformIter != transformations.end(); ++transformIter) {
             // Make an explicit copy of the shape because the "true" parameter to BRepBuilderAPI_Transform
             // seems to be pretty broken
             BRepBuilderAPI_Copy copy(origShape);
 
             shape = copy.Shape();
 
-            BRepBuilderAPI_Transform mkTrf(shape, *t, false); // No need to copy, now
+            BRepBuilderAPI_Transform mkTrf(shape, *transformIter, false); // No need to copy, now
             if (!mkTrf.IsDone())
                 return new App::DocumentObjectExecReturn("Transformation failed", (*o));
             shape = mkTrf.Shape();
@@ -312,16 +274,15 @@ App::DocumentObjectExecReturn *Transformed::execute(void)
             shapes.emplace_back(shape);
             builder.Add(compShape, shape);
 
-            if (overlapDetectionMode && !first)
+            if (overlapDetectionMode)
                 overlapping =  overlapping || (countSolids(TopoShape(origShape).fuse(shape))==1);
 
-            if (first)
-                first = false;
         }
 
         TopoDS_Shape toolShape;
 
-#ifndef FC_DEBUG
+
+#ifdef FC_DEBUG
         if (overlapping || overlapMode == "Overlap mode")
             Base::Console().Message("Transformed: Overlapping feature mode (fusing tool shapes)\n");
         else
@@ -329,7 +290,7 @@ App::DocumentObjectExecReturn *Transformed::execute(void)
 #endif
 
         if (overlapping || overlapMode == "Overlap mode")
-            toolShape = TopoShape(origShape).fuse(shapes, Precision::Confusion());
+            toolShape = TopoShape(shape).fuse(shapes, Precision::Confusion());
         else
             toolShape = compShape;
 
@@ -363,10 +324,6 @@ App::DocumentObjectExecReturn *Transformed::execute(void)
 
     this->Shape.setValue(getSolid(support));  // picking the first solid
     rejected = getRemainingSolids(support);
-
-#ifndef FC_DEBUG
-    Base::Console().Message("Transformed: Elapsed CPU time: %f s\n", (std::clock() - start0  ) / (double)(CLOCKS_PER_SEC));
-#endif
 
     return App::DocumentObject::StdReturn;
 }

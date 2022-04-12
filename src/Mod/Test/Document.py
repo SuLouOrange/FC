@@ -33,6 +33,17 @@ class DocumentBasicCases(unittest.TestCase):
   def setUp(self):
     self.Doc = FreeCAD.newDocument("CreateTest")
 
+  def testAccessByNameOrID(self):
+    obj = self.Doc.addObject("App::DocumentObject", "MyName")
+
+    with self.assertRaises(TypeError):
+      self.Doc.getObject([1])
+
+    self.assertEqual(self.Doc.getObject(obj.Name), obj)
+    self.assertEqual(self.Doc.getObject("Unknown"), None)
+    self.assertEqual(self.Doc.getObject(obj.ID), obj)
+    self.assertEqual(self.Doc.getObject(obj.ID+1), None)
+
   def testCreateDestroy(self):
     #FIXME: Causes somehow a ref count error but it's _not_ FreeCAD.getDocument()!!!
     #If we remove the whole method no error appears.
@@ -191,6 +202,25 @@ class DocumentBasicCases(unittest.TestCase):
     obj.addProperty("App::PropertyEnumeration", "myEnumeration", "Enum", "mytest")
     with self.assertRaises(ValueError):
       obj.myEnumeration = enumeration_choices[0]
+
+  def testWrongTypes(self):
+    with self.assertRaises(TypeError):
+      self.Doc.addObject("App::DocumentObjectExtension")
+
+    class Feature:
+      pass
+    with self.assertRaises(TypeError):
+      self.Doc.addObject(type="App::DocumentObjectExtension", objProxy=Feature(), attach=True)
+
+    ext = FreeCAD.Base.TypeId.fromName("App::DocumentObjectExtension")
+    self.assertEqual(ext.createInstance(), None)
+
+    obj = self.Doc.addObject("App::FeaturePython", "Object")
+    with self.assertRaises(TypeError):
+      obj.addProperty("App::DocumentObjectExtension", "Property")
+
+    with self.assertRaises(TypeError):
+      self.Doc.findObjects(Type="App::DocumentObjectExtension")
 
   def testMem(self):
     self.Doc.MemSize
@@ -378,6 +408,12 @@ class DocumentBasicCases(unittest.TestCase):
 
     self.assertEqual(ext.Link, obj)
     self.assertNotEqual(ext.Link, sli)
+
+  def testIssue4823(self):
+    # https://forum.freecadweb.org/viewtopic.php?f=3&t=52775
+    # The issue was only visible in GUI mode and it crashed in the tree view
+    obj = self.Doc.addObject("App::Origin")
+    self.Doc.removeObject(obj.Name)
 
   def tearDown(self):
     #closing doc
@@ -1325,7 +1361,7 @@ class DocumentPropertyCases(unittest.TestCase):
     # testing the up and downstream stuff
     props=self.Obj.supportedProperties()
     for i in props:
-        self.Obj.addProperty(i,i)
+        self.Obj.addProperty(i,i.replace(':','_'))
     tempPath = tempfile.gettempdir()
     tempFile = tempPath + os.sep + "PropertyTests.FCStd"
     self.Doc.saveAs(tempFile)
@@ -1379,8 +1415,6 @@ class DocumentPropertyCases(unittest.TestCase):
 class DocumentExpressionCases(unittest.TestCase):
   def setUp(self):
     self.Doc = FreeCAD.newDocument()
-    self.Obj1 = self.Doc.addObject("App::FeatureTest","Test")
-    self.Obj2 = self.Doc.addObject("App::FeatureTest","Test")
 
   def assertAlmostEqual (self, v1, v2) :
     if (math.fabs(v2-v1) > 1E-12) :
@@ -1388,6 +1422,8 @@ class DocumentExpressionCases(unittest.TestCase):
 
 
   def testExpression(self):
+    self.Obj1 = self.Doc.addObject("App::FeatureTest","Test")
+    self.Obj2 = self.Doc.addObject("App::FeatureTest","Test")
     # set the object twice to test that the backlinks are removed when overwriting the expression
     self.Obj2.setExpression('Placement.Rotation.Angle', u'%s.Placement.Rotation.Angle' % self.Obj1.Name)
     self.Obj2.setExpression('Placement.Rotation.Angle', u'%s.Placement.Rotation.Angle' % self.Obj1.Name)
@@ -1405,6 +1441,49 @@ class DocumentExpressionCases(unittest.TestCase):
     self.Obj2.Placement = self.Obj2.Placement
     # must not raise a topological error
     self.assertEqual(self.Doc.recompute(), 2)
+
+  def testIssue4649(self):
+      class Cls():
+          def __init__(self, obj):
+              self.MonitorChanges = False
+              obj.Proxy = self
+              obj.addProperty('App::PropertyFloat', "propA", "group")
+              obj.addProperty('App::PropertyFloat', "propB", "group")
+              self.MonitorChanges = True
+              obj.setExpression("propB", '6*9')
+          def onChanged(self, obj, prop):
+              print("onChanged",self, obj, prop)
+              if (self.MonitorChanges and prop == "propA"):
+                  print('Removing expression...')
+                  obj.setExpression("propB", None)
+
+      obj = self.Doc.addObject("App::DocumentObjectGroupPython", "Obj")
+      Cls(obj)
+      self.Doc.UndoMode = 1
+      self.Doc.openTransaction("Expression")
+      obj.setExpression("propA", '42')
+      self.Doc.recompute()
+      self.Doc.commitTransaction()
+      self.assertTrue(('propB', None) in obj.ExpressionEngine)
+      self.assertTrue(('propA', "42") in obj.ExpressionEngine)
+
+      self.Doc.undo()
+      self.assertFalse(('propB', None) in obj.ExpressionEngine)
+      self.assertFalse(('propA', "42") in obj.ExpressionEngine)
+
+      self.Doc.redo()
+      self.assertTrue(('propB', None) in obj.ExpressionEngine)
+      self.assertTrue(('propA', "42") in obj.ExpressionEngine)
+
+      self.Doc.recompute()
+      obj.ExpressionEngine
+
+      TempPath = tempfile.gettempdir()
+      SaveName = TempPath + os.sep + "ExpressionTests.FCStd"
+      self.Doc.saveAs(SaveName)
+      FreeCAD.closeDocument(self.Doc.Name)
+      self.Doc = FreeCAD.openDocument(SaveName)
+
 
   def tearDown(self):
     #closing doc

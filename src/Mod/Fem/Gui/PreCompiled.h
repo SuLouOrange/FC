@@ -26,19 +26,6 @@
 
 #include <FCConfig.h>
 
-// Importing of App classes
-#ifdef FC_OS_WIN32
-# define AppFemExport   __declspec(dllimport)
-# define FemExport   __declspec(dllimport)
-# define PartExport  __declspec(dllimport)
-# define FemGuiExport   __declspec(dllexport)
-#else // for Linux
-# define PartExport
-# define AppFemExport
-# define FemExport
-# define FemGuiExport
-#endif
-
 #ifdef _MSC_VER
 # pragma warning(disable : 4005)
 # pragma warning(disable : 4290)
@@ -46,12 +33,9 @@
 
 #ifdef _PreComp_
 
-// Python
-#include <Python.h>
-
 // standard
 #include <iostream>
-#include <assert.h>
+#include <cassert>
 #include <cmath>
 
 #include <math.h>
@@ -93,8 +77,8 @@
 #include <TopoDS_Shape.hxx>
 
 // Qt Toolkit
-#ifndef __Qt4All__
-# include <Gui/Qt4All.h>
+#ifndef __QtAll__
+# include <Gui/QtAll.h>
 #endif
 
 #include <qobject.h>

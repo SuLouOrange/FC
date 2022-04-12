@@ -32,6 +32,7 @@
 #include <TopTools_IndexedDataMapOfShapeListOfShape.hxx>
 #include <TopTools_ListIteratorOfListOfShape.hxx>
 
+#include <App/Document.h>
 #include <Gui/ViewProvider.h>
 #include <Gui/Application.h>
 #include <Gui/Document.h>
@@ -329,7 +330,7 @@ void FillingEdgePanel::on_listUnbound_itemDoubleClicked(QListWidgetItem* item)
                 const TopTools_ListOfShape& adj_faces = edge2Face.FindFromKey(edge);
                 if (adj_faces.Extent() > 0) {
                     int n = adj_faces.Extent();
-                    ui->statusLabel->setText(tr("Edge has %n adjacent face(s)", 0, n));
+                    ui->statusLabel->setText(tr("Edge has %n adjacent face(s)", nullptr, n));
 
                     // fill up the combo boxes
                     modifyBoundary(true);

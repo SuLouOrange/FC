@@ -121,10 +121,17 @@ from draftutils.gui_utils import (dim_symbol,
                                   dimSymbol,
                                   dim_dash,
                                   dimDash)
+<<<<<<< HEAD
 App.Console.PrintWarning("draft 9\n")
 from draftutils.groups import (get_group_names,
+=======
+
+from draftutils.groups import (is_group,
+                               get_group_names,
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
                                getGroupNames,
                                ungroup,
+                               get_windows,
                                get_group_contents,
                                getGroupContents,
                                get_movable_children,
@@ -356,6 +363,8 @@ from draftobjects.shapestring import (ShapeString,
                                       _ShapeString)
 from draftmake.make_shapestring import (make_shapestring,
                                         makeShapeString)
+if App.GuiUp:
+    from draftviewproviders.view_shapestring import ViewProviderShapeString
 
 # shape 2d view
 from draftobjects.shape2dview import (Shape2DView,
@@ -432,8 +441,13 @@ if App.GuiUp:
                                               ViewProviderDraftText)
 App.Console.PrintWarning("draft 18\n")
 
-from draftobjects.hatch import (Draft_Hatch_Object)
-from draftmake.make_hatch import (make_hatch, makeHatch)
+from draftobjects.hatch import (Hatch)
+from draftmake.make_hatch import (make_hatch)
 if App.GuiUp:
+<<<<<<< HEAD
     from draftviewproviders.view_hatch import (Draft_Hatch_ViewProvider)
+=======
+    from draftviewproviders.view_hatch import (ViewProviderDraftHatch)
+
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 ## @}

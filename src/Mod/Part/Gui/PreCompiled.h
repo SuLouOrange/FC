@@ -26,6 +26,7 @@
 
 #include <FCConfig.h>
 
+<<<<<<< HEAD
 // Importing of App classes
 #ifdef FC_OS_WIN32
 # define PartExport    __declspec(dllimport)
@@ -41,6 +42,9 @@
 # define NOMINMAX
 # endif
 #endif
+=======
+#include <Mod/Part/PartGlobal.h>
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 // here get the warnings of too long specifiers disabled (needed for VC6)
 #ifdef _MSC_VER
@@ -51,6 +55,9 @@
 #endif
 
 #ifdef FC_OS_WIN32
+# ifndef NOMINMAX
+# define NOMINMAX
+# endif
 # include <windows.h>
 #endif
 
@@ -58,12 +65,8 @@
 
 // standard
 #include <iostream>
-//#include <stdio.h>
 #include <cassert>
 #include <cfloat>
-//#include <io.h>
-//#include <fcntl.h>
-//#include <ctype.h>
 # include <cmath>
 #include <sstream>
 
@@ -172,18 +175,13 @@
 # include <BOPAlgo_ListOfCheckResult.hxx>
 #endif
 
-
-// Python
-
-#include <Python.h>
-
 // Boost
 #include <boost_signals2.hpp>
 #include <boost/bind/bind.hpp>
 
 // Qt Toolkit
-#ifndef __Qt4All__
-# include <Gui/Qt4All.h>
+#ifndef __QtAll__
+# include <Gui/QtAll.h>
 #endif
 
 // GL

@@ -20,22 +20,18 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #ifndef FEM_VIEWPROVIDERFEMPOSTOBJECT_H
 #define FEM_VIEWPROVIDERFEMPOSTOBJECT_H
 
-#include <Gui/ViewProviderGeometryObject.h>
-
-#include <CXX/Objects.hxx>
 #include <Base/Observer.h>
-#include <vtkSmartPointer.h>
-#include <vtkPolyDataMapper.h>
-#include <vtkOutlineFilter.h>
-#include <vtkOutlineCornerFilter.h>
-#include <vtkLookupTable.h>
-#include <vtkExtractEdges.h>
+#include <Gui/ViewProviderGeometryObject.h>
+#include <Mod/Fem/FemGlobal.h>
+
 #include <vtkAppendPolyData.h>
+#include <vtkExtractEdges.h>
 #include <vtkGeometryFilter.h>
+#include <vtkSmartPointer.h>
+#include <vtkOutlineCornerFilter.h>
 #include <vtkVertexGlyphFilter.h>
 
 class SoIndexedPointSet;
@@ -81,6 +77,7 @@ public:
     App::PropertyEnumeration            Field;
     App::PropertyEnumeration            VectorMode;
     App::PropertyPercent                Transparency;
+    App::PropertyEnumeration            Scale;
 
     void attach(App::DocumentObject *pcObject);
     void setDisplayMode(const char* ModeName);
@@ -101,6 +98,10 @@ public:
     //observer for the color bar
     virtual void OnChange(Base::Subject< int >& rCaller, int rcReason);
 
+    // handling when object is deleted
+    virtual bool onDelete(const std::vector<std::string>&);
+    virtual bool canDelete(App::DocumentObject* obj) const;
+
       /** @name Selection handling
       * This group of methods do the selection handling.
       * Here you can define how the selection for your ViewProvider
@@ -120,6 +121,7 @@ protected:
     virtual void setupTaskDialog(TaskDlgPost* dlg);
     bool setupPipeline();
     void updateVtk();
+    void setRangeOfColorBar(double min, double max);
 
     SoCoordinate3*              m_coordinates;
     SoIndexedPointSet*          m_markers;
@@ -143,6 +145,8 @@ protected:
     vtkSmartPointer<vtkOutlineCornerFilter>     m_outline;
     vtkSmartPointer<vtkExtractEdges>            m_wireframe, m_wireframeSurface;
     vtkSmartPointer<vtkVertexGlyphFilter>       m_points, m_pointsSurface;
+
+    static const char* ScaleEnums[];
 
 private:
     void updateProperties();

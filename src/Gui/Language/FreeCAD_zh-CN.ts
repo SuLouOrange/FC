@@ -1726,7 +1726,8 @@ This file already exists.</source>
     <message>
       <source>'%1'
  already exists.</source>
-      <translation>%1：已经存在</translation>
+      <translation>'%1'
+ 已存在。</translation>
     </message>
     <message>
       <source>Rename Failed</source>
@@ -2613,7 +2614,7 @@ but slower response to any scene changes.</translation>
     </message>
     <message>
       <source>Objects will be projected in orthographic projection</source>
-      <translation>对象将以正投影法投射。</translation>
+      <translation>对象将以正交投影方式投影</translation>
     </message>
     <message>
       <source>Objects will appear in a perspective projection</source>
@@ -2627,7 +2628,7 @@ opening or creation</translation>
     </message>
     <message>
       <source>Show axis cross by default</source>
-      <translation type="unfinished">Show axis cross by default</translation>
+      <translation>默认显示坐标轴</translation>
     </message>
     <message>
       <source>Pick radius (px):</source>
@@ -3282,10 +3283,6 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation type="unfinished">Unloaded Workbenches</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation type="unfinished">Workbench Name</translation>
     </message>
@@ -3300,6 +3297,10 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation type="unfinished">Available Workbenches</translation>
     </message>
   </context>
   <context>
@@ -3326,7 +3327,7 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
     </message>
     <message>
       <source>Loaded</source>
-      <translation type="unfinished">Loaded</translation>
+      <translation>已载入</translation>
     </message>
     <message>
       <source>Load now</source>
@@ -3716,7 +3717,7 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
     </message>
     <message>
       <source>Number of decimals:</source>
-      <translation>小数位数︰</translation>
+      <translation>小数位数:</translation>
     </message>
     <message>
       <source>Imperial decimal (in/lb)</source>
@@ -3788,7 +3789,7 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
     </message>
     <message>
       <source>FEM (mm, N, sec)</source>
-      <translation>FEM (mm, N, sec)</translation>
+      <translation>有限元(毫米，牛顿，秒)</translation>
     </message>
   </context>
   <context>
@@ -3893,7 +3894,7 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
     </message>
     <message>
       <source>as:</source>
-      <translation>如</translation>
+      <translation>如:</translation>
     </message>
     <message>
       <source>=&gt;</source>
@@ -4089,7 +4090,7 @@ The preference system is the one set in the general preferences.</source>
     </message>
     <message>
       <source>Cleanup...</source>
-      <translation>清除</translation>
+      <translation>清理...</translation>
     </message>
     <message>
       <source>Delete</source>
@@ -4498,32 +4499,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>单击此按钮之前，请选择1，2或3个点。点可以位于顶点，面或边上。如果在面或边缘上，所使用的点将是沿着面或边缘的鼠标位置处的点。如果选择1点，则将其用作旋转中心。如果选择了2个点，则它们之间的中点将成为旋转中心，必要时将新建自定义轴。如果选择3个点，则第一个点成为旋转中心，并且位于与3个点定义的平面垂直的矢量上。报告视图中提供了一些距离和角度信息，这在对齐对象时非常有用。为方便，使用Shift+单击时，相应的距离或角度将复制到剪贴板。</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation type="unfinished">Around y-axis:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation type="unfinished">Pitch (around y-axis):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation type="unfinished">Around z-axis:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation type="unfinished">Roll (around x-axis):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation type="unfinished">Around x-axis:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation type="unfinished">Yaw (around z-axis):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation type="unfinished">Rotation around the x-axis</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation type="unfinished">Yaw (around z-axis)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation type="unfinished">Rotation around the y-axis</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation type="unfinished">Pitch (around y-axis)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation type="unfinished">Rotation around the z-axis</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation type="unfinished">Roll (around the x-axis)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>欧拉角（xy'z''）</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation type="unfinished">Euler angles (zy'x'')</translation>
     </message>
   </context>
   <context>
@@ -4688,7 +4689,7 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;U使用原有选择</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
@@ -4856,7 +4857,7 @@ originally selected prior to opening this dialog</translation>
     </message>
     <message>
       <source>Reveals this object and its subelements in the python console.</source>
-      <translation>将此物件及其子元素于python主控台中显示</translation>
+      <translation>在 python 控制台中显示此对象及其子元素。</translation>
     </message>
     <message>
       <source>Mark to recompute</source>
@@ -6043,6 +6044,18 @@ Do you want to specify another directory?</source>
       <source>Vietnamese</source>
       <translation>越南语</translation>
     </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation type="unfinished">Bulgarian</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>希腊语</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation type="unfinished">Spanish, Argentina</translation>
+    </message>
   </context>
   <context>
     <name>Gui::TreeDockWidget</name>
@@ -6110,7 +6123,7 @@ Do you want to specify another directory?</source>
     </message>
     <message>
       <source>Enable or disable recomputations of document</source>
-      <translation>启用或禁用文档重新计算功能？</translation>
+      <translation>启用或禁用文档的重新计算</translation>
     </message>
     <message>
       <source>Mark to recompute</source>
@@ -6730,7 +6743,7 @@ Be aware the point where you click matters.</source>
     </message>
     <message>
       <source>Save a copy of the document under new filename...</source>
-      <translation>以新的文件名称保存目前文档的副本</translation>
+      <translation>以新的文件名称保存目前文档的副本...</translation>
     </message>
     <message>
       <source>Frozen views</source>
@@ -7003,6 +7016,38 @@ Physical path: </source>
       <translation>
 
 物理路径： </translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation type="unfinished">Could not save document</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation type="unfinished">There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation type="unfinished">Document not saved</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation type="unfinished">The document%1 could not be saved. Do you want to cancel closing it?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation type="unfinished">%1 Document(s) not saved</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation type="unfinished">Some documents could not be saved. Do you want to cancel closing?</translation>
     </message>
   </context>
   <context>
@@ -9690,7 +9735,7 @@ Do you still want to proceed?</source>
     <name>Std_Revert</name>
     <message>
       <source>This will discard all the changes since last file save.</source>
-      <translation>这将会丢弃自上次保存文档后所有的变更</translation>
+      <translation>这将放弃自上次文件保存以来的所有更改。</translation>
     </message>
     <message>
       <source>Revert document</source>
@@ -9810,6 +9855,10 @@ Do you still want to proceed?</source>
     <message>
       <source>Special Ops</source>
       <translation>特殊设定</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>轴测图</translation>
     </message>
   </context>
   <context>

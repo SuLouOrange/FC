@@ -183,14 +183,14 @@ class ArchReference:
             for edge in shape.Edges:
                 found = False
                 for solid in shape.Solids:
-                    if found:
-                        break
                     for soledge in solid.Edges:
-                        if found:
-                            break
                         if edge.hashCode() == soledge.hashCode():
                             found = True
                             break
+                    if found:
+                        break
+                if found:
+                    break
             else:
                 shapes.append(edge)
             print("solids:",len(shape.Solids),"mattable:",materials)
@@ -211,7 +211,7 @@ class ArchReference:
             shape = Part.makeCompound(shapes)
             try:
                 shape = shape.removeSplitter()
-            except:
+            except Exception:
                 print(obj.Label,": error removing splitter")
         return shape
 

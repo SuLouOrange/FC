@@ -299,7 +299,7 @@
     <name>ExpressionLabel</name>
     <message>
       <source>Enter an expression...</source>
-      <translation>Vnesite izraz ...</translation>
+      <translation>Vnesite izraz ...</translation>
     </message>
     <message>
       <source>Expression: </source>
@@ -592,11 +592,11 @@ kliknete na levo oz. desno tipko in premikate miško gor oz. dol</translation>
     <name>Gui::Dialog::Clipping</name>
     <message>
       <source>Clipping</source>
-      <translation>Zamejitev</translation>
+      <translation>Rezanje</translation>
     </message>
     <message>
       <source>Clipping X</source>
-      <translation>X zamejitev</translation>
+      <translation>Rezanje po X</translation>
     </message>
     <message>
       <source>Flip</source>
@@ -608,15 +608,15 @@ kliknete na levo oz. desno tipko in premikate miško gor oz. dol</translation>
     </message>
     <message>
       <source>Clipping Y</source>
-      <translation>Y zamejitev</translation>
+      <translation>Rezanje po Y</translation>
     </message>
     <message>
       <source>Clipping Z</source>
-      <translation>Z zamejitev</translation>
+      <translation>Rezanje po Z</translation>
     </message>
     <message>
       <source>Clipping custom direction</source>
-      <translation>Smer zamejitve po meri</translation>
+      <translation>Smer prereza po meri</translation>
     </message>
     <message>
       <source>View</source>
@@ -1669,7 +1669,7 @@ ukazni mizi, se prelomijo</translation>
     </message>
     <message>
       <source>Addons...</source>
-      <translation>Dodatki ...</translation>
+      <translation>Dodatki ...</translation>
     </message>
     <message>
       <source>Toolbar</source>
@@ -1955,7 +1955,7 @@ Navedite drugo mapo.</translation>
     </message>
     <message>
       <source>Find...</source>
-      <translation>Poišči ...</translation>
+      <translation>Poišči ...</translation>
     </message>
     <message>
       <source>Sorted</source>
@@ -2291,11 +2291,11 @@ Navedite drugo mapo.</translation>
     </message>
     <message>
       <source>Redirect internal Python errors to report view</source>
-      <translation>Preusmeri notranje napake Pythona na poročilni pogled</translation>
+      <translation>Preusmeri notranje napake Pythona na poročevalni pogled</translation>
     </message>
     <message>
       <source>Redirect internal Python output to report view</source>
-      <translation>Preusmeri notranji izpis Pythona na poročilni pogled</translation>
+      <translation>Preusmeri notranji izpis Pythona na poročevalni pogled</translation>
     </message>
     <message>
       <source>Python interpreter</source>
@@ -3293,10 +3293,6 @@ Lahko uporabite tudi obliko: Neznanec &lt;ne@znanec.com&gt;</translation>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
-      <source>Unloaded Workbenches</source>
-      <translation>Odložena delovna okolja</translation>
-    </message>
-    <message>
       <source>Workbench Name</source>
       <translation>Ime delovnega okolja</translation>
     </message>
@@ -3311,6 +3307,10 @@ Lahko uporabite tudi obliko: Neznanec &lt;ne@znanec.com&gt;</translation>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zaradi varčevanja z viri FreeCAD ne naloži delovnih okolij, dokler se jih ne uporabi. Če jih naložite, vam bodo lahko na voljo dodatne prednastavitve, ki so povezane z njihovimi zmožnostmi.&lt;/p&gt;&lt;p&gt;V vaši namestitvi so na voljo naslednja delovna okolja:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Available Workbenches</source>
+      <translation>Razpoložljiva delovna okolja</translation>
     </message>
   </context>
   <context>
@@ -4100,7 +4100,7 @@ Prednostni je sistem, nastavljen v splošnih prednastavitvah.</translation>
     </message>
     <message>
       <source>Cleanup...</source>
-      <translation>Počisti ...</translation>
+      <translation>Počisti ...</translation>
     </message>
     <message>
       <source>Delete</source>
@@ -4508,32 +4508,32 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Izberite 1, 2 ali 3 točke preden kliknete ta gumb.  Točka je lahko na ogljišču, ploskvi ali na robu.  Če bo na ploskvi ali robu, bo uporabljena točka položaja kazalke na ploskvi ali robu.  Če je izbrana 1 točka, bo uporabljena kot središče sukanja.  Če sta izbrani 2 točki, bo točka na sredini med njima središče sukanja in ustvarjena bo nova os po meri, če bo potrebno.  Če so izbrane 3 točke, prva točka postane središče vrtenja in leži na vektorju, ki je pravokoten na ravnino, določeno s temi 3 točkami.  Nekateri podatki o razdaljah in kotih so podani v poročilnem pogledu, ki je lahko koristen posebno pri poravnavanju objektov.  Za lažjo uporabo se s Premakni + klik ustrezna razdalja ali kot kopira v odložišče.</translation>
     </message>
     <message>
-      <source>Around y-axis:</source>
-      <translation>Okoli osi y:</translation>
+      <source>Pitch (around y-axis):</source>
+      <translation>Naklon (okoli osi y):</translation>
     </message>
     <message>
-      <source>Around z-axis:</source>
-      <translation>Okoli osi z:</translation>
+      <source>Roll (around x-axis):</source>
+      <translation>Nagib (okoli osi x):</translation>
     </message>
     <message>
-      <source>Around x-axis:</source>
-      <translation>Okoli osi x:</translation>
+      <source>Yaw (around z-axis):</source>
+      <translation>Odklon (okoli osi z):</translation>
     </message>
     <message>
-      <source>Rotation around the x-axis</source>
-      <translation>Sukanje okoli osi x</translation>
+      <source>Yaw (around z-axis)</source>
+      <translation>Odklon (okoli osi z)</translation>
     </message>
     <message>
-      <source>Rotation around the y-axis</source>
-      <translation>Sukanje okoli osi y</translation>
+      <source>Pitch (around y-axis)</source>
+      <translation>Naklon (okoli osi y)</translation>
     </message>
     <message>
-      <source>Rotation around the z-axis</source>
-      <translation>Sukanje okoli osi z</translation>
+      <source>Roll (around the x-axis)</source>
+      <translation>Nagib (okoli osi x)</translation>
     </message>
     <message>
-      <source>Euler angles (xy'z'')</source>
-      <translation>Eulerjevi koti (xy'z")</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Eulerjevi koti (zy'x")</translation>
     </message>
   </context>
   <context>
@@ -4698,13 +4698,13 @@ The 'Status' column shows whether the document could be recovered.</source>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
-      <translation type="unfinished">&amp;Use Original Selections</translation>
+      <translation>&amp;Uporabi izvorni izbor</translation>
     </message>
     <message>
       <source>Ignore dependencies and proceed with objects
 originally selected prior to opening this dialog</source>
-      <translation type="unfinished">Ignore dependencies and proceed with objects
-originally selected prior to opening this dialog</translation>
+      <translation>Prezri odvisnosti in nadaljuj s predmeti, ki so bili
+izbrani pred odprtjem tega pogovrnega okna</translation>
     </message>
   </context>
   <context>
@@ -5469,7 +5469,7 @@ Kako želite nadaljevati?</translation>
     </message>
     <message>
       <source>Expression...</source>
-      <translation>Izraz ...</translation>
+      <translation>Izraz ...</translation>
     </message>
     <message>
       <source>Auto expand</source>
@@ -5540,7 +5540,7 @@ Ali želite končati ne da bi shranili podatke?</translation>
     </message>
     <message>
       <source>Insert file name...</source>
-      <translation>Vstavite ime datoteke ...</translation>
+      <translation>Vstavite ime datoteke ...</translation>
     </message>
     <message>
       <source>Save History</source>
@@ -6059,6 +6059,18 @@ Ali želite navesti drugo mapo?</translation>
       <source>Vietnamese</source>
       <translation>Vietnamščina</translation>
     </message>
+    <message>
+      <source>Bulgarian</source>
+      <translation>bolgarščina</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Grščina</translation>
+    </message>
+    <message>
+      <source>Spanish, Argentina</source>
+      <translation>španščina, Argentina</translation>
+    </message>
   </context>
   <context>
     <name>Gui::TreeDockWidget</name>
@@ -6142,7 +6154,7 @@ Ali želite navesti drugo mapo?</translation>
     </message>
     <message>
       <source>Search...</source>
-      <translation>Iskanje ...</translation>
+      <translation>Iskanje ...</translation>
     </message>
     <message>
       <source>Search for objects</source>
@@ -6266,7 +6278,7 @@ Ali želite navesti drugo mapo?</translation>
     </message>
     <message>
       <source>Preferences...</source>
-      <translation>Prednastavitve ...</translation>
+      <translation>Prednastavitve ...</translation>
     </message>
     <message>
       <source>Quit %1</source>
@@ -6394,7 +6406,7 @@ Ali želite navesti drugo mapo?</translation>
     </message>
     <message>
       <source>Report view</source>
-      <translation>Pogled poročil</translation>
+      <translation>Poročevalni pogled</translation>
     </message>
     <message>
       <source>Combo View</source>
@@ -6465,7 +6477,7 @@ Ali želite navesti drugo mapo?</translation>
     </message>
     <message>
       <source>Printing...</source>
-      <translation>Tiskanje ...</translation>
+      <translation>Tiskanje ...</translation>
     </message>
     <message>
       <source>Cannot load workbench</source>
@@ -6647,7 +6659,7 @@ Odprite brskalnik in vtipkajte: http://localhost:%1.</translation>
     </message>
     <message>
       <source>Options...</source>
-      <translation>Možnosti ...</translation>
+      <translation>Možnosti ...</translation>
     </message>
     <message>
       <source>Out of memory</source>
@@ -6843,7 +6855,7 @@ Upoštevajte, da je mesto klika pomembno.</translation>
       <source>Failed to parse some of the expressions.
 Please check the Report View for more details.</source>
       <translation>Nekaterh izrazov ni bilo mogoče razčleniti.
-Za več podrobnosti poglejte Poročilni pogled.</translation>
+Za več podrobnosti poglejte Poročevalni pogled.</translation>
     </message>
     <message>
       <source>Failed to paste expressions</source>
@@ -6961,7 +6973,7 @@ Izberite "Prekini" za prekinitev</translation>
     </message>
     <message>
       <source>Override colors...</source>
-      <translation>Povozi barve ...</translation>
+      <translation>Povozi barve ...</translation>
     </message>
     <message>
       <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
@@ -6981,7 +6993,7 @@ Izberite "Prekini" za prekinitev</translation>
 Please check report view for more...</source>
       <translation>
 
-Za več informacij poglejte poročilni pogled ...</translation>
+Za več informacij poglejte poročevalni pogled ...</translation>
     </message>
     <message>
       <source>
@@ -7022,6 +7034,38 @@ Physical path: </source>
       <translation>
 
 Tvarna pot: </translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Dokumenta ni bilo mogoče shraniti</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Pri shranjevanju te datoteke je prišlo do težave. Razlog za to je lahko, da določene nadrejene mape ne obstajajo, nimate zadostnih dovoljenj ali pa drugi razlogi. Podrobnosti o napaki:
+
+"%1"
+
+Ali želite datoteko shraniti z drugačnim imenom?</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Dokument ni shranjen</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>Dokumenta%1 ni bilo mogoče shraniti. Ali želite preklicati zapiranje?</translation>
+    </message>
+    <message>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 Dokumenti niso shranjeni</translation>
+    </message>
+    <message>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Določenih dokumentov se ni dalo zapreti. Ali želite preklicati zapiranje?</translation>
     </message>
   </context>
   <context>
@@ -7312,7 +7356,7 @@ Tvarna pot: </translation>
     <name>StdCmdDlgMacroExecute</name>
     <message>
       <source>Macros ...</source>
-      <translation>Makri …</translation>
+      <translation>Makri ...</translation>
     </message>
     <message>
       <source>Opens a dialog to let you execute a recorded macro</source>
@@ -7342,7 +7386,7 @@ Tvarna pot: </translation>
     <name>StdCmdDlgMacroRecord</name>
     <message>
       <source>&amp;Macro recording ...</source>
-      <translation>&amp;Snemanje makra …</translation>
+      <translation>&amp;Snemanje makra ...</translation>
     </message>
     <message>
       <source>Opens a dialog to record a macro</source>
@@ -7361,7 +7405,7 @@ Tvarna pot: </translation>
     </message>
     <message>
       <source>E&amp;dit parameters ...</source>
-      <translation>&amp;Uredi določilke …</translation>
+      <translation>&amp;Uredi določilke ...</translation>
     </message>
     <message>
       <source>Opens a Dialog to edit the parameters</source>
@@ -7376,7 +7420,7 @@ Tvarna pot: </translation>
     </message>
     <message>
       <source>&amp;Preferences ...</source>
-      <translation>&amp;Prednastavitve …</translation>
+      <translation>&amp;Prednastavitve ...</translation>
     </message>
     <message>
       <source>Opens a Dialog to edit the preferences</source>
@@ -7865,7 +7909,7 @@ Tvarna pot: </translation>
     </message>
     <message>
       <source>Attach to remote debugger...</source>
-      <translation>Priloži k oddaljenemu razhroščevalniku ...</translation>
+      <translation>Priloži k oddaljenemu razhroščevalniku ...</translation>
     </message>
     <message>
       <source>Attach to a remotely running debugger</source>
@@ -8117,7 +8161,7 @@ Tvarna pot: </translation>
     </message>
     <message>
       <source>&amp;Print...</source>
-      <translation>&amp;Natisni ...</translation>
+      <translation>&amp;Natisni ...</translation>
     </message>
     <message>
       <source>Print the document</source>
@@ -8593,11 +8637,11 @@ Tvarna pot: </translation>
     </message>
     <message>
       <source>Clipping plane</source>
-      <translation>Ravnina obrezovanja</translation>
+      <translation>Prerezna ravnina</translation>
     </message>
     <message>
       <source>Toggles clipping plane for active view</source>
-      <translation>Preklopi ravnino obrezovanja dejavnega pogleda</translation>
+      <translation>Preklopi prerezno ravnino dejavnega pogleda</translation>
     </message>
   </context>
   <context>
@@ -8799,11 +8843,11 @@ Tvarna pot: </translation>
     <name>StdCmdUserEditMode</name>
     <message>
       <source>Edit mode</source>
-      <translation type="unfinished">Edit mode</translation>
+      <translation>Način urejanja</translation>
     </message>
     <message>
       <source>Defines behavior when editing an object from tree</source>
-      <translation type="unfinished">Defines behavior when editing an object from tree</translation>
+      <translation>Opredeljuje obnašanje pri urejanju predmeta iz drevesa</translation>
     </message>
   </context>
   <context>
@@ -9625,7 +9669,7 @@ Ali želite vseeno nadaljevati?
     </message>
     <message>
       <source>Wireframe</source>
-      <translation>Žični model</translation>
+      <translation>Žični prikaz</translation>
     </message>
     <message>
       <source>Wireframe mode</source>
@@ -9828,7 +9872,11 @@ Ali želite vseeno nadaljevati?</translation>
     </message>
     <message>
       <source>Special Ops</source>
-      <translation>Posebne možnosti</translation>
+      <translation>Posebna opravila</translation>
+    </message>
+    <message>
+      <source>Axonometric</source>
+      <translation>Aksonometrično</translation>
     </message>
   </context>
   <context>

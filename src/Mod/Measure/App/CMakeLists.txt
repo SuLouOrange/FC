@@ -12,7 +12,7 @@ include_directories(
     ${Boost_INCLUDE_DIRS}
     ${OCC_INCLUDE_DIR}
     ${ZLIB_INCLUDE_DIR}
-    ${Python3_INCLUDE_DIRS}
+    ${PYTHON_INCLUDE_DIRS}
     ${XercesC_INCLUDE_DIRS}
 )
 link_directories(${OCC_LIBRARY_DIR})
@@ -32,7 +32,6 @@ SOURCE_GROUP("Python" FILES ${Python_SRCS})
 
 SET(MeasureModule_SRCS
     AppMeasure.cpp
-    AppMeasurePy.cpp
     Measurement.cpp
     Measurement.h
     PreCompiled.cpp

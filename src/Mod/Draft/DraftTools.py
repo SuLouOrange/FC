@@ -84,9 +84,6 @@ FreeCAD.Console.PrintWarning("draftTools, after import draftguitools.gui_edit\n"
 import draftguitools.gui_selectplane
 import draftguitools.gui_setstyle
 import draftguitools.gui_planeproxy
-from draftguitools.gui_lineops import FinishLine
-from draftguitools.gui_lineops import CloseLine
-from draftguitools.gui_lineops import UndoLine
 from draftguitools.gui_togglemodes import ToggleConstructionMode
 from draftguitools.gui_togglemodes import ToggleContinueMode
 from draftguitools.gui_togglemodes import ToggleDisplayMode

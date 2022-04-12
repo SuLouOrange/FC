@@ -20,25 +20,17 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
-#ifndef _PreComp_
-# include <Python.h>
-#endif
-
-#include <CXX/Extensions.hxx>
-#include <CXX/Objects.hxx>
 
 #include <Base/Console.h>
 #include <Base/Interpreter.h>
+#include <Base/PyObjectBase.h>
 #include <Gui/Application.h>
-#include <Gui/WorkbenchManager.h>
-#include <Gui/Language/Translator.h>
-#include "Workbench.h"
 #include <Gui/WidgetFactory.h>
-#include "DlgStartPreferencesImp.h"
+#include <Gui/Language/Translator.h>
 
-#include <Mod/Start/App/StartConfiguration.h>
+#include "DlgStartPreferencesImp.h"
+#include "Workbench.h"
 
 
 // use a different name to CreateCommand()
@@ -67,8 +59,12 @@ private:
 
 PyObject* initModule()
 {
+<<<<<<< HEAD
     printf("%s(%d), relax\n", __FUNCTION__, __LINE__);
     return (new Module)->module().ptr();
+=======
+    return Base::Interpreter().addModule(new Module);
+>>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 }
 
 } // namespace StartGui
@@ -80,7 +76,7 @@ PyMOD_INIT_FUNC(StartGui)
     printf("%s(%d),relax\n", __FUNCTION__, __LINE__);
     if (!Gui::Application::Instance) {
         PyErr_SetString(PyExc_ImportError, "Cannot load Gui module in console application.");
-        PyMOD_Return(0);
+        PyMOD_Return(nullptr);
     }
 
     // load dependent module
@@ -90,7 +86,7 @@ PyMOD_INIT_FUNC(StartGui)
     }
     catch(const Base::Exception& e) {
         PyErr_SetString(PyExc_ImportError, e.what());
-        PyMOD_Return(0);
+        PyMOD_Return(nullptr);
     }
     catch (Py::Exception& e) {
         Py::Object o = Py::type(e);

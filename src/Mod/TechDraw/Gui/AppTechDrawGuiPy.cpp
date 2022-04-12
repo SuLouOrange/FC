@@ -20,11 +20,7 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
-#ifndef _PreComp_
-# include <Python.h>
-#endif
 
 #include <CXX/Extensions.hxx>
 #include <CXX/Objects.hxx>
@@ -45,7 +41,7 @@
 #include <Gui/Application.h>
 #include <Gui/Document.h>
 #include <Gui/ViewProvider.h>
-#include <Gui/WidgetFactory.h>   //for PythonWrappers
+#include <Gui/PythonWrapper.h>
 
 #include <Mod/Part/App/OCCError.h>
 #include <Mod/TechDraw/App/DrawPage.h>
@@ -54,6 +50,7 @@
 #include <Mod/TechDraw/App/DrawViewPy.h>  // generated from DrawViewPy.xml
 
 #include "MDIViewPage.h"
+#include "QGIView.h"
 #include "ViewProviderPage.h"
 #include "ViewProviderDrawingView.h"
 #include "Grabber3d.h"
@@ -178,9 +175,9 @@ private:
         PyMem_Free(name);
         
         try {
-           App::DocumentObject* obj = 0;
-           Gui::ViewProvider* vp = 0;
-           MDIViewPage* mdi = 0;
+           App::DocumentObject* obj = nullptr;
+           Gui::ViewProvider* vp = nullptr;
+           MDIViewPage* mdi = nullptr;
            if (PyObject_TypeCheck(pageObj, &(App::DocumentObjectPy::Type))) {
                obj = static_cast<App::DocumentObjectPy*>(pageObj)->getDocumentObjectPtr();
                vp = Gui::Application::Instance->getViewProvider(obj);
@@ -204,7 +201,8 @@ private:
            }
         }
         catch (Base::Exception &e) {
-            throw Py::Exception(Base::BaseExceptionFreeCADError, e.what());
+            e.setPyException();
+            throw Py::Exception();
         }
 
         return Py::None();
@@ -223,9 +221,9 @@ private:
         PyMem_Free(name);
         
         try {
-           App::DocumentObject* obj = 0;
-           Gui::ViewProvider* vp = 0;
-           MDIViewPage* mdi = 0;
+           App::DocumentObject* obj = nullptr;
+           Gui::ViewProvider* vp = nullptr;
+           MDIViewPage* mdi = nullptr;
            if (PyObject_TypeCheck(pageObj, &(App::DocumentObjectPy::Type))) {
                obj = static_cast<App::DocumentObjectPy*>(pageObj)->getDocumentObjectPtr();
                vp = Gui::Application::Instance->getViewProvider(obj);
@@ -249,7 +247,8 @@ private:
            }
         }
         catch (Base::Exception &e) {
-            throw Py::Exception(Base::BaseExceptionFreeCADError, e.what());
+            e.setPyException();
+            throw Py::Exception();
         }
 
         return Py::None();
@@ -310,7 +309,8 @@ private:
            }
         }
         catch (Base::Exception &e) {
-            throw Py::Exception(Base::BaseExceptionFreeCADError, e.what());
+            e.setPyException();
+            throw Py::Exception();
         }
 
         PyObject* pyResult = nullptr;
@@ -327,8 +327,8 @@ private:
         } 
 
         try {
-           App::DocumentObject* obj = 0;
-           Gui::ViewProvider* vp = 0;
+           App::DocumentObject* obj = nullptr;
+           Gui::ViewProvider* vp = nullptr;
            QGIView* qgiv = nullptr;
            if (PyObject_TypeCheck(viewPy, &(TechDraw::DrawViewPy::Type))) {
                obj = static_cast<App::DocumentObjectPy*>(viewPy)->getDocumentObjectPtr();
@@ -356,7 +356,8 @@ private:
            }
         }
         catch (Base::Exception &e) {
-                throw Py::Exception(Base::BaseExceptionFreeCADError, e.what());
+            e.setPyException();
+            throw Py::Exception();
         }
 
         return Py::None();
@@ -365,7 +366,7 @@ private:
 
 PyObject* initModule()
 {
-    return (new Module)->module().ptr();
+    return Base::Interpreter().addModule(new Module);
 }
 
 } // namespace TechDrawGui

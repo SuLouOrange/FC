@@ -20,7 +20,6 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #include "PreCompiled.h"
 
 #ifndef _PreComp_
@@ -43,10 +42,12 @@
 
 #include <Base/FileInfo.h>
 #include <Base/Console.h>
-#include <Base/Writer.h>
 #include <Base/Reader.h>
+#include <Base/Stream.h>
+#include <Base/Writer.h>
 #include <App/Application.h>
 #include <App/DocumentObject.h>
+#include <CXX/Objects.hxx>
 
 #include "PropertyPostDataObject.h"
 
@@ -75,7 +76,7 @@ void PropertyPostDataObject::setValue(const vtkSmartPointer<vtkDataObject>& ds)
         m_dataObject->DeepCopy(ds);
     }
     else
-        m_dataObject = NULL;
+        m_dataObject = nullptr;
 
     hasSetValue();
 }
@@ -108,7 +109,7 @@ int PropertyPostDataObject::getDataType() {
 PyObject *PropertyPostDataObject::getPyObject(void)
 {
     //TODO: fetch the vtk python object from the data set and return it
-    return new PyObject();
+    return Py::new_reference_to(Py::None());
 }
 
 void PropertyPostDataObject::setPyObject(PyObject * /*value*/)
@@ -262,6 +263,15 @@ void PropertyPostDataObject::SaveDocFile (Base::Writer &writer) const
     xmlWriter->SetInputDataObject(m_dataObject);
     xmlWriter->SetFileName(fi.filePath().c_str());
     xmlWriter->SetDataModeToBinary();
+
+#ifdef VTK_CELL_ARRAY_V2
+    // Looks like an invalid data object that causes a crash with vtk9
+    vtkUnstructuredGrid* dataGrid = vtkUnstructuredGrid::SafeDownCast(m_dataObject);
+    if (dataGrid && dataGrid->GetPiece() < 0) {
+        std::cerr << "PropertyPostDataObject::SaveDocFile: ignore broken vtkUnstructuredGrid\n";
+        return;
+    }
+#endif
 
     if ( xmlWriter->Write() != 1 ) {
         // Note: Do NOT throw an exception here because if the tmp. file could

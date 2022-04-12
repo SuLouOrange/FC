@@ -29,10 +29,10 @@
 #include <QRectF>
 
 #include <App/DocumentObject.h>
-#include <App/PropertyStandard.h>
-#include <App/PropertyGeo.h>
-#include <App/PropertyUnits.h>
 #include <App/FeaturePython.h>
+#include <App/PropertyUnits.h>
+#include <Mod/TechDraw/TechDrawGlobal.h>
+
 
 namespace TechDraw
 {
@@ -85,6 +85,7 @@ public:
     virtual PyObject *getPyObject(void) override;
 
     virtual DrawPage* findParentPage() const;
+    virtual std::vector<DrawPage*> findAllParentPages() const;
     virtual int countParentPages() const;
     virtual QRectF getRect() const;                      //must be overridden by derived class
     virtual double autoScale(void) const;
@@ -102,9 +103,11 @@ public:
     virtual bool showLock(void) const;
 
     std::vector<TechDraw::DrawLeaderLine*> getLeaders(void) const;
+    void setScaleAttribute();
 
 protected:
     virtual void onChanged(const App::Property* prop) override;
+    virtual void validateScale();
     std::string pageFeatName;
     bool autoPos;
     bool mouseMove;
