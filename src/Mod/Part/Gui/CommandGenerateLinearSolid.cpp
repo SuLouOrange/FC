@@ -358,9 +358,8 @@ Base::Vector3d parsePoint(const SbVec2s & vec2, Gui::View3DInventorViewer* pView
     Base::Vector3d point;
     SbPlane horizonZero(SbVec3f(0, 0, 1), SbVec3f(0, 0, 0));
 
-    SbVec3f focalPoint = pViewer->getPointOnScreen(vec2);
+    SbVec3f focalPoint = pViewer->getPointOnFocalPlane(vec2);
 
-    
     SbLine viewLine;
     viewLine.setPosDir(focalPoint, pViewer->getViewDirection());
     SbVec3f zeroPoint;

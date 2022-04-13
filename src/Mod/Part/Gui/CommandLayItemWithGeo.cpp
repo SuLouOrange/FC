@@ -41,13 +41,10 @@ void CBFunction(void* ud, SoEventCallback* n) {
         if (pMouseEvent->getState() == SoButtonEvent::DOWN) {
             const SbVec2s pos(pMouseEvent->getPosition());
             Base::Vector3d Vec3d;
-
-
             SbPlane horizonZero(SbVec3f(0, 0, 1), SbVec3f(0, 0, 0));
 
-            SbVec3f focalPoint = pViewer->getPointOnScreen(pos);
+            SbVec3f focalPoint = pViewer->getPointOnFocalPlane(pos);
 
-            //
             SbLine viewLine;
             viewLine.setPosDir(focalPoint, pViewer->getViewDirection());
             SbVec3f zeroPoint;

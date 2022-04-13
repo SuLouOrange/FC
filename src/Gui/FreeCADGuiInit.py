@@ -28,12 +28,9 @@
 # runs when the gui is up
 
 # imports the one and only
-<<<<<<< HEAD
+
 import FreeCAD, FreeCADGui, time
-=======
-import FreeCAD, FreeCADGui
 from enum import IntEnum
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 # shortcuts
 print("FreeCADGuiInit start run! sleep 5s to show this msg. Relax!")
