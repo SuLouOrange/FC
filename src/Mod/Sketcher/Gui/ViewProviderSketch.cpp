@@ -1436,14 +1436,10 @@ void ViewProviderSketch::moveConstraint(int constNum, const Base::Vector2d &toPo
                 const Part::GeomLineSegment *lineSeg1 = static_cast<const Part::GeomLineSegment *>(geo1);
                 const Part::GeomLineSegment *lineSeg2 = static_cast<const Part::GeomLineSegment *>(geo2);
 
-<<<<<<< HEAD
-                bool flip1 = (Constr->FirstPos == Sketcher::end);
-                bool flip2 = (Constr->SecondPos == Sketcher::end);
-=======
+
                 bool flip1 = (Constr->FirstPos == Sketcher::PointPos::end);
                 bool flip2 = (Constr->SecondPos == Sketcher::PointPos::end);
 
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
                 dir1 = (flip1 ? -1. : 1.) * (lineSeg1->getEndPoint()-lineSeg1->getStartPoint());
                 dir2 = (flip2 ? -1. : 1.) * (lineSeg2->getEndPoint()-lineSeg2->getStartPoint());
                 Base::Vector3d pnt1 = flip1 ? lineSeg1->getEndPoint() : lineSeg1->getStartPoint();
