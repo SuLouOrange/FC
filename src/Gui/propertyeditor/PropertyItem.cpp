@@ -37,7 +37,6 @@
 # include <QMenu>
 #endif
 
-<<<<<<< HEAD
 #include <boost/algorithm/string/predicate.hpp>
 
 #include <Base/Tools.h>
@@ -64,8 +63,6 @@
 #include <Gui/QuantitySpinBox.h>
 #include <Gui/VectorListEditor.h>
 
-=======
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 #include "PropertyItem.h"
 #include "PropertyView.h"
 

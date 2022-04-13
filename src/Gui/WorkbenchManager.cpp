@@ -33,13 +33,10 @@
 
 using namespace Gui;
 
-<<<<<<< HEAD
 FC_LOG_LEVEL_INIT("", false, true)
 
-WorkbenchManager* WorkbenchManager::_instance = 0;
-=======
+
 WorkbenchManager* WorkbenchManager::_instance = nullptr;
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 WorkbenchManager* WorkbenchManager::instance()
 {

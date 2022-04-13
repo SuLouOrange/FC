@@ -197,8 +197,6 @@ void ToolBarManager::setup(ToolBarItem* toolBarItems)
     int i = 0;
     bool nameAsToolTip = App::GetApplication().GetUserParameter().GetGroup("BaseApp")
             ->GetGroup("Preferences")->GetGroup("MainWindow")->GetBool("ToolBarNameAsToolTip",true);
-    QList<ToolBarItem*> items = toolBarItems->getItems();
-    QList<QToolBar*> toolbars = toolBars();
 
     for (QList<ToolBarItem*>::ConstIterator it = items.begin(); it != items.end(); ++it) {
         // search for the toolbar

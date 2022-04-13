@@ -61,10 +61,7 @@ static void noPrint(const char* format, ...) {
 #include <Base/Exception.h>
 #include <Gui/Application.h>
 
-<<<<<<< HEAD
 #include <easy/profiler.h>
-=======
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
 void PrintInitHelp(void);
 
@@ -112,29 +109,9 @@ private:
 
 int main( int argc, char ** argv )
 {
-<<<<<<< HEAD
     //EASY_PROFILER_ENABLE;
     profiler::startListen();
-    dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
-=======
-#if defined (FC_OS_LINUX) || defined(FC_OS_BSD)
-    // Make sure to setup the Qt locale system before setting LANG and LC_ALL to C.
-    // which is needed to use the system locale settings.
-    (void)QLocale::system();
-    // See https://forum.freecadweb.org/viewtopic.php?f=18&t=20600
-    // See Gui::Application::runApplication()
-    putenv("LC_NUMERIC=C");
-    putenv("PYTHONPATH=");
-#elif defined(FC_OS_MACOSX)
-    (void)QLocale::system();
-    putenv("PYTHONPATH=");
-#elif defined(__MINGW32__)
-    const char* mingw_prefix = getenv("MINGW_PREFIX");
-    const char* py_home = getenv("PYTHONHOME");
-    if (!py_home && mingw_prefix)
-        _putenv_s("PYTHONHOME", mingw_prefix);
-#else
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
+   // dbgPrint("%s(%d)\n", __FUNCTION__, __LINE__);
     _putenv("PYTHONPATH=");
     // https://forum.freecadweb.org/viewtopic.php?f=4&t=18288
     // https://forum.freecadweb.org/viewtopic.php?f=3&t=20515
