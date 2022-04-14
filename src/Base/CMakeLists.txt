@@ -341,8 +341,10 @@ IF (MSVC)
 )
 ENDIF(MSVC)
 
+message(status "FREECAD_USE_EXTERNAL_ZIPIOS : ${FREECAD_USE_EXTERNAL_ZIPIOS}")
+#set(FREECAD_USE_EXTERNAL_ZIPIOS "OFF")
 # Use external zipios++ if specified.
-if(FREECAD_USE_EXTERNAL_ZIPIOS)
+if(FREECAD_USE_EXTERNAL_ZIPIOS STREQUAL "ON")
     find_library(ZIPIOS_LIBRARY zipios)
     find_path(ZIPIOS_INCLUDES zipios++/zipios-config.h)
     if(ZIPIOS_LIBRARY)
@@ -357,9 +359,9 @@ if(FREECAD_USE_EXTERNAL_ZIPIOS)
     else()
         message(FATAL_ERROR "Using external zipios++ was specified but was not found.")
     endif()
-else(FREECAD_USE_EXTERNAL_ZIPIOS)
+else()
     list(APPEND FreeCADBase_SRCS ${zipios_SRCS})
-endif(FREECAD_USE_EXTERNAL_ZIPIOS)
+endif()
 
 
 if(FREECAD_USE_PCH)
