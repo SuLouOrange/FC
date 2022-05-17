@@ -3888,16 +3888,13 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
     }
     FC_MSG(__FUNCTION__ << " 2 ");
     App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(base);
-
-    
-
-    //App::DocumentObject* pcObject = static_cast<App::DocumentObject*>(typeInstance);
-
     pcObject->setDocument(this);
 
+    FC_MSG(__FUNCTION__ << ", d->rollback  : " << d->rollback);
     // do no transactions if we do a rollback!
     if (!d->rollback) {
         // Undo stuff
+        
         _checkTransaction(nullptr,nullptr,__LINE__);
         if (d->activeUndoTransaction)
             d->activeUndoTransaction->addObjectDel(pcObject);
@@ -3950,6 +3947,7 @@ DocumentObject * Document::addObject(const char* sType, const char* pObjectName,
 
     // do no transactions if we do a rollback!
     if (!d->rollback && d->activeUndoTransaction) {
+        //const auto slotSize = signalTransactionAppend.num_slots();
         signalTransactionAppend(*pcObject, d->activeUndoTransaction);
     }
     FC_MSG(__FUNCTION__ << " 6 " << " to emit  signalActivatedObject");

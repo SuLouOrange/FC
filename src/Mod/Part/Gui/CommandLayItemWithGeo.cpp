@@ -30,7 +30,7 @@ FC_LOG_LEVEL_INIT(logKey, false, true)
 template<typename objType>
 void CBFunction(void* ud, SoEventCallback* n) {
     printf("%s(%d), start\n", __FUNCTION__, __LINE__);
-    Gui::View3DInventorViewer* pViewer = reinterpret_cast<Gui::View3DInventorViewer*>(n->getUserData());
+    Gui::View3DInventorViewer* pViewer = static_cast<Gui::View3DInventorViewer*>(n->getUserData());
 
     const SoEvent* pSoEvent = n->getEvent();
     const SoType SoEventType(pSoEvent->getTypeId());
@@ -63,9 +63,9 @@ void CBFunction(void* ud, SoEventCallback* n) {
             placement.setPosition(Vec3d);
             pObj->transformPlacement(placement);
             App::Document* pAppDoc = App::GetApplication().getActiveDocument();
-           pAppDoc->addObject(pObj);
-           App::ExtensionPropertyData::addPropertiesOnObject(pObj);
-            //*******obj work done
+            pAppDoc->addObject(pObj);
+            //App::ExtensionPropertyData::addPropertiesOnObject(pObj);
+             //*******obj work done
 
 
             Gui::Command::updateActive();

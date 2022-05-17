@@ -1624,6 +1624,8 @@ void Application::slotBeforeRecompute(const Document& doc)
 
 void Application::slotOpenTransaction(const Document& d, string s)
 {
+    const auto slotSize = signalObjectRecomputed.num_slots();
+    FC_MSG(__FUNCTION__ << " App:: Application::signalOpenTransaction slots number:" << slotSize);
     this->signalOpenTransaction(d, s);
 }
 
