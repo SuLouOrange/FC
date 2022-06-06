@@ -125,9 +125,11 @@ struct DocumentP
     Connection connectTransactionRemove;
     Connection connectTouchedObject;
     Connection connectChangePropertyEditor;
+    Connection connectChangeDocument;
 
     typedef boost::signals2::shared_connection_block ConnectionBlock;
     ConnectionBlock connectActObjectBlocker;
+    ConnectionBlock connectChangeDocumentBlocker;
 };
 
 } // namespace Gui
@@ -181,6 +183,10 @@ Document::Document(App::Document* pcDocument,Application * app)
 
     d->connectChangePropertyEditor = pcDocument->signalChangePropertyEditor.connect
         (boost::bind(&Gui::Document::slotChangePropertyEditor, this, bp::_1, bp::_2));
+    d->connectChangeDocument = d->_pcDocument->signalChanged.connect // use the same slot function
+        (boost::bind(&Gui::Document::slotChangePropertyEditor, this, bp::_1, bp::_2));
+    d->connectChangeDocumentBlocker = boost::signals2::shared_connection_block
+        (d->connectChangeDocument, true);
     d->connectFinishRestoreObject = pcDocument->signalFinishRestoreObject.connect
         (boost::bind(&Gui::Document::slotFinishRestoreObject, this, bp::_1));
     d->connectExportObjects = pcDocument->signalExportViewObjects.connect
@@ -246,6 +252,7 @@ Document::~Document()
     d->connectTransactionRemove.disconnect();
     d->connectTouchedObject.disconnect();
     d->connectChangePropertyEditor.disconnect();
+    d->connectChangeDocument.disconnect();
 
     // e.g. if document gets closed from within a Python command
     d->_isClosing = true;
@@ -668,21 +675,22 @@ void Document::slotNewObject(const App::DocumentObject& Obj)
                 return;
             }
             FC_MSG(Obj.getFullName() << " has view provider name: " << cName);
-            Base::BaseClass* base = static_cast<Base::BaseClass*>(
-                    Base::Type::createInstanceByName(cName.c_str(),true));
-            pcProvider = Base::freecad_dynamic_cast<ViewProviderDocumentObject>(base);
+            Base::Type type = Base::Type::getTypeIfDerivedFrom(cName.c_str(), ViewProviderDocumentObject::getClassTypeId(), true);
+            pcProvider = static_cast<ViewProviderDocumentObject*>(type.createInstance());
+            // createInstance could return a null pointer
             if (!pcProvider) {
                 // type not derived from ViewProviderDocumentObject!!!
                 FC_ERR("Invalid view provider type '" << cName << "' for " << Obj.getFullName());
-                delete base;
                 return;
-            } else if (cName!=Obj.getViewProviderName() && !pcProvider->allowOverride(Obj)) {
+            }
+            else if (cName!=Obj.getViewProviderName() && !pcProvider->allowOverride(Obj)) {
                 FC_WARN("View provider type '" << cName << "' does not support " << Obj.getFullName());
-                delete base;
                 pcProvider = nullptr;
                 cName = Obj.getViewProviderName();
-            } else
+            }
+             else {
                 break;
+            }
         }
 
         setModified(true);
@@ -1957,6 +1965,8 @@ void Document::onRelabel(void)
     for (it = d->passiveViews.begin();it != d->passiveViews.end();++it) {
         (*it)->onRelabel(this);
     }
+
+    d->connectChangeDocumentBlocker.unblock();
 }
 
 bool Document::isLastView(void)
@@ -2246,7 +2256,7 @@ Gui::MDIView* Document::getViewOfNode(SoNode* node) const
     return nullptr;
 }
 
-Gui::MDIView* Document::getViewOfViewProvider(Gui::ViewProvider* vp) const
+Gui::MDIView* Document::getViewOfViewProvider(const Gui::ViewProvider* vp) const
 {
     return getViewOfNode(vp->getRoot());
 }
@@ -2418,6 +2428,8 @@ void Document::handleChildren3D(ViewProvider* viewProvider, bool deleting)
     if (viewProvider && viewProvider->getChildRoot()) {
         std::vector<App::DocumentObject*> children = viewProvider->claimChildren3D();
         SoGroup* childGroup =  viewProvider->getChildRoot();
+        SoGroup* frontGroup = viewProvider->getFrontRoot();
+        SoGroup* backGroup = viewProvider->getFrontRoot();
 
         // size not the same -> build up the list new
         if (deleting || childGroup->getNumChildren() != static_cast<int>(children.size())) {
@@ -2430,6 +2442,8 @@ void Document::handleChildren3D(ViewProvider* viewProvider, bool deleting)
             }
 
             Gui::coinRemoveAllChildren(childGroup);
+            Gui::coinRemoveAllChildren(frontGroup);
+            Gui::coinRemoveAllChildren(backGroup);
 
             if(!deleting) {
                 for (std::vector<App::DocumentObject*>::iterator it=children.begin();it!=children.end();++it) {
@@ -2440,6 +2454,14 @@ void Document::handleChildren3D(ViewProvider* viewProvider, bool deleting)
 
                         SoSeparator* childRootNode =  ChildViewProvider->getRoot();
                         childGroup->addChild(childRootNode);
+
+                        SoSeparator* childFrontNode = ChildViewProvider->getFrontRoot();
+                        if (frontGroup && childFrontNode)
+                            frontGroup->addChild(childFrontNode);
+
+                        SoSeparator* childBackNode = ChildViewProvider->getBackRoot();
+                        if (backGroup && childBackNode)
+                            backGroup->addChild(childBackNode);
 
                         // cycling to all views of the document to remove the viewprovider from the viewer itself
                         for (std::list<Gui::BaseView*>::iterator vIt = d->baseViews.begin();vIt != d->baseViews.end();++vIt) {

@@ -141,7 +141,7 @@
     <name>CmdRaytracingWriteView</name>
     <message>
       <source>No perspective camera</source>
-      <translation>Ningunha cámara de perspectiva</translation>
+      <translation>Ningunha perspectiva de cámara</translation>
     </message>
     <message>
       <source>The current view camera is not perspective and thus resulting in a POV-Ray image that may look different than what was expected.
@@ -204,15 +204,15 @@ Queres continuar?</translation>
     </message>
     <message>
       <source>Create a Raytracing project to insert a view.</source>
-      <translation>Crear un proxecto Raytracing para inserir una vista.</translation>
+      <translation>Crear un proxecto Trazado de raios para inserir una vista.</translation>
     </message>
     <message>
       <source>Select a Raytracing project to insert the view.</source>
-      <translation>Escolme un proxecto Raytracing para inserir a vista.</translation>
+      <translation>Escolme un proxecto Trazado de raios para inserir a vista.</translation>
     </message>
     <message>
       <source>Select one Raytracing project object.</source>
-      <translation>Escolme un obxecto de proxecto Raytracing.</translation>
+      <translation>Escolme un obxecto de proxecto Trazado de raios.</translation>
     </message>
     <message>
       <source>Luxrender</source>
@@ -270,22 +270,6 @@ Queres continuar?</translation>
       <translation>Raytracing</translation>
     </message>
     <message>
-      <source>Mesh export settings</source>
-      <translation>Configuración da exportación de mallas</translation>
-    </message>
-    <message>
-      <source>Max mesh deviation:</source>
-      <translation>Desvío Max. da malla:</translation>
-    </message>
-    <message>
-      <source>Do not calculate vertex normals</source>
-      <translation>Non calcular vértices normais</translation>
-    </message>
-    <message>
-      <source>Write u,v coordinates</source>
-      <translation>Escribir as coordenadas u,v</translation>
-    </message>
-    <message>
       <source>Render</source>
       <translation>Renderizador</translation>
     </message>
@@ -334,28 +318,44 @@ Queres continuar?</translation>
       <translation>Cartafoles</translation>
     </message>
     <message>
-      <source>Part file name:</source>
-      <translation>Nome do ficheiro Peza:</translation>
-    </message>
-    <message>
-      <source>Camera file name:</source>
-      <translation>Nome do ficheiro da cámara:</translation>
+      <source>Default Project dir:</source>
+      <translation>Directorio por defecto do proxecto:</translation>
     </message>
     <message>
       <source>Used by utility tools</source>
       <translation>Usado polas ferramentas de utilidade</translation>
     </message>
     <message>
-      <source>Default Project dir:</source>
-      <translation>Directorio por defecto do proxecto:</translation>
+      <source>Camera file name:</source>
+      <translation>Nome do ficheiro da cámara:</translation>
     </message>
     <message>
       <source>TempCamera.inc</source>
       <translation>TempCamera.inc</translation>
     </message>
     <message>
+      <source>Part file name:</source>
+      <translation>Nome do ficheiro Peza:</translation>
+    </message>
+    <message>
       <source>TempPart.inc</source>
       <translation>TempPart.inc</translation>
+    </message>
+    <message>
+      <source>Mesh export settings</source>
+      <translation>Configuración da exportación de mallas</translation>
+    </message>
+    <message>
+      <source>Max mesh deviation:</source>
+      <translation>Desvío Max. da malla:</translation>
+    </message>
+    <message>
+      <source>Do not calculate vertex normals</source>
+      <translation>Non calcular vértices normais</translation>
+    </message>
+    <message>
+      <source>Write u,v coordinates</source>
+      <translation>Escribir as coordenadas u,v</translation>
     </message>
   </context>
   <context>
@@ -399,7 +399,7 @@ Queres continuar?</translation>
     <name>Workbench</name>
     <message>
       <source>&amp;Raytracing</source>
-      <translation>&amp;Raytracing</translation>
+      <translation>&amp;Trazado de raios</translation>
     </message>
   </context>
 </TS>

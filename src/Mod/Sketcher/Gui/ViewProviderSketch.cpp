@@ -134,7 +134,7 @@ void ViewProviderSketch::ParameterObserver::updateGridSize(const std::string & s
 
     ParameterGrp::handle hGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/Mod/Sketcher/General");
 
-    Client.GridSize.setValue(Base::Quantity::parse(QString::fromLatin1(hGrp->GetGroup("GridSize")->GetASCII("Hist0", "10.0").c_str())).getValue());
+    Client.GridSize.setValue(Base::Quantity::parse(QString::fromLatin1(hGrp->GetGroup("GridSize")->GetASCII("GridSize", "10.0").c_str())).getValue());
 }
 
 void ViewProviderSketch::ParameterObserver::updateEscapeKeyBehaviour(const std::string & string, App::Property * property)
@@ -3106,7 +3106,7 @@ void ViewProviderSketch::deleteSelected()
 
     // only one sketch with its subelements are allowed to be selected
     if (selection.size() != 1) {
-        Base::Console().Warning("Delete: Selection not restricted to one sketch and its subelements");
+        Base::Console().Warning("Delete: Selection not restricted to one sketch and its subelements\n");
         return;
     }
 

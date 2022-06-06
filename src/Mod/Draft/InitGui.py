@@ -108,19 +108,6 @@ class DraftWorkbench(FreeCADGui.Workbench):
         self.utility_commands_menu = it.get_draft_utility_commands_menu()
         self.utility_commands_toolbar = it.get_draft_utility_commands_toolbar()
         self.context_commands = it.get_draft_context_commands()
-<<<<<<< HEAD
-        self.line_commands = it.get_draft_line_commands()
-        self.utility_commands = it.get_draft_utility_commands()
-        self.utility_small = it.get_draft_small_commands()
-        FreeCAD.Console.PrintWarning("2.draft workbench Initialize\n")
-
-        # Set up toolbars
-        self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft creation tools"), self.drawing_commands)
-        self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft annotation tools"), self.annotation_commands)
-        self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft modification tools"), self.modification_commands)
-        self.appendToolbar(QT_TRANSLATE_NOOP("Draft", "Draft utility tools"), self.utility_small)
-        FreeCAD.Console.PrintWarning("3.draft workbench Initialize\n")
-=======
 
         # Set up toolbars
         it.init_toolbar(self,
@@ -135,7 +122,6 @@ class DraftWorkbench(FreeCADGui.Workbench):
         it.init_toolbar(self,
                         QT_TRANSLATE_NOOP("Workbench", "Draft utility tools"),
                         self.utility_commands_toolbar)
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 
         # Set up menus
         it.init_menu(self,
@@ -160,7 +146,9 @@ class DraftWorkbench(FreeCADGui.Workbench):
                 FreeCADGui.addPreferencePage(":/ui/preferences-draftvisual.ui", QT_TRANSLATE_NOOP("Draft", "Draft"))
                 FreeCADGui.addPreferencePage(":/ui/preferences-drafttexts.ui", QT_TRANSLATE_NOOP("Draft", "Draft"))
                 FreeCADGui.draftToolBar.loadedPreferences = True
-        FreeCAD.Console.PrintWarning("4.draft workbench Initialize\n")
+
+        FreeCADGui.getMainWindow().mainWindowClosed.connect(self.Deactivated)
+
         FreeCAD.Console.PrintLog('Loading Draft workbench, done.\n')
 
     def Activated(self):

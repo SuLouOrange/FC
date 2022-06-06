@@ -83,16 +83,16 @@
       <translation>Položaj</translation>
     </message>
     <message>
+      <source>Enum</source>
+      <translation type="unfinished">Enum</translation>
+    </message>
+    <message>
       <source>Base</source>
       <translation>Baza</translation>
     </message>
   </context>
   <context>
     <name>CmdTestConsoleOutput</name>
-    <message>
-      <source>Standard-Test</source>
-      <translation>Standardni Test</translation>
-    </message>
     <message>
       <source>Test console output</source>
       <translation>Testiranje izlaza konzole</translation>
@@ -101,20 +101,12 @@
   <context>
     <name>CmdViewMeasureClearAll</name>
     <message>
-      <source>Measure</source>
-      <translation>Izmjeri</translation>
-    </message>
-    <message>
       <source>Clear measurement</source>
       <translation>Izbriši mjerenja</translation>
     </message>
   </context>
   <context>
     <name>CmdViewMeasureToggleAll</name>
-    <message>
-      <source>Measure</source>
-      <translation>Izmjeri</translation>
-    </message>
     <message>
       <source>Toggle measurement</source>
       <translation>Uključi/isključi mjerenje</translation>
@@ -187,6 +179,10 @@
       <translation>Transformiraj</translation>
     </message>
     <message>
+      <source>Toggle array elements</source>
+      <translation type="unfinished">Toggle array elements</translation>
+    </message>
+    <message>
       <source>Link Transform</source>
       <translation>Preobrazba poveznice</translation>
     </message>
@@ -196,10 +192,77 @@
     </message>
   </context>
   <context>
+    <name>CommandGroup</name>
+    <message>
+      <source>File</source>
+      <translation>Datoteka</translation>
+    </message>
+    <message>
+      <source>Edit</source>
+      <translation>Uredi</translation>
+    </message>
+    <message>
+      <source>Help</source>
+      <translation>Pomoć</translation>
+    </message>
+    <message>
+      <source>Link</source>
+      <translation>Poveznica</translation>
+    </message>
+    <message>
+      <source>Tools</source>
+      <translation>Alati</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Pregled</translation>
+    </message>
+    <message>
+      <source>Window</source>
+      <translation>Prozor</translation>
+    </message>
+    <message>
+      <source>Standard</source>
+      <translation>Standard</translation>
+    </message>
+    <message>
+      <source>Macros</source>
+      <translation>Makronaredbe</translation>
+    </message>
+    <message>
+      <source>Macro</source>
+      <translation>Makro</translation>
+    </message>
+    <message>
+      <source>Structure</source>
+      <translation>Konstrukcija</translation>
+    </message>
+    <message>
+      <source>Standard-Test</source>
+      <translation>Standardni Test</translation>
+    </message>
+    <message>
+      <source>Standard-View</source>
+      <translation>Standardni pogled</translation>
+    </message>
+    <message>
+      <source>TreeView</source>
+      <translation>Stablo pogleda</translation>
+    </message>
+    <message>
+      <source>Measure</source>
+      <translation>Izmjeri</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
       <translation>Spaceball pokreti</translation>
+    </message>
+    <message>
+      <source>Global Sensitivity:</source>
+      <translation>Globalna osjetljivost:</translation>
     </message>
     <message>
       <source>Dominant Mode</source>
@@ -233,10 +296,6 @@
       <source>Reverse</source>
       <translation>Obrnuto</translation>
     </message>
-    <message>
-      <source>Global Sensitivity:</source>
-      <translation>Globalna osjetljivost:</translation>
-    </message>
   </context>
   <context>
     <name>DlgExpressionInput</name>
@@ -249,16 +308,16 @@
       <translation>Rezultat:</translation>
     </message>
     <message>
-      <source>Ok</source>
-      <translation>"Ok"</translation>
-    </message>
-    <message>
       <source>&amp;Clear</source>
       <translation>&amp;Ukloni</translation>
     </message>
     <message>
       <source>Revert to last calculated value (as constant)</source>
       <translation>Povratak na zadnju izračunatu vrijednost (kao konstantno)</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>"Ok"</translation>
     </message>
   </context>
   <context>
@@ -311,6 +370,10 @@
     <message>
       <source>none</source>
       <translation>nijedan</translation>
+    </message>
+    <message>
+      <source>Press a keyboard shortcut</source>
+      <translation type="unfinished">Press a keyboard shortcut</translation>
     </message>
   </context>
   <context>
@@ -413,13 +476,6 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
   </context>
   <context>
-    <name>Gui::Command</name>
-    <message>
-      <source>Standard</source>
-      <translation>Standard</translation>
-    </message>
-  </context>
-  <context>
     <name>Gui::ContainerDialog</name>
     <message>
       <source>&amp;OK</source>
@@ -463,28 +519,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>O</translation>
     </message>
     <message>
-      <source>Revision number</source>
-      <translation>Ispravljanje broja</translation>
-    </message>
-    <message>
       <source>Version</source>
       <translation>Verzija</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>U redu</translation>
-    </message>
-    <message>
-      <source/>
-      <translation> </translation>
+      <source>Revision number</source>
+      <translation>Ispravljanje broja</translation>
     </message>
     <message>
       <source>Release date</source>
       <translation>Datum isporuke</translation>
-    </message>
-    <message>
-      <source>Copy to clipboard</source>
-      <translation>Kopiraj u međuspremnik</translation>
     </message>
     <message>
       <source>Operating system</source>
@@ -495,28 +539,24 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Veličina riječi</translation>
     </message>
     <message>
+      <source>Copy to clipboard</source>
+      <translation>Kopiraj u međuspremnik</translation>
+    </message>
+    <message>
       <source>License</source>
       <translation>Licenca</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>U redu</translation>
+    </message>
+    <message>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::AboutDialog</name>
-    <message>
-      <source>Libraries</source>
-      <translation>Datoteke</translation>
-    </message>
-    <message>
-      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
-      <translation>Ovaj softver koristi open source komponente čija autorska i druga vlasnička prava pripadaju njihovim vlasnicima:</translation>
-    </message>
-    <message>
-      <source>License</source>
-      <translation>Licenca</translation>
-    </message>
-    <message>
-      <source>Collection</source>
-      <translation>Zbirka</translation>
-    </message>
     <message>
       <source>Credits</source>
       <extracomment>Header for the Credits tab of the About screen</extracomment>
@@ -538,17 +578,44 @@ while doing a left or right click and move the mouse up or down</source>
       <extracomment>Header for the list of companies/organizations in the Credits list.</extracomment>
       <translation>Organizacije</translation>
     </message>
+    <message>
+      <source>License</source>
+      <translation>Licenca</translation>
+    </message>
+    <message>
+      <source>Libraries</source>
+      <translation>Datoteke</translation>
+    </message>
+    <message>
+      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
+      <translation>Ovaj softver koristi open source komponente čija autorska i druga vlasnička prava pripadaju njihovim vlasnicima:</translation>
+    </message>
+    <message>
+      <source>Collection</source>
+      <translation>Zbirka</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::ApplicationCache</name>
+    <message>
+      <source>Cache directory</source>
+      <translation type="unfinished">Cache directory</translation>
+    </message>
+    <message>
+      <source>The cache directory %1 exceeds the size of %2.</source>
+      <translation type="unfinished">The cache directory %1 exceeds the size of %2.</translation>
+    </message>
+    <message>
+      <source>Do you want to clear it now?</source>
+      <translation type="unfinished">Do you want to clear it now?</translation>
+    </message>
+    <message>
+      <source>Warning: Please make sure that this is the only running %1 instance and that no documents are opened as this may result into data loss!</source>
+      <translation type="unfinished">Warning: Please make sure that this is the only running %1 instance and that no documents are opened as this may result into data loss!</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::ButtonModel</name>
-    <message>
-      <source>Button %1</source>
-      <translation>Tipka %1</translation>
-    </message>
-    <message>
-      <source>Out Of Range</source>
-      <translation>Izvan dometa</translation>
-    </message>
     <message>
       <source> "</source>
       <translation> "</translation>
@@ -556,6 +623,14 @@ while doing a left or right click and move the mouse up or down</source>
     <message>
       <source>"</source>
       <translation>"</translation>
+    </message>
+    <message>
+      <source>Button %1</source>
+      <translation>Tipka %1</translation>
+    </message>
+    <message>
+      <source>Out Of Range</source>
+      <translation>Izvan dometa</translation>
     </message>
   </context>
   <context>
@@ -600,12 +675,12 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Rezanje X</translation>
     </message>
     <message>
-      <source>Flip</source>
-      <translation>Prebaci</translation>
-    </message>
-    <message>
       <source>Offset</source>
       <translation>Pomak</translation>
+    </message>
+    <message>
+      <source>Flip</source>
+      <translation>Prebaci</translation>
     </message>
     <message>
       <source>Clipping Y</source>
@@ -646,16 +721,28 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Prikaži Turntable</translation>
     </message>
     <message>
+      <source>Angle</source>
+      <translation>Kut</translation>
+    </message>
+    <message>
+      <source>-90°</source>
+      <translation>-90 °</translation>
+    </message>
+    <message>
+      <source>90°</source>
+      <translation>90 °</translation>
+    </message>
+    <message>
       <source>Speed</source>
       <translation>Brzina</translation>
     </message>
     <message>
-      <source>Maximum</source>
-      <translation>Maksimum</translation>
-    </message>
-    <message>
       <source>Minimum</source>
       <translation>Minimum</translation>
+    </message>
+    <message>
+      <source>Maximum</source>
+      <translation>Maksimum</translation>
     </message>
     <message>
       <source>Fullscreen</source>
@@ -670,28 +757,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation> s</translation>
     </message>
     <message>
-      <source>Angle</source>
-      <translation>Kut</translation>
-    </message>
-    <message>
-      <source>90°</source>
-      <translation>90 °</translation>
-    </message>
-    <message>
-      <source>-90°</source>
-      <translation>-90 °</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Pokreni</translation>
     </message>
     <message>
-      <source>Stop</source>
-      <translation>Stop</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Zatvori</translation>
+    </message>
+    <message>
+      <source>Stop</source>
+      <translation>Stop</translation>
     </message>
   </context>
   <context>
@@ -766,24 +841,24 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Punomoć</translation>
     </message>
     <message>
-      <source>Password:</source>
-      <translation>Lozinka:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation> </translation>
-    </message>
-    <message>
-      <source>Username:</source>
-      <translation>Korisničko ime:</translation>
-    </message>
-    <message>
       <source>Site:</source>
       <translation>Web stranica:</translation>
     </message>
     <message>
       <source>%1 at %2</source>
       <translation>%1 u %2</translation>
+    </message>
+    <message>
+      <source>Username:</source>
+      <translation>Korisničko ime:</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Lozinka:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
@@ -813,6 +888,32 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
     </message>
   </context>
   <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePack</name>
+    <message>
+      <source>Create New Preference Pack</source>
+      <translation type="unfinished">Create New Preference Pack</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Ime</translation>
+    </message>
+    <message>
+      <source>Property group templates</source>
+      <translation type="unfinished">Property group templates</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePackImp</name>
+    <message>
+      <source>Pack already exists</source>
+      <translation type="unfinished">Pack already exists</translation>
+    </message>
+    <message>
+      <source>A preference pack with that name already exists. Do you want to overwrite it?</source>
+      <translation type="unfinished">A preference pack with that name already exists. Do you want to overwrite it?</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::Dialog::DlgCustomActions</name>
     <message>
       <source>Macros</source>
@@ -827,32 +928,32 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Makro:</translation>
     </message>
     <message>
-      <source>...</source>
-      <translation>...</translation>
-    </message>
-    <message>
-      <source>Pixmap</source>
-      <translation>Pixmap</translation>
-    </message>
-    <message>
-      <source>Accelerator:</source>
-      <translation>Ubrzanje.</translation>
-    </message>
-    <message>
-      <source>What's this:</source>
-      <translation>Što je ovo:</translation>
-    </message>
-    <message>
-      <source>Status text:</source>
-      <translation>Status teksta:</translation>
+      <source>Menu text:</source>
+      <translation>Izbornik teksta:</translation>
     </message>
     <message>
       <source>Tool tip:</source>
       <translation>Alat za savjet:</translation>
     </message>
     <message>
-      <source>Menu text:</source>
-      <translation>Izbornik teksta:</translation>
+      <source>Status text:</source>
+      <translation>Status teksta:</translation>
+    </message>
+    <message>
+      <source>What's this:</source>
+      <translation>Što je ovo:</translation>
+    </message>
+    <message>
+      <source>Accelerator:</source>
+      <translation>Ubrzanje.</translation>
+    </message>
+    <message>
+      <source>Pixmap</source>
+      <translation>Pixmap</translation>
+    </message>
+    <message>
+      <source>...</source>
+      <translation>...</translation>
     </message>
     <message>
       <source>Add</source>
@@ -876,14 +977,6 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
     <message>
       <source>Macros</source>
       <translation>Makronaredbe</translation>
-    </message>
-    <message>
-      <source>No macro</source>
-      <translation>Nema makro</translation>
-    </message>
-    <message>
-      <source>No macros found.</source>
-      <translation>Nije pronađena makronaredba.</translation>
     </message>
     <message>
       <source>Macro not found</source>
@@ -951,10 +1044,6 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Tipkovnica</translation>
     </message>
     <message>
-      <source>Description:</source>
-      <translation>Opis:</translation>
-    </message>
-    <message>
       <source>&amp;Category:</source>
       <translation>&amp;Kategorija:</translation>
     </message>
@@ -983,6 +1072,10 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Alt+A</translation>
     </message>
     <message>
+      <source>Clear</source>
+      <translation>Brisanje</translation>
+    </message>
+    <message>
       <source>&amp;Reset</source>
       <translation>&amp;Poništi</translation>
     </message>
@@ -999,12 +1092,12 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Alt+S</translation>
     </message>
     <message>
-      <source/>
-      <translation> </translation>
+      <source>Description:</source>
+      <translation>Opis:</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Brisanje</translation>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
@@ -1026,12 +1119,12 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Višestruki prečaci definirani</translation>
     </message>
     <message>
-      <source>Already defined shortcut</source>
-      <translation>Već definiran prečac</translation>
-    </message>
-    <message>
       <source>The shortcut '%1' is defined more than once. This could result in unexpected behaviour.</source>
       <translation>Prečac '%1' je definiran više puta. To bi moglo rezultirati neočekivanim ponašanjem.</translation>
+    </message>
+    <message>
+      <source>Already defined shortcut</source>
+      <translation>Već definiran prečac</translation>
     </message>
     <message>
       <source>The shortcut '%1' is already assigned to '%2'.</source>
@@ -1056,8 +1149,16 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Alatne trake</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt; &lt;span style=" font-weight:600;"&gt;Napomena:&lt;/span&gt; promjene postanu aktivni sljedeći put kada se učitati prikladni radni stol &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>New...</source>
+      <translation>Novi ...</translation>
+    </message>
+    <message>
+      <source>Rename...</source>
+      <translation>Preimenuj ...</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Izbriši</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -1076,14 +1177,6 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>&lt;b&gt;Premještanje odabrane stavke jednu razinu gore.&lt;/b&gt; &lt;p&gt; To će također promijeniti razinu roditelja stavke. &lt;/p&gt;</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Pomakni dolje</translation>
-    </message>
-    <message>
-      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
-      <translation>&lt;b&gt;Premještanje odabrane stavke prema dolje.&lt;/b&gt; &lt;p&gt; Jedinica će biti premještena unutar razine hijerarhije. &lt;/p&gt;</translation>
-    </message>
-    <message>
       <source>Move up</source>
       <translation>Pomakni gore</translation>
     </message>
@@ -1092,16 +1185,20 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>&lt;b&gt;Premještanje odabrane stavke gore.&lt;/b&gt; &lt;p&gt; Jedinica će biti premještena unutar razine hijerarhije. &lt;/p&gt;</translation>
     </message>
     <message>
-      <source>New...</source>
-      <translation>Novi ...</translation>
+      <source>Move down</source>
+      <translation>Pomakni dolje</translation>
     </message>
     <message>
-      <source>Rename...</source>
-      <translation>Preimenuj ...</translation>
+      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
+      <translation>&lt;b&gt;Premještanje odabrane stavke prema dolje.&lt;/b&gt; &lt;p&gt; Jedinica će biti premještena unutar razine hijerarhije. &lt;/p&gt;</translation>
     </message>
     <message>
-      <source>Delete</source>
-      <translation>Izbriši</translation>
+      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt; &lt;span style=" font-weight:600;"&gt;Napomena:&lt;/span&gt; promjene postanu aktivni sljedeći put kada se učitati prikladni radni stol &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Global</source>
+      <translation>Globalna</translation>
     </message>
     <message>
       <source>Icon</source>
@@ -1114,6 +1211,10 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
     <message>
       <source>&lt;Separator&gt;</source>
       <translation>&lt;Separator&gt;</translation>
+    </message>
+    <message>
+      <source>%1 module not loaded</source>
+      <translation>%1 modula nije učitano</translation>
     </message>
     <message>
       <source>New toolbar</source>
@@ -1138,14 +1239,6 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
     <message>
       <source/>
       <translation> </translation>
-    </message>
-    <message>
-      <source>Global</source>
-      <translation>Globalna</translation>
-    </message>
-    <message>
-      <source>%1 module not loaded</source>
-      <translation>%1 modula nije učitano</translation>
     </message>
   </context>
   <context>
@@ -1177,6 +1270,10 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
   <context>
     <name>Gui::Dialog::DlgCustomizeSpaceball</name>
     <message>
+      <source>Spaceball Buttons</source>
+      <translation>Spaceball Tipke</translation>
+    </message>
+    <message>
       <source>No Spaceball Present</source>
       <translation>Spaceball nije pronađen</translation>
     </message>
@@ -1185,16 +1282,12 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Tipke</translation>
     </message>
     <message>
-      <source>Print Reference</source>
-      <translation>Ispis Reference</translation>
-    </message>
-    <message>
-      <source>Spaceball Buttons</source>
-      <translation>Spaceball Tipke</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Odbaci</translation>
+    </message>
+    <message>
+      <source>Print Reference</source>
+      <translation>Ispis Reference</translation>
     </message>
   </context>
   <context>
@@ -1204,20 +1297,16 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Prikaz svojstava</translation>
     </message>
     <message>
-      <source>Display</source>
-      <translation>Prikaz</translation>
+      <source>Viewing mode</source>
+      <translation>Pregled</translation>
     </message>
     <message>
-      <source>Transparency:</source>
-      <translation>Prozirnost:</translation>
+      <source>Document window:</source>
+      <translation>Prozor dokumenta:</translation>
     </message>
     <message>
-      <source>Line width:</source>
-      <translation>Širina linije:</translation>
-    </message>
-    <message>
-      <source>Point size:</source>
-      <translation>Veličina točke:</translation>
+      <source>Plot mode:</source>
+      <translation>nacrt:</translation>
     </message>
     <message>
       <source>Material</source>
@@ -1228,36 +1317,40 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>...</translation>
     </message>
     <message>
-      <source>Viewing mode</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
-      <source>Plot mode:</source>
-      <translation>nacrt:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation> </translation>
-    </message>
-    <message>
-      <source>Line transparency:</source>
-      <translation>Transparentnost linije:</translation>
-    </message>
-    <message>
-      <source>Line color:</source>
-      <translation>Boja linije:</translation>
+      <source>Color plot:</source>
+      <translation>Boja grafa:</translation>
     </message>
     <message>
       <source>Shape color:</source>
       <translation>Boja oblika:</translation>
     </message>
     <message>
-      <source>Color plot:</source>
-      <translation>Boja grafa:</translation>
+      <source>Line color:</source>
+      <translation>Boja linije:</translation>
     </message>
     <message>
-      <source>Document window:</source>
-      <translation>Prozor dokumenta:</translation>
+      <source>Display</source>
+      <translation>Prikaz</translation>
+    </message>
+    <message>
+      <source>Point size:</source>
+      <translation>Veličina točke:</translation>
+    </message>
+    <message>
+      <source>Line width:</source>
+      <translation>Širina linije:</translation>
+    </message>
+    <message>
+      <source>Transparency:</source>
+      <translation>Prozirnost:</translation>
+    </message>
+    <message>
+      <source>Line transparency:</source>
+      <translation>Transparentnost linije:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
@@ -1362,8 +1455,20 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Mogućnosti</translation>
     </message>
     <message>
+      <source>Code lines will be numbered</source>
+      <translation>Redovi koda bit će numerirani</translation>
+    </message>
+    <message>
       <source>Enable line numbers</source>
       <translation>Uključi brojeve redaka</translation>
+    </message>
+    <message>
+      <source>The cursor shape will be a block</source>
+      <translation type="unfinished">The cursor shape will be a block</translation>
+    </message>
+    <message>
+      <source>Enable block cursor</source>
+      <translation type="unfinished">Enable block cursor</translation>
     </message>
     <message>
       <source>Enable folding</source>
@@ -1374,44 +1479,16 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Uvlačenje</translation>
     </message>
     <message>
-      <source>Insert spaces</source>
-      <translation>Umetanje razmaka</translation>
-    </message>
-    <message>
       <source>Tab size:</source>
       <translation>Veličina kartice:</translation>
     </message>
     <message>
-      <source>Indent size:</source>
-      <translation>Uvučena veličina:</translation>
-    </message>
-    <message>
-      <source>Keep tabs</source>
-      <translation>Drži kartice</translation>
-    </message>
-    <message>
-      <source>Family:</source>
-      <translation>Obitelj:</translation>
-    </message>
-    <message>
-      <source>Size:</source>
-      <translation>Veličina:</translation>
-    </message>
-    <message>
-      <source>Preview:</source>
-      <translation>Pregled:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation> </translation>
-    </message>
-    <message>
-      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
-      <translation>Pritiskom na &lt;Tab&gt; umetnite količinu definirane veličine uvlačenja</translation>
-    </message>
-    <message>
       <source>Tabulator raster (how many spaces)</source>
       <translation>Raširi tabulator (koliko razmaka)</translation>
+    </message>
+    <message>
+      <source>Indent size:</source>
+      <translation>Uvučena veličina:</translation>
     </message>
     <message>
       <source>How many spaces will be inserted when pressing &lt;Tab&gt;</source>
@@ -1422,28 +1499,52 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Pritiskom na &lt;Tab&gt; umetnite tabulator sa definiranom tab veličinom</translation>
     </message>
     <message>
-      <source>Display items</source>
-      <translation>Prikaži stavke</translation>
+      <source>Keep tabs</source>
+      <translation>Drži kartice</translation>
     </message>
     <message>
-      <source>Font size to be used for selected code type</source>
-      <translation>Veličina slova koja se koristi za odabranu vrstu koda</translation>
+      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
+      <translation>Pritiskom na &lt;Tab&gt; umetnite količinu definirane veličine uvlačenja</translation>
+    </message>
+    <message>
+      <source>Insert spaces</source>
+      <translation>Umetanje razmaka</translation>
+    </message>
+    <message>
+      <source>Display items</source>
+      <translation>Prikaži stavke</translation>
     </message>
     <message>
       <source>Color and font settings will be applied to selected type</source>
       <translation>Postavke boje i pisma primijenit će se na odabrani tip</translation>
     </message>
     <message>
+      <source>Family:</source>
+      <translation>Obitelj:</translation>
+    </message>
+    <message>
       <source>Font family to be used for selected code type</source>
       <translation>Obitelj slova koja se koristi za odabranu vrstu koda</translation>
+    </message>
+    <message>
+      <source>Size:</source>
+      <translation>Veličina:</translation>
+    </message>
+    <message>
+      <source>Font size to be used for selected code type</source>
+      <translation>Veličina slova koja se koristi za odabranu vrstu koda</translation>
     </message>
     <message>
       <source>Color:</source>
       <translation>Boja:</translation>
     </message>
     <message>
-      <source>Code lines will be numbered</source>
-      <translation>Redovi koda bit će numerirani</translation>
+      <source>Preview:</source>
+      <translation>Pregled:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
@@ -1451,18 +1552,6 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
     <message>
       <source>General</source>
       <translation>Općenito</translation>
-    </message>
-    <message>
-      <source>Start up</source>
-      <translation>Pokrenuti</translation>
-    </message>
-    <message>
-      <source>Enable splash screen at start up</source>
-      <translation>Omogući pozdravni zaslon pri pokretanju programa</translation>
-    </message>
-    <message>
-      <source>Auto load module after start up:</source>
-      <translation>Automatski učitati modul nakon pokretanja:</translation>
     </message>
     <message>
       <source>Language</source>
@@ -1473,36 +1562,68 @@ Ako se to ne označi, osobina mora biti jedinstveno imenovana i njoj se pristupa
       <translation>Promijeni jezik:</translation>
     </message>
     <message>
+      <source>Language of the application's user interface</source>
+      <translation>Jezik korisničkog sučelja aplikacije</translation>
+    </message>
+    <message>
+      <source>Number format:</source>
+      <translation type="unfinished">Number format:</translation>
+    </message>
+    <message>
+      <source>Operating system</source>
+      <translation>Operativni sustav</translation>
+    </message>
+    <message>
+      <source>Selected language</source>
+      <translation type="unfinished">Selected language</translation>
+    </message>
+    <message>
+      <source>C/POSIX</source>
+      <translation type="unfinished">C/POSIX</translation>
+    </message>
+    <message>
+      <source>If enabled, numerical keypad decimal separator will be substituted with locale separator</source>
+      <translation type="unfinished">If enabled, numerical keypad decimal separator will be substituted with locale separator</translation>
+    </message>
+    <message>
+      <source>Substitute decimal separator (needs restart)</source>
+      <translation type="unfinished">Substitute decimal separator (needs restart)</translation>
+    </message>
+    <message>
+      <source>Preference packs</source>
+      <translation type="unfinished">Preference packs</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Ime</translation>
+    </message>
+    <message>
+      <source>Type</source>
+      <translation>Tip</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Učitaj</translation>
+    </message>
+    <message>
+      <source>Save new...</source>
+      <translation type="unfinished">Save new...</translation>
+    </message>
+    <message>
+      <source>Manage...</source>
+      <translation type="unfinished">Manage...</translation>
+    </message>
+    <message>
+      <source>Revert...</source>
+      <translation type="unfinished">Revert...</translation>
+    </message>
+    <message>
       <source>Main window</source>
       <translation>Glavni prozor</translation>
     </message>
     <message>
       <source>Size of recent file list</source>
       <translation>Veličina popisa nedavno korištenih datoteka</translation>
-    </message>
-    <message>
-      <source>Size of toolbar icons:</source>
-      <translation>Veličina ikona alatne trake:</translation>
-    </message>
-    <message>
-      <source>Enable tiled background</source>
-      <translation>Omogućiti popločanu pozadinu</translation>
-    </message>
-    <message>
-      <source>Style sheet:</source>
-      <translation>List sa stilovima:</translation>
-    </message>
-    <message>
-      <source>Python console</source>
-      <translation>Python konzola</translation>
-    </message>
-    <message>
-      <source>Enable word wrap</source>
-      <translation>Omogući prelamanje riječi</translation>
-    </message>
-    <message>
-      <source>Language of the application's user interface</source>
-      <translation>Jezik korisničkog sučelja aplikacije</translation>
     </message>
     <message>
       <source>How many files should be listed in recent files list</source>
@@ -1516,8 +1637,28 @@ Pojedinosti o slici potražite u FreeCAD Wiki-u.
 </translation>
     </message>
     <message>
+      <source>Enable tiled background</source>
+      <translation>Omogućiti popločanu pozadinu</translation>
+    </message>
+    <message>
+      <source>The text cursor will be blinking</source>
+      <translation type="unfinished">The text cursor will be blinking</translation>
+    </message>
+    <message>
+      <source>Enable cursor blinking</source>
+      <translation type="unfinished">Enable cursor blinking</translation>
+    </message>
+    <message>
+      <source>Style sheet:</source>
+      <translation>List sa stilovima:</translation>
+    </message>
+    <message>
       <source>Style sheet how user interface will look like</source>
       <translation>Lista stila kako će izgledati korisničko sučelje</translation>
+    </message>
+    <message>
+      <source>Size of toolbar icons:</source>
+      <translation>Veličina ikona alatne trake:</translation>
     </message>
     <message>
       <source>Choose your preference for toolbar icon size. You can adjust
@@ -1543,12 +1684,12 @@ to prema vašoj veličini zaslona ili vašem osobnom ukusu</translation>
 "Oba": zadržite sva tri panela, a možete imati i dva prikaza od stablastog pregleda i pregleda svojstva.</translation>
     </message>
     <message>
-      <source>A Splash screen is a small loading window that is shown
-when FreeCAD is launching. If this option is checked, FreeCAD will
-display the splash screen</source>
-      <translation>Splash ekran je mali prozor za učitavanje koji se prikazuje
-kada se FreeCAD pokreće. Ako je ova opcija potvrđena, FreeCAD će
-prikazivati splash ekran</translation>
+      <source>Start up</source>
+      <translation>Pokrenuti</translation>
+    </message>
+    <message>
+      <source>Auto load module after start up:</source>
+      <translation>Automatski učitati modul nakon pokretanja:</translation>
     </message>
     <message>
       <source>Choose which workbench will be activated and shown
@@ -1558,18 +1699,23 @@ nakon pokretanja FreeCAD-a
 </translation>
     </message>
     <message>
-      <source>Words will be wrapped when they exceed available
-horizontal space in Python console</source>
-      <translation>Riječi će biti istisnute kada premaše dostupni
-vodoravni prostor u Python konzoli
-</translation>
+      <source>A Splash screen is a small loading window that is shown
+when FreeCAD is launching. If this option is checked, FreeCAD will
+display the splash screen</source>
+      <translation>Splash ekran je mali prozor za učitavanje koji se prikazuje
+kada se FreeCAD pokreće. Ako je ova opcija potvrđena, FreeCAD će
+prikazivati splash ekran</translation>
+    </message>
+    <message>
+      <source>Enable splash screen at start up</source>
+      <translation>Omogući pozdravni zaslon pri pokretanju programa</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgGeneralImp</name>
     <message>
-      <source>No style sheet</source>
-      <translation>Nema lista stilova</translation>
+      <source>Manage preference packs</source>
+      <translation type="unfinished">Manage preference packs</translation>
     </message>
     <message>
       <source>Small (%1px)</source>
@@ -1603,6 +1749,26 @@ vodoravni prostor u Python konzoli
       <source>Both</source>
       <translation>Oboje</translation>
     </message>
+    <message>
+      <source>No style sheet</source>
+      <translation>Nema lista stilova</translation>
+    </message>
+    <message>
+      <source>Preference Pack Name</source>
+      <translation type="unfinished">Preference Pack Name</translation>
+    </message>
+    <message>
+      <source>Tags</source>
+      <translation type="unfinished">Tags</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Primijeni</translation>
+    </message>
+    <message>
+      <source>Apply the %1 preference pack</source>
+      <translation type="unfinished">Apply the %1 preference pack</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgInputDialog</name>
@@ -1633,6 +1799,14 @@ vodoravni prostor u Python konzoli
       <translation>Makro ime:</translation>
     </message>
     <message>
+      <source>User macros</source>
+      <translation>Makronaredbe korisnika</translation>
+    </message>
+    <message>
+      <source>System macros</source>
+      <translation>Sustavne makronaredbe</translation>
+    </message>
+    <message>
       <source>Execute</source>
       <translation>Izvršiti</translation>
     </message>
@@ -1653,18 +1827,6 @@ vodoravni prostor u Python konzoli
       <translation>Uredi</translation>
     </message>
     <message>
-      <source>User macros</source>
-      <translation>Makronaredbe korisnika</translation>
-    </message>
-    <message>
-      <source>System macros</source>
-      <translation>Sustavne makronaredbe</translation>
-    </message>
-    <message>
-      <source>User macros location:</source>
-      <translation>Lokacija korisnika makronaredbe:</translation>
-    </message>
-    <message>
       <source>Rename</source>
       <translation>Preimenuj</translation>
     </message>
@@ -1673,12 +1835,24 @@ vodoravni prostor u Python konzoli
       <translation>Dupliciraj</translation>
     </message>
     <message>
-      <source>Addons...</source>
-      <translation>Dodatci...</translation>
+      <source>Launch a guide on how to set up a macro in a custom global toolbar.</source>
+      <translation type="unfinished">Launch a guide on how to set up a macro in a custom global toolbar.</translation>
     </message>
     <message>
       <source>Toolbar</source>
       <translation>Alatna traka</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager where macros created by the community and other addons can be downloaded.</source>
+      <translation type="unfinished">Open Addon Manager where macros created by the community and other addons can be downloaded.</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>Preuzmi</translation>
+    </message>
+    <message>
+      <source>User macros location:</source>
+      <translation>Lokacija korisnika makronaredbe:</translation>
     </message>
   </context>
   <context>
@@ -1686,6 +1860,10 @@ vodoravni prostor u Python konzoli
     <message>
       <source>Macros</source>
       <translation>Makronaredbe</translation>
+    </message>
+    <message>
+      <source>Read-only</source>
+      <translation>Samo za čitanje</translation>
     </message>
     <message>
       <source>Macro file</source>
@@ -1706,14 +1884,6 @@ This file already exists.</source>
 Ova datoteka već postoji.</translation>
     </message>
     <message>
-      <source>Delete macro</source>
-      <translation>Brisanje makro</translation>
-    </message>
-    <message>
-      <source>Do you really want to delete the macro '%1'?</source>
-      <translation>Želite li zaista obrisati makro '%1'?</translation>
-    </message>
-    <message>
       <source>Cannot create file</source>
       <translation>Ne mogu stvoriti datoteku</translation>
     </message>
@@ -1722,44 +1892,12 @@ Ova datoteka već postoji.</translation>
       <translation>Kreiranje datoteke '%1' nije uspjelo.</translation>
     </message>
     <message>
-      <source>Read-only</source>
-      <translation>Samo za čitanje</translation>
+      <source>Delete macro</source>
+      <translation>Brisanje makro</translation>
     </message>
     <message>
-      <source>Renaming Macro File</source>
-      <translation>Preimenovanje makronaredbi datoteka</translation>
-    </message>
-    <message>
-      <source>Enter new name:</source>
-      <translation>Unesite novi naziv:</translation>
-    </message>
-    <message>
-      <source>'%1'
- already exists.</source>
-      <translation>'%1' već postoji.</translation>
-    </message>
-    <message>
-      <source>Rename Failed</source>
-      <translation>Preimenovanje nije uspjelo</translation>
-    </message>
-    <message>
-      <source>Failed to rename to '%1'.
-Perhaps a file permission error?</source>
-      <translation>Nije moguće preimenovati u '%1'. Možda je greška dopuštenja datoteke?</translation>
-    </message>
-    <message>
-      <source>Duplicate Macro</source>
-      <translation>Dupliciraj makronaredbu</translation>
-    </message>
-    <message>
-      <source>Duplicate Failed</source>
-      <translation>Dupliciranje neuspješno</translation>
-    </message>
-    <message>
-      <source>Failed to duplicate to '%1'.
-Perhaps a file permission error?</source>
-      <translation>Nije uspjelo dupliciranje u '%1'.
-možda je greška u dopuštenjima datoteke?</translation>
+      <source>Do you really want to delete the macro '%1'?</source>
+      <translation>Želite li zaista obrisati makro '%1'?</translation>
     </message>
     <message>
       <source>Do not show again</source>
@@ -1804,6 +1942,42 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
       <source>Walkthrough instructions: Click New, then right arrow (-&gt;) button, then Close.</source>
       <translation>Uputa za uporabu: kliknite Novo, zatim strelicu desno (-&gt;), a zatim Zatvori.</translation>
     </message>
+    <message>
+      <source>Renaming Macro File</source>
+      <translation>Preimenovanje makronaredbi datoteka</translation>
+    </message>
+    <message>
+      <source>Enter new name:</source>
+      <translation>Unesite novi naziv:</translation>
+    </message>
+    <message>
+      <source>'%1'
+ already exists.</source>
+      <translation>'%1' već postoji.</translation>
+    </message>
+    <message>
+      <source>Rename Failed</source>
+      <translation>Preimenovanje nije uspjelo</translation>
+    </message>
+    <message>
+      <source>Failed to rename to '%1'.
+Perhaps a file permission error?</source>
+      <translation>Nije moguće preimenovati u '%1'. Možda je greška dopuštenja datoteke?</translation>
+    </message>
+    <message>
+      <source>Duplicate Macro</source>
+      <translation>Dupliciraj makronaredbu</translation>
+    </message>
+    <message>
+      <source>Duplicate Failed</source>
+      <translation>Dupliciranje neuspješno</translation>
+    </message>
+    <message>
+      <source>Failed to duplicate to '%1'.
+Perhaps a file permission error?</source>
+      <translation>Nije uspjelo dupliciranje u '%1'.
+možda je greška u dopuštenjima datoteke?</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecord</name>
@@ -1814,14 +1988,6 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
     <message>
       <source>Macro name:</source>
       <translation>Makro ime:</translation>
-    </message>
-    <message>
-      <source>Stop</source>
-      <translation>Stop</translation>
-    </message>
-    <message>
-      <source>Cancel</source>
-      <translation>Otkazati</translation>
     </message>
     <message>
       <source>Macro path:</source>
@@ -1835,6 +2001,14 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
       <source>Record</source>
       <translation>Snimak</translation>
     </message>
+    <message>
+      <source>Stop</source>
+      <translation>Stop</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Otkazati</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecordImp</name>
@@ -1847,6 +2021,10 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
       <translation>Odredite prvo mjesto za spremanje.</translation>
     </message>
     <message>
+      <source>The macro directory doesn't exist. Please, choose another one.</source>
+      <translation>Makro direktorij ne postoji. Molimo, odaberite drugi.</translation>
+    </message>
+    <message>
       <source>Existing macro</source>
       <translation>Postojeći makro</translation>
     </message>
@@ -1855,16 +2033,12 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
       <translation>Makro '%1' već postoji. Želite li prebrisati?</translation>
     </message>
     <message>
-      <source>The macro directory doesn't exist. Please, choose another one.</source>
-      <translation>Makro direktorij ne postoji. Molimo, odaberite drugi.</translation>
+      <source>You have no write permission for the directory. Please, choose another one.</source>
+      <translation>Nemate dozvolu za pisanje u direktorij. Molimo odaberite drugi direktorij.</translation>
     </message>
     <message>
       <source>Choose macro directory</source>
       <translation>Odaberite makro direktorij</translation>
-    </message>
-    <message>
-      <source>You have no write permission for the directory. Please, choose another one.</source>
-      <translation>Nemate dozvolu za pisanje u direktorij. Molimo odaberite drugi direktorij.</translation>
     </message>
   </context>
   <context>
@@ -1878,8 +2052,16 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
       <translation>Materijal</translation>
     </message>
     <message>
+      <source>Ambient color:</source>
+      <translation>Boja ambienta:</translation>
+    </message>
+    <message>
       <source>Diffuse color:</source>
       <translation>Difuzna boja:</translation>
+    </message>
+    <message>
+      <source>Emissive color:</source>
+      <translation>Emitivna boja:</translation>
     </message>
     <message>
       <source>Specular color:</source>
@@ -1894,16 +2076,8 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
       <translation>%</translation>
     </message>
     <message>
-      <source>Ambient color:</source>
-      <translation>Boja ambienta:</translation>
-    </message>
-    <message>
       <source/>
       <translation> </translation>
-    </message>
-    <message>
-      <source>Emissive color:</source>
-      <translation>Emitivna boja:</translation>
     </message>
   </context>
   <context>
@@ -1924,6 +2098,10 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
   <context>
     <name>Gui::Dialog::DlgOnlineHelpImp</name>
     <message>
+      <source>HTML files</source>
+      <translation>HTML datoteke</translation>
+    </message>
+    <message>
       <source>Access denied</source>
       <translation>Pristup odbijen</translation>
     </message>
@@ -1933,32 +2111,12 @@ Napomena: vaše promjene primijenit će se prilikom sljedećeg prebacivanja radn
 Specify another directory, please.</source>
       <translation>Pristup je odbijen u '%1' Odredite drugi direktorij, molim.</translation>
     </message>
-    <message>
-      <source>HTML files</source>
-      <translation>HTML datoteke</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgParameter</name>
     <message>
       <source>Parameter Editor</source>
       <translation>Parametar Editor</translation>
-    </message>
-    <message>
-      <source>Save to disk</source>
-      <translation>Spremi na disk</translation>
-    </message>
-    <message>
-      <source>Alt+C</source>
-      <translation>Alt + C</translation>
-    </message>
-    <message>
-      <source>&amp;Close</source>
-      <translation>&amp;Zatvori</translation>
-    </message>
-    <message>
-      <source>Find...</source>
-      <translation>Pronađi...</translation>
     </message>
     <message>
       <source>Sorted</source>
@@ -1975,6 +2133,22 @@ Specify another directory, please.</source>
     <message>
       <source>Search Group</source>
       <translation>Grupa za pretraživanje</translation>
+    </message>
+    <message>
+      <source>Find...</source>
+      <translation>Pronađi...</translation>
+    </message>
+    <message>
+      <source>Save to disk</source>
+      <translation>Spremi na disk</translation>
+    </message>
+    <message>
+      <source>Alt+C</source>
+      <translation>Alt + C</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Zatvori</translation>
     </message>
   </context>
   <context>
@@ -2039,8 +2213,16 @@ Specify another directory, please.</source>
       <translation>Vrijednost</translation>
     </message>
     <message>
+      <source>System parameter</source>
+      <translation>Parametar sustava</translation>
+    </message>
+    <message>
       <source>User parameter</source>
       <translation>Korisnički parametar</translation>
+    </message>
+    <message>
+      <source>Search Group</source>
+      <translation>Grupa za pretraživanje</translation>
     </message>
     <message>
       <source>Invalid input</source>
@@ -2050,13 +2232,47 @@ Specify another directory, please.</source>
       <source>Invalid key name '%1'</source>
       <translation>Nevažeće ime '%1'</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagement</name>
     <message>
-      <source>System parameter</source>
-      <translation>Parametar sustava</translation>
+      <source>Manage Preference Packs</source>
+      <translation type="unfinished">Manage Preference Packs</translation>
     </message>
     <message>
-      <source>Search Group</source>
-      <translation>Grupa za pretraživanje</translation>
+      <source>Open Addon Manager...</source>
+      <translation type="unfinished">Open Addon Manager...</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagementImp</name>
+    <message>
+      <source>User-Saved Preference Packs</source>
+      <translation type="unfinished">User-Saved Preference Packs</translation>
+    </message>
+    <message>
+      <source>Built-In Preference Packs</source>
+      <translation type="unfinished">Built-In Preference Packs</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of built-in preference pack '%1'</source>
+      <translation type="unfinished">Toggle visibility of built-in preference pack '%1'</translation>
+    </message>
+    <message>
+      <source>Delete user-saved preference pack '%1'</source>
+      <translation type="unfinished">Delete user-saved preference pack '%1'</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of Addon preference pack '%1' (use Addon Manager to permanently remove)</source>
+      <translation type="unfinished">Toggle visibility of Addon preference pack '%1' (use Addon Manager to permanently remove)</translation>
+    </message>
+    <message>
+      <source>Delete saved preference pack?</source>
+      <translation type="unfinished">Delete saved preference pack?</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete the preference pack named '%1'? This cannot be undone.</source>
+      <translation type="unfinished">Are you sure you want to delete the preference pack named '%1'? This cannot be undone.</translation>
     </message>
   </context>
   <context>
@@ -2073,10 +2289,6 @@ Specify another directory, please.</source>
   <context>
     <name>Gui::Dialog::DlgPreferencesImp</name>
     <message>
-      <source>Wrong parameter</source>
-      <translation>Pogrešan parametar</translation>
-    </message>
-    <message>
       <source>Clear user settings</source>
       <translation>Brisanje korisničkih postavki</translation>
     </message>
@@ -2087,6 +2299,10 @@ Specify another directory, please.</source>
     <message>
       <source>If you agree all your settings will be cleared.</source>
       <translation>Ako se slažete sve vaše postavke će biti izbrisane.</translation>
+    </message>
+    <message>
+      <source>Wrong parameter</source>
+      <translation>Pogrešan parametar</translation>
     </message>
   </context>
   <context>
@@ -2104,40 +2320,36 @@ Specify another directory, please.</source>
       <translation>&amp;Ime:</translation>
     </message>
     <message>
-      <source>Commen&amp;t:</source>
-      <translation>Komen&amp;tar:</translation>
-    </message>
-    <message>
       <source>Path:</source>
       <translation>Put:</translation>
     </message>
     <message>
-      <source>&amp;Last modified by:</source>
-      <translation>&amp;Zadnja izmjena od:</translation>
+      <source>UUID:</source>
+      <translation>UUID:</translation>
+    </message>
+    <message>
+      <source>Program version:</source>
+      <translation>Verzija Programa:</translation>
     </message>
     <message>
       <source>Created &amp;by:</source>
       <translation>Kreirano &amp;od:</translation>
     </message>
     <message>
-      <source>Com&amp;pany:</source>
-      <translation>Kom&amp;panija:</translation>
+      <source>Creation &amp;date:</source>
+      <translation>&amp;Datum izrade:</translation>
+    </message>
+    <message>
+      <source>&amp;Last modified by:</source>
+      <translation>&amp;Zadnja izmjena od:</translation>
     </message>
     <message>
       <source>Last &amp;modification date:</source>
       <translation>Posljednja iz&amp;mjena i datum:</translation>
     </message>
     <message>
-      <source>Creation &amp;date:</source>
-      <translation>&amp;Datum izrade:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation> </translation>
-    </message>
-    <message>
-      <source>UUID:</source>
-      <translation>UUID:</translation>
+      <source>Com&amp;pany:</source>
+      <translation>Kom&amp;panija:</translation>
     </message>
     <message>
       <source>License information:</source>
@@ -2152,8 +2364,12 @@ Specify another directory, please.</source>
       <translation>Otvori u pregledniku</translation>
     </message>
     <message>
-      <source>Program version:</source>
-      <translation>Verzija Programa:</translation>
+      <source>Commen&amp;t:</source>
+      <translation>Komen&amp;tar:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
@@ -2191,6 +2407,10 @@ Specify another directory, please.</source>
       <translation>Učitaj datoteku projekta nakon stvaranja</translation>
     </message>
     <message>
+      <source>Project file</source>
+      <translation>Datoteka projekta</translation>
+    </message>
+    <message>
       <source>Empty source</source>
       <translation>Prazan izvor</translation>
     </message>
@@ -2206,16 +2426,26 @@ Specify another directory, please.</source>
       <source>No destination is defined.</source>
       <translation>Odredište nije definirano.</translation>
     </message>
-    <message>
-      <source>Project file</source>
-      <translation>Datoteka projekta</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgPropertyLink</name>
     <message>
       <source>Link</source>
       <translation>Poveznica</translation>
+    </message>
+    <message>
+      <source>Filter by type</source>
+      <translation>Filtriraj prema tipu</translation>
+    </message>
+    <message>
+      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
+      <translation>Ako je omogućeno, tada će se odabir 3D prikaza sinkronizirati s punom hijerarhijom objekta.
+
+</translation>
+    </message>
+    <message>
+      <source>Sync sub-object selection</source>
+      <translation>Sinkroniziranje odabira pod-objekta</translation>
     </message>
     <message>
       <source>Search</source>
@@ -2226,26 +2456,12 @@ Specify another directory, please.</source>
       <translation>Obrazac za pretraživanje da biste filtrirali rezultate iznad</translation>
     </message>
     <message>
-      <source>Filter by type</source>
-      <translation>Filtriraj prema tipu</translation>
-    </message>
-    <message>
-      <source>Sync sub-object selection</source>
-      <translation>Sinkroniziranje odabira pod-objekta</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Odbaci</translation>
     </message>
     <message>
       <source>Clear</source>
       <translation>Brisanje</translation>
-    </message>
-    <message>
-      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
-      <translation>Ako je omogućeno, tada će se odabir 3D prikaza sinkronizirati s punom hijerarhijom objekta.
-
-</translation>
     </message>
   </context>
   <context>
@@ -2259,64 +2475,38 @@ Specify another directory, please.</source>
       <translation>Izlaz</translation>
     </message>
     <message>
-      <source>Record log messages</source>
-      <translation>Snimanje log poruke</translation>
+      <source>Normal messages will be recorded</source>
+      <translation>Snimit će se uobičajene poruke
+
+</translation>
     </message>
     <message>
-      <source>Record warnings</source>
-      <translation>Snimanje upozorenja</translation>
-    </message>
-    <message>
-      <source>Record error messages</source>
-      <translation>Snimanje poruka o pogrešci</translation>
-    </message>
-    <message>
-      <source>Colors</source>
-      <translation>Boje</translation>
-    </message>
-    <message>
-      <source>Normal messages:</source>
-      <translation>Normalne poruke:</translation>
-    </message>
-    <message>
-      <source>Log messages:</source>
-      <translation>Log poruke:</translation>
-    </message>
-    <message>
-      <source>Warnings:</source>
-      <translation>Upozorenja:</translation>
-    </message>
-    <message>
-      <source>Errors:</source>
-      <translation>Pogreške:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation> </translation>
-    </message>
-    <message>
-      <source>Redirect internal Python errors to report view</source>
-      <translation>Preusmjeravanje unutarnjih Python grešaka u prikazu pogrešaka</translation>
-    </message>
-    <message>
-      <source>Redirect internal Python output to report view</source>
-      <translation>Preusmjeri interni Python izlaz na prikaz izvješća</translation>
-    </message>
-    <message>
-      <source>Python interpreter</source>
-      <translation>Python interpreter (tumač)</translation>
+      <source>Record normal messages</source>
+      <translation>Snima normalne poruke</translation>
     </message>
     <message>
       <source>Log messages will be recorded</source>
       <translation>Poruke dnevnika bit će zabilježene</translation>
     </message>
     <message>
+      <source>Record log messages</source>
+      <translation>Snimanje log poruke</translation>
+    </message>
+    <message>
       <source>Warnings will be recorded</source>
       <translation>Upozorenja bit će zabilježena</translation>
     </message>
     <message>
+      <source>Record warnings</source>
+      <translation>Snimanje upozorenja</translation>
+    </message>
+    <message>
       <source>Error messages will be recorded</source>
       <translation>Poruke o greškama bit će zabilježene</translation>
+    </message>
+    <message>
+      <source>Record error messages</source>
+      <translation>Snimanje poruka o pogrešci</translation>
     </message>
     <message>
       <source>When an error has occurred, the Report View dialog becomes visible
@@ -2362,37 +2552,6 @@ na zaslonu dok prikazuje poruku dnevnika
       <translation>Prikaži pregled izvještaja u poruci dnevnika</translation>
     </message>
     <message>
-      <source>Font color for normal messages in Report view panel</source>
-      <translation>Boja pisma za uobičajene poruke na ploči prikaza izvješća</translation>
-    </message>
-    <message>
-      <source>Font color for log messages in Report view panel</source>
-      <translation>Boja pisma za poruke dnevnika na ploči prikaza izvješća
-</translation>
-    </message>
-    <message>
-      <source>Font color for warning messages in Report view panel</source>
-      <translation>Boja pisma za poruke upozorenja na ploči prikaza izvješća</translation>
-    </message>
-    <message>
-      <source>Font color for error messages in Report view panel</source>
-      <translation>Boja pisma za poruke o grešci na ploči prikaza izvješća</translation>
-    </message>
-    <message>
-      <source>Internal Python output will be redirected
-from Python console to Report view panel</source>
-      <translation>Interni Python izlaz bit će preusmjeren
-od Python konzole na ploču prikaza izvješća
-</translation>
-    </message>
-    <message>
-      <source>Internal Python error messages will be redirected
-from Python console to Report view panel</source>
-      <translation>Interne Python poruke o grešci bit će preusmjerene
-od Python konzole na ploču prikaza izvješća
-</translation>
-    </message>
-    <message>
       <source>Include a timecode for each report</source>
       <translation>Uključite vremenski kod za svako izvješće
 
@@ -2405,14 +2564,93 @@ od Python konzole na ploču prikaza izvješća
 </translation>
     </message>
     <message>
-      <source>Normal messages will be recorded</source>
-      <translation>Snimit će se uobičajene poruke
-
+      <source>Colors</source>
+      <translation>Boje</translation>
+    </message>
+    <message>
+      <source>Normal messages:</source>
+      <translation>Normalne poruke:</translation>
+    </message>
+    <message>
+      <source>Font color for normal messages in Report view panel</source>
+      <translation>Boja pisma za uobičajene poruke na ploči prikaza izvješća</translation>
+    </message>
+    <message>
+      <source>Log messages:</source>
+      <translation>Log poruke:</translation>
+    </message>
+    <message>
+      <source>Font color for log messages in Report view panel</source>
+      <translation>Boja pisma za poruke dnevnika na ploči prikaza izvješća
 </translation>
     </message>
     <message>
-      <source>Record normal messages</source>
-      <translation>Snima normalne poruke</translation>
+      <source>Warnings:</source>
+      <translation>Upozorenja:</translation>
+    </message>
+    <message>
+      <source>Font color for warning messages in Report view panel</source>
+      <translation>Boja pisma za poruke upozorenja na ploči prikaza izvješća</translation>
+    </message>
+    <message>
+      <source>Errors:</source>
+      <translation>Pogreške:</translation>
+    </message>
+    <message>
+      <source>Font color for error messages in Report view panel</source>
+      <translation>Boja pisma za poruke o grešci na ploči prikaza izvješća</translation>
+    </message>
+    <message>
+      <source>Python interpreter</source>
+      <translation>Python interpreter (tumač)</translation>
+    </message>
+    <message>
+      <source>Internal Python output will be redirected
+from Python console to Report view panel</source>
+      <translation>Interni Python izlaz bit će preusmjeren
+od Python konzole na ploču prikaza izvješća
+</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python output to report view</source>
+      <translation>Preusmjeri interni Python izlaz na prikaz izvješća</translation>
+    </message>
+    <message>
+      <source>Internal Python error messages will be redirected
+from Python console to Report view panel</source>
+      <translation>Interne Python poruke o grešci bit će preusmjerene
+od Python konzole na ploču prikaza izvješća
+</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python errors to report view</source>
+      <translation>Preusmjeravanje unutarnjih Python grešaka u prikazu pogrešaka</translation>
+    </message>
+    <message>
+      <source/>
+      <translation> </translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfig</name>
+    <message>
+      <source>Revert to Backup Config</source>
+      <translation type="unfinished">Revert to Backup Config</translation>
+    </message>
+    <message>
+      <source>WARNING: this process will undo any preference changes made since the specified date, and will also reset your Recent files and Macros to their state on that date.</source>
+      <translation type="unfinished">WARNING: this process will undo any preference changes made since the specified date, and will also reset your Recent files and Macros to their state on that date.</translation>
+    </message>
+    <message>
+      <source>Available backup files:</source>
+      <translation type="unfinished">Available backup files:</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfigImp</name>
+    <message>
+      <source>No selection in dialog, cannot load backup file</source>
+      <translation type="unfinished">No selection in dialog, cannot load backup file</translation>
     </message>
   </context>
   <context>
@@ -2461,58 +2699,6 @@ od Python konzole na ploču prikaza izvješća
       <translation>3D Prikaz</translation>
     </message>
     <message>
-      <source>Show coordinate system in the corner</source>
-      <translation>Prikaži koordinatni sustav u kutu</translation>
-    </message>
-    <message>
-      <source>Show counter of frames per second</source>
-      <translation>Pokaži brojač sličica u sekundi</translation>
-    </message>
-    <message>
-      <source>Camera type</source>
-      <translation>Tip kamere</translation>
-    </message>
-    <message>
-      <source/>
-      <translation> </translation>
-    </message>
-    <message>
-      <source>Anti-Aliasing</source>
-      <translation>Anti-Aliasing</translation>
-    </message>
-    <message>
-      <source>None</source>
-      <translation>Prazno</translation>
-    </message>
-    <message>
-      <source>Line Smoothing</source>
-      <translation>Zaglađivanje linije</translation>
-    </message>
-    <message>
-      <source>MSAA 2x</source>
-      <translation>MSAA 2 x</translation>
-    </message>
-    <message>
-      <source>MSAA 4x</source>
-      <translation>MSAA 4 x</translation>
-    </message>
-    <message>
-      <source>MSAA 8x</source>
-      <translation>MSAA 8 x</translation>
-    </message>
-    <message>
-      <source>Or&amp;thographic rendering</source>
-      <translation>Or&amp;tografsko iscrtavanje</translation>
-    </message>
-    <message>
-      <source>Perspective renderin&amp;g</source>
-      <translation>Perspektivna iscrtavanja</translation>
-    </message>
-    <message>
-      <source>Marker size:</source>
-      <translation>Veličina Oznake:</translation>
-    </message>
-    <message>
       <source>General</source>
       <translation>Općenito</translation>
     </message>
@@ -2523,11 +2709,45 @@ lower right corner within opened files</source>
 donjem desnom kutu unutar otvorenih datoteka</translation>
     </message>
     <message>
+      <source>Show coordinate system in the corner</source>
+      <translation>Prikaži koordinatni sustav u kutu</translation>
+    </message>
+    <message>
+      <source>Relative size :   </source>
+      <translation type="unfinished">Relative size :   </translation>
+    </message>
+    <message>
+      <source>Size of main coordinate system representation
+in the corner -- in % of height/width of viewport</source>
+      <translation type="unfinished">Size of main coordinate system representation
+in the corner -- in % of height/width of viewport</translation>
+    </message>
+    <message>
+      <source>%</source>
+      <translation>%</translation>
+    </message>
+    <message>
+      <source>Axis cross will be shown by default at file
+opening or creation</source>
+      <translation>Križ osi  prema zadanom će biti prikazan kod 
+otvaranja ili stvaranja datoteke
+
+</translation>
+    </message>
+    <message>
+      <source>Show axis cross by default</source>
+      <translation>Prikaz križa osi kao zadana postavka</translation>
+    </message>
+    <message>
       <source>Time needed for last operation and resulting frame rate
 will be shown at the lower left corner in opened files</source>
       <translation>Vrijeme potrebno za posljednji rad i rezultirajuća brzina kadra
 prikazat će se u donjem lijevom kutu otvorenih datoteka
 </translation>
+    </message>
+    <message>
+      <source>Show counter of frames per second</source>
+      <translation>Pokaži brojač sličica u sekundi</translation>
     </message>
     <message>
       <source>If checked, application will remember which workbench is active for each tab of the viewport</source>
@@ -2540,6 +2760,20 @@ prikazat će se u donjem lijevom kutu otvorenih datoteka
     <message>
       <source>Rendering</source>
       <translation>Iscrtati</translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation>Ova je opcija korisna za rješavanje problema s grafičkom karticom i upravljačkim programima.
+
+Za promjenu ove opcije potrebno je ponovno pokretanje aplikacije.
+
+</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation>koristi program OpenGL</translation>
     </message>
     <message>
       <source>If selected, Vertex Buffer Objects (VBO) will be used.
@@ -2601,6 +2835,34 @@ ali sporiji odgovor na bilo kakve promjene scena.</translation>
       <translation>Centralizirano</translation>
     </message>
     <message>
+      <source>Anti-Aliasing</source>
+      <translation>Anti-Aliasing</translation>
+    </message>
+    <message>
+      <source>What kind of multisample anti-aliasing is used</source>
+      <translation>Kakva vrsta višestrukih uzoraka se koristi</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Prazno</translation>
+    </message>
+    <message>
+      <source>Line Smoothing</source>
+      <translation>Zaglađivanje linije</translation>
+    </message>
+    <message>
+      <source>MSAA 2x</source>
+      <translation>MSAA 2 x</translation>
+    </message>
+    <message>
+      <source>MSAA 4x</source>
+      <translation>MSAA 4 x</translation>
+    </message>
+    <message>
+      <source>MSAA 8x</source>
+      <translation>MSAA 8 x</translation>
+    </message>
+    <message>
       <source>Transparent objects:</source>
       <translation>Prozirni objekti:</translation>
     </message>
@@ -2617,12 +2879,37 @@ ali sporiji odgovor na bilo kakve promjene scena.</translation>
       <translation>Dodatni prolaz crtanja pozadine</translation>
     </message>
     <message>
+      <source>Marker size:</source>
+      <translation>Veličina Oznake:</translation>
+    </message>
+    <message>
       <source>Size of vertices in the Sketcher workbench</source>
       <translation>Veličina vrhova na radnoj površini Skice</translation>
     </message>
     <message>
+      <source>Pick radius (px):</source>
+      <translation>Odaberite radijus (px):</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation>Prostor za odabir elemenata u 3D prikazu.
+Veća vrijednost olakšava odabir stvari, ali male značajke može učiniti nemogućim za odabir.
+
+</translation>
+    </message>
+    <message>
       <source>Eye to eye distance for stereo modes</source>
       <translation>Udaljenost od oka do oka za stereo mode</translation>
+    </message>
+    <message>
+      <source>Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</source>
+      <translation>Udaljenost od oka do oka koja se koristi za stereo projekcije.
+Navedena vrijednost je faktor koji će se pomnožiti s
+veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation>
     </message>
     <message>
       <source>Backlight is enabled with the defined color</source>
@@ -2641,75 +2928,32 @@ ali sporiji odgovor na bilo kakve promjene scena.</translation>
       <translation>Intenzitet pozadinskog osvjetljenja</translation>
     </message>
     <message>
-      <source>Objects will be projected in orthographic projection</source>
-      <translation>Objekti će se projektirati u ortografskoj projekciji</translation>
+      <source>Camera type</source>
+      <translation>Tip kamere</translation>
     </message>
     <message>
       <source>Objects will appear in a perspective projection</source>
       <translation>Objekti će se pojaviti u perspektivnoj projekciji</translation>
     </message>
     <message>
-      <source>Axis cross will be shown by default at file
-opening or creation</source>
-      <translation>Križ osi  prema zadanom će biti prikazan kod 
-otvaranja ili stvaranja datoteke
-
-</translation>
+      <source>Perspective renderin&amp;g</source>
+      <translation>Perspektivna iscrtavanja</translation>
     </message>
     <message>
-      <source>Show axis cross by default</source>
-      <translation>Prikaz križa osi kao zadana postavka</translation>
+      <source>Objects will be projected in orthographic projection</source>
+      <translation>Objekti će se projektirati u ortografskoj projekciji</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation>Odaberite radijus (px):</translation>
+      <source>Or&amp;thographic rendering</source>
+      <translation>Or&amp;tografsko iscrtavanje</translation>
     </message>
     <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.
-               </source>
-      <translation>Prostor za odabir elemenata u 3D prikazu.
-Veća vrijednost olakšava odabir stvari, ali male značajke može učiniti nemogućim za odabir.
-
-</translation>
-    </message>
-    <message>
-      <source>This option is useful for troubleshooting graphics card and driver problems.
-
-Changing this option requires a restart of the application.</source>
-      <translation>Ova je opcija korisna za rješavanje problema s grafičkom karticom i upravljačkim programima.
-
-Za promjenu ove opcije potrebno je ponovno pokretanje aplikacije.
-
-</translation>
-    </message>
-    <message>
-      <source>Use software OpenGL</source>
-      <translation>koristi program OpenGL</translation>
-    </message>
-    <message>
-      <source>What kind of multisample anti-aliasing is used</source>
-      <translation>Kakva vrsta višestrukih uzoraka se koristi</translation>
-    </message>
-    <message>
-      <source>Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed.</source>
-      <translation>Udaljenost od oka do oka koja se koristi za stereo projekcije.
-Navedena vrijednost je faktor koji će se pomnožiti s
-veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettings3DViewImp</name>
-    <message>
-      <source>Anti-aliasing</source>
-      <translation>Izglađivanje</translation>
-    </message>
-    <message>
-      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
-      <translation>Otvori novi preglednik ili ponovno pokreni %1 za dodavanje promjena izglađivanja.</translation>
-    </message>
     <message>
       <source>5px</source>
       <translation>5px</translation>
@@ -2734,9 +2978,84 @@ veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation
       <source>15px</source>
       <translation>15px</translation>
     </message>
+    <message>
+      <source>Anti-aliasing</source>
+      <translation>Izglađivanje</translation>
+    </message>
+    <message>
+      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
+      <translation>Otvori novi preglednik ili ponovno pokreni %1 za dodavanje promjena izglađivanja.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsCacheDirectory</name>
+    <message>
+      <source>Cache</source>
+      <translation type="unfinished">Cache</translation>
+    </message>
+    <message>
+      <source>Cache directory</source>
+      <translation type="unfinished">Cache directory</translation>
+    </message>
+    <message>
+      <source>Location:</source>
+      <translation type="unfinished">Location:</translation>
+    </message>
+    <message>
+      <source>Check periodically at program start:</source>
+      <translation type="unfinished">Check periodically at program start:</translation>
+    </message>
+    <message>
+      <source>Always</source>
+      <translation type="unfinished">Always</translation>
+    </message>
+    <message>
+      <source>Daily</source>
+      <translation type="unfinished">Daily</translation>
+    </message>
+    <message>
+      <source>Weekly</source>
+      <translation type="unfinished">Weekly</translation>
+    </message>
+    <message>
+      <source>Monthly</source>
+      <translation type="unfinished">Monthly</translation>
+    </message>
+    <message>
+      <source>Yearly</source>
+      <translation type="unfinished">Yearly</translation>
+    </message>
+    <message>
+      <source>Never</source>
+      <translation type="unfinished">Never</translation>
+    </message>
+    <message>
+      <source>Cache size limit:</source>
+      <translation type="unfinished">Cache size limit:</translation>
+    </message>
+    <message>
+      <source>Check now...</source>
+      <translation type="unfinished">Check now...</translation>
+    </message>
+    <message>
+      <source>Notify the user if the cache size exceeds the specified limit</source>
+      <translation type="unfinished">Notify the user if the cache size exceeds the specified limit</translation>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>Nepoznato</translation>
+    </message>
+    <message>
+      <source>Current cache size: %1</source>
+      <translation type="unfinished">Current cache size: %1</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsColorGradient</name>
+    <message>
+      <source>Color-gradient settings</source>
+      <translation>Boja-gradijent postavke</translation>
+    </message>
     <message>
       <source>Color model</source>
       <translation>Model boja</translation>
@@ -2762,36 +3081,12 @@ veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation
       <translation>crno-bijela</translation>
     </message>
     <message>
-      <source>Visibility</source>
-      <translation>Vidljivost</translation>
-    </message>
-    <message>
-      <source>Out g&amp;rayed</source>
-      <translation>Od G &amp; rayed</translation>
-    </message>
-    <message>
-      <source>Alt+R</source>
-      <translation>Alt+R</translation>
-    </message>
-    <message>
-      <source>Out &amp;invisible</source>
-      <translation>van &amp; nevidljiv</translation>
-    </message>
-    <message>
-      <source>Alt+I</source>
-      <translation>Alt+I</translation>
-    </message>
-    <message>
       <source>Style</source>
       <translation>Stil</translation>
     </message>
     <message>
-      <source>&amp;Zero</source>
-      <translation>&amp;Nula</translation>
-    </message>
-    <message>
-      <source>Alt+Z</source>
-      <translation>Alt+Z</translation>
+      <source>Color gradient is used with its full color range</source>
+      <translation type="unfinished">Color gradient is used with its full color range</translation>
     </message>
     <message>
       <source>&amp;Flow</source>
@@ -2802,12 +3097,52 @@ veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation
       <translation>Alt+F</translation>
     </message>
     <message>
-      <source>Parameter range</source>
-      <translation>Raspon parametra</translation>
+      <source>Color gradient starts from the zero value</source>
+      <translation type="unfinished">Color gradient starts from the zero value</translation>
     </message>
     <message>
-      <source>Mi&amp;nimum:</source>
-      <translation>Mi&amp;nimum:</translation>
+      <source>&amp;Zero</source>
+      <translation>&amp;Nula</translation>
+    </message>
+    <message>
+      <source>Alt+Z</source>
+      <translation>Alt+Z</translation>
+    </message>
+    <message>
+      <source>Visibility</source>
+      <translation>Vidljivost</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed in gray</source>
+      <translation type="unfinished">Data outside the specified min-max range
+will be displayed in gray</translation>
+    </message>
+    <message>
+      <source>Out g&amp;rayed</source>
+      <translation>Od G &amp; rayed</translation>
+    </message>
+    <message>
+      <source>Alt+R</source>
+      <translation>Alt+R</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed with transparency</source>
+      <translation type="unfinished">Data outside the specified min-max range
+will be displayed with transparency</translation>
+    </message>
+    <message>
+      <source>Out &amp;transparent</source>
+      <translation type="unfinished">Out &amp;transparent</translation>
+    </message>
+    <message>
+      <source>Alt+I</source>
+      <translation>Alt+I</translation>
+    </message>
+    <message>
+      <source>Parameter range</source>
+      <translation>Raspon parametra</translation>
     </message>
     <message>
       <source>Ma&amp;ximum:</source>
@@ -2818,16 +3153,26 @@ veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation
       <translation>&amp;Oznake:</translation>
     </message>
     <message>
+      <source>Number of labels besides the color bar</source>
+      <translation type="unfinished">Number of labels besides the color bar</translation>
+    </message>
+    <message>
+      <source>Mi&amp;nimum:</source>
+      <translation>Mi&amp;nimum:</translation>
+    </message>
+    <message>
       <source>&amp;Decimals:</source>
       <translation>&amp;Decimale:</translation>
     </message>
     <message>
-      <source/>
-      <translation> </translation>
+      <source>Number of decimals for labels
+besides the color bar</source>
+      <translation type="unfinished">Number of decimals for labels
+besides the color bar</translation>
     </message>
     <message>
-      <source>Color-gradient settings</source>
-      <translation>Boja-gradijent postavke</translation>
+      <source/>
+      <translation> </translation>
     </message>
   </context>
   <context>
@@ -2852,105 +3197,17 @@ veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation
       <translation>Općenito</translation>
     </message>
     <message>
-      <source>Document save compression level
-(0 = none, 9 = highest, 3 = default)</source>
-      <translation>Razina kompresije spremanja dokumenta (0 = ništa, 9 = najviši, 3 = zadana vrijednost)</translation>
+      <source>The application will create a new document when started</source>
+      <translation>Kada se pokrene, aplikacija će stvoriti novi dokument</translation>
     </message>
     <message>
       <source>Create new document at start up</source>
       <translation>Stvaranje novog dokumenta prilikom pokretanja</translation>
     </message>
     <message>
-      <source>Storage</source>
-      <translation>Skladištenje</translation>
-    </message>
-    <message>
-      <source>Saving transactions (Auto-save)</source>
-      <translation>Spremanje transakcije (Auto-save)</translation>
-    </message>
-    <message>
-      <source>Discard saved transaction after saving document</source>
-      <translation>Odbaci spremljene transakcije nakon spremanja dokumenta</translation>
-    </message>
-    <message>
-      <source>Save thumbnail into project file when saving document</source>
-      <translation>Spremi thumbnail u projekt datoteku prilikom spremanja dokumenta</translation>
-    </message>
-    <message>
-      <source>Maximum number of backup files to keep when resaving document</source>
-      <translation>Maksimalan broj sigurnosnih kopija koji se čuva kad ponovno spremite dokument</translation>
-    </message>
-    <message>
-      <source>Document objects</source>
-      <translation>Objekti dokumenta</translation>
-    </message>
-    <message>
-      <source>Allow duplicate object labels in one document</source>
-      <translation>Dopusti dvostruke nazive objekata u jednom dokumentu</translation>
-    </message>
-    <message>
-      <source>Maximum Undo/Redo steps</source>
-      <translation>Maksimalan broj Undo/Redo koraka</translation>
-    </message>
-    <message>
-      <source>Using Undo/Redo on documents</source>
-      <translation>Koristi Undo/Redo na dokumentima</translation>
-    </message>
-    <message>
-      <source>Authoring and License</source>
-      <translation>Stvaranje i licence</translation>
-    </message>
-    <message>
-      <source>Author name</source>
-      <translation>Ime autora</translation>
-    </message>
-    <message>
-      <source>Set on save</source>
-      <translation>Postavi na spremanju</translation>
-    </message>
-    <message>
-      <source>Company</source>
-      <translation>Tvrtka</translation>
-    </message>
-    <message>
-      <source>Default license</source>
-      <translation>Dodijeljena licenca</translation>
-    </message>
-    <message>
-      <source>All rights reserved</source>
-      <translation>Sva prava pridržana</translation>
-    </message>
-    <message>
-      <source>Public Domain</source>
-      <translation>Javne domene</translation>
-    </message>
-    <message>
-      <source>FreeArt</source>
-      <translation>FreeArt</translation>
-    </message>
-    <message>
-      <source>Other</source>
-      <translation>Drugo</translation>
-    </message>
-    <message>
-      <source>License URL</source>
-      <translation>URL licence</translation>
-    </message>
-    <message>
-      <source>Run AutoRecovery at startup</source>
-      <translation>Pokreni samo oporavak tijekom pokretanja</translation>
-    </message>
-    <message>
-      <source>Save AutoRecovery information every</source>
-      <translation>Spremiti informacije samo oporavka svakih</translation>
-    </message>
-    <message>
-      <source>Add the program logo to the generated thumbnail</source>
-      <translation>Dodaj programski logo generiranoj sličici</translation>
-    </message>
-    <message>
-      <source>The application will create a new document when started</source>
-      <translation>Kada se pokrene, aplikacija će stvoriti novi dokument</translation>
+      <source>Document save compression level
+(0 = none, 9 = highest, 3 = default)</source>
+      <translation>Razina kompresije spremanja dokumenta (0 = ništa, 9 = najviši, 3 = zadana vrijednost)</translation>
     </message>
     <message>
       <source>Compression level for FCStd files</source>
@@ -2959,6 +3216,14 @@ veličinom graničnog okvira 3D objekta koji se trenutno prikazuje.</translation
     <message>
       <source>All changes in documents are stored so that they can be undone/redone</source>
       <translation>Sve promjene u dokumentima pohranjuju se tako da se mogu poništiti / ponovno urediti</translation>
+    </message>
+    <message>
+      <source>Using Undo/Redo on documents</source>
+      <translation>Koristi Undo/Redo na dokumentima</translation>
+    </message>
+    <message>
+      <source>Maximum Undo/Redo steps</source>
+      <translation>Maksimalan broj Undo/Redo koraka</translation>
     </message>
     <message>
       <source>How many Undo/Redo steps should be recorded</source>
@@ -2976,18 +3241,42 @@ Ova značajka može malo produljiti vrijeme preračunavanja.
       <translation>Dopustite prekid preračunavanja</translation>
     </message>
     <message>
+      <source>Storage</source>
+      <translation>Skladištenje</translation>
+    </message>
+    <message>
+      <source>Saving transactions (Auto-save)</source>
+      <translation>Spremanje transakcije (Auto-save)</translation>
+    </message>
+    <message>
+      <source>Discard saved transaction after saving document</source>
+      <translation>Odbaci spremljene transakcije nakon spremanja dokumenta</translation>
+    </message>
+    <message>
       <source>If there is a recovery file available the application will
 automatically run a file recovery when it is started.</source>
       <translation>Ako je na raspolaganju datoteka za oporavak aplikacija će
 automatski pokrenuti oporavak datoteke kad je pokrenuta.</translation>
     </message>
     <message>
+      <source>Run AutoRecovery at startup</source>
+      <translation>Pokreni samo oporavak tijekom pokretanja</translation>
+    </message>
+    <message>
       <source>How often a recovery file is written</source>
       <translation>Učestalost zapisa datoteke za oporavak</translation>
     </message>
     <message>
+      <source>Save AutoRecovery information every</source>
+      <translation>Spremiti informacije samo oporavka svakih</translation>
+    </message>
+    <message>
       <source>A thumbnail will be stored when document is saved</source>
       <translation>Kad se dokument spremi, bit će spremljena i sličica</translation>
+    </message>
+    <message>
+      <source>Save thumbnail into project file when saving document</source>
+      <translation>Spremi thumbnail u projekt datoteku prilikom spremanja dokumenta</translation>
     </message>
     <message>
       <source>Size</source>
@@ -3005,8 +3294,16 @@ Uobičajene veličine su 128, 256 i 512
       <translation>Logotip programa bit će dodan minijaturi</translation>
     </message>
     <message>
+      <source>Add the program logo to the generated thumbnail</source>
+      <translation>Dodaj programski logo generiranoj sličici</translation>
+    </message>
+    <message>
       <source>How many backup files will be kept when saving document</source>
       <translation>Koliko datoteka sigurnosnih kopija će se zadržati prilikom spremanja dokumenta</translation>
+    </message>
+    <message>
+      <source>Maximum number of backup files to keep when resaving document</source>
+      <translation>Maksimalan broj sigurnosnih kopija koji se čuva kad ponovno spremite dokument</translation>
     </message>
     <message>
       <source>Backup files will get extension '.FCbak' and file names
@@ -3023,8 +3320,16 @@ dobiti dodatak (sufiks) datuma prema navedenom formatu</translation>
       <translation>Format datuma</translation>
     </message>
     <message>
+      <source>Document objects</source>
+      <translation>Objekti dokumenta</translation>
+    </message>
+    <message>
       <source>Allow objects to have same label/name</source>
       <translation>Dopustite da objekti imaju istu oznaku / naziv</translation>
+    </message>
+    <message>
+      <source>Allow duplicate object labels in one document</source>
+      <translation>Dopusti dvostruke nazive objekata u jednom dokumentu</translation>
     </message>
     <message>
       <source>Enable partial loading of external linked documents.
@@ -3044,6 +3349,14 @@ ikonu u prikazu stabla da biste je u potpunosti ponovo postavili.
       <translation>Onemogući djelomično učitavanje vanjskih povezanih objekata</translation>
     </message>
     <message>
+      <source>Authoring and License</source>
+      <translation>Stvaranje i licence</translation>
+    </message>
+    <message>
+      <source>Author name</source>
+      <translation>Ime autora</translation>
+    </message>
+    <message>
       <source>All documents that will be created will get the specified author name.
 Keep blank for anonymous.
 You can also use the form: John Doe &lt;john@doe.com&gt;</source>
@@ -3058,12 +3371,28 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
 </translation>
     </message>
     <message>
+      <source>Set on save</source>
+      <translation>Postavi na spremanju</translation>
+    </message>
+    <message>
+      <source>Company</source>
+      <translation>Tvrtka</translation>
+    </message>
+    <message>
       <source>Default company name to use for new files</source>
       <translation>Zadano ime tvrtke za nove datoteke</translation>
     </message>
     <message>
+      <source>Default license</source>
+      <translation>Dodijeljena licenca</translation>
+    </message>
+    <message>
       <source>Default license for new documents</source>
       <translation>Zadana licenca za nove datoteke</translation>
+    </message>
+    <message>
+      <source>All rights reserved</source>
+      <translation>Sva prava pridržana</translation>
     </message>
     <message>
       <source>Creative Commons Attribution</source>
@@ -3088,6 +3417,22 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
     <message>
       <source>Creative Commons Attribution-NonCommercial-NoDerivatives</source>
       <translation>CreativeCommons Imenovanje-Nekomercijalno-Bez promjena</translation>
+    </message>
+    <message>
+      <source>Public Domain</source>
+      <translation>Javne domene</translation>
+    </message>
+    <message>
+      <source>FreeArt</source>
+      <translation>FreeArt</translation>
+    </message>
+    <message>
+      <source>Other</source>
+      <translation>Drugo</translation>
+    </message>
+    <message>
+      <source>License URL</source>
+      <translation>URL licence</translation>
     </message>
     <message>
       <source>URL describing more about the license</source>
@@ -3168,12 +3513,12 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
       <translation>Python pogreška</translation>
     </message>
     <message>
-      <source>Items</source>
-      <translation>Jedinice</translation>
-    </message>
-    <message>
       <source>Current line highlight</source>
       <translation>Osvjetljenje trenutne linije</translation>
+    </message>
+    <message>
+      <source>Items</source>
+      <translation>Jedinice</translation>
     </message>
   </context>
   <context>
@@ -3183,36 +3528,12 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
       <translation>Postavke slike</translation>
     </message>
     <message>
-      <source>Image properties</source>
-      <translation>Opcije slike</translation>
-    </message>
-    <message>
-      <source>Back&amp;ground:</source>
-      <translation>Poza&amp;dina:</translation>
-    </message>
-    <message>
-      <source>Current</source>
-      <translation>Trenutna</translation>
-    </message>
-    <message>
-      <source>White</source>
-      <translation>Bijela</translation>
-    </message>
-    <message>
-      <source>Black</source>
-      <translation>Crna</translation>
-    </message>
-    <message>
       <source>Image dimensions</source>
       <translation>Dimenzije slike</translation>
     </message>
     <message>
-      <source>Pixel</source>
-      <translation>Piksel</translation>
-    </message>
-    <message>
-      <source>&amp;Width:</source>
-      <translation>&amp;Širina:</translation>
+      <source>Standard sizes:</source>
+      <translation>Standardne veličine:</translation>
     </message>
     <message>
       <source>Current screen</source>
@@ -3231,8 +3552,12 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
       <translation>Icon 128 x 128</translation>
     </message>
     <message>
-      <source>Standard sizes:</source>
-      <translation>Standardne veličine:</translation>
+      <source>&amp;Width:</source>
+      <translation>&amp;Širina:</translation>
+    </message>
+    <message>
+      <source>Pixel</source>
+      <translation>Piksel</translation>
     </message>
     <message>
       <source>&amp;Height:</source>
@@ -3275,6 +3600,34 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
       <translation>Alt+1</translation>
     </message>
     <message>
+      <source>Image properties</source>
+      <translation>Opcije slike</translation>
+    </message>
+    <message>
+      <source>Back&amp;ground:</source>
+      <translation>Poza&amp;dina:</translation>
+    </message>
+    <message>
+      <source>Current</source>
+      <translation>Trenutna</translation>
+    </message>
+    <message>
+      <source>White</source>
+      <translation>Bijela</translation>
+    </message>
+    <message>
+      <source>Black</source>
+      <translation>Crna</translation>
+    </message>
+    <message>
+      <source>Transparent</source>
+      <translation>Prozirno</translation>
+    </message>
+    <message>
+      <source>Creation method:</source>
+      <translation>Način izrade:</translation>
+    </message>
+    <message>
       <source>Image comment</source>
       <translation>Komentar slike</translation>
     </message>
@@ -3287,16 +3640,8 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
       <translation>Umetni komentar</translation>
     </message>
     <message>
-      <source>Transparent</source>
-      <translation>Prozirno</translation>
-    </message>
-    <message>
       <source>Add watermark</source>
       <translation>Dodati vodeni žig</translation>
-    </message>
-    <message>
-      <source>Creation method:</source>
-      <translation>Način izrade:</translation>
     </message>
   </context>
   <context>
@@ -3321,6 +3666,14 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
+      <source>Available Workbenches</source>
+      <translation>Dostupne radne površine</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kako bi sačuvao resurse, FreeCAD ne učitava radne površine dok se ne koriste. Njihovo učitavanje može omogućiti pristup dodatnim postavkama koje se odnose na njihovu funkcionalnost.&lt;/p&gt;&lt;p&gt;Sljedeći radni stolovi dostupni su u vašoj instalaciji:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
       <source>Workbench Name</source>
       <translation>Ime radne površine</translation>
     </message>
@@ -3333,14 +3686,6 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
     <message>
       <source>Load Now</source>
       <translation>Učitaj sada</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kako bi sačuvao resurse, FreeCAD ne učitava radne površine dok se ne koriste. Njihovo učitavanje može omogućiti pristup dodatnim postavkama koje se odnose na njihovu funkcionalnost.&lt;/p&gt;&lt;p&gt;Sljedeći radni stolovi dostupni su u vašoj instalaciji:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Available Workbenches</source>
-      <translation>Dostupne radne površine</translation>
     </message>
   </context>
   <context>
@@ -3383,12 +3728,57 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
       <translation>Makro</translation>
     </message>
     <message>
+      <source>General macro settings</source>
+      <translation>Generalne Macro opcije</translation>
+    </message>
+    <message>
+      <source>Variables defined by macros are created as local variables</source>
+      <translation>Varijable definirane makronaredbama  stvaraju se kao lokalne varijable</translation>
+    </message>
+    <message>
+      <source>Run macros in local environment</source>
+      <translation>Izvrti Macro u lokalnom okruženju</translation>
+    </message>
+    <message>
       <source>Macro recording settings</source>
       <translation>Postavke snimanja za makro</translation>
     </message>
     <message>
+      <source>Macro path</source>
+      <translation>Makro put</translation>
+    </message>
+    <message>
+      <source>The directory in which the application will search for macros</source>
+      <translation>Imenik u kojem će aplikacija tražiti makronaredbe</translation>
+    </message>
+    <message>
+      <source>Gui commands</source>
+      <translation>GUI naredbe</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands</source>
+      <translation>Snimljene makronaredbe također će sadržavati naredbe korisničkog sučelja
+</translation>
+    </message>
+    <message>
+      <source>Record GUI commands</source>
+      <translation>Snimi GUI naredbe</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands as comments</source>
+      <translation>Snimljene makronaredbe također će sadržavati naredbe korisničkog sučelja kao komentare</translation>
+    </message>
+    <message>
+      <source>Record as comment</source>
+      <translation>Snimiti kao komentar</translation>
+    </message>
+    <message>
       <source>Logging Commands</source>
       <translation>Prijava Naredbi</translation>
+    </message>
+    <message>
+      <source>Commands executed by macro scripts are shown in Python console</source>
+      <translation>Naredbe koje izvršavaju makro skripte prikazane su na Python konzoli</translation>
     </message>
     <message>
       <source>Show script commands in python console</source>
@@ -3401,51 +3791,6 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
     <message>
       <source>FullScript.FCScript</source>
       <translation>FullScript.FCScript</translation>
-    </message>
-    <message>
-      <source>Gui commands</source>
-      <translation>GUI naredbe</translation>
-    </message>
-    <message>
-      <source>Record as comment</source>
-      <translation>Snimiti kao komentar</translation>
-    </message>
-    <message>
-      <source>Macro path</source>
-      <translation>Makro put</translation>
-    </message>
-    <message>
-      <source>General macro settings</source>
-      <translation>Generalne Macro opcije</translation>
-    </message>
-    <message>
-      <source>Run macros in local environment</source>
-      <translation>Izvrti Macro u lokalnom okruženju</translation>
-    </message>
-    <message>
-      <source>Record GUI commands</source>
-      <translation>Snimi GUI naredbe</translation>
-    </message>
-    <message>
-      <source>Variables defined by macros are created as local variables</source>
-      <translation>Varijable definirane makronaredbama  stvaraju se kao lokalne varijable</translation>
-    </message>
-    <message>
-      <source>Commands executed by macro scripts are shown in Python console</source>
-      <translation>Naredbe koje izvršavaju makro skripte prikazane su na Python konzoli</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands</source>
-      <translation>Snimljene makronaredbe također će sadržavati naredbe korisničkog sučelja
-</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands as comments</source>
-      <translation>Snimljene makronaredbe također će sadržavati naredbe korisničkog sučelja kao komentare</translation>
-    </message>
-    <message>
-      <source>The directory in which the application will search for macros</source>
-      <translation>Imenik u kojem će aplikacija tražiti makronaredbe</translation>
     </message>
     <message>
       <source>Recent macros menu</source>
@@ -3525,6 +3870,24 @@ Možete koristiti i obrazac: John Doe &lt;john@doe.com&gt;
       <translation>Dolje desno</translation>
     </message>
     <message>
+      <source>Rotates to nearest possible state when clicking a cube face</source>
+      <translation>Rotira se u najbliže moguće stanje kada kliknete lice kocke
+
+</translation>
+    </message>
+    <message>
+      <source>Rotate to nearest</source>
+      <translation>Rotira se u najbliže</translation>
+    </message>
+    <message>
+      <source>Cube size</source>
+      <translation>Veličina kocke</translation>
+    </message>
+    <message>
+      <source>Size of the navigation cube</source>
+      <translation>Veličina kocke navigacije</translation>
+    </message>
+    <message>
       <source>3D Navigation</source>
       <translation>3D navigacija</translation>
     </message>
@@ -3565,8 +3928,38 @@ Okretni stol: dio će se zakrenuti oko z-osi.
       <translation>Prećeno</translation>
     </message>
     <message>
-      <source>New document scale</source>
-      <translation>Novo mjerilo dokumenta</translation>
+      <source>Rotation mode</source>
+      <translation>Način rotacije</translation>
+    </message>
+    <message>
+      <source>Rotations in 3D will use current cursor position as center for rotation</source>
+      <translation>Rotacije u 3D upotrebljavat će trenutni položaj pokazivača kao središte rotacije</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation>Središte prozora</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation>Povucite kod pokazivača</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation>Središte objekta</translation>
+    </message>
+    <message>
+      <source>Default camera orientation</source>
+      <translation>Zadana orijentacija kamere
+
+</translation>
+    </message>
+    <message>
+      <source>Default camera orientation when creating a new document or selecting the home view</source>
+      <translation>Zadana orijentacija kamere prilikom izrade novog dokumenta ili odabira zadanog početnog prikaza</translation>
+    </message>
+    <message>
+      <source>Camera zoom</source>
+      <translation type="unfinished">Camera zoom</translation>
     </message>
     <message>
       <source>Sets camera zoom for new documents.
@@ -3596,8 +3989,14 @@ Vrijednost je promjer sfere koja će stati na zaslon.
       <translation>Približavaj na kursor</translation>
     </message>
     <message>
-      <source>Zoom step</source>
-      <translation>Korak prilikom približavanja</translation>
+      <source> Zoom step</source>
+      <translation type="unfinished"> Zoom step</translation>
+    </message>
+    <message>
+      <source>How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
+      <translation>Koliko će se zumirati.
+Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
     </message>
     <message>
       <source>Direction of zoom operations will be inverted</source>
@@ -3618,10 +4017,6 @@ Naginjanje miša nije onemogućeno ovom postavkom.</translation>
     <message>
       <source>Disable touchscreen tilt gesture</source>
       <translation>Onemogući nagib geste zaslona osjetljivog na dodir</translation>
-    </message>
-    <message>
-      <source>Rotations in 3D will use current cursor position as center for rotation</source>
-      <translation>Rotacije u 3D upotrebljavat će trenutni položaj pokazivača kao središte rotacije</translation>
     </message>
     <message>
       <source>Isometric</source>
@@ -3663,55 +4058,43 @@ Naginjanje miša nije onemogućeno ovom postavkom.</translation>
       <source>Custom</source>
       <translation>Prilagođeno</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsPythonConsole</name>
     <message>
-      <source>Default camera orientation</source>
-      <translation>Zadana orijentacija kamere
-
+      <source>Python console</source>
+      <translation>Python konzola</translation>
+    </message>
+    <message>
+      <source>Settings</source>
+      <translation>Postavke</translation>
+    </message>
+    <message>
+      <source>Words will be wrapped when they exceed available
+horizontal space in Python console</source>
+      <translation>Riječi će biti istisnute kada premaše dostupni
+vodoravni prostor u Python konzoli
 </translation>
     </message>
     <message>
-      <source>Default camera orientation when creating a new document or selecting the home view</source>
-      <translation>Zadana orijentacija kamere prilikom izrade novog dokumenta ili odabira zadanog početnog prikaza</translation>
+      <source>Enable word wrap</source>
+      <translation>Omogući prelamanje riječi</translation>
     </message>
     <message>
-      <source>Rotation mode</source>
-      <translation>Način rotacije</translation>
+      <source>The cursor shape will be a block</source>
+      <translation type="unfinished">The cursor shape will be a block</translation>
     </message>
     <message>
-      <source>Window center</source>
-      <translation>Središte prozora</translation>
+      <source>Enable block cursor</source>
+      <translation type="unfinished">Enable block cursor</translation>
     </message>
     <message>
-      <source>Drag at cursor</source>
-      <translation>Povucite kod pokazivača</translation>
+      <source>Saves Python history across sessions</source>
+      <translation type="unfinished">Saves Python history across sessions</translation>
     </message>
     <message>
-      <source>Object center</source>
-      <translation>Središte objekta</translation>
-    </message>
-    <message>
-      <source>Rotates to nearest possible state when clicking a cube face</source>
-      <translation>Rotira se u najbliže moguće stanje kada kliknete lice kocke
-
-</translation>
-    </message>
-    <message>
-      <source>Rotate to nearest</source>
-      <translation>Rotira se u najbliže</translation>
-    </message>
-    <message>
-      <source>Cube size</source>
-      <translation>Veličina kocke</translation>
-    </message>
-    <message>
-      <source>Size of the navigation cube</source>
-      <translation>Veličina kocke navigacije</translation>
-    </message>
-    <message>
-      <source>How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
-      <translation>Koliko će se zumirati.
-Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
+      <source>Save history</source>
+      <translation>Spremi povijest</translation>
     </message>
   </context>
   <context>
@@ -3753,44 +4136,28 @@ Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
       <translation>Postavke mjernih jedinica</translation>
     </message>
     <message>
-      <source>Standard (mm/kg/s/degree)</source>
-      <translation>Standardno (mm/kg/s/°)</translation>
+      <source>Unit system:</source>
+      <translation>Sustav jedinica:</translation>
     </message>
     <message>
-      <source>MKS (m/kg/s/degree)</source>
-      <translation>MKS (m/kg/s/°)</translation>
-    </message>
-    <message>
-      <source>Magnitude</source>
-      <translation>Povečanje</translation>
-    </message>
-    <message>
-      <source>Unit</source>
-      <translation>Jedinica</translation>
-    </message>
-    <message>
-      <source>US customary (in/lb)</source>
-      <translation>U. S. prilagođeno (u / lb)</translation>
+      <source>Unit system that should be used for all parts the application</source>
+      <translation>Sustav jedinica koji se treba koristiti za sve dijelove aplikacije</translation>
     </message>
     <message>
       <source>Number of decimals:</source>
       <translation>Broj decimalnih mjesta:</translation>
     </message>
     <message>
-      <source>Imperial decimal (in/lb)</source>
-      <translation>Carski decimalni (u / lb)</translation>
-    </message>
-    <message>
-      <source>Building Euro (cm/m²/m³)</source>
-      <translation>Zgrada Europa (cm/m²/m³)</translation>
-    </message>
-    <message>
-      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
-      <translation>Metrički mali dijelovi &amp; CNC (mm, mm/min)</translation>
+      <source>Number of decimals that should be shown for numbers and dimensions</source>
+      <translation>Broj decimala koji bi se trebali prikazati za brojeve i dimenzije</translation>
     </message>
     <message>
       <source>Minimum fractional inch:</source>
       <translation>Minimalni djelomični palac (inch):</translation>
+    </message>
+    <message>
+      <source>Minimum fractional inch to be displayed</source>
+      <translation>Minimalni frakcijski inč koji se prikazuje</translation>
     </message>
     <message>
       <source>1/2"</source>
@@ -3821,24 +4188,40 @@ Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
       <translation>1/128"</translation>
     </message>
     <message>
-      <source>Unit system:</source>
-      <translation>Sustav jedinica:</translation>
+      <source>Magnitude</source>
+      <translation>Povečanje</translation>
     </message>
     <message>
-      <source>Number of decimals that should be shown for numbers and dimensions</source>
-      <translation>Broj decimala koji bi se trebali prikazati za brojeve i dimenzije</translation>
+      <source>Unit</source>
+      <translation>Jedinica</translation>
     </message>
     <message>
-      <source>Unit system that should be used for all parts the application</source>
-      <translation>Sustav jedinica koji se treba koristiti za sve dijelove aplikacije</translation>
+      <source>Standard (mm/kg/s/degree)</source>
+      <translation>Standardno (mm/kg/s/°)</translation>
     </message>
     <message>
-      <source>Minimum fractional inch to be displayed</source>
-      <translation>Minimalni frakcijski inč koji se prikazuje</translation>
+      <source>MKS (m/kg/s/degree)</source>
+      <translation>MKS (m/kg/s/°)</translation>
+    </message>
+    <message>
+      <source>US customary (in/lb)</source>
+      <translation>U. S. prilagođeno (u / lb)</translation>
+    </message>
+    <message>
+      <source>Imperial decimal (in/lb)</source>
+      <translation>Carski decimalni (u / lb)</translation>
+    </message>
+    <message>
+      <source>Building Euro (cm/m²/m³)</source>
+      <translation>Zgrada Europa (cm/m²/m³)</translation>
     </message>
     <message>
       <source>Building US (ft-in/sqft/cft)</source>
       <translation>Zgrada USA (ft-u/sqft/cft)</translation>
+    </message>
+    <message>
+      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
+      <translation>Metrički mali dijelovi &amp; CNC (mm, mm/min)</translation>
     </message>
     <message>
       <source>Imperial for Civil Eng (ft, ft/sec)</source>
@@ -3860,40 +4243,12 @@ Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
       <translation>Izbor</translation>
     </message>
     <message>
-      <source>Enable selection highlighting</source>
-      <translation>Omogući odabir isticanja</translation>
+      <source>Enable preselection and highlight by specified color</source>
+      <translation>Omogućite pred odabir i označite određenom bojom</translation>
     </message>
     <message>
       <source>Enable preselection highlighting</source>
       <translation>Omogući isticanje prelaskom miša</translation>
-    </message>
-    <message>
-      <source>Background color</source>
-      <translation>Boja pozadine</translation>
-    </message>
-    <message>
-      <source>Middle color</source>
-      <translation>Srednja boja</translation>
-    </message>
-    <message>
-      <source>Color gradient</source>
-      <translation>Gradijent boje</translation>
-    </message>
-    <message>
-      <source>Simple color</source>
-      <translation>Jednostavna boja</translation>
-    </message>
-    <message>
-      <source>Object being edited</source>
-      <translation>Objekt uređivanja</translation>
-    </message>
-    <message>
-      <source>Active container</source>
-      <translation>Aktivni spremnik</translation>
-    </message>
-    <message>
-      <source>Enable preselection and highlight by specified color</source>
-      <translation>Omogućite pred odabir i označite određenom bojom</translation>
     </message>
     <message>
       <source>Enable selection highlighting and use specified color</source>
@@ -3901,12 +4256,40 @@ Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
 </translation>
     </message>
     <message>
+      <source>Enable selection highlighting</source>
+      <translation>Omogući odabir isticanja</translation>
+    </message>
+    <message>
       <source>Background color for the model view</source>
       <translation>Boja pozadine za prikaz modela</translation>
     </message>
     <message>
+      <source>Background color</source>
+      <translation>Boja pozadine</translation>
+    </message>
+    <message>
       <source>Background will have selected color</source>
       <translation>Pozadina će imati odabranu boju</translation>
+    </message>
+    <message>
+      <source>Simple color</source>
+      <translation>Jednostavna boja</translation>
+    </message>
+    <message>
+      <source>Background will have selected color gradient</source>
+      <translation>Pozadina će imati prijelaz odabrane boje</translation>
+    </message>
+    <message>
+      <source>Color gradient</source>
+      <translation>Gradijent boje</translation>
+    </message>
+    <message>
+      <source>Top color</source>
+      <translation>Boja na vrhu</translation>
+    </message>
+    <message>
+      <source>Bottom color</source>
+      <translation>Boja na dnu</translation>
     </message>
     <message>
       <source>Color gradient will get selected color as middle color</source>
@@ -3914,24 +4297,24 @@ Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
 </translation>
     </message>
     <message>
-      <source>Bottom color</source>
-      <translation>Boja na dnu</translation>
-    </message>
-    <message>
-      <source>Background will have selected color gradient</source>
-      <translation>Pozadina će imati prijelaz odabrane boje</translation>
-    </message>
-    <message>
-      <source>Top color</source>
-      <translation>Boja na vrhu</translation>
+      <source>Middle color</source>
+      <translation>Srednja boja</translation>
     </message>
     <message>
       <source>Tree view</source>
       <translation>Pogled hijerarhije</translation>
     </message>
     <message>
+      <source>Object being edited</source>
+      <translation>Objekt uređivanja</translation>
+    </message>
+    <message>
       <source>Background color for objects in tree view that are currently edited</source>
       <translation>Boja pozadine za objekte u prikazu stabla koji se trenutno uređuju</translation>
+    </message>
+    <message>
+      <source>Active container</source>
+      <translation>Aktivni spremnik</translation>
     </message>
     <message>
       <source>Background color for active containers in tree view</source>
@@ -3952,47 +4335,38 @@ Korak zumiranja '1' znači faktor 7,5 za svaki korak zumiranja.</translation>
       <translation>Kalkulator Jedinica</translation>
     </message>
     <message>
-      <source>as:</source>
-      <translation>kao:</translation>
-    </message>
-    <message>
-      <source>=&gt;</source>
-      <translation>=&gt;</translation>
-    </message>
-    <message>
-      <source>Quantity:</source>
-      <translation>Količina:</translation>
-    </message>
-    <message>
-      <source>Copy</source>
-      <translation>Kopiraj</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Zatvori</translation>
-    </message>
-    <message>
       <source>Input the source value and unit</source>
       <translation>Unesite izvornu vrijednost i jedinicu</translation>
+    </message>
+    <message>
+      <source>as:</source>
+      <translation>kao:</translation>
     </message>
     <message>
       <source>Input here the unit for the result</source>
       <translation>Ovdje unesite jedinicu za rezultat</translation>
     </message>
     <message>
+      <source>=&gt;</source>
+      <translation>=&gt;</translation>
+    </message>
+    <message>
       <source>Result</source>
       <translation>Rezultat</translation>
     </message>
     <message>
-      <source>List of last used calculations 
+      <source>List of last used calculations.
 To add a calculation press Return in the value input field</source>
-      <translation>Popis posljednjih korištenih izračuna
-Za dodavanje izračuna pritisnite Return u polju za unos vrijednosti
-</translation>
+      <translation type="unfinished">List of last used calculations.
+To add a calculation press Return in the value input field</translation>
     </message>
     <message>
       <source>Quantity</source>
       <translation>Količina</translation>
+    </message>
+    <message>
+      <source>Quantity:</source>
+      <translation>Količina:</translation>
     </message>
     <message>
       <source>Unit system:</source>
@@ -4024,16 +4398,24 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
       <source>Copy the result into the clipboard</source>
       <translation>Kopirajte rezultat u međuspremnik</translation>
     </message>
+    <message>
+      <source>Copy</source>
+      <translation>Kopiraj</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Zatvori</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgUnitsCalculator</name>
     <message>
-      <source>unit mismatch</source>
-      <translation>mjerne jedinice se ne podudaraju</translation>
-    </message>
-    <message>
       <source>unknown unit:</source>
       <translation>nepoznata mjerna jedinica:</translation>
+    </message>
+    <message>
+      <source>unit mismatch</source>
+      <translation>mjerne jedinice se ne podudaraju</translation>
     </message>
   </context>
   <context>
@@ -4043,28 +4425,12 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
       <translation>Radne površine</translation>
     </message>
     <message>
-      <source>Enabled workbenches</source>
-      <translation>Omogućene radne površine</translation>
-    </message>
-    <message>
       <source>Disabled workbenches</source>
       <translation>Onemogućene radne površine</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Pomakni dolje</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Premjesti odabranu stavku prema dolje.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Stavka će se premjestiti dolje&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Move left</source>
-      <translation>Pomakni lijevo</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Ukloni odabranu radnu površinu iz omogućenih radnih površina&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Enabled workbenches</source>
+      <translation>Omogućene radne površine</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -4073,10 +4439,6 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected workbench to enabled workbenches.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Pomakni odabranu radnu površinu u omogućene radne površine&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Sort enabled workbenches</source>
-      <translation>Sortiraj omogućene radne površine</translation>
     </message>
     <message>
       <source>Move up</source>
@@ -4091,8 +4453,28 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
       <translation>Dodaj sve u omogućene radne površine</translation>
     </message>
     <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Ukloni odabranu radnu površinu iz omogućenih radnih površina&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Sort enabled workbenches</source>
+      <translation>Sortiraj omogućene radne površine</translation>
+    </message>
+    <message>
       <source>&lt;p&gt;Sort enabled workbenches&lt;/p&gt;</source>
       <translation>&lt;p&gt;Sortiraj omogućene radne površine&lt;/p&gt;</translation>
+    </message>
+    <message>
+      <source>Move left</source>
+      <translation>Pomakni lijevo</translation>
+    </message>
+    <message>
+      <source>Move down</source>
+      <translation>Pomakni dolje</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Premjesti odabranu stavku prema dolje.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Stavka će se premjestiti dolje&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600;"&gt;Note:&lt;/span&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;"&gt; The changes become active the next time you start the application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -4114,6 +4496,14 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
       <translation>Oporavak dokumenta</translation>
     </message>
     <message>
+      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
+
+The 'Status' column shows whether the document could be recovered.</source>
+      <translation>Pritisnite 'Početak oporavka' za početak procesa oporavka dokumenta navedeni u nastavku.
+
+'Status' stupac prikazuje da li dokument može biti obnova.</translation>
+    </message>
+    <message>
       <source>Status of recovered documents:</source>
       <translation>Status oporavljenih dokumenata:</translation>
     </message>
@@ -4124,6 +4514,10 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
     <message>
       <source>Status</source>
       <translation>Stanje</translation>
+    </message>
+    <message>
+      <source>Cleanup...</source>
+      <translation>Čišćenje...</translation>
     </message>
     <message>
       <source>Start Recovery</source>
@@ -4150,10 +4544,6 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
       <translation>Završiti</translation>
     </message>
     <message>
-      <source>Cleanup...</source>
-      <translation>Čišćenje...</translation>
-    </message>
-    <message>
       <source>Delete</source>
       <translation>Izbriši</translation>
     </message>
@@ -4174,24 +4564,16 @@ Sustav preferencija je onaj skup postavki  koji se nalazi u općim preferencijam
       <translation>Jeste li sigurni da želite izbrisati sve prolazne direktorije?</translation>
     </message>
     <message>
-      <source>Finished</source>
-      <translation>Završeno</translation>
+      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
+      <translation>Nakon brisanja prolaznih mapa nećete biti u mogućnosti da oporavite bilo koju datoteku nakon toga.</translation>
     </message>
     <message>
       <source>Transient directories deleted.</source>
       <translation>Prolazne mape izbrisame.</translation>
     </message>
     <message>
-      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
-
-The 'Status' column shows whether the document could be recovered.</source>
-      <translation>Pritisnite 'Početak oporavka' za početak procesa oporavka dokumenta navedeni u nastavku.
-
-'Status' stupac prikazuje da li dokument može biti obnova.</translation>
-    </message>
-    <message>
-      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
-      <translation>Nakon brisanja prolaznih mapa nećete biti u mogućnosti da oporavite bilo koju datoteku nakon toga.</translation>
+      <source>Transient deleted</source>
+      <translation type="unfinished">Transient deleted</translation>
     </message>
   </context>
   <context>
@@ -4321,16 +4703,16 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Vektor</translation>
     </message>
     <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
+      <source>X:</source>
+      <translation>X:</translation>
     </message>
     <message>
       <source>Y:</source>
       <translation>Y:</translation>
     </message>
     <message>
-      <source>X:</source>
-      <translation>X:</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
   </context>
   <context>
@@ -4391,6 +4773,10 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Kolaps</translation>
     </message>
     <message>
+      <source>Do you really want to remove this parameter group?</source>
+      <translation>Želite li stvarno ukloniti ovu grupu parametara ?</translation>
+    </message>
+    <message>
       <source>Existing sub-group</source>
       <translation>Postojeća podgrupa</translation>
     </message>
@@ -4413,10 +4799,6 @@ The 'Status' column shows whether the document could be recovered.</source>
     <message>
       <source>Reading from '%1' failed.</source>
       <translation>Čitanje iz '%1' nije uspjelo.</translation>
-    </message>
-    <message>
-      <source>Do you really want to remove this parameter group?</source>
-      <translation>Želite li stvarno ukloniti ovu grupu parametara ?</translation>
     </message>
   </context>
   <context>
@@ -4473,100 +4855,64 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Položaj</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>U redu</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Translacija:</translation>
-    </message>
-    <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
-    </message>
-    <message>
-      <source>Y:</source>
-      <translation>Y:</translation>
     </message>
     <message>
       <source>X:</source>
       <translation>X:</translation>
     </message>
     <message>
-      <source>Rotation:</source>
-      <translation>Rotacija:</translation>
+      <source>Y:</source>
+      <translation>Y:</translation>
     </message>
     <message>
-      <source>Angle:</source>
-      <translation>Kut:</translation>
-    </message>
-    <message>
-      <source>Axis:</source>
-      <translation>Os:</translation>
-    </message>
-    <message>
-      <source>Center:</source>
-      <translation>Centar:</translation>
-    </message>
-    <message>
-      <source>Rotation axis with angle</source>
-      <translation>Os rotacije sa kutom</translation>
-    </message>
-    <message>
-      <source>Apply</source>
-      <translation>Primijeni</translation>
-    </message>
-    <message>
-      <source>Reset</source>
-      <translation>Odbaci</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Zatvori</translation>
-    </message>
-    <message>
-      <source>Incorrect quantity</source>
-      <translation>Netočna količina</translation>
-    </message>
-    <message>
-      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
-      <translation>Unos polja netočan unos, provjerite je li vrijednost valjana!</translation>
-    </message>
-    <message>
-      <source>Use center of mass</source>
-      <translation>Koristiti središte mase</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
     <message>
       <source>Axial:</source>
       <translation>Aksijalni:</translation>
     </message>
     <message>
+      <source>Shift click for opposite direction</source>
+      <translation>Shift klik za suprotan smijer</translation>
+    </message>
+    <message>
       <source>Apply axial</source>
       <translation>Primjena aksijalno</translation>
     </message>
     <message>
-      <source>Shift click for opposite direction</source>
-      <translation>Shift klik za suprotan smijer</translation>
+      <source>Center:</source>
+      <translation>Centar:</translation>
+    </message>
+    <message>
+      <source>Use center of mass</source>
+      <translation>Koristiti središte mase</translation>
     </message>
     <message>
       <source>Selected points</source>
       <translation>Odabrane točke</translation>
     </message>
     <message>
-      <source>Apply incremental changes</source>
-      <translation>Primjena inkrementalnih promjena</translation>
+      <source>Rotation:</source>
+      <translation>Rotacija:</translation>
     </message>
     <message>
-      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
-      <translation>Odaberite 1, 2 ili 3 točke prije nego kliknete ovaj gumb.  Točka može biti tjemena točka, točka  lica ili ruba.  Ako se koristi na licu ili rubu točka će biti točka na položaju miša uzduž lica ili ruba.  Ako je 1 točka  odabrana ona će se koristiti kao centar rotacije.  Ako su 2 točke odabrane središnja točka između njih će biti centar rotacije i po potrebi će se stvoriti nova prilagođena os.  Ako su 3 točke odabrane  prva točka postaje centar rotacije i leži na vektoru koji je normala na ravninu definiranu sa 3 točke.  Neke informacije udaljenosti i kuta su dane u prikazu izvještaja, što može biti korisno kod poravnavanja objekata.  Radi vaše udobnosti kada se koristi "Shift + klik" odgovarajuća udaljenost ili kut je kopiran(a) u međuspremnik.</translation>
+      <source>Rotation axis with angle</source>
+      <translation>Os rotacije sa kutom</translation>
     </message>
     <message>
-      <source>Pitch (around y-axis):</source>
-      <translation>Otklon (oko osi Y):</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Eulerovih kuteva (zy'x'')</translation>
     </message>
     <message>
-      <source>Roll (around x-axis):</source>
-      <translation>Okretanje (oko osi X):</translation>
+      <source>Axis:</source>
+      <translation>Os:</translation>
+    </message>
+    <message>
+      <source>Angle:</source>
+      <translation>Kut:</translation>
     </message>
     <message>
       <source>Yaw (around z-axis):</source>
@@ -4577,16 +4923,52 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Zakretanje (oko osi Z)</translation>
     </message>
     <message>
+      <source>Pitch (around y-axis):</source>
+      <translation>Otklon (oko osi Y):</translation>
+    </message>
+    <message>
       <source>Pitch (around y-axis)</source>
       <translation>Otklon (oko osi Y)</translation>
+    </message>
+    <message>
+      <source>Roll (around x-axis):</source>
+      <translation>Okretanje (oko osi X):</translation>
     </message>
     <message>
       <source>Roll (around the x-axis)</source>
       <translation>Okretanje (oko osi X)</translation>
     </message>
     <message>
-      <source>Euler angles (zy'x'')</source>
-      <translation>Eulerovih kuteva (zy'x'')</translation>
+      <source>Apply incremental changes</source>
+      <translation>Primjena inkrementalnih promjena</translation>
+    </message>
+    <message>
+      <source>Reset</source>
+      <translation>Odbaci</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>U redu</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Zatvori</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Primijeni</translation>
+    </message>
+    <message>
+      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
+      <translation>Odaberite 1, 2 ili 3 točke prije nego kliknete ovaj gumb.  Točka može biti tjemena točka, točka  lica ili ruba.  Ako se koristi na licu ili rubu točka će biti točka na položaju miša uzduž lica ili ruba.  Ako je 1 točka  odabrana ona će se koristiti kao centar rotacije.  Ako su 2 točke odabrane središnja točka između njih će biti centar rotacije i po potrebi će se stvoriti nova prilagođena os.  Ako su 3 točke odabrane  prva točka postaje centar rotacije i leži na vektoru koji je normala na ravninu definiranu sa 3 točke.  Neke informacije udaljenosti i kuta su dane u prikazu izvještaja, što može biti korisno kod poravnavanja objekata.  Radi vaše udobnosti kada se koristi "Shift + klik" odgovarajuća udaljenost ili kut je kopiran(a) u međuspremnik.</translation>
+    </message>
+    <message>
+      <source>Incorrect quantity</source>
+      <translation>Netočna količina</translation>
+    </message>
+    <message>
+      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
+      <translation>Unos polja netočan unos, provjerite je li vrijednost valjana!</translation>
     </message>
   </context>
   <context>
@@ -4638,12 +5020,12 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Dijalog</translation>
     </message>
     <message>
-      <source>Close</source>
-      <translation>Zatvori</translation>
-    </message>
-    <message>
       <source>Refresh</source>
       <translation>Osvježi</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Zatvori</translation>
     </message>
   </context>
   <context>
@@ -4653,12 +5035,12 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Inventor stablo</translation>
     </message>
     <message>
-      <source>Nodes</source>
-      <translation>Čvorovi</translation>
-    </message>
-    <message>
       <source>Name</source>
       <translation>Ime</translation>
+    </message>
+    <message>
+      <source>Nodes</source>
+      <translation>Čvorovi</translation>
     </message>
   </context>
   <context>
@@ -4723,8 +5105,12 @@ The 'Status' column shows whether the document could be recovered.</source>
 </translation>
     </message>
     <message>
-      <source>Dependency</source>
-      <translation>Zavisnost</translation>
+      <source>Auto select depending objects</source>
+      <translation type="unfinished">Auto select depending objects</translation>
+    </message>
+    <message>
+      <source>Depending on</source>
+      <translation type="unfinished">Depending on</translation>
     </message>
     <message>
       <source>Document</source>
@@ -4735,20 +5121,16 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Ime</translation>
     </message>
     <message>
-      <source>State</source>
-      <translation>Status</translation>
+      <source>Depended by</source>
+      <translation type="unfinished">Depended by</translation>
     </message>
     <message>
-      <source>Hierarchy</source>
-      <translation>Hijerarhija</translation>
+      <source>Selections</source>
+      <translation>Odabiri</translation>
     </message>
     <message>
-      <source>Selected</source>
-      <translation>Odabrano</translation>
-    </message>
-    <message>
-      <source>Partial</source>
-      <translation>Djelomično</translation>
+      <source>All</source>
+      <translation>Sve</translation>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
@@ -4805,34 +5187,6 @@ izvorno odabranim prije otvaranja ovog dijaloškog okvira</translation>
       <translation>Mogućnosti</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Brisanje</translation>
-    </message>
-    <message>
-      <source>Save As...</source>
-      <translation>Spremi kao ...</translation>
-    </message>
-    <message>
-      <source>Save Report Output</source>
-      <translation>Spremi izvješće izlaza</translation>
-    </message>
-    <message>
-      <source>Go to end</source>
-      <translation>Idi na kraj</translation>
-    </message>
-    <message>
-      <source>Redirect Python output</source>
-      <translation>Preusmjeravanje Python izlaza</translation>
-    </message>
-    <message>
-      <source>Redirect Python errors</source>
-      <translation>Preusmjeravanje Python pogreški</translation>
-    </message>
-    <message>
-      <source>Plain Text Files</source>
-      <translation>Obične tekstualne datoteke</translation>
-    </message>
-    <message>
       <source>Display message types</source>
       <translation>Prikažite vrste poruka</translation>
     </message>
@@ -4853,8 +5207,36 @@ izvorno odabranim prije otvaranja ovog dijaloškog okvira</translation>
       <translation>Greške</translation>
     </message>
     <message>
-      <source>Show report view on</source>
-      <translation>Prikaži izvješća o pogrešci</translation>
+      <source>Show output window on</source>
+      <translation type="unfinished">Show output window on</translation>
+    </message>
+    <message>
+      <source>Redirect Python output</source>
+      <translation>Preusmjeravanje Python izlaza</translation>
+    </message>
+    <message>
+      <source>Redirect Python errors</source>
+      <translation>Preusmjeravanje Python pogreški</translation>
+    </message>
+    <message>
+      <source>Go to end</source>
+      <translation>Idi na kraj</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Brisanje</translation>
+    </message>
+    <message>
+      <source>Save As...</source>
+      <translation>Spremi kao ...</translation>
+    </message>
+    <message>
+      <source>Save Report Output</source>
+      <translation>Spremi izvješće izlaza</translation>
+    </message>
+    <message>
+      <source>Plain Text Files</source>
+      <translation>Obične tekstualne datoteke</translation>
     </message>
   </context>
   <context>
@@ -4871,6 +5253,10 @@ izvorno odabranim prije otvaranja ovog dijaloškog okvira</translation>
   <context>
     <name>Gui::DockWnd::SelectionView</name>
     <message>
+      <source>Selection View</source>
+      <translation>Pogled odabira</translation>
+    </message>
+    <message>
       <source>Search</source>
       <translation>Pretraživanje</translation>
     </message>
@@ -4881,6 +5267,14 @@ izvorno odabranim prije otvaranja ovog dijaloškog okvira</translation>
     <message>
       <source>Clears the search field</source>
       <translation>Počisti polje za pretraživanje</translation>
+    </message>
+    <message>
+      <source>The number of selected items</source>
+      <translation>Broj odabranih stavki</translation>
+    </message>
+    <message>
+      <source>Picked object list</source>
+      <translation>Lista odabranih objekata</translation>
     </message>
     <message>
       <source>Select only</source>
@@ -4915,14 +5309,6 @@ izvorno odabranim prije otvaranja ovog dijaloškog okvira</translation>
       <translation>Odabire i smješta ovaj objekt u prikazu stabla</translation>
     </message>
     <message>
-      <source>To python console</source>
-      <translation>Python konzola</translation>
-    </message>
-    <message>
-      <source>Reveals this object and its subelements in the python console.</source>
-      <translation>Otkriva ovaj objekt i njegove subelements u python konzoli.</translation>
-    </message>
-    <message>
       <source>Mark to recompute</source>
       <translation>Označi za preračunaj</translation>
     </message>
@@ -4931,12 +5317,12 @@ izvorno odabranim prije otvaranja ovog dijaloškog okvira</translation>
       <translation>Označi ovaj objekt da se preračuna</translation>
     </message>
     <message>
-      <source>Selection View</source>
-      <translation>Pogled odabira</translation>
+      <source>To python console</source>
+      <translation>Python konzola</translation>
     </message>
     <message>
-      <source>The number of selected items</source>
-      <translation>Broj odabranih stavki</translation>
+      <source>Reveals this object and its subelements in the python console.</source>
+      <translation>Otkriva ovaj objekt i njegove subelements u python konzoli.</translation>
     </message>
     <message>
       <source>Duplicate subshape</source>
@@ -4945,10 +5331,6 @@ izvorno odabranim prije otvaranja ovog dijaloškog okvira</translation>
     <message>
       <source>Creates a standalone copy of this subshape in the document</source>
       <translation>Stvori samostalnu kopiju od ovog pod-oblika u dokumentu</translation>
-    </message>
-    <message>
-      <source>Picked object list</source>
-      <translation>Lista odabranih objekata</translation>
     </message>
   </context>
   <context>
@@ -4985,8 +5367,16 @@ Do you want to save your changes?</source>
       <translation>Dokument je promijenjen. Želite li spremiti promjene?</translation>
     </message>
     <message>
+      <source>FreeCAD macro</source>
+      <translation>FreeCAD makronaredbe</translation>
+    </message>
+    <message>
       <source>Export PDF</source>
       <translation>Izvoz PDF</translation>
+    </message>
+    <message>
+      <source>PDF file</source>
+      <translation>PDF Datoteka</translation>
     </message>
     <message>
       <source>untitled[*]</source>
@@ -5007,14 +5397,6 @@ Do you want to save your changes?</source>
     <message>
       <source>Formatted</source>
       <translation>Oblikovano</translation>
-    </message>
-    <message>
-      <source>FreeCAD macro</source>
-      <translation>FreeCAD makronaredbe</translation>
-    </message>
-    <message>
-      <source>PDF file</source>
-      <translation>PDF Datoteka</translation>
     </message>
   </context>
   <context>
@@ -5109,34 +5491,6 @@ Do you want to save your changes?</source>
   <context>
     <name>Gui::GraphvizView</name>
     <message>
-      <source>Export graph</source>
-      <translation>Izvoz grafikona</translation>
-    </message>
-    <message>
-      <source>PNG format</source>
-      <translation>PNG format</translation>
-    </message>
-    <message>
-      <source>Bitmap format</source>
-      <translation>Bitmap format</translation>
-    </message>
-    <message>
-      <source>GIF format</source>
-      <translation>GIF format</translation>
-    </message>
-    <message>
-      <source>JPG format</source>
-      <translation>JPG format</translation>
-    </message>
-    <message>
-      <source>SVG format</source>
-      <translation>SVG format</translation>
-    </message>
-    <message>
-      <source>PDF format</source>
-      <translation>PDF format</translation>
-    </message>
-    <message>
       <source>Graphviz not found</source>
       <translation>Graphviz nije pronađen</translation>
     </message>
@@ -5163,6 +5517,34 @@ Do you want to save your changes?</source>
     <message>
       <source>Graphviz failed to create an image file</source>
       <translation>Graphviz nije uspio pronaći datoteku slike</translation>
+    </message>
+    <message>
+      <source>PNG format</source>
+      <translation>PNG format</translation>
+    </message>
+    <message>
+      <source>Bitmap format</source>
+      <translation>Bitmap format</translation>
+    </message>
+    <message>
+      <source>GIF format</source>
+      <translation>GIF format</translation>
+    </message>
+    <message>
+      <source>JPG format</source>
+      <translation>JPG format</translation>
+    </message>
+    <message>
+      <source>SVG format</source>
+      <translation>SVG format</translation>
+    </message>
+    <message>
+      <source>PDF format</source>
+      <translation>PDF format</translation>
+    </message>
+    <message>
+      <source>Export graph</source>
+      <translation>Izvoz grafikona</translation>
     </message>
   </context>
   <context>
@@ -5205,14 +5587,6 @@ Do you want to save your changes?</source>
   <context>
     <name>Gui::LocationDialog</name>
     <message>
-      <source>Wrong direction</source>
-      <translation>Pogrešan smjer</translation>
-    </message>
-    <message>
-      <source>Direction must not be the null vector</source>
-      <translation>Smjer ne smije biti nula</translation>
-    </message>
-    <message>
       <source>X</source>
       <translation>X</translation>
     </message>
@@ -5227,6 +5601,14 @@ Do you want to save your changes?</source>
     <message>
       <source>User defined...</source>
       <translation>Korisnički definirano...</translation>
+    </message>
+    <message>
+      <source>Wrong direction</source>
+      <translation>Pogrešan smjer</translation>
+    </message>
+    <message>
+      <source>Direction must not be the null vector</source>
+      <translation>Smjer ne smije biti nula</translation>
     </message>
   </context>
   <context>
@@ -5274,16 +5656,28 @@ Do you want to save your changes?</source>
       <translation>Spreman</translation>
     </message>
     <message>
+      <source>Help addon needed!</source>
+      <translation type="unfinished">Help addon needed!</translation>
+    </message>
+    <message>
+      <source>The Help system of %1 is now handled by the "Help" addon. It can easily be installed via the Addons Manager</source>
+      <translation type="unfinished">The Help system of %1 is now handled by the "Help" addon. It can easily be installed via the Addons Manager</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager</source>
+      <translation type="unfinished">Open Addon Manager</translation>
+    </message>
+    <message>
+      <source>Close All</source>
+      <translation>Zatvori sve</translation>
+    </message>
+    <message>
       <source>Toggles this toolbar</source>
       <translation>Uključuje ove alatne trake</translation>
     </message>
     <message>
       <source>Toggles this dockable window</source>
       <translation>Uključuje ovaj usidrivi prozor</translation>
-    </message>
-    <message>
-      <source>Close All</source>
-      <translation>Zatvori sve</translation>
     </message>
     <message>
       <source>Unsaved document</source>
@@ -5383,12 +5777,12 @@ Kako želite nastaviti?</translation>
       <translation>Odabran vrh (%1, %2, %3)</translation>
     </message>
     <message>
-      <source>No point was picked</source>
-      <translation>Ni jedan vrh nije odabran</translation>
-    </message>
-    <message>
       <source>No point was found on model</source>
       <translation>Nema pronađene točke na modelu</translation>
+    </message>
+    <message>
+      <source>No point was picked</source>
+      <translation>Ni jedan vrh nije odabran</translation>
     </message>
   </context>
   <context>
@@ -5408,6 +5802,13 @@ Kako želite nastaviti?</translation>
     <message>
       <source>Pinch (place two fingers on the screen and drag them apart from or towards each other) OR scroll middle mouse button OR press ALT + right mouse button OR PgUp/PgDown on keyboard.</source>
       <translation>Prstohvat (Stavite dva prsta na zaslon i povucite ih jedan od drugoga) Ili pomaknite srednji gumb miša. Ili PgUp/PgDown tipke na tipkovnici.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::ModifierLineEdit</name>
+    <message>
+      <source>Press modifier keys</source>
+      <translation type="unfinished">Press modifier keys</translation>
     </message>
   </context>
   <context>
@@ -5434,6 +5835,25 @@ Kako želite nastaviti?</translation>
     <message>
       <source>Press CTRL and left mouse button</source>
       <translation>Pritisnite CTRL i lijevu tipku miša</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::OpenSCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Pritisnite lijevu tipku miša</translation>
+    </message>
+    <message>
+      <source>Press right mouse button and move mouse</source>
+      <translation type="unfinished">Press right mouse button and move mouse</translation>
+    </message>
+    <message>
+      <source>Press left mouse button and move mouse</source>
+      <translation type="unfinished">Press left mouse button and move mouse</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button or SHIFT and right mouse button</source>
+      <translation type="unfinished">Press middle mouse button or SHIFT and right mouse button</translation>
     </message>
   </context>
   <context>
@@ -5510,24 +5930,32 @@ Kako želite nastaviti?</translation>
       <translation>svojstvo</translation>
     </message>
     <message>
+      <source>Auto expand</source>
+      <translation>Automatski proširi</translation>
+    </message>
+    <message>
       <source>Show all</source>
       <translation>Prikaži sve</translation>
-    </message>
-    <message>
-      <source>Add property</source>
-      <translation>Dodaj svojstvo</translation>
-    </message>
-    <message>
-      <source>Remove property</source>
-      <translation>Ukloni svojstvo</translation>
     </message>
     <message>
       <source>Expression...</source>
       <translation>Izraz...</translation>
     </message>
     <message>
-      <source>Auto expand</source>
-      <translation>Automatski proširi</translation>
+      <source>Add property</source>
+      <translation>Dodaj svojstvo</translation>
+    </message>
+    <message>
+      <source>Rename property group</source>
+      <translation type="unfinished">Rename property group</translation>
+    </message>
+    <message>
+      <source>Remove property</source>
+      <translation>Ukloni svojstvo</translation>
+    </message>
+    <message>
+      <source>Group name:</source>
+      <translation type="unfinished">Group name:</translation>
     </message>
   </context>
   <context>
@@ -5576,8 +6004,16 @@ Do you want to exit without saving your data?</source>
       <translation>Neobrađena FreeCAD iznimka.</translation>
     </message>
     <message>
+      <source>Unhandled std C++ exception.</source>
+      <translation>Neobrađena STD C++ iznimka.</translation>
+    </message>
+    <message>
       <source>Unhandled unknown C++ exception.</source>
       <translation>Neobrađena nepoznata C++ iznimka.</translation>
+    </message>
+    <message>
+      <source>&amp;Copy</source>
+      <translation>&amp;Kopiraj</translation>
     </message>
     <message>
       <source>&amp;Copy command</source>
@@ -5592,28 +6028,12 @@ Do you want to exit without saving your data?</source>
       <translation>Spremi povijest kao ...</translation>
     </message>
     <message>
-      <source>Insert file name...</source>
-      <translation>Umetni ime datoteke ...</translation>
-    </message>
-    <message>
-      <source>Save History</source>
+      <source>Save history</source>
       <translation>Spremi povijest</translation>
     </message>
     <message>
-      <source>Insert file name</source>
-      <translation>Umetni ime datoteke</translation>
-    </message>
-    <message>
-      <source>Unhandled std C++ exception.</source>
-      <translation>Neobrađena STD C++ iznimka.</translation>
-    </message>
-    <message>
-      <source>Word wrap</source>
-      <translation>Automatsko dovršavanje</translation>
-    </message>
-    <message>
-      <source>&amp;Copy</source>
-      <translation>&amp;Kopiraj</translation>
+      <source>Saves Python history across %1 sessions</source>
+      <translation>Spremi povijest Pythona u %1 sesiji</translation>
     </message>
     <message>
       <source>&amp;Paste</source>
@@ -5628,20 +6048,28 @@ Do you want to exit without saving your data?</source>
       <translation>Makni konsolu</translation>
     </message>
     <message>
+      <source>Insert file name...</source>
+      <translation>Umetni ime datoteke ...</translation>
+    </message>
+    <message>
+      <source>Word wrap</source>
+      <translation>Automatsko dovršavanje</translation>
+    </message>
+    <message>
+      <source>Save History</source>
+      <translation>Spremi povijest</translation>
+    </message>
+    <message>
       <source>Macro Files</source>
       <translation>Makro Datoteke</translation>
     </message>
     <message>
+      <source>Insert file name</source>
+      <translation>Umetni ime datoteke</translation>
+    </message>
+    <message>
       <source>All Files</source>
       <translation>Sve datoteke</translation>
-    </message>
-    <message>
-      <source>Save history</source>
-      <translation>Spremi povijest</translation>
-    </message>
-    <message>
-      <source>Saves Python history across %1 sessions</source>
-      <translation>Spremi povijest Pythona u %1 sesiji</translation>
     </message>
   </context>
   <context>
@@ -5672,6 +6100,10 @@ Do you want to exit without saving your data?</source>
   </context>
   <context>
     <name>Gui::RecentMacrosAction</name>
+    <message>
+      <source>none</source>
+      <translation>nijedan</translation>
+    </message>
     <message>
       <source>Run macro %1 (Shift+click to edit) shortcut: %2</source>
       <translation>Pokreni prečac makronaredbe %1 (Shift + klik za uređivanje): %2
@@ -5707,6 +6139,25 @@ Do you want to exit without saving your data?</source>
     </message>
   </context>
   <context>
+    <name>Gui::SearchBar</name>
+    <message>
+      <source>Previous</source>
+      <translation>Prethodno</translation>
+    </message>
+    <message>
+      <source>Next</source>
+      <translation type="unfinished">Next</translation>
+    </message>
+    <message>
+      <source>Case sensitive</source>
+      <translation type="unfinished">Case sensitive</translation>
+    </message>
+    <message>
+      <source>Whole words</source>
+      <translation type="unfinished">Whole words</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::SelectModule</name>
     <message>
       <source>Select module</source>
@@ -5724,10 +6175,6 @@ Do you want to exit without saving your data?</source>
   <context>
     <name>Gui::StdCmdDescription</name>
     <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
-    <message>
       <source>Des&amp;cription</source>
       <translation>Opi&amp;s</translation>
     </message>
@@ -5738,10 +6185,6 @@ Do you want to exit without saving your data?</source>
   </context>
   <context>
     <name>Gui::StdCmdDownloadOnlineHelp</name>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
     <message>
       <source>Download online help</source>
       <translation>Preuzimanje on-line pomoći</translation>
@@ -5781,10 +6224,6 @@ Do you want to specify another directory?</source>
   </context>
   <context>
     <name>Gui::StdCmdPythonHelp</name>
-    <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
     <message>
       <source>Automatic python modules documentation</source>
       <translation>Automatska dokumentacija python modula</translation>
@@ -5834,28 +6273,28 @@ Do you want to specify another directory?</source>
       <translation>Tekst oznaka</translation>
     </message>
     <message>
-      <source>Recompute after commit</source>
-      <translation>Izračunajte ponovo nakon počinjenja</translation>
-    </message>
-    <message>
-      <source>Remove</source>
-      <translation>Ukloniti</translation>
-    </message>
-    <message>
       <source>Edit</source>
       <translation>Uredi</translation>
-    </message>
-    <message>
-      <source>Remove all</source>
-      <translation>Ukloni sve</translation>
     </message>
     <message>
       <source>Hide</source>
       <translation>Sakrij</translation>
     </message>
     <message>
+      <source>Remove</source>
+      <translation>Ukloniti</translation>
+    </message>
+    <message>
+      <source>Remove all</source>
+      <translation>Ukloni sve</translation>
+    </message>
+    <message>
       <source>Box select</source>
       <translation>Odabir u okviru</translation>
+    </message>
+    <message>
+      <source>Recompute after commit</source>
+      <translation>Izračunajte ponovo nakon počinjenja</translation>
     </message>
     <message>
       <source>On-top when selected</source>
@@ -5864,6 +6303,14 @@ Do you want to specify another directory?</source>
   </context>
   <context>
     <name>Gui::TaskView::TaskAppearance</name>
+    <message>
+      <source>Appearance</source>
+      <translation>Izgled</translation>
+    </message>
+    <message>
+      <source>Document window:</source>
+      <translation>Prozor dokumenta:</translation>
+    </message>
     <message>
       <source>Plot mode:</source>
       <translation>nacrt:</translation>
@@ -5879,14 +6326,6 @@ Do you want to specify another directory?</source>
     <message>
       <source>Transparency:</source>
       <translation>Prozirnost:</translation>
-    </message>
-    <message>
-      <source>Appearance</source>
-      <translation>Izgled</translation>
-    </message>
-    <message>
-      <source>Document window:</source>
-      <translation>Prozor dokumenta:</translation>
     </message>
   </context>
   <context>
@@ -5950,6 +6389,25 @@ Do you want to specify another directory?</source>
     </message>
   </context>
   <context>
+    <name>Gui::TinkerCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Pritisnite lijevu tipku miša</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button</source>
+      <translation>Pritisnite srednju tipku miša</translation>
+    </message>
+    <message>
+      <source>Press right mouse button</source>
+      <translation type="unfinished">Press right mouse button</translation>
+    </message>
+    <message>
+      <source>Scroll middle mouse button</source>
+      <translation>Kotrljajte kotačić na mišu</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::TouchpadNavigationStyle</name>
     <message>
       <source>Press left mouse button</source>
@@ -5971,28 +6429,24 @@ Do you want to specify another directory?</source>
   <context>
     <name>Gui::Translator</name>
     <message>
-      <source>English</source>
-      <translation>Engleski</translation>
+      <source>Afrikaans</source>
+      <translation>Afrički</translation>
     </message>
     <message>
-      <source>German</source>
-      <translation>Njemački</translation>
+      <source>Arabic</source>
+      <translation>Arapski</translation>
     </message>
     <message>
-      <source>Spanish</source>
-      <translation>Španjolski</translation>
+      <source>Basque</source>
+      <translation>Baskijski</translation>
     </message>
     <message>
-      <source>French</source>
-      <translation>Francuski</translation>
+      <source>Bulgarian</source>
+      <translation>Bugarski</translation>
     </message>
     <message>
-      <source>Italian</source>
-      <translation>Talijanski</translation>
-    </message>
-    <message>
-      <source>Japanese</source>
-      <translation>Japanski</translation>
+      <source>Catalan</source>
+      <translation>Katalonski</translation>
     </message>
     <message>
       <source>Chinese Simplified</source>
@@ -6003,24 +6457,80 @@ Do you want to specify another directory?</source>
       <translation>Kineski (tradicionalni)</translation>
     </message>
     <message>
+      <source>Croatian</source>
+      <translation>Hrvatski</translation>
+    </message>
+    <message>
+      <source>Czech</source>
+      <translation>Češki</translation>
+    </message>
+    <message>
+      <source>Dutch</source>
+      <translation>Nizozemski</translation>
+    </message>
+    <message>
+      <source>English</source>
+      <translation>Engleski</translation>
+    </message>
+    <message>
+      <source>Filipino</source>
+      <translation>Filipinski</translation>
+    </message>
+    <message>
+      <source>Finnish</source>
+      <translation>Finski</translation>
+    </message>
+    <message>
+      <source>French</source>
+      <translation>Francuski</translation>
+    </message>
+    <message>
+      <source>Galician</source>
+      <translation>Galicijski</translation>
+    </message>
+    <message>
+      <source>German</source>
+      <translation>Njemački</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Grčki</translation>
+    </message>
+    <message>
+      <source>Hungarian</source>
+      <translation>Mađarski</translation>
+    </message>
+    <message>
+      <source>Indonesian</source>
+      <translation>Indonezijski</translation>
+    </message>
+    <message>
+      <source>Italian</source>
+      <translation>Talijanski</translation>
+    </message>
+    <message>
+      <source>Japanese</source>
+      <translation>Japanski</translation>
+    </message>
+    <message>
+      <source>Kabyle</source>
+      <translation>Kabilski</translation>
+    </message>
+    <message>
       <source>Korean</source>
       <translation>Korejski</translation>
     </message>
     <message>
-      <source>Russian</source>
-      <translation>Ruski</translation>
-    </message>
-    <message>
-      <source>Swedish</source>
-      <translation>Švedski</translation>
-    </message>
-    <message>
-      <source>Afrikaans</source>
-      <translation>Afrički</translation>
+      <source>Lithuanian</source>
+      <translation>Litvanski</translation>
     </message>
     <message>
       <source>Norwegian</source>
       <translation>Norveški</translation>
+    </message>
+    <message>
+      <source>Polish</source>
+      <translation>Poljski</translation>
     </message>
     <message>
       <source>Portuguese, Brazilian</source>
@@ -6031,100 +6541,52 @@ Do you want to specify another directory?</source>
       <translation>Portugalski</translation>
     </message>
     <message>
-      <source>Dutch</source>
-      <translation>Nizozemski</translation>
-    </message>
-    <message>
-      <source>Ukrainian</source>
-      <translation>Ukrajinski</translation>
-    </message>
-    <message>
-      <source>Finnish</source>
-      <translation>Finski</translation>
-    </message>
-    <message>
-      <source>Croatian</source>
-      <translation>Hrvatski</translation>
-    </message>
-    <message>
-      <source>Polish</source>
-      <translation>Poljski</translation>
-    </message>
-    <message>
-      <source>Czech</source>
-      <translation>Češki</translation>
-    </message>
-    <message>
-      <source>Hungarian</source>
-      <translation>Mađarski</translation>
-    </message>
-    <message>
       <source>Romanian</source>
       <translation>Rumunjski</translation>
+    </message>
+    <message>
+      <source>Russian</source>
+      <translation>Ruski</translation>
     </message>
     <message>
       <source>Slovak</source>
       <translation>Slovački</translation>
     </message>
     <message>
-      <source>Turkish</source>
-      <translation>Turski</translation>
-    </message>
-    <message>
       <source>Slovenian</source>
       <translation>Slovenski</translation>
     </message>
     <message>
-      <source>Basque</source>
-      <translation>Baskijski</translation>
+      <source>Spanish</source>
+      <translation>Španjolski</translation>
     </message>
     <message>
-      <source>Catalan</source>
-      <translation>Katalonski</translation>
+      <source>Spanish, Argentina</source>
+      <translation>španjolski, Argentina</translation>
     </message>
     <message>
-      <source>Galician</source>
-      <translation>Galicijski</translation>
+      <source>Swedish</source>
+      <translation>Švedski</translation>
     </message>
     <message>
-      <source>Kabyle</source>
-      <translation>Kabilski</translation>
+      <source>Turkish</source>
+      <translation>Turski</translation>
     </message>
     <message>
-      <source>Filipino</source>
-      <translation>Filipinski</translation>
-    </message>
-    <message>
-      <source>Indonesian</source>
-      <translation>Indonezijski</translation>
-    </message>
-    <message>
-      <source>Lithuanian</source>
-      <translation>Litvanski</translation>
+      <source>Ukrainian</source>
+      <translation>Ukrajinski</translation>
     </message>
     <message>
       <source>Valencian</source>
       <translation>Valencijski</translation>
     </message>
     <message>
-      <source>Arabic</source>
-      <translation>Arapski</translation>
-    </message>
-    <message>
       <source>Vietnamese</source>
       <translation>Vijetnamski</translation>
     </message>
     <message>
-      <source>Bulgarian</source>
-      <translation>Bugarski</translation>
-    </message>
-    <message>
-      <source>Greek</source>
-      <translation>Grčki</translation>
-    </message>
-    <message>
-      <source>Spanish, Argentina</source>
-      <translation>španjolski, Argentina</translation>
+      <source>Georgian</source>
+      <translation type="unfinished">Georgian</translation>
     </message>
   </context>
   <context>
@@ -6144,40 +6606,12 @@ Do you want to specify another directory?</source>
   <context>
     <name>Gui::TreeWidget</name>
     <message>
-      <source>Create group...</source>
-      <translation>Napravi grupu ...</translation>
+      <source>Search...</source>
+      <translation>Pretraživanje...</translation>
     </message>
     <message>
-      <source>Create a group</source>
-      <translation>Napravite grupu</translation>
-    </message>
-    <message>
-      <source>Group</source>
-      <translation>Grupa</translation>
-    </message>
-    <message>
-      <source>Rename</source>
-      <translation>Preimenuj</translation>
-    </message>
-    <message>
-      <source>Rename object</source>
-      <translation>Preimenovanje objekta</translation>
-    </message>
-    <message>
-      <source>Labels &amp; Attributes</source>
-      <translation>Etikete i atributi</translation>
-    </message>
-    <message>
-      <source>Application</source>
-      <translation>Aplikacija</translation>
-    </message>
-    <message>
-      <source>Finish editing</source>
-      <translation>Završi uređivanje</translation>
-    </message>
-    <message>
-      <source>Finish editing object</source>
-      <translation>Završi uređivanje objekta</translation>
+      <source>Search for objects</source>
+      <translation>Potraga za objektima</translation>
     </message>
     <message>
       <source>Activate document</source>
@@ -6188,36 +6622,20 @@ Do you want to specify another directory?</source>
       <translation>Aktiviraj dokument %1</translation>
     </message>
     <message>
-      <source>Skip recomputes</source>
-      <translation>Preskoči recomputes</translation>
+      <source>Group</source>
+      <translation>Grupa</translation>
     </message>
     <message>
-      <source>Enable or disable recomputations of document</source>
-      <translation>Omogućavanje ili onemogućavanje recomputations dokumenta</translation>
-    </message>
-    <message>
-      <source>Mark to recompute</source>
-      <translation>Označi za preračunaj</translation>
-    </message>
-    <message>
-      <source>Mark this object to be recomputed</source>
-      <translation>Označi ovaj objekt da se preračuna</translation>
-    </message>
-    <message>
-      <source>%1, Internal name: %2</source>
-      <translation>%1, Interni naziv: %2</translation>
-    </message>
-    <message>
-      <source>Search...</source>
-      <translation>Pretraživanje...</translation>
-    </message>
-    <message>
-      <source>Search for objects</source>
-      <translation>Potraga za objektima</translation>
+      <source>Labels &amp; Attributes</source>
+      <translation>Etikete i atributi</translation>
     </message>
     <message>
       <source>Description</source>
       <translation>Opis</translation>
+    </message>
+    <message>
+      <source>Application</source>
+      <translation>Aplikacija</translation>
     </message>
     <message>
       <source>Show hidden items</source>
@@ -6236,6 +6654,38 @@ Do you want to specify another directory?</source>
       <translation>Sakrij stavku u stablu prikaza</translation>
     </message>
     <message>
+      <source>Create group...</source>
+      <translation>Napravi grupu ...</translation>
+    </message>
+    <message>
+      <source>Create a group</source>
+      <translation>Napravite grupu</translation>
+    </message>
+    <message>
+      <source>Rename</source>
+      <translation>Preimenuj</translation>
+    </message>
+    <message>
+      <source>Rename object</source>
+      <translation>Preimenovanje objekta</translation>
+    </message>
+    <message>
+      <source>Finish editing</source>
+      <translation>Završi uređivanje</translation>
+    </message>
+    <message>
+      <source>Finish editing object</source>
+      <translation>Završi uređivanje objekta</translation>
+    </message>
+    <message>
+      <source>Add dependent objects to selection</source>
+      <translation type="unfinished">Add dependent objects to selection</translation>
+    </message>
+    <message>
+      <source>Adds all dependent objects to the selection</source>
+      <translation type="unfinished">Adds all dependent objects to the selection</translation>
+    </message>
+    <message>
       <source>Close document</source>
       <translation>Zatvori dokument</translation>
     </message>
@@ -6252,12 +6702,28 @@ Do you want to specify another directory?</source>
       <translation>Učitajte ponovo djelomično učitan dokument</translation>
     </message>
     <message>
+      <source>Skip recomputes</source>
+      <translation>Preskoči recomputes</translation>
+    </message>
+    <message>
+      <source>Enable or disable recomputations of document</source>
+      <translation>Omogućavanje ili onemogućavanje recomputations dokumenta</translation>
+    </message>
+    <message>
       <source>Allow partial recomputes</source>
       <translation>Djelomično omogući preračunavanje</translation>
     </message>
     <message>
       <source>Enable or disable recomputating editing object when 'skip recomputation' is enabled</source>
       <translation>Omogućite ili onemogućite ponovno računanje objekta uređivanja kada je omogućeno 'preskoči ponovno računanje'</translation>
+    </message>
+    <message>
+      <source>Mark to recompute</source>
+      <translation>Označi za preračunaj</translation>
+    </message>
+    <message>
+      <source>Mark this object to be recomputed</source>
+      <translation>Označi ovaj objekt da se preračuna</translation>
     </message>
     <message>
       <source>Recompute object</source>
@@ -6272,6 +6738,10 @@ Do you want to specify another directory?</source>
       <translation>(ali mora biti izvršen)
 
 </translation>
+    </message>
+    <message>
+      <source>%1, Internal name: %2</source>
+      <translation>%1, Interni naziv: %2</translation>
     </message>
   </context>
   <context>
@@ -6376,6 +6846,10 @@ Do you want to specify another directory?</source>
       <translation>Z:</translation>
     </message>
     <message>
+      <source>Grid Snap in</source>
+      <translation> Uhvati Rešetku u</translation>
+    </message>
+    <message>
       <source>0.1 mm</source>
       <translation>0.1 mm</translation>
     </message>
@@ -6431,10 +6905,6 @@ Do you want to specify another directory?</source>
       <source>5 m </source>
       <translation>5 m </translation>
     </message>
-    <message>
-      <source>Grid Snap in</source>
-      <translation> Uhvati Rešetku u</translation>
-    </message>
   </context>
   <context>
     <name>PropertyListDialog</name>
@@ -6450,6 +6920,10 @@ Do you want to specify another directory?</source>
   <context>
     <name>QDockWidget</name>
     <message>
+      <source>Toolbox</source>
+      <translation>Traka s alatima</translation>
+    </message>
+    <message>
       <source>Tree view</source>
       <translation>Pogled hijerarhije</translation>
     </message>
@@ -6462,28 +6936,24 @@ Do you want to specify another directory?</source>
       <translation>Pregled selekcije</translation>
     </message>
     <message>
-      <source>Report view</source>
-      <translation>Pregled izvještaja</translation>
-    </message>
-    <message>
       <source>Combo View</source>
       <translation>Kombinirani pregled</translation>
     </message>
     <message>
-      <source>Toolbox</source>
-      <translation>Traka s alatima</translation>
+      <source>Report view</source>
+      <translation>Pregled izvještaja</translation>
     </message>
     <message>
       <source>Python console</source>
       <translation>Python konzola</translation>
     </message>
     <message>
-      <source>Display properties</source>
-      <translation>Prikaz svojstava</translation>
-    </message>
-    <message>
       <source>DAG View</source>
       <translation>DAG pogled</translation>
+    </message>
+    <message>
+      <source>Display properties</source>
+      <translation>Prikaz svojstava</translation>
     </message>
   </context>
   <context>
@@ -6497,12 +6967,20 @@ Do you want to specify another directory?</source>
       <translation>Prikaz</translation>
     </message>
     <message>
+      <source>Workbenches</source>
+      <translation>Radne površine</translation>
+    </message>
+    <message>
       <source>Unknown filetype</source>
       <translation>Nepoznata vrsta datoteke</translation>
     </message>
     <message>
       <source>Cannot open unknown filetype: %1</source>
       <translation>Ne mogu otvoriti nepoznatu vrstu datoteke: %1</translation>
+    </message>
+    <message>
+      <source>Export failed</source>
+      <translation>Izvoz neuspješan</translation>
     </message>
     <message>
       <source>Cannot save to unknown filetype: %1</source>
@@ -6525,6 +7003,18 @@ Do you want to specify another directory?</source>
       <translation>Otvori dokument</translation>
     </message>
     <message>
+      <source>Error</source>
+      <translation>Pogreška</translation>
+    </message>
+    <message>
+      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
+      <translation>Pojavile su se pogreške tijekom učitavanja datoteke. Neki podaci su možda promijenjeni ili nisu oporavljeni potuno. Pogledajte prikaz izvješća za više podataka o objektima koji su uključeni.</translation>
+    </message>
+    <message>
+      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
+      <translation>Došlo je do ozbiljnih pogrešaka prilikom učitavanja datoteke. Neki su podaci možda izmijenjeni ili uopće nisu vraćeni. Spremanje projekta najvjerojatnije će rezultirati gubitkom podataka.</translation>
+    </message>
+    <message>
       <source>Import file</source>
       <translation>Uvoz datoteke</translation>
     </message>
@@ -6537,12 +7027,80 @@ Do you want to specify another directory?</source>
       <translation>Ispis ...</translation>
     </message>
     <message>
+      <source>Exporting PDF...</source>
+      <translation>Izvoz PDF ...</translation>
+    </message>
+    <message>
+      <source>Unsaved document</source>
+      <translation>Nespremljeni dokument</translation>
+    </message>
+    <message>
+      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
+      <translation>Izvezeni objekt sadrži vanjsku poveznicu. Prije izvoza spremite dokument barem jednom.
+</translation>
+    </message>
+    <message>
+      <source>Delete failed</source>
+      <translation>Brisanje nije uspjelo</translation>
+    </message>
+    <message>
+      <source>Dependency error</source>
+      <translation>Pogreška ovisnosti</translation>
+    </message>
+    <message>
+      <source>Copy selected</source>
+      <translation>Kopira odabrano</translation>
+    </message>
+    <message>
+      <source>Copy active document</source>
+      <translation>Kopira aktivni dokument</translation>
+    </message>
+    <message>
+      <source>Copy all documents</source>
+      <translation>Kopira sve dokumente </translation>
+    </message>
+    <message>
+      <source>Paste</source>
+      <translation>Umetni</translation>
+    </message>
+    <message>
+      <source>Expression error</source>
+      <translation>Pogreška izraza</translation>
+    </message>
+    <message>
+      <source>Failed to parse some of the expressions.
+Please check the Report View for more details.</source>
+      <translation>Analiza nekih izraza nije uspjela.
+Molimo provjerite Pregled izvještaja za više pojedinosti.
+</translation>
+    </message>
+    <message>
+      <source>Failed to paste expressions</source>
+      <translation>Umetanje izraza nije uspjelo</translation>
+    </message>
+    <message>
       <source>Cannot load workbench</source>
       <translation>Ne mogu učitati radni stol</translation>
     </message>
     <message>
       <source>A general error occurred while loading the workbench</source>
       <translation>Došlo je do pogreške tijekom učitavanja radnog stola</translation>
+    </message>
+    <message>
+      <source>Wrong selection</source>
+      <translation>Pogrešan odabir</translation>
+    </message>
+    <message>
+      <source>Only one object selected. Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Samo jedan objekt odabran. Odaberite dva objekta.
+Pazite jer točke odabira utječu.</translation>
+    </message>
+    <message>
+      <source>Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Odaberite dva objekta.
+Pazite jer točke odabira utječu.</translation>
     </message>
     <message>
       <source>Save views...</source>
@@ -6567,6 +7125,10 @@ Do you want to specify another directory?</source>
     <message>
       <source>Save frozen views</source>
       <translation>Spremi smrznute poglede</translation>
+    </message>
+    <message>
+      <source>Frozen views</source>
+      <translation>Smrznuti pogled</translation>
     </message>
     <message>
       <source>Restore views</source>
@@ -6634,6 +7196,10 @@ Do you want to continue?</source>
       <translation>Izaberite jedinicu:</translation>
     </message>
     <message>
+      <source>New boolean item</source>
+      <translation>Nova boolean jedinica</translation>
+    </message>
+    <message>
       <source>Rename group</source>
       <translation>Preimenuj grupu</translation>
     </message>
@@ -6654,16 +7220,138 @@ Do you want to continue?</source>
       <translation>Promjena vrijednosti</translation>
     </message>
     <message>
-      <source>Save document under new filename...</source>
-      <translation>Spremi dokument pod novim imenom ...</translation>
+      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
+
+</source>
+      <translation>Otkriven je identičan fizički put. To može prouzročiti neželjeno prepisivanje postojećeg dokumenta!
+
+</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to continue?</source>
+      <translation>Jeste li sigurni da želite nastaviti?</translation>
+    </message>
+    <message>
+      <source>Please check report view for more...</source>
+      <translation type="unfinished">Please check report view for more...</translation>
+    </message>
+    <message>
+      <source>Physical path:</source>
+      <translation type="unfinished">Physical path:</translation>
+    </message>
+    <message>
+      <source>Document:</source>
+      <translation type="unfinished">Document:</translation>
+    </message>
+    <message>
+      <source>Path:</source>
+      <translation>Put:</translation>
+    </message>
+    <message>
+      <source>Identical physical path</source>
+      <translation>Identičan fizički put
+
+</translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Ne mogu spremiti dokument</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Došlo je do problema pri pokušaju spremanja datoteke. To može biti zato što neke od nadređenih mapa ne postoje, ili nemate dovoljna dopuštenja ili iz drugih razloga. Detalji o grešci:
+
+"%1"
+
+Želite li datoteku spremiti pod drugim imenom?</translation>
     </message>
     <message>
       <source>Saving aborted</source>
       <translation>Spremanje prekinuto</translation>
     </message>
     <message>
-      <source>Unsaved document</source>
-      <translation>Nespremljeni dokument</translation>
+      <source>Save dependent files</source>
+      <translation>Spremite ovisne datoteke</translation>
+    </message>
+    <message>
+      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
+      <translation>Datoteka sadrži vanjske ovisnosti. Želite li spremiti i ovisne datoteke?
+</translation>
+    </message>
+    <message>
+      <source>Saving document failed</source>
+      <translation>Spremanje dokumenta nije uspjelo</translation>
+    </message>
+    <message>
+      <source>Save document under new filename...</source>
+      <translation>Spremi dokument pod novim imenom ...</translation>
+    </message>
+    <message>
+      <source>Save %1 Document</source>
+      <translation>Spremi %1 dokument</translation>
+    </message>
+    <message>
+      <source>Document</source>
+      <translation>Dokument</translation>
+    </message>
+    <message>
+      <source>Failed to save document</source>
+      <translation>Spremanje dokumenta nije uspjelo</translation>
+    </message>
+    <message>
+      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
+      <translation>Dokumenti sadrže cikličke ovisnosti. Želite li ih još spremiti?</translation>
+    </message>
+    <message>
+      <source>Save a copy of the document under new filename...</source>
+      <translation>Spremanje kopije dokumenta pod novi naziv datoteke...</translation>
+    </message>
+    <message>
+      <source>%1 document (*.FCStd)</source>
+      <translation>%1 dokument (*.FCStd)</translation>
+    </message>
+    <message>
+      <source>Document not closable</source>
+      <translation>Dokument nije moguće zatvoriti</translation>
+    </message>
+    <message>
+      <source>The document is not closable for the moment.</source>
+      <translation>Dokument trenutno nije moguće zatvoriti.</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Dokument nije spremljen</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>Dokument%1 nije bilo moguće spremiti. Želite li otkazati zatvaranje?
+
+</translation>
+    </message>
+    <message>
+      <source>Undo</source>
+      <translation>Poništi promjenu</translation>
+    </message>
+    <message>
+      <source>Redo</source>
+      <translation>Vrati</translation>
+    </message>
+    <message>
+      <source>There are grouped transactions in the following documents with other preceding transactions</source>
+      <translation>U sljedećim dokumentima su grupirane transakcije s ostalim prethodnim transakcijama</translation>
+    </message>
+    <message>
+      <source>Choose 'Yes' to roll back all preceding transactions.
+Choose 'No' to roll back in the active document only.
+Choose 'Abort' to abort</source>
+      <translation>Odaberite "Da" da biste povukli sve prethodne transakcije.
+Odaberite "Ne" da biste se vratili samo u aktivnom dokumentu.
+Odaberite "Prekini" za prekid
+</translation>
     </message>
     <message>
       <source>Save Macro</source>
@@ -6688,6 +7376,10 @@ Do you want to continue?</source>
     <message>
       <source>Outer</source>
       <translation>Vanjski</translation>
+    </message>
+    <message>
+      <source>Split</source>
+      <translation>Razdjeli</translation>
     </message>
     <message>
       <source>No Browser</source>
@@ -6732,64 +7424,6 @@ Please open a browser window and type in: http://localhost:%1.</source>
       <translation>Ne mogu pronaći datoteku %1 niti u %2 niti u %3</translation>
     </message>
     <message>
-      <source>Save %1 Document</source>
-      <translation>Spremi %1 dokument</translation>
-    </message>
-    <message>
-      <source>%1 document (*.FCStd)</source>
-      <translation>%1 dokument (*.FCStd)</translation>
-    </message>
-    <message>
-      <source>Document not closable</source>
-      <translation>Dokument nije moguće zatvoriti</translation>
-    </message>
-    <message>
-      <source>The document is not closable for the moment.</source>
-      <translation>Dokument trenutno nije moguće zatvoriti.</translation>
-    </message>
-    <message>
-      <source>No OpenGL</source>
-      <translation>Nema OpenGL</translation>
-    </message>
-    <message>
-      <source>This system does not support OpenGL</source>
-      <translation>Ovaj sustav ne podržava OpenGL</translation>
-    </message>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
-    <message>
-      <source>Unable to load documentation.
-In order to load it Qt 4.4 or higher is required.</source>
-      <translation>Nije moguće učitati dokument. 
-Da bi se to omogućilo potreban je Qt verzije 4,4 ili više.</translation>
-    </message>
-    <message>
-      <source>Exporting PDF...</source>
-      <translation>Izvoz PDF ...</translation>
-    </message>
-    <message>
-      <source>Wrong selection</source>
-      <translation>Pogrešan odabir</translation>
-    </message>
-    <message>
-      <source>Only one object selected. Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Samo jedan objekt odabran. Odaberite dva objekta.
-Pazite jer točke odabira utječu.</translation>
-    </message>
-    <message>
-      <source>Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Odaberite dva objekta.
-Pazite jer točke odabira utječu.</translation>
-    </message>
-    <message>
-      <source>New boolean item</source>
-      <translation>Nova boolean jedinica</translation>
-    </message>
-    <message>
       <source>Navigation styles</source>
       <translation>Načini navigacije</translation>
     </message>
@@ -6810,24 +7444,24 @@ Pazite jer točke odabira utječu.</translation>
       <translation>Želite li spremiti promjene u dokumentu '%1' prije zatvaranja?</translation>
     </message>
     <message>
+      <source>Do you want to save your changes to document before closing?</source>
+      <translation>Želite li spremiti promjene u dokumentu  prije zatvaranja?</translation>
+    </message>
+    <message>
       <source>If you don't save, your changes will be lost.</source>
       <translation>Ako ne spremite, vaše promjene bit će izgubljene.</translation>
     </message>
     <message>
-      <source>Save a copy of the document under new filename...</source>
-      <translation>Spremanje kopije dokumenta pod novi naziv datoteke...</translation>
+      <source>Apply answer to all</source>
+      <translation>Primijenite odgovor na sve</translation>
     </message>
     <message>
-      <source>Frozen views</source>
-      <translation>Smrznuti pogled</translation>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 dokument(a) nije spremljeno</translation>
     </message>
     <message>
-      <source>Saving document failed</source>
-      <translation>Spremanje dokumenta nije uspjelo</translation>
-    </message>
-    <message>
-      <source>Document</source>
-      <translation>Dokument</translation>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Neke dokumente nije bilo moguće spremiti. Želite li otkazati zatvaranje?</translation>
     </message>
     <message>
       <source>Delete macro</source>
@@ -6850,14 +7484,6 @@ Pazite jer točke odabira utječu.</translation>
       <translation>%1 nije prazan, izbrisati njegov sadržaj?</translation>
     </message>
     <message>
-      <source>Export failed</source>
-      <translation>Izvoz neuspješan</translation>
-    </message>
-    <message>
-      <source>Split</source>
-      <translation>Razdjeli</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Translacija:</translation>
     </message>
@@ -6872,50 +7498,6 @@ Pazite jer točke odabira utječu.</translation>
     <message>
       <source>Edit text</source>
       <translation>Uredi tekst</translation>
-    </message>
-    <message>
-      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
-      <translation>Izvezeni objekt sadrži vanjsku poveznicu. Prije izvoza spremite dokument barem jednom.
-</translation>
-    </message>
-    <message>
-      <source>Delete failed</source>
-      <translation>Brisanje nije uspjelo</translation>
-    </message>
-    <message>
-      <source>Dependency error</source>
-      <translation>Pogreška ovisnosti</translation>
-    </message>
-    <message>
-      <source>Copy selected</source>
-      <translation>Kopira odabrano</translation>
-    </message>
-    <message>
-      <source>Copy active document</source>
-      <translation>Kopira aktivni dokument</translation>
-    </message>
-    <message>
-      <source>Copy all documents</source>
-      <translation>Kopira sve dokumente </translation>
-    </message>
-    <message>
-      <source>Paste</source>
-      <translation>Umetni</translation>
-    </message>
-    <message>
-      <source>Expression error</source>
-      <translation>Pogreška izraza</translation>
-    </message>
-    <message>
-      <source>Failed to parse some of the expressions.
-Please check the Report View for more details.</source>
-      <translation>Analiza nekih izraza nije uspjela.
-Molimo provjerite Pregled izvještaja za više pojedinosti.
-</translation>
-    </message>
-    <message>
-      <source>Failed to paste expressions</source>
-      <translation>Umetanje izraza nije uspjelo</translation>
     </message>
     <message>
       <source>Simple group</source>
@@ -6980,148 +7562,92 @@ podcrtavanje, ne smije se započeti s znamenkom.</translation>
       <translation>Nije moguće dodati svojstvo u '%1':%2</translation>
     </message>
     <message>
-      <source>Save dependent files</source>
-      <translation>Spremite ovisne datoteke</translation>
-    </message>
-    <message>
-      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
-      <translation>Datoteka sadrži vanjske ovisnosti. Želite li spremiti i ovisne datoteke?
-</translation>
-    </message>
-    <message>
-      <source>Failed to save document</source>
-      <translation>Spremanje dokumenta nije uspjelo</translation>
-    </message>
-    <message>
-      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
-      <translation>Dokumenti sadrže cikličke ovisnosti. Želite li ih još spremiti?</translation>
-    </message>
-    <message>
-      <source>Undo</source>
-      <translation>Poništi promjenu</translation>
-    </message>
-    <message>
-      <source>Redo</source>
-      <translation>Vrati</translation>
-    </message>
-    <message>
-      <source>There are grouped transactions in the following documents with other preceding transactions</source>
-      <translation>U sljedećim dokumentima su grupirane transakcije s ostalim prethodnim transakcijama</translation>
-    </message>
-    <message>
-      <source>Choose 'Yes' to roll back all preceding transactions.
-Choose 'No' to roll back in the active document only.
-Choose 'Abort' to abort</source>
-      <translation>Odaberite "Da" da biste povukli sve prethodne transakcije.
-Odaberite "Ne" da biste se vratili samo u aktivnom dokumentu.
-Odaberite "Prekini" za prekid
-</translation>
-    </message>
-    <message>
-      <source>Do you want to save your changes to document before closing?</source>
-      <translation>Želite li spremiti promjene u dokumentu  prije zatvaranja?</translation>
-    </message>
-    <message>
-      <source>Apply answer to all</source>
-      <translation>Primijenite odgovor na sve</translation>
-    </message>
-    <message>
       <source>Drag &amp; drop failed</source>
       <translation>Povlačenje i ispuštanje nije uspjelo</translation>
+    </message>
+    <message>
+      <source>Setup configurable object</source>
+      <translation type="unfinished">Setup configurable object</translation>
+    </message>
+    <message>
+      <source>Select which object to copy or exclude when configuration changes. All external linked objects are excluded by default.</source>
+      <translation type="unfinished">Select which object to copy or exclude when configuration changes. All external linked objects are excluded by default.</translation>
+    </message>
+    <message>
+      <source>Please select which objects to copy when the configuration is changed</source>
+      <translation type="unfinished">Please select which objects to copy when the configuration is changed</translation>
+    </message>
+    <message>
+      <source>Apply to all</source>
+      <translation type="unfinished">Apply to all</translation>
+    </message>
+    <message>
+      <source>Apply the setting to all links. Or, uncheck this
+option to apply only to this link.</source>
+      <translation type="unfinished">Apply the setting to all links. Or, uncheck this
+option to apply only to this link.</translation>
+    </message>
+    <message>
+      <source>Copy on change</source>
+      <translation type="unfinished">Copy on change</translation>
+    </message>
+    <message>
+      <source>Enable</source>
+      <translation>Omogući</translation>
+    </message>
+    <message>
+      <source>Enable auto copy of linked object when its configuration is changed</source>
+      <translation type="unfinished">Enable auto copy of linked object when its configuration is changed</translation>
+    </message>
+    <message>
+      <source>Tracking</source>
+      <translation>Praćenje</translation>
+    </message>
+    <message>
+      <source>Copy the linked object when its configuration is changed.
+Also auto redo the copy if the original linked object is changed.
+</source>
+      <translation type="unfinished">Copy the linked object when its configuration is changed.
+Also auto redo the copy if the original linked object is changed.
+</translation>
+    </message>
+    <message>
+      <source>Disable copy on change</source>
+      <translation type="unfinished">Disable copy on change</translation>
+    </message>
+    <message>
+      <source>Rerefresh configurable object</source>
+      <translation type="unfinished">Rerefresh configurable object</translation>
+    </message>
+    <message>
+      <source>Synchronize the original configurable source object by
+creating a new deep copy. Note that any changes made to
+the current copy will be lost.
+</source>
+      <translation type="unfinished">Synchronize the original configurable source object by
+creating a new deep copy. Note that any changes made to
+the current copy will be lost.
+</translation>
+    </message>
+    <message>
+      <source>Toggle array elements</source>
+      <translation type="unfinished">Toggle array elements</translation>
+    </message>
+    <message>
+      <source>Change whether show each link array element as individual objects</source>
+      <translation type="unfinished">Change whether show each link array element as individual objects</translation>
+    </message>
+    <message>
+      <source>Transform at the origin of the placement</source>
+      <translation type="unfinished">Transform at the origin of the placement</translation>
     </message>
     <message>
       <source>Override colors...</source>
       <translation>Nadjačava boje...</translation>
     </message>
     <message>
-      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
-
-</source>
-      <translation>Otkriven je identičan fizički put. To može prouzročiti neželjeno prepisivanje postojećeg dokumenta!
-
-</translation>
-    </message>
-    <message>
-      <source>Are you sure you want to continue?</source>
-      <translation>Jeste li sigurni da želite nastaviti?</translation>
-    </message>
-    <message>
-      <source>
-
-Please check report view for more...</source>
-      <translation>Molimo provjerite prikaz izvješća za više ...</translation>
-    </message>
-    <message>
-      <source>
-Document: </source>
-      <translation>Dokument: </translation>
-    </message>
-    <message>
-      <source>
-  Path: </source>
-      <translation>Put:</translation>
-    </message>
-    <message>
-      <source>Identical physical path</source>
-      <translation>Identičan fizički put
-
-</translation>
-    </message>
-    <message>
-      <source>Error</source>
-      <translation>Pogreška</translation>
-    </message>
-    <message>
-      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
-      <translation>Pojavile su se pogreške tijekom učitavanja datoteke. Neki podaci su možda promijenjeni ili nisu oporavljeni potuno. Pogledajte prikaz izvješća za više podataka o objektima koji su uključeni.</translation>
-    </message>
-    <message>
-      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
-      <translation>Došlo je do ozbiljnih pogrešaka prilikom učitavanja datoteke. Neki su podaci možda izmijenjeni ili uopće nisu vraćeni. Spremanje projekta najvjerojatnije će rezultirati gubitkom podataka.</translation>
-    </message>
-    <message>
-      <source>Workbenches</source>
-      <translation>Radne površine</translation>
-    </message>
-    <message>
-      <source>
-
-Physical path: </source>
-      <translation>Fizički put:</translation>
-    </message>
-    <message>
-      <source>Could not save document</source>
-      <translation>Ne mogu spremiti dokument</translation>
-    </message>
-    <message>
-      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
-
-"%1"
-
-Would you like to save the file with a different name?</source>
-      <translation>Došlo je do problema pri pokušaju spremanja datoteke. To može biti zato što neke od nadređenih mapa ne postoje, ili nemate dovoljna dopuštenja ili iz drugih razloga. Detalji o grešci:
-
-"%1"
-
-Želite li datoteku spremiti pod drugim imenom?</translation>
-    </message>
-    <message>
-      <source>Document not saved</source>
-      <translation>Dokument nije spremljen</translation>
-    </message>
-    <message>
-      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
-      <translation>Dokument%1 nije bilo moguće spremiti. Želite li otkazati zatvaranje?
-
-</translation>
-    </message>
-    <message>
-      <source>%1 Document(s) not saved</source>
-      <translation>%1 dokument(a) nije spremljeno</translation>
-    </message>
-    <message>
-      <source>Some documents could not be saved. Do you want to cancel closing?</source>
-      <translation>Neke dokumente nije bilo moguće spremiti. Želite li otkazati zatvaranje?</translation>
+      <source>Edit %1</source>
+      <translation>Uređivanje %1</translation>
     </message>
   </context>
   <context>
@@ -7138,10 +7664,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdBoxElementSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Box element selection</source>
       <translation>Odabir elemenata okvira</translation>
     </message>
@@ -7149,20 +7671,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdBoxSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Box selection</source>
       <translation>Pravokutno odabiranje</translation>
     </message>
   </context>
   <context>
     <name>StdCmdAbout</name>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
     <message>
       <source>&amp;About %1</source>
       <translation>&amp;O %1</translation>
@@ -7175,10 +7689,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdAboutQt</name>
     <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
-    <message>
       <source>About &amp;Qt</source>
       <translation>O &amp;Qt</translation>
     </message>
@@ -7189,10 +7699,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdActivateNextWindow</name>
-    <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
     <message>
       <source>Ne&amp;xt</source>
       <translation>Slijede&amp;ći</translation>
@@ -7205,10 +7711,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdActivatePrevWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
-    <message>
       <source>Pre&amp;vious</source>
       <translation>Pre&amp;thodni</translation>
     </message>
@@ -7219,10 +7721,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdAlignment</name>
-    <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
     <message>
       <source>Alignment...</source>
       <translation>Poravnavanje...</translation>
@@ -7235,10 +7733,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdArrangeIcons</name>
     <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
-    <message>
       <source>Arrange &amp;Icons</source>
       <translation>Rasporedi &amp;ikone</translation>
     </message>
@@ -7250,20 +7744,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdAxisCross</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Toggle axis cross</source>
       <translation>Pokaži ishodište</translation>
     </message>
   </context>
   <context>
     <name>StdCmdCascadeWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
     <message>
       <source>&amp;Cascade</source>
       <translation>Na&amp;slaži</translation>
@@ -7276,10 +7762,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdCloseActiveWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
-    <message>
       <source>Cl&amp;ose</source>
       <translation>Zatv&amp;ori</translation>
     </message>
@@ -7290,10 +7772,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdCloseAllWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
     <message>
       <source>Close Al&amp;l</source>
       <translation>Zatvori Sv&amp;e</translation>
@@ -7306,10 +7784,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdCommandLine</name>
     <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
-    <message>
       <source>Start command &amp;line...</source>
       <translation>Pokreni komandnu &amp;liniju ...</translation>
     </message>
@@ -7320,10 +7794,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdCopy</name>
-    <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
     <message>
       <source>C&amp;opy</source>
       <translation>K&amp;opiraj</translation>
@@ -7336,10 +7806,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdCut</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>&amp;Cut</source>
       <translation>&amp;Izreži</translation>
     </message>
@@ -7350,10 +7816,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdDelete</name>
-    <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
     <message>
       <source>&amp;Delete</source>
       <translation>&amp;Izbriši</translation>
@@ -7366,10 +7828,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdDemoMode</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>View turntable...</source>
       <translation>Prikaži okretnicu...</translation>
     </message>
@@ -7381,10 +7839,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdDependencyGraph</name>
     <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
-    <message>
       <source>Dependency graph...</source>
       <translation>Graf ovisnosti...</translation>
     </message>
@@ -7395,10 +7849,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdDlgCustomize</name>
-    <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
     <message>
       <source>Cu&amp;stomize...</source>
       <translation>Prilago&amp;dba...</translation>
@@ -7418,17 +7868,9 @@ Would you like to save the file with a different name?</source>
       <source>Opens a dialog to let you execute a recorded macro</source>
       <translation>Otvara dijalog kako bi Vam omogućio izvršavanje snimljenih makro naredbi</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgMacroExecuteDirect</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
     <message>
       <source>Execute macro</source>
       <translation>Izvrši makro</translation>
@@ -7448,17 +7890,9 @@ Would you like to save the file with a different name?</source>
       <source>Opens a dialog to record a macro</source>
       <translation>Otvara dijalog za snimanje makro naredbe</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgParameter</name>
-    <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
     <message>
       <source>E&amp;dit parameters ...</source>
       <translation>Ure&amp;đivanje parametara ...</translation>
@@ -7471,10 +7905,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdDlgPreferences</name>
     <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
-    <message>
       <source>&amp;Preferences ...</source>
       <translation>&amp;Postavke ...</translation>
     </message>
@@ -7486,10 +7916,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdDockViewMenu</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>Panels</source>
       <translation>Ploče</translation>
     </message>
@@ -7500,10 +7926,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdDrawStyle</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Draw style</source>
       <translation>Stil crtanja</translation>
@@ -7518,10 +7940,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdDuplicateSelection</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>Duplicate selection</source>
       <translation>Udvostruči odabir</translation>
     </message>
@@ -7532,10 +7950,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdEdit</name>
-    <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
     <message>
       <source>Toggle &amp;Edit mode</source>
       <translation>Uključi/isključi mod rada</translation>
@@ -7551,10 +7965,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdExport</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>&amp;Export...</source>
       <translation>Iz&amp;voz...</translation>
@@ -7575,20 +7985,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdExpression</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>Expression actions</source>
       <translation>Radnje izražavanja</translation>
     </message>
   </context>
   <context>
     <name>StdCmdFeatRecompute</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>&amp;Recompute</source>
       <translation>&amp;Ponovno proračunavanje</translation>
@@ -7600,10 +8002,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdFreeCADDonation</name>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
     <message>
       <source>Donate</source>
       <translation>Doniraj</translation>
@@ -7617,10 +8015,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdFreeCADFAQ</name>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
     <message>
       <source>FreeCAD FAQ</source>
       <translation>FreeCAD FAQ</translation>
@@ -7637,10 +8031,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdFreeCADForum</name>
     <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
-    <message>
       <source>FreeCAD Forum</source>
       <translation>FreeCAD Forum</translation>
     </message>
@@ -7655,10 +8045,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdFreeCADPowerUserHub</name>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
     <message>
       <source>Python scripting documentation</source>
       <translation>Python korisnička dokumentacija</translation>
@@ -7675,10 +8061,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdFreeCADUserHub</name>
     <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
-    <message>
       <source>Users documentation</source>
       <translation>Korisnička dokumentacija</translation>
     </message>
@@ -7689,10 +8071,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdFreeCADWebsite</name>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
     <message>
       <source>FreeCAD Website</source>
       <translation>FreeCAD Web stranica</translation>
@@ -7705,10 +8083,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdFreezeViews</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Freeze display</source>
       <translation>Zamrzni prikaz</translation>
     </message>
@@ -7719,10 +8093,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdGroup</name>
-    <message>
-      <source>Structure</source>
-      <translation>Konstrukcija</translation>
-    </message>
     <message>
       <source>Create group</source>
       <translation>Napravi grupu</translation>
@@ -7735,10 +8105,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdHideObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Hide all objects</source>
       <translation>Sakrij sve objekte</translation>
     </message>
@@ -7750,10 +8116,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdHideSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Hide selection</source>
       <translation>Sakrij odabir</translation>
     </message>
@@ -7764,10 +8126,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdImport</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>&amp;Import...</source>
       <translation>&amp;Uvoz...</translation>
@@ -7788,20 +8146,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdLinkActions</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>Link actions</source>
       <translation>Radnje poveznica</translation>
     </message>
   </context>
   <context>
     <name>StdCmdLinkImport</name>
-    <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
     <message>
       <source>Import links</source>
       <translation>Uvoz poveznica</translation>
@@ -7814,10 +8164,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdLinkImportAll</name>
     <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
-    <message>
       <source>Import all links</source>
       <translation>Uvoz svih poveznica</translation>
     </message>
@@ -7828,10 +8174,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdLinkMake</name>
-    <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
     <message>
       <source>Make link</source>
       <translation>Napravi poveznicu</translation>
@@ -7844,10 +8186,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdLinkMakeGroup</name>
     <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
-    <message>
       <source>Make link group</source>
       <translation>Napravite grupu poveznice</translation>
     </message>
@@ -7858,10 +8196,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdLinkMakeRelative</name>
-    <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
     <message>
       <source>Make sub-link</source>
       <translation>Napravite pod-vezu</translation>
@@ -7874,10 +8208,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdLinkReplace</name>
     <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
-    <message>
       <source>Replace with link</source>
       <translation>Zamijenite poveznicom</translation>
     </message>
@@ -7888,10 +8218,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdLinkSelectActions</name>
-    <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
     <message>
       <source>Link navigation</source>
       <translation>Link navigacija</translation>
@@ -7904,10 +8230,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdLinkSelectAllLinks</name>
     <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
-    <message>
       <source>Select all links</source>
       <translation>Odaberite sve poveznice</translation>
     </message>
@@ -7918,10 +8240,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdLinkSelectLinked</name>
-    <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
     <message>
       <source>Go to linked object</source>
       <translation>Idite na povezani objekt</translation>
@@ -7934,10 +8252,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdLinkSelectLinkedFinal</name>
     <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
-    <message>
       <source>Go to the deepest linked object</source>
       <translation>Idi do najdubljeg povezanog objekta</translation>
     </message>
@@ -7949,10 +8263,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdLinkUnlink</name>
-    <message>
-      <source>Link</source>
-      <translation>Poveznica</translation>
-    </message>
     <message>
       <source>Unlink</source>
       <translation>Prekini poveznicu</translation>
@@ -7967,10 +8277,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdMacroAttachDebugger</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Attach to remote debugger...</source>
       <translation>Dodajte na izdvojeni program za uklanjanje pogrešaka...</translation>
     </message>
@@ -7981,10 +8287,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdMacroStartDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
     <message>
       <source>Debug macro</source>
       <translation>Ispravljanje pogrešaka na makro naredbi</translation>
@@ -7997,10 +8299,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdMacroStepInto</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Step into</source>
       <translation>Korak u</translation>
     </message>
@@ -8008,20 +8306,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdMacroStepOver</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Step over</source>
       <translation>Korak preko</translation>
     </message>
   </context>
   <context>
     <name>StdCmdMacroStopDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
     <message>
       <source>Stop debugging</source>
       <translation>Zaustavi provjeru pogrešaka</translation>
@@ -8034,10 +8324,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdMacroStopRecord</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>S&amp;top macro recording</source>
       <translation>Zaus&amp;tavljanje snimanja makro naredbe</translation>
     </message>
@@ -8049,10 +8335,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdMeasureDistance</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>Measure distance</source>
       <translation>Mjerenje udaljenosti</translation>
     </message>
@@ -8060,24 +8342,16 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdMeasurementSimple</name>
     <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
+      <source>Measure distance</source>
+      <translation>Mjerenje udaljenosti</translation>
     </message>
     <message>
       <source>Measures distance between two selected objects</source>
       <translation>Mjeri udaljenost između dvaju odabranih objekata</translation>
     </message>
-    <message>
-      <source>Measure distance</source>
-      <translation>Mjerenje udaljenosti</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdMergeProjects</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>Merge project...</source>
       <translation>Spoji projekt ...</translation>
@@ -8087,20 +8361,16 @@ Would you like to save the file with a different name?</source>
       <translation>Spoji projekt</translation>
     </message>
     <message>
-      <source>Cannot merge project with itself.</source>
-      <translation>Ne mogu spojiti projekt sa samim sobom.</translation>
-    </message>
-    <message>
       <source>%1 document (*.FCStd)</source>
       <translation>%1 dokument (*.FCStd)</translation>
+    </message>
+    <message>
+      <source>Cannot merge project with itself.</source>
+      <translation>Ne mogu spojiti projekt sa samim sobom.</translation>
     </message>
   </context>
   <context>
     <name>StdCmdNew</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>&amp;New</source>
       <translation>&amp;Novi</translation>
@@ -8128,10 +8398,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdOnlineHelpWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
-    <message>
       <source>Help Website</source>
       <translation>Pomoć Web stranica</translation>
     </message>
@@ -8142,10 +8408,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdOpen</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>&amp;Open...</source>
       <translation>&amp;Otvori...</translation>
@@ -8174,10 +8436,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdPart</name>
     <message>
-      <source>Structure</source>
-      <translation>Konstrukcija</translation>
-    </message>
-    <message>
       <source>Create part</source>
       <translation>Stvori dio</translation>
     </message>
@@ -8188,10 +8446,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdPaste</name>
-    <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
     <message>
       <source>&amp;Paste</source>
       <translation>&amp;Zalijepi</translation>
@@ -8204,10 +8458,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdPlacement</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>Placement...</source>
       <translation>Postavljanje...</translation>
     </message>
@@ -8218,10 +8468,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdPrint</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>&amp;Print...</source>
       <translation>Is&amp;pis ...</translation>
@@ -8234,10 +8480,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdPrintPdf</name>
     <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
-    <message>
       <source>&amp;Export PDF...</source>
       <translation>PDF I&amp;zvoz...</translation>
     </message>
@@ -8248,10 +8490,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdPrintPreview</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>&amp;Print preview...</source>
       <translation>&amp;Pregled ispisa ...</translation>
@@ -8268,10 +8506,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdProjectInfo</name>
     <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
-    <message>
       <source>Project i&amp;nformation...</source>
       <translation>I&amp;nformacije o projektu ...</translation>
     </message>
@@ -8282,10 +8516,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdProjectUtil</name>
-    <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
     <message>
       <source>Project utility...</source>
       <translation>Korisne opcije projekta...</translation>
@@ -8298,10 +8528,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdPythonWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
-    <message>
       <source>Python Website</source>
       <translation>Python Web stranica</translation>
     </message>
@@ -8312,10 +8538,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdQuit</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>E&amp;xit</source>
       <translation>Iz&amp;laz</translation>
@@ -8328,20 +8550,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdRandomColor</name>
     <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
-    <message>
       <source>Random color</source>
       <translation>Random boja</translation>
     </message>
   </context>
   <context>
     <name>StdCmdRecentFiles</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>Recent files</source>
       <translation>Nedavne datoteke</translation>
@@ -8353,10 +8567,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdRecentMacros</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
     <message>
       <source>Recent macros</source>
       <translation>Nedavne makronaredbe
@@ -8373,10 +8583,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdRedo</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>&amp;Redo</source>
       <translation>&amp;Ponovi</translation>
     </message>
@@ -8388,10 +8594,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdRefresh</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>&amp;Refresh</source>
       <translation>&amp;Osvježi</translation>
     </message>
@@ -8401,11 +8603,18 @@ Would you like to save the file with a different name?</source>
     </message>
   </context>
   <context>
-    <name>StdCmdRevert</name>
+    <name>StdCmdReportBug</name>
     <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
+      <source>Report a bug</source>
+      <translation type="unfinished">Report a bug</translation>
     </message>
+    <message>
+      <source>Report a bug or suggest a feature</source>
+      <translation type="unfinished">Report a bug or suggest a feature</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdRevert</name>
     <message>
       <source>Revert</source>
       <translation>Vrati se</translation>
@@ -8418,10 +8627,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdSave</name>
     <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
-    <message>
       <source>&amp;Save</source>
       <translation>&amp;Spremi</translation>
     </message>
@@ -8432,10 +8637,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdSaveAll</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>Save All</source>
       <translation>Spremi sve</translation>
@@ -8448,10 +8649,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdSaveAs</name>
     <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
-    <message>
       <source>Save &amp;As...</source>
       <translation>Spremi k&amp;ao...</translation>
     </message>
@@ -8462,10 +8659,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdSaveCopy</name>
-    <message>
-      <source>File</source>
-      <translation>Datoteka</translation>
-    </message>
     <message>
       <source>Save a &amp;Copy...</source>
       <translation>Spremi kopiju &amp;Copy...</translation>
@@ -8478,10 +8671,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdSceneInspector</name>
     <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
-    <message>
       <source>Scene inspector...</source>
       <translation>Pregled scene...</translation>
     </message>
@@ -8492,10 +8681,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdSelBack</name>
-    <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
     <message>
       <source>&amp;Back</source>
       <translation>&amp;Natrag</translation>
@@ -8508,10 +8693,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdSelBoundingBox</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>&amp;Bounding box</source>
       <translation>&amp;Granični okvir</translation>
     </message>
@@ -8522,10 +8703,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdSelForward</name>
-    <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
     <message>
       <source>&amp;Forward</source>
       <translation>&amp;Naprijed</translation>
@@ -8538,10 +8715,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdSelectAll</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>Select &amp;All</source>
       <translation>Ozn&amp;ači sve</translation>
     </message>
@@ -8552,10 +8725,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdSelectVisibleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Select visible objects</source>
       <translation>Odaberi vidljive objekte</translation>
@@ -8568,10 +8737,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdSendToPythonConsole</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>&amp;Send to Python Console</source>
       <translation>&amp; Pošalji na Python Consolu</translation>
     </message>
@@ -8582,10 +8747,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdSetAppearance</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Appearance...</source>
       <translation>Izgled...</translation>
@@ -8598,10 +8759,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdShowObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Show all objects</source>
       <translation>Prikaži sve objekte</translation>
     </message>
@@ -8612,10 +8769,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdShowSelection</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Show selection</source>
       <translation>Prikaži odabir</translation>
@@ -8628,10 +8781,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdStatusBar</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>Status bar</source>
       <translation>Statusna traka</translation>
     </message>
@@ -8642,10 +8791,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdTextDocument</name>
-    <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
     <message>
       <source>Add text document</source>
       <translation>Dodajte tekstni dokument</translation>
@@ -8658,10 +8803,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdTextureMapping</name>
     <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
-    <message>
       <source>Texture mapping...</source>
       <translation>Mapiranje tekstura ...</translation>
     </message>
@@ -8672,10 +8813,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdTileWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
     <message>
       <source>&amp;Tile</source>
       <translation>&amp;Rasporedi</translation>
@@ -8688,20 +8825,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdToggleBreakpoint</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Toggle breakpoint</source>
       <translation>Uključi/isključi prijelomnu točku</translation>
     </message>
   </context>
   <context>
     <name>StdCmdToggleClipPlane</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Clipping plane</source>
       <translation>Ravni isječak</translation>
@@ -8714,10 +8843,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdToggleNavigation</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Toggle navigation/Edit mode</source>
       <translation>Toggle navigacija / Edit modu</translation>
     </message>
@@ -8728,10 +8853,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdToggleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Toggle all objects</source>
       <translation>Uključi / isključi sve objekte</translation>
@@ -8744,10 +8865,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdToggleSelectability</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Toggle selectability</source>
       <translation>Uključi/isključi mogućnost odabira</translation>
     </message>
@@ -8758,10 +8875,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdToggleVisibility</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Toggle visibility</source>
       <translation>Promjeni vidljivost</translation>
@@ -8774,10 +8887,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdToolBarMenu</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>Tool&amp;bars</source>
       <translation>Alatne tra&amp;ke</translation>
     </message>
@@ -8788,10 +8897,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdTransform</name>
-    <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
     <message>
       <source>Transform...</source>
       <translation>Transformacija ...</translation>
@@ -8804,10 +8909,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdTransformManip</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>Transform</source>
       <translation>Transformiraj</translation>
     </message>
@@ -8818,10 +8919,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdTreeCollapse</name>
-    <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
     <message>
       <source>Collapse selected item</source>
       <translation>Sažmi odabranu stavku</translation>
@@ -8834,10 +8931,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdTreeExpand</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>Expand selected item</source>
       <translation>Proširi odabrane stavke</translation>
     </message>
@@ -8848,10 +8941,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdTreeSelectAllInstances</name>
-    <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
     <message>
       <source>Select all instances</source>
       <translation>Odaberite sve instance</translation>
@@ -8864,10 +8953,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdTreeViewActions</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>TreeView actions</source>
       <translation>Akcije Stabla pogleda</translation>
     </message>
@@ -8879,10 +8964,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdUndo</name>
     <message>
-      <source>Edit</source>
-      <translation>Uredi</translation>
-    </message>
-    <message>
       <source>&amp;Undo</source>
       <translation>&amp;Poništi</translation>
     </message>
@@ -8893,10 +8974,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdUnitsCalculator</name>
-    <message>
-      <source>Tools</source>
-      <translation>Alati</translation>
-    </message>
     <message>
       <source>&amp;Units calculator...</source>
       <translation>&amp;Kalkulator Jedinica...</translation>
@@ -8920,10 +8997,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdUserInterface</name>
     <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
-    <message>
       <source>Dock views</source>
       <translation>Usidri poglede</translation>
     </message>
@@ -8934,10 +9007,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewBottom</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Bottom</source>
       <translation>Ispod</translation>
@@ -8950,10 +9019,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewCreate</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Create new view</source>
       <translation>Napravi novi pogled</translation>
     </message>
@@ -8964,10 +9029,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewDimetric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Dimetric</source>
       <translation>Dvometrički</translation>
@@ -8980,10 +9041,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewExample1</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Inventor example #1</source>
       <translation>Inventor primjer #1</translation>
     </message>
@@ -8994,10 +9051,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewExample2</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Inventor example #2</source>
       <translation>Inventor primjer #2</translation>
@@ -9010,10 +9063,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewExample3</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Inventor example #3</source>
       <translation>Inventor primjer #3</translation>
     </message>
@@ -9024,10 +9073,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewFitAll</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Fit all</source>
       <translation>Prikaži sve</translation>
@@ -9040,10 +9085,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewFitSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Fit selection</source>
       <translation>Prikaži odabir</translation>
     </message>
@@ -9055,10 +9096,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewFront</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Front</source>
       <translation>Ispred</translation>
     </message>
@@ -9069,10 +9106,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewHome</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Home</source>
       <translation>Početna</translation>
@@ -9087,10 +9120,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewIsometric</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Isometric</source>
       <translation>Izometrički</translation>
     </message>
@@ -9101,10 +9130,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewIvIssueCamPos</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Issue camera position</source>
       <translation>Upit za položaj kamere</translation>
@@ -9117,10 +9142,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewIvStereoInterleavedColumns</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Stereo Interleaved Columns</source>
       <translation>Stereo Interleaved Kolumne</translation>
     </message>
@@ -9131,10 +9152,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewIvStereoInterleavedRows</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Stereo Interleaved Rows</source>
       <translation>Stereo Interleaved redak</translation>
@@ -9147,10 +9164,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewIvStereoOff</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Stereo Off</source>
       <translation>Stereo Off</translation>
     </message>
@@ -9161,10 +9174,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewIvStereoQuadBuff</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Stereo quad buffer</source>
       <translation>Stereo quad tampon</translation>
@@ -9177,10 +9186,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewIvStereoRedGreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Stereo red/cyan</source>
       <translation>Stereotip crvene/cijan</translation>
     </message>
@@ -9191,10 +9196,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewLeft</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Left</source>
       <translation>Lijevo</translation>
@@ -9207,10 +9208,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewRear</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Rear</source>
       <translation>Iza</translation>
     </message>
@@ -9221,10 +9218,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewRestoreCamera</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Restore saved camera</source>
       <translation>Vrati spremljenu kameru</translation>
@@ -9237,10 +9230,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewRight</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Right</source>
       <translation>Desno</translation>
     </message>
@@ -9251,10 +9240,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewRotateLeft</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Rotate Left</source>
       <translation>Zaokreni lijevo</translation>
@@ -9267,10 +9252,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewRotateRight</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Rotate Right</source>
       <translation>Zaokreni desno</translation>
     </message>
@@ -9281,10 +9262,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewSaveCamera</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Save current camera</source>
       <translation>Spremi trenutnu kameru</translation>
@@ -9297,10 +9274,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewTop</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Top</source>
       <translation>Gore</translation>
     </message>
@@ -9311,10 +9284,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdViewTrimetric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Trimetric</source>
       <translation>Trimetrički</translation>
@@ -9327,10 +9296,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdViewVR</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>FreeCAD-VR</source>
       <translation>FreeCAD-VR</translation>
     </message>
@@ -9341,10 +9306,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdCmdWhatsThis</name>
-    <message>
-      <source>Help</source>
-      <translation>Pomoć</translation>
-    </message>
     <message>
       <source>&amp;What's This?</source>
       <translation>&amp;Što je ovo?</translation>
@@ -9357,10 +9318,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdWindows</name>
     <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
-    <message>
       <source>&amp;Windows...</source>
       <translation>&amp;Prozori ...</translation>
     </message>
@@ -9372,20 +9329,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdCmdWindowsMenu</name>
     <message>
-      <source>Window</source>
-      <translation>Prozor</translation>
-    </message>
-    <message>
       <source>Activates this window</source>
       <translation>Aktivira ovaj prozor</translation>
     </message>
   </context>
   <context>
     <name>StdCmdWorkbench</name>
-    <message>
-      <source>View</source>
-      <translation>Pregled</translation>
-    </message>
     <message>
       <source>Workbench</source>
       <translation>Workbench</translation>
@@ -9398,10 +9347,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdMainFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Fullscreen</source>
       <translation>Preko cijelog ekrana</translation>
     </message>
@@ -9413,10 +9358,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdOrthographicCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Orthographic view</source>
       <translation>Ortografski pogled</translation>
     </message>
@@ -9427,10 +9368,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdPerspectiveCamera</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Perspective view</source>
       <translation>Perspektivni pogled</translation>
@@ -9450,17 +9387,9 @@ Would you like to save the file with a different name?</source>
       <source>Expand active document and collapse all others</source>
       <translation>Proširivanje aktivnog dokumenta a sve druge sažeti</translation>
     </message>
-    <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
   </context>
   <context>
     <name>StdTreeDrag</name>
-    <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
     <message>
       <source>Initiate dragging</source>
       <translation>Pokrenite povlačenjem</translation>
@@ -9473,24 +9402,16 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdTreeMultiDocument</name>
     <message>
-      <source>Display all documents in the tree view</source>
-      <translation>Prikaži sve dokumente u pogledu grananja</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
-    <message>
       <source>Multi document</source>
       <translation>Više dokumenata</translation>
+    </message>
+    <message>
+      <source>Display all documents in the tree view</source>
+      <translation>Prikaži sve dokumente u pogledu grananja</translation>
     </message>
   </context>
   <context>
     <name>StdTreePreSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
     <message>
       <source>Pre-selection</source>
       <translation>Pred odabir</translation>
@@ -9503,10 +9424,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdTreeRecordSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
-    <message>
       <source>Record selection</source>
       <translation>Snimi odabir</translation>
     </message>
@@ -9517,10 +9434,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdTreeSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
     <message>
       <source>Go to selection</source>
       <translation>Idi na odabrane objekte</translation>
@@ -9533,24 +9446,16 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdTreeSingleDocument</name>
     <message>
-      <source>Only display the active document in the tree view</source>
-      <translation>Prikaži samo aktivni dokument u pogledu grananja</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
-    <message>
       <source>Single document</source>
       <translation>Jedan dokument</translation>
+    </message>
+    <message>
+      <source>Only display the active document in the tree view</source>
+      <translation>Prikaži samo aktivni dokument u pogledu grananja</translation>
     </message>
   </context>
   <context>
     <name>StdTreeSyncPlacement</name>
-    <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
     <message>
       <source>Sync placement</source>
       <translation>Sinkroniziranje položaja</translation>
@@ -9564,10 +9469,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdTreeSyncSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
-    <message>
       <source>Sync selection</source>
       <translation>Sinkroniziranje odabira</translation>
     </message>
@@ -9580,10 +9481,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdTreeSyncView</name>
     <message>
-      <source>TreeView</source>
-      <translation>Stablo pogleda</translation>
-    </message>
-    <message>
       <source>Sync view</source>
       <translation>Sinkroniziranje pogleda</translation>
     </message>
@@ -9595,20 +9492,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdViewBoxZoom</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Box zoom</source>
       <translation>Zumiranje u okvir</translation>
     </message>
   </context>
   <context>
     <name>StdViewDock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Docked</source>
       <translation>Usidren</translation>
@@ -9621,10 +9510,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdViewDockUndockFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Document window</source>
       <translation>Prozor dokumenta</translation>
     </message>
@@ -9635,10 +9520,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdViewFullscreen</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Fullscreen</source>
       <translation>Preko cijelog ekrana</translation>
@@ -9651,10 +9532,6 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdViewScreenShot</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Save picture...</source>
       <translation>Spremi sliku...</translation>
     </message>
@@ -9665,10 +9542,6 @@ Would you like to save the file with a different name?</source>
   </context>
   <context>
     <name>StdViewUndock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Undocked</source>
       <translation>Odsidren</translation>
@@ -9681,20 +9554,12 @@ Would you like to save the file with a different name?</source>
   <context>
     <name>StdViewZoomIn</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
-    <message>
       <source>Zoom In</source>
       <translation>Zumirati unutra</translation>
     </message>
   </context>
   <context>
     <name>StdViewZoomOut</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standardni pogled</translation>
-    </message>
     <message>
       <source>Zoom Out</source>
       <translation>Zumirati van</translation>
@@ -9713,12 +9578,12 @@ Jeste li sigurni da želite nastaviti?
 </translation>
     </message>
     <message>
-      <source>Object dependencies</source>
-      <translation>Zavisnosti objekta</translation>
-    </message>
-    <message>
       <source>These items are selected for deletion, but are not in the active document.</source>
       <translation>Ove su stavke odabrane za brisanje, ali nisu u aktivnom dokumentu.</translation>
+    </message>
+    <message>
+      <source>Object dependencies</source>
+      <translation>Zavisnosti objekta</translation>
     </message>
   </context>
   <context>
@@ -9739,36 +9604,20 @@ Jeste li sigurni da želite nastaviti?
       <translation>Normalni mod</translation>
     </message>
     <message>
-      <source>Wireframe</source>
-      <translation>Žičana mreža</translation>
-    </message>
-    <message>
-      <source>Wireframe mode</source>
-      <translation>Žičana mreža mod</translation>
-    </message>
-    <message>
-      <source>Flat lines</source>
-      <translation>Ravne linije</translation>
-    </message>
-    <message>
-      <source>Flat lines mode</source>
-      <translation>Način Ravne linije</translation>
-    </message>
-    <message>
-      <source>Shaded</source>
-      <translation>Osijenčeno</translation>
-    </message>
-    <message>
-      <source>Shaded mode</source>
-      <translation>Način sjenčanja</translation>
-    </message>
-    <message>
       <source>Points</source>
       <translation>Točke</translation>
     </message>
     <message>
       <source>Points mode</source>
       <translation>Način Točaka</translation>
+    </message>
+    <message>
+      <source>Wireframe</source>
+      <translation>Žičana mreža</translation>
+    </message>
+    <message>
+      <source>Wireframe mode</source>
+      <translation>Žičana mreža mod</translation>
     </message>
     <message>
       <source>Hidden line</source>
@@ -9785,6 +9634,22 @@ Jeste li sigurni da želite nastaviti?
     <message>
       <source>No shading mode</source>
       <translation>Način bez sjenčanja</translation>
+    </message>
+    <message>
+      <source>Shaded</source>
+      <translation>Osijenčeno</translation>
+    </message>
+    <message>
+      <source>Shaded mode</source>
+      <translation>Način sjenčanja</translation>
+    </message>
+    <message>
+      <source>Flat lines</source>
+      <translation>Ravne linije</translation>
+    </message>
+    <message>
+      <source>Flat lines mode</source>
+      <translation>Način Ravne linije</translation>
     </message>
   </context>
   <context>
@@ -9825,12 +9690,12 @@ Molimo provjerite Pregled izvještaja za više pojedinosti.
   <context>
     <name>Std_Revert</name>
     <message>
-      <source>This will discard all the changes since last file save.</source>
-      <translation>Ovo će odbaciti sve promjene nakon posljednjeg spremanja datoteke.</translation>
-    </message>
-    <message>
       <source>Revert document</source>
       <translation>Vratiti dokument</translation>
+    </message>
+    <message>
+      <source>This will discard all the changes since last file save.</source>
+      <translation>Ovo će odbaciti sve promjene nakon posljednjeg spremanja datoteke.</translation>
     </message>
     <message>
       <source>Do you want to continue?</source>
@@ -9896,6 +9761,10 @@ Molimo provjerite Pregled izvještaja za više pojedinosti.
       <translation>Standardni pogledi</translation>
     </message>
     <message>
+      <source>Axonometric</source>
+      <translation>Aksonometrijski</translation>
+    </message>
+    <message>
       <source>&amp;Stereo</source>
       <translation>&amp;Stereo</translation>
     </message>
@@ -9948,40 +9817,8 @@ Molimo provjerite Pregled izvještaja za više pojedinosti.
       <translation>Specijalne radnje</translation>
     </message>
     <message>
-      <source>Axonometric</source>
-      <translation>Aksonometrijski</translation>
-    </message>
-  </context>
-  <context>
-    <name>testClass</name>
-    <message>
-      <source>test</source>
-      <translation>test</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-size:20pt; font-weight:600;"&gt;iisTaskPanel&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;span style=" font-size:12pt;"&gt;Created for Qt 4.3.x&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;www.ii-system.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt; &lt;span style=" font-size:20pt; font-weight:600;"&gt;iisTaskPanel&lt;/span&gt; &lt;/p&gt;&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt; &lt;span style=" font-size:12pt;"&gt;Kreirano za Qt 4.3.x&lt;/span&gt; &lt;/p&gt;&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt; www.ii-system.com &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Choose the style of the Task Panel</source>
-      <translation>Odaberite stil Radne ploče</translation>
-    </message>
-    <message>
-      <source>Default</source>
-      <translation>Inicijalno</translation>
-    </message>
-    <message>
-      <source>Windows XP</source>
-      <translation>Windows XP</translation>
+      <source>Link actions</source>
+      <translation>Radnje poveznica</translation>
     </message>
   </context>
 </TS>

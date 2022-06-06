@@ -83,16 +83,16 @@
       <translation type="unfinished">Position</translation>
     </message>
     <message>
+      <source>Enum</source>
+      <translation type="unfinished">Enum</translation>
+    </message>
+    <message>
       <source>Base</source>
       <translation>Cơ bản</translation>
     </message>
   </context>
   <context>
     <name>CmdTestConsoleOutput</name>
-    <message>
-      <source>Standard-Test</source>
-      <translation>Kiểm tra - Tiêu chuẩn</translation>
-    </message>
     <message>
       <source>Test console output</source>
       <translation>Kiểm tra đầu ra của bàn điều khiển</translation>
@@ -101,20 +101,12 @@
   <context>
     <name>CmdViewMeasureClearAll</name>
     <message>
-      <source>Measure</source>
-      <translation>Đo đạc</translation>
-    </message>
-    <message>
       <source>Clear measurement</source>
       <translation>Xóa phép đo</translation>
     </message>
   </context>
   <context>
     <name>CmdViewMeasureToggleAll</name>
-    <message>
-      <source>Measure</source>
-      <translation>Đo đạc</translation>
-    </message>
     <message>
       <source>Toggle measurement</source>
       <translation>Bật/Tắt phép đo</translation>
@@ -187,6 +179,10 @@
       <translation>Biến đổi</translation>
     </message>
     <message>
+      <source>Toggle array elements</source>
+      <translation type="unfinished">Toggle array elements</translation>
+    </message>
+    <message>
       <source>Link Transform</source>
       <translation type="unfinished">Link Transform</translation>
     </message>
@@ -196,10 +192,77 @@
     </message>
   </context>
   <context>
+    <name>CommandGroup</name>
+    <message>
+      <source>File</source>
+      <translation>Tập tin</translation>
+    </message>
+    <message>
+      <source>Edit</source>
+      <translation>Chỉnh sửa</translation>
+    </message>
+    <message>
+      <source>Help</source>
+      <translation>Trợ giúp</translation>
+    </message>
+    <message>
+      <source>Link</source>
+      <translation>Liên kết</translation>
+    </message>
+    <message>
+      <source>Tools</source>
+      <translation>Công cụ</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Chế độ xem</translation>
+    </message>
+    <message>
+      <source>Window</source>
+      <translation>Cửa sổ</translation>
+    </message>
+    <message>
+      <source>Standard</source>
+      <translation>Tiêu chuẩn</translation>
+    </message>
+    <message>
+      <source>Macros</source>
+      <translation>Macro</translation>
+    </message>
+    <message>
+      <source>Macro</source>
+      <translation>Macro</translation>
+    </message>
+    <message>
+      <source>Structure</source>
+      <translation>Kết cấu</translation>
+    </message>
+    <message>
+      <source>Standard-Test</source>
+      <translation>Kiểm tra - Tiêu chuẩn</translation>
+    </message>
+    <message>
+      <source>Standard-View</source>
+      <translation>Chế độ xem-chuẩn</translation>
+    </message>
+    <message>
+      <source>TreeView</source>
+      <translation type="unfinished">TreeView</translation>
+    </message>
+    <message>
+      <source>Measure</source>
+      <translation>Đo đạc</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
       <translation>Sự chuyển động Spaceball</translation>
+    </message>
+    <message>
+      <source>Global Sensitivity:</source>
+      <translation>Global Sensitivity:</translation>
     </message>
     <message>
       <source>Dominant Mode</source>
@@ -233,10 +296,6 @@
       <source>Reverse</source>
       <translation>Đảo ngược</translation>
     </message>
-    <message>
-      <source>Global Sensitivity:</source>
-      <translation>Global Sensitivity:</translation>
-    </message>
   </context>
   <context>
     <name>DlgExpressionInput</name>
@@ -249,16 +308,16 @@
       <translation>Kết quả:</translation>
     </message>
     <message>
-      <source>Ok</source>
-      <translation>Ok</translation>
-    </message>
-    <message>
       <source>&amp;Clear</source>
       <translation>&amp;Clear</translation>
     </message>
     <message>
       <source>Revert to last calculated value (as constant)</source>
       <translation>Revert to last calculated value (as constant)</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>Ok</translation>
     </message>
   </context>
   <context>
@@ -311,6 +370,10 @@
     <message>
       <source>none</source>
       <translation>không có</translation>
+    </message>
+    <message>
+      <source>Press a keyboard shortcut</source>
+      <translation type="unfinished">Press a keyboard shortcut</translation>
     </message>
   </context>
   <context>
@@ -414,13 +477,6 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
   </context>
   <context>
-    <name>Gui::Command</name>
-    <message>
-      <source>Standard</source>
-      <translation>Tiêu chuẩn</translation>
-    </message>
-  </context>
-  <context>
     <name>Gui::ContainerDialog</name>
     <message>
       <source>&amp;OK</source>
@@ -464,28 +520,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Giới thiệu</translation>
     </message>
     <message>
-      <source>Revision number</source>
-      <translation>Số lần sửa đổi</translation>
-    </message>
-    <message>
       <source>Version</source>
       <translation>Phiên bản</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>Đồng ý</translation>
-    </message>
-    <message>
-      <source/>
-      <translation type="unfinished"/>
+      <source>Revision number</source>
+      <translation>Số lần sửa đổi</translation>
     </message>
     <message>
       <source>Release date</source>
       <translation>Ngày phát hành</translation>
-    </message>
-    <message>
-      <source>Copy to clipboard</source>
-      <translation>Sao chép vào clipboard</translation>
     </message>
     <message>
       <source>Operating system</source>
@@ -496,28 +540,24 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Kích thước từ</translation>
     </message>
     <message>
+      <source>Copy to clipboard</source>
+      <translation>Sao chép vào clipboard</translation>
+    </message>
+    <message>
       <source>License</source>
       <translation>Giấy phép</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>Đồng ý</translation>
+    </message>
+    <message>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::AboutDialog</name>
-    <message>
-      <source>Libraries</source>
-      <translation>Thư viện</translation>
-    </message>
-    <message>
-      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
-      <translation>Phần mềm này sử dụng thành phần mã nguồn mở có quyền tác giả và các quyền sở hữu thuộc về chủ sở hữu tương ứng:</translation>
-    </message>
-    <message>
-      <source>License</source>
-      <translation>Giấy phép</translation>
-    </message>
-    <message>
-      <source>Collection</source>
-      <translation>Collection</translation>
-    </message>
     <message>
       <source>Credits</source>
       <extracomment>Header for the Credits tab of the About screen</extracomment>
@@ -537,17 +577,44 @@ while doing a left or right click and move the mouse up or down</source>
       <extracomment>Header for the list of companies/organizations in the Credits list.</extracomment>
       <translation type="unfinished">Organizations</translation>
     </message>
+    <message>
+      <source>License</source>
+      <translation>Giấy phép</translation>
+    </message>
+    <message>
+      <source>Libraries</source>
+      <translation>Thư viện</translation>
+    </message>
+    <message>
+      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
+      <translation>Phần mềm này sử dụng thành phần mã nguồn mở có quyền tác giả và các quyền sở hữu thuộc về chủ sở hữu tương ứng:</translation>
+    </message>
+    <message>
+      <source>Collection</source>
+      <translation>Collection</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::ApplicationCache</name>
+    <message>
+      <source>Cache directory</source>
+      <translation type="unfinished">Cache directory</translation>
+    </message>
+    <message>
+      <source>The cache directory %1 exceeds the size of %2.</source>
+      <translation type="unfinished">The cache directory %1 exceeds the size of %2.</translation>
+    </message>
+    <message>
+      <source>Do you want to clear it now?</source>
+      <translation type="unfinished">Do you want to clear it now?</translation>
+    </message>
+    <message>
+      <source>Warning: Please make sure that this is the only running %1 instance and that no documents are opened as this may result into data loss!</source>
+      <translation type="unfinished">Warning: Please make sure that this is the only running %1 instance and that no documents are opened as this may result into data loss!</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::ButtonModel</name>
-    <message>
-      <source>Button %1</source>
-      <translation>Nút %1</translation>
-    </message>
-    <message>
-      <source>Out Of Range</source>
-      <translation>Ngoài phạm vi</translation>
-    </message>
     <message>
       <source> "</source>
       <translation> "</translation>
@@ -555,6 +622,14 @@ while doing a left or right click and move the mouse up or down</source>
     <message>
       <source>"</source>
       <translation>"</translation>
+    </message>
+    <message>
+      <source>Button %1</source>
+      <translation>Nút %1</translation>
+    </message>
+    <message>
+      <source>Out Of Range</source>
+      <translation>Ngoài phạm vi</translation>
     </message>
   </context>
   <context>
@@ -599,12 +674,12 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Xén X</translation>
     </message>
     <message>
-      <source>Flip</source>
-      <translation>Đảo ngược</translation>
-    </message>
-    <message>
       <source>Offset</source>
       <translation>Offset</translation>
+    </message>
+    <message>
+      <source>Flip</source>
+      <translation>Đảo ngược</translation>
     </message>
     <message>
       <source>Clipping Y</source>
@@ -645,16 +720,28 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Xoay chế độ xem</translation>
     </message>
     <message>
+      <source>Angle</source>
+      <translation>Góc</translation>
+    </message>
+    <message>
+      <source>-90°</source>
+      <translation>-90°</translation>
+    </message>
+    <message>
+      <source>90°</source>
+      <translation>90°</translation>
+    </message>
+    <message>
       <source>Speed</source>
       <translation>Tốc độ</translation>
     </message>
     <message>
-      <source>Maximum</source>
-      <translation>Tối đa</translation>
-    </message>
-    <message>
       <source>Minimum</source>
       <translation>Tối thiểu</translation>
+    </message>
+    <message>
+      <source>Maximum</source>
+      <translation>Tối đa</translation>
     </message>
     <message>
       <source>Fullscreen</source>
@@ -669,28 +756,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation> s</translation>
     </message>
     <message>
-      <source>Angle</source>
-      <translation>Góc</translation>
-    </message>
-    <message>
-      <source>90°</source>
-      <translation>90°</translation>
-    </message>
-    <message>
-      <source>-90°</source>
-      <translation>-90°</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Phát</translation>
     </message>
     <message>
-      <source>Stop</source>
-      <translation>Dừng</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Đóng</translation>
+    </message>
+    <message>
+      <source>Stop</source>
+      <translation>Dừng</translation>
     </message>
   </context>
   <context>
@@ -765,24 +840,24 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Xác thực</translation>
     </message>
     <message>
-      <source>Password:</source>
-      <translation>Mật khẩu:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Username:</source>
-      <translation>Tên người dùng:</translation>
-    </message>
-    <message>
       <source>Site:</source>
       <translation>Công trường xây dựng:</translation>
     </message>
     <message>
       <source>%1 at %2</source>
       <translation>%1 tại %2</translation>
+    </message>
+    <message>
+      <source>Username:</source>
+      <translation>Tên người dùng:</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Mật khẩu:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -812,6 +887,32 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     </message>
   </context>
   <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePack</name>
+    <message>
+      <source>Create New Preference Pack</source>
+      <translation type="unfinished">Create New Preference Pack</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Tên</translation>
+    </message>
+    <message>
+      <source>Property group templates</source>
+      <translation type="unfinished">Property group templates</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePackImp</name>
+    <message>
+      <source>Pack already exists</source>
+      <translation type="unfinished">Pack already exists</translation>
+    </message>
+    <message>
+      <source>A preference pack with that name already exists. Do you want to overwrite it?</source>
+      <translation type="unfinished">A preference pack with that name already exists. Do you want to overwrite it?</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::Dialog::DlgCustomActions</name>
     <message>
       <source>Macros</source>
@@ -826,32 +927,32 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Macro:</translation>
     </message>
     <message>
-      <source>...</source>
-      <translation>...</translation>
-    </message>
-    <message>
-      <source>Pixmap</source>
-      <translation>Pixmap</translation>
-    </message>
-    <message>
-      <source>Accelerator:</source>
-      <translation>Phím tăng tốc:</translation>
-    </message>
-    <message>
-      <source>What's this:</source>
-      <translation>Đây là gì:</translation>
-    </message>
-    <message>
-      <source>Status text:</source>
-      <translation>Văn bản trạng thái:</translation>
+      <source>Menu text:</source>
+      <translation>Các chữ trên bảng chọn:</translation>
     </message>
     <message>
       <source>Tool tip:</source>
       <translation>Mẹo sử dụng công cụ:</translation>
     </message>
     <message>
-      <source>Menu text:</source>
-      <translation>Các chữ trên bảng chọn:</translation>
+      <source>Status text:</source>
+      <translation>Văn bản trạng thái:</translation>
+    </message>
+    <message>
+      <source>What's this:</source>
+      <translation>Đây là gì:</translation>
+    </message>
+    <message>
+      <source>Accelerator:</source>
+      <translation>Phím tăng tốc:</translation>
+    </message>
+    <message>
+      <source>Pixmap</source>
+      <translation>Pixmap</translation>
+    </message>
+    <message>
+      <source>...</source>
+      <translation>...</translation>
     </message>
     <message>
       <source>Add</source>
@@ -875,14 +976,6 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     <message>
       <source>Macros</source>
       <translation>Macro</translation>
-    </message>
-    <message>
-      <source>No macro</source>
-      <translation>Không có macro</translation>
-    </message>
-    <message>
-      <source>No macros found.</source>
-      <translation>Không tìm thấy macro.</translation>
     </message>
     <message>
       <source>Macro not found</source>
@@ -950,10 +1043,6 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Bàn Phím</translation>
     </message>
     <message>
-      <source>Description:</source>
-      <translation>Mô tả:</translation>
-    </message>
-    <message>
       <source>&amp;Category:</source>
       <translation>&amp;Thể loại:</translation>
     </message>
@@ -982,6 +1071,10 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Alt+A</translation>
     </message>
     <message>
+      <source>Clear</source>
+      <translation>Xóa</translation>
+    </message>
+    <message>
       <source>&amp;Reset</source>
       <translation>&amp;Đặt lại</translation>
     </message>
@@ -998,12 +1091,12 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Alt+S</translation>
     </message>
     <message>
-      <source/>
-      <translation type="unfinished"/>
+      <source>Description:</source>
+      <translation>Mô tả:</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Xóa</translation>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -1025,12 +1118,12 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Nhiều lối tắt được xác định</translation>
     </message>
     <message>
-      <source>Already defined shortcut</source>
-      <translation>Phím tắt đã được định nghĩa rồi</translation>
-    </message>
-    <message>
       <source>The shortcut '%1' is defined more than once. This could result in unexpected behaviour.</source>
       <translation>Phím tắt '%1' được định nghĩa nhiều hơn một lần. Điều này có thể dẫn đến ứng xử không như mong muốn.</translation>
+    </message>
+    <message>
+      <source>Already defined shortcut</source>
+      <translation>Phím tắt đã được định nghĩa rồi</translation>
     </message>
     <message>
       <source>The shortcut '%1' is already assigned to '%2'.</source>
@@ -1055,8 +1148,16 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Thanh công cụ</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Lưu ý:&lt;/span&gt; Các thay đổi sẽ hoạt động khi bạn tải bàn làm việc thích hợp vào lần tới &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>New...</source>
+      <translation>Mới...</translation>
+    </message>
+    <message>
+      <source>Rename...</source>
+      <translation>Đổi tên...</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Xóa</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -1075,14 +1176,6 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>&lt;b&gt; Di chuyển mục đã chọn lên một cấp. &lt;/ b&gt; &lt;p&gt; Điều này cũng sẽ thay đổi cấp độ của mục gốc. &lt;/ p&gt;</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Di chuyển xuống</translation>
-    </message>
-    <message>
-      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
-      <translation>&lt;b&gt; Di chuyển mục đã chọn xuống. &lt;/ b&gt; &lt;p&gt; Mục sẽ được di chuyển trong cấp độ đã được phân cấp. &lt;/ p&gt;</translation>
-    </message>
-    <message>
       <source>Move up</source>
       <translation>Di chuyển lên</translation>
     </message>
@@ -1091,16 +1184,20 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>&lt;b&gt; Di chuyển mục đã chọn lên. &lt;/ b&gt; &lt;p&gt; Mục sẽ được di chuyển trong cấp độ đã được phân cấp. &lt;/ p&gt;</translation>
     </message>
     <message>
-      <source>New...</source>
-      <translation>Mới...</translation>
+      <source>Move down</source>
+      <translation>Di chuyển xuống</translation>
     </message>
     <message>
-      <source>Rename...</source>
-      <translation>Đổi tên...</translation>
+      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
+      <translation>&lt;b&gt; Di chuyển mục đã chọn xuống. &lt;/ b&gt; &lt;p&gt; Mục sẽ được di chuyển trong cấp độ đã được phân cấp. &lt;/ p&gt;</translation>
     </message>
     <message>
-      <source>Delete</source>
-      <translation>Xóa</translation>
+      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Lưu ý:&lt;/span&gt; Các thay đổi sẽ hoạt động khi bạn tải bàn làm việc thích hợp vào lần tới &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Global</source>
+      <translation>Chung</translation>
     </message>
     <message>
       <source>Icon</source>
@@ -1113,6 +1210,10 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     <message>
       <source>&lt;Separator&gt;</source>
       <translation>&lt;Dấu phân cách&gt;</translation>
+    </message>
+    <message>
+      <source>%1 module not loaded</source>
+      <translation>%1 module not loaded</translation>
     </message>
     <message>
       <source>New toolbar</source>
@@ -1137,14 +1238,6 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     <message>
       <source/>
       <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Global</source>
-      <translation>Chung</translation>
-    </message>
-    <message>
-      <source>%1 module not loaded</source>
-      <translation>%1 module not loaded</translation>
     </message>
   </context>
   <context>
@@ -1176,6 +1269,10 @@ If this is not ticked, then the property must be uniquely named, and it is acces
   <context>
     <name>Gui::Dialog::DlgCustomizeSpaceball</name>
     <message>
+      <source>Spaceball Buttons</source>
+      <translation>Nút Spaceball</translation>
+    </message>
+    <message>
       <source>No Spaceball Present</source>
       <translation>Hiện tại không có Spaceball</translation>
     </message>
@@ -1184,16 +1281,12 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Nút bấm</translation>
     </message>
     <message>
-      <source>Print Reference</source>
-      <translation>In tham chiếu</translation>
-    </message>
-    <message>
-      <source>Spaceball Buttons</source>
-      <translation>Nút Spaceball</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Đặt lại</translation>
+    </message>
+    <message>
+      <source>Print Reference</source>
+      <translation>In tham chiếu</translation>
     </message>
   </context>
   <context>
@@ -1203,20 +1296,16 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Hiển thị thuộc tính</translation>
     </message>
     <message>
-      <source>Display</source>
-      <translation>Hiển thị</translation>
+      <source>Viewing mode</source>
+      <translation>Chế độ xem</translation>
     </message>
     <message>
-      <source>Transparency:</source>
-      <translation>Độ trong suốt:</translation>
+      <source>Document window:</source>
+      <translation>Cửa sổ tài liệu:</translation>
     </message>
     <message>
-      <source>Line width:</source>
-      <translation>Bề rộng đường vẽ:</translation>
-    </message>
-    <message>
-      <source>Point size:</source>
-      <translation>Kích thước điểm:</translation>
+      <source>Plot mode:</source>
+      <translation>Chế độ plot:</translation>
     </message>
     <message>
       <source>Material</source>
@@ -1227,36 +1316,40 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>...</translation>
     </message>
     <message>
-      <source>Viewing mode</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
-      <source>Plot mode:</source>
-      <translation>Chế độ plot:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Line transparency:</source>
-      <translation>Độ trong suốt đường vẽ:</translation>
-    </message>
-    <message>
-      <source>Line color:</source>
-      <translation>Màu đường vẽ:</translation>
+      <source>Color plot:</source>
+      <translation>Plot màu:</translation>
     </message>
     <message>
       <source>Shape color:</source>
       <translation>Màu hình dạng:</translation>
     </message>
     <message>
-      <source>Color plot:</source>
-      <translation>Plot màu:</translation>
+      <source>Line color:</source>
+      <translation>Màu đường vẽ:</translation>
     </message>
     <message>
-      <source>Document window:</source>
-      <translation>Cửa sổ tài liệu:</translation>
+      <source>Display</source>
+      <translation>Hiển thị</translation>
+    </message>
+    <message>
+      <source>Point size:</source>
+      <translation>Kích thước điểm:</translation>
+    </message>
+    <message>
+      <source>Line width:</source>
+      <translation>Bề rộng đường vẽ:</translation>
+    </message>
+    <message>
+      <source>Transparency:</source>
+      <translation>Độ trong suốt:</translation>
+    </message>
+    <message>
+      <source>Line transparency:</source>
+      <translation>Độ trong suốt đường vẽ:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -1361,8 +1454,20 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Tùy chọn</translation>
     </message>
     <message>
+      <source>Code lines will be numbered</source>
+      <translation type="unfinished">Code lines will be numbered</translation>
+    </message>
+    <message>
       <source>Enable line numbers</source>
       <translation>Bật chế độ đánh số dòng</translation>
+    </message>
+    <message>
+      <source>The cursor shape will be a block</source>
+      <translation type="unfinished">The cursor shape will be a block</translation>
+    </message>
+    <message>
+      <source>Enable block cursor</source>
+      <translation type="unfinished">Enable block cursor</translation>
     </message>
     <message>
       <source>Enable folding</source>
@@ -1373,44 +1478,16 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Thụt lề</translation>
     </message>
     <message>
-      <source>Insert spaces</source>
-      <translation>Chèn khoảng trống</translation>
-    </message>
-    <message>
       <source>Tab size:</source>
       <translation>Kích thước Tab:</translation>
     </message>
     <message>
-      <source>Indent size:</source>
-      <translation>Cỡ thụt lề:</translation>
-    </message>
-    <message>
-      <source>Keep tabs</source>
-      <translation>Giữ tab</translation>
-    </message>
-    <message>
-      <source>Family:</source>
-      <translation>Họ:</translation>
-    </message>
-    <message>
-      <source>Size:</source>
-      <translation>Kích cỡ:</translation>
-    </message>
-    <message>
-      <source>Preview:</source>
-      <translation>Xem trước:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
-      <translation>Si premeu &lt;Tab&gt; s'inserirà la quantitat de la mida del sagnat definit</translation>
-    </message>
-    <message>
       <source>Tabulator raster (how many spaces)</source>
       <translation>Tabulator raster (how many spaces)</translation>
+    </message>
+    <message>
+      <source>Indent size:</source>
+      <translation>Cỡ thụt lề:</translation>
     </message>
     <message>
       <source>How many spaces will be inserted when pressing &lt;Tab&gt;</source>
@@ -1421,28 +1498,52 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation type="unfinished">Pressing &lt;Tab&gt; will insert a tabulator with defined tab size</translation>
     </message>
     <message>
-      <source>Display items</source>
-      <translation type="unfinished">Display items</translation>
+      <source>Keep tabs</source>
+      <translation>Giữ tab</translation>
     </message>
     <message>
-      <source>Font size to be used for selected code type</source>
-      <translation type="unfinished">Font size to be used for selected code type</translation>
+      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
+      <translation>Si premeu &lt;Tab&gt; s'inserirà la quantitat de la mida del sagnat definit</translation>
+    </message>
+    <message>
+      <source>Insert spaces</source>
+      <translation>Chèn khoảng trống</translation>
+    </message>
+    <message>
+      <source>Display items</source>
+      <translation type="unfinished">Display items</translation>
     </message>
     <message>
       <source>Color and font settings will be applied to selected type</source>
       <translation type="unfinished">Color and font settings will be applied to selected type</translation>
     </message>
     <message>
+      <source>Family:</source>
+      <translation>Họ:</translation>
+    </message>
+    <message>
       <source>Font family to be used for selected code type</source>
       <translation type="unfinished">Font family to be used for selected code type</translation>
+    </message>
+    <message>
+      <source>Size:</source>
+      <translation>Kích cỡ:</translation>
+    </message>
+    <message>
+      <source>Font size to be used for selected code type</source>
+      <translation type="unfinished">Font size to be used for selected code type</translation>
     </message>
     <message>
       <source>Color:</source>
       <translation>Màu sắc:</translation>
     </message>
     <message>
-      <source>Code lines will be numbered</source>
-      <translation type="unfinished">Code lines will be numbered</translation>
+      <source>Preview:</source>
+      <translation>Xem trước:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -1450,18 +1551,6 @@ If this is not ticked, then the property must be uniquely named, and it is acces
     <message>
       <source>General</source>
       <translation>Chung</translation>
-    </message>
-    <message>
-      <source>Start up</source>
-      <translation>Khởi động</translation>
-    </message>
-    <message>
-      <source>Enable splash screen at start up</source>
-      <translation>Sử dụng màn hình khởi động ứng dụng khi khởi động</translation>
-    </message>
-    <message>
-      <source>Auto load module after start up:</source>
-      <translation>Tự động tải mô-đun sau khi khởi động:</translation>
     </message>
     <message>
       <source>Language</source>
@@ -1472,36 +1561,68 @@ If this is not ticked, then the property must be uniquely named, and it is acces
       <translation>Thay đổi ngôn ngữ:</translation>
     </message>
     <message>
+      <source>Language of the application's user interface</source>
+      <translation type="unfinished">Language of the application's user interface</translation>
+    </message>
+    <message>
+      <source>Number format:</source>
+      <translation type="unfinished">Number format:</translation>
+    </message>
+    <message>
+      <source>Operating system</source>
+      <translation>Hệ điều hành</translation>
+    </message>
+    <message>
+      <source>Selected language</source>
+      <translation type="unfinished">Selected language</translation>
+    </message>
+    <message>
+      <source>C/POSIX</source>
+      <translation type="unfinished">C/POSIX</translation>
+    </message>
+    <message>
+      <source>If enabled, numerical keypad decimal separator will be substituted with locale separator</source>
+      <translation type="unfinished">If enabled, numerical keypad decimal separator will be substituted with locale separator</translation>
+    </message>
+    <message>
+      <source>Substitute decimal separator (needs restart)</source>
+      <translation type="unfinished">Substitute decimal separator (needs restart)</translation>
+    </message>
+    <message>
+      <source>Preference packs</source>
+      <translation type="unfinished">Preference packs</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Tên</translation>
+    </message>
+    <message>
+      <source>Type</source>
+      <translation>Kiểu</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation type="unfinished">Load</translation>
+    </message>
+    <message>
+      <source>Save new...</source>
+      <translation type="unfinished">Save new...</translation>
+    </message>
+    <message>
+      <source>Manage...</source>
+      <translation type="unfinished">Manage...</translation>
+    </message>
+    <message>
+      <source>Revert...</source>
+      <translation type="unfinished">Revert...</translation>
+    </message>
+    <message>
       <source>Main window</source>
       <translation>Cửa sổ chính</translation>
     </message>
     <message>
       <source>Size of recent file list</source>
       <translation>Kích thước của danh sách tập tin mới dùng</translation>
-    </message>
-    <message>
-      <source>Size of toolbar icons:</source>
-      <translation>Kích thước của biểu tượng thanh công cụ:</translation>
-    </message>
-    <message>
-      <source>Enable tiled background</source>
-      <translation>Bật hình nền lát gạch</translation>
-    </message>
-    <message>
-      <source>Style sheet:</source>
-      <translation>Tệp tin định kiểu:</translation>
-    </message>
-    <message>
-      <source>Python console</source>
-      <translation>Bảng điều khiển Python</translation>
-    </message>
-    <message>
-      <source>Enable word wrap</source>
-      <translation>Bật chế độ ngắt dòng tự động</translation>
-    </message>
-    <message>
-      <source>Language of the application's user interface</source>
-      <translation type="unfinished">Language of the application's user interface</translation>
     </message>
     <message>
       <source>How many files should be listed in recent files list</source>
@@ -1514,8 +1635,28 @@ See the FreeCAD Wiki for details about the image.</source>
 See the FreeCAD Wiki for details about the image.</translation>
     </message>
     <message>
+      <source>Enable tiled background</source>
+      <translation>Bật hình nền lát gạch</translation>
+    </message>
+    <message>
+      <source>The text cursor will be blinking</source>
+      <translation type="unfinished">The text cursor will be blinking</translation>
+    </message>
+    <message>
+      <source>Enable cursor blinking</source>
+      <translation type="unfinished">Enable cursor blinking</translation>
+    </message>
+    <message>
+      <source>Style sheet:</source>
+      <translation>Tệp tin định kiểu:</translation>
+    </message>
+    <message>
       <source>Style sheet how user interface will look like</source>
       <translation type="unfinished">Style sheet how user interface will look like</translation>
+    </message>
+    <message>
+      <source>Size of toolbar icons:</source>
+      <translation>Kích thước của biểu tượng thanh công cụ:</translation>
     </message>
     <message>
       <source>Choose your preference for toolbar icon size. You can adjust
@@ -1540,12 +1681,12 @@ this according to your screen size or personal taste</translation>
 'Both': keep all three panels, and you can have two sets of tree view and property view.</translation>
     </message>
     <message>
-      <source>A Splash screen is a small loading window that is shown
-when FreeCAD is launching. If this option is checked, FreeCAD will
-display the splash screen</source>
-      <translation type="unfinished">A Splash screen is a small loading window that is shown
-when FreeCAD is launching. If this option is checked, FreeCAD will
-display the splash screen</translation>
+      <source>Start up</source>
+      <translation>Khởi động</translation>
+    </message>
+    <message>
+      <source>Auto load module after start up:</source>
+      <translation>Tự động tải mô-đun sau khi khởi động:</translation>
     </message>
     <message>
       <source>Choose which workbench will be activated and shown
@@ -1554,17 +1695,23 @@ after FreeCAD launches</source>
 after FreeCAD launches</translation>
     </message>
     <message>
-      <source>Words will be wrapped when they exceed available
-horizontal space in Python console</source>
-      <translation type="unfinished">Words will be wrapped when they exceed available
-horizontal space in Python console</translation>
+      <source>A Splash screen is a small loading window that is shown
+when FreeCAD is launching. If this option is checked, FreeCAD will
+display the splash screen</source>
+      <translation type="unfinished">A Splash screen is a small loading window that is shown
+when FreeCAD is launching. If this option is checked, FreeCAD will
+display the splash screen</translation>
+    </message>
+    <message>
+      <source>Enable splash screen at start up</source>
+      <translation>Sử dụng màn hình khởi động ứng dụng khi khởi động</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgGeneralImp</name>
     <message>
-      <source>No style sheet</source>
-      <translation>Không tệp tin định kiểu</translation>
+      <source>Manage preference packs</source>
+      <translation type="unfinished">Manage preference packs</translation>
     </message>
     <message>
       <source>Small (%1px)</source>
@@ -1598,6 +1745,26 @@ horizontal space in Python console</translation>
       <source>Both</source>
       <translation type="unfinished">Both</translation>
     </message>
+    <message>
+      <source>No style sheet</source>
+      <translation>Không tệp tin định kiểu</translation>
+    </message>
+    <message>
+      <source>Preference Pack Name</source>
+      <translation type="unfinished">Preference Pack Name</translation>
+    </message>
+    <message>
+      <source>Tags</source>
+      <translation type="unfinished">Tags</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Áp dụng</translation>
+    </message>
+    <message>
+      <source>Apply the %1 preference pack</source>
+      <translation type="unfinished">Apply the %1 preference pack</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgInputDialog</name>
@@ -1628,6 +1795,14 @@ horizontal space in Python console</translation>
       <translation>Tên macro:</translation>
     </message>
     <message>
+      <source>User macros</source>
+      <translation>Macro của người dùng</translation>
+    </message>
+    <message>
+      <source>System macros</source>
+      <translation>Macro hệ thống</translation>
+    </message>
+    <message>
       <source>Execute</source>
       <translation>Thực thi</translation>
     </message>
@@ -1648,18 +1823,6 @@ horizontal space in Python console</translation>
       <translation>Chỉnh sửa</translation>
     </message>
     <message>
-      <source>User macros</source>
-      <translation>Macro của người dùng</translation>
-    </message>
-    <message>
-      <source>System macros</source>
-      <translation>Macro hệ thống</translation>
-    </message>
-    <message>
-      <source>User macros location:</source>
-      <translation>Vị trí macro của người dùng:</translation>
-    </message>
-    <message>
       <source>Rename</source>
       <translation>Đổi tên</translation>
     </message>
@@ -1668,12 +1831,24 @@ horizontal space in Python console</translation>
       <translation>Nhân đôi</translation>
     </message>
     <message>
-      <source>Addons...</source>
-      <translation type="unfinished">Addons...</translation>
+      <source>Launch a guide on how to set up a macro in a custom global toolbar.</source>
+      <translation type="unfinished">Launch a guide on how to set up a macro in a custom global toolbar.</translation>
     </message>
     <message>
       <source>Toolbar</source>
       <translation type="unfinished">Toolbar</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager where macros created by the community and other addons can be downloaded.</source>
+      <translation type="unfinished">Open Addon Manager where macros created by the community and other addons can be downloaded.</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>Tải về</translation>
+    </message>
+    <message>
+      <source>User macros location:</source>
+      <translation>Vị trí macro của người dùng:</translation>
     </message>
   </context>
   <context>
@@ -1681,6 +1856,10 @@ horizontal space in Python console</translation>
     <message>
       <source>Macros</source>
       <translation>Macro</translation>
+    </message>
+    <message>
+      <source>Read-only</source>
+      <translation>Chỉ đọc</translation>
     </message>
     <message>
       <source>Macro file</source>
@@ -1701,14 +1880,6 @@ This file already exists.</source>
 Tệp này đã tồn tại.</translation>
     </message>
     <message>
-      <source>Delete macro</source>
-      <translation>Xoá macro</translation>
-    </message>
-    <message>
-      <source>Do you really want to delete the macro '%1'?</source>
-      <translation>Bạn có thực sự muốn xóa macro '%1'?</translation>
-    </message>
-    <message>
       <source>Cannot create file</source>
       <translation>Không thể tạo tập tin</translation>
     </message>
@@ -1717,46 +1888,12 @@ Tệp này đã tồn tại.</translation>
       <translation>Gặp lỗi khi tạo tập tin '%1'.</translation>
     </message>
     <message>
-      <source>Read-only</source>
-      <translation>Chỉ đọc</translation>
+      <source>Delete macro</source>
+      <translation>Xoá macro</translation>
     </message>
     <message>
-      <source>Renaming Macro File</source>
-      <translation>Đổi tên tập tin Macro</translation>
-    </message>
-    <message>
-      <source>Enter new name:</source>
-      <translation>Nhập tên mới:</translation>
-    </message>
-    <message>
-      <source>'%1'
- already exists.</source>
-      <translation>'%1'
- đã tồn tại.</translation>
-    </message>
-    <message>
-      <source>Rename Failed</source>
-      <translation>Đổi tên không thành công</translation>
-    </message>
-    <message>
-      <source>Failed to rename to '%1'.
-Perhaps a file permission error?</source>
-      <translation>Gặp lỗi khi đổi tên thành '%1'.
-Có lẽ một lỗi cho phép tập tin?</translation>
-    </message>
-    <message>
-      <source>Duplicate Macro</source>
-      <translation type="unfinished">Duplicate Macro</translation>
-    </message>
-    <message>
-      <source>Duplicate Failed</source>
-      <translation>Gặp lỗi khi nhân bản</translation>
-    </message>
-    <message>
-      <source>Failed to duplicate to '%1'.
-Perhaps a file permission error?</source>
-      <translation type="unfinished">Failed to duplicate to '%1'.
-Perhaps a file permission error?</translation>
+      <source>Do you really want to delete the macro '%1'?</source>
+      <translation>Bạn có thực sự muốn xóa macro '%1'?</translation>
     </message>
     <message>
       <source>Do not show again</source>
@@ -1800,6 +1937,44 @@ Note: your changes will be applied when you next switch workbenches
       <source>Walkthrough instructions: Click New, then right arrow (-&gt;) button, then Close.</source>
       <translation type="unfinished">Walkthrough instructions: Click New, then right arrow (-&gt;) button, then Close.</translation>
     </message>
+    <message>
+      <source>Renaming Macro File</source>
+      <translation>Đổi tên tập tin Macro</translation>
+    </message>
+    <message>
+      <source>Enter new name:</source>
+      <translation>Nhập tên mới:</translation>
+    </message>
+    <message>
+      <source>'%1'
+ already exists.</source>
+      <translation>'%1'
+ đã tồn tại.</translation>
+    </message>
+    <message>
+      <source>Rename Failed</source>
+      <translation>Đổi tên không thành công</translation>
+    </message>
+    <message>
+      <source>Failed to rename to '%1'.
+Perhaps a file permission error?</source>
+      <translation>Gặp lỗi khi đổi tên thành '%1'.
+Có lẽ một lỗi cho phép tập tin?</translation>
+    </message>
+    <message>
+      <source>Duplicate Macro</source>
+      <translation type="unfinished">Duplicate Macro</translation>
+    </message>
+    <message>
+      <source>Duplicate Failed</source>
+      <translation>Gặp lỗi khi nhân bản</translation>
+    </message>
+    <message>
+      <source>Failed to duplicate to '%1'.
+Perhaps a file permission error?</source>
+      <translation type="unfinished">Failed to duplicate to '%1'.
+Perhaps a file permission error?</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecord</name>
@@ -1810,14 +1985,6 @@ Note: your changes will be applied when you next switch workbenches
     <message>
       <source>Macro name:</source>
       <translation>Tên macro:</translation>
-    </message>
-    <message>
-      <source>Stop</source>
-      <translation>Dừng</translation>
-    </message>
-    <message>
-      <source>Cancel</source>
-      <translation>Hủy</translation>
     </message>
     <message>
       <source>Macro path:</source>
@@ -1831,6 +1998,14 @@ Note: your changes will be applied when you next switch workbenches
       <source>Record</source>
       <translation>Bản ghi</translation>
     </message>
+    <message>
+      <source>Stop</source>
+      <translation>Dừng</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Hủy</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecordImp</name>
@@ -1843,6 +2018,10 @@ Note: your changes will be applied when you next switch workbenches
       <translation>Chỉ định một vị trí trước để lưu.</translation>
     </message>
     <message>
+      <source>The macro directory doesn't exist. Please, choose another one.</source>
+      <translation>Thư mục macro không tồn tại. Vui lòng chọn mục khác.</translation>
+    </message>
+    <message>
       <source>Existing macro</source>
       <translation>Macro đã tồn tại</translation>
     </message>
@@ -1851,16 +2030,12 @@ Note: your changes will be applied when you next switch workbenches
       <translation>Macro '% 1' đã tồn tại. Bạn có muốn ghi đè lên?</translation>
     </message>
     <message>
-      <source>The macro directory doesn't exist. Please, choose another one.</source>
-      <translation>Thư mục macro không tồn tại. Vui lòng chọn mục khác.</translation>
+      <source>You have no write permission for the directory. Please, choose another one.</source>
+      <translation>Bạn không có quyền ghi cho thư mục này. Vui lòng chọn mục khác.</translation>
     </message>
     <message>
       <source>Choose macro directory</source>
       <translation>Chọn thư mục macro</translation>
-    </message>
-    <message>
-      <source>You have no write permission for the directory. Please, choose another one.</source>
-      <translation>Bạn không có quyền ghi cho thư mục này. Vui lòng chọn mục khác.</translation>
     </message>
   </context>
   <context>
@@ -1874,8 +2049,16 @@ Note: your changes will be applied when you next switch workbenches
       <translation>Vật liệu</translation>
     </message>
     <message>
+      <source>Ambient color:</source>
+      <translation>Màu môi trường xung quanh:</translation>
+    </message>
+    <message>
       <source>Diffuse color:</source>
       <translation>Màu khuếch tán:</translation>
+    </message>
+    <message>
+      <source>Emissive color:</source>
+      <translation>Màu phát ra:</translation>
     </message>
     <message>
       <source>Specular color:</source>
@@ -1890,16 +2073,8 @@ Note: your changes will be applied when you next switch workbenches
       <translation>%</translation>
     </message>
     <message>
-      <source>Ambient color:</source>
-      <translation>Màu môi trường xung quanh:</translation>
-    </message>
-    <message>
       <source/>
       <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Emissive color:</source>
-      <translation>Màu phát ra:</translation>
     </message>
   </context>
   <context>
@@ -1920,6 +2095,10 @@ Note: your changes will be applied when you next switch workbenches
   <context>
     <name>Gui::Dialog::DlgOnlineHelpImp</name>
     <message>
+      <source>HTML files</source>
+      <translation>Tập tin HTML</translation>
+    </message>
+    <message>
       <source>Access denied</source>
       <translation>Truy cập bị từ chối</translation>
     </message>
@@ -1931,32 +2110,12 @@ Specify another directory, please.</source>
 
 Hãy chọn mục khác.</translation>
     </message>
-    <message>
-      <source>HTML files</source>
-      <translation>Tập tin HTML</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgParameter</name>
     <message>
       <source>Parameter Editor</source>
       <translation>Trình chỉnh sửa tham số</translation>
-    </message>
-    <message>
-      <source>Save to disk</source>
-      <translation>Ghi lên đĩa</translation>
-    </message>
-    <message>
-      <source>Alt+C</source>
-      <translation>Alt+C</translation>
-    </message>
-    <message>
-      <source>&amp;Close</source>
-      <translation>&amp;Đóng</translation>
-    </message>
-    <message>
-      <source>Find...</source>
-      <translation>Tìm kiếm...</translation>
     </message>
     <message>
       <source>Sorted</source>
@@ -1973,6 +2132,22 @@ Hãy chọn mục khác.</translation>
     <message>
       <source>Search Group</source>
       <translation type="unfinished">Search Group</translation>
+    </message>
+    <message>
+      <source>Find...</source>
+      <translation>Tìm kiếm...</translation>
+    </message>
+    <message>
+      <source>Save to disk</source>
+      <translation>Ghi lên đĩa</translation>
+    </message>
+    <message>
+      <source>Alt+C</source>
+      <translation>Alt+C</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Đóng</translation>
     </message>
   </context>
   <context>
@@ -2037,8 +2212,16 @@ Hãy chọn mục khác.</translation>
       <translation>Giá trị</translation>
     </message>
     <message>
+      <source>System parameter</source>
+      <translation>Tham số hệ thống</translation>
+    </message>
+    <message>
       <source>User parameter</source>
       <translation>Tham số người dùng</translation>
+    </message>
+    <message>
+      <source>Search Group</source>
+      <translation type="unfinished">Search Group</translation>
     </message>
     <message>
       <source>Invalid input</source>
@@ -2048,13 +2231,47 @@ Hãy chọn mục khác.</translation>
       <source>Invalid key name '%1'</source>
       <translation>Tên phím '%1' không hợp lệ</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagement</name>
     <message>
-      <source>System parameter</source>
-      <translation>Tham số hệ thống</translation>
+      <source>Manage Preference Packs</source>
+      <translation type="unfinished">Manage Preference Packs</translation>
     </message>
     <message>
-      <source>Search Group</source>
-      <translation type="unfinished">Search Group</translation>
+      <source>Open Addon Manager...</source>
+      <translation type="unfinished">Open Addon Manager...</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagementImp</name>
+    <message>
+      <source>User-Saved Preference Packs</source>
+      <translation type="unfinished">User-Saved Preference Packs</translation>
+    </message>
+    <message>
+      <source>Built-In Preference Packs</source>
+      <translation type="unfinished">Built-In Preference Packs</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of built-in preference pack '%1'</source>
+      <translation type="unfinished">Toggle visibility of built-in preference pack '%1'</translation>
+    </message>
+    <message>
+      <source>Delete user-saved preference pack '%1'</source>
+      <translation type="unfinished">Delete user-saved preference pack '%1'</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of Addon preference pack '%1' (use Addon Manager to permanently remove)</source>
+      <translation type="unfinished">Toggle visibility of Addon preference pack '%1' (use Addon Manager to permanently remove)</translation>
+    </message>
+    <message>
+      <source>Delete saved preference pack?</source>
+      <translation type="unfinished">Delete saved preference pack?</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete the preference pack named '%1'? This cannot be undone.</source>
+      <translation type="unfinished">Are you sure you want to delete the preference pack named '%1'? This cannot be undone.</translation>
     </message>
   </context>
   <context>
@@ -2071,10 +2288,6 @@ Hãy chọn mục khác.</translation>
   <context>
     <name>Gui::Dialog::DlgPreferencesImp</name>
     <message>
-      <source>Wrong parameter</source>
-      <translation>Sai thông số</translation>
-    </message>
-    <message>
       <source>Clear user settings</source>
       <translation>Xóa các cài đặt người dùng</translation>
     </message>
@@ -2085,6 +2298,10 @@ Hãy chọn mục khác.</translation>
     <message>
       <source>If you agree all your settings will be cleared.</source>
       <translation>Nếu bạn đồng ý thì các cài đặt của bạn sẽ bị xóa sạch.</translation>
+    </message>
+    <message>
+      <source>Wrong parameter</source>
+      <translation>Sai thông số</translation>
     </message>
   </context>
   <context>
@@ -2102,40 +2319,36 @@ Hãy chọn mục khác.</translation>
       <translation>&amp;Tên:</translation>
     </message>
     <message>
-      <source>Commen&amp;t:</source>
-      <translation>&amp;Ghi chú:</translation>
-    </message>
-    <message>
       <source>Path:</source>
       <translation>Đường dẫn:</translation>
     </message>
     <message>
-      <source>&amp;Last modified by:</source>
-      <translation>&amp;Lần sửa cuối bởi:</translation>
+      <source>UUID:</source>
+      <translation>UUID:</translation>
+    </message>
+    <message>
+      <source>Program version:</source>
+      <translation type="unfinished">Program version:</translation>
     </message>
     <message>
       <source>Created &amp;by:</source>
       <translation>Được tạo &amp;bởi:</translation>
     </message>
     <message>
-      <source>Com&amp;pany:</source>
-      <translation>Công t&amp;y:</translation>
+      <source>Creation &amp;date:</source>
+      <translation>&amp;Ngày tạo:</translation>
+    </message>
+    <message>
+      <source>&amp;Last modified by:</source>
+      <translation>&amp;Lần sửa cuối bởi:</translation>
     </message>
     <message>
       <source>Last &amp;modification date:</source>
       <translation>Ngày &amp;chỉnh sửa gần đây nhất:</translation>
     </message>
     <message>
-      <source>Creation &amp;date:</source>
-      <translation>&amp;Ngày tạo:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>UUID:</source>
-      <translation>UUID:</translation>
+      <source>Com&amp;pany:</source>
+      <translation>Công t&amp;y:</translation>
     </message>
     <message>
       <source>License information:</source>
@@ -2150,8 +2363,12 @@ Hãy chọn mục khác.</translation>
       <translation>Mở trong trình duyệt</translation>
     </message>
     <message>
-      <source>Program version:</source>
-      <translation type="unfinished">Program version:</translation>
+      <source>Commen&amp;t:</source>
+      <translation>&amp;Ghi chú:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -2189,6 +2406,10 @@ Hãy chọn mục khác.</translation>
       <translation>Tải tệp dự án lên sau khi tạo</translation>
     </message>
     <message>
+      <source>Project file</source>
+      <translation>Tập tin dự án</translation>
+    </message>
+    <message>
       <source>Empty source</source>
       <translation>Mã nguồn trống rỗng</translation>
     </message>
@@ -2204,16 +2425,24 @@ Hãy chọn mục khác.</translation>
       <source>No destination is defined.</source>
       <translation>Chưa định nghĩa đích đến.</translation>
     </message>
-    <message>
-      <source>Project file</source>
-      <translation>Tập tin dự án</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgPropertyLink</name>
     <message>
       <source>Link</source>
       <translation>Liên kết</translation>
+    </message>
+    <message>
+      <source>Filter by type</source>
+      <translation type="unfinished">Filter by type</translation>
+    </message>
+    <message>
+      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
+      <translation type="unfinished">If enabled, then 3D view selection will be synchronized with full object hierarchy.</translation>
+    </message>
+    <message>
+      <source>Sync sub-object selection</source>
+      <translation type="unfinished">Sync sub-object selection</translation>
     </message>
     <message>
       <source>Search</source>
@@ -2224,24 +2453,12 @@ Hãy chọn mục khác.</translation>
       <translation>Mẫu tìm kiếm để lọc kết quả ở trên</translation>
     </message>
     <message>
-      <source>Filter by type</source>
-      <translation type="unfinished">Filter by type</translation>
-    </message>
-    <message>
-      <source>Sync sub-object selection</source>
-      <translation type="unfinished">Sync sub-object selection</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Đặt lại</translation>
     </message>
     <message>
       <source>Clear</source>
       <translation>Xóa</translation>
-    </message>
-    <message>
-      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
-      <translation type="unfinished">If enabled, then 3D view selection will be synchronized with full object hierarchy.</translation>
     </message>
   </context>
   <context>
@@ -2255,64 +2472,36 @@ Hãy chọn mục khác.</translation>
       <translation>Đầu ra</translation>
     </message>
     <message>
-      <source>Record log messages</source>
-      <translation>Ghi lại thông điệp tường trình</translation>
+      <source>Normal messages will be recorded</source>
+      <translation type="unfinished">Normal messages will be recorded</translation>
     </message>
     <message>
-      <source>Record warnings</source>
-      <translation>Ghi lại cảnh báo</translation>
-    </message>
-    <message>
-      <source>Record error messages</source>
-      <translation>Ghi lại các thông báo lỗi</translation>
-    </message>
-    <message>
-      <source>Colors</source>
-      <translation>Màu sắc</translation>
-    </message>
-    <message>
-      <source>Normal messages:</source>
-      <translation>Thông báo bình thường:</translation>
-    </message>
-    <message>
-      <source>Log messages:</source>
-      <translation>Thông điệp tường trình:</translation>
-    </message>
-    <message>
-      <source>Warnings:</source>
-      <translation>Cảnh báo:</translation>
-    </message>
-    <message>
-      <source>Errors:</source>
-      <translation>Lỗi:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Redirect internal Python errors to report view</source>
-      <translation>Chuyển hướng lỗi Python nội bộ sang chế độ xem báo cáo</translation>
-    </message>
-    <message>
-      <source>Redirect internal Python output to report view</source>
-      <translation>Chuyển hướng đầu ra Python nội bộ sang chế độ xem báo cáo</translation>
-    </message>
-    <message>
-      <source>Python interpreter</source>
-      <translation>Trình thông dịch Python</translation>
+      <source>Record normal messages</source>
+      <translation type="unfinished">Record normal messages</translation>
     </message>
     <message>
       <source>Log messages will be recorded</source>
       <translation type="unfinished">Log messages will be recorded</translation>
     </message>
     <message>
+      <source>Record log messages</source>
+      <translation>Ghi lại thông điệp tường trình</translation>
+    </message>
+    <message>
       <source>Warnings will be recorded</source>
       <translation type="unfinished">Warnings will be recorded</translation>
     </message>
     <message>
+      <source>Record warnings</source>
+      <translation>Ghi lại cảnh báo</translation>
+    </message>
+    <message>
       <source>Error messages will be recorded</source>
       <translation type="unfinished">Error messages will be recorded</translation>
+    </message>
+    <message>
+      <source>Record error messages</source>
+      <translation>Ghi lại các thông báo lỗi</translation>
     </message>
     <message>
       <source>When an error has occurred, the Report View dialog becomes visible
@@ -2355,34 +2544,6 @@ on-screen while displaying the log message</translation>
       <translation type="unfinished">Show report view on log message</translation>
     </message>
     <message>
-      <source>Font color for normal messages in Report view panel</source>
-      <translation type="unfinished">Font color for normal messages in Report view panel</translation>
-    </message>
-    <message>
-      <source>Font color for log messages in Report view panel</source>
-      <translation type="unfinished">Font color for log messages in Report view panel</translation>
-    </message>
-    <message>
-      <source>Font color for warning messages in Report view panel</source>
-      <translation type="unfinished">Font color for warning messages in Report view panel</translation>
-    </message>
-    <message>
-      <source>Font color for error messages in Report view panel</source>
-      <translation type="unfinished">Font color for error messages in Report view panel</translation>
-    </message>
-    <message>
-      <source>Internal Python output will be redirected
-from Python console to Report view panel</source>
-      <translation type="unfinished">Internal Python output will be redirected
-from Python console to Report view panel</translation>
-    </message>
-    <message>
-      <source>Internal Python error messages will be redirected
-from Python console to Report view panel</source>
-      <translation type="unfinished">Internal Python error messages will be redirected
-from Python console to Report view panel</translation>
-    </message>
-    <message>
       <source>Include a timecode for each report</source>
       <translation type="unfinished">Include a timecode for each report</translation>
     </message>
@@ -2391,12 +2552,90 @@ from Python console to Report view panel</translation>
       <translation type="unfinished">Include a timecode for each entry</translation>
     </message>
     <message>
-      <source>Normal messages will be recorded</source>
-      <translation type="unfinished">Normal messages will be recorded</translation>
+      <source>Colors</source>
+      <translation>Màu sắc</translation>
     </message>
     <message>
-      <source>Record normal messages</source>
-      <translation type="unfinished">Record normal messages</translation>
+      <source>Normal messages:</source>
+      <translation>Thông báo bình thường:</translation>
+    </message>
+    <message>
+      <source>Font color for normal messages in Report view panel</source>
+      <translation type="unfinished">Font color for normal messages in Report view panel</translation>
+    </message>
+    <message>
+      <source>Log messages:</source>
+      <translation>Thông điệp tường trình:</translation>
+    </message>
+    <message>
+      <source>Font color for log messages in Report view panel</source>
+      <translation type="unfinished">Font color for log messages in Report view panel</translation>
+    </message>
+    <message>
+      <source>Warnings:</source>
+      <translation>Cảnh báo:</translation>
+    </message>
+    <message>
+      <source>Font color for warning messages in Report view panel</source>
+      <translation type="unfinished">Font color for warning messages in Report view panel</translation>
+    </message>
+    <message>
+      <source>Errors:</source>
+      <translation>Lỗi:</translation>
+    </message>
+    <message>
+      <source>Font color for error messages in Report view panel</source>
+      <translation type="unfinished">Font color for error messages in Report view panel</translation>
+    </message>
+    <message>
+      <source>Python interpreter</source>
+      <translation>Trình thông dịch Python</translation>
+    </message>
+    <message>
+      <source>Internal Python output will be redirected
+from Python console to Report view panel</source>
+      <translation type="unfinished">Internal Python output will be redirected
+from Python console to Report view panel</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python output to report view</source>
+      <translation>Chuyển hướng đầu ra Python nội bộ sang chế độ xem báo cáo</translation>
+    </message>
+    <message>
+      <source>Internal Python error messages will be redirected
+from Python console to Report view panel</source>
+      <translation type="unfinished">Internal Python error messages will be redirected
+from Python console to Report view panel</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python errors to report view</source>
+      <translation>Chuyển hướng lỗi Python nội bộ sang chế độ xem báo cáo</translation>
+    </message>
+    <message>
+      <source/>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfig</name>
+    <message>
+      <source>Revert to Backup Config</source>
+      <translation type="unfinished">Revert to Backup Config</translation>
+    </message>
+    <message>
+      <source>WARNING: this process will undo any preference changes made since the specified date, and will also reset your Recent files and Macros to their state on that date.</source>
+      <translation type="unfinished">WARNING: this process will undo any preference changes made since the specified date, and will also reset your Recent files and Macros to their state on that date.</translation>
+    </message>
+    <message>
+      <source>Available backup files:</source>
+      <translation type="unfinished">Available backup files:</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfigImp</name>
+    <message>
+      <source>No selection in dialog, cannot load backup file</source>
+      <translation type="unfinished">No selection in dialog, cannot load backup file</translation>
     </message>
   </context>
   <context>
@@ -2445,58 +2684,6 @@ from Python console to Report view panel</translation>
       <translation>Hiển thị 3D</translation>
     </message>
     <message>
-      <source>Show coordinate system in the corner</source>
-      <translation>Hiển thị hệ tọa độ ở góc</translation>
-    </message>
-    <message>
-      <source>Show counter of frames per second</source>
-      <translation>Hiển thị số lượng khung hình mỗi giây</translation>
-    </message>
-    <message>
-      <source>Camera type</source>
-      <translation>Kiểu máy ảnh</translation>
-    </message>
-    <message>
-      <source/>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Anti-Aliasing</source>
-      <translation>Chống răng cưa</translation>
-    </message>
-    <message>
-      <source>None</source>
-      <translation>Không</translation>
-    </message>
-    <message>
-      <source>Line Smoothing</source>
-      <translation>Làm mịn đường vẽ</translation>
-    </message>
-    <message>
-      <source>MSAA 2x</source>
-      <translation>MSAA 2 x</translation>
-    </message>
-    <message>
-      <source>MSAA 4x</source>
-      <translation>MSAA 4 x</translation>
-    </message>
-    <message>
-      <source>MSAA 8x</source>
-      <translation>MSAA 8 x</translation>
-    </message>
-    <message>
-      <source>Or&amp;thographic rendering</source>
-      <translation>Hiển thị ch&amp;ính tả</translation>
-    </message>
-    <message>
-      <source>Perspective renderin&amp;g</source>
-      <translation>Hiển th&amp;ị phối cảnh</translation>
-    </message>
-    <message>
-      <source>Marker size:</source>
-      <translation type="unfinished">Marker size:</translation>
-    </message>
-    <message>
       <source>General</source>
       <translation>Chung</translation>
     </message>
@@ -2507,10 +2694,42 @@ lower right corner within opened files</source>
 lower right corner within opened files</translation>
     </message>
     <message>
+      <source>Show coordinate system in the corner</source>
+      <translation>Hiển thị hệ tọa độ ở góc</translation>
+    </message>
+    <message>
+      <source>Relative size :   </source>
+      <translation type="unfinished">Relative size :   </translation>
+    </message>
+    <message>
+      <source>Size of main coordinate system representation
+in the corner -- in % of height/width of viewport</source>
+      <translation type="unfinished">Size of main coordinate system representation
+in the corner -- in % of height/width of viewport</translation>
+    </message>
+    <message>
+      <source>%</source>
+      <translation>%</translation>
+    </message>
+    <message>
+      <source>Axis cross will be shown by default at file
+opening or creation</source>
+      <translation type="unfinished">Axis cross will be shown by default at file
+opening or creation</translation>
+    </message>
+    <message>
+      <source>Show axis cross by default</source>
+      <translation type="unfinished">Show axis cross by default</translation>
+    </message>
+    <message>
       <source>Time needed for last operation and resulting frame rate
 will be shown at the lower left corner in opened files</source>
       <translation type="unfinished">Time needed for last operation and resulting frame rate
 will be shown at the lower left corner in opened files</translation>
+    </message>
+    <message>
+      <source>Show counter of frames per second</source>
+      <translation>Hiển thị số lượng khung hình mỗi giây</translation>
     </message>
     <message>
       <source>If checked, application will remember which workbench is active for each tab of the viewport</source>
@@ -2523,6 +2742,18 @@ will be shown at the lower left corner in opened files</translation>
     <message>
       <source>Rendering</source>
       <translation type="unfinished">Rendering</translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation type="unfinished">This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation type="unfinished">Use software OpenGL</translation>
     </message>
     <message>
       <source>If selected, Vertex Buffer Objects (VBO) will be used.
@@ -2583,6 +2814,34 @@ but slower response to any scene changes.</translation>
       <translation type="unfinished">Centralized</translation>
     </message>
     <message>
+      <source>Anti-Aliasing</source>
+      <translation>Chống răng cưa</translation>
+    </message>
+    <message>
+      <source>What kind of multisample anti-aliasing is used</source>
+      <translation type="unfinished">What kind of multisample anti-aliasing is used</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Không</translation>
+    </message>
+    <message>
+      <source>Line Smoothing</source>
+      <translation>Làm mịn đường vẽ</translation>
+    </message>
+    <message>
+      <source>MSAA 2x</source>
+      <translation>MSAA 2 x</translation>
+    </message>
+    <message>
+      <source>MSAA 4x</source>
+      <translation>MSAA 4 x</translation>
+    </message>
+    <message>
+      <source>MSAA 8x</source>
+      <translation>MSAA 8 x</translation>
+    </message>
+    <message>
       <source>Transparent objects:</source>
       <translation type="unfinished">Transparent objects:</translation>
     </message>
@@ -2599,12 +2858,36 @@ but slower response to any scene changes.</translation>
       <translation type="unfinished">Backface pass</translation>
     </message>
     <message>
+      <source>Marker size:</source>
+      <translation type="unfinished">Marker size:</translation>
+    </message>
+    <message>
       <source>Size of vertices in the Sketcher workbench</source>
       <translation type="unfinished">Size of vertices in the Sketcher workbench</translation>
     </message>
     <message>
+      <source>Pick radius (px):</source>
+      <translation>Chọn bán kính (px):</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation type="unfinished">Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </translation>
+    </message>
+    <message>
       <source>Eye to eye distance for stereo modes</source>
       <translation type="unfinished">Eye to eye distance for stereo modes</translation>
+    </message>
+    <message>
+      <source>Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</source>
+      <translation type="unfinished">Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</translation>
     </message>
     <message>
       <source>Backlight is enabled with the defined color</source>
@@ -2623,70 +2906,32 @@ but slower response to any scene changes.</translation>
       <translation type="unfinished">Intensity of the backlight</translation>
     </message>
     <message>
-      <source>Objects will be projected in orthographic projection</source>
-      <translation type="unfinished">Objects will be projected in orthographic projection</translation>
+      <source>Camera type</source>
+      <translation>Kiểu máy ảnh</translation>
     </message>
     <message>
       <source>Objects will appear in a perspective projection</source>
       <translation type="unfinished">Objects will appear in a perspective projection</translation>
     </message>
     <message>
-      <source>Axis cross will be shown by default at file
-opening or creation</source>
-      <translation type="unfinished">Axis cross will be shown by default at file
-opening or creation</translation>
+      <source>Perspective renderin&amp;g</source>
+      <translation>Hiển th&amp;ị phối cảnh</translation>
     </message>
     <message>
-      <source>Show axis cross by default</source>
-      <translation type="unfinished">Show axis cross by default</translation>
+      <source>Objects will be projected in orthographic projection</source>
+      <translation type="unfinished">Objects will be projected in orthographic projection</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation>Chọn bán kính (px):</translation>
+      <source>Or&amp;thographic rendering</source>
+      <translation>Hiển thị ch&amp;ính tả</translation>
     </message>
     <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.
-               </source>
-      <translation type="unfinished">Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.
-               </translation>
-    </message>
-    <message>
-      <source>This option is useful for troubleshooting graphics card and driver problems.
-
-Changing this option requires a restart of the application.</source>
-      <translation type="unfinished">This option is useful for troubleshooting graphics card and driver problems.
-
-Changing this option requires a restart of the application.</translation>
-    </message>
-    <message>
-      <source>Use software OpenGL</source>
-      <translation type="unfinished">Use software OpenGL</translation>
-    </message>
-    <message>
-      <source>What kind of multisample anti-aliasing is used</source>
-      <translation type="unfinished">What kind of multisample anti-aliasing is used</translation>
-    </message>
-    <message>
-      <source>Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed.</source>
-      <translation type="unfinished">Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed.</translation>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettings3DViewImp</name>
-    <message>
-      <source>Anti-aliasing</source>
-      <translation>Chống răng cưa</translation>
-    </message>
-    <message>
-      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
-      <translation>Mở trình xem mới hoặc khởi động lại %1 để áp dụng thay đổi chống răng cưa.</translation>
-    </message>
     <message>
       <source>5px</source>
       <translation>5px</translation>
@@ -2711,9 +2956,84 @@ bounding box size of the 3D object that is currently displayed.</translation>
       <source>15px</source>
       <translation>15px</translation>
     </message>
+    <message>
+      <source>Anti-aliasing</source>
+      <translation>Chống răng cưa</translation>
+    </message>
+    <message>
+      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
+      <translation>Mở trình xem mới hoặc khởi động lại %1 để áp dụng thay đổi chống răng cưa.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsCacheDirectory</name>
+    <message>
+      <source>Cache</source>
+      <translation type="unfinished">Cache</translation>
+    </message>
+    <message>
+      <source>Cache directory</source>
+      <translation type="unfinished">Cache directory</translation>
+    </message>
+    <message>
+      <source>Location:</source>
+      <translation type="unfinished">Location:</translation>
+    </message>
+    <message>
+      <source>Check periodically at program start:</source>
+      <translation type="unfinished">Check periodically at program start:</translation>
+    </message>
+    <message>
+      <source>Always</source>
+      <translation type="unfinished">Always</translation>
+    </message>
+    <message>
+      <source>Daily</source>
+      <translation type="unfinished">Daily</translation>
+    </message>
+    <message>
+      <source>Weekly</source>
+      <translation type="unfinished">Weekly</translation>
+    </message>
+    <message>
+      <source>Monthly</source>
+      <translation type="unfinished">Monthly</translation>
+    </message>
+    <message>
+      <source>Yearly</source>
+      <translation type="unfinished">Yearly</translation>
+    </message>
+    <message>
+      <source>Never</source>
+      <translation type="unfinished">Never</translation>
+    </message>
+    <message>
+      <source>Cache size limit:</source>
+      <translation type="unfinished">Cache size limit:</translation>
+    </message>
+    <message>
+      <source>Check now...</source>
+      <translation type="unfinished">Check now...</translation>
+    </message>
+    <message>
+      <source>Notify the user if the cache size exceeds the specified limit</source>
+      <translation type="unfinished">Notify the user if the cache size exceeds the specified limit</translation>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>Không rõ</translation>
+    </message>
+    <message>
+      <source>Current cache size: %1</source>
+      <translation type="unfinished">Current cache size: %1</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsColorGradient</name>
+    <message>
+      <source>Color-gradient settings</source>
+      <translation>Cài đặt màu-dốc</translation>
+    </message>
     <message>
       <source>Color model</source>
       <translation>Mô hình màu sắc</translation>
@@ -2739,36 +3059,12 @@ bounding box size of the 3D object that is currently displayed.</translation>
       <translation>đen-trắng</translation>
     </message>
     <message>
-      <source>Visibility</source>
-      <translation>Hiển thị</translation>
-    </message>
-    <message>
-      <source>Out g&amp;rayed</source>
-      <translation>Ra màu x&amp;ám</translation>
-    </message>
-    <message>
-      <source>Alt+R</source>
-      <translation>Alt+R</translation>
-    </message>
-    <message>
-      <source>Out &amp;invisible</source>
-      <translation>Ra &amp;vô hình</translation>
-    </message>
-    <message>
-      <source>Alt+I</source>
-      <translation>Alt+I</translation>
-    </message>
-    <message>
       <source>Style</source>
       <translation>Kiểu</translation>
     </message>
     <message>
-      <source>&amp;Zero</source>
-      <translation>&amp;Số không</translation>
-    </message>
-    <message>
-      <source>Alt+Z</source>
-      <translation>Alt+Z</translation>
+      <source>Color gradient is used with its full color range</source>
+      <translation type="unfinished">Color gradient is used with its full color range</translation>
     </message>
     <message>
       <source>&amp;Flow</source>
@@ -2779,12 +3075,52 @@ bounding box size of the 3D object that is currently displayed.</translation>
       <translation>Alt+F</translation>
     </message>
     <message>
-      <source>Parameter range</source>
-      <translation>Phạm vi tham số</translation>
+      <source>Color gradient starts from the zero value</source>
+      <translation type="unfinished">Color gradient starts from the zero value</translation>
     </message>
     <message>
-      <source>Mi&amp;nimum:</source>
-      <translation>Tối &amp;thiểu:</translation>
+      <source>&amp;Zero</source>
+      <translation>&amp;Số không</translation>
+    </message>
+    <message>
+      <source>Alt+Z</source>
+      <translation>Alt+Z</translation>
+    </message>
+    <message>
+      <source>Visibility</source>
+      <translation>Hiển thị</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed in gray</source>
+      <translation type="unfinished">Data outside the specified min-max range
+will be displayed in gray</translation>
+    </message>
+    <message>
+      <source>Out g&amp;rayed</source>
+      <translation>Ra màu x&amp;ám</translation>
+    </message>
+    <message>
+      <source>Alt+R</source>
+      <translation>Alt+R</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed with transparency</source>
+      <translation type="unfinished">Data outside the specified min-max range
+will be displayed with transparency</translation>
+    </message>
+    <message>
+      <source>Out &amp;transparent</source>
+      <translation type="unfinished">Out &amp;transparent</translation>
+    </message>
+    <message>
+      <source>Alt+I</source>
+      <translation>Alt+I</translation>
+    </message>
+    <message>
+      <source>Parameter range</source>
+      <translation>Phạm vi tham số</translation>
     </message>
     <message>
       <source>Ma&amp;ximum:</source>
@@ -2795,16 +3131,26 @@ bounding box size of the 3D object that is currently displayed.</translation>
       <translation>&amp;Nhãn:</translation>
     </message>
     <message>
+      <source>Number of labels besides the color bar</source>
+      <translation type="unfinished">Number of labels besides the color bar</translation>
+    </message>
+    <message>
+      <source>Mi&amp;nimum:</source>
+      <translation>Tối &amp;thiểu:</translation>
+    </message>
+    <message>
       <source>&amp;Decimals:</source>
       <translation>Số &amp;thập phân:</translation>
     </message>
     <message>
-      <source/>
-      <translation type="unfinished"/>
+      <source>Number of decimals for labels
+besides the color bar</source>
+      <translation type="unfinished">Number of decimals for labels
+besides the color bar</translation>
     </message>
     <message>
-      <source>Color-gradient settings</source>
-      <translation>Cài đặt màu-dốc</translation>
+      <source/>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -2829,106 +3175,18 @@ bounding box size of the 3D object that is currently displayed.</translation>
       <translation>Chung</translation>
     </message>
     <message>
-      <source>Document save compression level
-(0 = none, 9 = highest, 3 = default)</source>
-      <translation>Mức độ nén tài liệu lưu trữ
-(0 = không, 9 = cao nhất, 3 = mặc định)</translation>
+      <source>The application will create a new document when started</source>
+      <translation type="unfinished">The application will create a new document when started</translation>
     </message>
     <message>
       <source>Create new document at start up</source>
       <translation>Tạo tài liệu mới khi khởi động</translation>
     </message>
     <message>
-      <source>Storage</source>
-      <translation>Lưu trữ</translation>
-    </message>
-    <message>
-      <source>Saving transactions (Auto-save)</source>
-      <translation>Đang lưu giao dịch (Tự động lưu)</translation>
-    </message>
-    <message>
-      <source>Discard saved transaction after saving document</source>
-      <translation>Hủy giao dịch đã lưu sau khi lưu tài liệu</translation>
-    </message>
-    <message>
-      <source>Save thumbnail into project file when saving document</source>
-      <translation>Lưu hình đại diện vào tệp dự án khi thực hiện lưu tài liệu</translation>
-    </message>
-    <message>
-      <source>Maximum number of backup files to keep when resaving document</source>
-      <translation>Số tệp sao lưu tối đa cần giữ khi lưu tài liệu</translation>
-    </message>
-    <message>
-      <source>Document objects</source>
-      <translation>Đối tượng tài liệu</translation>
-    </message>
-    <message>
-      <source>Allow duplicate object labels in one document</source>
-      <translation>Cho phép các nhãn đối tượng được trùng lặp trong tài liệu</translation>
-    </message>
-    <message>
-      <source>Maximum Undo/Redo steps</source>
-      <translation>Số bước Hoàn tác / Làm lại tối đa</translation>
-    </message>
-    <message>
-      <source>Using Undo/Redo on documents</source>
-      <translation>Sử dụng lệnh Hoàn tác / Làm lại cho tài liệu</translation>
-    </message>
-    <message>
-      <source>Authoring and License</source>
-      <translation>Tác giả và Giấy phép</translation>
-    </message>
-    <message>
-      <source>Author name</source>
-      <translation>Tên tác giả</translation>
-    </message>
-    <message>
-      <source>Set on save</source>
-      <translation>Xác lập để lưu</translation>
-    </message>
-    <message>
-      <source>Company</source>
-      <translation>Công ty</translation>
-    </message>
-    <message>
-      <source>Default license</source>
-      <translation>Giấy phép mặc định</translation>
-    </message>
-    <message>
-      <source>All rights reserved</source>
-      <translation>Đã đăng ký Bản quyền</translation>
-    </message>
-    <message>
-      <source>Public Domain</source>
-      <translation>Phạm vi công cộng</translation>
-    </message>
-    <message>
-      <source>FreeArt</source>
-      <translation>FreeArt</translation>
-    </message>
-    <message>
-      <source>Other</source>
-      <translation>Khác</translation>
-    </message>
-    <message>
-      <source>License URL</source>
-      <translation>Đường dẫn URL Giấy phép</translation>
-    </message>
-    <message>
-      <source>Run AutoRecovery at startup</source>
-      <translation>Chạy khôi phục tự động khi khởi động</translation>
-    </message>
-    <message>
-      <source>Save AutoRecovery information every</source>
-      <translation>Lưu thông tin Khôi phục tự động trong mỗi lần chạy</translation>
-    </message>
-    <message>
-      <source>Add the program logo to the generated thumbnail</source>
-      <translation>Thêm logo chương trình vào hình ảnh đại diện được tạo</translation>
-    </message>
-    <message>
-      <source>The application will create a new document when started</source>
-      <translation type="unfinished">The application will create a new document when started</translation>
+      <source>Document save compression level
+(0 = none, 9 = highest, 3 = default)</source>
+      <translation>Mức độ nén tài liệu lưu trữ
+(0 = không, 9 = cao nhất, 3 = mặc định)</translation>
     </message>
     <message>
       <source>Compression level for FCStd files</source>
@@ -2937,6 +3195,14 @@ bounding box size of the 3D object that is currently displayed.</translation>
     <message>
       <source>All changes in documents are stored so that they can be undone/redone</source>
       <translation type="unfinished">All changes in documents are stored so that they can be undone/redone</translation>
+    </message>
+    <message>
+      <source>Using Undo/Redo on documents</source>
+      <translation>Sử dụng lệnh Hoàn tác / Làm lại cho tài liệu</translation>
+    </message>
+    <message>
+      <source>Maximum Undo/Redo steps</source>
+      <translation>Số bước Hoàn tác / Làm lại tối đa</translation>
     </message>
     <message>
       <source>How many Undo/Redo steps should be recorded</source>
@@ -2953,18 +3219,42 @@ This feature may slightly increase recomputation time.</translation>
       <translation type="unfinished">Allow aborting recomputation</translation>
     </message>
     <message>
+      <source>Storage</source>
+      <translation>Lưu trữ</translation>
+    </message>
+    <message>
+      <source>Saving transactions (Auto-save)</source>
+      <translation>Đang lưu giao dịch (Tự động lưu)</translation>
+    </message>
+    <message>
+      <source>Discard saved transaction after saving document</source>
+      <translation>Hủy giao dịch đã lưu sau khi lưu tài liệu</translation>
+    </message>
+    <message>
       <source>If there is a recovery file available the application will
 automatically run a file recovery when it is started.</source>
       <translation type="unfinished">If there is a recovery file available the application will
 automatically run a file recovery when it is started.</translation>
     </message>
     <message>
+      <source>Run AutoRecovery at startup</source>
+      <translation>Chạy khôi phục tự động khi khởi động</translation>
+    </message>
+    <message>
       <source>How often a recovery file is written</source>
       <translation type="unfinished">How often a recovery file is written</translation>
     </message>
     <message>
+      <source>Save AutoRecovery information every</source>
+      <translation>Lưu thông tin Khôi phục tự động trong mỗi lần chạy</translation>
+    </message>
+    <message>
       <source>A thumbnail will be stored when document is saved</source>
       <translation type="unfinished">A thumbnail will be stored when document is saved</translation>
+    </message>
+    <message>
+      <source>Save thumbnail into project file when saving document</source>
+      <translation>Lưu hình đại diện vào tệp dự án khi thực hiện lưu tài liệu</translation>
     </message>
     <message>
       <source>Size</source>
@@ -2981,8 +3271,16 @@ Common sizes are 128, 256 and 512</translation>
       <translation type="unfinished">The program logo will be added to the thumbnail</translation>
     </message>
     <message>
+      <source>Add the program logo to the generated thumbnail</source>
+      <translation>Thêm logo chương trình vào hình ảnh đại diện được tạo</translation>
+    </message>
+    <message>
       <source>How many backup files will be kept when saving document</source>
       <translation type="unfinished">How many backup files will be kept when saving document</translation>
+    </message>
+    <message>
+      <source>Maximum number of backup files to keep when resaving document</source>
+      <translation>Số tệp sao lưu tối đa cần giữ khi lưu tài liệu</translation>
     </message>
     <message>
       <source>Backup files will get extension '.FCbak' and file names
@@ -2999,8 +3297,16 @@ get date suffix according to the specified format</translation>
       <translation type="unfinished">Date format</translation>
     </message>
     <message>
+      <source>Document objects</source>
+      <translation>Đối tượng tài liệu</translation>
+    </message>
+    <message>
       <source>Allow objects to have same label/name</source>
       <translation type="unfinished">Allow objects to have same label/name</translation>
+    </message>
+    <message>
+      <source>Allow duplicate object labels in one document</source>
+      <translation>Cho phép các nhãn đối tượng được trùng lặp trong tài liệu</translation>
     </message>
     <message>
       <source>Enable partial loading of external linked documents.
@@ -3019,6 +3325,14 @@ icon in the tree view to fully reload it.</translation>
       <translation type="unfinished">Disable partial loading of external linked objects</translation>
     </message>
     <message>
+      <source>Authoring and License</source>
+      <translation>Tác giả và Giấy phép</translation>
+    </message>
+    <message>
+      <source>Author name</source>
+      <translation>Tên tác giả</translation>
+    </message>
+    <message>
       <source>All documents that will be created will get the specified author name.
 Keep blank for anonymous.
 You can also use the form: John Doe &lt;john@doe.com&gt;</source>
@@ -3031,12 +3345,28 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation type="unfinished">The field 'Last modified by' will be set to specified author when saving the file</translation>
     </message>
     <message>
+      <source>Set on save</source>
+      <translation>Xác lập để lưu</translation>
+    </message>
+    <message>
+      <source>Company</source>
+      <translation>Công ty</translation>
+    </message>
+    <message>
       <source>Default company name to use for new files</source>
       <translation type="unfinished">Default company name to use for new files</translation>
     </message>
     <message>
+      <source>Default license</source>
+      <translation>Giấy phép mặc định</translation>
+    </message>
+    <message>
       <source>Default license for new documents</source>
       <translation type="unfinished">Default license for new documents</translation>
+    </message>
+    <message>
+      <source>All rights reserved</source>
+      <translation>Đã đăng ký Bản quyền</translation>
     </message>
     <message>
       <source>Creative Commons Attribution</source>
@@ -3061,6 +3391,22 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>Creative Commons Attribution-NonCommercial-NoDerivatives</source>
       <translation type="unfinished">Creative Commons Attribution-NonCommercial-NoDerivatives</translation>
+    </message>
+    <message>
+      <source>Public Domain</source>
+      <translation>Phạm vi công cộng</translation>
+    </message>
+    <message>
+      <source>FreeArt</source>
+      <translation>FreeArt</translation>
+    </message>
+    <message>
+      <source>Other</source>
+      <translation>Khác</translation>
+    </message>
+    <message>
+      <source>License URL</source>
+      <translation>Đường dẫn URL Giấy phép</translation>
     </message>
     <message>
       <source>URL describing more about the license</source>
@@ -3141,12 +3487,12 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Lỗi Python</translation>
     </message>
     <message>
-      <source>Items</source>
-      <translation>Mục</translation>
-    </message>
-    <message>
       <source>Current line highlight</source>
       <translation>In đậm đường vẽ hiện tại</translation>
+    </message>
+    <message>
+      <source>Items</source>
+      <translation>Mục</translation>
     </message>
   </context>
   <context>
@@ -3156,36 +3502,12 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Cài đặt hình ảnh</translation>
     </message>
     <message>
-      <source>Image properties</source>
-      <translation>Thuộc tính hình ảnh</translation>
-    </message>
-    <message>
-      <source>Back&amp;ground:</source>
-      <translation>&amp;Nền:</translation>
-    </message>
-    <message>
-      <source>Current</source>
-      <translation>Hiện tại</translation>
-    </message>
-    <message>
-      <source>White</source>
-      <translation>Trắng</translation>
-    </message>
-    <message>
-      <source>Black</source>
-      <translation>Màu đen</translation>
-    </message>
-    <message>
       <source>Image dimensions</source>
       <translation>Kích cỡ ảnh</translation>
     </message>
     <message>
-      <source>Pixel</source>
-      <translation>Điểm ảnh</translation>
-    </message>
-    <message>
-      <source>&amp;Width:</source>
-      <translation>&amp;Rộng:</translation>
+      <source>Standard sizes:</source>
+      <translation>Cỡ chuẩn:</translation>
     </message>
     <message>
       <source>Current screen</source>
@@ -3204,8 +3526,12 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Biểu tượng       128  x 128</translation>
     </message>
     <message>
-      <source>Standard sizes:</source>
-      <translation>Cỡ chuẩn:</translation>
+      <source>&amp;Width:</source>
+      <translation>&amp;Rộng:</translation>
+    </message>
+    <message>
+      <source>Pixel</source>
+      <translation>Điểm ảnh</translation>
     </message>
     <message>
       <source>&amp;Height:</source>
@@ -3248,6 +3574,34 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Alt+1</translation>
     </message>
     <message>
+      <source>Image properties</source>
+      <translation>Thuộc tính hình ảnh</translation>
+    </message>
+    <message>
+      <source>Back&amp;ground:</source>
+      <translation>&amp;Nền:</translation>
+    </message>
+    <message>
+      <source>Current</source>
+      <translation>Hiện tại</translation>
+    </message>
+    <message>
+      <source>White</source>
+      <translation>Trắng</translation>
+    </message>
+    <message>
+      <source>Black</source>
+      <translation>Màu đen</translation>
+    </message>
+    <message>
+      <source>Transparent</source>
+      <translation>Trong suốt</translation>
+    </message>
+    <message>
+      <source>Creation method:</source>
+      <translation type="unfinished">Creation method:</translation>
+    </message>
+    <message>
       <source>Image comment</source>
       <translation>Ghi chú của ảnh</translation>
     </message>
@@ -3260,16 +3614,8 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Chèn bình luận</translation>
     </message>
     <message>
-      <source>Transparent</source>
-      <translation>Trong suốt</translation>
-    </message>
-    <message>
       <source>Add watermark</source>
       <translation>Thêm hình mờ</translation>
-    </message>
-    <message>
-      <source>Creation method:</source>
-      <translation type="unfinished">Creation method:</translation>
     </message>
   </context>
   <context>
@@ -3294,6 +3640,14 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
+      <source>Available Workbenches</source>
+      <translation type="unfinished">Available Workbenches</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
       <source>Workbench Name</source>
       <translation type="unfinished">Workbench Name</translation>
     </message>
@@ -3304,14 +3658,6 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>Load Now</source>
       <translation type="unfinished">Load Now</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Available Workbenches</source>
-      <translation type="unfinished">Available Workbenches</translation>
     </message>
   </context>
   <context>
@@ -3352,12 +3698,56 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Macro</translation>
     </message>
     <message>
+      <source>General macro settings</source>
+      <translation>Cài đặt chung macro</translation>
+    </message>
+    <message>
+      <source>Variables defined by macros are created as local variables</source>
+      <translation type="unfinished">Variables defined by macros are created as local variables</translation>
+    </message>
+    <message>
+      <source>Run macros in local environment</source>
+      <translation>Chạy macro trong môi trường nội bộ</translation>
+    </message>
+    <message>
       <source>Macro recording settings</source>
       <translation>Cài đặt ghi lại macro</translation>
     </message>
     <message>
+      <source>Macro path</source>
+      <translation>Đường dẫn macro</translation>
+    </message>
+    <message>
+      <source>The directory in which the application will search for macros</source>
+      <translation type="unfinished">The directory in which the application will search for macros</translation>
+    </message>
+    <message>
+      <source>Gui commands</source>
+      <translation>Lệnh Gui</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands</source>
+      <translation type="unfinished">Recorded macros will also contain user interface commands</translation>
+    </message>
+    <message>
+      <source>Record GUI commands</source>
+      <translation>Ghi lại các lệnh GUI</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands as comments</source>
+      <translation type="unfinished">Recorded macros will also contain user interface commands as comments</translation>
+    </message>
+    <message>
+      <source>Record as comment</source>
+      <translation>Ghi lại dưới dạng nhận xét</translation>
+    </message>
+    <message>
       <source>Logging Commands</source>
       <translation>Đăng nhập lệnh</translation>
+    </message>
+    <message>
+      <source>Commands executed by macro scripts are shown in Python console</source>
+      <translation type="unfinished">Commands executed by macro scripts are shown in Python console</translation>
     </message>
     <message>
       <source>Show script commands in python console</source>
@@ -3370,50 +3760,6 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>FullScript.FCScript</source>
       <translation>FullScript.FCScript</translation>
-    </message>
-    <message>
-      <source>Gui commands</source>
-      <translation>Lệnh Gui</translation>
-    </message>
-    <message>
-      <source>Record as comment</source>
-      <translation>Ghi lại dưới dạng nhận xét</translation>
-    </message>
-    <message>
-      <source>Macro path</source>
-      <translation>Đường dẫn macro</translation>
-    </message>
-    <message>
-      <source>General macro settings</source>
-      <translation>Cài đặt chung macro</translation>
-    </message>
-    <message>
-      <source>Run macros in local environment</source>
-      <translation>Chạy macro trong môi trường nội bộ</translation>
-    </message>
-    <message>
-      <source>Record GUI commands</source>
-      <translation>Ghi lại các lệnh GUI</translation>
-    </message>
-    <message>
-      <source>Variables defined by macros are created as local variables</source>
-      <translation type="unfinished">Variables defined by macros are created as local variables</translation>
-    </message>
-    <message>
-      <source>Commands executed by macro scripts are shown in Python console</source>
-      <translation type="unfinished">Commands executed by macro scripts are shown in Python console</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands</source>
-      <translation type="unfinished">Recorded macros will also contain user interface commands</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands as comments</source>
-      <translation type="unfinished">Recorded macros will also contain user interface commands as comments</translation>
-    </message>
-    <message>
-      <source>The directory in which the application will search for macros</source>
-      <translation type="unfinished">The directory in which the application will search for macros</translation>
     </message>
     <message>
       <source>Recent macros menu</source>
@@ -3487,6 +3833,22 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Phía dưới bên phải</translation>
     </message>
     <message>
+      <source>Rotates to nearest possible state when clicking a cube face</source>
+      <translation type="unfinished">Rotates to nearest possible state when clicking a cube face</translation>
+    </message>
+    <message>
+      <source>Rotate to nearest</source>
+      <translation type="unfinished">Rotate to nearest</translation>
+    </message>
+    <message>
+      <source>Cube size</source>
+      <translation type="unfinished">Cube size</translation>
+    </message>
+    <message>
+      <source>Size of the navigation cube</source>
+      <translation type="unfinished">Size of the navigation cube</translation>
+    </message>
+    <message>
       <source>3D Navigation</source>
       <translation>Điều hướng 3D</translation>
     </message>
@@ -3525,8 +3887,36 @@ Turntable: the part will be rotated around the z-axis.</translation>
       <translation>Trackball</translation>
     </message>
     <message>
-      <source>New document scale</source>
-      <translation type="unfinished">New document scale</translation>
+      <source>Rotation mode</source>
+      <translation type="unfinished">Rotation mode</translation>
+    </message>
+    <message>
+      <source>Rotations in 3D will use current cursor position as center for rotation</source>
+      <translation type="unfinished">Rotations in 3D will use current cursor position as center for rotation</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation type="unfinished">Window center</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation type="unfinished">Drag at cursor</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation type="unfinished">Object center</translation>
+    </message>
+    <message>
+      <source>Default camera orientation</source>
+      <translation type="unfinished">Default camera orientation</translation>
+    </message>
+    <message>
+      <source>Default camera orientation when creating a new document or selecting the home view</source>
+      <translation type="unfinished">Default camera orientation when creating a new document or selecting the home view</translation>
+    </message>
+    <message>
+      <source>Camera zoom</source>
+      <translation type="unfinished">Camera zoom</translation>
     </message>
     <message>
       <source>Sets camera zoom for new documents.
@@ -3555,8 +3945,14 @@ The value is the diameter of the sphere to fit on the screen.</translation>
       <translation>Thu phóng con trỏ</translation>
     </message>
     <message>
-      <source>Zoom step</source>
-      <translation>Bước thu phóng</translation>
+      <source> Zoom step</source>
+      <translation type="unfinished"> Zoom step</translation>
+    </message>
+    <message>
+      <source>How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
+      <translation type="unfinished">How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
     </message>
     <message>
       <source>Direction of zoom operations will be inverted</source>
@@ -3577,10 +3973,6 @@ Mouse tilting is not disabled by this setting.</translation>
     <message>
       <source>Disable touchscreen tilt gesture</source>
       <translation type="unfinished">Disable touchscreen tilt gesture</translation>
-    </message>
-    <message>
-      <source>Rotations in 3D will use current cursor position as center for rotation</source>
-      <translation type="unfinished">Rotations in 3D will use current cursor position as center for rotation</translation>
     </message>
     <message>
       <source>Isometric</source>
@@ -3622,51 +4014,42 @@ Mouse tilting is not disabled by this setting.</translation>
       <source>Custom</source>
       <translation>Tùy chọn</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsPythonConsole</name>
     <message>
-      <source>Default camera orientation</source>
-      <translation type="unfinished">Default camera orientation</translation>
+      <source>Python console</source>
+      <translation>Bảng điều khiển Python</translation>
     </message>
     <message>
-      <source>Default camera orientation when creating a new document or selecting the home view</source>
-      <translation type="unfinished">Default camera orientation when creating a new document or selecting the home view</translation>
+      <source>Settings</source>
+      <translation type="unfinished">Settings</translation>
     </message>
     <message>
-      <source>Rotation mode</source>
-      <translation type="unfinished">Rotation mode</translation>
+      <source>Words will be wrapped when they exceed available
+horizontal space in Python console</source>
+      <translation type="unfinished">Words will be wrapped when they exceed available
+horizontal space in Python console</translation>
     </message>
     <message>
-      <source>Window center</source>
-      <translation type="unfinished">Window center</translation>
+      <source>Enable word wrap</source>
+      <translation>Bật chế độ ngắt dòng tự động</translation>
     </message>
     <message>
-      <source>Drag at cursor</source>
-      <translation type="unfinished">Drag at cursor</translation>
+      <source>The cursor shape will be a block</source>
+      <translation type="unfinished">The cursor shape will be a block</translation>
     </message>
     <message>
-      <source>Object center</source>
-      <translation type="unfinished">Object center</translation>
+      <source>Enable block cursor</source>
+      <translation type="unfinished">Enable block cursor</translation>
     </message>
     <message>
-      <source>Rotates to nearest possible state when clicking a cube face</source>
-      <translation type="unfinished">Rotates to nearest possible state when clicking a cube face</translation>
+      <source>Saves Python history across sessions</source>
+      <translation type="unfinished">Saves Python history across sessions</translation>
     </message>
     <message>
-      <source>Rotate to nearest</source>
-      <translation type="unfinished">Rotate to nearest</translation>
-    </message>
-    <message>
-      <source>Cube size</source>
-      <translation type="unfinished">Cube size</translation>
-    </message>
-    <message>
-      <source>Size of the navigation cube</source>
-      <translation type="unfinished">Size of the navigation cube</translation>
-    </message>
-    <message>
-      <source>How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
-      <translation type="unfinished">How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
+      <source>Save history</source>
+      <translation type="unfinished">Save history</translation>
     </message>
   </context>
   <context>
@@ -3707,44 +4090,28 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
       <translation>Cài đặt đơn vị</translation>
     </message>
     <message>
-      <source>Standard (mm/kg/s/degree)</source>
-      <translation>Tiêu chuẩn (mm/kg/s/độ)</translation>
+      <source>Unit system:</source>
+      <translation>Hệ thống đơn vị:</translation>
     </message>
     <message>
-      <source>MKS (m/kg/s/degree)</source>
-      <translation>MKS (m/kg/s/độ)</translation>
-    </message>
-    <message>
-      <source>Magnitude</source>
-      <translation>Độ lớn</translation>
-    </message>
-    <message>
-      <source>Unit</source>
-      <translation>Đơn vị</translation>
-    </message>
-    <message>
-      <source>US customary (in/lb)</source>
-      <translation>Phong tục Hoa Kỳ (in / lb)</translation>
+      <source>Unit system that should be used for all parts the application</source>
+      <translation type="unfinished">Unit system that should be used for all parts the application</translation>
     </message>
     <message>
       <source>Number of decimals:</source>
       <translation>Số lượng các chữ số thập phân:</translation>
     </message>
     <message>
-      <source>Imperial decimal (in/lb)</source>
-      <translation>Hệ thống đơn vị thập phân Imperial (inch / pounds)</translation>
-    </message>
-    <message>
-      <source>Building Euro (cm/m²/m³)</source>
-      <translation>Các đơn vị đo kích thước hình học của châu Âu (cm / mét vuông / mét khối)</translation>
-    </message>
-    <message>
-      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
-      <translation>Hệ thống số liệu nhỏ và CNC (mm, mm / phút)</translation>
+      <source>Number of decimals that should be shown for numbers and dimensions</source>
+      <translation type="unfinished">Number of decimals that should be shown for numbers and dimensions</translation>
     </message>
     <message>
       <source>Minimum fractional inch:</source>
       <translation type="unfinished">Minimum fractional inch:</translation>
+    </message>
+    <message>
+      <source>Minimum fractional inch to be displayed</source>
+      <translation type="unfinished">Minimum fractional inch to be displayed</translation>
     </message>
     <message>
       <source>1/2"</source>
@@ -3775,24 +4142,40 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
       <translation>1/128"</translation>
     </message>
     <message>
-      <source>Unit system:</source>
-      <translation>Hệ thống đơn vị:</translation>
+      <source>Magnitude</source>
+      <translation>Độ lớn</translation>
     </message>
     <message>
-      <source>Number of decimals that should be shown for numbers and dimensions</source>
-      <translation type="unfinished">Number of decimals that should be shown for numbers and dimensions</translation>
+      <source>Unit</source>
+      <translation>Đơn vị</translation>
     </message>
     <message>
-      <source>Unit system that should be used for all parts the application</source>
-      <translation type="unfinished">Unit system that should be used for all parts the application</translation>
+      <source>Standard (mm/kg/s/degree)</source>
+      <translation>Tiêu chuẩn (mm/kg/s/độ)</translation>
     </message>
     <message>
-      <source>Minimum fractional inch to be displayed</source>
-      <translation type="unfinished">Minimum fractional inch to be displayed</translation>
+      <source>MKS (m/kg/s/degree)</source>
+      <translation>MKS (m/kg/s/độ)</translation>
+    </message>
+    <message>
+      <source>US customary (in/lb)</source>
+      <translation>Phong tục Hoa Kỳ (in / lb)</translation>
+    </message>
+    <message>
+      <source>Imperial decimal (in/lb)</source>
+      <translation>Hệ thống đơn vị thập phân Imperial (inch / pounds)</translation>
+    </message>
+    <message>
+      <source>Building Euro (cm/m²/m³)</source>
+      <translation>Các đơn vị đo kích thước hình học của châu Âu (cm / mét vuông / mét khối)</translation>
     </message>
     <message>
       <source>Building US (ft-in/sqft/cft)</source>
       <translation type="unfinished">Building US (ft-in/sqft/cft)</translation>
+    </message>
+    <message>
+      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
+      <translation>Hệ thống số liệu nhỏ và CNC (mm, mm / phút)</translation>
     </message>
     <message>
       <source>Imperial for Civil Eng (ft, ft/sec)</source>
@@ -3814,76 +4197,76 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
       <translation>Lựa chọn</translation>
     </message>
     <message>
-      <source>Enable selection highlighting</source>
-      <translation>Bật đánh dấu lựa chọn</translation>
+      <source>Enable preselection and highlight by specified color</source>
+      <translation type="unfinished">Enable preselection and highlight by specified color</translation>
     </message>
     <message>
       <source>Enable preselection highlighting</source>
       <translation>Bật đánh dấu chọn trước</translation>
     </message>
     <message>
-      <source>Background color</source>
-      <translation>Màu nền</translation>
-    </message>
-    <message>
-      <source>Middle color</source>
-      <translation>Màu trung</translation>
-    </message>
-    <message>
-      <source>Color gradient</source>
-      <translation>Độ dốc màu</translation>
-    </message>
-    <message>
-      <source>Simple color</source>
-      <translation>Màu đơn giản</translation>
-    </message>
-    <message>
-      <source>Object being edited</source>
-      <translation>Đối tượng đang được sửa</translation>
-    </message>
-    <message>
-      <source>Active container</source>
-      <translation>Kích hoạt thùng chứa</translation>
-    </message>
-    <message>
-      <source>Enable preselection and highlight by specified color</source>
-      <translation type="unfinished">Enable preselection and highlight by specified color</translation>
-    </message>
-    <message>
       <source>Enable selection highlighting and use specified color</source>
       <translation type="unfinished">Enable selection highlighting and use specified color</translation>
+    </message>
+    <message>
+      <source>Enable selection highlighting</source>
+      <translation>Bật đánh dấu lựa chọn</translation>
     </message>
     <message>
       <source>Background color for the model view</source>
       <translation type="unfinished">Background color for the model view</translation>
     </message>
     <message>
+      <source>Background color</source>
+      <translation>Màu nền</translation>
+    </message>
+    <message>
       <source>Background will have selected color</source>
       <translation type="unfinished">Background will have selected color</translation>
     </message>
     <message>
-      <source>Color gradient will get selected color as middle color</source>
-      <translation type="unfinished">Color gradient will get selected color as middle color</translation>
-    </message>
-    <message>
-      <source>Bottom color</source>
-      <translation type="unfinished">Bottom color</translation>
+      <source>Simple color</source>
+      <translation>Màu đơn giản</translation>
     </message>
     <message>
       <source>Background will have selected color gradient</source>
       <translation type="unfinished">Background will have selected color gradient</translation>
     </message>
     <message>
+      <source>Color gradient</source>
+      <translation>Độ dốc màu</translation>
+    </message>
+    <message>
       <source>Top color</source>
       <translation type="unfinished">Top color</translation>
+    </message>
+    <message>
+      <source>Bottom color</source>
+      <translation type="unfinished">Bottom color</translation>
+    </message>
+    <message>
+      <source>Color gradient will get selected color as middle color</source>
+      <translation type="unfinished">Color gradient will get selected color as middle color</translation>
+    </message>
+    <message>
+      <source>Middle color</source>
+      <translation>Màu trung</translation>
     </message>
     <message>
       <source>Tree view</source>
       <translation>Chế độ xem hình cây</translation>
     </message>
     <message>
+      <source>Object being edited</source>
+      <translation>Đối tượng đang được sửa</translation>
+    </message>
+    <message>
       <source>Background color for objects in tree view that are currently edited</source>
       <translation type="unfinished">Background color for objects in tree view that are currently edited</translation>
+    </message>
+    <message>
+      <source>Active container</source>
+      <translation>Kích hoạt thùng chứa</translation>
     </message>
     <message>
       <source>Background color for active containers in tree view</source>
@@ -3904,46 +4287,38 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</translation>
       <translation>Máy tính đơn vị</translation>
     </message>
     <message>
-      <source>as:</source>
-      <translation>như:</translation>
-    </message>
-    <message>
-      <source>=&gt;</source>
-      <translation>=&gt;</translation>
-    </message>
-    <message>
-      <source>Quantity:</source>
-      <translation>Số lượng:</translation>
-    </message>
-    <message>
-      <source>Copy</source>
-      <translation>Sao chép</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Đóng</translation>
-    </message>
-    <message>
       <source>Input the source value and unit</source>
       <translation type="unfinished">Input the source value and unit</translation>
+    </message>
+    <message>
+      <source>as:</source>
+      <translation>như:</translation>
     </message>
     <message>
       <source>Input here the unit for the result</source>
       <translation type="unfinished">Input here the unit for the result</translation>
     </message>
     <message>
+      <source>=&gt;</source>
+      <translation>=&gt;</translation>
+    </message>
+    <message>
       <source>Result</source>
       <translation type="unfinished">Result</translation>
     </message>
     <message>
-      <source>List of last used calculations 
+      <source>List of last used calculations.
 To add a calculation press Return in the value input field</source>
-      <translation type="unfinished">List of last used calculations 
+      <translation type="unfinished">List of last used calculations.
 To add a calculation press Return in the value input field</translation>
     </message>
     <message>
       <source>Quantity</source>
       <translation type="unfinished">Quantity</translation>
+    </message>
+    <message>
+      <source>Quantity:</source>
+      <translation>Số lượng:</translation>
     </message>
     <message>
       <source>Unit system:</source>
@@ -3975,16 +4350,24 @@ The preference system is the one set in the general preferences.</translation>
       <source>Copy the result into the clipboard</source>
       <translation type="unfinished">Copy the result into the clipboard</translation>
     </message>
+    <message>
+      <source>Copy</source>
+      <translation>Sao chép</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Đóng</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgUnitsCalculator</name>
     <message>
-      <source>unit mismatch</source>
-      <translation type="unfinished">unit mismatch</translation>
-    </message>
-    <message>
       <source>unknown unit:</source>
       <translation type="unfinished">unknown unit:</translation>
+    </message>
+    <message>
+      <source>unit mismatch</source>
+      <translation type="unfinished">unit mismatch</translation>
     </message>
   </context>
   <context>
@@ -3994,28 +4377,12 @@ The preference system is the one set in the general preferences.</translation>
       <translation>Bàn làm việc</translation>
     </message>
     <message>
-      <source>Enabled workbenches</source>
-      <translation>Kích hoạt bàn làm việc</translation>
-    </message>
-    <message>
       <source>Disabled workbenches</source>
       <translation>Vô hiệu hóa bàn làm việc</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Di chuyển xuống</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Di chuyển mục đã chọn xuống.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Mục sẽ được di chuyển xuống&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Move left</source>
-      <translation>Di chuyển sang trái</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Tháo bàn làm việc đã chọn khỏi bàn làm việc được bật&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Enabled workbenches</source>
+      <translation>Kích hoạt bàn làm việc</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -4024,10 +4391,6 @@ The preference system is the one set in the general preferences.</translation>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected workbench to enabled workbenches.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Di chuyển bàn làm việc đã chọn sang bàn làm việc được bật.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Sort enabled workbenches</source>
-      <translation>Sắp xếp bàn làm việc được bật</translation>
     </message>
     <message>
       <source>Move up</source>
@@ -4042,8 +4405,28 @@ The preference system is the one set in the general preferences.</translation>
       <translation>Thêm tất cả vào workbenches được kích hoạt</translation>
     </message>
     <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Tháo bàn làm việc đã chọn khỏi bàn làm việc được bật&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Sort enabled workbenches</source>
+      <translation>Sắp xếp bàn làm việc được bật</translation>
+    </message>
+    <message>
       <source>&lt;p&gt;Sort enabled workbenches&lt;/p&gt;</source>
       <translation>&lt;p&gt;Sắp xếp các bàn làm việc được bật&lt;/p&gt;</translation>
+    </message>
+    <message>
+      <source>Move left</source>
+      <translation>Di chuyển sang trái</translation>
+    </message>
+    <message>
+      <source>Move down</source>
+      <translation>Di chuyển xuống</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Di chuyển mục đã chọn xuống.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Mục sẽ được di chuyển xuống&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600;"&gt;Note:&lt;/span&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;"&gt; The changes become active the next time you start the application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -4064,6 +4447,14 @@ The preference system is the one set in the general preferences.</translation>
       <translation>Khôi phục tài liệu</translation>
     </message>
     <message>
+      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
+
+The 'Status' column shows whether the document could be recovered.</source>
+      <translation>Nhấn 'Bắt đầu khôi phục' để bắt đầu quá trình khôi phục tài liệu được liệt kê bên dưới.
+
+Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi phục được hay không.</translation>
+    </message>
+    <message>
       <source>Status of recovered documents:</source>
       <translation>Tình trạng của tài liệu đã được khôi phục:</translation>
     </message>
@@ -4074,6 +4465,10 @@ The preference system is the one set in the general preferences.</translation>
     <message>
       <source>Status</source>
       <translation>Trạng thái</translation>
+    </message>
+    <message>
+      <source>Cleanup...</source>
+      <translation>Dọn dẹp...</translation>
     </message>
     <message>
       <source>Start Recovery</source>
@@ -4100,10 +4495,6 @@ The preference system is the one set in the general preferences.</translation>
       <translation>Hoàn tất</translation>
     </message>
     <message>
-      <source>Cleanup...</source>
-      <translation>Dọn dẹp...</translation>
-    </message>
-    <message>
       <source>Delete</source>
       <translation>Xóa</translation>
     </message>
@@ -4124,24 +4515,16 @@ The preference system is the one set in the general preferences.</translation>
       <translation>Bạn có chắc chắn muốn xóa tất cả các thư mục tạm thời không?</translation>
     </message>
     <message>
-      <source>Finished</source>
-      <translation>Đã hoàn thành</translation>
+      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
+      <translation>Khi xóa tất cả thư mục tạm thời, bạn sẽ không thể khôi phục bất kỳ tệp nào sau đó.</translation>
     </message>
     <message>
       <source>Transient directories deleted.</source>
       <translation>Đã xóa các thư mục tạm thời.</translation>
     </message>
     <message>
-      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
-
-The 'Status' column shows whether the document could be recovered.</source>
-      <translation>Nhấn 'Bắt đầu khôi phục' để bắt đầu quá trình khôi phục tài liệu được liệt kê bên dưới.
-
-Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi phục được hay không.</translation>
-    </message>
-    <message>
-      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
-      <translation>Khi xóa tất cả thư mục tạm thời, bạn sẽ không thể khôi phục bất kỳ tệp nào sau đó.</translation>
+      <source>Transient deleted</source>
+      <translation type="unfinished">Transient deleted</translation>
     </message>
   </context>
   <context>
@@ -4271,16 +4654,16 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation>Véc tơ</translation>
     </message>
     <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
+      <source>X:</source>
+      <translation>X:</translation>
     </message>
     <message>
       <source>Y:</source>
       <translation>Y:</translation>
     </message>
     <message>
-      <source>X:</source>
-      <translation>X:</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
   </context>
   <context>
@@ -4341,6 +4724,10 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation>Thu gọn</translation>
     </message>
     <message>
+      <source>Do you really want to remove this parameter group?</source>
+      <translation type="unfinished">Do you really want to remove this parameter group?</translation>
+    </message>
+    <message>
       <source>Existing sub-group</source>
       <translation>Nhóm phụ sẵn có</translation>
     </message>
@@ -4363,10 +4750,6 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
     <message>
       <source>Reading from '%1' failed.</source>
       <translation>Đọc dữ liệu từ '%1' không thành công.</translation>
-    </message>
-    <message>
-      <source>Do you really want to remove this parameter group?</source>
-      <translation type="unfinished">Do you really want to remove this parameter group?</translation>
     </message>
   </context>
   <context>
@@ -4423,100 +4806,64 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation>Vị trí</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>Đồng ý</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Dịch:</translation>
-    </message>
-    <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
-    </message>
-    <message>
-      <source>Y:</source>
-      <translation>Y:</translation>
     </message>
     <message>
       <source>X:</source>
       <translation>X:</translation>
     </message>
     <message>
-      <source>Rotation:</source>
-      <translation>Xoay:</translation>
+      <source>Y:</source>
+      <translation>Y:</translation>
     </message>
     <message>
-      <source>Angle:</source>
-      <translation>Góc:</translation>
-    </message>
-    <message>
-      <source>Axis:</source>
-      <translation>Trục:</translation>
-    </message>
-    <message>
-      <source>Center:</source>
-      <translation>Tâm:</translation>
-    </message>
-    <message>
-      <source>Rotation axis with angle</source>
-      <translation>Xoay trục với góc</translation>
-    </message>
-    <message>
-      <source>Apply</source>
-      <translation>Áp dụng</translation>
-    </message>
-    <message>
-      <source>Reset</source>
-      <translation>Đặt lại</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Đóng</translation>
-    </message>
-    <message>
-      <source>Incorrect quantity</source>
-      <translation>Số lượng không chính xác</translation>
-    </message>
-    <message>
-      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
-      <translation>Có một số trường nhập có đầu vào không đúng, hãy đảm bảo các giá trị vị trí hợp lệ!</translation>
-    </message>
-    <message>
-      <source>Use center of mass</source>
-      <translation>Sử dụng tâm khối</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
     <message>
       <source>Axial:</source>
       <translation>Trục:</translation>
     </message>
     <message>
+      <source>Shift click for opposite direction</source>
+      <translation type="unfinished">Shift click for opposite direction</translation>
+    </message>
+    <message>
       <source>Apply axial</source>
       <translation>Áp dụng trục</translation>
     </message>
     <message>
-      <source>Shift click for opposite direction</source>
-      <translation type="unfinished">Shift click for opposite direction</translation>
+      <source>Center:</source>
+      <translation>Tâm:</translation>
+    </message>
+    <message>
+      <source>Use center of mass</source>
+      <translation>Sử dụng tâm khối</translation>
     </message>
     <message>
       <source>Selected points</source>
       <translation>Các điểm đã chọn</translation>
     </message>
     <message>
-      <source>Apply incremental changes</source>
-      <translation type="unfinished">Apply incremental changes</translation>
+      <source>Rotation:</source>
+      <translation>Xoay:</translation>
     </message>
     <message>
-      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
-      <translation type="unfinished">Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</translation>
+      <source>Rotation axis with angle</source>
+      <translation>Xoay trục với góc</translation>
     </message>
     <message>
-      <source>Pitch (around y-axis):</source>
-      <translation type="unfinished">Pitch (around y-axis):</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation type="unfinished">Euler angles (zy'x'')</translation>
     </message>
     <message>
-      <source>Roll (around x-axis):</source>
-      <translation type="unfinished">Roll (around x-axis):</translation>
+      <source>Axis:</source>
+      <translation>Trục:</translation>
+    </message>
+    <message>
+      <source>Angle:</source>
+      <translation>Góc:</translation>
     </message>
     <message>
       <source>Yaw (around z-axis):</source>
@@ -4527,16 +4874,52 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation type="unfinished">Yaw (around z-axis)</translation>
     </message>
     <message>
+      <source>Pitch (around y-axis):</source>
+      <translation type="unfinished">Pitch (around y-axis):</translation>
+    </message>
+    <message>
       <source>Pitch (around y-axis)</source>
       <translation type="unfinished">Pitch (around y-axis)</translation>
+    </message>
+    <message>
+      <source>Roll (around x-axis):</source>
+      <translation type="unfinished">Roll (around x-axis):</translation>
     </message>
     <message>
       <source>Roll (around the x-axis)</source>
       <translation type="unfinished">Roll (around the x-axis)</translation>
     </message>
     <message>
-      <source>Euler angles (zy'x'')</source>
-      <translation type="unfinished">Euler angles (zy'x'')</translation>
+      <source>Apply incremental changes</source>
+      <translation type="unfinished">Apply incremental changes</translation>
+    </message>
+    <message>
+      <source>Reset</source>
+      <translation>Đặt lại</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>Đồng ý</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Đóng</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Áp dụng</translation>
+    </message>
+    <message>
+      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
+      <translation type="unfinished">Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</translation>
+    </message>
+    <message>
+      <source>Incorrect quantity</source>
+      <translation>Số lượng không chính xác</translation>
+    </message>
+    <message>
+      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
+      <translation>Có một số trường nhập có đầu vào không đúng, hãy đảm bảo các giá trị vị trí hợp lệ!</translation>
     </message>
   </context>
   <context>
@@ -4588,12 +4971,12 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation>Hộp thoại</translation>
     </message>
     <message>
-      <source>Close</source>
-      <translation>Đóng</translation>
-    </message>
-    <message>
       <source>Refresh</source>
       <translation>Làm mới</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Đóng</translation>
     </message>
   </context>
   <context>
@@ -4603,12 +4986,12 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation>Cây Inventor</translation>
     </message>
     <message>
-      <source>Nodes</source>
-      <translation>Nút</translation>
-    </message>
-    <message>
       <source>Name</source>
       <translation>Tên</translation>
+    </message>
+    <message>
+      <source>Nodes</source>
+      <translation>Nút</translation>
     </message>
   </context>
   <context>
@@ -4672,8 +5055,12 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation type="unfinished">The selected objects contain other dependencies. Please select which objects to export. All dependencies are auto selected by default.</translation>
     </message>
     <message>
-      <source>Dependency</source>
-      <translation type="unfinished">Dependency</translation>
+      <source>Auto select depending objects</source>
+      <translation type="unfinished">Auto select depending objects</translation>
+    </message>
+    <message>
+      <source>Depending on</source>
+      <translation type="unfinished">Depending on</translation>
     </message>
     <message>
       <source>Document</source>
@@ -4684,20 +5071,16 @@ Cột 'Trạng thái' cho biết liệu tài liệu có thể được khôi ph�
       <translation>Tên</translation>
     </message>
     <message>
-      <source>State</source>
-      <translation type="unfinished">State</translation>
+      <source>Depended by</source>
+      <translation type="unfinished">Depended by</translation>
     </message>
     <message>
-      <source>Hierarchy</source>
-      <translation type="unfinished">Hierarchy</translation>
+      <source>Selections</source>
+      <translation>Lựa chọn</translation>
     </message>
     <message>
-      <source>Selected</source>
-      <translation>Đã chọn</translation>
-    </message>
-    <message>
-      <source>Partial</source>
-      <translation type="unfinished">Partial</translation>
+      <source>All</source>
+      <translation>Tất cả</translation>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
@@ -4754,34 +5137,6 @@ originally selected prior to opening this dialog</translation>
       <translation>Tùy chọn</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Xóa</translation>
-    </message>
-    <message>
-      <source>Save As...</source>
-      <translation>Lưu dưới dạng...</translation>
-    </message>
-    <message>
-      <source>Save Report Output</source>
-      <translation>Lưu đầu ra báo cáo</translation>
-    </message>
-    <message>
-      <source>Go to end</source>
-      <translation>Đến cuối cùng</translation>
-    </message>
-    <message>
-      <source>Redirect Python output</source>
-      <translation>Chuyển hướng đầu ra Python</translation>
-    </message>
-    <message>
-      <source>Redirect Python errors</source>
-      <translation>Chuyển hướng lỗi Python</translation>
-    </message>
-    <message>
-      <source>Plain Text Files</source>
-      <translation>Tệp văn bản thuần túy</translation>
-    </message>
-    <message>
       <source>Display message types</source>
       <translation type="unfinished">Display message types</translation>
     </message>
@@ -4802,8 +5157,36 @@ originally selected prior to opening this dialog</translation>
       <translation type="unfinished">Errors</translation>
     </message>
     <message>
-      <source>Show report view on</source>
-      <translation type="unfinished">Show report view on</translation>
+      <source>Show output window on</source>
+      <translation type="unfinished">Show output window on</translation>
+    </message>
+    <message>
+      <source>Redirect Python output</source>
+      <translation>Chuyển hướng đầu ra Python</translation>
+    </message>
+    <message>
+      <source>Redirect Python errors</source>
+      <translation>Chuyển hướng lỗi Python</translation>
+    </message>
+    <message>
+      <source>Go to end</source>
+      <translation>Đến cuối cùng</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Xóa</translation>
+    </message>
+    <message>
+      <source>Save As...</source>
+      <translation>Lưu dưới dạng...</translation>
+    </message>
+    <message>
+      <source>Save Report Output</source>
+      <translation>Lưu đầu ra báo cáo</translation>
+    </message>
+    <message>
+      <source>Plain Text Files</source>
+      <translation>Tệp văn bản thuần túy</translation>
     </message>
   </context>
   <context>
@@ -4820,6 +5203,10 @@ originally selected prior to opening this dialog</translation>
   <context>
     <name>Gui::DockWnd::SelectionView</name>
     <message>
+      <source>Selection View</source>
+      <translation>Chế độ xem lựa chọn</translation>
+    </message>
+    <message>
       <source>Search</source>
       <translation>Tìm kiếm</translation>
     </message>
@@ -4830,6 +5217,14 @@ originally selected prior to opening this dialog</translation>
     <message>
       <source>Clears the search field</source>
       <translation>Xóa sạch trường tìm kiếm</translation>
+    </message>
+    <message>
+      <source>The number of selected items</source>
+      <translation>Số lượng các mục đã chọn</translation>
+    </message>
+    <message>
+      <source>Picked object list</source>
+      <translation type="unfinished">Picked object list</translation>
     </message>
     <message>
       <source>Select only</source>
@@ -4864,14 +5259,6 @@ originally selected prior to opening this dialog</translation>
       <translation>Chọn và định vị đối tượng này trong chế độ xem dạng cây</translation>
     </message>
     <message>
-      <source>To python console</source>
-      <translation>Để bàn điều khiển python</translation>
-    </message>
-    <message>
-      <source>Reveals this object and its subelements in the python console.</source>
-      <translation>Tiết lộ đối tượng này và các phần con của nó trong giao diện điều khiển python.</translation>
-    </message>
-    <message>
       <source>Mark to recompute</source>
       <translation>Đánh dấu để tính toán lại</translation>
     </message>
@@ -4880,12 +5267,12 @@ originally selected prior to opening this dialog</translation>
       <translation>Đánh dấu đối tượng để tính toán lại</translation>
     </message>
     <message>
-      <source>Selection View</source>
-      <translation>Chế độ xem lựa chọn</translation>
+      <source>To python console</source>
+      <translation>Để bàn điều khiển python</translation>
     </message>
     <message>
-      <source>The number of selected items</source>
-      <translation>Số lượng các mục đã chọn</translation>
+      <source>Reveals this object and its subelements in the python console.</source>
+      <translation>Tiết lộ đối tượng này và các phần con của nó trong giao diện điều khiển python.</translation>
     </message>
     <message>
       <source>Duplicate subshape</source>
@@ -4894,10 +5281,6 @@ originally selected prior to opening this dialog</translation>
     <message>
       <source>Creates a standalone copy of this subshape in the document</source>
       <translation>Tạo một bản sao độc lập của hình dạng phụ này trong tài liệu</translation>
-    </message>
-    <message>
-      <source>Picked object list</source>
-      <translation type="unfinished">Picked object list</translation>
     </message>
   </context>
   <context>
@@ -4936,8 +5319,16 @@ Do you want to save your changes?</source>
 Bạn có muốn lưu các thay đổi của bạn?</translation>
     </message>
     <message>
+      <source>FreeCAD macro</source>
+      <translation>Macro FreeCAD</translation>
+    </message>
+    <message>
       <source>Export PDF</source>
       <translation>Xuất tệp PDF</translation>
+    </message>
+    <message>
+      <source>PDF file</source>
+      <translation>Tệp PDF</translation>
     </message>
     <message>
       <source>untitled[*]</source>
@@ -4958,14 +5349,6 @@ Bạn có muốn lưu các thay đổi của bạn?</translation>
     <message>
       <source>Formatted</source>
       <translation>Đã định dạng</translation>
-    </message>
-    <message>
-      <source>FreeCAD macro</source>
-      <translation>Macro FreeCAD</translation>
-    </message>
-    <message>
-      <source>PDF file</source>
-      <translation>Tệp PDF</translation>
     </message>
   </context>
   <context>
@@ -5060,34 +5443,6 @@ Bạn có muốn lưu các thay đổi của bạn?</translation>
   <context>
     <name>Gui::GraphvizView</name>
     <message>
-      <source>Export graph</source>
-      <translation>Xuất đồ thị</translation>
-    </message>
-    <message>
-      <source>PNG format</source>
-      <translation>Định dạng PNG</translation>
-    </message>
-    <message>
-      <source>Bitmap format</source>
-      <translation>Định dạng Bitmap</translation>
-    </message>
-    <message>
-      <source>GIF format</source>
-      <translation>Định dạng GIF</translation>
-    </message>
-    <message>
-      <source>JPG format</source>
-      <translation>Định dạng JPG</translation>
-    </message>
-    <message>
-      <source>SVG format</source>
-      <translation>Định dạng SVG</translation>
-    </message>
-    <message>
-      <source>PDF format</source>
-      <translation>Định dạng PDF</translation>
-    </message>
-    <message>
       <source>Graphviz not found</source>
       <translation>Không tìm thấy Graphviz</translation>
     </message>
@@ -5114,6 +5469,34 @@ Bạn có muốn lưu các thay đổi của bạn?</translation>
     <message>
       <source>Graphviz failed to create an image file</source>
       <translation>Graphviz không thể tạo tệp hình ảnh</translation>
+    </message>
+    <message>
+      <source>PNG format</source>
+      <translation>Định dạng PNG</translation>
+    </message>
+    <message>
+      <source>Bitmap format</source>
+      <translation>Định dạng Bitmap</translation>
+    </message>
+    <message>
+      <source>GIF format</source>
+      <translation>Định dạng GIF</translation>
+    </message>
+    <message>
+      <source>JPG format</source>
+      <translation>Định dạng JPG</translation>
+    </message>
+    <message>
+      <source>SVG format</source>
+      <translation>Định dạng SVG</translation>
+    </message>
+    <message>
+      <source>PDF format</source>
+      <translation>Định dạng PDF</translation>
+    </message>
+    <message>
+      <source>Export graph</source>
+      <translation>Xuất đồ thị</translation>
     </message>
   </context>
   <context>
@@ -5156,14 +5539,6 @@ Bạn có muốn lưu các thay đổi của bạn?</translation>
   <context>
     <name>Gui::LocationDialog</name>
     <message>
-      <source>Wrong direction</source>
-      <translation>Hướng sai</translation>
-    </message>
-    <message>
-      <source>Direction must not be the null vector</source>
-      <translation>Hướng không được xác định bởi vector 0</translation>
-    </message>
-    <message>
       <source>X</source>
       <translation>X</translation>
     </message>
@@ -5178,6 +5553,14 @@ Bạn có muốn lưu các thay đổi của bạn?</translation>
     <message>
       <source>User defined...</source>
       <translation>Đã xác định người dùng...</translation>
+    </message>
+    <message>
+      <source>Wrong direction</source>
+      <translation>Hướng sai</translation>
+    </message>
+    <message>
+      <source>Direction must not be the null vector</source>
+      <translation>Hướng không được xác định bởi vector 0</translation>
     </message>
   </context>
   <context>
@@ -5225,16 +5608,28 @@ Bạn có muốn lưu các thay đổi của bạn?</translation>
       <translation>Sẵn sàng</translation>
     </message>
     <message>
+      <source>Help addon needed!</source>
+      <translation type="unfinished">Help addon needed!</translation>
+    </message>
+    <message>
+      <source>The Help system of %1 is now handled by the "Help" addon. It can easily be installed via the Addons Manager</source>
+      <translation type="unfinished">The Help system of %1 is now handled by the "Help" addon. It can easily be installed via the Addons Manager</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager</source>
+      <translation type="unfinished">Open Addon Manager</translation>
+    </message>
+    <message>
+      <source>Close All</source>
+      <translation>Đóng tất cả</translation>
+    </message>
+    <message>
       <source>Toggles this toolbar</source>
       <translation>Chuyển đổi thanh công cụ này</translation>
     </message>
     <message>
       <source>Toggles this dockable window</source>
       <translation>Chuyển đổi cửa sổ có thể gắn này</translation>
-    </message>
-    <message>
-      <source>Close All</source>
-      <translation>Đóng tất cả</translation>
     </message>
     <message>
       <source>Unsaved document</source>
@@ -5332,12 +5727,12 @@ Bạn muốn tiến hành như thế nào?</translation>
       <translation>Điểm được chọn tại (%1,%2,%3)</translation>
     </message>
     <message>
-      <source>No point was picked</source>
-      <translation>Không có điểm nào được chọn</translation>
-    </message>
-    <message>
       <source>No point was found on model</source>
       <translation>Không tìm thấy điểm nào trên mô hình</translation>
+    </message>
+    <message>
+      <source>No point was picked</source>
+      <translation>Không có điểm nào được chọn</translation>
     </message>
   </context>
   <context>
@@ -5357,6 +5752,13 @@ Bạn muốn tiến hành như thế nào?</translation>
     <message>
       <source>Pinch (place two fingers on the screen and drag them apart from or towards each other) OR scroll middle mouse button OR press ALT + right mouse button OR PgUp/PgDown on keyboard.</source>
       <translation type="unfinished">Pinch (place two fingers on the screen and drag them apart from or towards each other) OR scroll middle mouse button OR press ALT + right mouse button OR PgUp/PgDown on keyboard.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::ModifierLineEdit</name>
+    <message>
+      <source>Press modifier keys</source>
+      <translation type="unfinished">Press modifier keys</translation>
     </message>
   </context>
   <context>
@@ -5383,6 +5785,25 @@ Bạn muốn tiến hành như thế nào?</translation>
     <message>
       <source>Press CTRL and left mouse button</source>
       <translation>Nhấn CTRL và nút chuột trái</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::OpenSCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Bấm nút chuột trái</translation>
+    </message>
+    <message>
+      <source>Press right mouse button and move mouse</source>
+      <translation type="unfinished">Press right mouse button and move mouse</translation>
+    </message>
+    <message>
+      <source>Press left mouse button and move mouse</source>
+      <translation type="unfinished">Press left mouse button and move mouse</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button or SHIFT and right mouse button</source>
+      <translation type="unfinished">Press middle mouse button or SHIFT and right mouse button</translation>
     </message>
   </context>
   <context>
@@ -5459,24 +5880,32 @@ Bạn muốn tiến hành như thế nào?</translation>
       <translation type="unfinished">property</translation>
     </message>
     <message>
+      <source>Auto expand</source>
+      <translation type="unfinished">Auto expand</translation>
+    </message>
+    <message>
       <source>Show all</source>
       <translation type="unfinished">Show all</translation>
-    </message>
-    <message>
-      <source>Add property</source>
-      <translation type="unfinished">Add property</translation>
-    </message>
-    <message>
-      <source>Remove property</source>
-      <translation type="unfinished">Remove property</translation>
     </message>
     <message>
       <source>Expression...</source>
       <translation type="unfinished">Expression...</translation>
     </message>
     <message>
-      <source>Auto expand</source>
-      <translation type="unfinished">Auto expand</translation>
+      <source>Add property</source>
+      <translation type="unfinished">Add property</translation>
+    </message>
+    <message>
+      <source>Rename property group</source>
+      <translation type="unfinished">Rename property group</translation>
+    </message>
+    <message>
+      <source>Remove property</source>
+      <translation type="unfinished">Remove property</translation>
+    </message>
+    <message>
+      <source>Group name:</source>
+      <translation type="unfinished">Group name:</translation>
     </message>
   </context>
   <context>
@@ -5526,8 +5955,16 @@ Bạn có muốn thoát mà không lưu dữ liệu của mình không?</transla
       <translation>Ngoại lệ FreeCAD không thể chỉnh sửa.</translation>
     </message>
     <message>
+      <source>Unhandled std C++ exception.</source>
+      <translation>Ngoại lệ std C++ không thể chỉnh sửa.</translation>
+    </message>
+    <message>
       <source>Unhandled unknown C++ exception.</source>
       <translation>Ngoại lệ C++ chưa biết không thể chỉnh sửa.</translation>
+    </message>
+    <message>
+      <source>&amp;Copy</source>
+      <translation>&amp;Sao chép</translation>
     </message>
     <message>
       <source>&amp;Copy command</source>
@@ -5542,28 +5979,12 @@ Bạn có muốn thoát mà không lưu dữ liệu của mình không?</transla
       <translation>Lưu lịch sử thành...</translation>
     </message>
     <message>
-      <source>Insert file name...</source>
-      <translation>Chèn tên tập tin...</translation>
+      <source>Save history</source>
+      <translation type="unfinished">Save history</translation>
     </message>
     <message>
-      <source>Save History</source>
-      <translation>Lưu Lịch sử</translation>
-    </message>
-    <message>
-      <source>Insert file name</source>
-      <translation>Chèn tên tập tin</translation>
-    </message>
-    <message>
-      <source>Unhandled std C++ exception.</source>
-      <translation>Ngoại lệ std C++ không thể chỉnh sửa.</translation>
-    </message>
-    <message>
-      <source>Word wrap</source>
-      <translation>Ngắt dòng</translation>
-    </message>
-    <message>
-      <source>&amp;Copy</source>
-      <translation>&amp;Sao chép</translation>
+      <source>Saves Python history across %1 sessions</source>
+      <translation type="unfinished">Saves Python history across %1 sessions</translation>
     </message>
     <message>
       <source>&amp;Paste</source>
@@ -5578,20 +5999,28 @@ Bạn có muốn thoát mà không lưu dữ liệu của mình không?</transla
       <translation>Xóa bảng điều khiển</translation>
     </message>
     <message>
+      <source>Insert file name...</source>
+      <translation>Chèn tên tập tin...</translation>
+    </message>
+    <message>
+      <source>Word wrap</source>
+      <translation>Ngắt dòng</translation>
+    </message>
+    <message>
+      <source>Save History</source>
+      <translation>Lưu Lịch sử</translation>
+    </message>
+    <message>
       <source>Macro Files</source>
       <translation>Tập tin Macro</translation>
     </message>
     <message>
+      <source>Insert file name</source>
+      <translation>Chèn tên tập tin</translation>
+    </message>
+    <message>
       <source>All Files</source>
       <translation>Tất cả các tệp</translation>
-    </message>
-    <message>
-      <source>Save history</source>
-      <translation type="unfinished">Save history</translation>
-    </message>
-    <message>
-      <source>Saves Python history across %1 sessions</source>
-      <translation type="unfinished">Saves Python history across %1 sessions</translation>
     </message>
   </context>
   <context>
@@ -5622,6 +6051,10 @@ Bạn có muốn thoát mà không lưu dữ liệu của mình không?</transla
   </context>
   <context>
     <name>Gui::RecentMacrosAction</name>
+    <message>
+      <source>none</source>
+      <translation>không có</translation>
+    </message>
     <message>
       <source>Run macro %1 (Shift+click to edit) shortcut: %2</source>
       <translation type="unfinished">Run macro %1 (Shift+click to edit) shortcut: %2</translation>
@@ -5655,6 +6088,25 @@ Bạn có muốn thoát mà không lưu dữ liệu của mình không?</transla
     </message>
   </context>
   <context>
+    <name>Gui::SearchBar</name>
+    <message>
+      <source>Previous</source>
+      <translation type="unfinished">Previous</translation>
+    </message>
+    <message>
+      <source>Next</source>
+      <translation type="unfinished">Next</translation>
+    </message>
+    <message>
+      <source>Case sensitive</source>
+      <translation type="unfinished">Case sensitive</translation>
+    </message>
+    <message>
+      <source>Whole words</source>
+      <translation type="unfinished">Whole words</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::SelectModule</name>
     <message>
       <source>Select module</source>
@@ -5672,10 +6124,6 @@ Bạn có muốn thoát mà không lưu dữ liệu của mình không?</transla
   <context>
     <name>Gui::StdCmdDescription</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>Des&amp;cription</source>
       <translation>&amp;Mô tả</translation>
     </message>
@@ -5686,10 +6134,6 @@ Bạn có muốn thoát mà không lưu dữ liệu của mình không?</transla
   </context>
   <context>
     <name>Gui::StdCmdDownloadOnlineHelp</name>
-    <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
     <message>
       <source>Download online help</source>
       <translation>Tải trợ giúp trực tuyến</translation>
@@ -5729,10 +6173,6 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
   </context>
   <context>
     <name>Gui::StdCmdPythonHelp</name>
-    <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
     <message>
       <source>Automatic python modules documentation</source>
       <translation>Tài liệu mô-đun python tự động</translation>
@@ -5782,28 +6222,28 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Văn bản dán nhãn</translation>
     </message>
     <message>
-      <source>Recompute after commit</source>
-      <translation type="unfinished">Recompute after commit</translation>
-    </message>
-    <message>
-      <source>Remove</source>
-      <translation>Xóa bỏ</translation>
-    </message>
-    <message>
       <source>Edit</source>
       <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
-      <source>Remove all</source>
-      <translation type="unfinished">Remove all</translation>
     </message>
     <message>
       <source>Hide</source>
       <translation type="unfinished">Hide</translation>
     </message>
     <message>
+      <source>Remove</source>
+      <translation>Xóa bỏ</translation>
+    </message>
+    <message>
+      <source>Remove all</source>
+      <translation type="unfinished">Remove all</translation>
+    </message>
+    <message>
       <source>Box select</source>
       <translation type="unfinished">Box select</translation>
+    </message>
+    <message>
+      <source>Recompute after commit</source>
+      <translation type="unfinished">Recompute after commit</translation>
     </message>
     <message>
       <source>On-top when selected</source>
@@ -5812,6 +6252,14 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
   </context>
   <context>
     <name>Gui::TaskView::TaskAppearance</name>
+    <message>
+      <source>Appearance</source>
+      <translation>Diện mạo</translation>
+    </message>
+    <message>
+      <source>Document window:</source>
+      <translation>Cửa sổ tài liệu:</translation>
+    </message>
     <message>
       <source>Plot mode:</source>
       <translation>Chế độ plot:</translation>
@@ -5827,14 +6275,6 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
     <message>
       <source>Transparency:</source>
       <translation>Độ trong suốt:</translation>
-    </message>
-    <message>
-      <source>Appearance</source>
-      <translation>Diện mạo</translation>
-    </message>
-    <message>
-      <source>Document window:</source>
-      <translation>Cửa sổ tài liệu:</translation>
     </message>
   </context>
   <context>
@@ -5898,6 +6338,25 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
     </message>
   </context>
   <context>
+    <name>Gui::TinkerCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Bấm nút chuột trái</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button</source>
+      <translation>Bấm nút chuột giữa</translation>
+    </message>
+    <message>
+      <source>Press right mouse button</source>
+      <translation type="unfinished">Press right mouse button</translation>
+    </message>
+    <message>
+      <source>Scroll middle mouse button</source>
+      <translation>Lăn nút chuột giữa</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::TouchpadNavigationStyle</name>
     <message>
       <source>Press left mouse button</source>
@@ -5919,28 +6378,24 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
   <context>
     <name>Gui::Translator</name>
     <message>
-      <source>English</source>
-      <translation>Tiếng Anh</translation>
+      <source>Afrikaans</source>
+      <translation>Tiếng Nam Phi</translation>
     </message>
     <message>
-      <source>German</source>
-      <translation>Tiếng Đức</translation>
+      <source>Arabic</source>
+      <translation type="unfinished">Arabic</translation>
     </message>
     <message>
-      <source>Spanish</source>
-      <translation>Tiếng Tây Ban Nha</translation>
+      <source>Basque</source>
+      <translation type="unfinished">Basque</translation>
     </message>
     <message>
-      <source>French</source>
-      <translation>Tiếng Pháp</translation>
+      <source>Bulgarian</source>
+      <translation type="unfinished">Bulgarian</translation>
     </message>
     <message>
-      <source>Italian</source>
-      <translation>Tiếng Ý</translation>
-    </message>
-    <message>
-      <source>Japanese</source>
-      <translation>Tiếng Nhật</translation>
+      <source>Catalan</source>
+      <translation type="unfinished">Catalan</translation>
     </message>
     <message>
       <source>Chinese Simplified</source>
@@ -5951,24 +6406,80 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Tiếng Trung Phồn Thể</translation>
     </message>
     <message>
+      <source>Croatian</source>
+      <translation>Tiếng Crô-a-ti-a</translation>
+    </message>
+    <message>
+      <source>Czech</source>
+      <translation>Tiếng Séc</translation>
+    </message>
+    <message>
+      <source>Dutch</source>
+      <translation>Tiếng Hà Lan</translation>
+    </message>
+    <message>
+      <source>English</source>
+      <translation>Tiếng Anh</translation>
+    </message>
+    <message>
+      <source>Filipino</source>
+      <translation type="unfinished">Filipino</translation>
+    </message>
+    <message>
+      <source>Finnish</source>
+      <translation>Tiếng Phần Lan</translation>
+    </message>
+    <message>
+      <source>French</source>
+      <translation>Tiếng Pháp</translation>
+    </message>
+    <message>
+      <source>Galician</source>
+      <translation type="unfinished">Galician</translation>
+    </message>
+    <message>
+      <source>German</source>
+      <translation>Tiếng Đức</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Tiếng Hy Lạp</translation>
+    </message>
+    <message>
+      <source>Hungarian</source>
+      <translation>Tiếng Hung-ga-ri</translation>
+    </message>
+    <message>
+      <source>Indonesian</source>
+      <translation type="unfinished">Indonesian</translation>
+    </message>
+    <message>
+      <source>Italian</source>
+      <translation>Tiếng Ý</translation>
+    </message>
+    <message>
+      <source>Japanese</source>
+      <translation>Tiếng Nhật</translation>
+    </message>
+    <message>
+      <source>Kabyle</source>
+      <translation type="unfinished">Kabyle</translation>
+    </message>
+    <message>
       <source>Korean</source>
       <translation type="unfinished">Korean</translation>
     </message>
     <message>
-      <source>Russian</source>
-      <translation>Tiếng Nga</translation>
-    </message>
-    <message>
-      <source>Swedish</source>
-      <translation>Tiếng Thụy Điển</translation>
-    </message>
-    <message>
-      <source>Afrikaans</source>
-      <translation>Tiếng Nam Phi</translation>
+      <source>Lithuanian</source>
+      <translation type="unfinished">Lithuanian</translation>
     </message>
     <message>
       <source>Norwegian</source>
       <translation>Tiếng Na Uy</translation>
+    </message>
+    <message>
+      <source>Polish</source>
+      <translation>Tiếng Ba Lan</translation>
     </message>
     <message>
       <source>Portuguese, Brazilian</source>
@@ -5979,100 +6490,52 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Tiếng Bồ Đào Nha</translation>
     </message>
     <message>
-      <source>Dutch</source>
-      <translation>Tiếng Hà Lan</translation>
-    </message>
-    <message>
-      <source>Ukrainian</source>
-      <translation>Tiếng U-crai-na</translation>
-    </message>
-    <message>
-      <source>Finnish</source>
-      <translation>Tiếng Phần Lan</translation>
-    </message>
-    <message>
-      <source>Croatian</source>
-      <translation>Tiếng Crô-a-ti-a</translation>
-    </message>
-    <message>
-      <source>Polish</source>
-      <translation>Tiếng Ba Lan</translation>
-    </message>
-    <message>
-      <source>Czech</source>
-      <translation>Tiếng Séc</translation>
-    </message>
-    <message>
-      <source>Hungarian</source>
-      <translation>Tiếng Hung-ga-ri</translation>
-    </message>
-    <message>
       <source>Romanian</source>
       <translation>Tiếng Ru-ma-ni</translation>
+    </message>
+    <message>
+      <source>Russian</source>
+      <translation>Tiếng Nga</translation>
     </message>
     <message>
       <source>Slovak</source>
       <translation>Tiếng Xlô-vác</translation>
     </message>
     <message>
-      <source>Turkish</source>
-      <translation>Tiếng Thổ Nhĩ Kỳ</translation>
-    </message>
-    <message>
       <source>Slovenian</source>
       <translation>Tiếng Slo-va-ki-a</translation>
     </message>
     <message>
-      <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <source>Spanish</source>
+      <translation>Tiếng Tây Ban Nha</translation>
     </message>
     <message>
-      <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <source>Spanish, Argentina</source>
+      <translation type="unfinished">Spanish, Argentina</translation>
     </message>
     <message>
-      <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <source>Swedish</source>
+      <translation>Tiếng Thụy Điển</translation>
     </message>
     <message>
-      <source>Kabyle</source>
-      <translation type="unfinished">Kabyle</translation>
+      <source>Turkish</source>
+      <translation>Tiếng Thổ Nhĩ Kỳ</translation>
     </message>
     <message>
-      <source>Filipino</source>
-      <translation type="unfinished">Filipino</translation>
-    </message>
-    <message>
-      <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
-    </message>
-    <message>
-      <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <source>Ukrainian</source>
+      <translation>Tiếng U-crai-na</translation>
     </message>
     <message>
       <source>Valencian</source>
       <translation type="unfinished">Valencian</translation>
     </message>
     <message>
-      <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
-    </message>
-    <message>
       <source>Vietnamese</source>
       <translation type="unfinished">Vietnamese</translation>
     </message>
     <message>
-      <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
-    </message>
-    <message>
-      <source>Greek</source>
-      <translation>Tiếng Hy Lạp</translation>
-    </message>
-    <message>
-      <source>Spanish, Argentina</source>
-      <translation type="unfinished">Spanish, Argentina</translation>
+      <source>Georgian</source>
+      <translation type="unfinished">Georgian</translation>
     </message>
   </context>
   <context>
@@ -6092,40 +6555,12 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
   <context>
     <name>Gui::TreeWidget</name>
     <message>
-      <source>Create group...</source>
-      <translation>Tạo nhóm...</translation>
+      <source>Search...</source>
+      <translation>Tìm kiếm...</translation>
     </message>
     <message>
-      <source>Create a group</source>
-      <translation>Tạo một nhóm</translation>
-    </message>
-    <message>
-      <source>Group</source>
-      <translation>Nhóm</translation>
-    </message>
-    <message>
-      <source>Rename</source>
-      <translation>Đổi tên</translation>
-    </message>
-    <message>
-      <source>Rename object</source>
-      <translation>Đổi tên đối tượng</translation>
-    </message>
-    <message>
-      <source>Labels &amp; Attributes</source>
-      <translation>Nhãn &amp; Thuộc tính</translation>
-    </message>
-    <message>
-      <source>Application</source>
-      <translation>Ứng dụng</translation>
-    </message>
-    <message>
-      <source>Finish editing</source>
-      <translation>Hoàn tất chỉnh sửa</translation>
-    </message>
-    <message>
-      <source>Finish editing object</source>
-      <translation>Hoàn tất chỉnh sửa đối tượng</translation>
+      <source>Search for objects</source>
+      <translation>Tìm kiếm các đối tượng</translation>
     </message>
     <message>
       <source>Activate document</source>
@@ -6136,36 +6571,20 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Kích hoạt tài liệu %1</translation>
     </message>
     <message>
-      <source>Skip recomputes</source>
-      <translation>Bỏ qua việc tính toán lại</translation>
+      <source>Group</source>
+      <translation>Nhóm</translation>
     </message>
     <message>
-      <source>Enable or disable recomputations of document</source>
-      <translation>Bật hoặc tắt chế độ tính toán lại tài liệu</translation>
-    </message>
-    <message>
-      <source>Mark to recompute</source>
-      <translation>Đánh dấu để tính toán lại</translation>
-    </message>
-    <message>
-      <source>Mark this object to be recomputed</source>
-      <translation>Đánh dấu đối tượng để tính toán lại</translation>
-    </message>
-    <message>
-      <source>%1, Internal name: %2</source>
-      <translation>%1, Tên nội bộ: %2</translation>
-    </message>
-    <message>
-      <source>Search...</source>
-      <translation>Tìm kiếm...</translation>
-    </message>
-    <message>
-      <source>Search for objects</source>
-      <translation>Tìm kiếm các đối tượng</translation>
+      <source>Labels &amp; Attributes</source>
+      <translation>Nhãn &amp; Thuộc tính</translation>
     </message>
     <message>
       <source>Description</source>
       <translation>Mô tả</translation>
+    </message>
+    <message>
+      <source>Application</source>
+      <translation>Ứng dụng</translation>
     </message>
     <message>
       <source>Show hidden items</source>
@@ -6184,6 +6603,38 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation type="unfinished">Hide the item in tree</translation>
     </message>
     <message>
+      <source>Create group...</source>
+      <translation>Tạo nhóm...</translation>
+    </message>
+    <message>
+      <source>Create a group</source>
+      <translation>Tạo một nhóm</translation>
+    </message>
+    <message>
+      <source>Rename</source>
+      <translation>Đổi tên</translation>
+    </message>
+    <message>
+      <source>Rename object</source>
+      <translation>Đổi tên đối tượng</translation>
+    </message>
+    <message>
+      <source>Finish editing</source>
+      <translation>Hoàn tất chỉnh sửa</translation>
+    </message>
+    <message>
+      <source>Finish editing object</source>
+      <translation>Hoàn tất chỉnh sửa đối tượng</translation>
+    </message>
+    <message>
+      <source>Add dependent objects to selection</source>
+      <translation type="unfinished">Add dependent objects to selection</translation>
+    </message>
+    <message>
+      <source>Adds all dependent objects to the selection</source>
+      <translation type="unfinished">Adds all dependent objects to the selection</translation>
+    </message>
+    <message>
       <source>Close document</source>
       <translation type="unfinished">Close document</translation>
     </message>
@@ -6200,12 +6651,28 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation type="unfinished">Reload a partially loaded document</translation>
     </message>
     <message>
+      <source>Skip recomputes</source>
+      <translation>Bỏ qua việc tính toán lại</translation>
+    </message>
+    <message>
+      <source>Enable or disable recomputations of document</source>
+      <translation>Bật hoặc tắt chế độ tính toán lại tài liệu</translation>
+    </message>
+    <message>
       <source>Allow partial recomputes</source>
       <translation type="unfinished">Allow partial recomputes</translation>
     </message>
     <message>
       <source>Enable or disable recomputating editing object when 'skip recomputation' is enabled</source>
       <translation type="unfinished">Enable or disable recomputating editing object when 'skip recomputation' is enabled</translation>
+    </message>
+    <message>
+      <source>Mark to recompute</source>
+      <translation>Đánh dấu để tính toán lại</translation>
+    </message>
+    <message>
+      <source>Mark this object to be recomputed</source>
+      <translation>Đánh dấu đối tượng để tính toán lại</translation>
     </message>
     <message>
       <source>Recompute object</source>
@@ -6218,6 +6685,10 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
     <message>
       <source> (but must be executed)</source>
       <translation type="unfinished"> (but must be executed)</translation>
+    </message>
+    <message>
+      <source>%1, Internal name: %2</source>
+      <translation>%1, Tên nội bộ: %2</translation>
     </message>
   </context>
   <context>
@@ -6322,6 +6793,10 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Z:</translation>
     </message>
     <message>
+      <source>Grid Snap in</source>
+      <translation>Căn chỉnh với lưới</translation>
+    </message>
+    <message>
       <source>0.1 mm</source>
       <translation>0.1 mm</translation>
     </message>
@@ -6377,10 +6852,6 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <source>5 m </source>
       <translation>5 m </translation>
     </message>
-    <message>
-      <source>Grid Snap in</source>
-      <translation>Căn chỉnh với lưới</translation>
-    </message>
   </context>
   <context>
     <name>PropertyListDialog</name>
@@ -6396,6 +6867,10 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
   <context>
     <name>QDockWidget</name>
     <message>
+      <source>Toolbox</source>
+      <translation>Hộp công cụ</translation>
+    </message>
+    <message>
       <source>Tree view</source>
       <translation>Chế độ xem hình cây</translation>
     </message>
@@ -6408,28 +6883,24 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Chế độ xem lựa chọn</translation>
     </message>
     <message>
-      <source>Report view</source>
-      <translation>Chế độ xem báo cáo</translation>
-    </message>
-    <message>
       <source>Combo View</source>
       <translation>Chế độ xem kết hợp</translation>
     </message>
     <message>
-      <source>Toolbox</source>
-      <translation>Hộp công cụ</translation>
+      <source>Report view</source>
+      <translation>Chế độ xem báo cáo</translation>
     </message>
     <message>
       <source>Python console</source>
       <translation>Bảng điều khiển Python</translation>
     </message>
     <message>
-      <source>Display properties</source>
-      <translation>Hiển thị thuộc tính</translation>
-    </message>
-    <message>
       <source>DAG View</source>
       <translation>Chế độ xem DAG</translation>
+    </message>
+    <message>
+      <source>Display properties</source>
+      <translation>Hiển thị thuộc tính</translation>
     </message>
   </context>
   <context>
@@ -6443,12 +6914,20 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Hiển thị</translation>
     </message>
     <message>
+      <source>Workbenches</source>
+      <translation>Bàn làm việc</translation>
+    </message>
+    <message>
       <source>Unknown filetype</source>
       <translation>Kiểu tập tin chưa biết</translation>
     </message>
     <message>
       <source>Cannot open unknown filetype: %1</source>
       <translation>Không thể mở loại tệp không xác định: %1</translation>
+    </message>
+    <message>
+      <source>Export failed</source>
+      <translation>Xuất không thành công</translation>
     </message>
     <message>
       <source>Cannot save to unknown filetype: %1</source>
@@ -6471,6 +6950,18 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Mở tài liệu</translation>
     </message>
     <message>
+      <source>Error</source>
+      <translation>Lỗi</translation>
+    </message>
+    <message>
+      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
+      <translation type="unfinished">There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</translation>
+    </message>
+    <message>
+      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
+      <translation type="unfinished">There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</translation>
+    </message>
+    <message>
       <source>Import file</source>
       <translation>Nhập tập tin</translation>
     </message>
@@ -6483,12 +6974,78 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
       <translation>Đang in...</translation>
     </message>
     <message>
+      <source>Exporting PDF...</source>
+      <translation>Đang xuất ra PDF...</translation>
+    </message>
+    <message>
+      <source>Unsaved document</source>
+      <translation>Tài liệu chưa được lưu</translation>
+    </message>
+    <message>
+      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
+      <translation type="unfinished">The exported object contains external link. Please save the documentat least once before exporting.</translation>
+    </message>
+    <message>
+      <source>Delete failed</source>
+      <translation type="unfinished">Delete failed</translation>
+    </message>
+    <message>
+      <source>Dependency error</source>
+      <translation type="unfinished">Dependency error</translation>
+    </message>
+    <message>
+      <source>Copy selected</source>
+      <translation type="unfinished">Copy selected</translation>
+    </message>
+    <message>
+      <source>Copy active document</source>
+      <translation type="unfinished">Copy active document</translation>
+    </message>
+    <message>
+      <source>Copy all documents</source>
+      <translation type="unfinished">Copy all documents</translation>
+    </message>
+    <message>
+      <source>Paste</source>
+      <translation type="unfinished">Paste</translation>
+    </message>
+    <message>
+      <source>Expression error</source>
+      <translation type="unfinished">Expression error</translation>
+    </message>
+    <message>
+      <source>Failed to parse some of the expressions.
+Please check the Report View for more details.</source>
+      <translation type="unfinished">Failed to parse some of the expressions.
+Please check the Report View for more details.</translation>
+    </message>
+    <message>
+      <source>Failed to paste expressions</source>
+      <translation type="unfinished">Failed to paste expressions</translation>
+    </message>
+    <message>
       <source>Cannot load workbench</source>
       <translation>Không thể tải bàn làm việc</translation>
     </message>
     <message>
       <source>A general error occurred while loading the workbench</source>
       <translation>Đã xảy ra lỗi chung khi tải bàn làm việc</translation>
+    </message>
+    <message>
+      <source>Wrong selection</source>
+      <translation>Lựa chọn sai</translation>
+    </message>
+    <message>
+      <source>Only one object selected. Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Chỉ một mục được chọn. Hãy chọn hai mục.
+Hãy nhớ rằng điểm bạn nhấp vào là quan trọng.</translation>
+    </message>
+    <message>
+      <source>Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Hãy chọn hai đối tượng.
+Hãy nhận biết điểm bạn nhấp vào là quan trọng.</translation>
     </message>
     <message>
       <source>Save views...</source>
@@ -6513,6 +7070,10 @@ Bạn có muốn chỉ định thư mục khác không?</translation>
     <message>
       <source>Save frozen views</source>
       <translation>Lưu chế độ xem được cố định</translation>
+    </message>
+    <message>
+      <source>Frozen views</source>
+      <translation>Các chế độ xem được cố định</translation>
     </message>
     <message>
       <source>Restore views</source>
@@ -6581,6 +7142,10 @@ Bạn có muốn tiếp tục?</translation>
       <translation>Chọn một mục:</translation>
     </message>
     <message>
+      <source>New boolean item</source>
+      <translation>Mục tin luận lý mới</translation>
+    </message>
+    <message>
       <source>Rename group</source>
       <translation>Đổi tên nhóm</translation>
     </message>
@@ -6601,16 +7166,132 @@ Bạn có muốn tiếp tục?</translation>
       <translation>Đổi giá trị</translation>
     </message>
     <message>
-      <source>Save document under new filename...</source>
-      <translation>Lưu tài liệu dưới tên tệp mới...</translation>
+      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
+
+</source>
+      <translation type="unfinished">Identical physical path detected. It may cause unwanted overwrite of existing document!
+
+</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to continue?</source>
+      <translation type="unfinished">Are you sure you want to continue?</translation>
+    </message>
+    <message>
+      <source>Please check report view for more...</source>
+      <translation type="unfinished">Please check report view for more...</translation>
+    </message>
+    <message>
+      <source>Physical path:</source>
+      <translation type="unfinished">Physical path:</translation>
+    </message>
+    <message>
+      <source>Document:</source>
+      <translation type="unfinished">Document:</translation>
+    </message>
+    <message>
+      <source>Path:</source>
+      <translation>Đường dẫn:</translation>
+    </message>
+    <message>
+      <source>Identical physical path</source>
+      <translation type="unfinished">Identical physical path</translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation type="unfinished">Could not save document</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation type="unfinished">There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</translation>
     </message>
     <message>
       <source>Saving aborted</source>
       <translation>Đã hủy lưu</translation>
     </message>
     <message>
-      <source>Unsaved document</source>
-      <translation>Tài liệu chưa được lưu</translation>
+      <source>Save dependent files</source>
+      <translation type="unfinished">Save dependent files</translation>
+    </message>
+    <message>
+      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
+      <translation type="unfinished">The file contains external dependencies. Do you want to save the dependent files, too?</translation>
+    </message>
+    <message>
+      <source>Saving document failed</source>
+      <translation>Gặp lỗi khi lưu tài liệu</translation>
+    </message>
+    <message>
+      <source>Save document under new filename...</source>
+      <translation>Lưu tài liệu dưới tên tệp mới...</translation>
+    </message>
+    <message>
+      <source>Save %1 Document</source>
+      <translation>Lưu tài liệu %1</translation>
+    </message>
+    <message>
+      <source>Document</source>
+      <translation>Tài liệu</translation>
+    </message>
+    <message>
+      <source>Failed to save document</source>
+      <translation type="unfinished">Failed to save document</translation>
+    </message>
+    <message>
+      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
+      <translation type="unfinished">Documents contains cyclic dependencies. Do you still want to save them?</translation>
+    </message>
+    <message>
+      <source>Save a copy of the document under new filename...</source>
+      <translation>Lưu bản sao của tài liệu dưới tên tệp mới...</translation>
+    </message>
+    <message>
+      <source>%1 document (*.FCStd)</source>
+      <translation>tài liệu %1 (*.FCStd)</translation>
+    </message>
+    <message>
+      <source>Document not closable</source>
+      <translation>Tài liệu không thể đóng</translation>
+    </message>
+    <message>
+      <source>The document is not closable for the moment.</source>
+      <translation>Tài liệu hiện không thể đóng được.</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation type="unfinished">Document not saved</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation type="unfinished">The document%1 could not be saved. Do you want to cancel closing it?</translation>
+    </message>
+    <message>
+      <source>Undo</source>
+      <translation type="unfinished">Undo</translation>
+    </message>
+    <message>
+      <source>Redo</source>
+      <translation type="unfinished">Redo</translation>
+    </message>
+    <message>
+      <source>There are grouped transactions in the following documents with other preceding transactions</source>
+      <translation type="unfinished">There are grouped transactions in the following documents with other preceding transactions</translation>
+    </message>
+    <message>
+      <source>Choose 'Yes' to roll back all preceding transactions.
+Choose 'No' to roll back in the active document only.
+Choose 'Abort' to abort</source>
+      <translation type="unfinished">Choose 'Yes' to roll back all preceding transactions.
+Choose 'No' to roll back in the active document only.
+Choose 'Abort' to abort</translation>
     </message>
     <message>
       <source>Save Macro</source>
@@ -6635,6 +7316,10 @@ Bạn có muốn tiếp tục?</translation>
     <message>
       <source>Outer</source>
       <translation>Bên ngoài</translation>
+    </message>
+    <message>
+      <source>Split</source>
+      <translation type="unfinished">Split</translation>
     </message>
     <message>
       <source>No Browser</source>
@@ -6681,64 +7366,6 @@ Hãy mở cửa sổ trình duyệt và nhập: http://localhost:%1.</translatio
       <translation>Không thể tìm thấy tệp %1 trong %2 cũng như trong %3</translation>
     </message>
     <message>
-      <source>Save %1 Document</source>
-      <translation>Lưu tài liệu %1</translation>
-    </message>
-    <message>
-      <source>%1 document (*.FCStd)</source>
-      <translation>tài liệu %1 (*.FCStd)</translation>
-    </message>
-    <message>
-      <source>Document not closable</source>
-      <translation>Tài liệu không thể đóng</translation>
-    </message>
-    <message>
-      <source>The document is not closable for the moment.</source>
-      <translation>Tài liệu hiện không thể đóng được.</translation>
-    </message>
-    <message>
-      <source>No OpenGL</source>
-      <translation>Không có OpenGL</translation>
-    </message>
-    <message>
-      <source>This system does not support OpenGL</source>
-      <translation>Hệ thống này không hỗ trợ OpenGL</translation>
-    </message>
-    <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
-      <source>Unable to load documentation.
-In order to load it Qt 4.4 or higher is required.</source>
-      <translation>Không thể tải tài liệu.
-Để tải, bắt buộc phải sử dụng phiên bản 4.4 hoặc phiên bản mới hơn của Qt.</translation>
-    </message>
-    <message>
-      <source>Exporting PDF...</source>
-      <translation>Đang xuất ra PDF...</translation>
-    </message>
-    <message>
-      <source>Wrong selection</source>
-      <translation>Lựa chọn sai</translation>
-    </message>
-    <message>
-      <source>Only one object selected. Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Chỉ một mục được chọn. Hãy chọn hai mục.
-Hãy nhớ rằng điểm bạn nhấp vào là quan trọng.</translation>
-    </message>
-    <message>
-      <source>Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Hãy chọn hai đối tượng.
-Hãy nhận biết điểm bạn nhấp vào là quan trọng.</translation>
-    </message>
-    <message>
-      <source>New boolean item</source>
-      <translation>Mục tin luận lý mới</translation>
-    </message>
-    <message>
       <source>Navigation styles</source>
       <translation>Kiểu điều hướng</translation>
     </message>
@@ -6759,24 +7386,24 @@ Hãy nhận biết điểm bạn nhấp vào là quan trọng.</translation>
       <translation>Bạn có muốn lưu các thay đổi của mình vào tài liệu '%1' trước khi đóng không?</translation>
     </message>
     <message>
+      <source>Do you want to save your changes to document before closing?</source>
+      <translation type="unfinished">Do you want to save your changes to document before closing?</translation>
+    </message>
+    <message>
       <source>If you don't save, your changes will be lost.</source>
       <translation>Nếu bạn không lưu, các thay đổi của bạn sẽ bị mất.</translation>
     </message>
     <message>
-      <source>Save a copy of the document under new filename...</source>
-      <translation>Lưu bản sao của tài liệu dưới tên tệp mới...</translation>
+      <source>Apply answer to all</source>
+      <translation type="unfinished">Apply answer to all</translation>
     </message>
     <message>
-      <source>Frozen views</source>
-      <translation>Các chế độ xem được cố định</translation>
+      <source>%1 Document(s) not saved</source>
+      <translation type="unfinished">%1 Document(s) not saved</translation>
     </message>
     <message>
-      <source>Saving document failed</source>
-      <translation>Gặp lỗi khi lưu tài liệu</translation>
-    </message>
-    <message>
-      <source>Document</source>
-      <translation>Tài liệu</translation>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation type="unfinished">Some documents could not be saved. Do you want to cancel closing?</translation>
     </message>
     <message>
       <source>Delete macro</source>
@@ -6799,14 +7426,6 @@ Hãy nhận biết điểm bạn nhấp vào là quan trọng.</translation>
       <translation>%1 không trống, cũng xóa nội dung của nó?</translation>
     </message>
     <message>
-      <source>Export failed</source>
-      <translation>Xuất không thành công</translation>
-    </message>
-    <message>
-      <source>Split</source>
-      <translation type="unfinished">Split</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Dịch:</translation>
     </message>
@@ -6821,48 +7440,6 @@ Hãy nhận biết điểm bạn nhấp vào là quan trọng.</translation>
     <message>
       <source>Edit text</source>
       <translation>Chỉnh sửa văn bản</translation>
-    </message>
-    <message>
-      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
-      <translation type="unfinished">The exported object contains external link. Please save the documentat least once before exporting.</translation>
-    </message>
-    <message>
-      <source>Delete failed</source>
-      <translation type="unfinished">Delete failed</translation>
-    </message>
-    <message>
-      <source>Dependency error</source>
-      <translation type="unfinished">Dependency error</translation>
-    </message>
-    <message>
-      <source>Copy selected</source>
-      <translation type="unfinished">Copy selected</translation>
-    </message>
-    <message>
-      <source>Copy active document</source>
-      <translation type="unfinished">Copy active document</translation>
-    </message>
-    <message>
-      <source>Copy all documents</source>
-      <translation type="unfinished">Copy all documents</translation>
-    </message>
-    <message>
-      <source>Paste</source>
-      <translation type="unfinished">Paste</translation>
-    </message>
-    <message>
-      <source>Expression error</source>
-      <translation type="unfinished">Expression error</translation>
-    </message>
-    <message>
-      <source>Failed to parse some of the expressions.
-Please check the Report View for more details.</source>
-      <translation type="unfinished">Failed to parse some of the expressions.
-Please check the Report View for more details.</translation>
-    </message>
-    <message>
-      <source>Failed to paste expressions</source>
-      <translation type="unfinished">Failed to paste expressions</translation>
     </message>
     <message>
       <source>Simple group</source>
@@ -6927,148 +7504,92 @@ underscore, and must not start with a digit.</translation>
       <translation type="unfinished">Failed to add property to '%1': %2</translation>
     </message>
     <message>
-      <source>Save dependent files</source>
-      <translation type="unfinished">Save dependent files</translation>
-    </message>
-    <message>
-      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
-      <translation type="unfinished">The file contains external dependencies. Do you want to save the dependent files, too?</translation>
-    </message>
-    <message>
-      <source>Failed to save document</source>
-      <translation type="unfinished">Failed to save document</translation>
-    </message>
-    <message>
-      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
-      <translation type="unfinished">Documents contains cyclic dependencies. Do you still want to save them?</translation>
-    </message>
-    <message>
-      <source>Undo</source>
-      <translation type="unfinished">Undo</translation>
-    </message>
-    <message>
-      <source>Redo</source>
-      <translation type="unfinished">Redo</translation>
-    </message>
-    <message>
-      <source>There are grouped transactions in the following documents with other preceding transactions</source>
-      <translation type="unfinished">There are grouped transactions in the following documents with other preceding transactions</translation>
-    </message>
-    <message>
-      <source>Choose 'Yes' to roll back all preceding transactions.
-Choose 'No' to roll back in the active document only.
-Choose 'Abort' to abort</source>
-      <translation type="unfinished">Choose 'Yes' to roll back all preceding transactions.
-Choose 'No' to roll back in the active document only.
-Choose 'Abort' to abort</translation>
-    </message>
-    <message>
-      <source>Do you want to save your changes to document before closing?</source>
-      <translation type="unfinished">Do you want to save your changes to document before closing?</translation>
-    </message>
-    <message>
-      <source>Apply answer to all</source>
-      <translation type="unfinished">Apply answer to all</translation>
-    </message>
-    <message>
       <source>Drag &amp; drop failed</source>
       <translation type="unfinished">Drag &amp; drop failed</translation>
+    </message>
+    <message>
+      <source>Setup configurable object</source>
+      <translation type="unfinished">Setup configurable object</translation>
+    </message>
+    <message>
+      <source>Select which object to copy or exclude when configuration changes. All external linked objects are excluded by default.</source>
+      <translation type="unfinished">Select which object to copy or exclude when configuration changes. All external linked objects are excluded by default.</translation>
+    </message>
+    <message>
+      <source>Please select which objects to copy when the configuration is changed</source>
+      <translation type="unfinished">Please select which objects to copy when the configuration is changed</translation>
+    </message>
+    <message>
+      <source>Apply to all</source>
+      <translation type="unfinished">Apply to all</translation>
+    </message>
+    <message>
+      <source>Apply the setting to all links. Or, uncheck this
+option to apply only to this link.</source>
+      <translation type="unfinished">Apply the setting to all links. Or, uncheck this
+option to apply only to this link.</translation>
+    </message>
+    <message>
+      <source>Copy on change</source>
+      <translation type="unfinished">Copy on change</translation>
+    </message>
+    <message>
+      <source>Enable</source>
+      <translation>Bật</translation>
+    </message>
+    <message>
+      <source>Enable auto copy of linked object when its configuration is changed</source>
+      <translation type="unfinished">Enable auto copy of linked object when its configuration is changed</translation>
+    </message>
+    <message>
+      <source>Tracking</source>
+      <translation>Theo dõi</translation>
+    </message>
+    <message>
+      <source>Copy the linked object when its configuration is changed.
+Also auto redo the copy if the original linked object is changed.
+</source>
+      <translation type="unfinished">Copy the linked object when its configuration is changed.
+Also auto redo the copy if the original linked object is changed.
+</translation>
+    </message>
+    <message>
+      <source>Disable copy on change</source>
+      <translation type="unfinished">Disable copy on change</translation>
+    </message>
+    <message>
+      <source>Rerefresh configurable object</source>
+      <translation type="unfinished">Rerefresh configurable object</translation>
+    </message>
+    <message>
+      <source>Synchronize the original configurable source object by
+creating a new deep copy. Note that any changes made to
+the current copy will be lost.
+</source>
+      <translation type="unfinished">Synchronize the original configurable source object by
+creating a new deep copy. Note that any changes made to
+the current copy will be lost.
+</translation>
+    </message>
+    <message>
+      <source>Toggle array elements</source>
+      <translation type="unfinished">Toggle array elements</translation>
+    </message>
+    <message>
+      <source>Change whether show each link array element as individual objects</source>
+      <translation type="unfinished">Change whether show each link array element as individual objects</translation>
+    </message>
+    <message>
+      <source>Transform at the origin of the placement</source>
+      <translation type="unfinished">Transform at the origin of the placement</translation>
     </message>
     <message>
       <source>Override colors...</source>
       <translation type="unfinished">Override colors...</translation>
     </message>
     <message>
-      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
-
-</source>
-      <translation type="unfinished">Identical physical path detected. It may cause unwanted overwrite of existing document!
-
-</translation>
-    </message>
-    <message>
-      <source>Are you sure you want to continue?</source>
-      <translation type="unfinished">Are you sure you want to continue?</translation>
-    </message>
-    <message>
-      <source>
-
-Please check report view for more...</source>
-      <translation type="unfinished">
-
-Please check report view for more...</translation>
-    </message>
-    <message>
-      <source>
-Document: </source>
-      <translation type="unfinished">
-Document: </translation>
-    </message>
-    <message>
-      <source>
-  Path: </source>
-      <translation type="unfinished">
-  Path: </translation>
-    </message>
-    <message>
-      <source>Identical physical path</source>
-      <translation type="unfinished">Identical physical path</translation>
-    </message>
-    <message>
-      <source>Error</source>
-      <translation>Lỗi</translation>
-    </message>
-    <message>
-      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
-      <translation type="unfinished">There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</translation>
-    </message>
-    <message>
-      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
-      <translation type="unfinished">There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</translation>
-    </message>
-    <message>
-      <source>Workbenches</source>
-      <translation>Bàn làm việc</translation>
-    </message>
-    <message>
-      <source>
-
-Physical path: </source>
-      <translation type="unfinished">
-
-Physical path: </translation>
-    </message>
-    <message>
-      <source>Could not save document</source>
-      <translation type="unfinished">Could not save document</translation>
-    </message>
-    <message>
-      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
-
-"%1"
-
-Would you like to save the file with a different name?</source>
-      <translation type="unfinished">There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
-
-"%1"
-
-Would you like to save the file with a different name?</translation>
-    </message>
-    <message>
-      <source>Document not saved</source>
-      <translation type="unfinished">Document not saved</translation>
-    </message>
-    <message>
-      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
-      <translation type="unfinished">The document%1 could not be saved. Do you want to cancel closing it?</translation>
-    </message>
-    <message>
-      <source>%1 Document(s) not saved</source>
-      <translation type="unfinished">%1 Document(s) not saved</translation>
-    </message>
-    <message>
-      <source>Some documents could not be saved. Do you want to cancel closing?</source>
-      <translation type="unfinished">Some documents could not be saved. Do you want to cancel closing?</translation>
+      <source>Edit %1</source>
+      <translation>Chỉnh sửa %1</translation>
     </message>
   </context>
   <context>
@@ -7085,10 +7606,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdBoxElementSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Box element selection</source>
       <translation type="unfinished">Box element selection</translation>
     </message>
@@ -7096,20 +7613,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdBoxSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Box selection</source>
       <translation>Lựa chọn hộp</translation>
     </message>
   </context>
   <context>
     <name>StdCmdAbout</name>
-    <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
     <message>
       <source>&amp;About %1</source>
       <translation>&amp;Về %1</translation>
@@ -7122,10 +7631,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdAboutQt</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>About &amp;Qt</source>
       <translation>Về &amp;Qt</translation>
     </message>
@@ -7136,10 +7641,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdActivateNextWindow</name>
-    <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
     <message>
       <source>Ne&amp;xt</source>
       <translation>Ti&amp;ếp</translation>
@@ -7152,10 +7653,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdActivatePrevWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
-    <message>
       <source>Pre&amp;vious</source>
       <translation>Tr&amp;ước</translation>
     </message>
@@ -7166,10 +7663,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdAlignment</name>
-    <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
     <message>
       <source>Alignment...</source>
       <translation>Căn chỉnh...</translation>
@@ -7182,10 +7675,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdArrangeIcons</name>
     <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
-    <message>
       <source>Arrange &amp;Icons</source>
       <translation>Sắp xếp các &amp;biểu tượng</translation>
     </message>
@@ -7197,20 +7686,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdAxisCross</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Toggle axis cross</source>
       <translation>Hiển thị trục tọa độ</translation>
     </message>
   </context>
   <context>
     <name>StdCmdCascadeWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
     <message>
       <source>&amp;Cascade</source>
       <translation>&amp;Sắp xếp chồng chéo</translation>
@@ -7223,10 +7704,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdCloseActiveWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
-    <message>
       <source>Cl&amp;ose</source>
       <translation>Đó&amp;ng</translation>
     </message>
@@ -7237,10 +7714,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdCloseAllWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
     <message>
       <source>Close Al&amp;l</source>
       <translation>Đóng &amp;tất cả</translation>
@@ -7253,10 +7726,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdCommandLine</name>
     <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
-    <message>
       <source>Start command &amp;line...</source>
       <translation>Bắt đầu lệnh &amp;đường thẳng...</translation>
     </message>
@@ -7267,10 +7736,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdCopy</name>
-    <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
     <message>
       <source>C&amp;opy</source>
       <translation>Sa&amp;o chép</translation>
@@ -7283,10 +7748,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdCut</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>&amp;Cut</source>
       <translation>&amp;Cắt</translation>
     </message>
@@ -7297,10 +7758,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdDelete</name>
-    <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
     <message>
       <source>&amp;Delete</source>
       <translation>&amp;Xóa</translation>
@@ -7313,10 +7770,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdDemoMode</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>View turntable...</source>
       <translation>Xoay chế độ xem...</translation>
     </message>
@@ -7328,10 +7781,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdDependencyGraph</name>
     <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
-    <message>
       <source>Dependency graph...</source>
       <translation>Sơ đồ phục thuộc...</translation>
     </message>
@@ -7342,10 +7791,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdDlgCustomize</name>
-    <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
     <message>
       <source>Cu&amp;stomize...</source>
       <translation>Tù&amp;y chỉnh...</translation>
@@ -7365,17 +7810,9 @@ Would you like to save the file with a different name?</translation>
       <source>Opens a dialog to let you execute a recorded macro</source>
       <translation>Mở hộp thoại để cho phép bạn thực thi macro đã ghi</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgMacroExecuteDirect</name>
-    <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
     <message>
       <source>Execute macro</source>
       <translation>Thực thi macro</translation>
@@ -7395,17 +7832,9 @@ Would you like to save the file with a different name?</translation>
       <source>Opens a dialog to record a macro</source>
       <translation>Mở hộp thoại để ghi macro</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgParameter</name>
-    <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
     <message>
       <source>E&amp;dit parameters ...</source>
       <translation>Đ&amp;iều chỉnh các thông số ...</translation>
@@ -7418,10 +7847,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdDlgPreferences</name>
     <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
-    <message>
       <source>&amp;Preferences ...</source>
       <translation>&amp;Tuỳ chỉnh...</translation>
     </message>
@@ -7432,10 +7857,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdDockViewMenu</name>
-    <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
     <message>
       <source>Panels</source>
       <translation>Bảng điều khiển</translation>
@@ -7448,10 +7869,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdDrawStyle</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Draw style</source>
       <translation>Kiểu vẽ</translation>
     </message>
@@ -7463,10 +7880,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdDuplicateSelection</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>Duplicate selection</source>
       <translation>Sao chép lựa chọn</translation>
     </message>
@@ -7477,10 +7890,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdEdit</name>
-    <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
     <message>
       <source>Toggle &amp;Edit mode</source>
       <translation>Chế độ Chuyển đổi &amp;Chỉnh sửa</translation>
@@ -7496,10 +7905,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdExport</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>&amp;Export...</source>
       <translation>&amp;Xuất...</translation>
@@ -7520,20 +7925,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdExpression</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>Expression actions</source>
       <translation type="unfinished">Expression actions</translation>
     </message>
   </context>
   <context>
     <name>StdCmdFeatRecompute</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>&amp;Recompute</source>
       <translation>&amp;Tính toán lại</translation>
@@ -7546,10 +7943,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdFreeCADDonation</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>Donate</source>
       <translation>Quyên góp</translation>
     </message>
@@ -7560,10 +7953,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADFAQ</name>
-    <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
     <message>
       <source>FreeCAD FAQ</source>
       <translation>Câu hỏi thường gặp về FreeCAD</translation>
@@ -7580,10 +7969,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdFreeCADForum</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>FreeCAD Forum</source>
       <translation>Diễn đàn FreeCAD</translation>
     </message>
@@ -7598,10 +7983,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADPowerUserHub</name>
-    <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
     <message>
       <source>Python scripting documentation</source>
       <translation>Tài liệu tập lệnh Python</translation>
@@ -7618,10 +7999,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdFreeCADUserHub</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>Users documentation</source>
       <translation>Tài liệu người dùng</translation>
     </message>
@@ -7632,10 +8009,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADWebsite</name>
-    <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
     <message>
       <source>FreeCAD Website</source>
       <translation>Trang thông tin điện tử FreeCAD</translation>
@@ -7648,10 +8021,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdFreezeViews</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Freeze display</source>
       <translation>Đóng băng màn hình</translation>
     </message>
@@ -7662,10 +8031,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdGroup</name>
-    <message>
-      <source>Structure</source>
-      <translation>Kết cấu</translation>
-    </message>
     <message>
       <source>Create group</source>
       <translation>Tạo nhóm</translation>
@@ -7678,10 +8043,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdHideObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Hide all objects</source>
       <translation>Ẩn tất cả các đối tượng</translation>
     </message>
@@ -7693,10 +8054,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdHideSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Hide selection</source>
       <translation>Ẩn lựa chọn</translation>
     </message>
@@ -7707,10 +8064,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdImport</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>&amp;Import...</source>
       <translation>&amp;Nhập vào...</translation>
@@ -7731,20 +8084,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdLinkActions</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>Link actions</source>
       <translation type="unfinished">Link actions</translation>
     </message>
   </context>
   <context>
     <name>StdCmdLinkImport</name>
-    <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
     <message>
       <source>Import links</source>
       <translation type="unfinished">Import links</translation>
@@ -7757,10 +8102,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdLinkImportAll</name>
     <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
-    <message>
       <source>Import all links</source>
       <translation type="unfinished">Import all links</translation>
     </message>
@@ -7771,10 +8112,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdLinkMake</name>
-    <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
     <message>
       <source>Make link</source>
       <translation type="unfinished">Make link</translation>
@@ -7787,10 +8124,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdLinkMakeGroup</name>
     <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
-    <message>
       <source>Make link group</source>
       <translation type="unfinished">Make link group</translation>
     </message>
@@ -7801,10 +8134,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdLinkMakeRelative</name>
-    <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
     <message>
       <source>Make sub-link</source>
       <translation type="unfinished">Make sub-link</translation>
@@ -7817,10 +8146,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdLinkReplace</name>
     <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
-    <message>
       <source>Replace with link</source>
       <translation type="unfinished">Replace with link</translation>
     </message>
@@ -7831,10 +8156,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdLinkSelectActions</name>
-    <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
     <message>
       <source>Link navigation</source>
       <translation type="unfinished">Link navigation</translation>
@@ -7847,10 +8168,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdLinkSelectAllLinks</name>
     <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
-    <message>
       <source>Select all links</source>
       <translation type="unfinished">Select all links</translation>
     </message>
@@ -7861,10 +8178,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdLinkSelectLinked</name>
-    <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
     <message>
       <source>Go to linked object</source>
       <translation type="unfinished">Go to linked object</translation>
@@ -7877,10 +8190,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdLinkSelectLinkedFinal</name>
     <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
-    <message>
       <source>Go to the deepest linked object</source>
       <translation type="unfinished">Go to the deepest linked object</translation>
     </message>
@@ -7891,10 +8200,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdLinkUnlink</name>
-    <message>
-      <source>Link</source>
-      <translation>Liên kết</translation>
-    </message>
     <message>
       <source>Unlink</source>
       <translation type="unfinished">Unlink</translation>
@@ -7907,10 +8212,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdMacroAttachDebugger</name>
     <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
-    <message>
       <source>Attach to remote debugger...</source>
       <translation type="unfinished">Attach to remote debugger...</translation>
     </message>
@@ -7921,10 +8222,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdMacroStartDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
     <message>
       <source>Debug macro</source>
       <translation>Macro gỡ lỗi</translation>
@@ -7937,10 +8234,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdMacroStepInto</name>
     <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
-    <message>
       <source>Step into</source>
       <translation>Bước vào</translation>
     </message>
@@ -7948,20 +8241,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdMacroStepOver</name>
     <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
-    <message>
       <source>Step over</source>
       <translation>Bước qua</translation>
     </message>
   </context>
   <context>
     <name>StdCmdMacroStopDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
     <message>
       <source>Stop debugging</source>
       <translation>Ngừng gỡ lỗi</translation>
@@ -7974,10 +8259,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdMacroStopRecord</name>
     <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
-    <message>
       <source>S&amp;top macro recording</source>
       <translation>D&amp;ừng ghi macro</translation>
     </message>
@@ -7989,10 +8270,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdMeasureDistance</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>Measure distance</source>
       <translation>Đo khoảng cách</translation>
     </message>
@@ -8000,24 +8277,16 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdMeasurementSimple</name>
     <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
+      <source>Measure distance</source>
+      <translation>Đo khoảng cách</translation>
     </message>
     <message>
       <source>Measures distance between two selected objects</source>
       <translation>Đo khoảng cách giữa 2 đối tượng đã chọn</translation>
     </message>
-    <message>
-      <source>Measure distance</source>
-      <translation>Đo khoảng cách</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdMergeProjects</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>Merge project...</source>
       <translation>Hợp nhất dự án...</translation>
@@ -8027,20 +8296,16 @@ Would you like to save the file with a different name?</translation>
       <translation>Hợp nhất dự án</translation>
     </message>
     <message>
-      <source>Cannot merge project with itself.</source>
-      <translation>Không thể hợp nhất dự án với chính nó.</translation>
-    </message>
-    <message>
       <source>%1 document (*.FCStd)</source>
       <translation>tài liệu %1 (*.FCStd)</translation>
+    </message>
+    <message>
+      <source>Cannot merge project with itself.</source>
+      <translation>Không thể hợp nhất dự án với chính nó.</translation>
     </message>
   </context>
   <context>
     <name>StdCmdNew</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>&amp;New</source>
       <translation>&amp;Mới</translation>
@@ -8068,10 +8333,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdOnlineHelpWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>Help Website</source>
       <translation>Trang web trợ giúp</translation>
     </message>
@@ -8082,10 +8343,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdOpen</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>&amp;Open...</source>
       <translation>&amp;Mở...</translation>
@@ -8114,10 +8371,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdPart</name>
     <message>
-      <source>Structure</source>
-      <translation>Kết cấu</translation>
-    </message>
-    <message>
       <source>Create part</source>
       <translation>Tạo phần</translation>
     </message>
@@ -8128,10 +8381,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdPaste</name>
-    <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
     <message>
       <source>&amp;Paste</source>
       <translation>&amp;Dán</translation>
@@ -8144,10 +8393,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdPlacement</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>Placement...</source>
       <translation>Đặt vị trí...</translation>
     </message>
@@ -8158,10 +8403,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdPrint</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>&amp;Print...</source>
       <translation>&amp;In...</translation>
@@ -8174,10 +8415,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdPrintPdf</name>
     <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
-    <message>
       <source>&amp;Export PDF...</source>
       <translation>&amp;Xuất PDF...</translation>
     </message>
@@ -8188,10 +8425,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdPrintPreview</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>&amp;Print preview...</source>
       <translation>&amp;Xem trước khi in...</translation>
@@ -8208,10 +8441,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdProjectInfo</name>
     <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
-    <message>
       <source>Project i&amp;nformation...</source>
       <translation>T&amp;hông tin dự án...</translation>
     </message>
@@ -8222,10 +8451,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdProjectUtil</name>
-    <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
     <message>
       <source>Project utility...</source>
       <translation>Tiện ích dự án...</translation>
@@ -8238,10 +8463,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdPythonWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>Python Website</source>
       <translation>Trang web Python</translation>
     </message>
@@ -8252,10 +8473,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdQuit</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>E&amp;xit</source>
       <translation>Thoá&amp;t</translation>
@@ -8268,20 +8485,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdRandomColor</name>
     <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
-    <message>
       <source>Random color</source>
       <translation>Màu sắc ngẫu nhiên</translation>
     </message>
   </context>
   <context>
     <name>StdCmdRecentFiles</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>Recent files</source>
       <translation>Tập tin mới dùng</translation>
@@ -8294,10 +8503,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdRecentMacros</name>
     <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
-    <message>
       <source>Recent macros</source>
       <translation type="unfinished">Recent macros</translation>
     </message>
@@ -8308,10 +8513,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdRedo</name>
-    <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
     <message>
       <source>&amp;Redo</source>
       <translation>&amp;Làm lại</translation>
@@ -8324,10 +8525,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdRefresh</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>&amp;Refresh</source>
       <translation>&amp;Làm mới</translation>
     </message>
@@ -8337,11 +8534,18 @@ Would you like to save the file with a different name?</translation>
     </message>
   </context>
   <context>
-    <name>StdCmdRevert</name>
+    <name>StdCmdReportBug</name>
     <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
+      <source>Report a bug</source>
+      <translation type="unfinished">Report a bug</translation>
     </message>
+    <message>
+      <source>Report a bug or suggest a feature</source>
+      <translation type="unfinished">Report a bug or suggest a feature</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdRevert</name>
     <message>
       <source>Revert</source>
       <translation>Hoàn nguyên</translation>
@@ -8354,10 +8558,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdSave</name>
     <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
-    <message>
       <source>&amp;Save</source>
       <translation>&amp;Lưu</translation>
     </message>
@@ -8368,10 +8568,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdSaveAll</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>Save All</source>
       <translation type="unfinished">Save All</translation>
@@ -8384,10 +8580,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdSaveAs</name>
     <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
-    <message>
       <source>Save &amp;As...</source>
       <translation>Lưu dưới &amp;dạng...</translation>
     </message>
@@ -8398,10 +8590,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdSaveCopy</name>
-    <message>
-      <source>File</source>
-      <translation>Tập tin</translation>
-    </message>
     <message>
       <source>Save a &amp;Copy...</source>
       <translation>Lưu một &amp;bản sao...</translation>
@@ -8414,10 +8602,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdSceneInspector</name>
     <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
-    <message>
       <source>Scene inspector...</source>
       <translation>Trình theo dõi cảnh...</translation>
     </message>
@@ -8428,10 +8612,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdSelBack</name>
-    <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
     <message>
       <source>&amp;Back</source>
       <translation type="unfinished">&amp;Back</translation>
@@ -8444,10 +8624,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdSelBoundingBox</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>&amp;Bounding box</source>
       <translation type="unfinished">&amp;Bounding box</translation>
     </message>
@@ -8458,10 +8634,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdSelForward</name>
-    <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
     <message>
       <source>&amp;Forward</source>
       <translation type="unfinished">&amp;Forward</translation>
@@ -8474,10 +8646,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdSelectAll</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>Select &amp;All</source>
       <translation>Chọn &amp;tất cả</translation>
     </message>
@@ -8488,10 +8656,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdSelectVisibleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Select visible objects</source>
       <translation>Chọn đối tượng hiển thị</translation>
@@ -8504,10 +8668,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdSendToPythonConsole</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>&amp;Send to Python Console</source>
       <translation type="unfinished">&amp;Send to Python Console</translation>
     </message>
@@ -8518,10 +8678,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdSetAppearance</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Appearance...</source>
       <translation>Diện mạo...</translation>
@@ -8534,10 +8690,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdShowObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Show all objects</source>
       <translation>Hiển thị tất cả các đối tượng</translation>
     </message>
@@ -8548,10 +8700,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdShowSelection</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Show selection</source>
       <translation>Hiển thị lựa chọn</translation>
@@ -8564,10 +8712,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdStatusBar</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>Status bar</source>
       <translation>Thanh trạng thái</translation>
     </message>
@@ -8578,10 +8722,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdTextDocument</name>
-    <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
     <message>
       <source>Add text document</source>
       <translation type="unfinished">Add text document</translation>
@@ -8594,10 +8734,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdTextureMapping</name>
     <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
-    <message>
       <source>Texture mapping...</source>
       <translation>Kỹ thuật tạo chất liệu...</translation>
     </message>
@@ -8608,10 +8744,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdTileWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
     <message>
       <source>&amp;Tile</source>
       <translation>&amp;Ngói</translation>
@@ -8624,20 +8756,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdToggleBreakpoint</name>
     <message>
-      <source>Macro</source>
-      <translation>Macro</translation>
-    </message>
-    <message>
       <source>Toggle breakpoint</source>
       <translation>Chuyển đổi điểm ngắt</translation>
     </message>
   </context>
   <context>
     <name>StdCmdToggleClipPlane</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Clipping plane</source>
       <translation>Mặt phẳng cắt</translation>
@@ -8650,10 +8774,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdToggleNavigation</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Toggle navigation/Edit mode</source>
       <translation>Chuyển đổi chế độ điều hướng / Chỉnh sửa</translation>
     </message>
@@ -8664,10 +8784,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdToggleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Toggle all objects</source>
       <translation>Chuyển đổi tất cả đối tượng</translation>
@@ -8680,10 +8796,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdToggleSelectability</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Toggle selectability</source>
       <translation>Chuyển đổi khả năng chọn</translation>
     </message>
@@ -8694,10 +8806,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdToggleVisibility</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Toggle visibility</source>
       <translation>Bật/tắt khả năng hiển thị</translation>
@@ -8710,10 +8818,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdToolBarMenu</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>Tool&amp;bars</source>
       <translation>Thanh &amp;công cụ</translation>
     </message>
@@ -8724,10 +8828,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdTransform</name>
-    <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
     <message>
       <source>Transform...</source>
       <translation>Biến đổi...</translation>
@@ -8740,10 +8840,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdTransformManip</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>Transform</source>
       <translation>Biến đổi</translation>
     </message>
@@ -8754,10 +8850,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdTreeCollapse</name>
-    <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
     <message>
       <source>Collapse selected item</source>
       <translation type="unfinished">Collapse selected item</translation>
@@ -8770,10 +8862,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdTreeExpand</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>Expand selected item</source>
       <translation type="unfinished">Expand selected item</translation>
     </message>
@@ -8784,10 +8872,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdTreeSelectAllInstances</name>
-    <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
     <message>
       <source>Select all instances</source>
       <translation type="unfinished">Select all instances</translation>
@@ -8800,10 +8884,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdTreeViewActions</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>TreeView actions</source>
       <translation type="unfinished">TreeView actions</translation>
     </message>
@@ -8815,10 +8895,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdUndo</name>
     <message>
-      <source>Edit</source>
-      <translation>Chỉnh sửa</translation>
-    </message>
-    <message>
       <source>&amp;Undo</source>
       <translation>&amp;Hoàn tác</translation>
     </message>
@@ -8829,10 +8905,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdUnitsCalculator</name>
-    <message>
-      <source>Tools</source>
-      <translation>Công cụ</translation>
-    </message>
     <message>
       <source>&amp;Units calculator...</source>
       <translation>&amp;Máy tính đơn vị...</translation>
@@ -8856,10 +8928,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdUserInterface</name>
     <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
-    <message>
       <source>Dock views</source>
       <translation>Liên kết các chế độ xem</translation>
     </message>
@@ -8870,10 +8938,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewBottom</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Bottom</source>
       <translation>Đáy</translation>
@@ -8886,10 +8950,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewCreate</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Create new view</source>
       <translation>Tạo chế độ xem mới</translation>
     </message>
@@ -8900,10 +8960,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewDimetric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Dimetric</source>
       <translation>Dimetric</translation>
@@ -8916,10 +8972,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewExample1</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Inventor example #1</source>
       <translation>Ví dụ Inventor #1</translation>
     </message>
@@ -8930,10 +8982,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewExample2</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Inventor example #2</source>
       <translation>Ví dụ Inventor #2</translation>
@@ -8946,10 +8994,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewExample3</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Inventor example #3</source>
       <translation>Ví dụ Inventor #3</translation>
     </message>
@@ -8960,10 +9004,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewFitAll</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Fit all</source>
       <translation>Vừa tất cả</translation>
@@ -8976,10 +9016,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewFitSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Fit selection</source>
       <translation>Lựa chọn phù hợp</translation>
     </message>
@@ -8990,10 +9026,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewFront</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Front</source>
       <translation>Phía trước</translation>
@@ -9006,10 +9038,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewHome</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Home</source>
       <translation type="unfinished">Home</translation>
     </message>
@@ -9020,10 +9048,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewIsometric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Isometric</source>
       <translation>Isometric</translation>
@@ -9036,10 +9060,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewIvIssueCamPos</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Issue camera position</source>
       <translation>Xuất ra vị trí máy ảnh</translation>
     </message>
@@ -9050,10 +9070,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoInterleavedColumns</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Stereo Interleaved Columns</source>
       <translation>Cột xen kẽ âm thanh nổi</translation>
@@ -9066,10 +9082,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewIvStereoInterleavedRows</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Stereo Interleaved Rows</source>
       <translation>Hàng xen kẽ âm thanh nổi</translation>
     </message>
@@ -9080,10 +9092,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoOff</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Stereo Off</source>
       <translation>Tắt âm thanh nổi</translation>
@@ -9096,10 +9104,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewIvStereoQuadBuff</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Stereo quad buffer</source>
       <translation>Bộ đệm âm thanh nổi 4 bộ điều khiển</translation>
     </message>
@@ -9110,10 +9114,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoRedGreen</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Stereo red/cyan</source>
       <translation>Stereo đỏ / lục lam</translation>
@@ -9126,10 +9126,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewLeft</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Left</source>
       <translation>Trái</translation>
     </message>
@@ -9140,10 +9136,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewRear</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Rear</source>
       <translation>Phía sau</translation>
@@ -9156,10 +9148,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewRestoreCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Restore saved camera</source>
       <translation type="unfinished">Restore saved camera</translation>
     </message>
@@ -9170,10 +9158,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewRight</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Right</source>
       <translation>Phải</translation>
@@ -9186,10 +9170,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewRotateLeft</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Rotate Left</source>
       <translation>Xoay trái</translation>
     </message>
@@ -9200,10 +9180,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewRotateRight</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Rotate Right</source>
       <translation>Xoay phải</translation>
@@ -9216,10 +9192,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewSaveCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Save current camera</source>
       <translation type="unfinished">Save current camera</translation>
     </message>
@@ -9230,10 +9202,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewTop</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Top</source>
       <translation>Đỉnh</translation>
@@ -9246,10 +9214,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdViewTrimetric</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Trimetric</source>
       <translation>Trimetric</translation>
     </message>
@@ -9260,10 +9224,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdViewVR</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>FreeCAD-VR</source>
       <translation>FreeCAD-VR</translation>
@@ -9276,10 +9236,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdWhatsThis</name>
     <message>
-      <source>Help</source>
-      <translation>Trợ giúp</translation>
-    </message>
-    <message>
       <source>&amp;What's This?</source>
       <translation>&amp;Đây là gì?</translation>
     </message>
@@ -9290,10 +9246,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdCmdWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
     <message>
       <source>&amp;Windows...</source>
       <translation>&amp;Cửa sổ...</translation>
@@ -9306,20 +9258,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdCmdWindowsMenu</name>
     <message>
-      <source>Window</source>
-      <translation>Cửa sổ</translation>
-    </message>
-    <message>
       <source>Activates this window</source>
       <translation>Kích hoạt cửa sổ này</translation>
     </message>
   </context>
   <context>
     <name>StdCmdWorkbench</name>
-    <message>
-      <source>View</source>
-      <translation>Chế độ xem</translation>
-    </message>
     <message>
       <source>Workbench</source>
       <translation>Bàn làm việc</translation>
@@ -9332,10 +9276,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdMainFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Fullscreen</source>
       <translation>Toàn màn hình</translation>
     </message>
@@ -9347,10 +9287,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdOrthographicCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Orthographic view</source>
       <translation>Chế độ xem trực quan</translation>
     </message>
@@ -9361,10 +9297,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdPerspectiveCamera</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Perspective view</source>
       <translation>Phối cảnh</translation>
@@ -9384,17 +9316,9 @@ Would you like to save the file with a different name?</translation>
       <source>Expand active document and collapse all others</source>
       <translation>Mở rộng tài liệu đang hoạt động và co tất cả các cái khác</translation>
     </message>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
   </context>
   <context>
     <name>StdTreeDrag</name>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
     <message>
       <source>Initiate dragging</source>
       <translation type="unfinished">Initiate dragging</translation>
@@ -9407,24 +9331,16 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdTreeMultiDocument</name>
     <message>
-      <source>Display all documents in the tree view</source>
-      <translation>Hiển thị mọi tài liệu trong ô xem dạng cây</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
-    <message>
       <source>Multi document</source>
       <translation type="unfinished">Multi document</translation>
+    </message>
+    <message>
+      <source>Display all documents in the tree view</source>
+      <translation>Hiển thị mọi tài liệu trong ô xem dạng cây</translation>
     </message>
   </context>
   <context>
     <name>StdTreePreSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
     <message>
       <source>Pre-selection</source>
       <translation type="unfinished">Pre-selection</translation>
@@ -9437,10 +9353,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdTreeRecordSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
-    <message>
       <source>Record selection</source>
       <translation type="unfinished">Record selection</translation>
     </message>
@@ -9451,10 +9363,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdTreeSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
     <message>
       <source>Go to selection</source>
       <translation>Chuyển đến lựa chọn</translation>
@@ -9467,24 +9375,16 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdTreeSingleDocument</name>
     <message>
-      <source>Only display the active document in the tree view</source>
-      <translation>Chỉ hiển thị tài liệu đang hoạt đọng trong ô xem dạng cây</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
-    <message>
       <source>Single document</source>
       <translation type="unfinished">Single document</translation>
+    </message>
+    <message>
+      <source>Only display the active document in the tree view</source>
+      <translation>Chỉ hiển thị tài liệu đang hoạt đọng trong ô xem dạng cây</translation>
     </message>
   </context>
   <context>
     <name>StdTreeSyncPlacement</name>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
     <message>
       <source>Sync placement</source>
       <translation type="unfinished">Sync placement</translation>
@@ -9497,10 +9397,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdTreeSyncSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
-    <message>
       <source>Sync selection</source>
       <translation type="unfinished">Sync selection</translation>
     </message>
@@ -9511,10 +9407,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdTreeSyncView</name>
-    <message>
-      <source>TreeView</source>
-      <translation type="unfinished">TreeView</translation>
-    </message>
     <message>
       <source>Sync view</source>
       <translation type="unfinished">Sync view</translation>
@@ -9527,20 +9419,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdViewBoxZoom</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Box zoom</source>
       <translation>Thu phóng hộp</translation>
     </message>
   </context>
   <context>
     <name>StdViewDock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Docked</source>
       <translation>Kết nối</translation>
@@ -9553,10 +9437,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdViewDockUndockFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Document window</source>
       <translation>Cửa sổ tài liệu</translation>
     </message>
@@ -9567,10 +9447,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdViewFullscreen</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Fullscreen</source>
       <translation>Toàn màn hình</translation>
@@ -9583,10 +9459,6 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdViewScreenShot</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Save picture...</source>
       <translation>Lưu hình ảnh...</translation>
     </message>
@@ -9597,10 +9469,6 @@ Would you like to save the file with a different name?</translation>
   </context>
   <context>
     <name>StdViewUndock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Undocked</source>
       <translation>Tháo rời</translation>
@@ -9613,20 +9481,12 @@ Would you like to save the file with a different name?</translation>
   <context>
     <name>StdViewZoomIn</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
-    <message>
       <source>Zoom In</source>
       <translation>Phóng to</translation>
     </message>
   </context>
   <context>
     <name>StdViewZoomOut</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Chế độ xem-chuẩn</translation>
-    </message>
     <message>
       <source>Zoom Out</source>
       <translation>Thu nhỏ</translation>
@@ -9645,12 +9505,12 @@ Are you sure you want to continue?
 </translation>
     </message>
     <message>
-      <source>Object dependencies</source>
-      <translation>Phụ thuộc đối tượng</translation>
-    </message>
-    <message>
       <source>These items are selected for deletion, but are not in the active document.</source>
       <translation type="unfinished">These items are selected for deletion, but are not in the active document.</translation>
+    </message>
+    <message>
+      <source>Object dependencies</source>
+      <translation>Phụ thuộc đối tượng</translation>
     </message>
   </context>
   <context>
@@ -9671,36 +9531,20 @@ Are you sure you want to continue?
       <translation>Chế độ bình thường</translation>
     </message>
     <message>
-      <source>Wireframe</source>
-      <translation>Khung dây</translation>
-    </message>
-    <message>
-      <source>Wireframe mode</source>
-      <translation>Chế độ khung dây</translation>
-    </message>
-    <message>
-      <source>Flat lines</source>
-      <translation>Đường thẳng</translation>
-    </message>
-    <message>
-      <source>Flat lines mode</source>
-      <translation>Chế độ đường thẳng</translation>
-    </message>
-    <message>
-      <source>Shaded</source>
-      <translation>Bóng mờ</translation>
-    </message>
-    <message>
-      <source>Shaded mode</source>
-      <translation>Chế độ bóng mờ</translation>
-    </message>
-    <message>
       <source>Points</source>
       <translation>Điểm</translation>
     </message>
     <message>
       <source>Points mode</source>
       <translation>Chế độ điểm</translation>
+    </message>
+    <message>
+      <source>Wireframe</source>
+      <translation>Khung dây</translation>
+    </message>
+    <message>
+      <source>Wireframe mode</source>
+      <translation>Chế độ khung dây</translation>
     </message>
     <message>
       <source>Hidden line</source>
@@ -9717,6 +9561,22 @@ Are you sure you want to continue?
     <message>
       <source>No shading mode</source>
       <translation>Không có chế độ bóng</translation>
+    </message>
+    <message>
+      <source>Shaded</source>
+      <translation>Bóng mờ</translation>
+    </message>
+    <message>
+      <source>Shaded mode</source>
+      <translation>Chế độ bóng mờ</translation>
+    </message>
+    <message>
+      <source>Flat lines</source>
+      <translation>Đường thẳng</translation>
+    </message>
+    <message>
+      <source>Flat lines mode</source>
+      <translation>Chế độ đường thẳng</translation>
     </message>
   </context>
   <context>
@@ -9755,12 +9615,12 @@ Do you still want to proceed?</translation>
   <context>
     <name>Std_Revert</name>
     <message>
-      <source>This will discard all the changes since last file save.</source>
-      <translation>Thao tác này sẽ hủy tất cả các thay đổi kể từ lần lưu tệp cuối cùng.</translation>
-    </message>
-    <message>
       <source>Revert document</source>
       <translation>Khôi phục tài liệu</translation>
+    </message>
+    <message>
+      <source>This will discard all the changes since last file save.</source>
+      <translation>Thao tác này sẽ hủy tất cả các thay đổi kể từ lần lưu tệp cuối cùng.</translation>
     </message>
     <message>
       <source>Do you want to continue?</source>
@@ -9826,6 +9686,10 @@ Do you still want to proceed?</translation>
       <translation>Chế độ xem chuẩn</translation>
     </message>
     <message>
+      <source>Axonometric</source>
+      <translation>Phép chiếu có trục đo</translation>
+    </message>
+    <message>
       <source>&amp;Stereo</source>
       <translation>&amp;Âm thanh nổi</translation>
     </message>
@@ -9878,45 +9742,8 @@ Do you still want to proceed?</translation>
       <translation>Tính năng đặc biệt</translation>
     </message>
     <message>
-      <source>Axonometric</source>
-      <translation>Phép chiếu có trục đo</translation>
-    </message>
-  </context>
-  <context>
-    <name>testClass</name>
-    <message>
-      <source>test</source>
-      <translation>thử nghiệm</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-size:20pt; font-weight:600;"&gt;iisTaskPanel&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;span style=" font-size:12pt;"&gt;Created for Qt 4.3.x&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;www.ii-system.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li {khoảng trắng: phủ trước; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-size:20pt; font-weight:600;"&gt;iisBảng công việc&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;span style=" font-size:12pt;"&gt;Được tạo cho Qt 4.3.x&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;www.ii-system.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Choose the style of the Task Panel</source>
-      <translation>Chọn kiểu của bảng công việc</translation>
-    </message>
-    <message>
-      <source>Default</source>
-      <translation>Mặc định</translation>
-    </message>
-    <message>
-      <source>Windows XP</source>
-      <translation>Cửa sổ XP</translation>
+      <source>Link actions</source>
+      <translation type="unfinished">Link actions</translation>
     </message>
   </context>
 </TS>

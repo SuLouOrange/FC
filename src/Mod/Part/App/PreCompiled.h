@@ -43,24 +43,24 @@
 #include <list>
 #include <iostream>
 #include <sstream>
-#include <cstdio>
 #include <fcntl.h>
-#include <cassert>
 
 #include <array>
 #include <vector>
 #include <list>
 #include <set>
 #include <map>
+#include <memory>
 
 #include <fstream>
 #include <string>
-#include <cstdio>
-#include <cstdlib>
 #include <stdexcept>
 #include <tuple>
 
+#include <cassert>
 #include <cmath>
+#include <cstdio>
+#include <cstdlib>
 #include <ctime>
 
 // QT
@@ -80,6 +80,7 @@
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/exception.hpp>
 
+#include <boost/regex.hpp>
 #include <boost/uuid/uuid_io.hpp>
 
 #include "OpenCascadeAll.h"

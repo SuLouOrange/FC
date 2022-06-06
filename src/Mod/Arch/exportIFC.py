@@ -262,7 +262,7 @@ def export(exportList, filename, colors=None, preferences=None):
 
     # create IFC file
 
-    global ifcfile, surfstyles, clones, sharedobjects, profiledefs, shapedefs
+    global ifcfile, surfstyles, clones, sharedobjects, profiledefs, shapedefs, uids
     ifcfile = ifcopenshell.open(templatefile)
     ifcfile = exportIFCHelper.writeUnits(ifcfile,preferences["IFC_UNIT"])
     history = ifcfile.by_type("IfcOwnerHistory")[0]
@@ -325,6 +325,7 @@ def export(exportList, filename, colors=None, preferences=None):
     profiledefs = {} # { ProfileDefString:profiledef,...}
     shapedefs = {} # { ShapeDefString:[shapes],... }
     spatialelements = {} # {Name:IfcEntity, ... }
+    uids = [] # store used UIDs to avoid reuse (some FreeCAD objects might have same IFC UID, ex. copy/pasted objects
 
     # build clones table
 
@@ -1943,9 +1944,14 @@ def getProfile(ifcfile,p):
         d = vec(p.Edges[0])
         d.normalize()
         pxvc = ifcbin.createIfcDirection(tuple(d)[:2])
-        povc = ifcbin.createIfcCartesianPoint((0.0,0.0))
         # profile must be located at (0,0) because placement gets added later
-        #povc = ifcbin.createIfcCartesianPoint(tuple(p.CenterOfMass[:2]))
+        # povc = ifcbin.createIfcCartesianPoint((0.0,0.0))
+        # the above statement appears wrong, so the line below has been uncommented for now
+        # TODO we must sort this out at some point... For now the line below seems to work
+        if getattr(p,"CenterOfMass",None):
+            povc = ifcbin.createIfcCartesianPoint(tuple(p.CenterOfMass[:2]))
+        else:
+            povc = ifcbin.createIfcCartesianPoint((0.0,0.0))
         pt = ifcbin.createIfcAxis2Placement2D(povc,pxvc)
         #semiPerimeter = p.Length/2
         #diff = math.sqrt(semiPerimeter**2 - 4*p.Area)
@@ -2442,10 +2448,14 @@ def createProduct(ifcfile,obj,ifctype,uid,history,name,description,placement,rep
 def getUID(obj,preferences):
     """gets or creates an UUID for an object"""
 
+    global uids
     uid = None
     if hasattr(obj,"IfcData"):
         if "IfcUID" in obj.IfcData.keys():
             uid = str(obj.IfcData["IfcUID"])
+            if uid in uids:
+                # this UID  has already been used in another object
+                uid = None
     if not uid:
         uid = ifcopenshell.guid.new()
         # storing the uid for further use
@@ -2456,6 +2466,7 @@ def getUID(obj,preferences):
                 obj.IfcData = d
             if hasattr(obj, "GlobalId"):
                 obj.GlobalId = uid
+    uids.append(uid)
     return uid
 
 

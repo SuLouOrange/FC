@@ -83,16 +83,16 @@
       <translation>Pozíció</translation>
     </message>
     <message>
+      <source>Enum</source>
+      <translation type="unfinished">Enum</translation>
+    </message>
+    <message>
       <source>Base</source>
       <translation>Alap</translation>
     </message>
   </context>
   <context>
     <name>CmdTestConsoleOutput</name>
-    <message>
-      <source>Standard-Test</source>
-      <translation>Általános-teszt</translation>
-    </message>
     <message>
       <source>Test console output</source>
       <translation>Tesztkimenet konzol</translation>
@@ -101,20 +101,12 @@
   <context>
     <name>CmdViewMeasureClearAll</name>
     <message>
-      <source>Measure</source>
-      <translation>Mérés</translation>
-    </message>
-    <message>
       <source>Clear measurement</source>
       <translation>Méretek törlése</translation>
     </message>
   </context>
   <context>
     <name>CmdViewMeasureToggleAll</name>
-    <message>
-      <source>Measure</source>
-      <translation>Mérés</translation>
-    </message>
     <message>
       <source>Toggle measurement</source>
       <translation>Mérés ki/be kapcsolása</translation>
@@ -187,6 +179,10 @@
       <translation>Átalakítás</translation>
     </message>
     <message>
+      <source>Toggle array elements</source>
+      <translation>Tömbelemek váltása</translation>
+    </message>
+    <message>
       <source>Link Transform</source>
       <translation>Átalakítások hivatkozása</translation>
     </message>
@@ -196,10 +192,77 @@
     </message>
   </context>
   <context>
+    <name>CommandGroup</name>
+    <message>
+      <source>File</source>
+      <translation>Fájl</translation>
+    </message>
+    <message>
+      <source>Edit</source>
+      <translation>Szerkesztés</translation>
+    </message>
+    <message>
+      <source>Help</source>
+      <translation>Súgó</translation>
+    </message>
+    <message>
+      <source>Link</source>
+      <translation>Hivatkozás</translation>
+    </message>
+    <message>
+      <source>Tools</source>
+      <translation>Eszközök</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Nézet</translation>
+    </message>
+    <message>
+      <source>Window</source>
+      <translation>Ablak</translation>
+    </message>
+    <message>
+      <source>Standard</source>
+      <translation>Általános</translation>
+    </message>
+    <message>
+      <source>Macros</source>
+      <translation>Makrók</translation>
+    </message>
+    <message>
+      <source>Macro</source>
+      <translation>Makró</translation>
+    </message>
+    <message>
+      <source>Structure</source>
+      <translation>Felépítés</translation>
+    </message>
+    <message>
+      <source>Standard-Test</source>
+      <translation>Általános-teszt</translation>
+    </message>
+    <message>
+      <source>Standard-View</source>
+      <translation>Standard-nézet</translation>
+    </message>
+    <message>
+      <source>TreeView</source>
+      <translation>FaNézet</translation>
+    </message>
+    <message>
+      <source>Measure</source>
+      <translation>Mérés</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
       <translation>Térbeli mozgás</translation>
+    </message>
+    <message>
+      <source>Global Sensitivity:</source>
+      <translation>Globális érzékenység:</translation>
     </message>
     <message>
       <source>Dominant Mode</source>
@@ -233,10 +296,6 @@
       <source>Reverse</source>
       <translation>Fordított</translation>
     </message>
-    <message>
-      <source>Global Sensitivity:</source>
-      <translation>Globális érzékenység:</translation>
-    </message>
   </context>
   <context>
     <name>DlgExpressionInput</name>
@@ -249,16 +308,16 @@
       <translation>Eredmény:</translation>
     </message>
     <message>
-      <source>Ok</source>
-      <translation>Ok</translation>
-    </message>
-    <message>
       <source>&amp;Clear</source>
       <translation>Törlés(&amp;C)</translation>
     </message>
     <message>
       <source>Revert to last calculated value (as constant)</source>
       <translation>Visszatérés az utolsó számított értékre (állandóként)</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>Ok</translation>
     </message>
   </context>
   <context>
@@ -311,6 +370,10 @@
     <message>
       <source>none</source>
       <translation>egyik sem</translation>
+    </message>
+    <message>
+      <source>Press a keyboard shortcut</source>
+      <translation>A billentyűparancs megnyomása</translation>
     </message>
   </context>
   <context>
@@ -413,13 +476,6 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
   </context>
   <context>
-    <name>Gui::Command</name>
-    <message>
-      <source>Standard</source>
-      <translation>Általános</translation>
-    </message>
-  </context>
-  <context>
     <name>Gui::ContainerDialog</name>
     <message>
       <source>&amp;OK</source>
@@ -463,28 +519,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Névjegy</translation>
     </message>
     <message>
-      <source>Revision number</source>
-      <translation>Felülvizsgálati szám</translation>
-    </message>
-    <message>
       <source>Version</source>
       <translation>Verzió</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>OK</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Program infó</translation>
+      <source>Revision number</source>
+      <translation>Felülvizsgálati szám</translation>
     </message>
     <message>
       <source>Release date</source>
       <translation>Megjelenés éve</translation>
-    </message>
-    <message>
-      <source>Copy to clipboard</source>
-      <translation>Vágólapra másolás</translation>
     </message>
     <message>
       <source>Operating system</source>
@@ -495,28 +539,24 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Szó méret</translation>
     </message>
     <message>
+      <source>Copy to clipboard</source>
+      <translation>Vágólapra másolás</translation>
+    </message>
+    <message>
       <source>License</source>
       <translation>Licenc</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>OK</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::AboutDialog</name>
-    <message>
-      <source>Libraries</source>
-      <translation>Könyvtárak</translation>
-    </message>
-    <message>
-      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
-      <translation>Ez a szoftver nyílt forráskódú összetevőket tartalmaz, melyeknek a szerzői jogai és egyéb szabadalmi jogai a saját jogtulajdonosáé:</translation>
-    </message>
-    <message>
-      <source>License</source>
-      <translation>Licenc</translation>
-    </message>
-    <message>
-      <source>Collection</source>
-      <translation>Gyűjtemény</translation>
-    </message>
     <message>
       <source>Credits</source>
       <extracomment>Header for the Credits tab of the About screen</extracomment>
@@ -536,17 +576,44 @@ while doing a left or right click and move the mouse up or down</source>
       <extracomment>Header for the list of companies/organizations in the Credits list.</extracomment>
       <translation>Szervezetek</translation>
     </message>
+    <message>
+      <source>License</source>
+      <translation>Licenc</translation>
+    </message>
+    <message>
+      <source>Libraries</source>
+      <translation>Könyvtárak</translation>
+    </message>
+    <message>
+      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
+      <translation>Ez a szoftver nyílt forráskódú összetevőket tartalmaz, melyeknek a szerzői jogai és egyéb szabadalmi jogai a saját jogtulajdonosáé:</translation>
+    </message>
+    <message>
+      <source>Collection</source>
+      <translation>Gyűjtemény</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::ApplicationCache</name>
+    <message>
+      <source>Cache directory</source>
+      <translation>Gyorsítótár könyvtár</translation>
+    </message>
+    <message>
+      <source>The cache directory %1 exceeds the size of %2.</source>
+      <translation>A(z) %1 gyorsítótárkönyvtár mérete meghaladja a következő méretet: %2.</translation>
+    </message>
+    <message>
+      <source>Do you want to clear it now?</source>
+      <translation>Kiüríti most?</translation>
+    </message>
+    <message>
+      <source>Warning: Please make sure that this is the only running %1 instance and that no documents are opened as this may result into data loss!</source>
+      <translation>Figyelmeztetés: Győződjön meg arról, hogy ez az %1 egyetlen példány fut, és hogy nincsenek megnyitva dokumentumok, mivel ez adatvesztést okozhat!</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::ButtonModel</name>
-    <message>
-      <source>Button %1</source>
-      <translation>%1 gomb</translation>
-    </message>
-    <message>
-      <source>Out Of Range</source>
-      <translation>Tartományon kívüli</translation>
-    </message>
     <message>
       <source> "</source>
       <translation> "</translation>
@@ -554,6 +621,14 @@ while doing a left or right click and move the mouse up or down</source>
     <message>
       <source>"</source>
       <translation>"</translation>
+    </message>
+    <message>
+      <source>Button %1</source>
+      <translation>%1 gomb</translation>
+    </message>
+    <message>
+      <source>Out Of Range</source>
+      <translation>Tartományon kívüli</translation>
     </message>
   </context>
   <context>
@@ -598,12 +673,12 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Nyírás X</translation>
     </message>
     <message>
-      <source>Flip</source>
-      <translation>Átfordít</translation>
-    </message>
-    <message>
       <source>Offset</source>
       <translation>Eltolás</translation>
+    </message>
+    <message>
+      <source>Flip</source>
+      <translation>Átfordít</translation>
     </message>
     <message>
       <source>Clipping Y</source>
@@ -644,16 +719,28 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Forgó asztal nézet</translation>
     </message>
     <message>
+      <source>Angle</source>
+      <translation>Szög</translation>
+    </message>
+    <message>
+      <source>-90°</source>
+      <translation>-90°</translation>
+    </message>
+    <message>
+      <source>90°</source>
+      <translation>90°</translation>
+    </message>
+    <message>
       <source>Speed</source>
       <translation>Sebesség</translation>
     </message>
     <message>
-      <source>Maximum</source>
-      <translation>Maximális</translation>
-    </message>
-    <message>
       <source>Minimum</source>
       <translation>Minimális</translation>
+    </message>
+    <message>
+      <source>Maximum</source>
+      <translation>Maximális</translation>
     </message>
     <message>
       <source>Fullscreen</source>
@@ -668,28 +755,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation> s</translation>
     </message>
     <message>
-      <source>Angle</source>
-      <translation>Szög</translation>
-    </message>
-    <message>
-      <source>90°</source>
-      <translation>90°</translation>
-    </message>
-    <message>
-      <source>-90°</source>
-      <translation>-90°</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Lejátszás</translation>
     </message>
     <message>
-      <source>Stop</source>
-      <translation>Megállít</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Bezárás</translation>
+    </message>
+    <message>
+      <source>Stop</source>
+      <translation>Megállít</translation>
     </message>
   </context>
   <context>
@@ -764,24 +839,24 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Azonosítás</translation>
     </message>
     <message>
-      <source>Password:</source>
-      <translation>Jelszó:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>Username:</source>
-      <translation>Felhasználónév:</translation>
-    </message>
-    <message>
       <source>Site:</source>
       <translation>Oldal:</translation>
     </message>
     <message>
       <source>%1 at %2</source>
       <translation>%1 ezen %2</translation>
+    </message>
+    <message>
+      <source>Username:</source>
+      <translation>Felhasználónév:</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Jelszó:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
@@ -811,6 +886,32 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
     </message>
   </context>
   <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePack</name>
+    <message>
+      <source>Create New Preference Pack</source>
+      <translation>Új beállítási csomag létrehozása</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Név</translation>
+    </message>
+    <message>
+      <source>Property group templates</source>
+      <translation>Tulajdonságcsoport sablonok</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePackImp</name>
+    <message>
+      <source>Pack already exists</source>
+      <translation>Csomag már létezik</translation>
+    </message>
+    <message>
+      <source>A preference pack with that name already exists. Do you want to overwrite it?</source>
+      <translation>Ezzel a névvel már létezik csomag. Szeretné felülírni?</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::Dialog::DlgCustomActions</name>
     <message>
       <source>Macros</source>
@@ -825,32 +926,32 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Makró:</translation>
     </message>
     <message>
-      <source>...</source>
-      <translation>...</translation>
-    </message>
-    <message>
-      <source>Pixmap</source>
-      <translation>Pixkép</translation>
-    </message>
-    <message>
-      <source>Accelerator:</source>
-      <translation>Gyorsító:</translation>
-    </message>
-    <message>
-      <source>What's this:</source>
-      <translation>Mi ez:</translation>
-    </message>
-    <message>
-      <source>Status text:</source>
-      <translation>Állapot szöveg:</translation>
+      <source>Menu text:</source>
+      <translation>Menü szöveg:</translation>
     </message>
     <message>
       <source>Tool tip:</source>
       <translation>Eszközleírás:</translation>
     </message>
     <message>
-      <source>Menu text:</source>
-      <translation>Menü szöveg:</translation>
+      <source>Status text:</source>
+      <translation>Állapot szöveg:</translation>
+    </message>
+    <message>
+      <source>What's this:</source>
+      <translation>Mi ez:</translation>
+    </message>
+    <message>
+      <source>Accelerator:</source>
+      <translation>Gyorsító:</translation>
+    </message>
+    <message>
+      <source>Pixmap</source>
+      <translation>Pixkép</translation>
+    </message>
+    <message>
+      <source>...</source>
+      <translation>...</translation>
     </message>
     <message>
       <source>Add</source>
@@ -874,14 +975,6 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
     <message>
       <source>Macros</source>
       <translation>Makrók</translation>
-    </message>
-    <message>
-      <source>No macro</source>
-      <translation>Nincs makró</translation>
-    </message>
-    <message>
-      <source>No macros found.</source>
-      <translation>Nem találhatók makrók.</translation>
     </message>
     <message>
       <source>Macro not found</source>
@@ -949,10 +1042,6 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Billentyűzet</translation>
     </message>
     <message>
-      <source>Description:</source>
-      <translation>Leírás:</translation>
-    </message>
-    <message>
       <source>&amp;Category:</source>
       <translation>Kategória:</translation>
     </message>
@@ -981,6 +1070,10 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Alt+A</translation>
     </message>
     <message>
+      <source>Clear</source>
+      <translation>Törlés</translation>
+    </message>
+    <message>
       <source>&amp;Reset</source>
       <translation>Visszaállít</translation>
     </message>
@@ -997,12 +1090,12 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Alt+S</translation>
     </message>
     <message>
-      <source/>
-      <translation>Program infó</translation>
+      <source>Description:</source>
+      <translation>Leírás:</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Törlés</translation>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
@@ -1024,12 +1117,12 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Többszörösen definiált billentyűparancs</translation>
     </message>
     <message>
-      <source>Already defined shortcut</source>
-      <translation>Már definiált billentyűparancs</translation>
-    </message>
-    <message>
       <source>The shortcut '%1' is defined more than once. This could result in unexpected behaviour.</source>
       <translation>Az '%1' billentyűparancsot többször definiálta. Ez nem megfelelő működéshez vezethet.</translation>
+    </message>
+    <message>
+      <source>Already defined shortcut</source>
+      <translation>Már definiált billentyűparancs</translation>
     </message>
     <message>
       <source>The shortcut '%1' is already assigned to '%2'.</source>
@@ -1054,8 +1147,16 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Eszköztárak</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; A változások következő alkalommal válnak aktívvá, amikor betölti a megfelelő munkafelületet &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>New...</source>
+      <translation>Új...</translation>
+    </message>
+    <message>
+      <source>Rename...</source>
+      <translation>Átnevezés...</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Törlés</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -1074,14 +1175,6 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>&lt;b&gt;Mozgasd a kiválasztott elemet egy szinttel lejjebb.&lt;/b&gt;&lt;p&gt;Ez a meglévő elemet szintjét is megváltoztatja.&lt;/p&gt;</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Mozgatás lefelé</translation>
-    </message>
-    <message>
-      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
-      <translation>&lt;b&gt;Mozgasd a kiválasztott elemet lejjebb.&lt;/b&gt;&lt;p&gt;Az elem a hierarchia szinten lesz mozgatva.&lt;/p&gt;</translation>
-    </message>
-    <message>
       <source>Move up</source>
       <translation>Mozgatás felfelé</translation>
     </message>
@@ -1090,16 +1183,20 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>&lt;b&gt;Mozgasd a kiválasztott elemet lejjebb.&lt;/b&gt;&lt;p&gt;Az elem a hierarchia szinten lesz mozgatva.&lt;/p&gt;</translation>
     </message>
     <message>
-      <source>New...</source>
-      <translation>Új...</translation>
+      <source>Move down</source>
+      <translation>Mozgatás lefelé</translation>
     </message>
     <message>
-      <source>Rename...</source>
-      <translation>Átnevezés...</translation>
+      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
+      <translation>&lt;b&gt;Mozgasd a kiválasztott elemet lejjebb.&lt;/b&gt;&lt;p&gt;Az elem a hierarchia szinten lesz mozgatva.&lt;/p&gt;</translation>
     </message>
     <message>
-      <source>Delete</source>
-      <translation>Törlés</translation>
+      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; A változások következő alkalommal válnak aktívvá, amikor betölti a megfelelő munkafelületet &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Global</source>
+      <translation>Globális</translation>
     </message>
     <message>
       <source>Icon</source>
@@ -1112,6 +1209,10 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
     <message>
       <source>&lt;Separator&gt;</source>
       <translation>&lt;Szóköz&gt;</translation>
+    </message>
+    <message>
+      <source>%1 module not loaded</source>
+      <translation>%1 modul nincs betöltve</translation>
     </message>
     <message>
       <source>New toolbar</source>
@@ -1136,14 +1237,6 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
     <message>
       <source/>
       <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>Global</source>
-      <translation>Globális</translation>
-    </message>
-    <message>
-      <source>%1 module not loaded</source>
-      <translation>%1 modul nincs betöltve</translation>
     </message>
   </context>
   <context>
@@ -1175,6 +1268,10 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
   <context>
     <name>Gui::Dialog::DlgCustomizeSpaceball</name>
     <message>
+      <source>Spaceball Buttons</source>
+      <translation>Térbeli mozgatás gombjai</translation>
+    </message>
+    <message>
       <source>No Spaceball Present</source>
       <translation>Térbeli mozgatás nincs jelen</translation>
     </message>
@@ -1183,16 +1280,12 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Gombok</translation>
     </message>
     <message>
-      <source>Print Reference</source>
-      <translation>Nyomtatási hivatkozás</translation>
-    </message>
-    <message>
-      <source>Spaceball Buttons</source>
-      <translation>Térbeli mozgatás gombjai</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Alaphelyzetbe állítása</translation>
+    </message>
+    <message>
+      <source>Print Reference</source>
+      <translation>Nyomtatási hivatkozás</translation>
     </message>
   </context>
   <context>
@@ -1202,20 +1295,16 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Tulajdonságok megjelenítése</translation>
     </message>
     <message>
-      <source>Display</source>
-      <translation>Megjelenítés</translation>
+      <source>Viewing mode</source>
+      <translation>Nézet</translation>
     </message>
     <message>
-      <source>Transparency:</source>
-      <translation>Átlátszóság:</translation>
+      <source>Document window:</source>
+      <translation>Dokument ablak:</translation>
     </message>
     <message>
-      <source>Line width:</source>
-      <translation>Vonalstílus:</translation>
-    </message>
-    <message>
-      <source>Point size:</source>
-      <translation>Méret:</translation>
+      <source>Plot mode:</source>
+      <translation>Nyomtatási mód:</translation>
     </message>
     <message>
       <source>Material</source>
@@ -1226,36 +1315,40 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>...</translation>
     </message>
     <message>
-      <source>Viewing mode</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
-      <source>Plot mode:</source>
-      <translation>Nyomtatási mód:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>Line transparency:</source>
-      <translation>Vonal áttetszőség:</translation>
-    </message>
-    <message>
-      <source>Line color:</source>
-      <translation>Vonalszín:</translation>
+      <source>Color plot:</source>
+      <translation>Színes nyomtatás:</translation>
     </message>
     <message>
       <source>Shape color:</source>
       <translation>Alakzat színe:</translation>
     </message>
     <message>
-      <source>Color plot:</source>
-      <translation>Színes nyomtatás:</translation>
+      <source>Line color:</source>
+      <translation>Vonalszín:</translation>
     </message>
     <message>
-      <source>Document window:</source>
-      <translation>Dokument ablak:</translation>
+      <source>Display</source>
+      <translation>Megjelenítés</translation>
+    </message>
+    <message>
+      <source>Point size:</source>
+      <translation>Méret:</translation>
+    </message>
+    <message>
+      <source>Line width:</source>
+      <translation>Vonalstílus:</translation>
+    </message>
+    <message>
+      <source>Transparency:</source>
+      <translation>Átlátszóság:</translation>
+    </message>
+    <message>
+      <source>Line transparency:</source>
+      <translation>Vonal áttetszőség:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
@@ -1360,8 +1453,20 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Beállítások</translation>
     </message>
     <message>
+      <source>Code lines will be numbered</source>
+      <translation>A kódsorok sorszámozva lesznek</translation>
+    </message>
+    <message>
       <source>Enable line numbers</source>
       <translation>Sorszámozás bekapcsolása</translation>
+    </message>
+    <message>
+      <source>The cursor shape will be a block</source>
+      <translation>A kurzor alajkja nagy blokk lesz</translation>
+    </message>
+    <message>
+      <source>Enable block cursor</source>
+      <translation>Nagy kurzor engedélyezése</translation>
     </message>
     <message>
       <source>Enable folding</source>
@@ -1372,44 +1477,16 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Azonosítás</translation>
     </message>
     <message>
-      <source>Insert spaces</source>
-      <translation>Szóközök beszúrása</translation>
-    </message>
-    <message>
       <source>Tab size:</source>
       <translation>Tabulátorméret:</translation>
     </message>
     <message>
-      <source>Indent size:</source>
-      <translation>Azonosítási méret:</translation>
-    </message>
-    <message>
-      <source>Keep tabs</source>
-      <translation>Tabulátorok megtartása</translation>
-    </message>
-    <message>
-      <source>Family:</source>
-      <translation>Szülő:</translation>
-    </message>
-    <message>
-      <source>Size:</source>
-      <translation>Méret:</translation>
-    </message>
-    <message>
-      <source>Preview:</source>
-      <translation>Előnézet:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
-      <translation>A &lt;Tab&gt; beszúrja a megadott behúzási méretet</translation>
-    </message>
-    <message>
       <source>Tabulator raster (how many spaces)</source>
       <translation>Tabulátor raszter (hány szóköz)</translation>
+    </message>
+    <message>
+      <source>Indent size:</source>
+      <translation>Azonosítási méret:</translation>
     </message>
     <message>
       <source>How many spaces will be inserted when pressing &lt;Tab&gt;</source>
@@ -1420,28 +1497,52 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>A &lt;Tab&gt; billentyű megnyomására meghatározott méretű tabulátort szúr be</translation>
     </message>
     <message>
-      <source>Display items</source>
-      <translation>Elemek megjelenítése</translation>
+      <source>Keep tabs</source>
+      <translation>Tabulátorok megtartása</translation>
     </message>
     <message>
-      <source>Font size to be used for selected code type</source>
-      <translation>A kijelölt kódtípushoz használandó betűméret</translation>
+      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
+      <translation>A &lt;Tab&gt; beszúrja a megadott behúzási méretet</translation>
+    </message>
+    <message>
+      <source>Insert spaces</source>
+      <translation>Szóközök beszúrása</translation>
+    </message>
+    <message>
+      <source>Display items</source>
+      <translation>Elemek megjelenítése</translation>
     </message>
     <message>
       <source>Color and font settings will be applied to selected type</source>
       <translation>A kiválasztott típushoz alkalmazandó szín- és betű beállítások</translation>
     </message>
     <message>
+      <source>Family:</source>
+      <translation>Szülő:</translation>
+    </message>
+    <message>
       <source>Font family to be used for selected code type</source>
       <translation>A kiválasztott kód típushoz használandó betű család</translation>
+    </message>
+    <message>
+      <source>Size:</source>
+      <translation>Méret:</translation>
+    </message>
+    <message>
+      <source>Font size to be used for selected code type</source>
+      <translation>A kijelölt kódtípushoz használandó betűméret</translation>
     </message>
     <message>
       <source>Color:</source>
       <translation>Szín:</translation>
     </message>
     <message>
-      <source>Code lines will be numbered</source>
-      <translation>A kódsorok sorszámozva lesznek</translation>
+      <source>Preview:</source>
+      <translation>Előnézet:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
@@ -1449,18 +1550,6 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
     <message>
       <source>General</source>
       <translation>Általános</translation>
-    </message>
-    <message>
-      <source>Start up</source>
-      <translation>Kezdő oldal</translation>
-    </message>
-    <message>
-      <source>Enable splash screen at start up</source>
-      <translation>Felugró ablak bekapcsolása a kezdő oldalon</translation>
-    </message>
-    <message>
-      <source>Auto load module after start up:</source>
-      <translation>Modul automatikus betöltése indulás után:</translation>
     </message>
     <message>
       <source>Language</source>
@@ -1471,36 +1560,68 @@ Ha ez nincs bejelölve, akkor a tulajdonságot egyedileg kell elnevezni, és úg
       <translation>Nyelvválasztás:</translation>
     </message>
     <message>
+      <source>Language of the application's user interface</source>
+      <translation>Az alkalmazás felhasználói felületének nyelve</translation>
+    </message>
+    <message>
+      <source>Number format:</source>
+      <translation>Szám formátum:</translation>
+    </message>
+    <message>
+      <source>Operating system</source>
+      <translation>Operációs rendszer</translation>
+    </message>
+    <message>
+      <source>Selected language</source>
+      <translation>Kijelölt nyelv</translation>
+    </message>
+    <message>
+      <source>C/POSIX</source>
+      <translation>C/POSIX</translation>
+    </message>
+    <message>
+      <source>If enabled, numerical keypad decimal separator will be substituted with locale separator</source>
+      <translation>Ha ez a beállítás engedélyezve van, a numerikus billentyűzet decimális elválasztó karakterét a helyi elválasztó fogja helyettesíteni</translation>
+    </message>
+    <message>
+      <source>Substitute decimal separator (needs restart)</source>
+      <translation>Decimális elválasztó cseréje (újraindítást igényel)</translation>
+    </message>
+    <message>
+      <source>Preference packs</source>
+      <translation>Preferenciacsomagok</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Név</translation>
+    </message>
+    <message>
+      <source>Type</source>
+      <translation>Típus</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Betöltés</translation>
+    </message>
+    <message>
+      <source>Save new...</source>
+      <translation>Új mentése...</translation>
+    </message>
+    <message>
+      <source>Manage...</source>
+      <translation>Kezel...</translation>
+    </message>
+    <message>
+      <source>Revert...</source>
+      <translation>Visszaállít...</translation>
+    </message>
+    <message>
       <source>Main window</source>
       <translation>Főablak</translation>
     </message>
     <message>
       <source>Size of recent file list</source>
       <translation>Legutóbbi fájlok listájának mérete</translation>
-    </message>
-    <message>
-      <source>Size of toolbar icons:</source>
-      <translation>Eszköztárikonok mérete:</translation>
-    </message>
-    <message>
-      <source>Enable tiled background</source>
-      <translation>Engedélyezi a csempézett háttérképet</translation>
-    </message>
-    <message>
-      <source>Style sheet:</source>
-      <translation>Stíluslap:</translation>
-    </message>
-    <message>
-      <source>Python console</source>
-      <translation>Python konzol</translation>
-    </message>
-    <message>
-      <source>Enable word wrap</source>
-      <translation>Sortörés engedélyezése</translation>
-    </message>
-    <message>
-      <source>Language of the application's user interface</source>
-      <translation>Az alkalmazás felhasználói felületének nyelve</translation>
     </message>
     <message>
       <source>How many files should be listed in recent files list</source>
@@ -1512,8 +1633,28 @@ See the FreeCAD Wiki for details about the image.</source>
       <translation>A fő ablak háttere egy speciális képből kerül csempézésre. A kép részleteihez lásd a FreeCAD Wiki-ben.</translation>
     </message>
     <message>
+      <source>Enable tiled background</source>
+      <translation>Engedélyezi a csempézett háttérképet</translation>
+    </message>
+    <message>
+      <source>The text cursor will be blinking</source>
+      <translation>A szövegkurzor villogni fog</translation>
+    </message>
+    <message>
+      <source>Enable cursor blinking</source>
+      <translation>Kurzor villogásának engedélyezése</translation>
+    </message>
+    <message>
+      <source>Style sheet:</source>
+      <translation>Stíluslap:</translation>
+    </message>
+    <message>
       <source>Style sheet how user interface will look like</source>
       <translation>Stíluslap, hogyan fog kinézni a felhasználói felület</translation>
+    </message>
+    <message>
+      <source>Size of toolbar icons:</source>
+      <translation>Eszköztárikonok mérete:</translation>
     </message>
     <message>
       <source>Choose your preference for toolbar icon size. You can adjust
@@ -1537,12 +1678,12 @@ this according to your screen size or personal taste</source>
 "Mindkettő": tartsa meg mindhárom panelt, és két fanézet- és tulajdonságnézetet használhat.</translation>
     </message>
     <message>
-      <source>A Splash screen is a small loading window that is shown
-when FreeCAD is launching. If this option is checked, FreeCAD will
-display the splash screen</source>
-      <translation>A kezdőkép egy kis betöltőablak, amely
-a FreeCAD indulásakor látható. Ha ez az opció be van jelölve, a FreeCAD
-megjeleníti a kezdő képet</translation>
+      <source>Start up</source>
+      <translation>Kezdő oldal</translation>
+    </message>
+    <message>
+      <source>Auto load module after start up:</source>
+      <translation>Modul automatikus betöltése indulás után:</translation>
     </message>
     <message>
       <source>Choose which workbench will be activated and shown
@@ -1551,16 +1692,23 @@ after FreeCAD launches</source>
 a FreeCAD elindítása után</translation>
     </message>
     <message>
-      <source>Words will be wrapped when they exceed available
-horizontal space in Python console</source>
-      <translation>A szavak több sorba törve jelennek meg, ha nem férnek bele a Python konzolablak szélességébe</translation>
+      <source>A Splash screen is a small loading window that is shown
+when FreeCAD is launching. If this option is checked, FreeCAD will
+display the splash screen</source>
+      <translation>A kezdőkép egy kis betöltőablak, amely
+a FreeCAD indulásakor látható. Ha ez az opció be van jelölve, a FreeCAD
+megjeleníti a kezdő képet</translation>
+    </message>
+    <message>
+      <source>Enable splash screen at start up</source>
+      <translation>Felugró ablak bekapcsolása a kezdő oldalon</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgGeneralImp</name>
     <message>
-      <source>No style sheet</source>
-      <translation>Nincs stíluslap</translation>
+      <source>Manage preference packs</source>
+      <translation>Beállításcsomagok kezelése</translation>
     </message>
     <message>
       <source>Small (%1px)</source>
@@ -1594,6 +1742,26 @@ horizontal space in Python console</source>
       <source>Both</source>
       <translation>Mindkettő</translation>
     </message>
+    <message>
+      <source>No style sheet</source>
+      <translation>Nincs stíluslap</translation>
+    </message>
+    <message>
+      <source>Preference Pack Name</source>
+      <translation>Preferencia csomag név</translation>
+    </message>
+    <message>
+      <source>Tags</source>
+      <translation>Címkék</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Alkalmaz</translation>
+    </message>
+    <message>
+      <source>Apply the %1 preference pack</source>
+      <translation>Preferenciacsomag alkalmazása: %1</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgInputDialog</name>
@@ -1624,6 +1792,14 @@ horizontal space in Python console</source>
       <translation>Makrónév:</translation>
     </message>
     <message>
+      <source>User macros</source>
+      <translation>Felhasználói makrók</translation>
+    </message>
+    <message>
+      <source>System macros</source>
+      <translation>Rendszer makrók</translation>
+    </message>
+    <message>
       <source>Execute</source>
       <translation>Végrehajtás</translation>
     </message>
@@ -1644,18 +1820,6 @@ horizontal space in Python console</source>
       <translation>Szerkesztés</translation>
     </message>
     <message>
-      <source>User macros</source>
-      <translation>Felhasználói makrók</translation>
-    </message>
-    <message>
-      <source>System macros</source>
-      <translation>Rendszer makrók</translation>
-    </message>
-    <message>
-      <source>User macros location:</source>
-      <translation>Felhasználói makrók helye:</translation>
-    </message>
-    <message>
       <source>Rename</source>
       <translation>Átnevezés</translation>
     </message>
@@ -1664,12 +1828,24 @@ horizontal space in Python console</source>
       <translation>Másolás</translation>
     </message>
     <message>
-      <source>Addons...</source>
-      <translation>Kiegészítők...</translation>
+      <source>Launch a guide on how to set up a macro in a custom global toolbar.</source>
+      <translation>Futtassa az oktatóanyagot arról, hogyan konfigurálhat makrót egy egyéni globális eszköztáron.</translation>
     </message>
     <message>
       <source>Toolbar</source>
       <translation>Eszköztár</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager where macros created by the community and other addons can be downloaded.</source>
+      <translation>Nyissa meg a Bővítmények kezelőjét, ahol letöltheti a közösség által létrehozott makrókat és egyéb bővítményeket.</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>Letöltés</translation>
+    </message>
+    <message>
+      <source>User macros location:</source>
+      <translation>Felhasználói makrók helye:</translation>
     </message>
   </context>
   <context>
@@ -1677,6 +1853,10 @@ horizontal space in Python console</source>
     <message>
       <source>Macros</source>
       <translation>Makrók</translation>
+    </message>
+    <message>
+      <source>Read-only</source>
+      <translation>Csak olvasható</translation>
     </message>
     <message>
       <source>Macro file</source>
@@ -1697,14 +1877,6 @@ This file already exists.</source>
 Ez a fájl már létezik.</translation>
     </message>
     <message>
-      <source>Delete macro</source>
-      <translation>Makró törlése</translation>
-    </message>
-    <message>
-      <source>Do you really want to delete the macro '%1'?</source>
-      <translation>Valóban törölni szeretné a '%1' nevű makrót?</translation>
-    </message>
-    <message>
       <source>Cannot create file</source>
       <translation>Nem lehet létrehozni a fájlt</translation>
     </message>
@@ -1713,44 +1885,12 @@ Ez a fájl már létezik.</translation>
       <translation>Nem sikerült létrehozni a '%1' fájlt.</translation>
     </message>
     <message>
-      <source>Read-only</source>
-      <translation>Csak olvasható</translation>
+      <source>Delete macro</source>
+      <translation>Makró törlése</translation>
     </message>
     <message>
-      <source>Renaming Macro File</source>
-      <translation>Makró fájl átnevezése</translation>
-    </message>
-    <message>
-      <source>Enter new name:</source>
-      <translation>Adja meg az új nevet:</translation>
-    </message>
-    <message>
-      <source>'%1'
- already exists.</source>
-      <translation>'%1' már létezik.</translation>
-    </message>
-    <message>
-      <source>Rename Failed</source>
-      <translation>Átnevezés sikertelen</translation>
-    </message>
-    <message>
-      <source>Failed to rename to '%1'.
-Perhaps a file permission error?</source>
-      <translation>Sikertelen átnevezés: '%1'. Talán fájl jogosultság hiba?</translation>
-    </message>
-    <message>
-      <source>Duplicate Macro</source>
-      <translation>Makró másolat</translation>
-    </message>
-    <message>
-      <source>Duplicate Failed</source>
-      <translation>Másolás meghiúsult</translation>
-    </message>
-    <message>
-      <source>Failed to duplicate to '%1'.
-Perhaps a file permission error?</source>
-      <translation>'%1' másolása meghiúsult.
-Esetleg fájl jogosultsági hiba?</translation>
+      <source>Do you really want to delete the macro '%1'?</source>
+      <translation>Valóban törölni szeretné a '%1' nevű makrót?</translation>
     </message>
     <message>
       <source>Do not show again</source>
@@ -1794,6 +1934,42 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
       <source>Walkthrough instructions: Click New, then right arrow (-&gt;) button, then Close.</source>
       <translation>Útmutató utasítások: Kattintson az Új, majd a jobbra nyíl (-&gt;) gombra, majd a Bezárás gombra.</translation>
     </message>
+    <message>
+      <source>Renaming Macro File</source>
+      <translation>Makró fájl átnevezése</translation>
+    </message>
+    <message>
+      <source>Enter new name:</source>
+      <translation>Adja meg az új nevet:</translation>
+    </message>
+    <message>
+      <source>'%1'
+ already exists.</source>
+      <translation>'%1' már létezik.</translation>
+    </message>
+    <message>
+      <source>Rename Failed</source>
+      <translation>Átnevezés sikertelen</translation>
+    </message>
+    <message>
+      <source>Failed to rename to '%1'.
+Perhaps a file permission error?</source>
+      <translation>Sikertelen átnevezés: '%1'. Talán fájl jogosultság hiba?</translation>
+    </message>
+    <message>
+      <source>Duplicate Macro</source>
+      <translation>Makró másolat</translation>
+    </message>
+    <message>
+      <source>Duplicate Failed</source>
+      <translation>Másolás meghiúsult</translation>
+    </message>
+    <message>
+      <source>Failed to duplicate to '%1'.
+Perhaps a file permission error?</source>
+      <translation>'%1' másolása meghiúsult.
+Esetleg fájl jogosultsági hiba?</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecord</name>
@@ -1804,14 +1980,6 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
     <message>
       <source>Macro name:</source>
       <translation>Makrónév:</translation>
-    </message>
-    <message>
-      <source>Stop</source>
-      <translation>Megállít</translation>
-    </message>
-    <message>
-      <source>Cancel</source>
-      <translation>Mégse</translation>
     </message>
     <message>
       <source>Macro path:</source>
@@ -1825,6 +1993,14 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
       <source>Record</source>
       <translation>Rögzítés</translation>
     </message>
+    <message>
+      <source>Stop</source>
+      <translation>Megállít</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Mégse</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecordImp</name>
@@ -1837,6 +2013,10 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
       <translation>Először adjon meg egy helyet a mentésnek.</translation>
     </message>
     <message>
+      <source>The macro directory doesn't exist. Please, choose another one.</source>
+      <translation>A makró könyvtár nem létezik. Kérjük, válasszon egy másikat.</translation>
+    </message>
+    <message>
       <source>Existing macro</source>
       <translation>Létező makró</translation>
     </message>
@@ -1845,16 +2025,12 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
       <translation>A '%1' makró már létezik. Szeretné felülírni?</translation>
     </message>
     <message>
-      <source>The macro directory doesn't exist. Please, choose another one.</source>
-      <translation>A makró könyvtár nem létezik. Kérjük, válasszon egy másikat.</translation>
+      <source>You have no write permission for the directory. Please, choose another one.</source>
+      <translation>A könyvtárhoz nincs írási engedélye. Válasszon egy másikat.</translation>
     </message>
     <message>
       <source>Choose macro directory</source>
       <translation>Válassza ki a makró könyvtárat</translation>
-    </message>
-    <message>
-      <source>You have no write permission for the directory. Please, choose another one.</source>
-      <translation>A könyvtárhoz nincs írási engedélye. Válasszon egy másikat.</translation>
     </message>
   </context>
   <context>
@@ -1868,8 +2044,16 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
       <translation>Anyag</translation>
     </message>
     <message>
+      <source>Ambient color:</source>
+      <translation>Környezeti szín:</translation>
+    </message>
+    <message>
       <source>Diffuse color:</source>
       <translation>Szórt szín:</translation>
+    </message>
+    <message>
+      <source>Emissive color:</source>
+      <translation>Sugárzó szín:</translation>
     </message>
     <message>
       <source>Specular color:</source>
@@ -1884,16 +2068,8 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
       <translation>%</translation>
     </message>
     <message>
-      <source>Ambient color:</source>
-      <translation>Környezeti szín:</translation>
-    </message>
-    <message>
       <source/>
       <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>Emissive color:</source>
-      <translation>Sugárzó szín:</translation>
     </message>
   </context>
   <context>
@@ -1914,6 +2090,10 @@ Megjegyzés: a módosítások csak a következő munkaasztal váltásakor érvé
   <context>
     <name>Gui::Dialog::DlgOnlineHelpImp</name>
     <message>
+      <source>HTML files</source>
+      <translation>HTML fájlok</translation>
+    </message>
+    <message>
       <source>Access denied</source>
       <translation>Hozzáférés megtagadva</translation>
     </message>
@@ -1925,32 +2105,12 @@ Specify another directory, please.</source>
 
 Kérem válasszon másik könyvtárat.</translation>
     </message>
-    <message>
-      <source>HTML files</source>
-      <translation>HTML fájlok</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgParameter</name>
     <message>
       <source>Parameter Editor</source>
       <translation>Paraméterszerkesztő</translation>
-    </message>
-    <message>
-      <source>Save to disk</source>
-      <translation>Mentés lemezre</translation>
-    </message>
-    <message>
-      <source>Alt+C</source>
-      <translation>Alt + C</translation>
-    </message>
-    <message>
-      <source>&amp;Close</source>
-      <translation>Bezárás</translation>
-    </message>
-    <message>
-      <source>Find...</source>
-      <translation>Keresés...</translation>
     </message>
     <message>
       <source>Sorted</source>
@@ -1967,6 +2127,22 @@ Kérem válasszon másik könyvtárat.</translation>
     <message>
       <source>Search Group</source>
       <translation>Csoport keresés</translation>
+    </message>
+    <message>
+      <source>Find...</source>
+      <translation>Keresés...</translation>
+    </message>
+    <message>
+      <source>Save to disk</source>
+      <translation>Mentés lemezre</translation>
+    </message>
+    <message>
+      <source>Alt+C</source>
+      <translation>Alt + C</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>Bezárás</translation>
     </message>
   </context>
   <context>
@@ -2031,8 +2207,16 @@ Kérem válasszon másik könyvtárat.</translation>
       <translation>Érték</translation>
     </message>
     <message>
+      <source>System parameter</source>
+      <translation>Rendszer paraméter</translation>
+    </message>
+    <message>
       <source>User parameter</source>
       <translation>Felhasználói paraméterek</translation>
+    </message>
+    <message>
+      <source>Search Group</source>
+      <translation>Csoport keresés</translation>
     </message>
     <message>
       <source>Invalid input</source>
@@ -2042,13 +2226,47 @@ Kérem válasszon másik könyvtárat.</translation>
       <source>Invalid key name '%1'</source>
       <translation>Érvénytelen kulcs név '%1'</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagement</name>
     <message>
-      <source>System parameter</source>
-      <translation>Rendszer paraméter</translation>
+      <source>Manage Preference Packs</source>
+      <translation>Preferenciacsomagok kezelése</translation>
     </message>
     <message>
-      <source>Search Group</source>
-      <translation>Csoport keresés</translation>
+      <source>Open Addon Manager...</source>
+      <translation>Nyissa meg a Bővítmények kezelőjét...</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagementImp</name>
+    <message>
+      <source>User-Saved Preference Packs</source>
+      <translation>Felhasználói preferenciacsomagok</translation>
+    </message>
+    <message>
+      <source>Built-In Preference Packs</source>
+      <translation>Beépített preferenciacsomagok</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of built-in preference pack '%1'</source>
+      <translation>A(z) '%1' beépített preferenciacsomag láthatóságának váltása</translation>
+    </message>
+    <message>
+      <source>Delete user-saved preference pack '%1'</source>
+      <translation>A felhasználó által mentett preferenciacsomag törlése: '%1'</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of Addon preference pack '%1' (use Addon Manager to permanently remove)</source>
+      <translation>A(z) '%1' bővítmény preferenciacsomag láthatóságának váltása (a Bővítmények kezelője segítségével véglegesen eltávolíthatja)</translation>
+    </message>
+    <message>
+      <source>Delete saved preference pack?</source>
+      <translation>Töröl egy mentett preferenciacsomagot?</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete the preference pack named '%1'? This cannot be undone.</source>
+      <translation>Biztosan eltávolítja a(z) "%1" nevű preferenciacsomagot? Ezt nem lehet visszavonni.</translation>
     </message>
   </context>
   <context>
@@ -2065,10 +2283,6 @@ Kérem válasszon másik könyvtárat.</translation>
   <context>
     <name>Gui::Dialog::DlgPreferencesImp</name>
     <message>
-      <source>Wrong parameter</source>
-      <translation>Hibás paraméter</translation>
-    </message>
-    <message>
       <source>Clear user settings</source>
       <translation>Törölje a felhasználói beállítások</translation>
     </message>
@@ -2079,6 +2293,10 @@ Kérem válasszon másik könyvtárat.</translation>
     <message>
       <source>If you agree all your settings will be cleared.</source>
       <translation>Ha elfogadja az összes beállítása törlődni fog.</translation>
+    </message>
+    <message>
+      <source>Wrong parameter</source>
+      <translation>Hibás paraméter</translation>
     </message>
   </context>
   <context>
@@ -2096,40 +2314,36 @@ Kérem válasszon másik könyvtárat.</translation>
       <translation>Név:</translation>
     </message>
     <message>
-      <source>Commen&amp;t:</source>
-      <translation>Megjegyzés:</translation>
-    </message>
-    <message>
       <source>Path:</source>
       <translation>Útvonalak:</translation>
     </message>
     <message>
-      <source>&amp;Last modified by:</source>
-      <translation>Utoljára módosította:</translation>
+      <source>UUID:</source>
+      <translation>UUID:</translation>
+    </message>
+    <message>
+      <source>Program version:</source>
+      <translation>Program verziója:</translation>
     </message>
     <message>
       <source>Created &amp;by:</source>
       <translation>Létrehozta:</translation>
     </message>
     <message>
-      <source>Com&amp;pany:</source>
-      <translation>Szervezet:</translation>
+      <source>Creation &amp;date:</source>
+      <translation>Létrehozás &amp;dátuma:</translation>
+    </message>
+    <message>
+      <source>&amp;Last modified by:</source>
+      <translation>Utoljára módosította:</translation>
     </message>
     <message>
       <source>Last &amp;modification date:</source>
       <translation>Utolsó &amp;módosítás dátuma:</translation>
     </message>
     <message>
-      <source>Creation &amp;date:</source>
-      <translation>Létrehozás &amp;dátuma:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>UUID:</source>
-      <translation>UUID:</translation>
+      <source>Com&amp;pany:</source>
+      <translation>Szervezet:</translation>
     </message>
     <message>
       <source>License information:</source>
@@ -2144,8 +2358,12 @@ Kérem válasszon másik könyvtárat.</translation>
       <translation>Megnyitás böngészőben</translation>
     </message>
     <message>
-      <source>Program version:</source>
-      <translation>Program verziója:</translation>
+      <source>Commen&amp;t:</source>
+      <translation>Megjegyzés:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
@@ -2183,6 +2401,10 @@ Kérem válasszon másik könyvtárat.</translation>
       <translation>Betöltése után a projekt fájl létrehozása</translation>
     </message>
     <message>
+      <source>Project file</source>
+      <translation>Projekt téma fájl</translation>
+    </message>
+    <message>
       <source>Empty source</source>
       <translation>Üres forrás.</translation>
     </message>
@@ -2198,16 +2420,24 @@ Kérem válasszon másik könyvtárat.</translation>
       <source>No destination is defined.</source>
       <translation>Nincs célállomás meghatározva.</translation>
     </message>
-    <message>
-      <source>Project file</source>
-      <translation>Projekt téma fájl</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgPropertyLink</name>
     <message>
       <source>Link</source>
       <translation>Hivatkozás</translation>
+    </message>
+    <message>
+      <source>Filter by type</source>
+      <translation>Szűrés típus szerint</translation>
+    </message>
+    <message>
+      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
+      <translation>Ha engedélyezve van, akkor a 3D nézet kiválasztása a teljes objektumhierarchiával szinkronizálásra kerül.</translation>
+    </message>
+    <message>
+      <source>Sync sub-object selection</source>
+      <translation>Alobjektum kijelölése szinkronizálása</translation>
     </message>
     <message>
       <source>Search</source>
@@ -2218,24 +2448,12 @@ Kérem válasszon másik könyvtárat.</translation>
       <translation>Egy keresési minta a fenti eredmények szűréséhez</translation>
     </message>
     <message>
-      <source>Filter by type</source>
-      <translation>Szűrés típus szerint</translation>
-    </message>
-    <message>
-      <source>Sync sub-object selection</source>
-      <translation>Alobjektum kijelölése szinkronizálása</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Alaphelyzetbe állítása</translation>
     </message>
     <message>
       <source>Clear</source>
       <translation>Törlés</translation>
-    </message>
-    <message>
-      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
-      <translation>Ha engedélyezve van, akkor a 3D nézet kiválasztása a teljes objektumhierarchiával szinkronizálásra kerül.</translation>
     </message>
   </context>
   <context>
@@ -2249,64 +2467,36 @@ Kérem válasszon másik könyvtárat.</translation>
       <translation>Kimenet</translation>
     </message>
     <message>
-      <source>Record log messages</source>
-      <translation>Változások naplózása</translation>
+      <source>Normal messages will be recorded</source>
+      <translation>Alapértelmezett üzenetek rögzítésre kerülnek</translation>
     </message>
     <message>
-      <source>Record warnings</source>
-      <translation>Riasztások feljegyzése</translation>
-    </message>
-    <message>
-      <source>Record error messages</source>
-      <translation>Hibák feljegyzése</translation>
-    </message>
-    <message>
-      <source>Colors</source>
-      <translation>Színek</translation>
-    </message>
-    <message>
-      <source>Normal messages:</source>
-      <translation>Aktuális üzenetek:</translation>
-    </message>
-    <message>
-      <source>Log messages:</source>
-      <translation>Naplóüzenetek:</translation>
-    </message>
-    <message>
-      <source>Warnings:</source>
-      <translation>Riasztások:</translation>
-    </message>
-    <message>
-      <source>Errors:</source>
-      <translation>Hibaüzenetek:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>Redirect internal Python errors to report view</source>
-      <translation>Belső Python hibák átirányítása a jelentés nézetbe</translation>
-    </message>
-    <message>
-      <source>Redirect internal Python output to report view</source>
-      <translation>Belső Python kimenet átirányítása jelentés megtekintéséhez</translation>
-    </message>
-    <message>
-      <source>Python interpreter</source>
-      <translation>Python értelmező</translation>
+      <source>Record normal messages</source>
+      <translation>Aktuális üzenetek rögzítése</translation>
     </message>
     <message>
       <source>Log messages will be recorded</source>
       <translation>Naplóüzenetek rögzítésre kerülnek</translation>
     </message>
     <message>
+      <source>Record log messages</source>
+      <translation>Változások naplózása</translation>
+    </message>
+    <message>
       <source>Warnings will be recorded</source>
       <translation>Figyelmeztetések rögzítésre kerülnek</translation>
     </message>
     <message>
+      <source>Record warnings</source>
+      <translation>Riasztások feljegyzése</translation>
+    </message>
+    <message>
       <source>Error messages will be recorded</source>
       <translation>Hibaüzenetek rögzítésre kerülnek</translation>
+    </message>
+    <message>
+      <source>Record error messages</source>
+      <translation>Hibák feljegyzése</translation>
     </message>
     <message>
       <source>When an error has occurred, the Report View dialog becomes visible
@@ -2349,34 +2539,6 @@ a képernyőn a naplóüzenet megjelenítése közben</translation>
       <translation>Jelentésnézet megjelenítése naplóüzenetben</translation>
     </message>
     <message>
-      <source>Font color for normal messages in Report view panel</source>
-      <translation>Aktuális üzenetek betűszíne a Jelentés nézet panelen</translation>
-    </message>
-    <message>
-      <source>Font color for log messages in Report view panel</source>
-      <translation>Naplóüzenetek betűszíne a Jelentés nézet panelen</translation>
-    </message>
-    <message>
-      <source>Font color for warning messages in Report view panel</source>
-      <translation>Figyelmeztető üzenetek betűszíne a Jelentés nézet panelen</translation>
-    </message>
-    <message>
-      <source>Font color for error messages in Report view panel</source>
-      <translation>Hibaüzenetek betűszíne a Jelentés nézet panelen</translation>
-    </message>
-    <message>
-      <source>Internal Python output will be redirected
-from Python console to Report view panel</source>
-      <translation>A belső Python kimenet átirányításra kerül
-a Python konzolról a Jelentés nézet panelre</translation>
-    </message>
-    <message>
-      <source>Internal Python error messages will be redirected
-from Python console to Report view panel</source>
-      <translation>A belső Python-hibaüzenetek át lesznek irányítva
-a Python konzolról a Jelentés nézet panelre</translation>
-    </message>
-    <message>
       <source>Include a timecode for each report</source>
       <translation>Minden jelentéshez időkód szerepeltetése</translation>
     </message>
@@ -2385,12 +2547,90 @@ a Python konzolról a Jelentés nézet panelre</translation>
       <translation>Minden bejegyzéshez adjon meg egy időkódot</translation>
     </message>
     <message>
-      <source>Normal messages will be recorded</source>
-      <translation>Alapértelmezett üzenetek rögzítésre kerülnek</translation>
+      <source>Colors</source>
+      <translation>Színek</translation>
     </message>
     <message>
-      <source>Record normal messages</source>
-      <translation>Aktuális üzenetek rögzítése</translation>
+      <source>Normal messages:</source>
+      <translation>Aktuális üzenetek:</translation>
+    </message>
+    <message>
+      <source>Font color for normal messages in Report view panel</source>
+      <translation>Aktuális üzenetek betűszíne a Jelentés nézet panelen</translation>
+    </message>
+    <message>
+      <source>Log messages:</source>
+      <translation>Naplóüzenetek:</translation>
+    </message>
+    <message>
+      <source>Font color for log messages in Report view panel</source>
+      <translation>Naplóüzenetek betűszíne a Jelentés nézet panelen</translation>
+    </message>
+    <message>
+      <source>Warnings:</source>
+      <translation>Riasztások:</translation>
+    </message>
+    <message>
+      <source>Font color for warning messages in Report view panel</source>
+      <translation>Figyelmeztető üzenetek betűszíne a Jelentés nézet panelen</translation>
+    </message>
+    <message>
+      <source>Errors:</source>
+      <translation>Hibaüzenetek:</translation>
+    </message>
+    <message>
+      <source>Font color for error messages in Report view panel</source>
+      <translation>Hibaüzenetek betűszíne a Jelentés nézet panelen</translation>
+    </message>
+    <message>
+      <source>Python interpreter</source>
+      <translation>Python értelmező</translation>
+    </message>
+    <message>
+      <source>Internal Python output will be redirected
+from Python console to Report view panel</source>
+      <translation>A belső Python kimenet átirányításra kerül
+a Python konzolról a Jelentés nézet panelre</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python output to report view</source>
+      <translation>Belső Python kimenet átirányítása jelentés megtekintéséhez</translation>
+    </message>
+    <message>
+      <source>Internal Python error messages will be redirected
+from Python console to Report view panel</source>
+      <translation>A belső Python-hibaüzenetek át lesznek irányítva
+a Python konzolról a Jelentés nézet panelre</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python errors to report view</source>
+      <translation>Belső Python hibák átirányítása a jelentés nézetbe</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Program infó</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfig</name>
+    <message>
+      <source>Revert to Backup Config</source>
+      <translation>Biztonsági másolat konfigurációjának visszaállítása</translation>
+    </message>
+    <message>
+      <source>WARNING: this process will undo any preference changes made since the specified date, and will also reset your Recent files and Macros to their state on that date.</source>
+      <translation>FIGYELMEZTETÉS: Ez a folyamat visszavonja a megadott dátum után végrehajtott beállítások módosításait, és visszaállítja a legutóbb használt fájlok és makrók listáját az adott dátum állapotára.</translation>
+    </message>
+    <message>
+      <source>Available backup files:</source>
+      <translation>Elérhető mentés fájlok:</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfigImp</name>
+    <message>
+      <source>No selection in dialog, cannot load backup file</source>
+      <translation>Nincs kijelölés, nem lehet betölteni a biztonságimásolat-fájlt</translation>
     </message>
   </context>
   <context>
@@ -2439,58 +2679,6 @@ a Python konzolról a Jelentés nézet panelre</translation>
       <translation>3D-s nézet</translation>
     </message>
     <message>
-      <source>Show coordinate system in the corner</source>
-      <translation>Koordináta rendszer mutatása a sarokban</translation>
-    </message>
-    <message>
-      <source>Show counter of frames per second</source>
-      <translation>A keret / másodperc mutatása</translation>
-    </message>
-    <message>
-      <source>Camera type</source>
-      <translation>Kamera típus</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Program infó</translation>
-    </message>
-    <message>
-      <source>Anti-Aliasing</source>
-      <translation>Élsimítás</translation>
-    </message>
-    <message>
-      <source>None</source>
-      <translation>Egyik sem</translation>
-    </message>
-    <message>
-      <source>Line Smoothing</source>
-      <translation>Vonal simítás</translation>
-    </message>
-    <message>
-      <source>MSAA 2x</source>
-      <translation>MSAA 2 x</translation>
-    </message>
-    <message>
-      <source>MSAA 4x</source>
-      <translation>MSAA 4 x</translation>
-    </message>
-    <message>
-      <source>MSAA 8x</source>
-      <translation>MSAA 8 x</translation>
-    </message>
-    <message>
-      <source>Or&amp;thographic rendering</source>
-      <translation>Egyenesvonalú leképzés</translation>
-    </message>
-    <message>
-      <source>Perspective renderin&amp;g</source>
-      <translation>Perspektivikus leképezés</translation>
-    </message>
-    <message>
-      <source>Marker size:</source>
-      <translation>Jelölő mérete:</translation>
-    </message>
-    <message>
       <source>General</source>
       <translation>Általános</translation>
     </message>
@@ -2501,10 +2689,42 @@ lower right corner within opened files</source>
 jobb alsó sarok a megnyitott fájlokban</translation>
     </message>
     <message>
+      <source>Show coordinate system in the corner</source>
+      <translation>Koordináta rendszer mutatása a sarokban</translation>
+    </message>
+    <message>
+      <source>Relative size :   </source>
+      <translation>Relatív méret:   </translation>
+    </message>
+    <message>
+      <source>Size of main coordinate system representation
+in the corner -- in % of height/width of viewport</source>
+      <translation>A fő koordináta-rendszer szimbólumábrázolásának mérete
+a betekintés sarkában - a magasság /szélesség százalékában</translation>
+    </message>
+    <message>
+      <source>%</source>
+      <translation>%</translation>
+    </message>
+    <message>
+      <source>Axis cross will be shown by default at file
+opening or creation</source>
+      <translation>A tengelykereszteződés alapértelmezés szerint megjelenik a fájl
+megnyitásakor vagy létrehozásakor</translation>
+    </message>
+    <message>
+      <source>Show axis cross by default</source>
+      <translation>Tengely kereszteződés mutatása alapértelmezetten</translation>
+    </message>
+    <message>
       <source>Time needed for last operation and resulting frame rate
 will be shown at the lower left corner in opened files</source>
       <translation>Az utolsó művelethez és az eredményül kapott képkockasebességhez szükséges idő
 a bal alsó sarokban jelenik meg a megnyitott fájlokban</translation>
+    </message>
+    <message>
+      <source>Show counter of frames per second</source>
+      <translation>A keret / másodperc mutatása</translation>
     </message>
     <message>
       <source>If checked, application will remember which workbench is active for each tab of the viewport</source>
@@ -2517,6 +2737,18 @@ a bal alsó sarokban jelenik meg a megnyitott fájlokban</translation>
     <message>
       <source>Rendering</source>
       <translation>Igazít</translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation>Ez a beállítás a grafikus kártya és az illesztőprogram problémáinak elhárításához hasznos.
+
+A beállítás módosításához újra kell indítani az alkalmazást.</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation>Szoftveres OpenGL használata</translation>
     </message>
     <message>
       <source>If selected, Vertex Buffer Objects (VBO) will be used.
@@ -2575,6 +2807,34 @@ Ennek elérésére 3 lehetőség áll rendelkezésre:
       <translation>Központosított</translation>
     </message>
     <message>
+      <source>Anti-Aliasing</source>
+      <translation>Élsimítás</translation>
+    </message>
+    <message>
+      <source>What kind of multisample anti-aliasing is used</source>
+      <translation>Milyen több mintavételes élsimítást használ</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Egyik sem</translation>
+    </message>
+    <message>
+      <source>Line Smoothing</source>
+      <translation>Vonal simítás</translation>
+    </message>
+    <message>
+      <source>MSAA 2x</source>
+      <translation>MSAA 2 x</translation>
+    </message>
+    <message>
+      <source>MSAA 4x</source>
+      <translation>MSAA 4 x</translation>
+    </message>
+    <message>
+      <source>MSAA 8x</source>
+      <translation>MSAA 8 x</translation>
+    </message>
+    <message>
       <source>Transparent objects:</source>
       <translation>Átlátszó tárgyak:</translation>
     </message>
@@ -2591,12 +2851,36 @@ Ennek elérésére 3 lehetőség áll rendelkezésre:
       <translation>Hátsó lap áthaladás</translation>
     </message>
     <message>
+      <source>Marker size:</source>
+      <translation>Jelölő mérete:</translation>
+    </message>
+    <message>
       <source>Size of vertices in the Sketcher workbench</source>
       <translation>Csúcspontok mérete a vázlatkészítő munkafelületen</translation>
     </message>
     <message>
+      <source>Pick radius (px):</source>
+      <translation>Kiválasztott rádiusz (px):</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation>Elemek kiválasztásának területe 3D nézetben.
+Nagyobb érték megkönnyíti a kiválasztást, de lehetetlenné teheti a kis tulajdonságok kiválasztását.
+               </translation>
+    </message>
+    <message>
       <source>Eye to eye distance for stereo modes</source>
       <translation>Szemtől szembeni távolság a sztereó módban</translation>
+    </message>
+    <message>
+      <source>Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</source>
+      <translation>Szemtől-szembeni távolság sztereó kivetítésekhez.
+A megadott érték olyan tényező, amelyet megszoroz
+az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translation>
     </message>
     <message>
       <source>Backlight is enabled with the defined color</source>
@@ -2615,70 +2899,32 @@ Ennek elérésére 3 lehetőség áll rendelkezésre:
       <translation>Háttérvilágítás intenzitása</translation>
     </message>
     <message>
-      <source>Objects will be projected in orthographic projection</source>
-      <translation>Az objektumok függőleges vetületi vetítésben jelennek meg</translation>
+      <source>Camera type</source>
+      <translation>Kamera típus</translation>
     </message>
     <message>
       <source>Objects will appear in a perspective projection</source>
       <translation>Az objektumok távoli nézet vetítésben jelennek meg</translation>
     </message>
     <message>
-      <source>Axis cross will be shown by default at file
-opening or creation</source>
-      <translation>A tengelykereszteződés alapértelmezés szerint megjelenik a fájl
-megnyitásakor vagy létrehozásakor</translation>
+      <source>Perspective renderin&amp;g</source>
+      <translation>Perspektivikus leképezés</translation>
     </message>
     <message>
-      <source>Show axis cross by default</source>
-      <translation>Tengely kereszteződés mutatása alapértelmezetten</translation>
+      <source>Objects will be projected in orthographic projection</source>
+      <translation>Az objektumok függőleges vetületi vetítésben jelennek meg</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation>Kiválasztott rádiusz (px):</translation>
+      <source>Or&amp;thographic rendering</source>
+      <translation>Egyenesvonalú leképzés</translation>
     </message>
     <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.
-               </source>
-      <translation>Elemek kiválasztásának területe 3D nézetben.
-Nagyobb érték megkönnyíti a kiválasztást, de lehetetlenné teheti a kis tulajdonságok kiválasztását.
-               </translation>
-    </message>
-    <message>
-      <source>This option is useful for troubleshooting graphics card and driver problems.
-
-Changing this option requires a restart of the application.</source>
-      <translation>Ez a beállítás a grafikus kártya és az illesztőprogram problémáinak elhárításához hasznos.
-
-A beállítás módosításához újra kell indítani az alkalmazást.</translation>
-    </message>
-    <message>
-      <source>Use software OpenGL</source>
-      <translation>Szoftveres OpenGL használata</translation>
-    </message>
-    <message>
-      <source>What kind of multisample anti-aliasing is used</source>
-      <translation>Milyen több mintavételes élsimítást használ</translation>
-    </message>
-    <message>
-      <source>Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed.</source>
-      <translation>Szemtől-szembeni távolság sztereó kivetítésekhez.
-A megadott érték olyan tényező, amelyet megszoroz
-az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translation>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettings3DViewImp</name>
-    <message>
-      <source>Anti-aliasing</source>
-      <translation>Élsimítás</translation>
-    </message>
-    <message>
-      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
-      <translation>Nyisson megy egy új megjelenítőt, vagy indítsa újra a %1, az élsimítás változtatások alkalmazásához.</translation>
-    </message>
     <message>
       <source>5px</source>
       <translation>5px</translation>
@@ -2703,9 +2949,84 @@ az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translatio
       <source>15px</source>
       <translation>15px</translation>
     </message>
+    <message>
+      <source>Anti-aliasing</source>
+      <translation>Élsimítás</translation>
+    </message>
+    <message>
+      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
+      <translation>Nyisson megy egy új megjelenítőt, vagy indítsa újra a %1, az élsimítás változtatások alkalmazásához.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsCacheDirectory</name>
+    <message>
+      <source>Cache</source>
+      <translation>Gyorsítótár</translation>
+    </message>
+    <message>
+      <source>Cache directory</source>
+      <translation>Gyorsítótár könyvtár</translation>
+    </message>
+    <message>
+      <source>Location:</source>
+      <translation>Helye:</translation>
+    </message>
+    <message>
+      <source>Check periodically at program start:</source>
+      <translation>Ellenőrizze rendszeresen a program elején:</translation>
+    </message>
+    <message>
+      <source>Always</source>
+      <translation>Mindig</translation>
+    </message>
+    <message>
+      <source>Daily</source>
+      <translation type="unfinished">Daily</translation>
+    </message>
+    <message>
+      <source>Weekly</source>
+      <translation type="unfinished">Weekly</translation>
+    </message>
+    <message>
+      <source>Monthly</source>
+      <translation>Havonta</translation>
+    </message>
+    <message>
+      <source>Yearly</source>
+      <translation>Évente</translation>
+    </message>
+    <message>
+      <source>Never</source>
+      <translation type="unfinished">Never</translation>
+    </message>
+    <message>
+      <source>Cache size limit:</source>
+      <translation>Gyorsítótár méretkorlátja:</translation>
+    </message>
+    <message>
+      <source>Check now...</source>
+      <translation>Ellenőrzés most...</translation>
+    </message>
+    <message>
+      <source>Notify the user if the cache size exceeds the specified limit</source>
+      <translation>A felhasználó értesítése, ha a gyorsítótár mérete meghalad egy bizonyos korlátot</translation>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>Ismeretlen</translation>
+    </message>
+    <message>
+      <source>Current cache size: %1</source>
+      <translation>Jelenlegi méret: %1</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsColorGradient</name>
+    <message>
+      <source>Color-gradient settings</source>
+      <translation>Színátmenet beállítások</translation>
+    </message>
     <message>
       <source>Color model</source>
       <translation>Színmodell</translation>
@@ -2731,36 +3052,12 @@ az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translatio
       <translation>fekete-fehér</translation>
     </message>
     <message>
-      <source>Visibility</source>
-      <translation>Láthatóság</translation>
-    </message>
-    <message>
-      <source>Out g&amp;rayed</source>
-      <translation>Kiszű&amp;rkít</translation>
-    </message>
-    <message>
-      <source>Alt+R</source>
-      <translation>Alt+R</translation>
-    </message>
-    <message>
-      <source>Out &amp;invisible</source>
-      <translation>Kívül es&amp;ik láthatatlan</translation>
-    </message>
-    <message>
-      <source>Alt+I</source>
-      <translation>Alt+I</translation>
-    </message>
-    <message>
       <source>Style</source>
       <translation>Stílus</translation>
     </message>
     <message>
-      <source>&amp;Zero</source>
-      <translation>&amp;Zéró</translation>
-    </message>
-    <message>
-      <source>Alt+Z</source>
-      <translation>Alt+Z</translation>
+      <source>Color gradient is used with its full color range</source>
+      <translation>A színátmenetet teljes színskálával használják</translation>
     </message>
     <message>
       <source>&amp;Flow</source>
@@ -2771,12 +3068,53 @@ az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translatio
       <translation>Alt+F</translation>
     </message>
     <message>
-      <source>Parameter range</source>
-      <translation>Paraméter-tartomány</translation>
+      <source>Color gradient starts from the zero value</source>
+      <translation>A színátmenet nulláról indul</translation>
     </message>
     <message>
-      <source>Mi&amp;nimum:</source>
-      <translation>Mi&amp;nimum:</translation>
+      <source>&amp;Zero</source>
+      <translation>&amp;Zéró</translation>
+    </message>
+    <message>
+      <source>Alt+Z</source>
+      <translation>Alt+Z</translation>
+    </message>
+    <message>
+      <source>Visibility</source>
+      <translation>Láthatóság</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed in gray</source>
+      <translation>A megadott min-max tartományon kívüli adatok
+szürke színnel jelennek meg</translation>
+    </message>
+    <message>
+      <source>Out g&amp;rayed</source>
+      <translation>Kiszű&amp;rkít</translation>
+    </message>
+    <message>
+      <source>Alt+R</source>
+      <translation>Alt+R</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed with transparency</source>
+      <translation>A megadott min-max tartományon kívüli adatok
+átlátszósággal jelennek meg</translation>
+    </message>
+    <message>
+      <source>Out &amp;transparent</source>
+      <translation>Kültéri és átlátszó
+átlátszósággal jelenik meg</translation>
+    </message>
+    <message>
+      <source>Alt+I</source>
+      <translation>Alt+I</translation>
+    </message>
+    <message>
+      <source>Parameter range</source>
+      <translation>Paraméter-tartomány</translation>
     </message>
     <message>
       <source>Ma&amp;ximum:</source>
@@ -2787,16 +3125,26 @@ az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translatio
       <translation>Cimkék:</translation>
     </message>
     <message>
+      <source>Number of labels besides the color bar</source>
+      <translation>A színsávon kívüli címkék száma</translation>
+    </message>
+    <message>
+      <source>Mi&amp;nimum:</source>
+      <translation>Mi&amp;nimum:</translation>
+    </message>
+    <message>
       <source>&amp;Decimals:</source>
       <translation>Tizedesjegyek:</translation>
     </message>
     <message>
-      <source/>
-      <translation>Program infó</translation>
+      <source>Number of decimals for labels
+besides the color bar</source>
+      <translation>Címkék tizedesjegyeinek száma
+a színsáv mellett</translation>
     </message>
     <message>
-      <source>Color-gradient settings</source>
-      <translation>Színátmenet beállítások</translation>
+      <source/>
+      <translation>Program infó</translation>
     </message>
   </context>
   <context>
@@ -2821,106 +3169,18 @@ az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translatio
       <translation>Általános</translation>
     </message>
     <message>
-      <source>Document save compression level
-(0 = none, 9 = highest, 3 = default)</source>
-      <translation>Dokumentum mentésének tömörítési szintje
-(0=nincs, 9=legnagyobb, 3=alapértelmezett)</translation>
+      <source>The application will create a new document when started</source>
+      <translation>Az alkalmazás új dokumentumot hoz létre, amikor elindul</translation>
     </message>
     <message>
       <source>Create new document at start up</source>
       <translation>Indításkor egy új munkalap létrehozása</translation>
     </message>
     <message>
-      <source>Storage</source>
-      <translation>Tárolás</translation>
-    </message>
-    <message>
-      <source>Saving transactions (Auto-save)</source>
-      <translation>Mentési tranzakciók (Automatikus mentés)</translation>
-    </message>
-    <message>
-      <source>Discard saved transaction after saving document</source>
-      <translation>Dobja el a mentett tranzakciókat a munkalap mentését követően</translation>
-    </message>
-    <message>
-      <source>Save thumbnail into project file when saving document</source>
-      <translation>Bélyegkép mentése a projektfájlba, munkalap mentésekor</translation>
-    </message>
-    <message>
-      <source>Maximum number of backup files to keep when resaving document</source>
-      <translation>Maximum biztonsági másolatok száma a dokumentum újramentésekor</translation>
-    </message>
-    <message>
-      <source>Document objects</source>
-      <translation>Dokumentum objektumok</translation>
-    </message>
-    <message>
-      <source>Allow duplicate object labels in one document</source>
-      <translation>Engedélyezi, hogy egy dokumentumban duplikált objektumazonosítók legyenek </translation>
-    </message>
-    <message>
-      <source>Maximum Undo/Redo steps</source>
-      <translation>Maximális Visszalépés / Újra létrehozás lépések</translation>
-    </message>
-    <message>
-      <source>Using Undo/Redo on documents</source>
-      <translation>Visszalépés / Újra létrehozás használata a dokumentumokhoz</translation>
-    </message>
-    <message>
-      <source>Authoring and License</source>
-      <translation>Szerző és a licenc</translation>
-    </message>
-    <message>
-      <source>Author name</source>
-      <translation>Szerző neve</translation>
-    </message>
-    <message>
-      <source>Set on save</source>
-      <translation>Mentéskor beállítva</translation>
-    </message>
-    <message>
-      <source>Company</source>
-      <translation>Vállalat</translation>
-    </message>
-    <message>
-      <source>Default license</source>
-      <translation>Alapértelmezett licenc</translation>
-    </message>
-    <message>
-      <source>All rights reserved</source>
-      <translation>Minden jog fenntartva</translation>
-    </message>
-    <message>
-      <source>Public Domain</source>
-      <translation>Nyilvános Domén</translation>
-    </message>
-    <message>
-      <source>FreeArt</source>
-      <translation>FreeArt</translation>
-    </message>
-    <message>
-      <source>Other</source>
-      <translation>Egyéb</translation>
-    </message>
-    <message>
-      <source>License URL</source>
-      <translation>Licenc URL-címe</translation>
-    </message>
-    <message>
-      <source>Run AutoRecovery at startup</source>
-      <translation>Automatikus helyreállítás futtatása indításkor</translation>
-    </message>
-    <message>
-      <source>Save AutoRecovery information every</source>
-      <translation>Helyreállítási adatok mentése minden</translation>
-    </message>
-    <message>
-      <source>Add the program logo to the generated thumbnail</source>
-      <translation>A program embléma felvétele a generált bélyegképhez</translation>
-    </message>
-    <message>
-      <source>The application will create a new document when started</source>
-      <translation>Az alkalmazás új dokumentumot hoz létre, amikor elindul</translation>
+      <source>Document save compression level
+(0 = none, 9 = highest, 3 = default)</source>
+      <translation>Dokumentum mentésének tömörítési szintje
+(0=nincs, 9=legnagyobb, 3=alapértelmezett)</translation>
     </message>
     <message>
       <source>Compression level for FCStd files</source>
@@ -2929,6 +3189,14 @@ az aktuálisan megjelenített 3D tárgy határolókeret méretével.</translatio
     <message>
       <source>All changes in documents are stored so that they can be undone/redone</source>
       <translation>A dokumentumok minden változása tárolva van, hogy visszalehessen vonni/ismételni lehessen</translation>
+    </message>
+    <message>
+      <source>Using Undo/Redo on documents</source>
+      <translation>Visszalépés / Újra létrehozás használata a dokumentumokhoz</translation>
+    </message>
+    <message>
+      <source>Maximum Undo/Redo steps</source>
+      <translation>Maximális Visszalépés / Újra létrehozás lépések</translation>
     </message>
     <message>
       <source>How many Undo/Redo steps should be recorded</source>
@@ -2945,18 +3213,42 @@ Ez a funkció némileg növelheti az újraszámítás idejét.</translation>
       <translation>Újraszámítás megszakításának engedélyezése</translation>
     </message>
     <message>
+      <source>Storage</source>
+      <translation>Tárolás</translation>
+    </message>
+    <message>
+      <source>Saving transactions (Auto-save)</source>
+      <translation>Mentési tranzakciók (Automatikus mentés)</translation>
+    </message>
+    <message>
+      <source>Discard saved transaction after saving document</source>
+      <translation>Dobja el a mentett tranzakciókat a munkalap mentését követően</translation>
+    </message>
+    <message>
       <source>If there is a recovery file available the application will
 automatically run a file recovery when it is started.</source>
       <translation>Ha van rendelkezésre álló helyreállítási fájl, az alkalmazás
 automatikusan futtatja a fájlhelyreállítást az indításkor.</translation>
     </message>
     <message>
+      <source>Run AutoRecovery at startup</source>
+      <translation>Automatikus helyreállítás futtatása indításkor</translation>
+    </message>
+    <message>
       <source>How often a recovery file is written</source>
       <translation>A helyreállítási fájl megírásának gyakorisága</translation>
     </message>
     <message>
+      <source>Save AutoRecovery information every</source>
+      <translation>Helyreállítási adatok mentése minden</translation>
+    </message>
+    <message>
       <source>A thumbnail will be stored when document is saved</source>
       <translation>A dokumentum mentésekor a rendszer a miniatűrt tárolja</translation>
+    </message>
+    <message>
+      <source>Save thumbnail into project file when saving document</source>
+      <translation>Bélyegkép mentése a projektfájlba, munkalap mentésekor</translation>
     </message>
     <message>
       <source>Size</source>
@@ -2973,8 +3265,16 @@ Gyakori méretek: 128, 256 és 512</translation>
       <translation>A program embléma hozzáadódik a miniatűrhöz</translation>
     </message>
     <message>
+      <source>Add the program logo to the generated thumbnail</source>
+      <translation>A program embléma felvétele a generált bélyegképhez</translation>
+    </message>
+    <message>
       <source>How many backup files will be kept when saving document</source>
       <translation>Hány biztonsági másolat lesz megőrizve a dokumentum mentésekor</translation>
+    </message>
+    <message>
+      <source>Maximum number of backup files to keep when resaving document</source>
+      <translation>Maximum biztonsági másolatok száma a dokumentum újramentésekor</translation>
     </message>
     <message>
       <source>Backup files will get extension '.FCbak' and file names
@@ -2991,8 +3291,16 @@ dátumutótagot a megadott formátumnak megfelelően</translation>
       <translation>Dátum formátum</translation>
     </message>
     <message>
+      <source>Document objects</source>
+      <translation>Dokumentum objektumok</translation>
+    </message>
+    <message>
       <source>Allow objects to have same label/name</source>
       <translation>Objektumok azonos címkéjének/nevének engedélyezése</translation>
+    </message>
+    <message>
+      <source>Allow duplicate object labels in one document</source>
+      <translation>Engedélyezi, hogy egy dokumentumban duplikált objektumazonosítók legyenek </translation>
     </message>
     <message>
       <source>Enable partial loading of external linked documents.
@@ -3011,6 +3319,14 @@ kattintson a fa nézetben a dokumentum ikonra.</translation>
       <translation>Külső csatolt objektumok részleges betöltésének letiltása</translation>
     </message>
     <message>
+      <source>Authoring and License</source>
+      <translation>Szerző és a licenc</translation>
+    </message>
+    <message>
+      <source>Author name</source>
+      <translation>Szerző neve</translation>
+    </message>
+    <message>
       <source>All documents that will be created will get the specified author name.
 Keep blank for anonymous.
 You can also use the form: John Doe &lt;john@doe.com&gt;</source>
@@ -3023,12 +3339,28 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>A 'Utoljára módosította' mező a fájl mentésekor megadott szerzőre lesz állítva</translation>
     </message>
     <message>
+      <source>Set on save</source>
+      <translation>Mentéskor beállítva</translation>
+    </message>
+    <message>
+      <source>Company</source>
+      <translation>Vállalat</translation>
+    </message>
+    <message>
       <source>Default company name to use for new files</source>
       <translation>Az új fájlokhoz használandó alapértelmezett vállalatnév</translation>
     </message>
     <message>
+      <source>Default license</source>
+      <translation>Alapértelmezett licenc</translation>
+    </message>
+    <message>
       <source>Default license for new documents</source>
       <translation>Az új dokumentumok alapértelmezett licence</translation>
+    </message>
+    <message>
+      <source>All rights reserved</source>
+      <translation>Minden jog fenntartva</translation>
     </message>
     <message>
       <source>Creative Commons Attribution</source>
@@ -3053,6 +3385,22 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
     <message>
       <source>Creative Commons Attribution-NonCommercial-NoDerivatives</source>
       <translation>Creative Commons hozzárendelés-nem kereskedelmi-Származtatások nélkül</translation>
+    </message>
+    <message>
+      <source>Public Domain</source>
+      <translation>Nyilvános Domén</translation>
+    </message>
+    <message>
+      <source>FreeArt</source>
+      <translation>FreeArt</translation>
+    </message>
+    <message>
+      <source>Other</source>
+      <translation>Egyéb</translation>
+    </message>
+    <message>
+      <source>License URL</source>
+      <translation>Licenc URL-címe</translation>
     </message>
     <message>
       <source>URL describing more about the license</source>
@@ -3133,12 +3481,12 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>Python hiba</translation>
     </message>
     <message>
-      <source>Items</source>
-      <translation>Elemek</translation>
-    </message>
-    <message>
       <source>Current line highlight</source>
       <translation>Aktuális vonal kiemelése</translation>
+    </message>
+    <message>
+      <source>Items</source>
+      <translation>Elemek</translation>
     </message>
   </context>
   <context>
@@ -3148,36 +3496,12 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>Kép beállításai</translation>
     </message>
     <message>
-      <source>Image properties</source>
-      <translation>Kép tulajdonságai</translation>
-    </message>
-    <message>
-      <source>Back&amp;ground:</source>
-      <translation>Háttér &amp;g:</translation>
-    </message>
-    <message>
-      <source>Current</source>
-      <translation>Aktiális</translation>
-    </message>
-    <message>
-      <source>White</source>
-      <translation>Fehér</translation>
-    </message>
-    <message>
-      <source>Black</source>
-      <translation>Fekete</translation>
-    </message>
-    <message>
       <source>Image dimensions</source>
       <translation>Kép méretei</translation>
     </message>
     <message>
-      <source>Pixel</source>
-      <translation>Képpont</translation>
-    </message>
-    <message>
-      <source>&amp;Width:</source>
-      <translation>Szélesség:</translation>
+      <source>Standard sizes:</source>
+      <translation>Alap méretek:</translation>
     </message>
     <message>
       <source>Current screen</source>
@@ -3196,8 +3520,12 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>Ikon       128 x 128</translation>
     </message>
     <message>
-      <source>Standard sizes:</source>
-      <translation>Alap méretek:</translation>
+      <source>&amp;Width:</source>
+      <translation>Szélesség:</translation>
+    </message>
+    <message>
+      <source>Pixel</source>
+      <translation>Képpont</translation>
     </message>
     <message>
       <source>&amp;Height:</source>
@@ -3240,6 +3568,34 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>Alt+1</translation>
     </message>
     <message>
+      <source>Image properties</source>
+      <translation>Kép tulajdonságai</translation>
+    </message>
+    <message>
+      <source>Back&amp;ground:</source>
+      <translation>Háttér &amp;g:</translation>
+    </message>
+    <message>
+      <source>Current</source>
+      <translation>Aktiális</translation>
+    </message>
+    <message>
+      <source>White</source>
+      <translation>Fehér</translation>
+    </message>
+    <message>
+      <source>Black</source>
+      <translation>Fekete</translation>
+    </message>
+    <message>
+      <source>Transparent</source>
+      <translation>Áttetsző</translation>
+    </message>
+    <message>
+      <source>Creation method:</source>
+      <translation>Létrehozás módszere:</translation>
+    </message>
+    <message>
       <source>Image comment</source>
       <translation>Kép Megjegyzés</translation>
     </message>
@@ -3252,16 +3608,8 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>Megjegyzés beszúrása</translation>
     </message>
     <message>
-      <source>Transparent</source>
-      <translation>Áttetsző</translation>
-    </message>
-    <message>
       <source>Add watermark</source>
       <translation>Vízjel hozzáadása</translation>
-    </message>
-    <message>
-      <source>Creation method:</source>
-      <translation>Létrehozás módszere:</translation>
     </message>
   </context>
   <context>
@@ -3286,6 +3634,14 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
+      <source>Available Workbenches</source>
+      <translation>Elérhető munkafelületek</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az erőforrások megőrzése érdekében a FreeCAD használatukig nem tölt be munkafelületeket. Ezek betöltése hozzáférést biztosíthat további funkcionalitásukkal kapcsolatos további beállításokhoz.&lt;/p&gt; &lt;p&gt;A következő munkafelületek állnak rendelkezésre a telepítéshez, de még nincsenek betöltve:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
       <source>Workbench Name</source>
       <translation>Munkafelület neve</translation>
     </message>
@@ -3296,14 +3652,6 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
     <message>
       <source>Load Now</source>
       <translation>Betöltés most</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Az erőforrások megőrzése érdekében a FreeCAD használatukig nem tölt be munkafelületeket. Ezek betöltése hozzáférést biztosíthat további funkcionalitásukkal kapcsolatos további beállításokhoz.&lt;/p&gt; &lt;p&gt;A következő munkafelületek állnak rendelkezésre a telepítéshez, de még nincsenek betöltve:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Available Workbenches</source>
-      <translation>Elérhető munkafelületek</translation>
     </message>
   </context>
   <context>
@@ -3344,12 +3692,56 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>Makró</translation>
     </message>
     <message>
+      <source>General macro settings</source>
+      <translation>Általános makró beállítások</translation>
+    </message>
+    <message>
+      <source>Variables defined by macros are created as local variables</source>
+      <translation>A makrók által definiált változók helyi változóként jönnek létre</translation>
+    </message>
+    <message>
+      <source>Run macros in local environment</source>
+      <translation>Makró futtatása a helyi környezetben</translation>
+    </message>
+    <message>
       <source>Macro recording settings</source>
       <translation>Makró felvétel beállításai</translation>
     </message>
     <message>
+      <source>Macro path</source>
+      <translation>Makró elérési út</translation>
+    </message>
+    <message>
+      <source>The directory in which the application will search for macros</source>
+      <translation>Az a könyvtár, amelyben az alkalmazás makrókat keres</translation>
+    </message>
+    <message>
+      <source>Gui commands</source>
+      <translation>GUI parancsok</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands</source>
+      <translation>A rögzített makrók a felhasználói felület parancsait is tartalmazzák</translation>
+    </message>
+    <message>
+      <source>Record GUI commands</source>
+      <translation>GUI parancsok rögzítése</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands as comments</source>
+      <translation>A rögzített makrók a felhasználói felület parancsait is megjegyzésként tartalmazzák</translation>
+    </message>
+    <message>
+      <source>Record as comment</source>
+      <translation>Rögzítés megjegyzésként</translation>
+    </message>
+    <message>
       <source>Logging Commands</source>
       <translation>Naplózási parancsok</translation>
+    </message>
+    <message>
+      <source>Commands executed by macro scripts are shown in Python console</source>
+      <translation>A makróparancsfájlok által végrehajtott parancsok a Python konzolon jelennek meg</translation>
     </message>
     <message>
       <source>Show script commands in python console</source>
@@ -3362,50 +3754,6 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
     <message>
       <source>FullScript.FCScript</source>
       <translation>FullScript.FCScript</translation>
-    </message>
-    <message>
-      <source>Gui commands</source>
-      <translation>GUI parancsok</translation>
-    </message>
-    <message>
-      <source>Record as comment</source>
-      <translation>Rögzítés megjegyzésként</translation>
-    </message>
-    <message>
-      <source>Macro path</source>
-      <translation>Makró elérési út</translation>
-    </message>
-    <message>
-      <source>General macro settings</source>
-      <translation>Általános makró beállítások</translation>
-    </message>
-    <message>
-      <source>Run macros in local environment</source>
-      <translation>Makró futtatása a helyi környezetben</translation>
-    </message>
-    <message>
-      <source>Record GUI commands</source>
-      <translation>GUI parancsok rögzítése</translation>
-    </message>
-    <message>
-      <source>Variables defined by macros are created as local variables</source>
-      <translation>A makrók által definiált változók helyi változóként jönnek létre</translation>
-    </message>
-    <message>
-      <source>Commands executed by macro scripts are shown in Python console</source>
-      <translation>A makróparancsfájlok által végrehajtott parancsok a Python konzolon jelennek meg</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands</source>
-      <translation>A rögzített makrók a felhasználói felület parancsait is tartalmazzák</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands as comments</source>
-      <translation>A rögzített makrók a felhasználói felület parancsait is megjegyzésként tartalmazzák</translation>
-    </message>
-    <message>
-      <source>The directory in which the application will search for macros</source>
-      <translation>Az a könyvtár, amelyben az alkalmazás makrókat keres</translation>
     </message>
     <message>
       <source>Recent macros menu</source>
@@ -3479,6 +3827,22 @@ Használhatja az űrlapot is: Gipsz Jakab &lt;gipsz@jakab.hu&gt;</translation>
       <translation>Jobb alsó</translation>
     </message>
     <message>
+      <source>Rotates to nearest possible state when clicking a cube face</source>
+      <translation>Kocka felületére kattintva a lehető legközelebbi állapotba forog</translation>
+    </message>
+    <message>
+      <source>Rotate to nearest</source>
+      <translation>Forgatás a legközelebbire</translation>
+    </message>
+    <message>
+      <source>Cube size</source>
+      <translation>Kocka méret</translation>
+    </message>
+    <message>
+      <source>Size of the navigation cube</source>
+      <translation>Navigációs kocka mérete</translation>
+    </message>
+    <message>
       <source>3D Navigation</source>
       <translation>3D-s navigáció</translation>
     </message>
@@ -3517,8 +3881,36 @@ Forgóasztal: az alkatrész a tengely körül forog.</translation>
       <translation>Trackball</translation>
     </message>
     <message>
-      <source>New document scale</source>
-      <translation>Új dokumentumméret</translation>
+      <source>Rotation mode</source>
+      <translation>Elforgatási mód</translation>
+    </message>
+    <message>
+      <source>Rotations in 3D will use current cursor position as center for rotation</source>
+      <translation>A 3D-ben való elforgatás az aktuális kurzorpozíciót fogja használni forgatási központként</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation>Az ablak közepére</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation>Húzás a kurzornál</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation>A tárgy központba</translation>
+    </message>
+    <message>
+      <source>Default camera orientation</source>
+      <translation>Szabványos kamerabeállítás</translation>
+    </message>
+    <message>
+      <source>Default camera orientation when creating a new document or selecting the home view</source>
+      <translation>Az új dokumentumok szabványos kamera tájolása vagy az otthoni nézet kiválasztásakor</translation>
+    </message>
+    <message>
+      <source>Camera zoom</source>
+      <translation>Nagyítás a nézeten</translation>
     </message>
     <message>
       <source>Sets camera zoom for new documents.
@@ -3547,8 +3939,14 @@ Az érték a képernyőn elférő gömb átmérője.</translation>
       <translation>Kurzorra nagyítás</translation>
     </message>
     <message>
-      <source>Zoom step</source>
-      <translation>Zoomolási lépték</translation>
+      <source> Zoom step</source>
+      <translation> Zoomolási lépték</translation>
+    </message>
+    <message>
+      <source>How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
+      <translation>Mennyire nagyítson.
+Az '1' nagyítási lépés minden nagyítási lépésnél 7,5-ös tényezőt jelent.</translation>
     </message>
     <message>
       <source>Direction of zoom operations will be inverted</source>
@@ -3569,10 +3967,6 @@ Ez a beállítás nem tiltja le az egér megdöntése beállítást.</translatio
     <message>
       <source>Disable touchscreen tilt gesture</source>
       <translation>Érintőképernyős döntés kikapcsolása</translation>
-    </message>
-    <message>
-      <source>Rotations in 3D will use current cursor position as center for rotation</source>
-      <translation>A 3D-ben való elforgatás az aktuális kurzorpozíciót fogja használni forgatási központként</translation>
     </message>
     <message>
       <source>Isometric</source>
@@ -3614,51 +4008,41 @@ Ez a beállítás nem tiltja le az egér megdöntése beállítást.</translatio
       <source>Custom</source>
       <translation>Egyéni</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsPythonConsole</name>
     <message>
-      <source>Default camera orientation</source>
-      <translation>Szabványos kamerabeállítás</translation>
+      <source>Python console</source>
+      <translation>Python konzol</translation>
     </message>
     <message>
-      <source>Default camera orientation when creating a new document or selecting the home view</source>
-      <translation>Az új dokumentumok szabványos kamera tájolása vagy az otthoni nézet kiválasztásakor</translation>
+      <source>Settings</source>
+      <translation>Beállítások</translation>
     </message>
     <message>
-      <source>Rotation mode</source>
-      <translation>Elforgatási mód</translation>
+      <source>Words will be wrapped when they exceed available
+horizontal space in Python console</source>
+      <translation>A szavak több sorba törve jelennek meg, ha nem férnek bele a Python konzolablak szélességébe</translation>
     </message>
     <message>
-      <source>Window center</source>
-      <translation>Az ablak közepére</translation>
+      <source>Enable word wrap</source>
+      <translation>Sortörés engedélyezése</translation>
     </message>
     <message>
-      <source>Drag at cursor</source>
-      <translation>Húzás a kurzornál</translation>
+      <source>The cursor shape will be a block</source>
+      <translation>A kurzor alajkja nagy blokk lesz</translation>
     </message>
     <message>
-      <source>Object center</source>
-      <translation>A tárgy központba</translation>
+      <source>Enable block cursor</source>
+      <translation>Nagy kurzor engedélyezése</translation>
     </message>
     <message>
-      <source>Rotates to nearest possible state when clicking a cube face</source>
-      <translation>Kocka felületére kattintva a lehető legközelebbi állapotba forog</translation>
+      <source>Saves Python history across sessions</source>
+      <translation>Python-előzmények mentése munkamenetben</translation>
     </message>
     <message>
-      <source>Rotate to nearest</source>
-      <translation>Forgatás a legközelebbire</translation>
-    </message>
-    <message>
-      <source>Cube size</source>
-      <translation>Kocka méret</translation>
-    </message>
-    <message>
-      <source>Size of the navigation cube</source>
-      <translation>Navigációs kocka mérete</translation>
-    </message>
-    <message>
-      <source>How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
-      <translation>Mennyire nagyítson.
-Az '1' nagyítási lépés minden nagyítási lépésnél 7,5-ös tényezőt jelent.</translation>
+      <source>Save history</source>
+      <translation>Előzmények mentése</translation>
     </message>
   </context>
   <context>
@@ -3699,44 +4083,28 @@ Az '1' nagyítási lépés minden nagyítási lépésnél 7,5-ös tényezőt jel
       <translation>Egységek beállítása</translation>
     </message>
     <message>
-      <source>Standard (mm/kg/s/degree)</source>
-      <translation>Alapértelmezett (mm/kg/s/fok)</translation>
+      <source>Unit system:</source>
+      <translation>Mértékegységrendszer:</translation>
     </message>
     <message>
-      <source>MKS (m/kg/s/degree)</source>
-      <translation>MKS (m/kg/s/fok)</translation>
-    </message>
-    <message>
-      <source>Magnitude</source>
-      <translation>Terjedelem</translation>
-    </message>
-    <message>
-      <source>Unit</source>
-      <translation>Egység</translation>
-    </message>
-    <message>
-      <source>US customary (in/lb)</source>
-      <translation>U.S. szokásos (in / lb)</translation>
+      <source>Unit system that should be used for all parts the application</source>
+      <translation>Egységrendszer, amelyet az alkalmazás minden részéhez használni kell</translation>
     </message>
     <message>
       <source>Number of decimals:</source>
       <translation>Tizedesjegyek száma:</translation>
     </message>
     <message>
-      <source>Imperial decimal (in/lb)</source>
-      <translation>Császári decimális (in / lb)</translation>
-    </message>
-    <message>
-      <source>Building Euro (cm/m²/m³)</source>
-      <translation>Épület Euro (cm/m²/m³)</translation>
-    </message>
-    <message>
-      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
-      <translation>Metrikus apró alkatrészeket &amp; CNC (mm, mm/perc)</translation>
+      <source>Number of decimals that should be shown for numbers and dimensions</source>
+      <translation>A számokhoz és dimenziókhoz feltüntetendő tizedesjegyek száma</translation>
     </message>
     <message>
       <source>Minimum fractional inch:</source>
       <translation>Legkisebb része hüvelykben/inch:</translation>
+    </message>
+    <message>
+      <source>Minimum fractional inch to be displayed</source>
+      <translation>A megjelenítendő legkisebb tört hüvelyk</translation>
     </message>
     <message>
       <source>1/2"</source>
@@ -3767,24 +4135,40 @@ Az '1' nagyítási lépés minden nagyítási lépésnél 7,5-ös tényezőt jel
       <translation>1/128"</translation>
     </message>
     <message>
-      <source>Unit system:</source>
-      <translation>Mértékegységrendszer:</translation>
+      <source>Magnitude</source>
+      <translation>Terjedelem</translation>
     </message>
     <message>
-      <source>Number of decimals that should be shown for numbers and dimensions</source>
-      <translation>A számokhoz és dimenziókhoz feltüntetendő tizedesjegyek száma</translation>
+      <source>Unit</source>
+      <translation>Egység</translation>
     </message>
     <message>
-      <source>Unit system that should be used for all parts the application</source>
-      <translation>Egységrendszer, amelyet az alkalmazás minden részéhez használni kell</translation>
+      <source>Standard (mm/kg/s/degree)</source>
+      <translation>Alapértelmezett (mm/kg/s/fok)</translation>
     </message>
     <message>
-      <source>Minimum fractional inch to be displayed</source>
-      <translation>A megjelenítendő legkisebb tört hüvelyk</translation>
+      <source>MKS (m/kg/s/degree)</source>
+      <translation>MKS (m/kg/s/fok)</translation>
+    </message>
+    <message>
+      <source>US customary (in/lb)</source>
+      <translation>U.S. szokásos (in / lb)</translation>
+    </message>
+    <message>
+      <source>Imperial decimal (in/lb)</source>
+      <translation>Császári decimális (in / lb)</translation>
+    </message>
+    <message>
+      <source>Building Euro (cm/m²/m³)</source>
+      <translation>Épület Euro (cm/m²/m³)</translation>
     </message>
     <message>
       <source>Building US (ft-in/sqft/cft)</source>
       <translation>Építészet US (láb-hüvelyk/négyzetláb/köbláb)</translation>
+    </message>
+    <message>
+      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
+      <translation>Metrikus apró alkatrészeket &amp; CNC (mm, mm/perc)</translation>
     </message>
     <message>
       <source>Imperial for Civil Eng (ft, ft/sec)</source>
@@ -3806,76 +4190,76 @@ Az '1' nagyítási lépés minden nagyítási lépésnél 7,5-ös tényezőt jel
       <translation>Kijelölés</translation>
     </message>
     <message>
-      <source>Enable selection highlighting</source>
-      <translation>Kijelölésnél kiemelés alkalmazása</translation>
+      <source>Enable preselection and highlight by specified color</source>
+      <translation>Előválasztás és kiemelés engedélyezése megadott színnel</translation>
     </message>
     <message>
       <source>Enable preselection highlighting</source>
       <translation>Előválasztás kiemelést tesz lehetővé</translation>
     </message>
     <message>
-      <source>Background color</source>
-      <translation>Háttér szín</translation>
-    </message>
-    <message>
-      <source>Middle color</source>
-      <translation>Középső szín</translation>
-    </message>
-    <message>
-      <source>Color gradient</source>
-      <translation>Színátmenet</translation>
-    </message>
-    <message>
-      <source>Simple color</source>
-      <translation>Egyszínű</translation>
-    </message>
-    <message>
-      <source>Object being edited</source>
-      <translation>Tárgy szerkesztésre kerül</translation>
-    </message>
-    <message>
-      <source>Active container</source>
-      <translation>Aktív tároló</translation>
-    </message>
-    <message>
-      <source>Enable preselection and highlight by specified color</source>
-      <translation>Előválasztás és kiemelés engedélyezése megadott színnel</translation>
-    </message>
-    <message>
       <source>Enable selection highlighting and use specified color</source>
       <translation>Kijelölés kiemelésének engedélyezése és megadott szín használata</translation>
+    </message>
+    <message>
+      <source>Enable selection highlighting</source>
+      <translation>Kijelölésnél kiemelés alkalmazása</translation>
     </message>
     <message>
       <source>Background color for the model view</source>
       <translation>Háttérszín modellnézethez</translation>
     </message>
     <message>
+      <source>Background color</source>
+      <translation>Háttér szín</translation>
+    </message>
+    <message>
       <source>Background will have selected color</source>
       <translation>A háttér lesz a kiválasztott szín</translation>
     </message>
     <message>
-      <source>Color gradient will get selected color as middle color</source>
-      <translation>A színátmenet középső színként lesz kijelölve</translation>
-    </message>
-    <message>
-      <source>Bottom color</source>
-      <translation>Alsó szín</translation>
+      <source>Simple color</source>
+      <translation>Egyszínű</translation>
     </message>
     <message>
       <source>Background will have selected color gradient</source>
       <translation>A háttér a kijelölt színátmenettel</translation>
     </message>
     <message>
+      <source>Color gradient</source>
+      <translation>Színátmenet</translation>
+    </message>
+    <message>
       <source>Top color</source>
       <translation>Felső szín</translation>
+    </message>
+    <message>
+      <source>Bottom color</source>
+      <translation>Alsó szín</translation>
+    </message>
+    <message>
+      <source>Color gradient will get selected color as middle color</source>
+      <translation>A színátmenet középső színként lesz kijelölve</translation>
+    </message>
+    <message>
+      <source>Middle color</source>
+      <translation>Középső szín</translation>
     </message>
     <message>
       <source>Tree view</source>
       <translation>Fanézet</translation>
     </message>
     <message>
+      <source>Object being edited</source>
+      <translation>Tárgy szerkesztésre kerül</translation>
+    </message>
+    <message>
       <source>Background color for objects in tree view that are currently edited</source>
       <translation>Az aktuálisan szerkesztett fanézetben lévő objektumok háttérszíne</translation>
+    </message>
+    <message>
+      <source>Active container</source>
+      <translation>Aktív tároló</translation>
     </message>
     <message>
       <source>Background color for active containers in tree view</source>
@@ -3896,39 +4280,27 @@ Az '1' nagyítási lépés minden nagyítási lépésnél 7,5-ös tényezőt jel
       <translation>Mennyiségi egységek számítása</translation>
     </message>
     <message>
-      <source>as:</source>
-      <translation>mint:</translation>
-    </message>
-    <message>
-      <source>=&gt;</source>
-      <translation>=&gt;</translation>
-    </message>
-    <message>
-      <source>Quantity:</source>
-      <translation>Mennyiség:</translation>
-    </message>
-    <message>
-      <source>Copy</source>
-      <translation>Másolás</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Bezárás</translation>
-    </message>
-    <message>
       <source>Input the source value and unit</source>
       <translation>Adja meg a forrásértéket és a mértékegységet</translation>
+    </message>
+    <message>
+      <source>as:</source>
+      <translation>mint:</translation>
     </message>
     <message>
       <source>Input here the unit for the result</source>
       <translation>Adja meg itt a mértékegységet az eredményhez</translation>
     </message>
     <message>
+      <source>=&gt;</source>
+      <translation>=&gt;</translation>
+    </message>
+    <message>
       <source>Result</source>
       <translation>Eredmény</translation>
     </message>
     <message>
-      <source>List of last used calculations 
+      <source>List of last used calculations.
 To add a calculation press Return in the value input field</source>
       <translation>Az utoljára használt számítások listája 
 Számítás hozzáadásához nyomja meg a Return billentyűt az értékbeviteli mezőben</translation>
@@ -3936,6 +4308,10 @@ Számítás hozzáadásához nyomja meg a Return billentyűt az értékbeviteli 
     <message>
       <source>Quantity</source>
       <translation>Mennyiség</translation>
+    </message>
+    <message>
+      <source>Quantity:</source>
+      <translation>Mennyiség:</translation>
     </message>
     <message>
       <source>Unit system:</source>
@@ -3967,16 +4343,24 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
       <source>Copy the result into the clipboard</source>
       <translation>Eredmény másolása a vágólapra</translation>
     </message>
+    <message>
+      <source>Copy</source>
+      <translation>Másolás</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Bezárás</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgUnitsCalculator</name>
     <message>
-      <source>unit mismatch</source>
-      <translation>mértékegység eltérés</translation>
-    </message>
-    <message>
       <source>unknown unit:</source>
       <translation>ismeretlen mértékegység:</translation>
+    </message>
+    <message>
+      <source>unit mismatch</source>
+      <translation>mértékegység eltérés</translation>
     </message>
   </context>
   <context>
@@ -3986,28 +4370,12 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
       <translation>Munkafelületek</translation>
     </message>
     <message>
-      <source>Enabled workbenches</source>
-      <translation>Engedélyezett munkafelületek</translation>
-    </message>
-    <message>
       <source>Disabled workbenches</source>
       <translation>Kikapcsolt munkafelületek</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Mozgatás lefelé</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Kijelölt elem lejeb mozgatása.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Az elemet lejeb mozgatja&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Move left</source>
-      <translation>Mozgatás balra</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Kijelölt munkafelület eltávolítása az engedélyezett munkafelületek közül&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Enabled workbenches</source>
+      <translation>Engedélyezett munkafelületek</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -4016,10 +4384,6 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected workbench to enabled workbenches.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Kijelölt munkafelület mozgatása az engedélyezett munkafelületekhez.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Sort enabled workbenches</source>
-      <translation>Engedélyezett munkafelületek rendezése</translation>
     </message>
     <message>
       <source>Move up</source>
@@ -4034,8 +4398,28 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
       <translation>Összes hozzáadása az engedélyezett munkafelületekhez</translation>
     </message>
     <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Kijelölt munkafelület eltávolítása az engedélyezett munkafelületek közül&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Sort enabled workbenches</source>
+      <translation>Engedélyezett munkafelületek rendezése</translation>
+    </message>
+    <message>
       <source>&lt;p&gt;Sort enabled workbenches&lt;/p&gt;</source>
       <translation>&lt;p&gt;Engedélyezett munkafelületek rendezése&lt;/p&gt;</translation>
+    </message>
+    <message>
+      <source>Move left</source>
+      <translation>Mozgatás balra</translation>
+    </message>
+    <message>
+      <source>Move down</source>
+      <translation>Mozgatás lefelé</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Kijelölt elem lejeb mozgatása.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Az elemet lejeb mozgatja&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600;"&gt;Note:&lt;/span&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;"&gt; The changes become active the next time you start the application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -4056,6 +4440,14 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
       <translation>Dokumentum helyreállítás</translation>
     </message>
     <message>
+      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
+
+The 'Status' column shows whether the document could be recovered.</source>
+      <translation>Nyomja meg a 'Helyreállítás indítása' az alább listázott dokumentumok helyreállítási folyamatának elindításához.
+
+Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</translation>
+    </message>
+    <message>
       <source>Status of recovered documents:</source>
       <translation>Helyreállított dokumentumok állapota:</translation>
     </message>
@@ -4066,6 +4458,10 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
     <message>
       <source>Status</source>
       <translation>Állapot</translation>
+    </message>
+    <message>
+      <source>Cleanup...</source>
+      <translation>Takarítás...</translation>
     </message>
     <message>
       <source>Start Recovery</source>
@@ -4092,10 +4488,6 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
       <translation>Befejezés</translation>
     </message>
     <message>
-      <source>Cleanup...</source>
-      <translation>Takarítás...</translation>
-    </message>
-    <message>
       <source>Delete</source>
       <translation>Törlés</translation>
     </message>
@@ -4116,24 +4508,16 @@ Az előnyben részesített rendszer az általános beállításokban beállítot
       <translation>Biztosan törli az összes átmeneti könyvtárakat?</translation>
     </message>
     <message>
-      <source>Finished</source>
-      <translation>Kész</translation>
+      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
+      <translation>Ha az összes kijelölt átmeneti könyvtárat törli, a későbbiekben nem tudja visszaállítani a fájlokat.</translation>
     </message>
     <message>
       <source>Transient directories deleted.</source>
       <translation>Átmeneti könyvtárak törölve.</translation>
     </message>
     <message>
-      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
-
-The 'Status' column shows whether the document could be recovered.</source>
-      <translation>Nyomja meg a 'Helyreállítás indítása' az alább listázott dokumentumok helyreállítási folyamatának elindításához.
-
-Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</translation>
-    </message>
-    <message>
-      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
-      <translation>Ha az összes kijelölt átmeneti könyvtárat törli, a későbbiekben nem tudja visszaállítani a fájlokat.</translation>
+      <source>Transient deleted</source>
+      <translation>Ideiglenes fájlok törölve</translation>
     </message>
   </context>
   <context>
@@ -4263,16 +4647,16 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>Vektor</translation>
     </message>
     <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
+      <source>X:</source>
+      <translation>X:</translation>
     </message>
     <message>
       <source>Y:</source>
       <translation>Y:</translation>
     </message>
     <message>
-      <source>X:</source>
-      <translation>X:</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
   </context>
   <context>
@@ -4333,6 +4717,10 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>Összevonás</translation>
     </message>
     <message>
+      <source>Do you really want to remove this parameter group?</source>
+      <translation>Tényleg eltávolítja ezt a paramétercsoportot?</translation>
+    </message>
+    <message>
       <source>Existing sub-group</source>
       <translation>Létező alcsoport</translation>
     </message>
@@ -4355,10 +4743,6 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
     <message>
       <source>Reading from '%1' failed.</source>
       <translation>'%1' -ből olvasás sikertelen.</translation>
-    </message>
-    <message>
-      <source>Do you really want to remove this parameter group?</source>
-      <translation>Tényleg eltávolítja ezt a paramétercsoportot?</translation>
     </message>
   </context>
   <context>
@@ -4415,100 +4799,64 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>Elhelyezés</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>OK</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Fordítás:</translation>
-    </message>
-    <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
-    </message>
-    <message>
-      <source>Y:</source>
-      <translation>Y:</translation>
     </message>
     <message>
       <source>X:</source>
       <translation>X:</translation>
     </message>
     <message>
-      <source>Rotation:</source>
-      <translation>Elforgatás:</translation>
+      <source>Y:</source>
+      <translation>Y:</translation>
     </message>
     <message>
-      <source>Angle:</source>
-      <translation>Dőlésszög:</translation>
-    </message>
-    <message>
-      <source>Axis:</source>
-      <translation>Tengely:</translation>
-    </message>
-    <message>
-      <source>Center:</source>
-      <translation>Középpont:</translation>
-    </message>
-    <message>
-      <source>Rotation axis with angle</source>
-      <translation>Tengely körüli elforgatás szöggel</translation>
-    </message>
-    <message>
-      <source>Apply</source>
-      <translation>Alkalmaz</translation>
-    </message>
-    <message>
-      <source>Reset</source>
-      <translation>Alaphelyzetbe állítása</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Bezárás</translation>
-    </message>
-    <message>
-      <source>Incorrect quantity</source>
-      <translation>Hibás mennyiség</translation>
-    </message>
-    <message>
-      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
-      <translation>Helytelen beviteli mezők, ellenőrizze az értékek elhelyezkedését!</translation>
-    </message>
-    <message>
-      <source>Use center of mass</source>
-      <translation>Használja a tömegközéppontot</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
     <message>
       <source>Axial:</source>
       <translation>Axiális:</translation>
     </message>
     <message>
+      <source>Shift click for opposite direction</source>
+      <translation>Shift kattintás az ellentétes irányért</translation>
+    </message>
+    <message>
       <source>Apply axial</source>
       <translation>Axiálist alkalmaz</translation>
     </message>
     <message>
-      <source>Shift click for opposite direction</source>
-      <translation>Shift kattintás az ellentétes irányért</translation>
+      <source>Center:</source>
+      <translation>Középpont:</translation>
+    </message>
+    <message>
+      <source>Use center of mass</source>
+      <translation>Használja a tömegközéppontot</translation>
     </message>
     <message>
       <source>Selected points</source>
       <translation>Kiválasztott pontok</translation>
     </message>
     <message>
-      <source>Apply incremental changes</source>
-      <translation>Növekményes változtatások alkalmazása</translation>
+      <source>Rotation:</source>
+      <translation>Elforgatás:</translation>
     </message>
     <message>
-      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
-      <translation>Kérjük, válasszon 1, 2 vagy 3 pontot ennek a gombnak a megnyomása előtt.  Egy pont lehet a végponton, felületen vagy élen.  Ha egy felületre vagy élre használja a pontot az egér helyzetének pontja lesz a felület vagy él mentén.  Ha 1 pontot választ ki akkor az az elforgatás középpontját határozza meg.  2 pont kijelölésekor a két pont közti lesz az elforgatás középpontja, és egy új egyéni tengely jön létre, ha szükséges.  Ha 3 pontot jelöltünk az első pont lesz az elforgatás középpontja, és azon a vektoron fekszik, mely síkot a 3 pont  alapértelmezés meghatározza. Néhány távolság és szög információt a jelentésben tekinthet meg, ami hasznos lehet az tárgyak igazításához. Az Ön kényelme érdekében Shift + kattintás használata esetén a megfelelő távolság vagy szög másolódik a vágólapra.</translation>
+      <source>Rotation axis with angle</source>
+      <translation>Tengely körüli elforgatás szöggel</translation>
     </message>
     <message>
-      <source>Pitch (around y-axis):</source>
-      <translation>Emelkedés (y-tengely körül):</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Euler-szögek (zy'x'')</translation>
     </message>
     <message>
-      <source>Roll (around x-axis):</source>
-      <translation>Görgetés (x-tengely körül):</translation>
+      <source>Axis:</source>
+      <translation>Tengely:</translation>
+    </message>
+    <message>
+      <source>Angle:</source>
+      <translation>Dőlésszög:</translation>
     </message>
     <message>
       <source>Yaw (around z-axis):</source>
@@ -4519,16 +4867,52 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>Forgatás (z-tengely körül)</translation>
     </message>
     <message>
+      <source>Pitch (around y-axis):</source>
+      <translation>Emelkedés (y-tengely körül):</translation>
+    </message>
+    <message>
       <source>Pitch (around y-axis)</source>
       <translation>Emelkedés (y-tengely körül)</translation>
+    </message>
+    <message>
+      <source>Roll (around x-axis):</source>
+      <translation>Görgetés (x-tengely körül):</translation>
     </message>
     <message>
       <source>Roll (around the x-axis)</source>
       <translation>Görgetés (az x-tengely körül)</translation>
     </message>
     <message>
-      <source>Euler angles (zy'x'')</source>
-      <translation>Euler-szögek (zy'x'')</translation>
+      <source>Apply incremental changes</source>
+      <translation>Növekményes változtatások alkalmazása</translation>
+    </message>
+    <message>
+      <source>Reset</source>
+      <translation>Alaphelyzetbe állítása</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>OK</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Bezárás</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Alkalmaz</translation>
+    </message>
+    <message>
+      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
+      <translation>Kérjük, válasszon 1, 2 vagy 3 pontot ennek a gombnak a megnyomása előtt.  Egy pont lehet a végponton, felületen vagy élen.  Ha egy felületre vagy élre használja a pontot az egér helyzetének pontja lesz a felület vagy él mentén.  Ha 1 pontot választ ki akkor az az elforgatás középpontját határozza meg.  2 pont kijelölésekor a két pont közti lesz az elforgatás középpontja, és egy új egyéni tengely jön létre, ha szükséges.  Ha 3 pontot jelöltünk az első pont lesz az elforgatás középpontja, és azon a vektoron fekszik, mely síkot a 3 pont  alapértelmezés meghatározza. Néhány távolság és szög információt a jelentésben tekinthet meg, ami hasznos lehet az tárgyak igazításához. Az Ön kényelme érdekében Shift + kattintás használata esetén a megfelelő távolság vagy szög másolódik a vágólapra.</translation>
+    </message>
+    <message>
+      <source>Incorrect quantity</source>
+      <translation>Hibás mennyiség</translation>
+    </message>
+    <message>
+      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
+      <translation>Helytelen beviteli mezők, ellenőrizze az értékek elhelyezkedését!</translation>
     </message>
   </context>
   <context>
@@ -4580,12 +4964,12 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>Párbeszédablak</translation>
     </message>
     <message>
-      <source>Close</source>
-      <translation>Bezárás</translation>
-    </message>
-    <message>
       <source>Refresh</source>
       <translation>Frissítés</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Bezárás</translation>
     </message>
   </context>
   <context>
@@ -4595,12 +4979,12 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>Inventor struktúra</translation>
     </message>
     <message>
-      <source>Nodes</source>
-      <translation>Csomópontok</translation>
-    </message>
-    <message>
       <source>Name</source>
       <translation>Név</translation>
+    </message>
+    <message>
+      <source>Nodes</source>
+      <translation>Csomópontok</translation>
     </message>
   </context>
   <context>
@@ -4664,8 +5048,12 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>A kijelölt tárgyak más függőségeket is tartalmaznak. Adja meg, hogy mely tárgyakat exportálja. Alapértelmezés szerint minden függőség automatikusan kijelölt.</translation>
     </message>
     <message>
-      <source>Dependency</source>
-      <translation>Függőség</translation>
+      <source>Auto select depending objects</source>
+      <translation>Függő tárgyak automatikus kijelölése</translation>
+    </message>
+    <message>
+      <source>Depending on</source>
+      <translation>Attól függ</translation>
     </message>
     <message>
       <source>Document</source>
@@ -4676,20 +5064,16 @@ Az 'Állapot' oszlop tájékoztatja a visszaállítás sikerességéről.</trans
       <translation>Név</translation>
     </message>
     <message>
-      <source>State</source>
-      <translation>Állapot</translation>
+      <source>Depended by</source>
+      <translation>Függőség</translation>
     </message>
     <message>
-      <source>Hierarchy</source>
-      <translation>Hierarchia</translation>
+      <source>Selections</source>
+      <translation>Kijelölések</translation>
     </message>
     <message>
-      <source>Selected</source>
-      <translation>Kiválasztott</translation>
-    </message>
-    <message>
-      <source>Partial</source>
-      <translation>Részleges</translation>
+      <source>All</source>
+      <translation>Minden</translation>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
@@ -4746,34 +5130,6 @@ párbeszédpanel megnyitása előtt kiválasztott tárgyak folytatása</translat
       <translation>Beállítások</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Törlés</translation>
-    </message>
-    <message>
-      <source>Save As...</source>
-      <translation>Mentés másként...</translation>
-    </message>
-    <message>
-      <source>Save Report Output</source>
-      <translation>Jelentés kimenet mentése</translation>
-    </message>
-    <message>
-      <source>Go to end</source>
-      <translation>Ugrás a végére</translation>
-    </message>
-    <message>
-      <source>Redirect Python output</source>
-      <translation>Python kimenet átirányítása</translation>
-    </message>
-    <message>
-      <source>Redirect Python errors</source>
-      <translation>Átirányított Python-hibák</translation>
-    </message>
-    <message>
-      <source>Plain Text Files</source>
-      <translation>Egyszerű szöveges fájlok</translation>
-    </message>
-    <message>
       <source>Display message types</source>
       <translation>Üzenettípusok megjelenítése</translation>
     </message>
@@ -4794,8 +5150,36 @@ párbeszédpanel megnyitása előtt kiválasztott tárgyak folytatása</translat
       <translation>Hibaüzenetek</translation>
     </message>
     <message>
-      <source>Show report view on</source>
-      <translation>Jelentés nézet megtekintése</translation>
+      <source>Show output window on</source>
+      <translation>Kimeneti ablak megjelenítése</translation>
+    </message>
+    <message>
+      <source>Redirect Python output</source>
+      <translation>Python kimenet átirányítása</translation>
+    </message>
+    <message>
+      <source>Redirect Python errors</source>
+      <translation>Átirányított Python-hibák</translation>
+    </message>
+    <message>
+      <source>Go to end</source>
+      <translation>Ugrás a végére</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Törlés</translation>
+    </message>
+    <message>
+      <source>Save As...</source>
+      <translation>Mentés másként...</translation>
+    </message>
+    <message>
+      <source>Save Report Output</source>
+      <translation>Jelentés kimenet mentése</translation>
+    </message>
+    <message>
+      <source>Plain Text Files</source>
+      <translation>Egyszerű szöveges fájlok</translation>
     </message>
   </context>
   <context>
@@ -4812,6 +5196,10 @@ párbeszédpanel megnyitása előtt kiválasztott tárgyak folytatása</translat
   <context>
     <name>Gui::DockWnd::SelectionView</name>
     <message>
+      <source>Selection View</source>
+      <translation>Nézet kiválasztása</translation>
+    </message>
+    <message>
       <source>Search</source>
       <translation>Keresés</translation>
     </message>
@@ -4822,6 +5210,14 @@ párbeszédpanel megnyitása előtt kiválasztott tárgyak folytatása</translat
     <message>
       <source>Clears the search field</source>
       <translation>Törli a keresési mezőt</translation>
+    </message>
+    <message>
+      <source>The number of selected items</source>
+      <translation>Kijelölt elemek száma</translation>
+    </message>
+    <message>
+      <source>Picked object list</source>
+      <translation>Kijelölt tárgyak listája</translation>
     </message>
     <message>
       <source>Select only</source>
@@ -4856,14 +5252,6 @@ párbeszédpanel megnyitása előtt kiválasztott tárgyak folytatása</translat
       <translation>Tárgy kiválasztása és foglalása a fa nézetben</translation>
     </message>
     <message>
-      <source>To python console</source>
-      <translation>Python konzolhoz</translation>
-    </message>
-    <message>
-      <source>Reveals this object and its subelements in the python console.</source>
-      <translation>Megmutatja a tárgyat és annak al elemeit a python konzolban.</translation>
-    </message>
-    <message>
       <source>Mark to recompute</source>
       <translation>Jelölje, újraszámításhoz</translation>
     </message>
@@ -4872,12 +5260,12 @@ párbeszédpanel megnyitása előtt kiválasztott tárgyak folytatása</translat
       <translation>Jelölje ezt az objektumot az újraszámoláshoz</translation>
     </message>
     <message>
-      <source>Selection View</source>
-      <translation>Nézet kiválasztása</translation>
+      <source>To python console</source>
+      <translation>Python konzolhoz</translation>
     </message>
     <message>
-      <source>The number of selected items</source>
-      <translation>Kijelölt elemek száma</translation>
+      <source>Reveals this object and its subelements in the python console.</source>
+      <translation>Megmutatja a tárgyat és annak al elemeit a python konzolban.</translation>
     </message>
     <message>
       <source>Duplicate subshape</source>
@@ -4886,10 +5274,6 @@ párbeszédpanel megnyitása előtt kiválasztott tárgyak folytatása</translat
     <message>
       <source>Creates a standalone copy of this subshape in the document</source>
       <translation>Egyedülálló másolatot hoz létre a dokumentumban erről a részalakzatról</translation>
-    </message>
-    <message>
-      <source>Picked object list</source>
-      <translation>Kijelölt tárgyak listája</translation>
     </message>
   </context>
   <context>
@@ -4928,8 +5312,16 @@ Do you want to save your changes?</source>
 El akarja menteni a változásokat?</translation>
     </message>
     <message>
+      <source>FreeCAD macro</source>
+      <translation>FreeCAD makró</translation>
+    </message>
+    <message>
       <source>Export PDF</source>
       <translation>Exportálás PDF-be</translation>
+    </message>
+    <message>
+      <source>PDF file</source>
+      <translation>PDF-fájl</translation>
     </message>
     <message>
       <source>untitled[*]</source>
@@ -4950,14 +5342,6 @@ El akarja menteni a változásokat?</translation>
     <message>
       <source>Formatted</source>
       <translation>Formázott</translation>
-    </message>
-    <message>
-      <source>FreeCAD macro</source>
-      <translation>FreeCAD makró</translation>
-    </message>
-    <message>
-      <source>PDF file</source>
-      <translation>PDF-fájl</translation>
     </message>
   </context>
   <context>
@@ -5052,34 +5436,6 @@ El akarja menteni a változásokat?</translation>
   <context>
     <name>Gui::GraphvizView</name>
     <message>
-      <source>Export graph</source>
-      <translation>Export grafikon</translation>
-    </message>
-    <message>
-      <source>PNG format</source>
-      <translation>PNG formátum</translation>
-    </message>
-    <message>
-      <source>Bitmap format</source>
-      <translation>Bittérkép-formátum</translation>
-    </message>
-    <message>
-      <source>GIF format</source>
-      <translation>GIF formátum</translation>
-    </message>
-    <message>
-      <source>JPG format</source>
-      <translation>JPG formátum</translation>
-    </message>
-    <message>
-      <source>SVG format</source>
-      <translation>SVG formátum</translation>
-    </message>
-    <message>
-      <source>PDF format</source>
-      <translation>PDF formátum</translation>
-    </message>
-    <message>
       <source>Graphviz not found</source>
       <translation>Nem található grafikonszerk</translation>
     </message>
@@ -5106,6 +5462,34 @@ El akarja menteni a változásokat?</translation>
     <message>
       <source>Graphviz failed to create an image file</source>
       <translation>Nem sikerült létrehozni egy kép fájl Grafikonszerkesztőhöz</translation>
+    </message>
+    <message>
+      <source>PNG format</source>
+      <translation>PNG formátum</translation>
+    </message>
+    <message>
+      <source>Bitmap format</source>
+      <translation>Bittérkép-formátum</translation>
+    </message>
+    <message>
+      <source>GIF format</source>
+      <translation>GIF formátum</translation>
+    </message>
+    <message>
+      <source>JPG format</source>
+      <translation>JPG formátum</translation>
+    </message>
+    <message>
+      <source>SVG format</source>
+      <translation>SVG formátum</translation>
+    </message>
+    <message>
+      <source>PDF format</source>
+      <translation>PDF formátum</translation>
+    </message>
+    <message>
+      <source>Export graph</source>
+      <translation>Export grafikon</translation>
     </message>
   </context>
   <context>
@@ -5148,14 +5532,6 @@ El akarja menteni a változásokat?</translation>
   <context>
     <name>Gui::LocationDialog</name>
     <message>
-      <source>Wrong direction</source>
-      <translation>Rossz irány</translation>
-    </message>
-    <message>
-      <source>Direction must not be the null vector</source>
-      <translation>Irány nem lehet nullvektor</translation>
-    </message>
-    <message>
       <source>X</source>
       <translation>X</translation>
     </message>
@@ -5170,6 +5546,14 @@ El akarja menteni a változásokat?</translation>
     <message>
       <source>User defined...</source>
       <translation>Felhasználó által megadott...</translation>
+    </message>
+    <message>
+      <source>Wrong direction</source>
+      <translation>Rossz irány</translation>
+    </message>
+    <message>
+      <source>Direction must not be the null vector</source>
+      <translation>Irány nem lehet nullvektor</translation>
     </message>
   </context>
   <context>
@@ -5217,16 +5601,28 @@ El akarja menteni a változásokat?</translation>
       <translation>Kész</translation>
     </message>
     <message>
+      <source>Help addon needed!</source>
+      <translation>Segítség kiegészítő szükséges!</translation>
+    </message>
+    <message>
+      <source>The Help system of %1 is now handled by the "Help" addon. It can easily be installed via the Addons Manager</source>
+      <translation>A(z) %1 támogatási rendszerét most a "Súgó" bővítmény támogatja. Könnyen telepíthető a Bővítmények kezelőjével</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager</source>
+      <translation>Bővítmények kezelő megnyitása</translation>
+    </message>
+    <message>
+      <source>Close All</source>
+      <translation>Minden bezárása</translation>
+    </message>
+    <message>
       <source>Toggles this toolbar</source>
       <translation>Eszköztár megjelenítése</translation>
     </message>
     <message>
       <source>Toggles this dockable window</source>
       <translation>Dokkolható ablak megjelenítése</translation>
-    </message>
-    <message>
-      <source>Close All</source>
-      <translation>Minden bezárása</translation>
     </message>
     <message>
       <source>Unsaved document</source>
@@ -5326,12 +5722,12 @@ a jobboldali nézetben %2 pont lett jelölve.</translation>
       <translation>Pont kiválasztva itt (%1,%2,%3)</translation>
     </message>
     <message>
-      <source>No point was picked</source>
-      <translation>Nem lett pont kiválasztva</translation>
-    </message>
-    <message>
       <source>No point was found on model</source>
       <translation>A modellen nem talált pontot</translation>
+    </message>
+    <message>
+      <source>No point was picked</source>
+      <translation>Nem lett pont kiválasztva</translation>
     </message>
   </context>
   <context>
@@ -5351,6 +5747,13 @@ a jobboldali nézetben %2 pont lett jelölve.</translation>
     <message>
       <source>Pinch (place two fingers on the screen and drag them apart from or towards each other) OR scroll middle mouse button OR press ALT + right mouse button OR PgUp/PgDown on keyboard.</source>
       <translation>Csípjen (helyezze két ujját a képernyőn, és húzza őket egymáshoz vagy el egymástól) VAGY görgesse a középső egér gombot VAGY nyomja meg az ALT + jobb egér gombot VAGY a billentyűzet PgUp/PgDown gombjait használja.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::ModifierLineEdit</name>
+    <message>
+      <source>Press modifier keys</source>
+      <translation>Nyomja meg a módosító gombokat</translation>
     </message>
   </context>
   <context>
@@ -5377,6 +5780,25 @@ a jobboldali nézetben %2 pont lett jelölve.</translation>
     <message>
       <source>Press CTRL and left mouse button</source>
       <translation>Nyomja meg a CTRL és a bal egérgombot</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::OpenSCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Nyomja meg a bal egérgombot</translation>
+    </message>
+    <message>
+      <source>Press right mouse button and move mouse</source>
+      <translation>Nyomja meg a jobb egérgombot, és mozgassa a kurzort</translation>
+    </message>
+    <message>
+      <source>Press left mouse button and move mouse</source>
+      <translation>Nyomja meg a bal egérgombot, és mozgassa a kurzort</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button or SHIFT and right mouse button</source>
+      <translation>Nyomja meg a középső egérgombot vagy a SHIFT billentyűt és a jobb egérgombot</translation>
     </message>
   </context>
   <context>
@@ -5453,24 +5875,32 @@ a jobboldali nézetben %2 pont lett jelölve.</translation>
       <translation>tulajdonság</translation>
     </message>
     <message>
+      <source>Auto expand</source>
+      <translation>Automatikus kibontás</translation>
+    </message>
+    <message>
       <source>Show all</source>
       <translation>Mindent mutat</translation>
-    </message>
-    <message>
-      <source>Add property</source>
-      <translation>Tulajdonság hozzáadása</translation>
-    </message>
-    <message>
-      <source>Remove property</source>
-      <translation>Tulajdonság eltávolítása</translation>
     </message>
     <message>
       <source>Expression...</source>
       <translation>Kifejezés...</translation>
     </message>
     <message>
-      <source>Auto expand</source>
-      <translation>Automatikus kibontás</translation>
+      <source>Add property</source>
+      <translation>Tulajdonság hozzáadása</translation>
+    </message>
+    <message>
+      <source>Rename property group</source>
+      <translation>Tulajdonságcsoport átnevezése</translation>
+    </message>
+    <message>
+      <source>Remove property</source>
+      <translation>Tulajdonság eltávolítása</translation>
+    </message>
+    <message>
+      <source>Group name:</source>
+      <translation>Csoportnév:</translation>
     </message>
   </context>
   <context>
@@ -5520,8 +5950,16 @@ Ki szeretne lépni az adatok mentése nélkül?</translation>
       <translation>Nem kezelt FreeCAD kivétel.</translation>
     </message>
     <message>
+      <source>Unhandled std C++ exception.</source>
+      <translation>Kezeletlen C++ kivétel.</translation>
+    </message>
+    <message>
       <source>Unhandled unknown C++ exception.</source>
       <translation>Nem kezelt ismeretlen C++ kivétel.</translation>
+    </message>
+    <message>
+      <source>&amp;Copy</source>
+      <translation>&amp;Másolás</translation>
     </message>
     <message>
       <source>&amp;Copy command</source>
@@ -5536,28 +5974,12 @@ Ki szeretne lépni az adatok mentése nélkül?</translation>
       <translation>Előzmények mentése mint ...</translation>
     </message>
     <message>
-      <source>Insert file name...</source>
-      <translation>Fájlnév beszúrása...</translation>
-    </message>
-    <message>
-      <source>Save History</source>
+      <source>Save history</source>
       <translation>Előzmények mentése</translation>
     </message>
     <message>
-      <source>Insert file name</source>
-      <translation>Fájlnév beszúrása</translation>
-    </message>
-    <message>
-      <source>Unhandled std C++ exception.</source>
-      <translation>Kezeletlen C++ kivétel.</translation>
-    </message>
-    <message>
-      <source>Word wrap</source>
-      <translation>Sortörés</translation>
-    </message>
-    <message>
-      <source>&amp;Copy</source>
-      <translation>&amp;Másolás</translation>
+      <source>Saves Python history across %1 sessions</source>
+      <translation>Python-előzmények mentése %1 munkamenetben</translation>
     </message>
     <message>
       <source>&amp;Paste</source>
@@ -5572,20 +5994,28 @@ Ki szeretne lépni az adatok mentése nélkül?</translation>
       <translation>Konzol törlése</translation>
     </message>
     <message>
+      <source>Insert file name...</source>
+      <translation>Fájlnév beszúrása...</translation>
+    </message>
+    <message>
+      <source>Word wrap</source>
+      <translation>Sortörés</translation>
+    </message>
+    <message>
+      <source>Save History</source>
+      <translation>Előzmények mentése</translation>
+    </message>
+    <message>
       <source>Macro Files</source>
       <translation>Makró Fájlok</translation>
     </message>
     <message>
+      <source>Insert file name</source>
+      <translation>Fájlnév beszúrása</translation>
+    </message>
+    <message>
       <source>All Files</source>
       <translation>Összes fájl</translation>
-    </message>
-    <message>
-      <source>Save history</source>
-      <translation>Előzmények mentése</translation>
-    </message>
-    <message>
-      <source>Saves Python history across %1 sessions</source>
-      <translation>Python-előzmények mentése %1 munkamenetben</translation>
     </message>
   </context>
   <context>
@@ -5616,6 +6046,10 @@ Ki szeretne lépni az adatok mentése nélkül?</translation>
   </context>
   <context>
     <name>Gui::RecentMacrosAction</name>
+    <message>
+      <source>none</source>
+      <translation>egyik sem</translation>
+    </message>
     <message>
       <source>Run macro %1 (Shift+click to edit) shortcut: %2</source>
       <translation>A(z) %1 makró futtatása (Shift+kattintás szerkesztéshez) parancsikon: %2</translation>
@@ -5649,6 +6083,25 @@ Ki szeretne lépni az adatok mentése nélkül?</translation>
     </message>
   </context>
   <context>
+    <name>Gui::SearchBar</name>
+    <message>
+      <source>Previous</source>
+      <translation>Előző</translation>
+    </message>
+    <message>
+      <source>Next</source>
+      <translation>Következő</translation>
+    </message>
+    <message>
+      <source>Case sensitive</source>
+      <translation>Kis- és nagybetűk megkülönböztetése</translation>
+    </message>
+    <message>
+      <source>Whole words</source>
+      <translation>Egész szavak</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::SelectModule</name>
     <message>
       <source>Select module</source>
@@ -5666,10 +6119,6 @@ Ki szeretne lépni az adatok mentése nélkül?</translation>
   <context>
     <name>Gui::StdCmdDescription</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>Des&amp;cription</source>
       <translation>Leírás</translation>
     </message>
@@ -5680,10 +6129,6 @@ Ki szeretne lépni az adatok mentése nélkül?</translation>
   </context>
   <context>
     <name>Gui::StdCmdDownloadOnlineHelp</name>
-    <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
     <message>
       <source>Download online help</source>
       <translation>Online súgó letöltése</translation>
@@ -5721,10 +6166,6 @@ Meg szeretne adni egy másik könyvtárat?</translation>
   </context>
   <context>
     <name>Gui::StdCmdPythonHelp</name>
-    <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
     <message>
       <source>Automatic python modules documentation</source>
       <translation>Automatikus python modulok dokumentáció</translation>
@@ -5774,28 +6215,28 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Szövegfelirat</translation>
     </message>
     <message>
-      <source>Recompute after commit</source>
-      <translation>Visszaszámítás véglegesítés után</translation>
-    </message>
-    <message>
-      <source>Remove</source>
-      <translation>Törlés</translation>
-    </message>
-    <message>
       <source>Edit</source>
       <translation>Szerkesztés</translation>
-    </message>
-    <message>
-      <source>Remove all</source>
-      <translation>Összes eltávolítása</translation>
     </message>
     <message>
       <source>Hide</source>
       <translation>Elrejtés</translation>
     </message>
     <message>
+      <source>Remove</source>
+      <translation>Törlés</translation>
+    </message>
+    <message>
+      <source>Remove all</source>
+      <translation>Összes eltávolítása</translation>
+    </message>
+    <message>
       <source>Box select</source>
       <translation>Téglalap kijelölése</translation>
+    </message>
+    <message>
+      <source>Recompute after commit</source>
+      <translation>Visszaszámítás véglegesítés után</translation>
     </message>
     <message>
       <source>On-top when selected</source>
@@ -5804,6 +6245,14 @@ Meg szeretne adni egy másik könyvtárat?</translation>
   </context>
   <context>
     <name>Gui::TaskView::TaskAppearance</name>
+    <message>
+      <source>Appearance</source>
+      <translation>Megjelenés</translation>
+    </message>
+    <message>
+      <source>Document window:</source>
+      <translation>Dokument ablak:</translation>
+    </message>
     <message>
       <source>Plot mode:</source>
       <translation>Nyomtatási mód:</translation>
@@ -5819,14 +6268,6 @@ Meg szeretne adni egy másik könyvtárat?</translation>
     <message>
       <source>Transparency:</source>
       <translation>Átlátszóság:</translation>
-    </message>
-    <message>
-      <source>Appearance</source>
-      <translation>Megjelenés</translation>
-    </message>
-    <message>
-      <source>Document window:</source>
-      <translation>Dokument ablak:</translation>
     </message>
   </context>
   <context>
@@ -5890,6 +6331,25 @@ Meg szeretne adni egy másik könyvtárat?</translation>
     </message>
   </context>
   <context>
+    <name>Gui::TinkerCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Nyomja meg a bal egérgombot</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button</source>
+      <translation>Nyomja meg a középső egérgombot</translation>
+    </message>
+    <message>
+      <source>Press right mouse button</source>
+      <translation>Nyomja meg a jobb egérgombot</translation>
+    </message>
+    <message>
+      <source>Scroll middle mouse button</source>
+      <translation>Görgesse a középső egérgombot</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::TouchpadNavigationStyle</name>
     <message>
       <source>Press left mouse button</source>
@@ -5911,28 +6371,24 @@ Meg szeretne adni egy másik könyvtárat?</translation>
   <context>
     <name>Gui::Translator</name>
     <message>
-      <source>English</source>
-      <translation>Angol</translation>
+      <source>Afrikaans</source>
+      <translation>Afrikai</translation>
     </message>
     <message>
-      <source>German</source>
-      <translation>Német</translation>
+      <source>Arabic</source>
+      <translation>Arab</translation>
     </message>
     <message>
-      <source>Spanish</source>
-      <translation>Spanyol</translation>
+      <source>Basque</source>
+      <translation>Baszk</translation>
     </message>
     <message>
-      <source>French</source>
-      <translation>Francia</translation>
+      <source>Bulgarian</source>
+      <translation>Bolgár</translation>
     </message>
     <message>
-      <source>Italian</source>
-      <translation>Olasz</translation>
-    </message>
-    <message>
-      <source>Japanese</source>
-      <translation>Japán</translation>
+      <source>Catalan</source>
+      <translation>Katalán</translation>
     </message>
     <message>
       <source>Chinese Simplified</source>
@@ -5943,24 +6399,80 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Hagyományos kínai</translation>
     </message>
     <message>
+      <source>Croatian</source>
+      <translation>Horvát</translation>
+    </message>
+    <message>
+      <source>Czech</source>
+      <translation>Cseh</translation>
+    </message>
+    <message>
+      <source>Dutch</source>
+      <translation>Holland</translation>
+    </message>
+    <message>
+      <source>English</source>
+      <translation>Angol</translation>
+    </message>
+    <message>
+      <source>Filipino</source>
+      <translation>Filippínó</translation>
+    </message>
+    <message>
+      <source>Finnish</source>
+      <translation>Finn</translation>
+    </message>
+    <message>
+      <source>French</source>
+      <translation>Francia</translation>
+    </message>
+    <message>
+      <source>Galician</source>
+      <translation>Galíciai</translation>
+    </message>
+    <message>
+      <source>German</source>
+      <translation>Német</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Görög</translation>
+    </message>
+    <message>
+      <source>Hungarian</source>
+      <translation>Magyar</translation>
+    </message>
+    <message>
+      <source>Indonesian</source>
+      <translation>Indonéz</translation>
+    </message>
+    <message>
+      <source>Italian</source>
+      <translation>Olasz</translation>
+    </message>
+    <message>
+      <source>Japanese</source>
+      <translation>Japán</translation>
+    </message>
+    <message>
+      <source>Kabyle</source>
+      <translation>Kabili</translation>
+    </message>
+    <message>
       <source>Korean</source>
       <translation>Koreai</translation>
     </message>
     <message>
-      <source>Russian</source>
-      <translation>Orosz</translation>
-    </message>
-    <message>
-      <source>Swedish</source>
-      <translation>Svéd</translation>
-    </message>
-    <message>
-      <source>Afrikaans</source>
-      <translation>Afrikai</translation>
+      <source>Lithuanian</source>
+      <translation>Litván</translation>
     </message>
     <message>
       <source>Norwegian</source>
       <translation>Norvég</translation>
+    </message>
+    <message>
+      <source>Polish</source>
+      <translation>Lengyel</translation>
     </message>
     <message>
       <source>Portuguese, Brazilian</source>
@@ -5971,100 +6483,52 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Portugál</translation>
     </message>
     <message>
-      <source>Dutch</source>
-      <translation>Holland</translation>
-    </message>
-    <message>
-      <source>Ukrainian</source>
-      <translation>Ukrán</translation>
-    </message>
-    <message>
-      <source>Finnish</source>
-      <translation>Finn</translation>
-    </message>
-    <message>
-      <source>Croatian</source>
-      <translation>Horvát</translation>
-    </message>
-    <message>
-      <source>Polish</source>
-      <translation>Lengyel</translation>
-    </message>
-    <message>
-      <source>Czech</source>
-      <translation>Cseh</translation>
-    </message>
-    <message>
-      <source>Hungarian</source>
-      <translation>Magyar</translation>
-    </message>
-    <message>
       <source>Romanian</source>
       <translation>Román</translation>
+    </message>
+    <message>
+      <source>Russian</source>
+      <translation>Orosz</translation>
     </message>
     <message>
       <source>Slovak</source>
       <translation>Szlovák</translation>
     </message>
     <message>
-      <source>Turkish</source>
-      <translation>Török</translation>
-    </message>
-    <message>
       <source>Slovenian</source>
       <translation>Szlovèn</translation>
     </message>
     <message>
-      <source>Basque</source>
-      <translation>Baszk</translation>
+      <source>Spanish</source>
+      <translation>Spanyol</translation>
     </message>
     <message>
-      <source>Catalan</source>
-      <translation>Katalán</translation>
+      <source>Spanish, Argentina</source>
+      <translation>Spanyol, Argentína</translation>
     </message>
     <message>
-      <source>Galician</source>
-      <translation>Galíciai</translation>
+      <source>Swedish</source>
+      <translation>Svéd</translation>
     </message>
     <message>
-      <source>Kabyle</source>
-      <translation>Kabili</translation>
+      <source>Turkish</source>
+      <translation>Török</translation>
     </message>
     <message>
-      <source>Filipino</source>
-      <translation>Filippínó</translation>
-    </message>
-    <message>
-      <source>Indonesian</source>
-      <translation>Indonéz</translation>
-    </message>
-    <message>
-      <source>Lithuanian</source>
-      <translation>Litván</translation>
+      <source>Ukrainian</source>
+      <translation>Ukrán</translation>
     </message>
     <message>
       <source>Valencian</source>
       <translation>Valenciai</translation>
     </message>
     <message>
-      <source>Arabic</source>
-      <translation>Arab</translation>
-    </message>
-    <message>
       <source>Vietnamese</source>
       <translation>Vietnami</translation>
     </message>
     <message>
-      <source>Bulgarian</source>
-      <translation>Bolgár</translation>
-    </message>
-    <message>
-      <source>Greek</source>
-      <translation>Görög</translation>
-    </message>
-    <message>
-      <source>Spanish, Argentina</source>
-      <translation>Spanyol, Argentína</translation>
+      <source>Georgian</source>
+      <translation>Grúz</translation>
     </message>
   </context>
   <context>
@@ -6084,40 +6548,12 @@ Meg szeretne adni egy másik könyvtárat?</translation>
   <context>
     <name>Gui::TreeWidget</name>
     <message>
-      <source>Create group...</source>
-      <translation>Csoport létrehozása...</translation>
+      <source>Search...</source>
+      <translation>Keres...</translation>
     </message>
     <message>
-      <source>Create a group</source>
-      <translation>Új csoport létrehozása</translation>
-    </message>
-    <message>
-      <source>Group</source>
-      <translation>Csoport</translation>
-    </message>
-    <message>
-      <source>Rename</source>
-      <translation>Átnevezés</translation>
-    </message>
-    <message>
-      <source>Rename object</source>
-      <translation>Tárgy átnevezése</translation>
-    </message>
-    <message>
-      <source>Labels &amp; Attributes</source>
-      <translation>Cimkék &amp; Tulajdonságok</translation>
-    </message>
-    <message>
-      <source>Application</source>
-      <translation>Alkalmazás</translation>
-    </message>
-    <message>
-      <source>Finish editing</source>
-      <translation>Szerkesztés befejezése</translation>
-    </message>
-    <message>
-      <source>Finish editing object</source>
-      <translation>Objektumszerkesztés befejezése</translation>
+      <source>Search for objects</source>
+      <translation>Objektumok keresése</translation>
     </message>
     <message>
       <source>Activate document</source>
@@ -6128,36 +6564,20 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>A %1 dokumentum aktiválása</translation>
     </message>
     <message>
-      <source>Skip recomputes</source>
-      <translation>Újraszámítás átugrása</translation>
+      <source>Group</source>
+      <translation>Csoport</translation>
     </message>
     <message>
-      <source>Enable or disable recomputations of document</source>
-      <translation>Dokumentum újraszámításának engedélyezése vagy letiltása</translation>
-    </message>
-    <message>
-      <source>Mark to recompute</source>
-      <translation>Jelölje, újraszámításhoz</translation>
-    </message>
-    <message>
-      <source>Mark this object to be recomputed</source>
-      <translation>Jelölje ezt az objektumot az újraszámoláshoz</translation>
-    </message>
-    <message>
-      <source>%1, Internal name: %2</source>
-      <translation>%1, Belső név: %2</translation>
-    </message>
-    <message>
-      <source>Search...</source>
-      <translation>Keres...</translation>
-    </message>
-    <message>
-      <source>Search for objects</source>
-      <translation>Objektumok keresése</translation>
+      <source>Labels &amp; Attributes</source>
+      <translation>Cimkék &amp; Tulajdonságok</translation>
     </message>
     <message>
       <source>Description</source>
       <translation>Leírás</translation>
+    </message>
+    <message>
+      <source>Application</source>
+      <translation>Alkalmazás</translation>
     </message>
     <message>
       <source>Show hidden items</source>
@@ -6176,6 +6596,38 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Elem elrejtése a fában</translation>
     </message>
     <message>
+      <source>Create group...</source>
+      <translation>Csoport létrehozása...</translation>
+    </message>
+    <message>
+      <source>Create a group</source>
+      <translation>Új csoport létrehozása</translation>
+    </message>
+    <message>
+      <source>Rename</source>
+      <translation>Átnevezés</translation>
+    </message>
+    <message>
+      <source>Rename object</source>
+      <translation>Tárgy átnevezése</translation>
+    </message>
+    <message>
+      <source>Finish editing</source>
+      <translation>Szerkesztés befejezése</translation>
+    </message>
+    <message>
+      <source>Finish editing object</source>
+      <translation>Objektumszerkesztés befejezése</translation>
+    </message>
+    <message>
+      <source>Add dependent objects to selection</source>
+      <translation>Függő tárgyak hozzáadása a kijelöléshez</translation>
+    </message>
+    <message>
+      <source>Adds all dependent objects to the selection</source>
+      <translation>Összes függőben lévő tárgy hozzáadása a kijelöléshez</translation>
+    </message>
+    <message>
       <source>Close document</source>
       <translation>Dokumentum bezárása</translation>
     </message>
@@ -6192,12 +6644,28 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Részlegesen betöltött dokumentum újratöltése</translation>
     </message>
     <message>
+      <source>Skip recomputes</source>
+      <translation>Újraszámítás átugrása</translation>
+    </message>
+    <message>
+      <source>Enable or disable recomputations of document</source>
+      <translation>Dokumentum újraszámításának engedélyezése vagy letiltása</translation>
+    </message>
+    <message>
       <source>Allow partial recomputes</source>
       <translation>Részleges újraszámítás engedélyezése</translation>
     </message>
     <message>
       <source>Enable or disable recomputating editing object when 'skip recomputation' is enabled</source>
       <translation>Szerkesztési tárgy újraszámításának engedélyezése vagy letiltása, ha a 'újraszámítás kihagyása' engedélyezve van</translation>
+    </message>
+    <message>
+      <source>Mark to recompute</source>
+      <translation>Jelölje, újraszámításhoz</translation>
+    </message>
+    <message>
+      <source>Mark this object to be recomputed</source>
+      <translation>Jelölje ezt az objektumot az újraszámoláshoz</translation>
     </message>
     <message>
       <source>Recompute object</source>
@@ -6210,6 +6678,10 @@ Meg szeretne adni egy másik könyvtárat?</translation>
     <message>
       <source> (but must be executed)</source>
       <translation> (de végre kell hajtanom)</translation>
+    </message>
+    <message>
+      <source>%1, Internal name: %2</source>
+      <translation>%1, Belső név: %2</translation>
     </message>
   </context>
   <context>
@@ -6314,6 +6786,10 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Z:</translation>
     </message>
     <message>
+      <source>Grid Snap in</source>
+      <translation>Rácshoz illeszt</translation>
+    </message>
+    <message>
       <source>0.1 mm</source>
       <translation>0.1 mm</translation>
     </message>
@@ -6369,10 +6845,6 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <source>5 m </source>
       <translation>5 m </translation>
     </message>
-    <message>
-      <source>Grid Snap in</source>
-      <translation>Rácshoz illeszt</translation>
-    </message>
   </context>
   <context>
     <name>PropertyListDialog</name>
@@ -6388,6 +6860,10 @@ Meg szeretne adni egy másik könyvtárat?</translation>
   <context>
     <name>QDockWidget</name>
     <message>
+      <source>Toolbox</source>
+      <translation>Eszközkészlet</translation>
+    </message>
+    <message>
       <source>Tree view</source>
       <translation>Fanézet</translation>
     </message>
@@ -6400,28 +6876,24 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Részlet nézet</translation>
     </message>
     <message>
-      <source>Report view</source>
-      <translation>Jelentés nézet</translation>
-    </message>
-    <message>
       <source>Combo View</source>
       <translation>Összetett nézet</translation>
     </message>
     <message>
-      <source>Toolbox</source>
-      <translation>Eszközkészlet</translation>
+      <source>Report view</source>
+      <translation>Jelentés nézet</translation>
     </message>
     <message>
       <source>Python console</source>
       <translation>Python konzol</translation>
     </message>
     <message>
-      <source>Display properties</source>
-      <translation>Tulajdonságok megjelenítése</translation>
-    </message>
-    <message>
       <source>DAG View</source>
       <translation>DAG nézet</translation>
+    </message>
+    <message>
+      <source>Display properties</source>
+      <translation>Tulajdonságok megjelenítése</translation>
     </message>
   </context>
   <context>
@@ -6435,12 +6907,20 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Megjelenítés</translation>
     </message>
     <message>
+      <source>Workbenches</source>
+      <translation>Munkafelületek</translation>
+    </message>
+    <message>
       <source>Unknown filetype</source>
       <translation>Ismeretlen filetípus</translation>
     </message>
     <message>
       <source>Cannot open unknown filetype: %1</source>
       <translation>Nem megnyitható fájltípus: %1</translation>
+    </message>
+    <message>
+      <source>Export failed</source>
+      <translation>Exportálás sikertelen</translation>
     </message>
     <message>
       <source>Cannot save to unknown filetype: %1</source>
@@ -6463,6 +6943,18 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Dokumentum megnyitása</translation>
     </message>
     <message>
+      <source>Error</source>
+      <translation>Hiba</translation>
+    </message>
+    <message>
+      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
+      <translation>Hiba történt a fájl betöltésekor. Néhány adat lehet, hogy módosított vagy nem egyáltalán nem viszaállított. Nézze meg a jelentés nézetet részletesebb információért az érintett objektumokhoz.</translation>
+    </message>
+    <message>
+      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
+      <translation>A fájl betöltése közben súlyos hibák történtek. Előfordulhat, hogy néhány adat módosult, vagy egyáltalán nem állt helyre. A terv mentése valószínűleg adatvesztést eredményez.</translation>
+    </message>
+    <message>
       <source>Import file</source>
       <translation>Fájl importálása</translation>
     </message>
@@ -6475,12 +6967,78 @@ Meg szeretne adni egy másik könyvtárat?</translation>
       <translation>Nyomtatás...</translation>
     </message>
     <message>
+      <source>Exporting PDF...</source>
+      <translation>PDF exportálása...</translation>
+    </message>
+    <message>
+      <source>Unsaved document</source>
+      <translation>Nem mentett dokumentum</translation>
+    </message>
+    <message>
+      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
+      <translation>Az exportált tárgy külső hivatkozást tartalmaz. Exportálás előtt legalább egyszer mentse a dokumentumot.</translation>
+    </message>
+    <message>
+      <source>Delete failed</source>
+      <translation>Törlés sikertelen</translation>
+    </message>
+    <message>
+      <source>Dependency error</source>
+      <translation>Függőség hiba</translation>
+    </message>
+    <message>
+      <source>Copy selected</source>
+      <translation>Kijelöltek másolása</translation>
+    </message>
+    <message>
+      <source>Copy active document</source>
+      <translation>Aktív dokumentum másolása</translation>
+    </message>
+    <message>
+      <source>Copy all documents</source>
+      <translation>Összes dokumentum másolása</translation>
+    </message>
+    <message>
+      <source>Paste</source>
+      <translation>Beillesztés</translation>
+    </message>
+    <message>
+      <source>Expression error</source>
+      <translation>Kifejezés hiba</translation>
+    </message>
+    <message>
+      <source>Failed to parse some of the expressions.
+Please check the Report View for more details.</source>
+      <translation>Nem sikerült elemezni néhány kifejezést.
+További részletekért tekintse meg a Jelentés nézetet.</translation>
+    </message>
+    <message>
+      <source>Failed to paste expressions</source>
+      <translation>Nem sikerült beilleszteni a kifejezéseket</translation>
+    </message>
+    <message>
       <source>Cannot load workbench</source>
       <translation>Munkafelület nem tölthető be</translation>
     </message>
     <message>
       <source>A general error occurred while loading the workbench</source>
       <translation>Általános hiba történt a munkafelület betöltése során</translation>
+    </message>
+    <message>
+      <source>Wrong selection</source>
+      <translation>Rossz kijelölés</translation>
+    </message>
+    <message>
+      <source>Only one object selected. Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Csak egy objektum van kiválasztva. Kérjük válasszon ki két objektumot.
+Legyen körültekintő, számít melyik pontra kattint.</translation>
+    </message>
+    <message>
+      <source>Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Kérjük, válasszon ki két objektumot.
+Legyen körültekintő, fontos melyik pontra kattint.</translation>
     </message>
     <message>
       <source>Save views...</source>
@@ -6505,6 +7063,10 @@ Meg szeretne adni egy másik könyvtárat?</translation>
     <message>
       <source>Save frozen views</source>
       <translation>Fagyasztott nézetek mentése</translation>
+    </message>
+    <message>
+      <source>Frozen views</source>
+      <translation>Fagyasztott nézetek</translation>
     </message>
     <message>
       <source>Restore views</source>
@@ -6573,6 +7135,10 @@ Folytatni kívánja?</translation>
       <translation>Válasszon egy elemet:</translation>
     </message>
     <message>
+      <source>New boolean item</source>
+      <translation>Új logikai elem</translation>
+    </message>
+    <message>
       <source>Rename group</source>
       <translation>Csoport átnevezése</translation>
     </message>
@@ -6593,16 +7159,132 @@ Folytatni kívánja?</translation>
       <translation>Érték módosítása</translation>
     </message>
     <message>
-      <source>Save document under new filename...</source>
-      <translation>Dokumentum mentése új fájlnéven...</translation>
+      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
+
+</source>
+      <translation>Azonos fizikai elérési utat észleltek. Ez okozhatja a meglévő dokumentumok nem kívánt felülírását!
+
+</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to continue?</source>
+      <translation>Biztosan folytatja?</translation>
+    </message>
+    <message>
+      <source>Please check report view for more...</source>
+      <translation>Kérjük, ellenőrizze a jelentés nézetet továbbiakért...</translation>
+    </message>
+    <message>
+      <source>Physical path:</source>
+      <translation>Fizikai útvonal:</translation>
+    </message>
+    <message>
+      <source>Document:</source>
+      <translation>Dokumentum:</translation>
+    </message>
+    <message>
+      <source>Path:</source>
+      <translation>Útvonalak:</translation>
+    </message>
+    <message>
+      <source>Identical physical path</source>
+      <translation>Azonos fizikai elérési út</translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Nem lehet menteni a dokumentumot</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Volt egy probléma a fájl mentésekor. Ennek az lehet az oka, hogy a szülőmappák némelyike nem létezik, vagy nem rendelkezik elegendő engedéllyel, vagy más okból. Hiba részletei:
+
+"%1"
+
+Szeretné menteni a fájlt egy másik névvel?</translation>
     </message>
     <message>
       <source>Saving aborted</source>
       <translation>Mentés megszakítva</translation>
     </message>
     <message>
-      <source>Unsaved document</source>
-      <translation>Nem mentett dokumentum</translation>
+      <source>Save dependent files</source>
+      <translation>Függő fájlok mentése</translation>
+    </message>
+    <message>
+      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
+      <translation>A fájl külső függőségeket tartalmaz. Menti a függő fájlokat is?</translation>
+    </message>
+    <message>
+      <source>Saving document failed</source>
+      <translation>Dokumentum mentése sikertelen</translation>
+    </message>
+    <message>
+      <source>Save document under new filename...</source>
+      <translation>Dokumentum mentése új fájlnéven...</translation>
+    </message>
+    <message>
+      <source>Save %1 Document</source>
+      <translation>A(z) %1 dokumentum mentése</translation>
+    </message>
+    <message>
+      <source>Document</source>
+      <translation>Dokumentum</translation>
+    </message>
+    <message>
+      <source>Failed to save document</source>
+      <translation>Nem sikerült menteni a dokumentumot</translation>
+    </message>
+    <message>
+      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
+      <translation>A dokumentumok ciklikus függőségeket tartalmaznak. Még mindig menteni szeretné?</translation>
+    </message>
+    <message>
+      <source>Save a copy of the document under new filename...</source>
+      <translation>Menti új fájlnév alatt a dokumentum egy másolatát...</translation>
+    </message>
+    <message>
+      <source>%1 document (*.FCStd)</source>
+      <translation>%1 dokumentum (*.FCStd)</translation>
+    </message>
+    <message>
+      <source>Document not closable</source>
+      <translation>A dokumentum nem zárható be</translation>
+    </message>
+    <message>
+      <source>The document is not closable for the moment.</source>
+      <translation>A dokumentum nem zárható be pillanatnyilag.</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Dokumentum nincs mentve</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>A dokumentum%1 nem menthető. Nem szeretné bezárni?</translation>
+    </message>
+    <message>
+      <source>Undo</source>
+      <translation>Visszavonás</translation>
+    </message>
+    <message>
+      <source>Redo</source>
+      <translation>Ismétlés</translation>
+    </message>
+    <message>
+      <source>There are grouped transactions in the following documents with other preceding transactions</source>
+      <translation>A következő dokumentumokban csoportosított tranzakciók vannak más korábbi tranzakciókkal</translation>
+    </message>
+    <message>
+      <source>Choose 'Yes' to roll back all preceding transactions.
+Choose 'No' to roll back in the active document only.
+Choose 'Abort' to abort</source>
+      <translation>Válassza az 'Igen' lehetőséget az összes megelőző tranzakció visszaállítása érdekében.
+A 'Nem' lehetőséggel az aktív dokumentumot állítja vissza.
+A 'Megszakítás' választásával megszakít</translation>
     </message>
     <message>
       <source>Save Macro</source>
@@ -6627,6 +7309,10 @@ Folytatni kívánja?</translation>
     <message>
       <source>Outer</source>
       <translation>Külső</translation>
+    </message>
+    <message>
+      <source>Split</source>
+      <translation>Feloszt</translation>
     </message>
     <message>
       <source>No Browser</source>
@@ -6672,64 +7358,6 @@ Nyisson meg egy böngészőt, és írja be: http://localhost:%1.</translation>
       <translation>Nem talál fájlt %1 -ben %2 -ben, sem  %3 -ban</translation>
     </message>
     <message>
-      <source>Save %1 Document</source>
-      <translation>A(z) %1 dokumentum mentése</translation>
-    </message>
-    <message>
-      <source>%1 document (*.FCStd)</source>
-      <translation>%1 dokumentum (*.FCStd)</translation>
-    </message>
-    <message>
-      <source>Document not closable</source>
-      <translation>A dokumentum nem zárható be</translation>
-    </message>
-    <message>
-      <source>The document is not closable for the moment.</source>
-      <translation>A dokumentum nem zárható be pillanatnyilag.</translation>
-    </message>
-    <message>
-      <source>No OpenGL</source>
-      <translation>Nincs OpenGL</translation>
-    </message>
-    <message>
-      <source>This system does not support OpenGL</source>
-      <translation>Ez a rendszer nem támogatja az OpenGL-t</translation>
-    </message>
-    <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
-      <source>Unable to load documentation.
-In order to load it Qt 4.4 or higher is required.</source>
-      <translation>Nem sikerült betölteni a dokumentációt.
-A betöltéshez Qt 4.4 vagy magasabb verzió szükséges.</translation>
-    </message>
-    <message>
-      <source>Exporting PDF...</source>
-      <translation>PDF exportálása...</translation>
-    </message>
-    <message>
-      <source>Wrong selection</source>
-      <translation>Rossz kijelölés</translation>
-    </message>
-    <message>
-      <source>Only one object selected. Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Csak egy objektum van kiválasztva. Kérjük válasszon ki két objektumot.
-Legyen körültekintő, számít melyik pontra kattint.</translation>
-    </message>
-    <message>
-      <source>Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Kérjük, válasszon ki két objektumot.
-Legyen körültekintő, fontos melyik pontra kattint.</translation>
-    </message>
-    <message>
-      <source>New boolean item</source>
-      <translation>Új logikai elem</translation>
-    </message>
-    <message>
       <source>Navigation styles</source>
       <translation>Navigációs stílusok</translation>
     </message>
@@ -6750,24 +7378,24 @@ Legyen körültekintő, fontos melyik pontra kattint.</translation>
       <translation>Szeretné menteni a módosításait bezárás előtt az '%1' dokumentumba?</translation>
     </message>
     <message>
+      <source>Do you want to save your changes to document before closing?</source>
+      <translation>Menti a dokumentum módosításait bezárás előtt?</translation>
+    </message>
+    <message>
       <source>If you don't save, your changes will be lost.</source>
       <translation>Ha nem menti, a módosítások elvesznek.</translation>
     </message>
     <message>
-      <source>Save a copy of the document under new filename...</source>
-      <translation>Menti új fájlnév alatt a dokumentum egy másolatát...</translation>
+      <source>Apply answer to all</source>
+      <translation>Válasz alkalmazása az összesre</translation>
     </message>
     <message>
-      <source>Frozen views</source>
-      <translation>Fagyasztott nézetek</translation>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 Dokumentum(ok) nincsen(ek) mentve</translation>
     </message>
     <message>
-      <source>Saving document failed</source>
-      <translation>Dokumentum mentése sikertelen</translation>
-    </message>
-    <message>
-      <source>Document</source>
-      <translation>Dokumentum</translation>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Egyes dokumentumok nem menthetők. Nem szeretné bezárni?</translation>
     </message>
     <message>
       <source>Delete macro</source>
@@ -6790,14 +7418,6 @@ Legyen körültekintő, fontos melyik pontra kattint.</translation>
       <translation>A %1 nem üres, törölheti annak tartalmát is?</translation>
     </message>
     <message>
-      <source>Export failed</source>
-      <translation>Exportálás sikertelen</translation>
-    </message>
-    <message>
-      <source>Split</source>
-      <translation>Feloszt</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Fordítás:</translation>
     </message>
@@ -6812,48 +7432,6 @@ Legyen körültekintő, fontos melyik pontra kattint.</translation>
     <message>
       <source>Edit text</source>
       <translation>Szöveg szerkesztése</translation>
-    </message>
-    <message>
-      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
-      <translation>Az exportált tárgy külső hivatkozást tartalmaz. Exportálás előtt legalább egyszer mentse a dokumentumot.</translation>
-    </message>
-    <message>
-      <source>Delete failed</source>
-      <translation>Törlés sikertelen</translation>
-    </message>
-    <message>
-      <source>Dependency error</source>
-      <translation>Függőség hiba</translation>
-    </message>
-    <message>
-      <source>Copy selected</source>
-      <translation>Kijelöltek másolása</translation>
-    </message>
-    <message>
-      <source>Copy active document</source>
-      <translation>Aktív dokumentum másolása</translation>
-    </message>
-    <message>
-      <source>Copy all documents</source>
-      <translation>Összes dokumentum másolása</translation>
-    </message>
-    <message>
-      <source>Paste</source>
-      <translation>Beillesztés</translation>
-    </message>
-    <message>
-      <source>Expression error</source>
-      <translation>Kifejezés hiba</translation>
-    </message>
-    <message>
-      <source>Failed to parse some of the expressions.
-Please check the Report View for more details.</source>
-      <translation>Nem sikerült elemezni néhány kifejezést.
-További részletekért tekintse meg a Jelentés nézetet.</translation>
-    </message>
-    <message>
-      <source>Failed to paste expressions</source>
-      <translation>Nem sikerült beilleszteni a kifejezéseket</translation>
     </message>
     <message>
       <source>Simple group</source>
@@ -6918,148 +7496,92 @@ underscore, and must not start with a digit.</source>
       <translation>Nem sikerült tulajdonságot hozzáadni a következőhöz: '%1': %2</translation>
     </message>
     <message>
-      <source>Save dependent files</source>
-      <translation>Függő fájlok mentése</translation>
-    </message>
-    <message>
-      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
-      <translation>A fájl külső függőségeket tartalmaz. Menti a függő fájlokat is?</translation>
-    </message>
-    <message>
-      <source>Failed to save document</source>
-      <translation>Nem sikerült menteni a dokumentumot</translation>
-    </message>
-    <message>
-      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
-      <translation>A dokumentumok ciklikus függőségeket tartalmaznak. Még mindig menteni szeretné?</translation>
-    </message>
-    <message>
-      <source>Undo</source>
-      <translation>Visszavonás</translation>
-    </message>
-    <message>
-      <source>Redo</source>
-      <translation>Ismétlés</translation>
-    </message>
-    <message>
-      <source>There are grouped transactions in the following documents with other preceding transactions</source>
-      <translation>A következő dokumentumokban csoportosított tranzakciók vannak más korábbi tranzakciókkal</translation>
-    </message>
-    <message>
-      <source>Choose 'Yes' to roll back all preceding transactions.
-Choose 'No' to roll back in the active document only.
-Choose 'Abort' to abort</source>
-      <translation>Válassza az 'Igen' lehetőséget az összes megelőző tranzakció visszaállítása érdekében.
-A 'Nem' lehetőséggel az aktív dokumentumot állítja vissza.
-A 'Megszakítás' választásával megszakít</translation>
-    </message>
-    <message>
-      <source>Do you want to save your changes to document before closing?</source>
-      <translation>Menti a dokumentum módosításait bezárás előtt?</translation>
-    </message>
-    <message>
-      <source>Apply answer to all</source>
-      <translation>Válasz alkalmazása az összesre</translation>
-    </message>
-    <message>
       <source>Drag &amp; drop failed</source>
       <translation>A fogd &amp; vidd sikertelen</translation>
+    </message>
+    <message>
+      <source>Setup configurable object</source>
+      <translation>Konfigurálható tárgy beállítása</translation>
+    </message>
+    <message>
+      <source>Select which object to copy or exclude when configuration changes. All external linked objects are excluded by default.</source>
+      <translation>Válassza ki, hogy mely tárgyakat másolja vagy zárja ki a konfiguráció módosításakor. Alapértelmezés szerint az összes külsőleg kapcsolódó tárgy ki van zárva.</translation>
+    </message>
+    <message>
+      <source>Please select which objects to copy when the configuration is changed</source>
+      <translation>A konfiguráció módosítása után válassza ki, hogy mely tárgyakat másolja</translation>
+    </message>
+    <message>
+      <source>Apply to all</source>
+      <translation>Alkalmazás mindegyikre</translation>
+    </message>
+    <message>
+      <source>Apply the setting to all links. Or, uncheck this
+option to apply only to this link.</source>
+      <translation>Alkalmazza ezt a beállítást az összes hivatkozásra. Ezt a beállítást is törölheti a kijelölésből,
+ha a beállítást csak az aktuális hivatkozásra szeretné alkalmazni.</translation>
+    </message>
+    <message>
+      <source>Copy on change</source>
+      <translation>Másolás módosításkor</translation>
+    </message>
+    <message>
+      <source>Enable</source>
+      <translation>Bekapcsolás</translation>
+    </message>
+    <message>
+      <source>Enable auto copy of linked object when its configuration is changed</source>
+      <translation>Csatolt tárgy automatikus másolásának engedélyezése a konfiguráció módosításakor</translation>
+    </message>
+    <message>
+      <source>Tracking</source>
+      <translation>Léptetés</translation>
+    </message>
+    <message>
+      <source>Copy the linked object when its configuration is changed.
+Also auto redo the copy if the original linked object is changed.
+</source>
+      <translation>Másolja a csatolt tárgyat, amikor a konfigurációja megváltozott.
+A másolat automatikusan visszaáll, ha az eredeti csatolt tárgy megváltozik.
+</translation>
+    </message>
+    <message>
+      <source>Disable copy on change</source>
+      <translation>Másolás letiltása módosításkor</translation>
+    </message>
+    <message>
+      <source>Rerefresh configurable object</source>
+      <translation>A konfigurálható tárgy frissítése</translation>
+    </message>
+    <message>
+      <source>Synchronize the original configurable source object by
+creating a new deep copy. Note that any changes made to
+the current copy will be lost.
+</source>
+      <translation>Az eredeti konfigurálható forrástárgy szinkronizálása
+új, igaz másolat létrehozása. Kérjük, vegye figyelembe, hogy a
+az aktuális példány elveszik.
+</translation>
+    </message>
+    <message>
+      <source>Toggle array elements</source>
+      <translation>Tömbelemek váltása</translation>
+    </message>
+    <message>
+      <source>Change whether show each link array element as individual objects</source>
+      <translation>Annak módosítása, hogy a csatolási tömb egyes elemeit egyedi tárgyakként jelenítse-e meg</translation>
+    </message>
+    <message>
+      <source>Transform at the origin of the placement</source>
+      <translation>Átalakítás a helyszín származási helyén</translation>
     </message>
     <message>
       <source>Override colors...</source>
       <translation>Színek felülbírálása...</translation>
     </message>
     <message>
-      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
-
-</source>
-      <translation>Azonos fizikai elérési utat észleltek. Ez okozhatja a meglévő dokumentumok nem kívánt felülírását!
-
-</translation>
-    </message>
-    <message>
-      <source>Are you sure you want to continue?</source>
-      <translation>Biztosan folytatja?</translation>
-    </message>
-    <message>
-      <source>
-
-Please check report view for more...</source>
-      <translation>
-
-Kérjük, ellenőrizze a jelentés nézetet továbbiakért...</translation>
-    </message>
-    <message>
-      <source>
-Document: </source>
-      <translation>
-Dokumentum: </translation>
-    </message>
-    <message>
-      <source>
-  Path: </source>
-      <translation>
-Útvonal: </translation>
-    </message>
-    <message>
-      <source>Identical physical path</source>
-      <translation>Azonos fizikai elérési út</translation>
-    </message>
-    <message>
-      <source>Error</source>
-      <translation>Hiba</translation>
-    </message>
-    <message>
-      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
-      <translation>Hiba történt a fájl betöltésekor. Néhány adat lehet, hogy módosított vagy nem egyáltalán nem viszaállított. Nézze meg a jelentés nézetet részletesebb információért az érintett objektumokhoz.</translation>
-    </message>
-    <message>
-      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
-      <translation>A fájl betöltése közben súlyos hibák történtek. Előfordulhat, hogy néhány adat módosult, vagy egyáltalán nem állt helyre. A terv mentése valószínűleg adatvesztést eredményez.</translation>
-    </message>
-    <message>
-      <source>Workbenches</source>
-      <translation>Munkafelületek</translation>
-    </message>
-    <message>
-      <source>
-
-Physical path: </source>
-      <translation>
-
-Fizikai útvonal: </translation>
-    </message>
-    <message>
-      <source>Could not save document</source>
-      <translation>Nem lehet menteni a dokumentumot</translation>
-    </message>
-    <message>
-      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
-
-"%1"
-
-Would you like to save the file with a different name?</source>
-      <translation>Volt egy probléma a fájl mentésekor. Ennek az lehet az oka, hogy a szülőmappák némelyike nem létezik, vagy nem rendelkezik elegendő engedéllyel, vagy más okból. Hiba részletei:
-
-"%1"
-
-Szeretné menteni a fájlt egy másik névvel?</translation>
-    </message>
-    <message>
-      <source>Document not saved</source>
-      <translation>Dokumentum nincs mentve</translation>
-    </message>
-    <message>
-      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
-      <translation>A dokumentum%1 nem menthető. Nem szeretné bezárni?</translation>
-    </message>
-    <message>
-      <source>%1 Document(s) not saved</source>
-      <translation>%1 Dokumentum(ok) nincsen(ek) mentve</translation>
-    </message>
-    <message>
-      <source>Some documents could not be saved. Do you want to cancel closing?</source>
-      <translation>Egyes dokumentumok nem menthetők. Nem szeretné bezárni?</translation>
+      <source>Edit %1</source>
+      <translation>%1 szerkesztése</translation>
     </message>
   </context>
   <context>
@@ -7076,10 +7598,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdBoxElementSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Box element selection</source>
       <translation>Téglatest kijelölése</translation>
     </message>
@@ -7087,20 +7605,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdBoxSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Box selection</source>
       <translation>Négyzet kiválasztás</translation>
     </message>
   </context>
   <context>
     <name>StdCmdAbout</name>
-    <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
     <message>
       <source>&amp;About %1</source>
       <translation>&amp;Alkotók %1</translation>
@@ -7113,10 +7623,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdAboutQt</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>About &amp;Qt</source>
       <translation>&amp;Qt névjegye</translation>
     </message>
@@ -7127,10 +7633,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdActivateNextWindow</name>
-    <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
     <message>
       <source>Ne&amp;xt</source>
       <translation>Következő</translation>
@@ -7143,10 +7645,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdActivatePrevWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
-    <message>
       <source>Pre&amp;vious</source>
       <translation>&amp;Vissza</translation>
     </message>
@@ -7157,10 +7655,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdAlignment</name>
-    <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
     <message>
       <source>Alignment...</source>
       <translation>Igazítás...</translation>
@@ -7173,10 +7667,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdArrangeIcons</name>
     <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
-    <message>
       <source>Arrange &amp;Icons</source>
       <translation>&amp;Ikonok rendezése</translation>
     </message>
@@ -7188,20 +7678,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdAxisCross</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Toggle axis cross</source>
       <translation>Tengely kereszteződés váltása</translation>
     </message>
   </context>
   <context>
     <name>StdCmdCascadeWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
     <message>
       <source>&amp;Cascade</source>
       <translation>Lép&amp;csőzetes</translation>
@@ -7214,10 +7696,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdCloseActiveWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
-    <message>
       <source>Cl&amp;ose</source>
       <translation>Bezárás</translation>
     </message>
@@ -7228,10 +7706,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdCloseAllWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
     <message>
       <source>Close Al&amp;l</source>
       <translation>Összes bezárása</translation>
@@ -7244,10 +7718,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdCommandLine</name>
     <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
-    <message>
       <source>Start command &amp;line...</source>
       <translation>Parancs sor indítása...</translation>
     </message>
@@ -7258,10 +7728,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdCopy</name>
-    <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
     <message>
       <source>C&amp;opy</source>
       <translation>Másolás</translation>
@@ -7274,10 +7740,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdCut</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>&amp;Cut</source>
       <translation>Kivágás</translation>
     </message>
@@ -7288,10 +7750,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdDelete</name>
-    <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
     <message>
       <source>&amp;Delete</source>
       <translation>Törlés</translation>
@@ -7304,10 +7762,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdDemoMode</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>View turntable...</source>
       <translation>Forgóasztal nézet...</translation>
     </message>
@@ -7319,10 +7773,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdDependencyGraph</name>
     <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
-    <message>
       <source>Dependency graph...</source>
       <translation>Függőségi grafikon...</translation>
     </message>
@@ -7333,10 +7783,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdDlgCustomize</name>
-    <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
     <message>
       <source>Cu&amp;stomize...</source>
       <translation>Testreszabá&amp;s...</translation>
@@ -7356,17 +7802,9 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
       <source>Opens a dialog to let you execute a recorded macro</source>
       <translation>Párbeszédpanel megnyitása a rögzített makró végrehajtásához</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgMacroExecuteDirect</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
     <message>
       <source>Execute macro</source>
       <translation>Makró végrehajtása</translation>
@@ -7386,17 +7824,9 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
       <source>Opens a dialog to record a macro</source>
       <translation>Párbeszédpanel megnyitása a makró rögzítéséhez</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgParameter</name>
-    <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
     <message>
       <source>E&amp;dit parameters ...</source>
       <translation>Paraméterek szerkesztése ...</translation>
@@ -7409,10 +7839,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdDlgPreferences</name>
     <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
-    <message>
       <source>&amp;Preferences ...</source>
       <translation>Beállítások ...</translation>
     </message>
@@ -7423,10 +7849,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdDockViewMenu</name>
-    <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
     <message>
       <source>Panels</source>
       <translation>Panelek</translation>
@@ -7439,10 +7861,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdDrawStyle</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Draw style</source>
       <translation>Rajzolási stílus</translation>
     </message>
@@ -7454,10 +7872,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdDuplicateSelection</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>Duplicate selection</source>
       <translation>Többszörös kijelölés</translation>
     </message>
@@ -7468,10 +7882,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdEdit</name>
-    <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
     <message>
       <source>Toggle &amp;Edit mode</source>
       <translation>Szerkesztési módra váltás</translation>
@@ -7487,10 +7897,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdExport</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>&amp;Export...</source>
       <translation>&amp;Exportálás...</translation>
@@ -7511,20 +7917,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdExpression</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>Expression actions</source>
       <translation>Kifejezési műveletek</translation>
     </message>
   </context>
   <context>
     <name>StdCmdFeatRecompute</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>&amp;Recompute</source>
       <translation>Újraszámítás</translation>
@@ -7537,10 +7935,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdFreeCADDonation</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>Donate</source>
       <translation>Támogatás</translation>
     </message>
@@ -7551,10 +7945,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADFAQ</name>
-    <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
     <message>
       <source>FreeCAD FAQ</source>
       <translation>FreeCAD GYIK</translation>
@@ -7571,10 +7961,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdFreeCADForum</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>FreeCAD Forum</source>
       <translation>FreeCAD fórum</translation>
     </message>
@@ -7589,10 +7975,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADPowerUserHub</name>
-    <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
     <message>
       <source>Python scripting documentation</source>
       <translation>Python scripting dokumentáció</translation>
@@ -7609,10 +7991,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdFreeCADUserHub</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>Users documentation</source>
       <translation>Felhasználói dokumentációk</translation>
     </message>
@@ -7623,10 +8001,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADWebsite</name>
-    <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
     <message>
       <source>FreeCAD Website</source>
       <translation>FreeCAD honlapja</translation>
@@ -7639,10 +8013,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdFreezeViews</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Freeze display</source>
       <translation>Képernyő fagyasztása</translation>
     </message>
@@ -7653,10 +8023,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdGroup</name>
-    <message>
-      <source>Structure</source>
-      <translation>Felépítés</translation>
-    </message>
     <message>
       <source>Create group</source>
       <translation>Csoport létrehozása</translation>
@@ -7669,10 +8035,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdHideObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Hide all objects</source>
       <translation>Az összes objektum elrejtése</translation>
     </message>
@@ -7684,10 +8046,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdHideSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Hide selection</source>
       <translation>Kijelölt elrejtése</translation>
     </message>
@@ -7698,10 +8056,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdImport</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>&amp;Import...</source>
       <translation>&amp;Import...</translation>
@@ -7722,20 +8076,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdLinkActions</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>Link actions</source>
       <translation>Hivatkozás műveletek</translation>
     </message>
   </context>
   <context>
     <name>StdCmdLinkImport</name>
-    <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
     <message>
       <source>Import links</source>
       <translation>Hivatkozások importálása</translation>
@@ -7748,10 +8094,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdLinkImportAll</name>
     <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
-    <message>
       <source>Import all links</source>
       <translation>Összes hivatkozás importálása</translation>
     </message>
@@ -7762,10 +8104,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdLinkMake</name>
-    <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
     <message>
       <source>Make link</source>
       <translation>Hivatkozás létrehozása</translation>
@@ -7778,10 +8116,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdLinkMakeGroup</name>
     <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
-    <message>
       <source>Make link group</source>
       <translation>Hivatkozás csoport létrehozása</translation>
     </message>
@@ -7792,10 +8126,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdLinkMakeRelative</name>
-    <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
     <message>
       <source>Make sub-link</source>
       <translation>Alhivatkozás létrehozása</translation>
@@ -7808,10 +8138,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdLinkReplace</name>
     <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
-    <message>
       <source>Replace with link</source>
       <translation>Csere hivatkozással</translation>
     </message>
@@ -7822,10 +8148,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdLinkSelectActions</name>
-    <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
     <message>
       <source>Link navigation</source>
       <translation>Hivatkozás navigálás</translation>
@@ -7838,10 +8160,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdLinkSelectAllLinks</name>
     <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
-    <message>
       <source>Select all links</source>
       <translation>Összes hivatkozás kijelölése</translation>
     </message>
@@ -7852,10 +8170,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdLinkSelectLinked</name>
-    <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
     <message>
       <source>Go to linked object</source>
       <translation>Ugrás a hivatkozott tárgyra</translation>
@@ -7868,10 +8182,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdLinkSelectLinkedFinal</name>
     <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
-    <message>
       <source>Go to the deepest linked object</source>
       <translation>Ugrás a legmélyebben hivatkozott tárgyra</translation>
     </message>
@@ -7882,10 +8192,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdLinkUnlink</name>
-    <message>
-      <source>Link</source>
-      <translation>Hivatkozás</translation>
-    </message>
     <message>
       <source>Unlink</source>
       <translation>Hivatkozás megszüntetése</translation>
@@ -7898,10 +8204,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdMacroAttachDebugger</name>
     <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
-    <message>
       <source>Attach to remote debugger...</source>
       <translation>Egy távoli hibakeresőhöz csatolás...</translation>
     </message>
@@ -7912,10 +8214,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdMacroStartDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
     <message>
       <source>Debug macro</source>
       <translation>Makró hibakeresés</translation>
@@ -7928,10 +8226,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdMacroStepInto</name>
     <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
-    <message>
       <source>Step into</source>
       <translation>Lépj be</translation>
     </message>
@@ -7939,20 +8233,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdMacroStepOver</name>
     <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
-    <message>
       <source>Step over</source>
       <translation>Átlép</translation>
     </message>
   </context>
   <context>
     <name>StdCmdMacroStopDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
     <message>
       <source>Stop debugging</source>
       <translation>Hibakeresés leállítása</translation>
@@ -7965,10 +8251,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdMacroStopRecord</name>
     <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
-    <message>
       <source>S&amp;top macro recording</source>
       <translation>Makró rögzítés leállítása</translation>
     </message>
@@ -7980,10 +8262,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdMeasureDistance</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>Measure distance</source>
       <translation>Távolság mérés</translation>
     </message>
@@ -7991,24 +8269,16 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdMeasurementSimple</name>
     <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
+      <source>Measure distance</source>
+      <translation>Távolság mérés</translation>
     </message>
     <message>
       <source>Measures distance between two selected objects</source>
       <translation>Távolságmérés két kijelölt objektum között</translation>
     </message>
-    <message>
-      <source>Measure distance</source>
-      <translation>Távolság mérés</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdMergeProjects</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>Merge project...</source>
       <translation>Projekt egyesítése...</translation>
@@ -8018,20 +8288,16 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
       <translation>Projekt egyesítése</translation>
     </message>
     <message>
-      <source>Cannot merge project with itself.</source>
-      <translation>Nem tudja egyesíteni önmagával a projekt témát.</translation>
-    </message>
-    <message>
       <source>%1 document (*.FCStd)</source>
       <translation>%1 dokumentum (*.FCStd)</translation>
+    </message>
+    <message>
+      <source>Cannot merge project with itself.</source>
+      <translation>Nem tudja egyesíteni önmagával a projekt témát.</translation>
     </message>
   </context>
   <context>
     <name>StdCmdNew</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>&amp;New</source>
       <translation>Új</translation>
@@ -8059,10 +8325,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdOnlineHelpWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>Help Website</source>
       <translation>Súgó Honlap</translation>
     </message>
@@ -8073,10 +8335,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdOpen</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>&amp;Open...</source>
       <translation>Megnyitás...</translation>
@@ -8105,10 +8363,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdPart</name>
     <message>
-      <source>Structure</source>
-      <translation>Felépítés</translation>
-    </message>
-    <message>
       <source>Create part</source>
       <translation>Alkatrész létrehozása</translation>
     </message>
@@ -8119,10 +8373,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdPaste</name>
-    <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
     <message>
       <source>&amp;Paste</source>
       <translation>Beillesztés</translation>
@@ -8135,10 +8385,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdPlacement</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>Placement...</source>
       <translation>Elhelyezés ...</translation>
     </message>
@@ -8149,10 +8395,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdPrint</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>&amp;Print...</source>
       <translation>Nyomtatás...</translation>
@@ -8165,10 +8407,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdPrintPdf</name>
     <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
-    <message>
       <source>&amp;Export PDF...</source>
       <translation>PDF &amp;Exportálása...</translation>
     </message>
@@ -8179,10 +8417,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdPrintPreview</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>&amp;Print preview...</source>
       <translation>Nyomtatási kép...</translation>
@@ -8199,10 +8433,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdProjectInfo</name>
     <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
-    <message>
       <source>Project i&amp;nformation...</source>
       <translation>Projekt i&amp;nformáció...</translation>
     </message>
@@ -8213,10 +8443,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdProjectUtil</name>
-    <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
     <message>
       <source>Project utility...</source>
       <translation>Project segédprogram...</translation>
@@ -8229,10 +8455,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdPythonWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>Python Website</source>
       <translation>Python honlapja</translation>
     </message>
@@ -8243,10 +8465,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdQuit</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>E&amp;xit</source>
       <translation>Kilépés</translation>
@@ -8259,20 +8477,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdRandomColor</name>
     <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
-    <message>
       <source>Random color</source>
       <translation>Véletlen szín</translation>
     </message>
   </context>
   <context>
     <name>StdCmdRecentFiles</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>Recent files</source>
       <translation>Legutóbbi fájlok</translation>
@@ -8285,10 +8495,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdRecentMacros</name>
     <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
-    <message>
       <source>Recent macros</source>
       <translation>Legutóbbi makrók</translation>
     </message>
@@ -8299,10 +8505,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdRedo</name>
-    <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
     <message>
       <source>&amp;Redo</source>
       <translation>Ismét</translation>
@@ -8315,10 +8517,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdRefresh</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>&amp;Refresh</source>
       <translation>Frissítés</translation>
     </message>
@@ -8328,11 +8526,18 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
     </message>
   </context>
   <context>
-    <name>StdCmdRevert</name>
+    <name>StdCmdReportBug</name>
     <message>
-      <source>File</source>
-      <translation>Fájl</translation>
+      <source>Report a bug</source>
+      <translation>Hiba bejelentése</translation>
     </message>
+    <message>
+      <source>Report a bug or suggest a feature</source>
+      <translation>Hiba bejelentése vagy új funkció ajánlása</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdRevert</name>
     <message>
       <source>Revert</source>
       <translation>Visszaállítás</translation>
@@ -8345,10 +8550,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdSave</name>
     <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
-    <message>
       <source>&amp;Save</source>
       <translation>Mentés</translation>
     </message>
@@ -8359,10 +8560,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdSaveAll</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>Save All</source>
       <translation>Mindet menti</translation>
@@ -8375,10 +8572,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdSaveAs</name>
     <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
-    <message>
       <source>Save &amp;As...</source>
       <translation>Mentés másként...</translation>
     </message>
@@ -8389,10 +8582,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdSaveCopy</name>
-    <message>
-      <source>File</source>
-      <translation>Fájl</translation>
-    </message>
     <message>
       <source>Save a &amp;Copy...</source>
       <translation>Másolat mentése...</translation>
@@ -8405,10 +8594,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdSceneInspector</name>
     <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
-    <message>
       <source>Scene inspector...</source>
       <translation>Jelenet ellenőr ...</translation>
     </message>
@@ -8419,10 +8604,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdSelBack</name>
-    <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
     <message>
       <source>&amp;Back</source>
       <translation>&amp;Vissza</translation>
@@ -8435,10 +8616,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdSelBoundingBox</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>&amp;Bounding box</source>
       <translation>&amp;Határolókeret</translation>
     </message>
@@ -8449,10 +8626,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdSelForward</name>
-    <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
     <message>
       <source>&amp;Forward</source>
       <translation>&amp;Előre</translation>
@@ -8465,10 +8638,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdSelectAll</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>Select &amp;All</source>
       <translation>Összes kijelölése</translation>
     </message>
@@ -8479,10 +8648,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdSelectVisibleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Select visible objects</source>
       <translation>Látható objektumok kijelölése</translation>
@@ -8495,10 +8660,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdSendToPythonConsole</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>&amp;Send to Python Console</source>
       <translation>&amp;Küldés Python konzolra</translation>
     </message>
@@ -8509,10 +8670,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdSetAppearance</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Appearance...</source>
       <translation>Megjelenés...</translation>
@@ -8525,10 +8682,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdShowObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Show all objects</source>
       <translation>Összes objektum megjelenítése</translation>
     </message>
@@ -8539,10 +8692,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdShowSelection</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Show selection</source>
       <translation>Kijelölés megjelenítése</translation>
@@ -8555,10 +8704,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdStatusBar</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>Status bar</source>
       <translation>Állapotsor</translation>
     </message>
@@ -8569,10 +8714,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdTextDocument</name>
-    <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
     <message>
       <source>Add text document</source>
       <translation>Szöveges dokumentum hozzáadása</translation>
@@ -8585,10 +8726,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdTextureMapping</name>
     <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
-    <message>
       <source>Texture mapping...</source>
       <translation>Textúra leképezés ...</translation>
     </message>
@@ -8599,10 +8736,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdTileWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
     <message>
       <source>&amp;Tile</source>
       <translation>Csempe</translation>
@@ -8615,20 +8748,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdToggleBreakpoint</name>
     <message>
-      <source>Macro</source>
-      <translation>Makró</translation>
-    </message>
-    <message>
       <source>Toggle breakpoint</source>
       <translation>Töréspont váltás</translation>
     </message>
   </context>
   <context>
     <name>StdCmdToggleClipPlane</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Clipping plane</source>
       <translation>Vágás sík</translation>
@@ -8641,10 +8766,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdToggleNavigation</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Toggle navigation/Edit mode</source>
       <translation>Váltás a navigációs/szerkesztési mód közt</translation>
     </message>
@@ -8655,10 +8776,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdToggleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Toggle all objects</source>
       <translation>Az összes objektum ki-/ bekapcsolása</translation>
@@ -8671,10 +8788,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdToggleSelectability</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Toggle selectability</source>
       <translation>Kiválaszthatóság ki-/bekapcsolása</translation>
     </message>
@@ -8685,10 +8798,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdToggleVisibility</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Toggle visibility</source>
       <translation>Láthatóság váltása</translation>
@@ -8701,10 +8810,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdToolBarMenu</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>Tool&amp;bars</source>
       <translation>Eszköztárak</translation>
     </message>
@@ -8715,10 +8820,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdTransform</name>
-    <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
     <message>
       <source>Transform...</source>
       <translation>Átalakítás...</translation>
@@ -8731,10 +8832,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdTransformManip</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>Transform</source>
       <translation>Átalakítás</translation>
     </message>
@@ -8745,10 +8842,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdTreeCollapse</name>
-    <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
     <message>
       <source>Collapse selected item</source>
       <translation>Kijelölt elem összecsukása</translation>
@@ -8761,10 +8854,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdTreeExpand</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>Expand selected item</source>
       <translation>Kijelölt elem kibontása</translation>
     </message>
@@ -8775,10 +8864,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdTreeSelectAllInstances</name>
-    <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
     <message>
       <source>Select all instances</source>
       <translation>Az összes példány kijelölése</translation>
@@ -8791,10 +8876,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdTreeViewActions</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>TreeView actions</source>
       <translation>FaNézet műveletei</translation>
     </message>
@@ -8806,10 +8887,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdUndo</name>
     <message>
-      <source>Edit</source>
-      <translation>Szerkesztés</translation>
-    </message>
-    <message>
       <source>&amp;Undo</source>
       <translation>Visszavonás</translation>
     </message>
@@ -8820,10 +8897,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdUnitsCalculator</name>
-    <message>
-      <source>Tools</source>
-      <translation>Eszközök</translation>
-    </message>
     <message>
       <source>&amp;Units calculator...</source>
       <translation>Mennyiségi egységek számítása...</translation>
@@ -8847,10 +8920,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdUserInterface</name>
     <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
-    <message>
       <source>Dock views</source>
       <translation>Dokkoló nézet</translation>
     </message>
@@ -8861,10 +8930,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewBottom</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Bottom</source>
       <translation>Alsó</translation>
@@ -8877,10 +8942,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewCreate</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Create new view</source>
       <translation>Új nézet létrehozása</translation>
     </message>
@@ -8891,10 +8952,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewDimetric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Dimetric</source>
       <translation>Dimetrikus</translation>
@@ -8907,10 +8964,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewExample1</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Inventor example #1</source>
       <translation>Inventor példa #1</translation>
     </message>
@@ -8921,10 +8974,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewExample2</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Inventor example #2</source>
       <translation>Inventor példa #2</translation>
@@ -8937,10 +8986,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewExample3</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Inventor example #3</source>
       <translation>Inventor példa #3</translation>
     </message>
@@ -8951,10 +8996,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewFitAll</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Fit all</source>
       <translation>Összes megjelenítése</translation>
@@ -8967,10 +9008,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewFitSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Fit selection</source>
       <translation>Kijelöltek képernyőre</translation>
     </message>
@@ -8981,10 +9018,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewFront</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Front</source>
       <translation>Elölnézet</translation>
@@ -8997,10 +9030,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewHome</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Home</source>
       <translation>Kezdőoldal</translation>
     </message>
@@ -9011,10 +9040,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewIsometric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Isometric</source>
       <translation>Izometrikus</translation>
@@ -9027,10 +9052,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewIvIssueCamPos</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Issue camera position</source>
       <translation>Kamera pozicionálása </translation>
     </message>
@@ -9041,10 +9062,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoInterleavedColumns</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Stereo Interleaved Columns</source>
       <translation>Váltott oszlopú sztereó</translation>
@@ -9057,10 +9074,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewIvStereoInterleavedRows</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Stereo Interleaved Rows</source>
       <translation>Váltott soros sztereó</translation>
     </message>
@@ -9071,10 +9084,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoOff</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Stereo Off</source>
       <translation>Sztereó kikapcsolása</translation>
@@ -9087,10 +9096,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewIvStereoQuadBuff</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Stereo quad buffer</source>
       <translation>Sztereó négyszeres tároló</translation>
     </message>
@@ -9101,10 +9106,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoRedGreen</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Stereo red/cyan</source>
       <translation>Sztereó piros/cián</translation>
@@ -9117,10 +9118,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewLeft</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Left</source>
       <translation>Bal</translation>
     </message>
@@ -9131,10 +9128,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewRear</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Rear</source>
       <translation>Hátsó nézet</translation>
@@ -9147,10 +9140,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewRestoreCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Restore saved camera</source>
       <translation>Mentett kamera visszaállítása</translation>
     </message>
@@ -9161,10 +9150,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewRight</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Right</source>
       <translation>Jobb</translation>
@@ -9177,10 +9162,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewRotateLeft</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Rotate Left</source>
       <translation>Forgatás balra</translation>
     </message>
@@ -9191,10 +9172,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewRotateRight</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Rotate Right</source>
       <translation>Fordítsa jobbra</translation>
@@ -9207,10 +9184,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewSaveCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Save current camera</source>
       <translation>Aktuális kamera mentése</translation>
     </message>
@@ -9221,10 +9194,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewTop</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Top</source>
       <translation>Felülnézet</translation>
@@ -9237,10 +9206,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdViewTrimetric</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Trimetric</source>
       <translation>Trimetrikus</translation>
     </message>
@@ -9251,10 +9216,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdViewVR</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>FreeCAD-VR</source>
       <translation>FreeCAD-VR</translation>
@@ -9267,10 +9228,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdWhatsThis</name>
     <message>
-      <source>Help</source>
-      <translation>Súgó</translation>
-    </message>
-    <message>
       <source>&amp;What's This?</source>
       <translation>Mi ez?</translation>
     </message>
@@ -9281,10 +9238,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdCmdWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
     <message>
       <source>&amp;Windows...</source>
       <translation>Ablakok...</translation>
@@ -9297,20 +9250,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdCmdWindowsMenu</name>
     <message>
-      <source>Window</source>
-      <translation>Ablak</translation>
-    </message>
-    <message>
       <source>Activates this window</source>
       <translation>Ablak aktiválása</translation>
     </message>
   </context>
   <context>
     <name>StdCmdWorkbench</name>
-    <message>
-      <source>View</source>
-      <translation>Nézet</translation>
-    </message>
     <message>
       <source>Workbench</source>
       <translation>Munkafelület</translation>
@@ -9323,10 +9268,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdMainFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Fullscreen</source>
       <translation>Teljes képernyős</translation>
     </message>
@@ -9338,10 +9279,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdOrthographicCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Orthographic view</source>
       <translation>Függőleges vetületi nézet</translation>
     </message>
@@ -9352,10 +9289,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdPerspectiveCamera</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Perspective view</source>
       <translation>Perspektivikus nézet</translation>
@@ -9375,17 +9308,9 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
       <source>Expand active document and collapse all others</source>
       <translation>Aktív dokumentum kibontása és az összes többi összecsukása</translation>
     </message>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
   </context>
   <context>
     <name>StdTreeDrag</name>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
     <message>
       <source>Initiate dragging</source>
       <translation>Húzás kezdeményezése</translation>
@@ -9398,24 +9323,16 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdTreeMultiDocument</name>
     <message>
-      <source>Display all documents in the tree view</source>
-      <translation>Összes dokumentumot a fa nézetben megjeleníteni</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
-    <message>
       <source>Multi document</source>
       <translation>Több dokumentum</translation>
+    </message>
+    <message>
+      <source>Display all documents in the tree view</source>
+      <translation>Összes dokumentumot a fa nézetben megjeleníteni</translation>
     </message>
   </context>
   <context>
     <name>StdTreePreSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
     <message>
       <source>Pre-selection</source>
       <translation>Előválogatás</translation>
@@ -9428,10 +9345,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdTreeRecordSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
-    <message>
       <source>Record selection</source>
       <translation>Rekordkijelölés</translation>
     </message>
@@ -9442,10 +9355,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdTreeSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
     <message>
       <source>Go to selection</source>
       <translation>Kijelöltre ugrás</translation>
@@ -9458,24 +9367,16 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdTreeSingleDocument</name>
     <message>
-      <source>Only display the active document in the tree view</source>
-      <translation>A fa nézetben csak az aktív dokumentumot jelenítse meg</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
-    <message>
       <source>Single document</source>
       <translation>Egyetlen dokumentum</translation>
+    </message>
+    <message>
+      <source>Only display the active document in the tree view</source>
+      <translation>A fa nézetben csak az aktív dokumentumot jelenítse meg</translation>
     </message>
   </context>
   <context>
     <name>StdTreeSyncPlacement</name>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
     <message>
       <source>Sync placement</source>
       <translation>Elhelyezés szinkronizálása</translation>
@@ -9488,10 +9389,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdTreeSyncSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
-    <message>
       <source>Sync selection</source>
       <translation>Kijelölés szinkronizálása</translation>
     </message>
@@ -9502,10 +9399,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdTreeSyncView</name>
-    <message>
-      <source>TreeView</source>
-      <translation>FaNézet</translation>
-    </message>
     <message>
       <source>Sync view</source>
       <translation>Nézet szinkronizálása</translation>
@@ -9518,20 +9411,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdViewBoxZoom</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Box zoom</source>
       <translation>Mező nagyítása</translation>
     </message>
   </context>
   <context>
     <name>StdViewDock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Docked</source>
       <translation>Rögzített</translation>
@@ -9544,10 +9429,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdViewDockUndockFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Document window</source>
       <translation>Dokumentum ablak</translation>
     </message>
@@ -9558,10 +9439,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdViewFullscreen</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Fullscreen</source>
       <translation>Teljes képernyős</translation>
@@ -9574,10 +9451,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdViewScreenShot</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Save picture...</source>
       <translation>Kép mentése ...</translation>
     </message>
@@ -9588,10 +9461,6 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   </context>
   <context>
     <name>StdViewUndock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Undocked</source>
       <translation>Nem rögzített</translation>
@@ -9604,20 +9473,12 @@ Szeretné menteni a fájlt egy másik névvel?</translation>
   <context>
     <name>StdViewZoomIn</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
-    <message>
       <source>Zoom In</source>
       <translation>Nagyítás</translation>
     </message>
   </context>
   <context>
     <name>StdViewZoomOut</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standard-nézet</translation>
-    </message>
     <message>
       <source>Zoom Out</source>
       <translation>Kicsinyítés</translation>
@@ -9636,12 +9497,12 @@ Biztosan folytatja?
 </translation>
     </message>
     <message>
-      <source>Object dependencies</source>
-      <translation>Objektumfüggőségek</translation>
-    </message>
-    <message>
       <source>These items are selected for deletion, but are not in the active document.</source>
       <translation>Ezek az elemek törlésre vannak kijelölve, de nem az aktív dokumentumban.</translation>
+    </message>
+    <message>
+      <source>Object dependencies</source>
+      <translation>Objektumfüggőségek</translation>
     </message>
   </context>
   <context>
@@ -9662,36 +9523,20 @@ Biztosan folytatja?
       <translation>Aktuális mód</translation>
     </message>
     <message>
-      <source>Wireframe</source>
-      <translation>Drótváz</translation>
-    </message>
-    <message>
-      <source>Wireframe mode</source>
-      <translation>Drótváz mód</translation>
-    </message>
-    <message>
-      <source>Flat lines</source>
-      <translation>Sima vonalak</translation>
-    </message>
-    <message>
-      <source>Flat lines mode</source>
-      <translation>Sima vonal mód</translation>
-    </message>
-    <message>
-      <source>Shaded</source>
-      <translation>Árnyékolt</translation>
-    </message>
-    <message>
-      <source>Shaded mode</source>
-      <translation>Árnyékolt mód</translation>
-    </message>
-    <message>
       <source>Points</source>
       <translation>Pontok</translation>
     </message>
     <message>
       <source>Points mode</source>
       <translation>Pontozott mód</translation>
+    </message>
+    <message>
+      <source>Wireframe</source>
+      <translation>Drótváz</translation>
+    </message>
+    <message>
+      <source>Wireframe mode</source>
+      <translation>Drótváz mód</translation>
     </message>
     <message>
       <source>Hidden line</source>
@@ -9708,6 +9553,22 @@ Biztosan folytatja?
     <message>
       <source>No shading mode</source>
       <translation>Nincs árnyalás mód</translation>
+    </message>
+    <message>
+      <source>Shaded</source>
+      <translation>Árnyékolt</translation>
+    </message>
+    <message>
+      <source>Shaded mode</source>
+      <translation>Árnyékolt mód</translation>
+    </message>
+    <message>
+      <source>Flat lines</source>
+      <translation>Sima vonalak</translation>
+    </message>
+    <message>
+      <source>Flat lines mode</source>
+      <translation>Sima vonal mód</translation>
     </message>
   </context>
   <context>
@@ -9746,12 +9607,12 @@ Még mindig fojtatni szeretné?</translation>
   <context>
     <name>Std_Revert</name>
     <message>
-      <source>This will discard all the changes since last file save.</source>
-      <translation>Ez elveti az utolsó fájl mentéstől létrehozott összes módosítást.</translation>
-    </message>
-    <message>
       <source>Revert document</source>
       <translation>Dokumentum visszaállítás</translation>
+    </message>
+    <message>
+      <source>This will discard all the changes since last file save.</source>
+      <translation>Ez elveti az utolsó fájl mentéstől létrehozott összes módosítást.</translation>
     </message>
     <message>
       <source>Do you want to continue?</source>
@@ -9817,6 +9678,10 @@ Még mindig fojtatni szeretné?</translation>
       <translation>Alap nézetek</translation>
     </message>
     <message>
+      <source>Axonometric</source>
+      <translation>Axonometric</translation>
+    </message>
+    <message>
       <source>&amp;Stereo</source>
       <translation>&amp;Sztereo</translation>
     </message>
@@ -9869,45 +9734,8 @@ Még mindig fojtatni szeretné?</translation>
       <translation>Speciális  lehetőségek</translation>
     </message>
     <message>
-      <source>Axonometric</source>
-      <translation>Axonometric</translation>
-    </message>
-  </context>
-  <context>
-    <name>testClass</name>
-    <message>
-      <source>test</source>
-      <translation>teszt</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-size:20pt; font-weight:600;"&gt;iisTaskPanel&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;span style=" font-size:12pt;"&gt;Created for Qt 4.3.x&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;www.ii-system.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-size:20pt; font-weight:600;"&gt;iisTaskPanel&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;span style=" font-size:12pt;"&gt;Létrehozva ehhez: Qt 4.3.x&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;www.ii-system.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Choose the style of the Task Panel</source>
-      <translation>Válassza ki a feladat panel stílusát</translation>
-    </message>
-    <message>
-      <source>Default</source>
-      <translation>Alapértelmezett</translation>
-    </message>
-    <message>
-      <source>Windows XP</source>
-      <translation>Windows XP</translation>
+      <source>Link actions</source>
+      <translation>Hivatkozás műveletek</translation>
     </message>
   </context>
 </TS>

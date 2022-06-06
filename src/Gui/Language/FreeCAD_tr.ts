@@ -83,16 +83,16 @@
       <translation type="unfinished">Position</translation>
     </message>
     <message>
+      <source>Enum</source>
+      <translation>Numaralandırma</translation>
+    </message>
+    <message>
       <source>Base</source>
       <translation>Baz</translation>
     </message>
   </context>
   <context>
     <name>CmdTestConsoleOutput</name>
-    <message>
-      <source>Standard-Test</source>
-      <translation>Standart-Test</translation>
-    </message>
     <message>
       <source>Test console output</source>
       <translation>Test konsol çıktısı</translation>
@@ -101,20 +101,12 @@
   <context>
     <name>CmdViewMeasureClearAll</name>
     <message>
-      <source>Measure</source>
-      <translation>Ölçüm</translation>
-    </message>
-    <message>
       <source>Clear measurement</source>
       <translation>Ölçümü temizle</translation>
     </message>
   </context>
   <context>
     <name>CmdViewMeasureToggleAll</name>
-    <message>
-      <source>Measure</source>
-      <translation>Ölçüm</translation>
-    </message>
     <message>
       <source>Toggle measurement</source>
       <translation>Ölçümü aç / kapat</translation>
@@ -187,6 +179,10 @@
       <translation>Dönüştür</translation>
     </message>
     <message>
+      <source>Toggle array elements</source>
+      <translation type="unfinished">Toggle array elements</translation>
+    </message>
+    <message>
       <source>Link Transform</source>
       <translation>Bağlantı dönüşümü</translation>
     </message>
@@ -196,10 +192,77 @@
     </message>
   </context>
   <context>
+    <name>CommandGroup</name>
+    <message>
+      <source>File</source>
+      <translation>Dosya</translation>
+    </message>
+    <message>
+      <source>Edit</source>
+      <translation>Düzenle</translation>
+    </message>
+    <message>
+      <source>Help</source>
+      <translation>Yardım</translation>
+    </message>
+    <message>
+      <source>Link</source>
+      <translation>Link</translation>
+    </message>
+    <message>
+      <source>Tools</source>
+      <translation>Araçlar</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Görünüm</translation>
+    </message>
+    <message>
+      <source>Window</source>
+      <translation>Pencere</translation>
+    </message>
+    <message>
+      <source>Standard</source>
+      <translation>Standart</translation>
+    </message>
+    <message>
+      <source>Macros</source>
+      <translation>Makrolar</translation>
+    </message>
+    <message>
+      <source>Macro</source>
+      <translation>Makro</translation>
+    </message>
+    <message>
+      <source>Structure</source>
+      <translation>Yapı</translation>
+    </message>
+    <message>
+      <source>Standard-Test</source>
+      <translation>Standart-Test</translation>
+    </message>
+    <message>
+      <source>Standard-View</source>
+      <translation>Standart Görünüm</translation>
+    </message>
+    <message>
+      <source>TreeView</source>
+      <translation>AğaçGörünümü</translation>
+    </message>
+    <message>
+      <source>Measure</source>
+      <translation>Ölçüm</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
       <translation>Uzaytopu Hareketi</translation>
+    </message>
+    <message>
+      <source>Global Sensitivity:</source>
+      <translation>Genel hassasiyet:</translation>
     </message>
     <message>
       <source>Dominant Mode</source>
@@ -233,10 +296,6 @@
       <source>Reverse</source>
       <translation>Ters çevir</translation>
     </message>
-    <message>
-      <source>Global Sensitivity:</source>
-      <translation>Genel hassasiyet:</translation>
-    </message>
   </context>
   <context>
     <name>DlgExpressionInput</name>
@@ -249,16 +308,16 @@
       <translation>Sonuç:</translation>
     </message>
     <message>
-      <source>Ok</source>
-      <translation>Tamam</translation>
-    </message>
-    <message>
       <source>&amp;Clear</source>
       <translation>&amp;Temizle</translation>
     </message>
     <message>
       <source>Revert to last calculated value (as constant)</source>
       <translation>Son hesaplanan değere geri dön (sabit şekilde)</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>Tamam</translation>
     </message>
   </context>
   <context>
@@ -311,6 +370,10 @@
     <message>
       <source>none</source>
       <translation>hiçbiri</translation>
+    </message>
+    <message>
+      <source>Press a keyboard shortcut</source>
+      <translation type="unfinished">Press a keyboard shortcut</translation>
     </message>
   </context>
   <context>
@@ -413,13 +476,6 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
   </context>
   <context>
-    <name>Gui::Command</name>
-    <message>
-      <source>Standard</source>
-      <translation>Standart</translation>
-    </message>
-  </context>
-  <context>
     <name>Gui::ContainerDialog</name>
     <message>
       <source>&amp;OK</source>
@@ -463,28 +519,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Hakkında</translation>
     </message>
     <message>
-      <source>Revision number</source>
-      <translation>Sürüm numarası</translation>
-    </message>
-    <message>
       <source>Version</source>
       <translation>Sürüm</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>Tamam</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
+      <source>Revision number</source>
+      <translation>Sürüm numarası</translation>
     </message>
     <message>
       <source>Release date</source>
       <translation>Yayım tarihi</translation>
-    </message>
-    <message>
-      <source>Copy to clipboard</source>
-      <translation>Panoya kopyala</translation>
     </message>
     <message>
       <source>Operating system</source>
@@ -495,28 +539,24 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Kelime boyutu</translation>
     </message>
     <message>
+      <source>Copy to clipboard</source>
+      <translation>Panoya kopyala</translation>
+    </message>
+    <message>
       <source>License</source>
       <translation>Lisans</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>Tamam</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::AboutDialog</name>
-    <message>
-      <source>Libraries</source>
-      <translation>Kütüphaneler</translation>
-    </message>
-    <message>
-      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
-      <translation>Bu yazılım telif hakkı ve diğer fikri mülkiyet hakları ilgili sahiplerine ait açık kaynak bileşenleri kullanır:</translation>
-    </message>
-    <message>
-      <source>License</source>
-      <translation>Lisans</translation>
-    </message>
-    <message>
-      <source>Collection</source>
-      <translation>Koleksiyon</translation>
-    </message>
     <message>
       <source>Credits</source>
       <extracomment>Header for the Credits tab of the About screen</extracomment>
@@ -536,17 +576,44 @@ while doing a left or right click and move the mouse up or down</source>
       <extracomment>Header for the list of companies/organizations in the Credits list.</extracomment>
       <translation>Kuruluşlar</translation>
     </message>
+    <message>
+      <source>License</source>
+      <translation>Lisans</translation>
+    </message>
+    <message>
+      <source>Libraries</source>
+      <translation>Kütüphaneler</translation>
+    </message>
+    <message>
+      <source>This software uses open source components whose copyright and other proprietary rights belong to their respective owners:</source>
+      <translation>Bu yazılım telif hakkı ve diğer fikri mülkiyet hakları ilgili sahiplerine ait açık kaynak bileşenleri kullanır:</translation>
+    </message>
+    <message>
+      <source>Collection</source>
+      <translation>Koleksiyon</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::ApplicationCache</name>
+    <message>
+      <source>Cache directory</source>
+      <translation type="unfinished">Cache directory</translation>
+    </message>
+    <message>
+      <source>The cache directory %1 exceeds the size of %2.</source>
+      <translation type="unfinished">The cache directory %1 exceeds the size of %2.</translation>
+    </message>
+    <message>
+      <source>Do you want to clear it now?</source>
+      <translation type="unfinished">Do you want to clear it now?</translation>
+    </message>
+    <message>
+      <source>Warning: Please make sure that this is the only running %1 instance and that no documents are opened as this may result into data loss!</source>
+      <translation type="unfinished">Warning: Please make sure that this is the only running %1 instance and that no documents are opened as this may result into data loss!</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::ButtonModel</name>
-    <message>
-      <source>Button %1</source>
-      <translation>Düğme %1</translation>
-    </message>
-    <message>
-      <source>Out Of Range</source>
-      <translation>Aralığın dışında</translation>
-    </message>
     <message>
       <source> "</source>
       <translation> "</translation>
@@ -554,6 +621,14 @@ while doing a left or right click and move the mouse up or down</source>
     <message>
       <source>"</source>
       <translation>"</translation>
+    </message>
+    <message>
+      <source>Button %1</source>
+      <translation>Düğme %1</translation>
+    </message>
+    <message>
+      <source>Out Of Range</source>
+      <translation>Aralığın dışında</translation>
     </message>
   </context>
   <context>
@@ -598,12 +673,12 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Kırpma X</translation>
     </message>
     <message>
-      <source>Flip</source>
-      <translation>Çevir</translation>
-    </message>
-    <message>
       <source>Offset</source>
       <translation>Uzaklaşma</translation>
+    </message>
+    <message>
+      <source>Flip</source>
+      <translation>Çevir</translation>
     </message>
     <message>
       <source>Clipping Y</source>
@@ -644,16 +719,28 @@ while doing a left or right click and move the mouse up or down</source>
       <translation>Döner tablayı göster</translation>
     </message>
     <message>
+      <source>Angle</source>
+      <translation>Açı</translation>
+    </message>
+    <message>
+      <source>-90°</source>
+      <translation>-90°</translation>
+    </message>
+    <message>
+      <source>90°</source>
+      <translation>90°</translation>
+    </message>
+    <message>
       <source>Speed</source>
       <translation>Hız</translation>
     </message>
     <message>
-      <source>Maximum</source>
-      <translation>Maksimum</translation>
-    </message>
-    <message>
       <source>Minimum</source>
       <translation>minimum</translation>
+    </message>
+    <message>
+      <source>Maximum</source>
+      <translation>Maksimum</translation>
     </message>
     <message>
       <source>Fullscreen</source>
@@ -668,28 +755,16 @@ while doing a left or right click and move the mouse up or down</source>
       <translation> s</translation>
     </message>
     <message>
-      <source>Angle</source>
-      <translation>Açı</translation>
-    </message>
-    <message>
-      <source>90°</source>
-      <translation>90°</translation>
-    </message>
-    <message>
-      <source>-90°</source>
-      <translation>-90°</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Oynat</translation>
     </message>
     <message>
-      <source>Stop</source>
-      <translation>Dur</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Kapat</translation>
+    </message>
+    <message>
+      <source>Stop</source>
+      <translation>Dur</translation>
     </message>
   </context>
   <context>
@@ -764,24 +839,24 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Yetkilendirme</translation>
     </message>
     <message>
-      <source>Password:</source>
-      <translation>Şifre:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Username:</source>
-      <translation>Kullanıcı Adı:</translation>
-    </message>
-    <message>
       <source>Site:</source>
       <translation>Site:</translation>
     </message>
     <message>
       <source>%1 at %2</source>
       <translation>%2 de %1</translation>
+    </message>
+    <message>
+      <source>Username:</source>
+      <translation>Kullanıcı Adı:</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Şifre:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
@@ -811,6 +886,32 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
     </message>
   </context>
   <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePack</name>
+    <message>
+      <source>Create New Preference Pack</source>
+      <translation type="unfinished">Create New Preference Pack</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Isim</translation>
+    </message>
+    <message>
+      <source>Property group templates</source>
+      <translation type="unfinished">Property group templates</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgCreateNewPreferencePackImp</name>
+    <message>
+      <source>Pack already exists</source>
+      <translation type="unfinished">Pack already exists</translation>
+    </message>
+    <message>
+      <source>A preference pack with that name already exists. Do you want to overwrite it?</source>
+      <translation type="unfinished">A preference pack with that name already exists. Do you want to overwrite it?</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::Dialog::DlgCustomActions</name>
     <message>
       <source>Macros</source>
@@ -825,32 +926,32 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Makro:</translation>
     </message>
     <message>
-      <source>...</source>
-      <translation>...</translation>
-    </message>
-    <message>
-      <source>Pixmap</source>
-      <translation>Benek haritası</translation>
-    </message>
-    <message>
-      <source>Accelerator:</source>
-      <translation>Hızlandırıcı:</translation>
-    </message>
-    <message>
-      <source>What's this:</source>
-      <translation>Bu nedir:</translation>
-    </message>
-    <message>
-      <source>Status text:</source>
-      <translation>Durum metni:</translation>
+      <source>Menu text:</source>
+      <translation>Menü metni:</translation>
     </message>
     <message>
       <source>Tool tip:</source>
       <translation>Araçlar için ipucu:</translation>
     </message>
     <message>
-      <source>Menu text:</source>
-      <translation>Menü metni:</translation>
+      <source>Status text:</source>
+      <translation>Durum metni:</translation>
+    </message>
+    <message>
+      <source>What's this:</source>
+      <translation>Bu nedir:</translation>
+    </message>
+    <message>
+      <source>Accelerator:</source>
+      <translation>Hızlandırıcı:</translation>
+    </message>
+    <message>
+      <source>Pixmap</source>
+      <translation>Benek haritası</translation>
+    </message>
+    <message>
+      <source>...</source>
+      <translation>...</translation>
     </message>
     <message>
       <source>Add</source>
@@ -874,14 +975,6 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
     <message>
       <source>Macros</source>
       <translation>Makrolar</translation>
-    </message>
-    <message>
-      <source>No macro</source>
-      <translation>Makro yok</translation>
-    </message>
-    <message>
-      <source>No macros found.</source>
-      <translation>Hiç makro bulunamadı.</translation>
     </message>
     <message>
       <source>Macro not found</source>
@@ -949,10 +1042,6 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Klavye</translation>
     </message>
     <message>
-      <source>Description:</source>
-      <translation>Açıklama:</translation>
-    </message>
-    <message>
       <source>&amp;Category:</source>
       <translation>Kategori:</translation>
     </message>
@@ -981,6 +1070,10 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Alt+A</translation>
     </message>
     <message>
+      <source>Clear</source>
+      <translation>Temizle</translation>
+    </message>
+    <message>
       <source>&amp;Reset</source>
       <translation>&amp;Sıfırla</translation>
     </message>
@@ -997,12 +1090,12 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Alt+S</translation>
     </message>
     <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
+      <source>Description:</source>
+      <translation>Açıklama:</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Temizle</translation>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
@@ -1024,12 +1117,12 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Birden fazla tanımlanmış kısayol</translation>
     </message>
     <message>
-      <source>Already defined shortcut</source>
-      <translation>Önceden tanımlanmış kısayol</translation>
-    </message>
-    <message>
       <source>The shortcut '%1' is defined more than once. This could result in unexpected behaviour.</source>
       <translation>Kısayol '%1' birden fazla tanımlanmış. Bu beklenmeyen davranışlara neden olabilir.</translation>
+    </message>
+    <message>
+      <source>Already defined shortcut</source>
+      <translation>Önceden tanımlanmış kısayol</translation>
     </message>
     <message>
       <source>The shortcut '%1' is already assigned to '%2'.</source>
@@ -1054,8 +1147,16 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Araç çubukları</translation>
     </message>
     <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt; &lt;body style="white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt; &lt;p style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt; &lt;span style="font-weight:600;"&gt; Not:&lt;/span&gt; Değişiklikler,bir sonraki sefer uygun tezgah yükledikten sonra aktif hale gelecek&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>New...</source>
+      <translation>Yeni...</translation>
+    </message>
+    <message>
+      <source>Rename...</source>
+      <translation>Yeniden adlandır...</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Sil</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -1074,14 +1175,6 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>&lt;b&gt;Seçili öğeyi bir düzey yukarıya taşı&lt;/b&gt;&lt;p&gt;Bu ayrıca üst öğe düzeyini değiştirecek.&lt;/p&gt;</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Aşağı taşı</translation>
-    </message>
-    <message>
-      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
-      <translation>&lt;b&gt;Seçili öğeyi aşağı taşı.&lt;/b&gt;&lt;p&gt;Öğe hiyerarşi düzeyi içinde taşınacak.&lt;/p&gt;</translation>
-    </message>
-    <message>
       <source>Move up</source>
       <translation>Yukarı taşı</translation>
     </message>
@@ -1090,16 +1183,20 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>&lt;b&gt;Seçili öğeyi aşağı taşı.&lt;/b&gt;&lt;p&gt;Öğe hiyerarşi düzeyi içinde taşınacak.&lt;/p&gt;</translation>
     </message>
     <message>
-      <source>New...</source>
-      <translation>Yeni...</translation>
+      <source>Move down</source>
+      <translation>Aşağı taşı</translation>
     </message>
     <message>
-      <source>Rename...</source>
-      <translation>Yeniden adlandır...</translation>
+      <source>&lt;b&gt;Move the selected item down.&lt;/b&gt;&lt;p&gt;The item will be moved within the hierarchy level.&lt;/p&gt;</source>
+      <translation>&lt;b&gt;Seçili öğeyi aşağı taşı.&lt;/b&gt;&lt;p&gt;Öğe hiyerarşi düzeyi içinde taşınacak.&lt;/p&gt;</translation>
     </message>
     <message>
-      <source>Delete</source>
-      <translation>Sil</translation>
+      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt;&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt;&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-weight:600;"&gt;Note:&lt;/span&gt; The changes become active the next time you load the appropriate workbench&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;/head&gt; &lt;body style="white-space: pre-wrap; font-family:MS Shell Dlg 2; font-size:7.8pt; font-weight:400; font-style:normal; text-decoration:none;"&gt; &lt;p style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt; &lt;span style="font-weight:600;"&gt; Not:&lt;/span&gt; Değişiklikler,bir sonraki sefer uygun tezgah yükledikten sonra aktif hale gelecek&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Global</source>
+      <translation>Küresel</translation>
     </message>
     <message>
       <source>Icon</source>
@@ -1112,6 +1209,10 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
     <message>
       <source>&lt;Separator&gt;</source>
       <translation>&lt;Ayraç&gt;</translation>
+    </message>
+    <message>
+      <source>%1 module not loaded</source>
+      <translation>%1 modül yüklenmedi</translation>
     </message>
     <message>
       <source>New toolbar</source>
@@ -1136,14 +1237,6 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
     <message>
       <source/>
       <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Global</source>
-      <translation>Küresel</translation>
-    </message>
-    <message>
-      <source>%1 module not loaded</source>
-      <translation>%1 modül yüklenmedi</translation>
     </message>
   </context>
   <context>
@@ -1175,6 +1268,10 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
   <context>
     <name>Gui::Dialog::DlgCustomizeSpaceball</name>
     <message>
+      <source>Spaceball Buttons</source>
+      <translation>Uzaybol Hareketi</translation>
+    </message>
+    <message>
       <source>No Spaceball Present</source>
       <translation>Spaceball yok</translation>
     </message>
@@ -1183,16 +1280,12 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Düğmeler</translation>
     </message>
     <message>
-      <source>Print Reference</source>
-      <translation>Başvuruyu yazdır</translation>
-    </message>
-    <message>
-      <source>Spaceball Buttons</source>
-      <translation>Uzaybol Hareketi</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Sıfırla</translation>
+    </message>
+    <message>
+      <source>Print Reference</source>
+      <translation>Başvuruyu yazdır</translation>
     </message>
   </context>
   <context>
@@ -1202,20 +1295,16 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Görüntü özellikleri</translation>
     </message>
     <message>
-      <source>Display</source>
-      <translation>Ekran</translation>
+      <source>Viewing mode</source>
+      <translation>Görüntüleme kipi</translation>
     </message>
     <message>
-      <source>Transparency:</source>
-      <translation>Şeffaflık:</translation>
+      <source>Document window:</source>
+      <translation>Belge penceresi:</translation>
     </message>
     <message>
-      <source>Line width:</source>
-      <translation>Çizgi genişliği:</translation>
-    </message>
-    <message>
-      <source>Point size:</source>
-      <translation>Nokta boyutu:</translation>
+      <source>Plot mode:</source>
+      <translation>Çizim kipi:</translation>
     </message>
     <message>
       <source>Material</source>
@@ -1226,36 +1315,40 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>...</translation>
     </message>
     <message>
-      <source>Viewing mode</source>
-      <translation>Görüntüleme kipi</translation>
-    </message>
-    <message>
-      <source>Plot mode:</source>
-      <translation>Çizim kipi:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Line transparency:</source>
-      <translation>Çizgi şeffaflığı:</translation>
-    </message>
-    <message>
-      <source>Line color:</source>
-      <translation>Çizgi rengi:</translation>
+      <source>Color plot:</source>
+      <translation>Renkli çizim:</translation>
     </message>
     <message>
       <source>Shape color:</source>
       <translation>Şekil rengi:</translation>
     </message>
     <message>
-      <source>Color plot:</source>
-      <translation>Renkli çizim:</translation>
+      <source>Line color:</source>
+      <translation>Çizgi rengi:</translation>
     </message>
     <message>
-      <source>Document window:</source>
-      <translation>Belge penceresi:</translation>
+      <source>Display</source>
+      <translation>Ekran</translation>
+    </message>
+    <message>
+      <source>Point size:</source>
+      <translation>Nokta boyutu:</translation>
+    </message>
+    <message>
+      <source>Line width:</source>
+      <translation>Çizgi genişliği:</translation>
+    </message>
+    <message>
+      <source>Transparency:</source>
+      <translation>Şeffaflık:</translation>
+    </message>
+    <message>
+      <source>Line transparency:</source>
+      <translation>Çizgi şeffaflığı:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
@@ -1360,8 +1453,20 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Seçenekler</translation>
     </message>
     <message>
+      <source>Code lines will be numbered</source>
+      <translation>Kod satırları numaralandırılacak</translation>
+    </message>
+    <message>
       <source>Enable line numbers</source>
       <translation>Satır numaralarını etkinleştir</translation>
+    </message>
+    <message>
+      <source>The cursor shape will be a block</source>
+      <translation type="unfinished">The cursor shape will be a block</translation>
+    </message>
+    <message>
+      <source>Enable block cursor</source>
+      <translation type="unfinished">Enable block cursor</translation>
     </message>
     <message>
       <source>Enable folding</source>
@@ -1372,44 +1477,16 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Girinti</translation>
     </message>
     <message>
-      <source>Insert spaces</source>
-      <translation>Boşluk ekle</translation>
-    </message>
-    <message>
       <source>Tab size:</source>
       <translation>Sekme boyutu:</translation>
     </message>
     <message>
-      <source>Indent size:</source>
-      <translation>Girinti boyutu:</translation>
-    </message>
-    <message>
-      <source>Keep tabs</source>
-      <translation>Sekmeleri koru</translation>
-    </message>
-    <message>
-      <source>Family:</source>
-      <translation>Aile:</translation>
-    </message>
-    <message>
-      <source>Size:</source>
-      <translation>Boyut:</translation>
-    </message>
-    <message>
-      <source>Preview:</source>
-      <translation>Önizleme:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
-      <translation>&lt;Tab&gt; a basmak, tanımlı talep boyutu miktarını ekleyecek</translation>
-    </message>
-    <message>
       <source>Tabulator raster (how many spaces)</source>
       <translation>Sekme ızgarası boşluğa göre</translation>
+    </message>
+    <message>
+      <source>Indent size:</source>
+      <translation>Girinti boyutu:</translation>
     </message>
     <message>
       <source>How many spaces will be inserted when pressing &lt;Tab&gt;</source>
@@ -1420,28 +1497,52 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>&lt;Tab&gt; tuşuna bastığınızda tanımlı sekme boyutunda bir sekme durağı ekleyecek</translation>
     </message>
     <message>
-      <source>Display items</source>
-      <translation>Ögeleri göster</translation>
+      <source>Keep tabs</source>
+      <translation>Sekmeleri koru</translation>
     </message>
     <message>
-      <source>Font size to be used for selected code type</source>
-      <translation>Seçilen kod türü için kullanılacak yazı tipi boyutu</translation>
+      <source>Pressing &lt;Tab&gt; will insert amount of defined indent size</source>
+      <translation>&lt;Tab&gt; a basmak, tanımlı talep boyutu miktarını ekleyecek</translation>
+    </message>
+    <message>
+      <source>Insert spaces</source>
+      <translation>Boşluk ekle</translation>
+    </message>
+    <message>
+      <source>Display items</source>
+      <translation>Ögeleri göster</translation>
     </message>
     <message>
       <source>Color and font settings will be applied to selected type</source>
       <translation>Renk ve yazı tipi ayarları seçilen türe uygulanacak</translation>
     </message>
     <message>
+      <source>Family:</source>
+      <translation>Aile:</translation>
+    </message>
+    <message>
       <source>Font family to be used for selected code type</source>
       <translation>Seçilen kod türü için kullanılacak yazı tipi ailesi</translation>
+    </message>
+    <message>
+      <source>Size:</source>
+      <translation>Boyut:</translation>
+    </message>
+    <message>
+      <source>Font size to be used for selected code type</source>
+      <translation>Seçilen kod türü için kullanılacak yazı tipi boyutu</translation>
     </message>
     <message>
       <source>Color:</source>
       <translation>Renk:</translation>
     </message>
     <message>
-      <source>Code lines will be numbered</source>
-      <translation>Kod satırları numaralandırılacak</translation>
+      <source>Preview:</source>
+      <translation>Önizleme:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
@@ -1449,18 +1550,6 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
     <message>
       <source>General</source>
       <translation>Genel</translation>
-    </message>
-    <message>
-      <source>Start up</source>
-      <translation>Başlangıç</translation>
-    </message>
-    <message>
-      <source>Enable splash screen at start up</source>
-      <translation>Giriş ekranını başlangıçta etkinleştir</translation>
-    </message>
-    <message>
-      <source>Auto load module after start up:</source>
-      <translation>Başlayınca kitaplığı otomatik çalıştır:</translation>
     </message>
     <message>
       <source>Language</source>
@@ -1471,36 +1560,68 @@ Eğer bu işaretlenmeyecekse, özelliğe benzersiz bir ad verilmelidir ve böyle
       <translation>Dili değiştir:</translation>
     </message>
     <message>
+      <source>Language of the application's user interface</source>
+      <translation>Uygulamanın kullanıcı arayüzü dili</translation>
+    </message>
+    <message>
+      <source>Number format:</source>
+      <translation type="unfinished">Number format:</translation>
+    </message>
+    <message>
+      <source>Operating system</source>
+      <translation>İşletim Sistemi</translation>
+    </message>
+    <message>
+      <source>Selected language</source>
+      <translation type="unfinished">Selected language</translation>
+    </message>
+    <message>
+      <source>C/POSIX</source>
+      <translation type="unfinished">C/POSIX</translation>
+    </message>
+    <message>
+      <source>If enabled, numerical keypad decimal separator will be substituted with locale separator</source>
+      <translation type="unfinished">If enabled, numerical keypad decimal separator will be substituted with locale separator</translation>
+    </message>
+    <message>
+      <source>Substitute decimal separator (needs restart)</source>
+      <translation type="unfinished">Substitute decimal separator (needs restart)</translation>
+    </message>
+    <message>
+      <source>Preference packs</source>
+      <translation type="unfinished">Preference packs</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>Isim</translation>
+    </message>
+    <message>
+      <source>Type</source>
+      <translation>Türü</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Yükle</translation>
+    </message>
+    <message>
+      <source>Save new...</source>
+      <translation type="unfinished">Save new...</translation>
+    </message>
+    <message>
+      <source>Manage...</source>
+      <translation type="unfinished">Manage...</translation>
+    </message>
+    <message>
+      <source>Revert...</source>
+      <translation type="unfinished">Revert...</translation>
+    </message>
+    <message>
       <source>Main window</source>
       <translation>Ana pencere</translation>
     </message>
     <message>
       <source>Size of recent file list</source>
       <translation>Son kullanılan dosya listesi boyutu</translation>
-    </message>
-    <message>
-      <source>Size of toolbar icons:</source>
-      <translation>Araç çubuğu simgeleri Boyutu:</translation>
-    </message>
-    <message>
-      <source>Enable tiled background</source>
-      <translation>Kiremitli arka plan etkinleştirmek</translation>
-    </message>
-    <message>
-      <source>Style sheet:</source>
-      <translation>Stil Sayfası:</translation>
-    </message>
-    <message>
-      <source>Python console</source>
-      <translation>Python konsolu</translation>
-    </message>
-    <message>
-      <source>Enable word wrap</source>
-      <translation>Sözcük kaydırmayı etkinleştir</translation>
-    </message>
-    <message>
-      <source>Language of the application's user interface</source>
-      <translation>Uygulamanın kullanıcı arayüzü dili</translation>
     </message>
     <message>
       <source>How many files should be listed in recent files list</source>
@@ -1513,8 +1634,28 @@ See the FreeCAD Wiki for details about the image.</source>
 Resimle ilgili ayrıntılar için FreeCAD Wiki'ye bakın.</translation>
     </message>
     <message>
+      <source>Enable tiled background</source>
+      <translation>Kiremitli arka plan etkinleştirmek</translation>
+    </message>
+    <message>
+      <source>The text cursor will be blinking</source>
+      <translation type="unfinished">The text cursor will be blinking</translation>
+    </message>
+    <message>
+      <source>Enable cursor blinking</source>
+      <translation type="unfinished">Enable cursor blinking</translation>
+    </message>
+    <message>
+      <source>Style sheet:</source>
+      <translation>Stil Sayfası:</translation>
+    </message>
+    <message>
       <source>Style sheet how user interface will look like</source>
       <translation>Sayfayı, kullanıcı arayüzüne benzer şekilde tasarla</translation>
+    </message>
+    <message>
+      <source>Size of toolbar icons:</source>
+      <translation>Araç çubuğu simgeleri Boyutu:</translation>
     </message>
     <message>
       <source>Choose your preference for toolbar icon size. You can adjust
@@ -1539,12 +1680,12 @@ boyutunuza veya kişisel zevkinize göre ayarlayabilirsiniz</translation>
 'Hepsi': hem birleşik hem ayrı panellerin üçü de kalsın.</translation>
     </message>
     <message>
-      <source>A Splash screen is a small loading window that is shown
-when FreeCAD is launching. If this option is checked, FreeCAD will
-display the splash screen</source>
-      <translation>Karşılama ekranı, FreeCAD çalıştığında gözüken
-küçük bir yükleme penceresidir. Bu özellik seçiliyse, FreeCAD
-karşılama ekranını gösterecektir</translation>
+      <source>Start up</source>
+      <translation>Başlangıç</translation>
+    </message>
+    <message>
+      <source>Auto load module after start up:</source>
+      <translation>Başlayınca kitaplığı otomatik çalıştır:</translation>
     </message>
     <message>
       <source>Choose which workbench will be activated and shown
@@ -1553,17 +1694,23 @@ after FreeCAD launches</source>
 etkinleştirilip gösterileceğini seçin</translation>
     </message>
     <message>
-      <source>Words will be wrapped when they exceed available
-horizontal space in Python console</source>
-      <translation>Kelimeler, Python uçbirimindeki kullanılabilir yatay 
-boşluğu aştığında kaydırılacak</translation>
+      <source>A Splash screen is a small loading window that is shown
+when FreeCAD is launching. If this option is checked, FreeCAD will
+display the splash screen</source>
+      <translation>Karşılama ekranı, FreeCAD çalıştığında gözüken
+küçük bir yükleme penceresidir. Bu özellik seçiliyse, FreeCAD
+karşılama ekranını gösterecektir</translation>
+    </message>
+    <message>
+      <source>Enable splash screen at start up</source>
+      <translation>Giriş ekranını başlangıçta etkinleştir</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgGeneralImp</name>
     <message>
-      <source>No style sheet</source>
-      <translation>Stil Sayfası</translation>
+      <source>Manage preference packs</source>
+      <translation type="unfinished">Manage preference packs</translation>
     </message>
     <message>
       <source>Small (%1px)</source>
@@ -1597,6 +1744,26 @@ boşluğu aştığında kaydırılacak</translation>
       <source>Both</source>
       <translation>İkisi</translation>
     </message>
+    <message>
+      <source>No style sheet</source>
+      <translation>Stil Sayfası</translation>
+    </message>
+    <message>
+      <source>Preference Pack Name</source>
+      <translation type="unfinished">Preference Pack Name</translation>
+    </message>
+    <message>
+      <source>Tags</source>
+      <translation>Etiketler</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Uygula</translation>
+    </message>
+    <message>
+      <source>Apply the %1 preference pack</source>
+      <translation type="unfinished">Apply the %1 preference pack</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgInputDialog</name>
@@ -1627,6 +1794,14 @@ boşluğu aştığında kaydırılacak</translation>
       <translation>Makro adı:</translation>
     </message>
     <message>
+      <source>User macros</source>
+      <translation>Kullanıcı makroları</translation>
+    </message>
+    <message>
+      <source>System macros</source>
+      <translation>Sistem makroları</translation>
+    </message>
+    <message>
       <source>Execute</source>
       <translation>Çalıştır</translation>
     </message>
@@ -1647,18 +1822,6 @@ boşluğu aştığında kaydırılacak</translation>
       <translation>Düzenle</translation>
     </message>
     <message>
-      <source>User macros</source>
-      <translation>Kullanıcı makroları</translation>
-    </message>
-    <message>
-      <source>System macros</source>
-      <translation>Sistem makroları</translation>
-    </message>
-    <message>
-      <source>User macros location:</source>
-      <translation>Kullanıcı Makro yeri:</translation>
-    </message>
-    <message>
       <source>Rename</source>
       <translation>Yeniden Adlandır</translation>
     </message>
@@ -1667,12 +1830,24 @@ boşluğu aştığında kaydırılacak</translation>
       <translation>Çoğalt</translation>
     </message>
     <message>
-      <source>Addons...</source>
-      <translation>Eklentiler...</translation>
+      <source>Launch a guide on how to set up a macro in a custom global toolbar.</source>
+      <translation type="unfinished">Launch a guide on how to set up a macro in a custom global toolbar.</translation>
     </message>
     <message>
       <source>Toolbar</source>
       <translation>Araç çubuğu</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager where macros created by the community and other addons can be downloaded.</source>
+      <translation type="unfinished">Open Addon Manager where macros created by the community and other addons can be downloaded.</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>İndir</translation>
+    </message>
+    <message>
+      <source>User macros location:</source>
+      <translation>Kullanıcı Makro yeri:</translation>
     </message>
   </context>
   <context>
@@ -1680,6 +1855,10 @@ boşluğu aştığında kaydırılacak</translation>
     <message>
       <source>Macros</source>
       <translation>Makrolar</translation>
+    </message>
+    <message>
+      <source>Read-only</source>
+      <translation>Salt okunur</translation>
     </message>
     <message>
       <source>Macro file</source>
@@ -1700,14 +1879,6 @@ This file already exists.</source>
 Bu dosya zaten var.</translation>
     </message>
     <message>
-      <source>Delete macro</source>
-      <translation>Makroyu sil</translation>
-    </message>
-    <message>
-      <source>Do you really want to delete the macro '%1'?</source>
-      <translation>Gerçekten '%1' makrosunu silmek istiyor musunuz?</translation>
-    </message>
-    <message>
       <source>Cannot create file</source>
       <translation>Dosya oluşturulamadı</translation>
     </message>
@@ -1716,46 +1887,12 @@ Bu dosya zaten var.</translation>
       <translation>'%1' dosyası oluşturulamadı.</translation>
     </message>
     <message>
-      <source>Read-only</source>
-      <translation>Salt okunur</translation>
+      <source>Delete macro</source>
+      <translation>Makroyu sil</translation>
     </message>
     <message>
-      <source>Renaming Macro File</source>
-      <translation>Makro dosya yeniden adlandırma</translation>
-    </message>
-    <message>
-      <source>Enter new name:</source>
-      <translation>Yeni adı gir:</translation>
-    </message>
-    <message>
-      <source>'%1'
- already exists.</source>
-      <translation>'%1' 
-zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Rename Failed</source>
-      <translation>Yeniden adlandırma başarısız oldu</translation>
-    </message>
-    <message>
-      <source>Failed to rename to '%1'.
-Perhaps a file permission error?</source>
-      <translation>'%1' yeniden adlandıramadı.
-Belki de bir dosya yetki hatası?</translation>
-    </message>
-    <message>
-      <source>Duplicate Macro</source>
-      <translation>Makroyu Kopyala</translation>
-    </message>
-    <message>
-      <source>Duplicate Failed</source>
-      <translation>Kopyalama Başarısız</translation>
-    </message>
-    <message>
-      <source>Failed to duplicate to '%1'.
-Perhaps a file permission error?</source>
-      <translation>'%1'olarak çoğaltılamadı. 
-Belki bir dosya izni hatası vardır?</translation>
+      <source>Do you really want to delete the macro '%1'?</source>
+      <translation>Gerçekten '%1' makrosunu silmek istiyor musunuz?</translation>
     </message>
     <message>
       <source>Do not show again</source>
@@ -1799,6 +1936,44 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
       <source>Walkthrough instructions: Click New, then right arrow (-&gt;) button, then Close.</source>
       <translation>Gidişat Talimatları: Yeni' ye, sonra sağ oka (-&gt;), ardından Kapat' a tıklayın.</translation>
     </message>
+    <message>
+      <source>Renaming Macro File</source>
+      <translation>Makro dosya yeniden adlandırma</translation>
+    </message>
+    <message>
+      <source>Enter new name:</source>
+      <translation>Yeni adı gir:</translation>
+    </message>
+    <message>
+      <source>'%1'
+ already exists.</source>
+      <translation>'%1' 
+zaten mevcut.</translation>
+    </message>
+    <message>
+      <source>Rename Failed</source>
+      <translation>Yeniden adlandırma başarısız oldu</translation>
+    </message>
+    <message>
+      <source>Failed to rename to '%1'.
+Perhaps a file permission error?</source>
+      <translation>'%1' yeniden adlandıramadı.
+Belki de bir dosya yetki hatası?</translation>
+    </message>
+    <message>
+      <source>Duplicate Macro</source>
+      <translation>Makroyu Kopyala</translation>
+    </message>
+    <message>
+      <source>Duplicate Failed</source>
+      <translation>Kopyalama Başarısız</translation>
+    </message>
+    <message>
+      <source>Failed to duplicate to '%1'.
+Perhaps a file permission error?</source>
+      <translation>'%1'olarak çoğaltılamadı. 
+Belki bir dosya izni hatası vardır?</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecord</name>
@@ -1809,14 +1984,6 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
     <message>
       <source>Macro name:</source>
       <translation>Makro adı:</translation>
-    </message>
-    <message>
-      <source>Stop</source>
-      <translation>Dur</translation>
-    </message>
-    <message>
-      <source>Cancel</source>
-      <translation>İptal</translation>
     </message>
     <message>
       <source>Macro path:</source>
@@ -1830,6 +1997,14 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
       <source>Record</source>
       <translation>Kayıt</translation>
     </message>
+    <message>
+      <source>Stop</source>
+      <translation>Dur</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>İptal</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgMacroRecordImp</name>
@@ -1842,6 +2017,10 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
       <translation>Önce kaydedilecek yeri belirleyin.</translation>
     </message>
     <message>
+      <source>The macro directory doesn't exist. Please, choose another one.</source>
+      <translation>Makro dizini mevcut değil. Lütfen, başla bir tane seçin.</translation>
+    </message>
+    <message>
       <source>Existing macro</source>
       <translation>Varolan makro</translation>
     </message>
@@ -1850,16 +2029,12 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
       <translation>'%1' makrosu zaten var. Üzerine yazmak ister misiniz?</translation>
     </message>
     <message>
-      <source>The macro directory doesn't exist. Please, choose another one.</source>
-      <translation>Makro dizini mevcut değil. Lütfen, başla bir tane seçin.</translation>
+      <source>You have no write permission for the directory. Please, choose another one.</source>
+      <translation>Dizin için yazma izniniz yok. Lütfen başka birini seçiniz.</translation>
     </message>
     <message>
       <source>Choose macro directory</source>
       <translation>Makro dizini seçiniz</translation>
-    </message>
-    <message>
-      <source>You have no write permission for the directory. Please, choose another one.</source>
-      <translation>Dizin için yazma izniniz yok. Lütfen başka birini seçiniz.</translation>
     </message>
   </context>
   <context>
@@ -1873,8 +2048,16 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
       <translation>Malzeme</translation>
     </message>
     <message>
+      <source>Ambient color:</source>
+      <translation>Ortam rengi:</translation>
+    </message>
+    <message>
       <source>Diffuse color:</source>
       <translation>Yayılan ışık:</translation>
+    </message>
+    <message>
+      <source>Emissive color:</source>
+      <translation>Yayılan renk:</translation>
     </message>
     <message>
       <source>Specular color:</source>
@@ -1889,16 +2072,8 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
       <translation>%</translation>
     </message>
     <message>
-      <source>Ambient color:</source>
-      <translation>Ortam rengi:</translation>
-    </message>
-    <message>
       <source/>
       <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Emissive color:</source>
-      <translation>Yayılan renk:</translation>
     </message>
   </context>
   <context>
@@ -1919,6 +2094,10 @@ Not: Değişiklikleriniz, sonraki tezgah geçişinizde uygulanacak
   <context>
     <name>Gui::Dialog::DlgOnlineHelpImp</name>
     <message>
+      <source>HTML files</source>
+      <translation>HTML Dosyaları</translation>
+    </message>
+    <message>
       <source>Access denied</source>
       <translation>Erişim engellendi</translation>
     </message>
@@ -1930,32 +2109,12 @@ Specify another directory, please.</source>
 
 Lütfen başka bir dizin belirtin.</translation>
     </message>
-    <message>
-      <source>HTML files</source>
-      <translation>HTML Dosyaları</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgParameter</name>
     <message>
       <source>Parameter Editor</source>
       <translation>Parametre Düzenleyicisi</translation>
-    </message>
-    <message>
-      <source>Save to disk</source>
-      <translation>Diske kaydet</translation>
-    </message>
-    <message>
-      <source>Alt+C</source>
-      <translation>Alt + C</translation>
-    </message>
-    <message>
-      <source>&amp;Close</source>
-      <translation>Kapat</translation>
-    </message>
-    <message>
-      <source>Find...</source>
-      <translation>Bul...</translation>
     </message>
     <message>
       <source>Sorted</source>
@@ -1972,6 +2131,22 @@ Lütfen başka bir dizin belirtin.</translation>
     <message>
       <source>Search Group</source>
       <translation>Arama Grubu</translation>
+    </message>
+    <message>
+      <source>Find...</source>
+      <translation>Bul...</translation>
+    </message>
+    <message>
+      <source>Save to disk</source>
+      <translation>Diske kaydet</translation>
+    </message>
+    <message>
+      <source>Alt+C</source>
+      <translation>Alt + C</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>Kapat</translation>
     </message>
   </context>
   <context>
@@ -2036,8 +2211,16 @@ Lütfen başka bir dizin belirtin.</translation>
       <translation>Değer</translation>
     </message>
     <message>
+      <source>System parameter</source>
+      <translation>Sistem parametresi</translation>
+    </message>
+    <message>
       <source>User parameter</source>
       <translation>Kullanıcı parametresi</translation>
+    </message>
+    <message>
+      <source>Search Group</source>
+      <translation>Arama Grubu</translation>
     </message>
     <message>
       <source>Invalid input</source>
@@ -2047,13 +2230,47 @@ Lütfen başka bir dizin belirtin.</translation>
       <source>Invalid key name '%1'</source>
       <translation>Geçersiz anahtar adı '%1'</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagement</name>
     <message>
-      <source>System parameter</source>
-      <translation>Sistem parametresi</translation>
+      <source>Manage Preference Packs</source>
+      <translation type="unfinished">Manage Preference Packs</translation>
     </message>
     <message>
-      <source>Search Group</source>
-      <translation>Arama Grubu</translation>
+      <source>Open Addon Manager...</source>
+      <translation type="unfinished">Open Addon Manager...</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgPreferencePackManagementImp</name>
+    <message>
+      <source>User-Saved Preference Packs</source>
+      <translation type="unfinished">User-Saved Preference Packs</translation>
+    </message>
+    <message>
+      <source>Built-In Preference Packs</source>
+      <translation type="unfinished">Built-In Preference Packs</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of built-in preference pack '%1'</source>
+      <translation type="unfinished">Toggle visibility of built-in preference pack '%1'</translation>
+    </message>
+    <message>
+      <source>Delete user-saved preference pack '%1'</source>
+      <translation type="unfinished">Delete user-saved preference pack '%1'</translation>
+    </message>
+    <message>
+      <source>Toggle visibility of Addon preference pack '%1' (use Addon Manager to permanently remove)</source>
+      <translation type="unfinished">Toggle visibility of Addon preference pack '%1' (use Addon Manager to permanently remove)</translation>
+    </message>
+    <message>
+      <source>Delete saved preference pack?</source>
+      <translation type="unfinished">Delete saved preference pack?</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete the preference pack named '%1'? This cannot be undone.</source>
+      <translation type="unfinished">Are you sure you want to delete the preference pack named '%1'? This cannot be undone.</translation>
     </message>
   </context>
   <context>
@@ -2070,10 +2287,6 @@ Lütfen başka bir dizin belirtin.</translation>
   <context>
     <name>Gui::Dialog::DlgPreferencesImp</name>
     <message>
-      <source>Wrong parameter</source>
-      <translation>Yanlış parametre</translation>
-    </message>
-    <message>
       <source>Clear user settings</source>
       <translation>Açık kullanıcı ayarları</translation>
     </message>
@@ -2084,6 +2297,10 @@ Lütfen başka bir dizin belirtin.</translation>
     <message>
       <source>If you agree all your settings will be cleared.</source>
       <translation>Kabul ederseniz tüm ayarları temizlenir.</translation>
+    </message>
+    <message>
+      <source>Wrong parameter</source>
+      <translation>Yanlış parametre</translation>
     </message>
   </context>
   <context>
@@ -2101,40 +2318,36 @@ Lütfen başka bir dizin belirtin.</translation>
       <translation>&amp;Adı:</translation>
     </message>
     <message>
-      <source>Commen&amp;t:</source>
-      <translation>&amp;Yorum:</translation>
-    </message>
-    <message>
       <source>Path:</source>
       <translation>Yol:</translation>
     </message>
     <message>
-      <source>&amp;Last modified by:</source>
-      <translation>Son &amp;Değiştiren:</translation>
+      <source>UUID:</source>
+      <translation>UUID:</translation>
+    </message>
+    <message>
+      <source>Program version:</source>
+      <translation>Program sürümü:</translation>
     </message>
     <message>
       <source>Created &amp;by:</source>
       <translation>&amp;Oluşturan :</translation>
     </message>
     <message>
-      <source>Com&amp;pany:</source>
-      <translation>&amp;Firma:</translation>
+      <source>Creation &amp;date:</source>
+      <translation>Oluşturma ta&amp;rihi:</translation>
+    </message>
+    <message>
+      <source>&amp;Last modified by:</source>
+      <translation>Son &amp;Değiştiren:</translation>
     </message>
     <message>
       <source>Last &amp;modification date:</source>
       <translation>Son değişiklik &amp;tarihi:</translation>
     </message>
     <message>
-      <source>Creation &amp;date:</source>
-      <translation>Oluşturma ta&amp;rihi:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>UUID:</source>
-      <translation>UUID:</translation>
+      <source>Com&amp;pany:</source>
+      <translation>&amp;Firma:</translation>
     </message>
     <message>
       <source>License information:</source>
@@ -2149,8 +2362,12 @@ Lütfen başka bir dizin belirtin.</translation>
       <translation>Tarayıcıda aç</translation>
     </message>
     <message>
-      <source>Program version:</source>
-      <translation>Program sürümü:</translation>
+      <source>Commen&amp;t:</source>
+      <translation>&amp;Yorum:</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
@@ -2188,6 +2405,10 @@ Lütfen başka bir dizin belirtin.</translation>
       <translation>Oluşturduktan sonra proje dosyasını yükle</translation>
     </message>
     <message>
+      <source>Project file</source>
+      <translation>Proje dosyası</translation>
+    </message>
+    <message>
       <source>Empty source</source>
       <translation>Boş kaynak</translation>
     </message>
@@ -2203,16 +2424,24 @@ Lütfen başka bir dizin belirtin.</translation>
       <source>No destination is defined.</source>
       <translation>Hedef belirlenmedi.</translation>
     </message>
-    <message>
-      <source>Project file</source>
-      <translation>Proje dosyası</translation>
-    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgPropertyLink</name>
     <message>
       <source>Link</source>
       <translation>Link</translation>
+    </message>
+    <message>
+      <source>Filter by type</source>
+      <translation>Türüne göre filtre</translation>
+    </message>
+    <message>
+      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
+      <translation>Etkinleştirilirse, 3B görünüm seçimi tam nesne hiyerarşisi ile senkronize edilecektir.</translation>
+    </message>
+    <message>
+      <source>Sync sub-object selection</source>
+      <translation>Alt-nesne seçimini eşzamanla</translation>
     </message>
     <message>
       <source>Search</source>
@@ -2223,24 +2452,12 @@ Lütfen başka bir dizin belirtin.</translation>
       <translation>Yukarıdaki sonuçları filtrelemek için bir arama modeli</translation>
     </message>
     <message>
-      <source>Filter by type</source>
-      <translation>Türüne göre filtre</translation>
-    </message>
-    <message>
-      <source>Sync sub-object selection</source>
-      <translation>Alt-nesne seçimini eşzamanla</translation>
-    </message>
-    <message>
       <source>Reset</source>
       <translation>Sıfırla</translation>
     </message>
     <message>
       <source>Clear</source>
       <translation>Temizle</translation>
-    </message>
-    <message>
-      <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
-      <translation>Etkinleştirilirse, 3B görünüm seçimi tam nesne hiyerarşisi ile senkronize edilecektir.</translation>
     </message>
   </context>
   <context>
@@ -2254,64 +2471,36 @@ Lütfen başka bir dizin belirtin.</translation>
       <translation>Çıktı</translation>
     </message>
     <message>
-      <source>Record log messages</source>
-      <translation>Günlük iletilerini kaydet</translation>
+      <source>Normal messages will be recorded</source>
+      <translation>Normal iletiler kaydedilecek</translation>
     </message>
     <message>
-      <source>Record warnings</source>
-      <translation>Uyarıları kaydet</translation>
-    </message>
-    <message>
-      <source>Record error messages</source>
-      <translation>Hata iletilerini kaydet</translation>
-    </message>
-    <message>
-      <source>Colors</source>
-      <translation>Renkler</translation>
-    </message>
-    <message>
-      <source>Normal messages:</source>
-      <translation>Normal iletiler:</translation>
-    </message>
-    <message>
-      <source>Log messages:</source>
-      <translation>İşlem kaydı mesajları:</translation>
-    </message>
-    <message>
-      <source>Warnings:</source>
-      <translation>Uyarılar:</translation>
-    </message>
-    <message>
-      <source>Errors:</source>
-      <translation>Hatalar:</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Redirect internal Python errors to report view</source>
-      <translation>Dahili Python hatalarını rapor görünümüne yönlendir</translation>
-    </message>
-    <message>
-      <source>Redirect internal Python output to report view</source>
-      <translation>Dahili python çıktısını rapor görünümüne yönlendir</translation>
-    </message>
-    <message>
-      <source>Python interpreter</source>
-      <translation>Python yorumlayıcı</translation>
+      <source>Record normal messages</source>
+      <translation>Normal iletileri kaydet</translation>
     </message>
     <message>
       <source>Log messages will be recorded</source>
       <translation>Günlük mesajları kaydedilecek</translation>
     </message>
     <message>
+      <source>Record log messages</source>
+      <translation>Günlük iletilerini kaydet</translation>
+    </message>
+    <message>
       <source>Warnings will be recorded</source>
       <translation>Uyarılar kaydedilecek</translation>
     </message>
     <message>
+      <source>Record warnings</source>
+      <translation>Uyarıları kaydet</translation>
+    </message>
+    <message>
       <source>Error messages will be recorded</source>
       <translation>Hata mesajları kaydedilecek</translation>
+    </message>
+    <message>
+      <source>Record error messages</source>
+      <translation>Hata iletilerini kaydet</translation>
     </message>
     <message>
       <source>When an error has occurred, the Report View dialog becomes visible
@@ -2350,34 +2539,6 @@ on-screen while displaying the log message</source>
       <translation>Günlük iletisinde rapor görünümünü göster</translation>
     </message>
     <message>
-      <source>Font color for normal messages in Report view panel</source>
-      <translation>Rapor görünümü panosunda normal mesajlar için yazı tipi rengi</translation>
-    </message>
-    <message>
-      <source>Font color for log messages in Report view panel</source>
-      <translation>Rapor görünümü panosunda günlük mesajları için yazı tipi rengi</translation>
-    </message>
-    <message>
-      <source>Font color for warning messages in Report view panel</source>
-      <translation>Rapor görünümü panosunda uyarı mesajları için yazı tipi rengi</translation>
-    </message>
-    <message>
-      <source>Font color for error messages in Report view panel</source>
-      <translation>Rapor görünümü panosunda hata mesajları için yazı tipi rengi</translation>
-    </message>
-    <message>
-      <source>Internal Python output will be redirected
-from Python console to Report view panel</source>
-      <translation>İç Pyhton çıktısı, Python uçbiriminden
-Rapor görünümü panosuna yönlendirilecek</translation>
-    </message>
-    <message>
-      <source>Internal Python error messages will be redirected
-from Python console to Report view panel</source>
-      <translation>İç Pyhton hata iletileri, Python uçbiriminden
-Rapor görünümü panosuna yönlendirilecek</translation>
-    </message>
-    <message>
       <source>Include a timecode for each report</source>
       <translation>Her bir rapor için zaman kodu içer</translation>
     </message>
@@ -2386,12 +2547,90 @@ Rapor görünümü panosuna yönlendirilecek</translation>
       <translation>Her bir girdi için zaman kodu içer</translation>
     </message>
     <message>
-      <source>Normal messages will be recorded</source>
-      <translation>Normal iletiler kaydedilecek</translation>
+      <source>Colors</source>
+      <translation>Renkler</translation>
     </message>
     <message>
-      <source>Record normal messages</source>
-      <translation>Normal iletileri kaydet</translation>
+      <source>Normal messages:</source>
+      <translation>Normal iletiler:</translation>
+    </message>
+    <message>
+      <source>Font color for normal messages in Report view panel</source>
+      <translation>Rapor görünümü panosunda normal mesajlar için yazı tipi rengi</translation>
+    </message>
+    <message>
+      <source>Log messages:</source>
+      <translation>İşlem kaydı mesajları:</translation>
+    </message>
+    <message>
+      <source>Font color for log messages in Report view panel</source>
+      <translation>Rapor görünümü panosunda günlük mesajları için yazı tipi rengi</translation>
+    </message>
+    <message>
+      <source>Warnings:</source>
+      <translation>Uyarılar:</translation>
+    </message>
+    <message>
+      <source>Font color for warning messages in Report view panel</source>
+      <translation>Rapor görünümü panosunda uyarı mesajları için yazı tipi rengi</translation>
+    </message>
+    <message>
+      <source>Errors:</source>
+      <translation>Hatalar:</translation>
+    </message>
+    <message>
+      <source>Font color for error messages in Report view panel</source>
+      <translation>Rapor görünümü panosunda hata mesajları için yazı tipi rengi</translation>
+    </message>
+    <message>
+      <source>Python interpreter</source>
+      <translation>Python yorumlayıcı</translation>
+    </message>
+    <message>
+      <source>Internal Python output will be redirected
+from Python console to Report view panel</source>
+      <translation>İç Pyhton çıktısı, Python uçbiriminden
+Rapor görünümü panosuna yönlendirilecek</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python output to report view</source>
+      <translation>Dahili python çıktısını rapor görünümüne yönlendir</translation>
+    </message>
+    <message>
+      <source>Internal Python error messages will be redirected
+from Python console to Report view panel</source>
+      <translation>İç Pyhton hata iletileri, Python uçbiriminden
+Rapor görünümü panosuna yönlendirilecek</translation>
+    </message>
+    <message>
+      <source>Redirect internal Python errors to report view</source>
+      <translation>Dahili Python hatalarını rapor görünümüne yönlendir</translation>
+    </message>
+    <message>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfig</name>
+    <message>
+      <source>Revert to Backup Config</source>
+      <translation type="unfinished">Revert to Backup Config</translation>
+    </message>
+    <message>
+      <source>WARNING: this process will undo any preference changes made since the specified date, and will also reset your Recent files and Macros to their state on that date.</source>
+      <translation type="unfinished">WARNING: this process will undo any preference changes made since the specified date, and will also reset your Recent files and Macros to their state on that date.</translation>
+    </message>
+    <message>
+      <source>Available backup files:</source>
+      <translation type="unfinished">Available backup files:</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgRevertToBackupConfigImp</name>
+    <message>
+      <source>No selection in dialog, cannot load backup file</source>
+      <translation type="unfinished">No selection in dialog, cannot load backup file</translation>
     </message>
   </context>
   <context>
@@ -2440,58 +2679,6 @@ Rapor görünümü panosuna yönlendirilecek</translation>
       <translation>3D Görünüm</translation>
     </message>
     <message>
-      <source>Show coordinate system in the corner</source>
-      <translation>Koordinat sistemini köşede göster</translation>
-    </message>
-    <message>
-      <source>Show counter of frames per second</source>
-      <translation>Kare/sn sayacını göster</translation>
-    </message>
-    <message>
-      <source>Camera type</source>
-      <translation>kamera tipi</translation>
-    </message>
-    <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
-    </message>
-    <message>
-      <source>Anti-Aliasing</source>
-      <translation>Kenar Yumuşatma</translation>
-    </message>
-    <message>
-      <source>None</source>
-      <translation>Hiçbiri</translation>
-    </message>
-    <message>
-      <source>Line Smoothing</source>
-      <translation>Yumuşatma Yok</translation>
-    </message>
-    <message>
-      <source>MSAA 2x</source>
-      <translation>MSAA 2 x</translation>
-    </message>
-    <message>
-      <source>MSAA 4x</source>
-      <translation>MSAA 4 x</translation>
-    </message>
-    <message>
-      <source>MSAA 8x</source>
-      <translation>MSAA 8 x</translation>
-    </message>
-    <message>
-      <source>Or&amp;thographic rendering</source>
-      <translation>Or&amp;tografik işle (renderla)</translation>
-    </message>
-    <message>
-      <source>Perspective renderin&amp;g</source>
-      <translation>Perspektif işleme</translation>
-    </message>
-    <message>
-      <source>Marker size:</source>
-      <translation>İşaretci boyutu:</translation>
-    </message>
-    <message>
       <source>General</source>
       <translation>Genel</translation>
     </message>
@@ -2501,10 +2688,42 @@ lower right corner within opened files</source>
       <translation>Ana koordinat sistemi, açılan dosyaların içerisinde, sağ alt kenarda, her zaman gösterilecek</translation>
     </message>
     <message>
+      <source>Show coordinate system in the corner</source>
+      <translation>Koordinat sistemini köşede göster</translation>
+    </message>
+    <message>
+      <source>Relative size :   </source>
+      <translation type="unfinished">Relative size :   </translation>
+    </message>
+    <message>
+      <source>Size of main coordinate system representation
+in the corner -- in % of height/width of viewport</source>
+      <translation type="unfinished">Size of main coordinate system representation
+in the corner -- in % of height/width of viewport</translation>
+    </message>
+    <message>
+      <source>%</source>
+      <translation>%</translation>
+    </message>
+    <message>
+      <source>Axis cross will be shown by default at file
+opening or creation</source>
+      <translation>Eksen çizgileri, dosya açma veya oluşturmada
+varsayılan olarak görünecek</translation>
+    </message>
+    <message>
+      <source>Show axis cross by default</source>
+      <translation>Eksen çizgilerini varsayılan olarak göster</translation>
+    </message>
+    <message>
       <source>Time needed for last operation and resulting frame rate
 will be shown at the lower left corner in opened files</source>
       <translation>Son işlem için gereken süre ve sonuçta oluşan kare hızı,
 açılan dosyalarda sol alt köşede gösterilecek</translation>
+    </message>
+    <message>
+      <source>Show counter of frames per second</source>
+      <translation>Kare/sn sayacını göster</translation>
     </message>
     <message>
       <source>If checked, application will remember which workbench is active for each tab of the viewport</source>
@@ -2517,6 +2736,18 @@ açılan dosyalarda sol alt köşede gösterilecek</translation>
     <message>
       <source>Rendering</source>
       <translation>Görsel İşleme</translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation>Bu seçenek, grafik kartı ve sürücü sorunlarını gidermek için kullanışlıdır.
+
+Bu seçeneğin değiştirilmesi, uygulamanın yeniden başlatılmasını gerektirir.</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation>Yazılımsal OpenGL kullan</translation>
     </message>
     <message>
       <source>If selected, Vertex Buffer Objects (VBO) will be used.
@@ -2575,6 +2806,34 @@ Bunu elde etmek için mevcut 3 seçenek bulunuyor:
       <translation>Merkezileştirilmiş</translation>
     </message>
     <message>
+      <source>Anti-Aliasing</source>
+      <translation>Kenar Yumuşatma</translation>
+    </message>
+    <message>
+      <source>What kind of multisample anti-aliasing is used</source>
+      <translation>Kullanılan çok örneklemeli kenar düzeltme türü</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Hiçbiri</translation>
+    </message>
+    <message>
+      <source>Line Smoothing</source>
+      <translation>Yumuşatma Yok</translation>
+    </message>
+    <message>
+      <source>MSAA 2x</source>
+      <translation>MSAA 2 x</translation>
+    </message>
+    <message>
+      <source>MSAA 4x</source>
+      <translation>MSAA 4 x</translation>
+    </message>
+    <message>
+      <source>MSAA 8x</source>
+      <translation>MSAA 8 x</translation>
+    </message>
+    <message>
       <source>Transparent objects:</source>
       <translation>Şeffaf nesneler:</translation>
     </message>
@@ -2591,12 +2850,36 @@ Bunu elde etmek için mevcut 3 seçenek bulunuyor:
       <translation>Arka yüz geçişi</translation>
     </message>
     <message>
+      <source>Marker size:</source>
+      <translation>İşaretci boyutu:</translation>
+    </message>
+    <message>
       <source>Size of vertices in the Sketcher workbench</source>
       <translation>Eskiz tezgahındaki noktaların boyutu</translation>
     </message>
     <message>
+      <source>Pick radius (px):</source>
+      <translation>Radius (px) seçin:</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation>3B görünümde unsurları seçme alanı.
+Daha büyük değer nesneleri seçmeyi kolaylaştırır ancak küçük şekillerin seçimini imkansızlaştırabilir.
+               </translation>
+    </message>
+    <message>
       <source>Eye to eye distance for stereo modes</source>
       <translation>Stereo kipler için iki göz arası mesafe</translation>
+    </message>
+    <message>
+      <source>Eye-to-eye distance used for stereo projections.
+The specified value is a factor that will be multiplied with the
+bounding box size of the 3D object that is currently displayed.</source>
+      <translation>Stereo gösterimler için kullanılan iki göz arası mesafe.
+Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
+çerçevesi boyutu ile çoğaltılacak bir etkendir.</translation>
     </message>
     <message>
       <source>Backlight is enabled with the defined color</source>
@@ -2615,70 +2898,32 @@ Bunu elde etmek için mevcut 3 seçenek bulunuyor:
       <translation>Arka ışığın yoğunluğu</translation>
     </message>
     <message>
-      <source>Objects will be projected in orthographic projection</source>
-      <translation>Nesneler ortografik gösterimde gösterilecek</translation>
+      <source>Camera type</source>
+      <translation>kamera tipi</translation>
     </message>
     <message>
       <source>Objects will appear in a perspective projection</source>
       <translation>Nesneler perspektif görünümde görünecek</translation>
     </message>
     <message>
-      <source>Axis cross will be shown by default at file
-opening or creation</source>
-      <translation>Eksen çizgileri, dosya açma veya oluşturmada
-varsayılan olarak görünecek</translation>
+      <source>Perspective renderin&amp;g</source>
+      <translation>Perspektif işleme</translation>
     </message>
     <message>
-      <source>Show axis cross by default</source>
-      <translation>Eksen çizgilerini varsayılan olarak göster</translation>
+      <source>Objects will be projected in orthographic projection</source>
+      <translation>Nesneler ortografik gösterimde gösterilecek</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation>Radius (px) seçin:</translation>
+      <source>Or&amp;thographic rendering</source>
+      <translation>Or&amp;tografik işle (renderla)</translation>
     </message>
     <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.
-               </source>
-      <translation>3B görünümde unsurları seçme alanı.
-Daha büyük değer nesneleri seçmeyi kolaylaştırır ancak küçük şekillerin seçimini imkansızlaştırabilir.
-               </translation>
-    </message>
-    <message>
-      <source>This option is useful for troubleshooting graphics card and driver problems.
-
-Changing this option requires a restart of the application.</source>
-      <translation>Bu seçenek, grafik kartı ve sürücü sorunlarını gidermek için kullanışlıdır.
-
-Bu seçeneğin değiştirilmesi, uygulamanın yeniden başlatılmasını gerektirir.</translation>
-    </message>
-    <message>
-      <source>Use software OpenGL</source>
-      <translation>Yazılımsal OpenGL kullan</translation>
-    </message>
-    <message>
-      <source>What kind of multisample anti-aliasing is used</source>
-      <translation>Kullanılan çok örneklemeli kenar düzeltme türü</translation>
-    </message>
-    <message>
-      <source>Eye-to-eye distance used for stereo projections.
-The specified value is a factor that will be multiplied with the
-bounding box size of the 3D object that is currently displayed.</source>
-      <translation>Stereo gösterimler için kullanılan iki göz arası mesafe.
-Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
-çerçevesi boyutu ile çoğaltılacak bir etkendir.</translation>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettings3DViewImp</name>
-    <message>
-      <source>Anti-aliasing</source>
-      <translation>Kenar Yumuşatma</translation>
-    </message>
-    <message>
-      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
-      <translation>%1 Kenar yumuşatma değişikliklerini uygulamak için yeni bir görüntüleyici açın veya yeniden başlatın.</translation>
-    </message>
     <message>
       <source>5px</source>
       <translation>5px</translation>
@@ -2703,9 +2948,84 @@ Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
       <source>15px</source>
       <translation>15px</translation>
     </message>
+    <message>
+      <source>Anti-aliasing</source>
+      <translation>Kenar Yumuşatma</translation>
+    </message>
+    <message>
+      <source>Open a new viewer or restart %1 to apply anti-aliasing changes.</source>
+      <translation>%1 Kenar yumuşatma değişikliklerini uygulamak için yeni bir görüntüleyici açın veya yeniden başlatın.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsCacheDirectory</name>
+    <message>
+      <source>Cache</source>
+      <translation type="unfinished">Cache</translation>
+    </message>
+    <message>
+      <source>Cache directory</source>
+      <translation type="unfinished">Cache directory</translation>
+    </message>
+    <message>
+      <source>Location:</source>
+      <translation type="unfinished">Location:</translation>
+    </message>
+    <message>
+      <source>Check periodically at program start:</source>
+      <translation type="unfinished">Check periodically at program start:</translation>
+    </message>
+    <message>
+      <source>Always</source>
+      <translation type="unfinished">Always</translation>
+    </message>
+    <message>
+      <source>Daily</source>
+      <translation type="unfinished">Daily</translation>
+    </message>
+    <message>
+      <source>Weekly</source>
+      <translation type="unfinished">Weekly</translation>
+    </message>
+    <message>
+      <source>Monthly</source>
+      <translation type="unfinished">Monthly</translation>
+    </message>
+    <message>
+      <source>Yearly</source>
+      <translation type="unfinished">Yearly</translation>
+    </message>
+    <message>
+      <source>Never</source>
+      <translation type="unfinished">Never</translation>
+    </message>
+    <message>
+      <source>Cache size limit:</source>
+      <translation type="unfinished">Cache size limit:</translation>
+    </message>
+    <message>
+      <source>Check now...</source>
+      <translation type="unfinished">Check now...</translation>
+    </message>
+    <message>
+      <source>Notify the user if the cache size exceeds the specified limit</source>
+      <translation type="unfinished">Notify the user if the cache size exceeds the specified limit</translation>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>Bilinmeyen</translation>
+    </message>
+    <message>
+      <source>Current cache size: %1</source>
+      <translation type="unfinished">Current cache size: %1</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettingsColorGradient</name>
+    <message>
+      <source>Color-gradient settings</source>
+      <translation>Renk-Yelpazesi ayarları</translation>
+    </message>
     <message>
       <source>Color model</source>
       <translation>Renk modeli</translation>
@@ -2731,36 +3051,12 @@ Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
       <translation>siyah-beyaz</translation>
     </message>
     <message>
-      <source>Visibility</source>
-      <translation>Görünürlük</translation>
-    </message>
-    <message>
-      <source>Out g&amp;rayed</source>
-      <translation>Dışarı &amp; ışınlandırılmış</translation>
-    </message>
-    <message>
-      <source>Alt+R</source>
-      <translation>Alt+R</translation>
-    </message>
-    <message>
-      <source>Out &amp;invisible</source>
-      <translation>Dışarı &amp; görünmez</translation>
-    </message>
-    <message>
-      <source>Alt+I</source>
-      <translation>Alt + ı</translation>
-    </message>
-    <message>
       <source>Style</source>
       <translation>Stil(tarz)</translation>
     </message>
     <message>
-      <source>&amp;Zero</source>
-      <translation>&amp;Sıfır</translation>
-    </message>
-    <message>
-      <source>Alt+Z</source>
-      <translation>Alt + z</translation>
+      <source>Color gradient is used with its full color range</source>
+      <translation type="unfinished">Color gradient is used with its full color range</translation>
     </message>
     <message>
       <source>&amp;Flow</source>
@@ -2771,12 +3067,52 @@ Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
       <translation>Alt + D</translation>
     </message>
     <message>
-      <source>Parameter range</source>
-      <translation>Parametre aralığı</translation>
+      <source>Color gradient starts from the zero value</source>
+      <translation type="unfinished">Color gradient starts from the zero value</translation>
     </message>
     <message>
-      <source>Mi&amp;nimum:</source>
-      <translation>&amp;En az:</translation>
+      <source>&amp;Zero</source>
+      <translation>&amp;Sıfır</translation>
+    </message>
+    <message>
+      <source>Alt+Z</source>
+      <translation>Alt + z</translation>
+    </message>
+    <message>
+      <source>Visibility</source>
+      <translation>Görünürlük</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed in gray</source>
+      <translation type="unfinished">Data outside the specified min-max range
+will be displayed in gray</translation>
+    </message>
+    <message>
+      <source>Out g&amp;rayed</source>
+      <translation>Dışarı &amp; ışınlandırılmış</translation>
+    </message>
+    <message>
+      <source>Alt+R</source>
+      <translation>Alt+R</translation>
+    </message>
+    <message>
+      <source>Data outside the specified min-max range
+will be displayed with transparency</source>
+      <translation type="unfinished">Data outside the specified min-max range
+will be displayed with transparency</translation>
+    </message>
+    <message>
+      <source>Out &amp;transparent</source>
+      <translation type="unfinished">Out &amp;transparent</translation>
+    </message>
+    <message>
+      <source>Alt+I</source>
+      <translation>Alt + ı</translation>
+    </message>
+    <message>
+      <source>Parameter range</source>
+      <translation>Parametre aralığı</translation>
     </message>
     <message>
       <source>Ma&amp;ximum:</source>
@@ -2787,16 +3123,26 @@ Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
       <translation>E&amp;tiketler:</translation>
     </message>
     <message>
+      <source>Number of labels besides the color bar</source>
+      <translation type="unfinished">Number of labels besides the color bar</translation>
+    </message>
+    <message>
+      <source>Mi&amp;nimum:</source>
+      <translation>&amp;En az:</translation>
+    </message>
+    <message>
       <source>&amp;Decimals:</source>
       <translation>&amp;Ondalıklar:</translation>
     </message>
     <message>
-      <source/>
-      <translation>Altgrup '%1' zaten mevcut.</translation>
+      <source>Number of decimals for labels
+besides the color bar</source>
+      <translation type="unfinished">Number of decimals for labels
+besides the color bar</translation>
     </message>
     <message>
-      <source>Color-gradient settings</source>
-      <translation>Renk-Yelpazesi ayarları</translation>
+      <source/>
+      <translation>Altgrup '%1' zaten mevcut.</translation>
     </message>
   </context>
   <context>
@@ -2821,106 +3167,18 @@ Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
       <translation>Genel</translation>
     </message>
     <message>
-      <source>Document save compression level
-(0 = none, 9 = highest, 3 = default)</source>
-      <translation>Belge kaydındaki sıkıştırma seviyesi
-(0=hiç,9=en yüksek,3=varsayılan)</translation>
+      <source>The application will create a new document when started</source>
+      <translation>Uygulama başladığında yeni bir belge oluşturacak</translation>
     </message>
     <message>
       <source>Create new document at start up</source>
       <translation>Başlangıçta yeni bir belge oluştur</translation>
     </message>
     <message>
-      <source>Storage</source>
-      <translation>Depolama</translation>
-    </message>
-    <message>
-      <source>Saving transactions (Auto-save)</source>
-      <translation>Ara geçişleri kaydet (Özdeviniml-kayıt)</translation>
-    </message>
-    <message>
-      <source>Discard saved transaction after saving document</source>
-      <translation>Ara geçişleri belge kaydedildikten sonra sil</translation>
-    </message>
-    <message>
-      <source>Save thumbnail into project file when saving document</source>
-      <translation>Belgeyi kaydederken küçük resmini proje dosyası içine kaydet</translation>
-    </message>
-    <message>
-      <source>Maximum number of backup files to keep when resaving document</source>
-      <translation>Belgeyi yeniden kaydederken saklanacak maksimum yedek dosya sayısı</translation>
-    </message>
-    <message>
-      <source>Document objects</source>
-      <translation>Döküman nesneleri</translation>
-    </message>
-    <message>
-      <source>Allow duplicate object labels in one document</source>
-      <translation>Bir dökümanda nesne etiketlerini ikilemeye izin ver</translation>
-    </message>
-    <message>
-      <source>Maximum Undo/Redo steps</source>
-      <translation>Maksimum Geri Al / Yinele adımları</translation>
-    </message>
-    <message>
-      <source>Using Undo/Redo on documents</source>
-      <translation>Dökümanlarda Geri Al/Yeniden Yap kullanılıyor</translation>
-    </message>
-    <message>
-      <source>Authoring and License</source>
-      <translation>Yazarlık ve Lisans</translation>
-    </message>
-    <message>
-      <source>Author name</source>
-      <translation>Yazar Adı</translation>
-    </message>
-    <message>
-      <source>Set on save</source>
-      <translation>Üzerinde ayarlama Kaydet</translation>
-    </message>
-    <message>
-      <source>Company</source>
-      <translation>Şirket</translation>
-    </message>
-    <message>
-      <source>Default license</source>
-      <translation>Varsayılan Lisans</translation>
-    </message>
-    <message>
-      <source>All rights reserved</source>
-      <translation>Her hakkı saklıdır</translation>
-    </message>
-    <message>
-      <source>Public Domain</source>
-      <translation>Halka Açık Alan</translation>
-    </message>
-    <message>
-      <source>FreeArt</source>
-      <translation>ÖzgürSanat</translation>
-    </message>
-    <message>
-      <source>Other</source>
-      <translation>Diğer</translation>
-    </message>
-    <message>
-      <source>License URL</source>
-      <translation>Lisans URL (Automatic Translation)</translation>
-    </message>
-    <message>
-      <source>Run AutoRecovery at startup</source>
-      <translation>Otomatik Kurtarmayı başlangıçta çalıştır</translation>
-    </message>
-    <message>
-      <source>Save AutoRecovery information every</source>
-      <translation>Otomatik Arşiv bilgilerini her biri için kaydedin</translation>
-    </message>
-    <message>
-      <source>Add the program logo to the generated thumbnail</source>
-      <translation>Oluşturulan minik resme program logosunu ekleyin</translation>
-    </message>
-    <message>
-      <source>The application will create a new document when started</source>
-      <translation>Uygulama başladığında yeni bir belge oluşturacak</translation>
+      <source>Document save compression level
+(0 = none, 9 = highest, 3 = default)</source>
+      <translation>Belge kaydındaki sıkıştırma seviyesi
+(0=hiç,9=en yüksek,3=varsayılan)</translation>
     </message>
     <message>
       <source>Compression level for FCStd files</source>
@@ -2929,6 +3187,14 @@ Belirlenen değer, şuan görüntülenen 3B nesnenin sınırlama
     <message>
       <source>All changes in documents are stored so that they can be undone/redone</source>
       <translation>Belgelerdeki tüm değişiklikler geri al/yinele yapılabilmesi için depolanır</translation>
+    </message>
+    <message>
+      <source>Using Undo/Redo on documents</source>
+      <translation>Dökümanlarda Geri Al/Yeniden Yap kullanılıyor</translation>
+    </message>
+    <message>
+      <source>Maximum Undo/Redo steps</source>
+      <translation>Maksimum Geri Al / Yinele adımları</translation>
     </message>
     <message>
       <source>How many Undo/Redo steps should be recorded</source>
@@ -2945,18 +3211,42 @@ Bu özellik, yeniden hesaplama süresini biraz artırabilir.</translation>
       <translation>Yeniden hesaplamayı iptal etmeye izin ver</translation>
     </message>
     <message>
+      <source>Storage</source>
+      <translation>Depolama</translation>
+    </message>
+    <message>
+      <source>Saving transactions (Auto-save)</source>
+      <translation>Ara geçişleri kaydet (Özdeviniml-kayıt)</translation>
+    </message>
+    <message>
+      <source>Discard saved transaction after saving document</source>
+      <translation>Ara geçişleri belge kaydedildikten sonra sil</translation>
+    </message>
+    <message>
       <source>If there is a recovery file available the application will
 automatically run a file recovery when it is started.</source>
       <translation>Eğer bir kurtarma dosyası varsa, uygulama başladığında
 otomatik olarak dosya kurtarmayı çalıştıracak.</translation>
     </message>
     <message>
+      <source>Run AutoRecovery at startup</source>
+      <translation>Otomatik Kurtarmayı başlangıçta çalıştır</translation>
+    </message>
+    <message>
       <source>How often a recovery file is written</source>
       <translation>Kurtarma dosyası ne sıklıkta yazılır</translation>
     </message>
     <message>
+      <source>Save AutoRecovery information every</source>
+      <translation>Otomatik Arşiv bilgilerini her biri için kaydedin</translation>
+    </message>
+    <message>
       <source>A thumbnail will be stored when document is saved</source>
       <translation>Belge kaydedildiğinde bir küçük resim depolacak</translation>
+    </message>
+    <message>
+      <source>Save thumbnail into project file when saving document</source>
+      <translation>Belgeyi kaydederken küçük resmini proje dosyası içine kaydet</translation>
     </message>
     <message>
       <source>Size</source>
@@ -2973,8 +3263,16 @@ Genel boyutlar 128, 256 ve 512</translation>
       <translation>Program logosu küçük resime eklenecek</translation>
     </message>
     <message>
+      <source>Add the program logo to the generated thumbnail</source>
+      <translation>Oluşturulan minik resme program logosunu ekleyin</translation>
+    </message>
+    <message>
       <source>How many backup files will be kept when saving document</source>
       <translation>Belgeyi kaydederken kaç tane yedekleme dosyası tutulacak</translation>
+    </message>
+    <message>
+      <source>Maximum number of backup files to keep when resaving document</source>
+      <translation>Belgeyi yeniden kaydederken saklanacak maksimum yedek dosya sayısı</translation>
     </message>
     <message>
       <source>Backup files will get extension '.FCbak' and file names
@@ -2991,8 +3289,16 @@ belirtilen biçime göre tarih son eki alacaktır</translation>
       <translation>Tarih biçimi</translation>
     </message>
     <message>
+      <source>Document objects</source>
+      <translation>Döküman nesneleri</translation>
+    </message>
+    <message>
       <source>Allow objects to have same label/name</source>
       <translation>Nesnelerin aynı etiket/isim almalarına izin ver</translation>
+    </message>
+    <message>
+      <source>Allow duplicate object labels in one document</source>
+      <translation>Bir dökümanda nesne etiketlerini ikilemeye izin ver</translation>
     </message>
     <message>
       <source>Enable partial loading of external linked documents.
@@ -3011,6 +3317,14 @@ yüklemek için simgesine çift tıklayın.</translation>
       <translation>Dış bağlantılı nesnelerin kısmi yüklenmesini geçersizleştir</translation>
     </message>
     <message>
+      <source>Authoring and License</source>
+      <translation>Yazarlık ve Lisans</translation>
+    </message>
+    <message>
+      <source>Author name</source>
+      <translation>Yazar Adı</translation>
+    </message>
+    <message>
       <source>All documents that will be created will get the specified author name.
 Keep blank for anonymous.
 You can also use the form: John Doe &lt;john@doe.com&gt;</source>
@@ -3023,12 +3337,28 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Dosya kaydedilirken 'tarafından son olarak değiştirildi' alanı, belirlenen yazar adına ayarlanacak</translation>
     </message>
     <message>
+      <source>Set on save</source>
+      <translation>Üzerinde ayarlama Kaydet</translation>
+    </message>
+    <message>
+      <source>Company</source>
+      <translation>Şirket</translation>
+    </message>
+    <message>
       <source>Default company name to use for new files</source>
       <translation>Yeni dosyalar için kullanılacak varsayılan şirket adı</translation>
     </message>
     <message>
+      <source>Default license</source>
+      <translation>Varsayılan Lisans</translation>
+    </message>
+    <message>
       <source>Default license for new documents</source>
       <translation>Yeni belgeler için varsayılan lisans</translation>
+    </message>
+    <message>
+      <source>All rights reserved</source>
+      <translation>Her hakkı saklıdır</translation>
     </message>
     <message>
       <source>Creative Commons Attribution</source>
@@ -3053,6 +3383,22 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>Creative Commons Attribution-NonCommercial-NoDerivatives</source>
       <translation>Genel yaratıcılar atıf-ticari olmayan-türetilemez</translation>
+    </message>
+    <message>
+      <source>Public Domain</source>
+      <translation>Halka Açık Alan</translation>
+    </message>
+    <message>
+      <source>FreeArt</source>
+      <translation>ÖzgürSanat</translation>
+    </message>
+    <message>
+      <source>Other</source>
+      <translation>Diğer</translation>
+    </message>
+    <message>
+      <source>License URL</source>
+      <translation>Lisans URL (Automatic Translation)</translation>
     </message>
     <message>
       <source>URL describing more about the license</source>
@@ -3133,12 +3479,12 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Python hatası</translation>
     </message>
     <message>
-      <source>Items</source>
-      <translation>Öğeler</translation>
-    </message>
-    <message>
       <source>Current line highlight</source>
       <translation>Geçerli satırı vurgulama</translation>
+    </message>
+    <message>
+      <source>Items</source>
+      <translation>Öğeler</translation>
     </message>
   </context>
   <context>
@@ -3148,36 +3494,12 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Resim ayarları</translation>
     </message>
     <message>
-      <source>Image properties</source>
-      <translation>Resim özellikleri</translation>
-    </message>
-    <message>
-      <source>Back&amp;ground:</source>
-      <translation>Arka&amp;plan:</translation>
-    </message>
-    <message>
-      <source>Current</source>
-      <translation>Geçerli</translation>
-    </message>
-    <message>
-      <source>White</source>
-      <translation>Beyaz</translation>
-    </message>
-    <message>
-      <source>Black</source>
-      <translation>Siyah</translation>
-    </message>
-    <message>
       <source>Image dimensions</source>
       <translation>Resim boyutları</translation>
     </message>
     <message>
-      <source>Pixel</source>
-      <translation>Benek</translation>
-    </message>
-    <message>
-      <source>&amp;Width:</source>
-      <translation>&amp;Genişlik:</translation>
+      <source>Standard sizes:</source>
+      <translation>Standart boyutları:</translation>
     </message>
     <message>
       <source>Current screen</source>
@@ -3196,8 +3518,12 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Icon       128 x 128</translation>
     </message>
     <message>
-      <source>Standard sizes:</source>
-      <translation>Standart boyutları:</translation>
+      <source>&amp;Width:</source>
+      <translation>&amp;Genişlik:</translation>
+    </message>
+    <message>
+      <source>Pixel</source>
+      <translation>Benek</translation>
     </message>
     <message>
       <source>&amp;Height:</source>
@@ -3240,6 +3566,34 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Alt+1</translation>
     </message>
     <message>
+      <source>Image properties</source>
+      <translation>Resim özellikleri</translation>
+    </message>
+    <message>
+      <source>Back&amp;ground:</source>
+      <translation>Arka&amp;plan:</translation>
+    </message>
+    <message>
+      <source>Current</source>
+      <translation>Geçerli</translation>
+    </message>
+    <message>
+      <source>White</source>
+      <translation>Beyaz</translation>
+    </message>
+    <message>
+      <source>Black</source>
+      <translation>Siyah</translation>
+    </message>
+    <message>
+      <source>Transparent</source>
+      <translation>Saydam</translation>
+    </message>
+    <message>
+      <source>Creation method:</source>
+      <translation>Oluşturma yöntemi:</translation>
+    </message>
+    <message>
       <source>Image comment</source>
       <translation>Resim yorumu</translation>
     </message>
@@ -3252,16 +3606,8 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Yorum Ekle</translation>
     </message>
     <message>
-      <source>Transparent</source>
-      <translation>Saydam</translation>
-    </message>
-    <message>
       <source>Add watermark</source>
       <translation>Metin filigranı</translation>
-    </message>
-    <message>
-      <source>Creation method:</source>
-      <translation>Oluşturma yöntemi:</translation>
     </message>
   </context>
   <context>
@@ -3286,6 +3632,14 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
   <context>
     <name>Gui::Dialog::DlgSettingsLazyLoaded</name>
     <message>
+      <source>Available Workbenches</source>
+      <translation>Mevcut Çalışma Tezgahları</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kaynakları korumak için FreeCAD, kullanılıncaya kadar çalışma tezgahlarını yüklemez. Bunları yüklemek, işlevleriyle ilgili ek tercihlere erişim sağlayabilir. &lt;/p&gt; &lt;p&gt; Aşağıdaki çalışma tezgahları kurulumunuzda mevcuttur, ancak henüz yüklenmemiştir: &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+    </message>
+    <message>
       <source>Workbench Name</source>
       <translation>Tezgah Adı</translation>
     </message>
@@ -3296,14 +3650,6 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>Load Now</source>
       <translation>Şimdi Yükle</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To preserve resources, FreeCAD does not load workbenches until they are used. Loading them may provide access to additional preferences related to their functionality.&lt;/p&gt;&lt;p&gt;The following workbenches are available in your installation:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kaynakları korumak için FreeCAD, kullanılıncaya kadar çalışma tezgahlarını yüklemez. Bunları yüklemek, işlevleriyle ilgili ek tercihlere erişim sağlayabilir. &lt;/p&gt; &lt;p&gt; Aşağıdaki çalışma tezgahları kurulumunuzda mevcuttur, ancak henüz yüklenmemiştir: &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Available Workbenches</source>
-      <translation>Mevcut Çalışma Tezgahları</translation>
     </message>
   </context>
   <context>
@@ -3344,12 +3690,56 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Makro</translation>
     </message>
     <message>
+      <source>General macro settings</source>
+      <translation>Genel makro ayarları</translation>
+    </message>
+    <message>
+      <source>Variables defined by macros are created as local variables</source>
+      <translation>Makrolar tarafından tanımlanan değişkenler, yerel değişkenler olarak oluşturulur</translation>
+    </message>
+    <message>
+      <source>Run macros in local environment</source>
+      <translation>Makroları yerel ortamda çalıştır</translation>
+    </message>
+    <message>
       <source>Macro recording settings</source>
       <translation>Makro kayıt ayarları</translation>
     </message>
     <message>
+      <source>Macro path</source>
+      <translation>Makro yolu</translation>
+    </message>
+    <message>
+      <source>The directory in which the application will search for macros</source>
+      <translation>Uygulamanın makroları arayacağı dizin</translation>
+    </message>
+    <message>
+      <source>Gui commands</source>
+      <translation>Arayüz komutları</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands</source>
+      <translation>Kaydedilen makrolar, kullanıcı arayüzü komutlarını da içerecektir</translation>
+    </message>
+    <message>
+      <source>Record GUI commands</source>
+      <translation>GUI arayüz komutlarını kaydet</translation>
+    </message>
+    <message>
+      <source>Recorded macros will also contain user interface commands as comments</source>
+      <translation>Kaydedilen makrolar ayrıca, kullanıcı arayüzü komutlarını açıklamalar olarak içerecektir</translation>
+    </message>
+    <message>
+      <source>Record as comment</source>
+      <translation>Yorum olarak kaydet</translation>
+    </message>
+    <message>
       <source>Logging Commands</source>
       <translation>Komutlar günlük kaydına ekleniyor</translation>
+    </message>
+    <message>
+      <source>Commands executed by macro scripts are shown in Python console</source>
+      <translation>Makro betikleri ile çalıştırılan komutlar Python konsolunda gösterilir</translation>
     </message>
     <message>
       <source>Show script commands in python console</source>
@@ -3362,50 +3752,6 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
     <message>
       <source>FullScript.FCScript</source>
       <translation>FullScript.FCScript</translation>
-    </message>
-    <message>
-      <source>Gui commands</source>
-      <translation>Arayüz komutları</translation>
-    </message>
-    <message>
-      <source>Record as comment</source>
-      <translation>Yorum olarak kaydet</translation>
-    </message>
-    <message>
-      <source>Macro path</source>
-      <translation>Makro yolu</translation>
-    </message>
-    <message>
-      <source>General macro settings</source>
-      <translation>Genel makro ayarları</translation>
-    </message>
-    <message>
-      <source>Run macros in local environment</source>
-      <translation>Makroları yerel ortamda çalıştır</translation>
-    </message>
-    <message>
-      <source>Record GUI commands</source>
-      <translation>GUI arayüz komutlarını kaydet</translation>
-    </message>
-    <message>
-      <source>Variables defined by macros are created as local variables</source>
-      <translation>Makrolar tarafından tanımlanan değişkenler, yerel değişkenler olarak oluşturulur</translation>
-    </message>
-    <message>
-      <source>Commands executed by macro scripts are shown in Python console</source>
-      <translation>Makro betikleri ile çalıştırılan komutlar Python konsolunda gösterilir</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands</source>
-      <translation>Kaydedilen makrolar, kullanıcı arayüzü komutlarını da içerecektir</translation>
-    </message>
-    <message>
-      <source>Recorded macros will also contain user interface commands as comments</source>
-      <translation>Kaydedilen makrolar ayrıca, kullanıcı arayüzü komutlarını açıklamalar olarak içerecektir</translation>
-    </message>
-    <message>
-      <source>The directory in which the application will search for macros</source>
-      <translation>Uygulamanın makroları arayacağı dizin</translation>
     </message>
     <message>
       <source>Recent macros menu</source>
@@ -3479,6 +3825,22 @@ Ayrıca formu da kullanabilirsiniz: John Doe &lt;john@doe.com&gt;</translation>
       <translation>Sağ alt</translation>
     </message>
     <message>
+      <source>Rotates to nearest possible state when clicking a cube face</source>
+      <translation>Küp yüzeyine tıklandığında, mümkün olan en yakın konuma döndürür</translation>
+    </message>
+    <message>
+      <source>Rotate to nearest</source>
+      <translation>En yakına döndür</translation>
+    </message>
+    <message>
+      <source>Cube size</source>
+      <translation>Küp boyutu</translation>
+    </message>
+    <message>
+      <source>Size of the navigation cube</source>
+      <translation>Gezinme küpü boyutu</translation>
+    </message>
+    <message>
       <source>3D Navigation</source>
       <translation>3D Gezinme</translation>
     </message>
@@ -3517,8 +3879,36 @@ Döner Tabla: parça Z ekseni etrafında döndürülecek.</translation>
       <translation>Trackball</translation>
     </message>
     <message>
-      <source>New document scale</source>
-      <translation>Yeni belge ölçeği</translation>
+      <source>Rotation mode</source>
+      <translation>Döndürme modu</translation>
+    </message>
+    <message>
+      <source>Rotations in 3D will use current cursor position as center for rotation</source>
+      <translation>3B' daki dönüşler, dönüş merkezi olarak geçerli imleç konumunu kullanacak</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation>Pencere merkezi</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation>İmleç ile sürükle</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation>Nesne merkezi</translation>
+    </message>
+    <message>
+      <source>Default camera orientation</source>
+      <translation>Varsayılan kamera yönü</translation>
+    </message>
+    <message>
+      <source>Default camera orientation when creating a new document or selecting the home view</source>
+      <translation>Yeni bir belge oluştururken veya ev görünümünü seçerkenki varsayılan kamera yönlendirmesi</translation>
+    </message>
+    <message>
+      <source>Camera zoom</source>
+      <translation type="unfinished">Camera zoom</translation>
     </message>
     <message>
       <source>Sets camera zoom for new documents.
@@ -3547,8 +3937,14 @@ Değeri, ekrana sığdırılacak kürenin çapıdır.</translation>
       <translation>İmlece yaklaş</translation>
     </message>
     <message>
-      <source>Zoom step</source>
-      <translation>Zoom adımı</translation>
+      <source> Zoom step</source>
+      <translation type="unfinished"> Zoom step</translation>
+    </message>
+    <message>
+      <source>How much will be zoomed.
+Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
+      <translation>Yakınlaştırma miktarı.
+1 yakınlaştırma adımı, adım başına 7.5 katsayı anlamına gelir.</translation>
     </message>
     <message>
       <source>Direction of zoom operations will be inverted</source>
@@ -3569,10 +3965,6 @@ Bu ayarla fareyi eğme devre dışı bırakılmaz.</translation>
     <message>
       <source>Disable touchscreen tilt gesture</source>
       <translation>DokunmatikEkran eğim hareketini devre dışı bırak</translation>
-    </message>
-    <message>
-      <source>Rotations in 3D will use current cursor position as center for rotation</source>
-      <translation>3B' daki dönüşler, dönüş merkezi olarak geçerli imleç konumunu kullanacak</translation>
     </message>
     <message>
       <source>Isometric</source>
@@ -3614,51 +4006,42 @@ Bu ayarla fareyi eğme devre dışı bırakılmaz.</translation>
       <source>Custom</source>
       <translation>Özel</translation>
     </message>
+  </context>
+  <context>
+    <name>Gui::Dialog::DlgSettingsPythonConsole</name>
     <message>
-      <source>Default camera orientation</source>
-      <translation>Varsayılan kamera yönü</translation>
+      <source>Python console</source>
+      <translation>Python konsolu</translation>
     </message>
     <message>
-      <source>Default camera orientation when creating a new document or selecting the home view</source>
-      <translation>Yeni bir belge oluştururken veya ev görünümünü seçerkenki varsayılan kamera yönlendirmesi</translation>
+      <source>Settings</source>
+      <translation>Ayarlar</translation>
     </message>
     <message>
-      <source>Rotation mode</source>
-      <translation>Döndürme modu</translation>
+      <source>Words will be wrapped when they exceed available
+horizontal space in Python console</source>
+      <translation>Kelimeler, Python uçbirimindeki kullanılabilir yatay 
+boşluğu aştığında kaydırılacak</translation>
     </message>
     <message>
-      <source>Window center</source>
-      <translation>Pencere merkezi</translation>
+      <source>Enable word wrap</source>
+      <translation>Sözcük kaydırmayı etkinleştir</translation>
     </message>
     <message>
-      <source>Drag at cursor</source>
-      <translation>İmleç ile sürükle</translation>
+      <source>The cursor shape will be a block</source>
+      <translation type="unfinished">The cursor shape will be a block</translation>
     </message>
     <message>
-      <source>Object center</source>
-      <translation>Nesne merkezi</translation>
+      <source>Enable block cursor</source>
+      <translation type="unfinished">Enable block cursor</translation>
     </message>
     <message>
-      <source>Rotates to nearest possible state when clicking a cube face</source>
-      <translation>Küp yüzeyine tıklandığında, mümkün olan en yakın konuma döndürür</translation>
+      <source>Saves Python history across sessions</source>
+      <translation type="unfinished">Saves Python history across sessions</translation>
     </message>
     <message>
-      <source>Rotate to nearest</source>
-      <translation>En yakına döndür</translation>
-    </message>
-    <message>
-      <source>Cube size</source>
-      <translation>Küp boyutu</translation>
-    </message>
-    <message>
-      <source>Size of the navigation cube</source>
-      <translation>Gezinme küpü boyutu</translation>
-    </message>
-    <message>
-      <source>How much will be zoomed.
-Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
-      <translation>Yakınlaştırma miktarı.
-1 yakınlaştırma adımı, adım başına 7.5 katsayı anlamına gelir.</translation>
+      <source>Save history</source>
+      <translation>Geçmişi kaydet</translation>
     </message>
   </context>
   <context>
@@ -3699,44 +4082,28 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
       <translation>Birim ayaları</translation>
     </message>
     <message>
-      <source>Standard (mm/kg/s/degree)</source>
-      <translation>Standart(mm/kg/s/Derece)</translation>
+      <source>Unit system:</source>
+      <translation>Ölçü Birimi sistemi:</translation>
     </message>
     <message>
-      <source>MKS (m/kg/s/degree)</source>
-      <translation>MKS (m/kg/s/derece)</translation>
-    </message>
-    <message>
-      <source>Magnitude</source>
-      <translation>Büyüklük</translation>
-    </message>
-    <message>
-      <source>Unit</source>
-      <translation>Birim</translation>
-    </message>
-    <message>
-      <source>US customary (in/lb)</source>
-      <translation>ABD alışılmış (/ lb cinsinden)</translation>
+      <source>Unit system that should be used for all parts the application</source>
+      <translation>Uygulamadaki tüm parçalar için kullanılması gereken birim sistemi</translation>
     </message>
     <message>
       <source>Number of decimals:</source>
       <translation>Ondalık basamak sayısı:</translation>
     </message>
     <message>
-      <source>Imperial decimal (in/lb)</source>
-      <translation>Kraliyet (İngiliz sistemi) ondalığı (in / lb)</translation>
-    </message>
-    <message>
-      <source>Building Euro (cm/m²/m³)</source>
-      <translation>Building Euro (cm/m²/m³)</translation>
-    </message>
-    <message>
-      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
-      <translation>Metrik küçük parçalar ve CNC (mm, mm/min)</translation>
+      <source>Number of decimals that should be shown for numbers and dimensions</source>
+      <translation>Numaralar ve boyutlar için gösterilmesi gereken ondalık sayısı</translation>
     </message>
     <message>
       <source>Minimum fractional inch:</source>
       <translation>En küçük kesirli inç:</translation>
+    </message>
+    <message>
+      <source>Minimum fractional inch to be displayed</source>
+      <translation>Görüntülenecek en küçük kesirli inç</translation>
     </message>
     <message>
       <source>1/2"</source>
@@ -3767,24 +4134,40 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
       <translation>1/128"</translation>
     </message>
     <message>
-      <source>Unit system:</source>
-      <translation>Ölçü Birimi sistemi:</translation>
+      <source>Magnitude</source>
+      <translation>Büyüklük</translation>
     </message>
     <message>
-      <source>Number of decimals that should be shown for numbers and dimensions</source>
-      <translation>Numaralar ve boyutlar için gösterilmesi gereken ondalık sayısı</translation>
+      <source>Unit</source>
+      <translation>Birim</translation>
     </message>
     <message>
-      <source>Unit system that should be used for all parts the application</source>
-      <translation>Uygulamadaki tüm parçalar için kullanılması gereken birim sistemi</translation>
+      <source>Standard (mm/kg/s/degree)</source>
+      <translation>Standart(mm/kg/s/Derece)</translation>
     </message>
     <message>
-      <source>Minimum fractional inch to be displayed</source>
-      <translation>Görüntülenecek en küçük kesirli inç</translation>
+      <source>MKS (m/kg/s/degree)</source>
+      <translation>MKS (m/kg/s/derece)</translation>
+    </message>
+    <message>
+      <source>US customary (in/lb)</source>
+      <translation>ABD alışılmış (/ lb cinsinden)</translation>
+    </message>
+    <message>
+      <source>Imperial decimal (in/lb)</source>
+      <translation>Kraliyet (İngiliz sistemi) ondalığı (in / lb)</translation>
+    </message>
+    <message>
+      <source>Building Euro (cm/m²/m³)</source>
+      <translation>Building Euro (cm/m²/m³)</translation>
     </message>
     <message>
       <source>Building US (ft-in/sqft/cft)</source>
       <translation>Yapı US (ft-in/sqft/cft)</translation>
+    </message>
+    <message>
+      <source>Metric small parts &amp; CNC(mm, mm/min)</source>
+      <translation>Metrik küçük parçalar ve CNC (mm, mm/min)</translation>
     </message>
     <message>
       <source>Imperial for Civil Eng (ft, ft/sec)</source>
@@ -3806,76 +4189,76 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
       <translation>seçim</translation>
     </message>
     <message>
-      <source>Enable selection highlighting</source>
-      <translation>seçim vurgulamayı etkinleştir</translation>
+      <source>Enable preselection and highlight by specified color</source>
+      <translation>Belirlenen renk ile önseçim ve vurgulamaya izin ver</translation>
     </message>
     <message>
       <source>Enable preselection highlighting</source>
       <translation>önseçim vurgulamayı etkinleştir</translation>
     </message>
     <message>
-      <source>Background color</source>
-      <translation>Arka plan rengi</translation>
-    </message>
-    <message>
-      <source>Middle color</source>
-      <translation>Orta renk</translation>
-    </message>
-    <message>
-      <source>Color gradient</source>
-      <translation>Renk gradyanı</translation>
-    </message>
-    <message>
-      <source>Simple color</source>
-      <translation>Basit renk</translation>
-    </message>
-    <message>
-      <source>Object being edited</source>
-      <translation>Nesne düzenleniyor</translation>
-    </message>
-    <message>
-      <source>Active container</source>
-      <translation>Etkin taşıyıcı</translation>
-    </message>
-    <message>
-      <source>Enable preselection and highlight by specified color</source>
-      <translation>Belirlenen renk ile önseçim ve vurgulamaya izin ver</translation>
-    </message>
-    <message>
       <source>Enable selection highlighting and use specified color</source>
       <translation>Seçimi vurgulamaya izin ver ve belirlenen rengi kullan</translation>
+    </message>
+    <message>
+      <source>Enable selection highlighting</source>
+      <translation>seçim vurgulamayı etkinleştir</translation>
     </message>
     <message>
       <source>Background color for the model view</source>
       <translation>Model görünümü için arka plan rengi</translation>
     </message>
     <message>
+      <source>Background color</source>
+      <translation>Arka plan rengi</translation>
+    </message>
+    <message>
       <source>Background will have selected color</source>
       <translation>Arka plan seçilen renge sahip olacak</translation>
     </message>
     <message>
-      <source>Color gradient will get selected color as middle color</source>
-      <translation>Renk geçişi, orta renk için seçilen rengi ayarlayacak</translation>
-    </message>
-    <message>
-      <source>Bottom color</source>
-      <translation>Alt renk</translation>
+      <source>Simple color</source>
+      <translation>Basit renk</translation>
     </message>
     <message>
       <source>Background will have selected color gradient</source>
       <translation>Arka plan seçilen renk gradyanına sahip olacak</translation>
     </message>
     <message>
+      <source>Color gradient</source>
+      <translation>Renk gradyanı</translation>
+    </message>
+    <message>
       <source>Top color</source>
       <translation>Üst Renk</translation>
+    </message>
+    <message>
+      <source>Bottom color</source>
+      <translation>Alt renk</translation>
+    </message>
+    <message>
+      <source>Color gradient will get selected color as middle color</source>
+      <translation>Renk geçişi, orta renk için seçilen rengi ayarlayacak</translation>
+    </message>
+    <message>
+      <source>Middle color</source>
+      <translation>Orta renk</translation>
     </message>
     <message>
       <source>Tree view</source>
       <translation>Unsur Ağacı</translation>
     </message>
     <message>
+      <source>Object being edited</source>
+      <translation>Nesne düzenleniyor</translation>
+    </message>
+    <message>
       <source>Background color for objects in tree view that are currently edited</source>
       <translation>Şu anda düzenlenen Unsur Ağacı nesneleri için arka plan rengi</translation>
+    </message>
+    <message>
+      <source>Active container</source>
+      <translation>Etkin taşıyıcı</translation>
     </message>
     <message>
       <source>Background color for active containers in tree view</source>
@@ -3896,46 +4279,38 @@ Zoom step of '1' means a factor of 7.5 for every zoom step.</source>
       <translation>Birimleri hesap makinesi</translation>
     </message>
     <message>
-      <source>as:</source>
-      <translation>olarak:</translation>
-    </message>
-    <message>
-      <source>=&gt;</source>
-      <translation>=&gt;</translation>
-    </message>
-    <message>
-      <source>Quantity:</source>
-      <translation>Miktar:</translation>
-    </message>
-    <message>
-      <source>Copy</source>
-      <translation>Kopyala</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Kapat</translation>
-    </message>
-    <message>
       <source>Input the source value and unit</source>
       <translation>Kaynak değerini ve birimi girin</translation>
+    </message>
+    <message>
+      <source>as:</source>
+      <translation>olarak:</translation>
     </message>
     <message>
       <source>Input here the unit for the result</source>
       <translation>Buraya sonuç için birim girin</translation>
     </message>
     <message>
+      <source>=&gt;</source>
+      <translation>=&gt;</translation>
+    </message>
+    <message>
       <source>Result</source>
       <translation>Sonuç</translation>
     </message>
     <message>
-      <source>List of last used calculations 
+      <source>List of last used calculations.
 To add a calculation press Return in the value input field</source>
-      <translation>Son kullanılan hesaplamalar listesi 
-Değer giriş alanında bir hesaplama eklemek için Geri Dön' e basın</translation>
+      <translation type="unfinished">List of last used calculations.
+To add a calculation press Return in the value input field</translation>
     </message>
     <message>
       <source>Quantity</source>
       <translation>Miktar</translation>
+    </message>
+    <message>
+      <source>Quantity:</source>
+      <translation>Miktar:</translation>
     </message>
     <message>
       <source>Unit system:</source>
@@ -3967,16 +4342,24 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
       <source>Copy the result into the clipboard</source>
       <translation>Sonucu panoya kopyala</translation>
     </message>
+    <message>
+      <source>Copy</source>
+      <translation>Kopyala</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Kapat</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgUnitsCalculator</name>
     <message>
-      <source>unit mismatch</source>
-      <translation>birim uyuşmazlığı</translation>
-    </message>
-    <message>
       <source>unknown unit:</source>
       <translation>bilinmeyen birim:</translation>
+    </message>
+    <message>
+      <source>unit mismatch</source>
+      <translation>birim uyuşmazlığı</translation>
     </message>
   </context>
   <context>
@@ -3986,28 +4369,12 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
       <translation>Tezgah</translation>
     </message>
     <message>
-      <source>Enabled workbenches</source>
-      <translation>Etkin iş tezgahları</translation>
-    </message>
-    <message>
       <source>Disabled workbenches</source>
       <translation>Etkin iş tezgahları</translation>
     </message>
     <message>
-      <source>Move down</source>
-      <translation>Aşağı taşı</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;span style="font-weight:600;"&gt; Seçili öğeyi aşağı taşı.&lt;/span&gt;&lt;/p&gt; &lt;p&gt;Öğe taşınır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Move left</source>
-      <translation>Sola taşı</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;span style="font-weight:600;"&gt; Kaldır Seçili tezgah etkin iş tezgahları üzerinden&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Enabled workbenches</source>
+      <translation>Etkin iş tezgahları</translation>
     </message>
     <message>
       <source>Move right</source>
@@ -4016,10 +4383,6 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected workbench to enabled workbenches.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;span style="font-weight:600;"&gt; Kaldır Seçili tezgah etkin iş tezgahları üzerinden&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Sort enabled workbenches</source>
-      <translation>Etkin iş tezgahları</translation>
     </message>
     <message>
       <source>Move up</source>
@@ -4034,8 +4397,28 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
       <translation>Etkin iş tezgahları</translation>
     </message>
     <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Remove the selected workbench from enabled workbenches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;span style="font-weight:600;"&gt; Kaldır Seçili tezgah etkin iş tezgahları üzerinden&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+      <source>Sort enabled workbenches</source>
+      <translation>Etkin iş tezgahları</translation>
+    </message>
+    <message>
       <source>&lt;p&gt;Sort enabled workbenches&lt;/p&gt;</source>
       <translation>&lt;p&gt; Etkinleştirilmiş çalışma tezgahlarını sıralama &lt;/p&gt;</translation>
+    </message>
+    <message>
+      <source>Move left</source>
+      <translation>Sola taşı</translation>
+    </message>
+    <message>
+      <source>Move down</source>
+      <translation>Aşağı taşı</translation>
+    </message>
+    <message>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-weight:600;"&gt;Move the selected item down.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The item will be moved down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;&lt;span style="font-weight:600;"&gt; Seçili öğeyi aşağı taşı.&lt;/span&gt;&lt;/p&gt; &lt;p&gt;Öğe taşınır&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600;"&gt;Note:&lt;/span&gt;&lt;span style=" font-family:'MS Shell Dlg 2'; font-size:8pt;"&gt; The changes become active the next time you start the application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -4056,6 +4439,14 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
       <translation>Belgeyi Kurtarma</translation>
     </message>
     <message>
+      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
+
+The 'Status' column shows whether the document could be recovered.</source>
+      <translation>Aşağıda listelenen belgenin kurtarma işlemini başlatmak için 'Kurtarmayı Başlat' düğmesine basın.
+
+'Durum' sütunu, dokümanın kurtarılıp kurtarılmayacağını gösterir.</translation>
+    </message>
+    <message>
       <source>Status of recovered documents:</source>
       <translation>Kurtarılan belge durumu:</translation>
     </message>
@@ -4066,6 +4457,10 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
     <message>
       <source>Status</source>
       <translation>Durum</translation>
+    </message>
+    <message>
+      <source>Cleanup...</source>
+      <translation>Temizleyen...</translation>
     </message>
     <message>
       <source>Start Recovery</source>
@@ -4092,10 +4487,6 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
       <translation>Bitir</translation>
     </message>
     <message>
-      <source>Cleanup...</source>
-      <translation>Temizleyen...</translation>
-    </message>
-    <message>
       <source>Delete</source>
       <translation>Sil</translation>
     </message>
@@ -4116,24 +4507,16 @@ Tercih edilen sistem, genel tercihlerdeki tek ayardır.</translation>
       <translation>Tüm geçici dizinleri silmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-      <source>Finished</source>
-      <translation>Tamamlandı</translation>
+      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
+      <translation>Tüm geçici dizinleri silerken daha sonra hiçbir dosyayı kurtaramazsınız.</translation>
     </message>
     <message>
       <source>Transient directories deleted.</source>
       <translation>Geçici dizinler silindi.</translation>
     </message>
     <message>
-      <source>Press 'Start Recovery' to start the recovery process of the document listed below.
-
-The 'Status' column shows whether the document could be recovered.</source>
-      <translation>Aşağıda listelenen belgenin kurtarma işlemini başlatmak için 'Kurtarmayı Başlat' düğmesine basın.
-
-'Durum' sütunu, dokümanın kurtarılıp kurtarılmayacağını gösterir.</translation>
-    </message>
-    <message>
-      <source>When deleting all transient directories you won't be able to recover any files afterwards.</source>
-      <translation>Tüm geçici dizinleri silerken daha sonra hiçbir dosyayı kurtaramazsınız.</translation>
+      <source>Transient deleted</source>
+      <translation type="unfinished">Transient deleted</translation>
     </message>
   </context>
   <context>
@@ -4263,16 +4646,16 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Vektör</translation>
     </message>
     <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
+      <source>X:</source>
+      <translation>X:</translation>
     </message>
     <message>
       <source>Y:</source>
       <translation>Y:</translation>
     </message>
     <message>
-      <source>X:</source>
-      <translation>X:</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
   </context>
   <context>
@@ -4333,6 +4716,10 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Daralt</translation>
     </message>
     <message>
+      <source>Do you really want to remove this parameter group?</source>
+      <translation>Bu değişken grubunu gerçekten kaldırmak istiyor musunuz?</translation>
+    </message>
+    <message>
       <source>Existing sub-group</source>
       <translation>Varolan alt grup</translation>
     </message>
@@ -4355,10 +4742,6 @@ The 'Status' column shows whether the document could be recovered.</source>
     <message>
       <source>Reading from '%1' failed.</source>
       <translation>'%1'den okuma başarısız oldu.</translation>
-    </message>
-    <message>
-      <source>Do you really want to remove this parameter group?</source>
-      <translation>Bu değişken grubunu gerçekten kaldırmak istiyor musunuz?</translation>
     </message>
   </context>
   <context>
@@ -4415,100 +4798,64 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Yerleşim</translation>
     </message>
     <message>
-      <source>OK</source>
-      <translation>Tamam</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Çeviri:</translation>
-    </message>
-    <message>
-      <source>Z:</source>
-      <translation>Z:</translation>
-    </message>
-    <message>
-      <source>Y:</source>
-      <translation>Y:</translation>
     </message>
     <message>
       <source>X:</source>
       <translation>X:</translation>
     </message>
     <message>
-      <source>Rotation:</source>
-      <translation>Döndürme:</translation>
+      <source>Y:</source>
+      <translation>Y:</translation>
     </message>
     <message>
-      <source>Angle:</source>
-      <translation>Açı:</translation>
-    </message>
-    <message>
-      <source>Axis:</source>
-      <translation>Eksen:</translation>
-    </message>
-    <message>
-      <source>Center:</source>
-      <translation>Merkez:</translation>
-    </message>
-    <message>
-      <source>Rotation axis with angle</source>
-      <translation>Açılı dönme ekseni</translation>
-    </message>
-    <message>
-      <source>Apply</source>
-      <translation>Uygula</translation>
-    </message>
-    <message>
-      <source>Reset</source>
-      <translation>Sıfırla</translation>
-    </message>
-    <message>
-      <source>Close</source>
-      <translation>Kapat</translation>
-    </message>
-    <message>
-      <source>Incorrect quantity</source>
-      <translation>Hatalı miktar</translation>
-    </message>
-    <message>
-      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
-      <translation>Yanlış girişi olan girdi alanları var, lütfen geçerli yerleşim değerlerini sağlayın!</translation>
-    </message>
-    <message>
-      <source>Use center of mass</source>
-      <translation>Kitlesel merkez kullanın</translation>
+      <source>Z:</source>
+      <translation>Z:</translation>
     </message>
     <message>
       <source>Axial:</source>
       <translation>Eksensel:</translation>
     </message>
     <message>
+      <source>Shift click for opposite direction</source>
+      <translation>Ters yöne dönmek için Shift'e tıklayın</translation>
+    </message>
+    <message>
       <source>Apply axial</source>
       <translation>Eksenel uygula</translation>
     </message>
     <message>
-      <source>Shift click for opposite direction</source>
-      <translation>Ters yöne dönmek için Shift'e tıklayın</translation>
+      <source>Center:</source>
+      <translation>Merkez:</translation>
+    </message>
+    <message>
+      <source>Use center of mass</source>
+      <translation>Kitlesel merkez kullanın</translation>
     </message>
     <message>
       <source>Selected points</source>
       <translation>Seçili noktalar</translation>
     </message>
     <message>
-      <source>Apply incremental changes</source>
-      <translation>Artımlı değişiklikleri Uygula</translation>
+      <source>Rotation:</source>
+      <translation>Döndürme:</translation>
     </message>
     <message>
-      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
-      <translation>Bu tuşa basmadan önce lütfen 1, 2 veya 3 nokta seçin. Bir nokta, yüzey veya kenarda bir nokta olabilir. Bir yüzey veya kenarda kullanılan nokta, yüzey veya kenar boyunca fare konumunda bulunan nokta olacaktır. 1 nokta seçilirse, dönüş merkezi olarak kullanılacaktır. 2 nokta seçilirse, aralarındaki orta nokta, dönme merkezi olacak ve gerekirse yeni bir özel eksen oluşturulacaktır. 3 nokta seçilirse, ilk nokta dönme merkezi olur ve 3 nokta tarafından tanımlanan düzlemde normal olan vektör üzerinde bulunur. Nesneleri hizalarken faydalı olabilecek, rapor görünümünde bazı mesafe ve açı bilgileri sağlanır. Shift + tıklama kullanıldığında kolaylık için uygun mesafe veya açı panoya kopyalanır.</translation>
+      <source>Rotation axis with angle</source>
+      <translation>Açılı dönme ekseni</translation>
     </message>
     <message>
-      <source>Pitch (around y-axis):</source>
-      <translation>Eğmek (y-ekseni etrafında):</translation>
+      <source>Euler angles (zy'x'')</source>
+      <translation>Euler açıları (zy'x'')</translation>
     </message>
     <message>
-      <source>Roll (around x-axis):</source>
-      <translation>Yuvarlamak (x-ekseni etrafında):</translation>
+      <source>Axis:</source>
+      <translation>Eksen:</translation>
+    </message>
+    <message>
+      <source>Angle:</source>
+      <translation>Açı:</translation>
     </message>
     <message>
       <source>Yaw (around z-axis):</source>
@@ -4519,16 +4866,52 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Sapmak (z-ekseni etrafında)</translation>
     </message>
     <message>
+      <source>Pitch (around y-axis):</source>
+      <translation>Eğmek (y-ekseni etrafında):</translation>
+    </message>
+    <message>
       <source>Pitch (around y-axis)</source>
       <translation>Eğmek (y-ekseni etrafında)</translation>
+    </message>
+    <message>
+      <source>Roll (around x-axis):</source>
+      <translation>Yuvarlamak (x-ekseni etrafında):</translation>
     </message>
     <message>
       <source>Roll (around the x-axis)</source>
       <translation>Yuvarlamak (x-ekseni etrafında)</translation>
     </message>
     <message>
-      <source>Euler angles (zy'x'')</source>
-      <translation>Euler açıları (zy'x'')</translation>
+      <source>Apply incremental changes</source>
+      <translation>Artımlı değişiklikleri Uygula</translation>
+    </message>
+    <message>
+      <source>Reset</source>
+      <translation>Sıfırla</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>Tamam</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Kapat</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>Uygula</translation>
+    </message>
+    <message>
+      <source>Please select 1, 2, or 3 points before clicking this button.  A point may be on a vertex, face, or edge.  If on a face or edge the point used will be the point at the mouse position along face or edge.  If 1 point is selected it will be used as the center of rotation.  If 2 points are selected the midpoint between them will be the center of rotation and a new custom axis will be created, if needed.  If 3 points are selected the first point becomes the center of rotation and lies on the vector that is normal to the plane defined by the 3 points.  Some distance and angle information is provided in the report view, which can be useful when aligning objects.  For your convenience when Shift + click is used the appropriate distance or angle is copied to the clipboard.</source>
+      <translation>Bu tuşa basmadan önce lütfen 1, 2 veya 3 nokta seçin. Bir nokta, yüzey veya kenarda bir nokta olabilir. Bir yüzey veya kenarda kullanılan nokta, yüzey veya kenar boyunca fare konumunda bulunan nokta olacaktır. 1 nokta seçilirse, dönüş merkezi olarak kullanılacaktır. 2 nokta seçilirse, aralarındaki orta nokta, dönme merkezi olacak ve gerekirse yeni bir özel eksen oluşturulacaktır. 3 nokta seçilirse, ilk nokta dönme merkezi olur ve 3 nokta tarafından tanımlanan düzlemde normal olan vektör üzerinde bulunur. Nesneleri hizalarken faydalı olabilecek, rapor görünümünde bazı mesafe ve açı bilgileri sağlanır. Shift + tıklama kullanıldığında kolaylık için uygun mesafe veya açı panoya kopyalanır.</translation>
+    </message>
+    <message>
+      <source>Incorrect quantity</source>
+      <translation>Hatalı miktar</translation>
+    </message>
+    <message>
+      <source>There are input fields with incorrect input, please ensure valid placement values!</source>
+      <translation>Yanlış girişi olan girdi alanları var, lütfen geçerli yerleşim değerlerini sağlayın!</translation>
     </message>
   </context>
   <context>
@@ -4580,12 +4963,12 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Pencere</translation>
     </message>
     <message>
-      <source>Close</source>
-      <translation>Kapat</translation>
-    </message>
-    <message>
       <source>Refresh</source>
       <translation>Yenile</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Kapat</translation>
     </message>
   </context>
   <context>
@@ -4595,12 +4978,12 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Inventor programı ağacı</translation>
     </message>
     <message>
-      <source>Nodes</source>
-      <translation>Düğümler</translation>
-    </message>
-    <message>
       <source>Name</source>
       <translation>Isim</translation>
+    </message>
+    <message>
+      <source>Nodes</source>
+      <translation>Düğümler</translation>
     </message>
   </context>
   <context>
@@ -4664,8 +5047,12 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Seçilen nesneler başka bağımlılıklar içeriyor. Lütfen dışa aktarılacak nesneleri seçin. Tüm bağımlılıklar varsayılan olarak otomatik seçilir.</translation>
     </message>
     <message>
-      <source>Dependency</source>
-      <translation>Bağımlılık</translation>
+      <source>Auto select depending objects</source>
+      <translation type="unfinished">Auto select depending objects</translation>
+    </message>
+    <message>
+      <source>Depending on</source>
+      <translation type="unfinished">Depending on</translation>
     </message>
     <message>
       <source>Document</source>
@@ -4676,20 +5063,16 @@ The 'Status' column shows whether the document could be recovered.</source>
       <translation>Isim</translation>
     </message>
     <message>
-      <source>State</source>
-      <translation>Durum</translation>
+      <source>Depended by</source>
+      <translation type="unfinished">Depended by</translation>
     </message>
     <message>
-      <source>Hierarchy</source>
-      <translation>Hiyerarşi</translation>
+      <source>Selections</source>
+      <translation>Seçimler</translation>
     </message>
     <message>
-      <source>Selected</source>
-      <translation>Seçili</translation>
-    </message>
-    <message>
-      <source>Partial</source>
-      <translation>Kısmi</translation>
+      <source>All</source>
+      <translation>Hepsi</translation>
     </message>
     <message>
       <source>&amp;Use Original Selections</source>
@@ -4746,34 +5129,6 @@ kutusunu açmadan önce seçilen nesnelerle devam et</translation>
       <translation>Seçenekler</translation>
     </message>
     <message>
-      <source>Clear</source>
-      <translation>Temizle</translation>
-    </message>
-    <message>
-      <source>Save As...</source>
-      <translation>Farklı Kaydet...</translation>
-    </message>
-    <message>
-      <source>Save Report Output</source>
-      <translation>Rapor çıktısını kaydet</translation>
-    </message>
-    <message>
-      <source>Go to end</source>
-      <translation>Sona git</translation>
-    </message>
-    <message>
-      <source>Redirect Python output</source>
-      <translation>Python çıktısını yeniden yönlendir</translation>
-    </message>
-    <message>
-      <source>Redirect Python errors</source>
-      <translation>Python hatalarını yeniden yönlendir</translation>
-    </message>
-    <message>
-      <source>Plain Text Files</source>
-      <translation>Yalın Yazı Düzenleyicisi</translation>
-    </message>
-    <message>
       <source>Display message types</source>
       <translation>Mesaj türlerini görüntüle</translation>
     </message>
@@ -4794,8 +5149,36 @@ kutusunu açmadan önce seçilen nesnelerle devam et</translation>
       <translation>Hatalar</translation>
     </message>
     <message>
-      <source>Show report view on</source>
-      <translation>Rapor görünümünü üstte göster</translation>
+      <source>Show output window on</source>
+      <translation type="unfinished">Show output window on</translation>
+    </message>
+    <message>
+      <source>Redirect Python output</source>
+      <translation>Python çıktısını yeniden yönlendir</translation>
+    </message>
+    <message>
+      <source>Redirect Python errors</source>
+      <translation>Python hatalarını yeniden yönlendir</translation>
+    </message>
+    <message>
+      <source>Go to end</source>
+      <translation>Sona git</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Temizle</translation>
+    </message>
+    <message>
+      <source>Save As...</source>
+      <translation>Farklı Kaydet...</translation>
+    </message>
+    <message>
+      <source>Save Report Output</source>
+      <translation>Rapor çıktısını kaydet</translation>
+    </message>
+    <message>
+      <source>Plain Text Files</source>
+      <translation>Yalın Yazı Düzenleyicisi</translation>
     </message>
   </context>
   <context>
@@ -4812,6 +5195,10 @@ kutusunu açmadan önce seçilen nesnelerle devam et</translation>
   <context>
     <name>Gui::DockWnd::SelectionView</name>
     <message>
+      <source>Selection View</source>
+      <translation>Seçim görünümü</translation>
+    </message>
+    <message>
       <source>Search</source>
       <translation>Ara</translation>
     </message>
@@ -4822,6 +5209,14 @@ kutusunu açmadan önce seçilen nesnelerle devam et</translation>
     <message>
       <source>Clears the search field</source>
       <translation>Arama alanını siler</translation>
+    </message>
+    <message>
+      <source>The number of selected items</source>
+      <translation>Seçili öğelerin toplamı</translation>
+    </message>
+    <message>
+      <source>Picked object list</source>
+      <translation>Özel seçilen nesne listesi</translation>
     </message>
     <message>
       <source>Select only</source>
@@ -4856,14 +5251,6 @@ kutusunu açmadan önce seçilen nesnelerle devam et</translation>
       <translation>Bu nesneyi unsur ağacında bulur ve seçer</translation>
     </message>
     <message>
-      <source>To python console</source>
-      <translation>Python konsolu</translation>
-    </message>
-    <message>
-      <source>Reveals this object and its subelements in the python console.</source>
-      <translation>Bu nesneyi ve alt öğelerini python konsolunda gösterir.</translation>
-    </message>
-    <message>
       <source>Mark to recompute</source>
       <translation>Yeniden hesaplamak için işaretle</translation>
     </message>
@@ -4872,12 +5259,12 @@ kutusunu açmadan önce seçilen nesnelerle devam et</translation>
       <translation>Bu nesneyi yeniden hesaplanacak şekilde işaretleyin</translation>
     </message>
     <message>
-      <source>Selection View</source>
-      <translation>Seçim görünümü</translation>
+      <source>To python console</source>
+      <translation>Python konsolu</translation>
     </message>
     <message>
-      <source>The number of selected items</source>
-      <translation>Seçili öğelerin toplamı</translation>
+      <source>Reveals this object and its subelements in the python console.</source>
+      <translation>Bu nesneyi ve alt öğelerini python konsolunda gösterir.</translation>
     </message>
     <message>
       <source>Duplicate subshape</source>
@@ -4886,10 +5273,6 @@ kutusunu açmadan önce seçilen nesnelerle devam et</translation>
     <message>
       <source>Creates a standalone copy of this subshape in the document</source>
       <translation>Belgede bu alt şablonun bağımsız bir kopyasını oluşturur</translation>
-    </message>
-    <message>
-      <source>Picked object list</source>
-      <translation>Özel seçilen nesne listesi</translation>
     </message>
   </context>
   <context>
@@ -4927,8 +5310,16 @@ Do you want to save your changes?</source>
       <translation>Belge değiştirildi. Yaptığınız değişiklikleri kaydetmek istiyor musunuz?</translation>
     </message>
     <message>
+      <source>FreeCAD macro</source>
+      <translation>FreeCAD makro</translation>
+    </message>
+    <message>
       <source>Export PDF</source>
       <translation>PDF olarak dışa aktar</translation>
+    </message>
+    <message>
+      <source>PDF file</source>
+      <translation>PDF dosyası</translation>
     </message>
     <message>
       <source>untitled[*]</source>
@@ -4949,14 +5340,6 @@ Do you want to save your changes?</source>
     <message>
       <source>Formatted</source>
       <translation>Biçimlendirilmiş</translation>
-    </message>
-    <message>
-      <source>FreeCAD macro</source>
-      <translation>FreeCAD makro</translation>
-    </message>
-    <message>
-      <source>PDF file</source>
-      <translation>PDF dosyası</translation>
     </message>
   </context>
   <context>
@@ -5051,34 +5434,6 @@ Do you want to save your changes?</source>
   <context>
     <name>Gui::GraphvizView</name>
     <message>
-      <source>Export graph</source>
-      <translation>Grafiği dışa aktar</translation>
-    </message>
-    <message>
-      <source>PNG format</source>
-      <translation>PNG biçimi</translation>
-    </message>
-    <message>
-      <source>Bitmap format</source>
-      <translation>Bit eşlem biçimi</translation>
-    </message>
-    <message>
-      <source>GIF format</source>
-      <translation>PNG biçimi</translation>
-    </message>
-    <message>
-      <source>JPG format</source>
-      <translation>PNG biçimi</translation>
-    </message>
-    <message>
-      <source>SVG format</source>
-      <translation>PNG biçimi</translation>
-    </message>
-    <message>
-      <source>PDF format</source>
-      <translation>PNG biçimi</translation>
-    </message>
-    <message>
       <source>Graphviz not found</source>
       <translation>Graphviz bulunamadı</translation>
     </message>
@@ -5105,6 +5460,34 @@ Do you want to save your changes?</source>
     <message>
       <source>Graphviz failed to create an image file</source>
       <translation>Graphviz görüntü dosyası oluşturulamadı</translation>
+    </message>
+    <message>
+      <source>PNG format</source>
+      <translation>PNG biçimi</translation>
+    </message>
+    <message>
+      <source>Bitmap format</source>
+      <translation>Bit eşlem biçimi</translation>
+    </message>
+    <message>
+      <source>GIF format</source>
+      <translation>PNG biçimi</translation>
+    </message>
+    <message>
+      <source>JPG format</source>
+      <translation>PNG biçimi</translation>
+    </message>
+    <message>
+      <source>SVG format</source>
+      <translation>PNG biçimi</translation>
+    </message>
+    <message>
+      <source>PDF format</source>
+      <translation>PNG biçimi</translation>
+    </message>
+    <message>
+      <source>Export graph</source>
+      <translation>Grafiği dışa aktar</translation>
     </message>
   </context>
   <context>
@@ -5147,14 +5530,6 @@ Do you want to save your changes?</source>
   <context>
     <name>Gui::LocationDialog</name>
     <message>
-      <source>Wrong direction</source>
-      <translation>Yanlış yön</translation>
-    </message>
-    <message>
-      <source>Direction must not be the null vector</source>
-      <translation>Yön, boş vektör olmamalıdır</translation>
-    </message>
-    <message>
       <source>X</source>
       <translation>X</translation>
     </message>
@@ -5169,6 +5544,14 @@ Do you want to save your changes?</source>
     <message>
       <source>User defined...</source>
       <translation>Kullanıcı tanımlı...</translation>
+    </message>
+    <message>
+      <source>Wrong direction</source>
+      <translation>Yanlış yön</translation>
+    </message>
+    <message>
+      <source>Direction must not be the null vector</source>
+      <translation>Yön, boş vektör olmamalıdır</translation>
     </message>
   </context>
   <context>
@@ -5216,16 +5599,28 @@ Do you want to save your changes?</source>
       <translation>Hazır</translation>
     </message>
     <message>
+      <source>Help addon needed!</source>
+      <translation type="unfinished">Help addon needed!</translation>
+    </message>
+    <message>
+      <source>The Help system of %1 is now handled by the "Help" addon. It can easily be installed via the Addons Manager</source>
+      <translation type="unfinished">The Help system of %1 is now handled by the "Help" addon. It can easily be installed via the Addons Manager</translation>
+    </message>
+    <message>
+      <source>Open Addon Manager</source>
+      <translation type="unfinished">Open Addon Manager</translation>
+    </message>
+    <message>
+      <source>Close All</source>
+      <translation>Tümünü Kapat</translation>
+    </message>
+    <message>
       <source>Toggles this toolbar</source>
       <translation>Bu araç çubuğunu değiştirir</translation>
     </message>
     <message>
       <source>Toggles this dockable window</source>
       <translation>Bu yapışabilir pencere arasında geçiş yapar</translation>
-    </message>
-    <message>
-      <source>Close All</source>
-      <translation>Tümünü Kapat</translation>
     </message>
     <message>
       <source>Unsaved document</source>
@@ -5323,12 +5718,12 @@ sağ görünümde %2 nokta seçili.</translation>
       <translation>Seçili noktalar (%1,%2,%3)</translation>
     </message>
     <message>
-      <source>No point was picked</source>
-      <translation>Hiçbir nokta seçilmedi</translation>
-    </message>
-    <message>
       <source>No point was found on model</source>
       <translation>Model üzerinde hiçbir nokta bulunamadı</translation>
+    </message>
+    <message>
+      <source>No point was picked</source>
+      <translation>Hiçbir nokta seçilmedi</translation>
     </message>
   </context>
   <context>
@@ -5348,6 +5743,13 @@ sağ görünümde %2 nokta seçili.</translation>
     <message>
       <source>Pinch (place two fingers on the screen and drag them apart from or towards each other) OR scroll middle mouse button OR press ALT + right mouse button OR PgUp/PgDown on keyboard.</source>
       <translation>Çimdikleyin (iki parmağınızı ekrana yerleştirin ve birbirinden uzağa veya birbirlerine doğru sürükleyin) VEYA fare tekerini kaydırın VEYA klavyede ALT + farenin sağ butonunu kullanın VEYA PgUp / PgDown tuşlarına basın.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::ModifierLineEdit</name>
+    <message>
+      <source>Press modifier keys</source>
+      <translation type="unfinished">Press modifier keys</translation>
     </message>
   </context>
   <context>
@@ -5374,6 +5776,25 @@ sağ görünümde %2 nokta seçili.</translation>
     <message>
       <source>Press CTRL and left mouse button</source>
       <translation>ctrl ve sol fare düğmesine basın</translation>
+    </message>
+  </context>
+  <context>
+    <name>Gui::OpenSCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Sol fare düğmesine basın</translation>
+    </message>
+    <message>
+      <source>Press right mouse button and move mouse</source>
+      <translation type="unfinished">Press right mouse button and move mouse</translation>
+    </message>
+    <message>
+      <source>Press left mouse button and move mouse</source>
+      <translation type="unfinished">Press left mouse button and move mouse</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button or SHIFT and right mouse button</source>
+      <translation type="unfinished">Press middle mouse button or SHIFT and right mouse button</translation>
     </message>
   </context>
   <context>
@@ -5450,24 +5871,32 @@ sağ görünümde %2 nokta seçili.</translation>
       <translation>özellik</translation>
     </message>
     <message>
+      <source>Auto expand</source>
+      <translation>Otomatik Genişlet</translation>
+    </message>
+    <message>
       <source>Show all</source>
       <translation>Tümünü göster</translation>
-    </message>
-    <message>
-      <source>Add property</source>
-      <translation>Özellik ekle</translation>
-    </message>
-    <message>
-      <source>Remove property</source>
-      <translation>Özelliği kaldır</translation>
     </message>
     <message>
       <source>Expression...</source>
       <translation>İfade...</translation>
     </message>
     <message>
-      <source>Auto expand</source>
-      <translation>Otomatik Genişlet</translation>
+      <source>Add property</source>
+      <translation>Özellik ekle</translation>
+    </message>
+    <message>
+      <source>Rename property group</source>
+      <translation type="unfinished">Rename property group</translation>
+    </message>
+    <message>
+      <source>Remove property</source>
+      <translation>Özelliği kaldır</translation>
+    </message>
+    <message>
+      <source>Group name:</source>
+      <translation type="unfinished">Group name:</translation>
     </message>
   </context>
   <context>
@@ -5516,8 +5945,16 @@ Do you want to exit without saving your data?</source>
       <translation>İşlenmeyen Özel durum FreeCAD.</translation>
     </message>
     <message>
+      <source>Unhandled std C++ exception.</source>
+      <translation>İşlenmemiş std c++ özel durum.</translation>
+    </message>
+    <message>
       <source>Unhandled unknown C++ exception.</source>
       <translation>İşlenmemiş bilinmeyen c++ özel durum.</translation>
+    </message>
+    <message>
+      <source>&amp;Copy</source>
+      <translation>&amp;amp; Kopyala</translation>
     </message>
     <message>
       <source>&amp;Copy command</source>
@@ -5532,28 +5969,12 @@ Do you want to exit without saving your data?</source>
       <translation>Geçmişi olarak kaydet...</translation>
     </message>
     <message>
-      <source>Insert file name...</source>
-      <translation>Dosya adı Ekle...</translation>
+      <source>Save history</source>
+      <translation>Geçmişi kaydet</translation>
     </message>
     <message>
-      <source>Save History</source>
-      <translation>Geçmişi Kaydet</translation>
-    </message>
-    <message>
-      <source>Insert file name</source>
-      <translation>Dosya adı Ekle</translation>
-    </message>
-    <message>
-      <source>Unhandled std C++ exception.</source>
-      <translation>İşlenmemiş std c++ özel durum.</translation>
-    </message>
-    <message>
-      <source>Word wrap</source>
-      <translation>Sözcük kaydırma</translation>
-    </message>
-    <message>
-      <source>&amp;Copy</source>
-      <translation>&amp;amp; Kopyala</translation>
+      <source>Saves Python history across %1 sessions</source>
+      <translation>Python geçmişini %1 oturum boyunca kaydeder</translation>
     </message>
     <message>
       <source>&amp;Paste</source>
@@ -5568,20 +5989,28 @@ Do you want to exit without saving your data?</source>
       <translation>Konsolü temizle</translation>
     </message>
     <message>
+      <source>Insert file name...</source>
+      <translation>Dosya adı Ekle...</translation>
+    </message>
+    <message>
+      <source>Word wrap</source>
+      <translation>Sözcük kaydırma</translation>
+    </message>
+    <message>
+      <source>Save History</source>
+      <translation>Geçmişi Kaydet</translation>
+    </message>
+    <message>
       <source>Macro Files</source>
       <translation>Makro dosyaları</translation>
     </message>
     <message>
+      <source>Insert file name</source>
+      <translation>Dosya adı Ekle</translation>
+    </message>
+    <message>
       <source>All Files</source>
       <translation>Tüm Dosyalar</translation>
-    </message>
-    <message>
-      <source>Save history</source>
-      <translation>Geçmişi kaydet</translation>
-    </message>
-    <message>
-      <source>Saves Python history across %1 sessions</source>
-      <translation>Python geçmişini %1 oturum boyunca kaydeder</translation>
     </message>
   </context>
   <context>
@@ -5612,6 +6041,10 @@ Do you want to exit without saving your data?</source>
   </context>
   <context>
     <name>Gui::RecentMacrosAction</name>
+    <message>
+      <source>none</source>
+      <translation>hiçbiri</translation>
+    </message>
     <message>
       <source>Run macro %1 (Shift+click to edit) shortcut: %2</source>
       <translation>Makroyu çalıştır %1 (Shift+düzenlemek için tıklayın) kısayol: %2</translation>
@@ -5645,6 +6078,25 @@ Do you want to exit without saving your data?</source>
     </message>
   </context>
   <context>
+    <name>Gui::SearchBar</name>
+    <message>
+      <source>Previous</source>
+      <translation>Önceki</translation>
+    </message>
+    <message>
+      <source>Next</source>
+      <translation type="unfinished">Next</translation>
+    </message>
+    <message>
+      <source>Case sensitive</source>
+      <translation type="unfinished">Case sensitive</translation>
+    </message>
+    <message>
+      <source>Whole words</source>
+      <translation type="unfinished">Whole words</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::SelectModule</name>
     <message>
       <source>Select module</source>
@@ -5662,10 +6114,6 @@ Do you want to exit without saving your data?</source>
   <context>
     <name>Gui::StdCmdDescription</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>Des&amp;cription</source>
       <translation>&amp;Açıklama</translation>
     </message>
@@ -5676,10 +6124,6 @@ Do you want to exit without saving your data?</source>
   </context>
   <context>
     <name>Gui::StdCmdDownloadOnlineHelp</name>
-    <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
     <message>
       <source>Download online help</source>
       <translation>Çevrimiçi yardımı indir</translation>
@@ -5719,10 +6163,6 @@ Başka bir dizin belirlemek ister misiniz?</translation>
   </context>
   <context>
     <name>Gui::StdCmdPythonHelp</name>
-    <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
     <message>
       <source>Automatic python modules documentation</source>
       <translation>Otomatik python modülleri belgeleri</translation>
@@ -5772,28 +6212,28 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>MetinEtiketi</translation>
     </message>
     <message>
-      <source>Recompute after commit</source>
-      <translation>İşlemden sonra yeniden hesapla</translation>
-    </message>
-    <message>
-      <source>Remove</source>
-      <translation>Kaldır</translation>
-    </message>
-    <message>
       <source>Edit</source>
       <translation>Düzenle</translation>
-    </message>
-    <message>
-      <source>Remove all</source>
-      <translation>Tümünü kaldır</translation>
     </message>
     <message>
       <source>Hide</source>
       <translation>Gizle</translation>
     </message>
     <message>
+      <source>Remove</source>
+      <translation>Kaldır</translation>
+    </message>
+    <message>
+      <source>Remove all</source>
+      <translation>Tümünü kaldır</translation>
+    </message>
+    <message>
       <source>Box select</source>
       <translation>Kare seçim</translation>
+    </message>
+    <message>
+      <source>Recompute after commit</source>
+      <translation>İşlemden sonra yeniden hesapla</translation>
     </message>
     <message>
       <source>On-top when selected</source>
@@ -5802,6 +6242,14 @@ Başka bir dizin belirlemek ister misiniz?</translation>
   </context>
   <context>
     <name>Gui::TaskView::TaskAppearance</name>
+    <message>
+      <source>Appearance</source>
+      <translation>Görünüm</translation>
+    </message>
+    <message>
+      <source>Document window:</source>
+      <translation>Belge penceresi:</translation>
+    </message>
     <message>
       <source>Plot mode:</source>
       <translation>Çizim kipi:</translation>
@@ -5817,14 +6265,6 @@ Başka bir dizin belirlemek ister misiniz?</translation>
     <message>
       <source>Transparency:</source>
       <translation>Şeffaflık:</translation>
-    </message>
-    <message>
-      <source>Appearance</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
-      <source>Document window:</source>
-      <translation>Belge penceresi:</translation>
     </message>
   </context>
   <context>
@@ -5888,6 +6328,25 @@ Başka bir dizin belirlemek ister misiniz?</translation>
     </message>
   </context>
   <context>
+    <name>Gui::TinkerCADNavigationStyle</name>
+    <message>
+      <source>Press left mouse button</source>
+      <translation>Sol fare düğmesine basın</translation>
+    </message>
+    <message>
+      <source>Press middle mouse button</source>
+      <translation>Farenin orta tuşuna basın</translation>
+    </message>
+    <message>
+      <source>Press right mouse button</source>
+      <translation type="unfinished">Press right mouse button</translation>
+    </message>
+    <message>
+      <source>Scroll middle mouse button</source>
+      <translation>Fare tekerleğini kaydırın</translation>
+    </message>
+  </context>
+  <context>
     <name>Gui::TouchpadNavigationStyle</name>
     <message>
       <source>Press left mouse button</source>
@@ -5909,28 +6368,24 @@ Başka bir dizin belirlemek ister misiniz?</translation>
   <context>
     <name>Gui::Translator</name>
     <message>
-      <source>English</source>
-      <translation>İngilizce</translation>
+      <source>Afrikaans</source>
+      <translation>Afrika dili</translation>
     </message>
     <message>
-      <source>German</source>
-      <translation>Almanca</translation>
+      <source>Arabic</source>
+      <translation>Arapça</translation>
     </message>
     <message>
-      <source>Spanish</source>
-      <translation>İspanyolca</translation>
+      <source>Basque</source>
+      <translation>Baskça</translation>
     </message>
     <message>
-      <source>French</source>
-      <translation>Fransızca</translation>
+      <source>Bulgarian</source>
+      <translation>Bulgarca</translation>
     </message>
     <message>
-      <source>Italian</source>
-      <translation>İtalyanca</translation>
-    </message>
-    <message>
-      <source>Japanese</source>
-      <translation>Japonca</translation>
+      <source>Catalan</source>
+      <translation>Katalanca</translation>
     </message>
     <message>
       <source>Chinese Simplified</source>
@@ -5941,24 +6396,80 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Geleneksel Çince</translation>
     </message>
     <message>
+      <source>Croatian</source>
+      <translation>Hırvatça</translation>
+    </message>
+    <message>
+      <source>Czech</source>
+      <translation>Çekçe</translation>
+    </message>
+    <message>
+      <source>Dutch</source>
+      <translation>Flemenkçe</translation>
+    </message>
+    <message>
+      <source>English</source>
+      <translation>İngilizce</translation>
+    </message>
+    <message>
+      <source>Filipino</source>
+      <translation>Filipince</translation>
+    </message>
+    <message>
+      <source>Finnish</source>
+      <translation>Fince</translation>
+    </message>
+    <message>
+      <source>French</source>
+      <translation>Fransızca</translation>
+    </message>
+    <message>
+      <source>Galician</source>
+      <translation>Galiçya Dili</translation>
+    </message>
+    <message>
+      <source>German</source>
+      <translation>Almanca</translation>
+    </message>
+    <message>
+      <source>Greek</source>
+      <translation>Yunanca</translation>
+    </message>
+    <message>
+      <source>Hungarian</source>
+      <translation>Macarca</translation>
+    </message>
+    <message>
+      <source>Indonesian</source>
+      <translation>Endonezce</translation>
+    </message>
+    <message>
+      <source>Italian</source>
+      <translation>İtalyanca</translation>
+    </message>
+    <message>
+      <source>Japanese</source>
+      <translation>Japonca</translation>
+    </message>
+    <message>
+      <source>Kabyle</source>
+      <translation>Berberice</translation>
+    </message>
+    <message>
       <source>Korean</source>
       <translation>Korece</translation>
     </message>
     <message>
-      <source>Russian</source>
-      <translation>Rusça</translation>
-    </message>
-    <message>
-      <source>Swedish</source>
-      <translation>İsveççe</translation>
-    </message>
-    <message>
-      <source>Afrikaans</source>
-      <translation>Afrika dili</translation>
+      <source>Lithuanian</source>
+      <translation>Litvanyaca</translation>
     </message>
     <message>
       <source>Norwegian</source>
       <translation>Norveççe</translation>
+    </message>
+    <message>
+      <source>Polish</source>
+      <translation>Lehçe</translation>
     </message>
     <message>
       <source>Portuguese, Brazilian</source>
@@ -5969,100 +6480,52 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Portekizce</translation>
     </message>
     <message>
-      <source>Dutch</source>
-      <translation>Flemenkçe</translation>
-    </message>
-    <message>
-      <source>Ukrainian</source>
-      <translation>Ukraynaca</translation>
-    </message>
-    <message>
-      <source>Finnish</source>
-      <translation>Fince</translation>
-    </message>
-    <message>
-      <source>Croatian</source>
-      <translation>Hırvatça</translation>
-    </message>
-    <message>
-      <source>Polish</source>
-      <translation>Lehçe</translation>
-    </message>
-    <message>
-      <source>Czech</source>
-      <translation>Çekçe</translation>
-    </message>
-    <message>
-      <source>Hungarian</source>
-      <translation>Macarca</translation>
-    </message>
-    <message>
       <source>Romanian</source>
       <translation>Romence</translation>
+    </message>
+    <message>
+      <source>Russian</source>
+      <translation>Rusça</translation>
     </message>
     <message>
       <source>Slovak</source>
       <translation>Slovakça</translation>
     </message>
     <message>
-      <source>Turkish</source>
-      <translation>Türkçe</translation>
-    </message>
-    <message>
       <source>Slovenian</source>
       <translation>Slovence</translation>
     </message>
     <message>
-      <source>Basque</source>
-      <translation>Baskça</translation>
+      <source>Spanish</source>
+      <translation>İspanyolca</translation>
     </message>
     <message>
-      <source>Catalan</source>
-      <translation>Katalanca</translation>
+      <source>Spanish, Argentina</source>
+      <translation>İspanyolca, Arjantin</translation>
     </message>
     <message>
-      <source>Galician</source>
-      <translation>Galiçya Dili</translation>
+      <source>Swedish</source>
+      <translation>İsveççe</translation>
     </message>
     <message>
-      <source>Kabyle</source>
-      <translation>Berberice</translation>
+      <source>Turkish</source>
+      <translation>Türkçe</translation>
     </message>
     <message>
-      <source>Filipino</source>
-      <translation>Filipince</translation>
-    </message>
-    <message>
-      <source>Indonesian</source>
-      <translation>Endonezce</translation>
-    </message>
-    <message>
-      <source>Lithuanian</source>
-      <translation>Litvanyaca</translation>
+      <source>Ukrainian</source>
+      <translation>Ukraynaca</translation>
     </message>
     <message>
       <source>Valencian</source>
       <translation>Valensiya Dili</translation>
     </message>
     <message>
-      <source>Arabic</source>
-      <translation>Arapça</translation>
-    </message>
-    <message>
       <source>Vietnamese</source>
       <translation>Vietnamca</translation>
     </message>
     <message>
-      <source>Bulgarian</source>
-      <translation>Bulgarca</translation>
-    </message>
-    <message>
-      <source>Greek</source>
-      <translation>Yunanca</translation>
-    </message>
-    <message>
-      <source>Spanish, Argentina</source>
-      <translation>İspanyolca, Arjantin</translation>
+      <source>Georgian</source>
+      <translation type="unfinished">Georgian</translation>
     </message>
   </context>
   <context>
@@ -6082,40 +6545,12 @@ Başka bir dizin belirlemek ister misiniz?</translation>
   <context>
     <name>Gui::TreeWidget</name>
     <message>
-      <source>Create group...</source>
-      <translation>Grup Oluştur...</translation>
+      <source>Search...</source>
+      <translation>Ara...</translation>
     </message>
     <message>
-      <source>Create a group</source>
-      <translation>Bir Grup oluşturma</translation>
-    </message>
-    <message>
-      <source>Group</source>
-      <translation>Grup</translation>
-    </message>
-    <message>
-      <source>Rename</source>
-      <translation>Yeniden Adlandır</translation>
-    </message>
-    <message>
-      <source>Rename object</source>
-      <translation>Nesneyi yeniden adlandır</translation>
-    </message>
-    <message>
-      <source>Labels &amp; Attributes</source>
-      <translation>Etiketler &amp; öznitelikleri</translation>
-    </message>
-    <message>
-      <source>Application</source>
-      <translation>Uygulama</translation>
-    </message>
-    <message>
-      <source>Finish editing</source>
-      <translation>Düzenlemeyi tamamla</translation>
-    </message>
-    <message>
-      <source>Finish editing object</source>
-      <translation>Nesneyi düzenlemeyi tamamla</translation>
+      <source>Search for objects</source>
+      <translation>Nesneleri ara</translation>
     </message>
     <message>
       <source>Activate document</source>
@@ -6126,36 +6561,20 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>%1 Belgesini etkinleştir</translation>
     </message>
     <message>
-      <source>Skip recomputes</source>
-      <translation>Yeniden hesaplamayı atla</translation>
+      <source>Group</source>
+      <translation>Grup</translation>
     </message>
     <message>
-      <source>Enable or disable recomputations of document</source>
-      <translation>Dokümanın yeniden hesaplanmasını etkinleştirir veya devre dışı bırakır</translation>
-    </message>
-    <message>
-      <source>Mark to recompute</source>
-      <translation>Yeniden hesaplamak için işaretle</translation>
-    </message>
-    <message>
-      <source>Mark this object to be recomputed</source>
-      <translation>Bu nesneyi yeniden hesaplanacak şekilde işaretleyin</translation>
-    </message>
-    <message>
-      <source>%1, Internal name: %2</source>
-      <translation>%1, Dahili adı: %2</translation>
-    </message>
-    <message>
-      <source>Search...</source>
-      <translation>Ara...</translation>
-    </message>
-    <message>
-      <source>Search for objects</source>
-      <translation>Nesneleri ara</translation>
+      <source>Labels &amp; Attributes</source>
+      <translation>Etiketler &amp; öznitelikleri</translation>
     </message>
     <message>
       <source>Description</source>
       <translation>Açıklama</translation>
+    </message>
+    <message>
+      <source>Application</source>
+      <translation>Uygulama</translation>
     </message>
     <message>
       <source>Show hidden items</source>
@@ -6174,6 +6593,38 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Öğeyi Unsur Ağacında gizle</translation>
     </message>
     <message>
+      <source>Create group...</source>
+      <translation>Grup Oluştur...</translation>
+    </message>
+    <message>
+      <source>Create a group</source>
+      <translation>Bir Grup oluşturma</translation>
+    </message>
+    <message>
+      <source>Rename</source>
+      <translation>Yeniden Adlandır</translation>
+    </message>
+    <message>
+      <source>Rename object</source>
+      <translation>Nesneyi yeniden adlandır</translation>
+    </message>
+    <message>
+      <source>Finish editing</source>
+      <translation>Düzenlemeyi tamamla</translation>
+    </message>
+    <message>
+      <source>Finish editing object</source>
+      <translation>Nesneyi düzenlemeyi tamamla</translation>
+    </message>
+    <message>
+      <source>Add dependent objects to selection</source>
+      <translation type="unfinished">Add dependent objects to selection</translation>
+    </message>
+    <message>
+      <source>Adds all dependent objects to the selection</source>
+      <translation type="unfinished">Adds all dependent objects to the selection</translation>
+    </message>
+    <message>
       <source>Close document</source>
       <translation>Belgeyi kapat</translation>
     </message>
@@ -6190,12 +6641,28 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Kısmi yüklenen belgeyi tekrar yükle</translation>
     </message>
     <message>
+      <source>Skip recomputes</source>
+      <translation>Yeniden hesaplamayı atla</translation>
+    </message>
+    <message>
+      <source>Enable or disable recomputations of document</source>
+      <translation>Dokümanın yeniden hesaplanmasını etkinleştirir veya devre dışı bırakır</translation>
+    </message>
+    <message>
       <source>Allow partial recomputes</source>
       <translation>Kısmi yeniden hesaplamalara izin ver</translation>
     </message>
     <message>
       <source>Enable or disable recomputating editing object when 'skip recomputation' is enabled</source>
       <translation>'Tekrar hesaplamayı atla' etkin ise tekrar hesaplama düzenleme nesnesini etkinleştir veya geçersizleştir</translation>
+    </message>
+    <message>
+      <source>Mark to recompute</source>
+      <translation>Yeniden hesaplamak için işaretle</translation>
+    </message>
+    <message>
+      <source>Mark this object to be recomputed</source>
+      <translation>Bu nesneyi yeniden hesaplanacak şekilde işaretleyin</translation>
     </message>
     <message>
       <source>Recompute object</source>
@@ -6208,6 +6675,10 @@ Başka bir dizin belirlemek ister misiniz?</translation>
     <message>
       <source> (but must be executed)</source>
       <translation> (ama çalıştırılmalı)</translation>
+    </message>
+    <message>
+      <source>%1, Internal name: %2</source>
+      <translation>%1, Dahili adı: %2</translation>
     </message>
   </context>
   <context>
@@ -6312,6 +6783,10 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Z:</translation>
     </message>
     <message>
+      <source>Grid Snap in</source>
+      <translation>Izgarayı yakala</translation>
+    </message>
+    <message>
       <source>0.1 mm</source>
       <translation>0.1 mm</translation>
     </message>
@@ -6367,10 +6842,6 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <source>5 m </source>
       <translation>5 m </translation>
     </message>
-    <message>
-      <source>Grid Snap in</source>
-      <translation>Izgarayı yakala</translation>
-    </message>
   </context>
   <context>
     <name>PropertyListDialog</name>
@@ -6386,6 +6857,10 @@ Başka bir dizin belirlemek ister misiniz?</translation>
   <context>
     <name>QDockWidget</name>
     <message>
+      <source>Toolbox</source>
+      <translation>Araç kutusu</translation>
+    </message>
+    <message>
       <source>Tree view</source>
       <translation>Unsur Ağacı</translation>
     </message>
@@ -6398,28 +6873,24 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Seçim görünümü</translation>
     </message>
     <message>
-      <source>Report view</source>
-      <translation>Rapor Görünümü</translation>
-    </message>
-    <message>
       <source>Combo View</source>
       <translation>Birleşik görünüm</translation>
     </message>
     <message>
-      <source>Toolbox</source>
-      <translation>Araç kutusu</translation>
+      <source>Report view</source>
+      <translation>Rapor Görünümü</translation>
     </message>
     <message>
       <source>Python console</source>
       <translation>Python konsolu</translation>
     </message>
     <message>
-      <source>Display properties</source>
-      <translation>Görüntü özellikleri</translation>
-    </message>
-    <message>
       <source>DAG View</source>
       <translation>DAG görünümü</translation>
+    </message>
+    <message>
+      <source>Display properties</source>
+      <translation>Görüntü özellikleri</translation>
     </message>
   </context>
   <context>
@@ -6433,12 +6904,20 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Ekran</translation>
     </message>
     <message>
+      <source>Workbenches</source>
+      <translation>Tezgah</translation>
+    </message>
+    <message>
       <source>Unknown filetype</source>
       <translation>Bilinmeyen dosya türü</translation>
     </message>
     <message>
       <source>Cannot open unknown filetype: %1</source>
       <translation>Bilinmeyen dosya türünü açamıyor: %1</translation>
+    </message>
+    <message>
+      <source>Export failed</source>
+      <translation>Dışa aktarım başarısız oldu</translation>
     </message>
     <message>
       <source>Cannot save to unknown filetype: %1</source>
@@ -6461,6 +6940,18 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Belgeyi aç</translation>
     </message>
     <message>
+      <source>Error</source>
+      <translation>Hata</translation>
+    </message>
+    <message>
+      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
+      <translation>Dosya yüklemesi esnasında hatalar vardı. Bazı veriler değiştirilmiş veya hiç kurtarılmamış olabilir. İlgili nesneler hakkında daha spesifik bilgi için rapor görünümüne bakın.</translation>
+    </message>
+    <message>
+      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
+      <translation>Dosyayı yüklerken ciddi hatalar oluştu. Bazı veriler değiştirilmiş veya hiç kurtarılmamış olabilir. Projenin kaydedilmesi büyük olasılıkla veri kaybına neden olacaktır.</translation>
+    </message>
+    <message>
       <source>Import file</source>
       <translation>Dosyayı içe aktar</translation>
     </message>
@@ -6473,12 +6964,76 @@ Başka bir dizin belirlemek ister misiniz?</translation>
       <translation>Baskıda...</translation>
     </message>
     <message>
+      <source>Exporting PDF...</source>
+      <translation>PDF dışa aktarılıyor...</translation>
+    </message>
+    <message>
+      <source>Unsaved document</source>
+      <translation>Kaydedilmemiş belge</translation>
+    </message>
+    <message>
+      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
+      <translation>Dışa aktarılan nesne dış bağlantı içeriyor. Lüften dışa aktarmadan önce belgeyi en az bir defa kaydedin.</translation>
+    </message>
+    <message>
+      <source>Delete failed</source>
+      <translation>Silme başarısız</translation>
+    </message>
+    <message>
+      <source>Dependency error</source>
+      <translation>Bağımlılık hatası</translation>
+    </message>
+    <message>
+      <source>Copy selected</source>
+      <translation>Seçileni kopyala</translation>
+    </message>
+    <message>
+      <source>Copy active document</source>
+      <translation>Etkin belgeyi kopyala</translation>
+    </message>
+    <message>
+      <source>Copy all documents</source>
+      <translation>Tüm belgeleri kopyala</translation>
+    </message>
+    <message>
+      <source>Paste</source>
+      <translation>Yapıştır</translation>
+    </message>
+    <message>
+      <source>Expression error</source>
+      <translation>İfade hatası</translation>
+    </message>
+    <message>
+      <source>Failed to parse some of the expressions.
+Please check the Report View for more details.</source>
+      <translation>Bazı ifadelerin ayrıştırılması başarısız.
+Daha fazla ayrıntı için lütfen Rapor Görünümünü kontrol edin.</translation>
+    </message>
+    <message>
+      <source>Failed to paste expressions</source>
+      <translation>İfadeleri yapıştırma başarısız</translation>
+    </message>
+    <message>
       <source>Cannot load workbench</source>
       <translation>Tezgah yüklenemiyor</translation>
     </message>
     <message>
       <source>A general error occurred while loading the workbench</source>
       <translation>Tezgah yükleme sırasında genel bir hata oluştu</translation>
+    </message>
+    <message>
+      <source>Wrong selection</source>
+      <translation>Yanlış seçim</translation>
+    </message>
+    <message>
+      <source>Only one object selected. Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Yalnızca bir nesne seçili. Lütfen iki nesne seçin. Unutmayın, tıkladığınız nokta önemlidir.</translation>
+    </message>
+    <message>
+      <source>Please select two objects.
+Be aware the point where you click matters.</source>
+      <translation>Lütfen iki nesne seçin. Unutmayın, tıkladığınız nokta önemlidir.</translation>
     </message>
     <message>
       <source>Save views...</source>
@@ -6503,6 +7058,10 @@ Başka bir dizin belirlemek ister misiniz?</translation>
     <message>
       <source>Save frozen views</source>
       <translation>Dondurulmuş görünümleri Kaydet</translation>
+    </message>
+    <message>
+      <source>Frozen views</source>
+      <translation>Donmuş kez bakıldı</translation>
     </message>
     <message>
       <source>Restore views</source>
@@ -6570,6 +7129,10 @@ Do you want to continue?</source>
       <translation>Bir öğe seçin:</translation>
     </message>
     <message>
+      <source>New boolean item</source>
+      <translation>Yeni Boolean (birbirinden çıkarma) öğesi</translation>
+    </message>
+    <message>
       <source>Rename group</source>
       <translation>Grubu yeniden adlandır</translation>
     </message>
@@ -6590,16 +7153,132 @@ Do you want to continue?</source>
       <translation>Değeri değiştir</translation>
     </message>
     <message>
-      <source>Save document under new filename...</source>
-      <translation>Belgeyi yeni bir dosya adı altında kaydedin...</translation>
+      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
+
+</source>
+      <translation>Aynı fiziksel yol tespit edildi. Varolan belgenin istenmeden üstüne yazılmasına neden olabilir!
+
+</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to continue?</source>
+      <translation>Devam etmek istediğinizden emin misiniz?</translation>
+    </message>
+    <message>
+      <source>Please check report view for more...</source>
+      <translation type="unfinished">Please check report view for more...</translation>
+    </message>
+    <message>
+      <source>Physical path:</source>
+      <translation type="unfinished">Physical path:</translation>
+    </message>
+    <message>
+      <source>Document:</source>
+      <translation type="unfinished">Document:</translation>
+    </message>
+    <message>
+      <source>Path:</source>
+      <translation>Yol:</translation>
+    </message>
+    <message>
+      <source>Identical physical path</source>
+      <translation>Özdeş fiziksel yol</translation>
+    </message>
+    <message>
+      <source>Could not save document</source>
+      <translation>Belge kaydedilemedi</translation>
+    </message>
+    <message>
+      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
+
+"%1"
+
+Would you like to save the file with a different name?</source>
+      <translation>Dosyayı kaydetmeye çalışırken bir sorun oluştu. Bunun nedeni, bazı üst klasörlerin mevcut olmaması veya yeterli izne sahip olmamanız veya başka sebepler olabilir. Hata detayları:
+
+"%1"
+
+Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
     </message>
     <message>
       <source>Saving aborted</source>
       <translation>Kaydetme iptal edildi</translation>
     </message>
     <message>
-      <source>Unsaved document</source>
-      <translation>Kaydedilmemiş belge</translation>
+      <source>Save dependent files</source>
+      <translation>Bağımlı dosyaları kaydet</translation>
+    </message>
+    <message>
+      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
+      <translation>Dosya dış bağımlılıklar içeriyor. Bağımlı dosyaları da kaydetmek istiyor musunuz?</translation>
+    </message>
+    <message>
+      <source>Saving document failed</source>
+      <translation>Belge kaydetme başarısız oldu</translation>
+    </message>
+    <message>
+      <source>Save document under new filename...</source>
+      <translation>Belgeyi yeni bir dosya adı altında kaydedin...</translation>
+    </message>
+    <message>
+      <source>Save %1 Document</source>
+      <translation>%1 Belgeyi Kaydet</translation>
+    </message>
+    <message>
+      <source>Document</source>
+      <translation>Döküman</translation>
+    </message>
+    <message>
+      <source>Failed to save document</source>
+      <translation>Belgeyi kaydetme başarısız</translation>
+    </message>
+    <message>
+      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
+      <translation>Belgeler döngüsel bağımlılıklar içeriyor. Yine de bunları kaydetmek istiyor musunuz?</translation>
+    </message>
+    <message>
+      <source>Save a copy of the document under new filename...</source>
+      <translation>Dokümanın bir kopyasını yeni dosya adı altında kaydedin...</translation>
+    </message>
+    <message>
+      <source>%1 document (*.FCStd)</source>
+      <translation>%1 belgesi (*. FCStd)</translation>
+    </message>
+    <message>
+      <source>Document not closable</source>
+      <translation>Belge kapatılamıyor</translation>
+    </message>
+    <message>
+      <source>The document is not closable for the moment.</source>
+      <translation>Belge şu an için kapatılamıyor.</translation>
+    </message>
+    <message>
+      <source>Document not saved</source>
+      <translation>Belge kaydedilmedi</translation>
+    </message>
+    <message>
+      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
+      <translation>%1 belgesi kaydedilemedi. Kapatmayı iptal etmek istiyor musunuz?</translation>
+    </message>
+    <message>
+      <source>Undo</source>
+      <translation>Geri al</translation>
+    </message>
+    <message>
+      <source>Redo</source>
+      <translation>Yinele</translation>
+    </message>
+    <message>
+      <source>There are grouped transactions in the following documents with other preceding transactions</source>
+      <translation>Aşağıdaki belgelerde, diğer önceki işlemlerle gruplanmış işlemler var</translation>
+    </message>
+    <message>
+      <source>Choose 'Yes' to roll back all preceding transactions.
+Choose 'No' to roll back in the active document only.
+Choose 'Abort' to abort</source>
+      <translation>Önceki tüm işlemleri geri almak için 'Evet' i seçin.
+Sadece etkin belgeyi geri almak için 'Hayır' ı seçin.
+Vazgeçmek için 'Vazgeç' i seçin</translation>
     </message>
     <message>
       <source>Save Macro</source>
@@ -6624,6 +7303,10 @@ Do you want to continue?</source>
     <message>
       <source>Outer</source>
       <translation>Dış</translation>
+    </message>
+    <message>
+      <source>Split</source>
+      <translation>Ayır</translation>
     </message>
     <message>
       <source>No Browser</source>
@@ -6668,62 +7351,6 @@ Please open a browser window and type in: http://localhost:%1.</source>
       <translation>%1 Dosyası %2 veya %3 içinde bulunamıyor</translation>
     </message>
     <message>
-      <source>Save %1 Document</source>
-      <translation>%1 Belgeyi Kaydet</translation>
-    </message>
-    <message>
-      <source>%1 document (*.FCStd)</source>
-      <translation>%1 belgesi (*. FCStd)</translation>
-    </message>
-    <message>
-      <source>Document not closable</source>
-      <translation>Belge kapatılamıyor</translation>
-    </message>
-    <message>
-      <source>The document is not closable for the moment.</source>
-      <translation>Belge şu an için kapatılamıyor.</translation>
-    </message>
-    <message>
-      <source>No OpenGL</source>
-      <translation>OpenGL yok</translation>
-    </message>
-    <message>
-      <source>This system does not support OpenGL</source>
-      <translation>Bu sistem OpenGL desteklemiyor</translation>
-    </message>
-    <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
-      <source>Unable to load documentation.
-In order to load it Qt 4.4 or higher is required.</source>
-      <translation>Belgeler yüklenemiyor.
-Bunu yüklemek için Qt 4.4 veya üstü gereklidir.</translation>
-    </message>
-    <message>
-      <source>Exporting PDF...</source>
-      <translation>PDF dışa aktarılıyor...</translation>
-    </message>
-    <message>
-      <source>Wrong selection</source>
-      <translation>Yanlış seçim</translation>
-    </message>
-    <message>
-      <source>Only one object selected. Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Yalnızca bir nesne seçili. Lütfen iki nesne seçin. Unutmayın, tıkladığınız nokta önemlidir.</translation>
-    </message>
-    <message>
-      <source>Please select two objects.
-Be aware the point where you click matters.</source>
-      <translation>Lütfen iki nesne seçin. Unutmayın, tıkladığınız nokta önemlidir.</translation>
-    </message>
-    <message>
-      <source>New boolean item</source>
-      <translation>Yeni Boolean (birbirinden çıkarma) öğesi</translation>
-    </message>
-    <message>
       <source>Navigation styles</source>
       <translation>Gezinme şekilleri</translation>
     </message>
@@ -6744,24 +7371,24 @@ Be aware the point where you click matters.</source>
       <translation>Kapatmadan önce değişiklikleri kaydetmek istiyor musunuz?</translation>
     </message>
     <message>
+      <source>Do you want to save your changes to document before closing?</source>
+      <translation>Kapatmadan önce değişikliklerinizi belgeye kaydetmek istiyor musunuz?</translation>
+    </message>
+    <message>
       <source>If you don't save, your changes will be lost.</source>
       <translation>Kaydetmezseniz, yaptığınız değişiklikler kaybolacak.</translation>
     </message>
     <message>
-      <source>Save a copy of the document under new filename...</source>
-      <translation>Dokümanın bir kopyasını yeni dosya adı altında kaydedin...</translation>
+      <source>Apply answer to all</source>
+      <translation>Cevabı tümüne uygula</translation>
     </message>
     <message>
-      <source>Frozen views</source>
-      <translation>Donmuş kez bakıldı</translation>
+      <source>%1 Document(s) not saved</source>
+      <translation>%1 belge kaydedilmedi</translation>
     </message>
     <message>
-      <source>Saving document failed</source>
-      <translation>Belge kaydetme başarısız oldu</translation>
-    </message>
-    <message>
-      <source>Document</source>
-      <translation>Döküman</translation>
+      <source>Some documents could not be saved. Do you want to cancel closing?</source>
+      <translation>Bazı belgeler kaydedilemedi. Kapatmaktan vazgeçmek ister misiniz?</translation>
     </message>
     <message>
       <source>Delete macro</source>
@@ -6784,14 +7411,6 @@ Be aware the point where you click matters.</source>
       <translation>%1 boş değil, içerik de silinsin mi?</translation>
     </message>
     <message>
-      <source>Export failed</source>
-      <translation>Dışa aktarım başarısız oldu</translation>
-    </message>
-    <message>
-      <source>Split</source>
-      <translation>Ayır</translation>
-    </message>
-    <message>
       <source>Translation:</source>
       <translation>Çeviri:</translation>
     </message>
@@ -6806,48 +7425,6 @@ Be aware the point where you click matters.</source>
     <message>
       <source>Edit text</source>
       <translation>Metni düzenle</translation>
-    </message>
-    <message>
-      <source>The exported object contains external link. Please save the documentat least once before exporting.</source>
-      <translation>Dışa aktarılan nesne dış bağlantı içeriyor. Lüften dışa aktarmadan önce belgeyi en az bir defa kaydedin.</translation>
-    </message>
-    <message>
-      <source>Delete failed</source>
-      <translation>Silme başarısız</translation>
-    </message>
-    <message>
-      <source>Dependency error</source>
-      <translation>Bağımlılık hatası</translation>
-    </message>
-    <message>
-      <source>Copy selected</source>
-      <translation>Seçileni kopyala</translation>
-    </message>
-    <message>
-      <source>Copy active document</source>
-      <translation>Etkin belgeyi kopyala</translation>
-    </message>
-    <message>
-      <source>Copy all documents</source>
-      <translation>Tüm belgeleri kopyala</translation>
-    </message>
-    <message>
-      <source>Paste</source>
-      <translation>Yapıştır</translation>
-    </message>
-    <message>
-      <source>Expression error</source>
-      <translation>İfade hatası</translation>
-    </message>
-    <message>
-      <source>Failed to parse some of the expressions.
-Please check the Report View for more details.</source>
-      <translation>Bazı ifadelerin ayrıştırılması başarısız.
-Daha fazla ayrıntı için lütfen Rapor Görünümünü kontrol edin.</translation>
-    </message>
-    <message>
-      <source>Failed to paste expressions</source>
-      <translation>İfadeleri yapıştırma başarısız</translation>
     </message>
     <message>
       <source>Simple group</source>
@@ -6912,148 +7489,92 @@ bir rakam ile başlamamalıdır.</translation>
       <translation>'%1' e özellik ekleme başarısız: %2</translation>
     </message>
     <message>
-      <source>Save dependent files</source>
-      <translation>Bağımlı dosyaları kaydet</translation>
-    </message>
-    <message>
-      <source>The file contains external dependencies. Do you want to save the dependent files, too?</source>
-      <translation>Dosya dış bağımlılıklar içeriyor. Bağımlı dosyaları da kaydetmek istiyor musunuz?</translation>
-    </message>
-    <message>
-      <source>Failed to save document</source>
-      <translation>Belgeyi kaydetme başarısız</translation>
-    </message>
-    <message>
-      <source>Documents contains cyclic dependencies. Do you still want to save them?</source>
-      <translation>Belgeler döngüsel bağımlılıklar içeriyor. Yine de bunları kaydetmek istiyor musunuz?</translation>
-    </message>
-    <message>
-      <source>Undo</source>
-      <translation>Geri al</translation>
-    </message>
-    <message>
-      <source>Redo</source>
-      <translation>Yinele</translation>
-    </message>
-    <message>
-      <source>There are grouped transactions in the following documents with other preceding transactions</source>
-      <translation>Aşağıdaki belgelerde, diğer önceki işlemlerle gruplanmış işlemler var</translation>
-    </message>
-    <message>
-      <source>Choose 'Yes' to roll back all preceding transactions.
-Choose 'No' to roll back in the active document only.
-Choose 'Abort' to abort</source>
-      <translation>Önceki tüm işlemleri geri almak için 'Evet' i seçin.
-Sadece etkin belgeyi geri almak için 'Hayır' ı seçin.
-Vazgeçmek için 'Vazgeç' i seçin</translation>
-    </message>
-    <message>
-      <source>Do you want to save your changes to document before closing?</source>
-      <translation>Kapatmadan önce değişikliklerinizi belgeye kaydetmek istiyor musunuz?</translation>
-    </message>
-    <message>
-      <source>Apply answer to all</source>
-      <translation>Cevabı tümüne uygula</translation>
-    </message>
-    <message>
       <source>Drag &amp; drop failed</source>
       <translation>Sürükle ve bırak başarısız</translation>
+    </message>
+    <message>
+      <source>Setup configurable object</source>
+      <translation type="unfinished">Setup configurable object</translation>
+    </message>
+    <message>
+      <source>Select which object to copy or exclude when configuration changes. All external linked objects are excluded by default.</source>
+      <translation type="unfinished">Select which object to copy or exclude when configuration changes. All external linked objects are excluded by default.</translation>
+    </message>
+    <message>
+      <source>Please select which objects to copy when the configuration is changed</source>
+      <translation type="unfinished">Please select which objects to copy when the configuration is changed</translation>
+    </message>
+    <message>
+      <source>Apply to all</source>
+      <translation type="unfinished">Apply to all</translation>
+    </message>
+    <message>
+      <source>Apply the setting to all links. Or, uncheck this
+option to apply only to this link.</source>
+      <translation type="unfinished">Apply the setting to all links. Or, uncheck this
+option to apply only to this link.</translation>
+    </message>
+    <message>
+      <source>Copy on change</source>
+      <translation type="unfinished">Copy on change</translation>
+    </message>
+    <message>
+      <source>Enable</source>
+      <translation>Etkinleştir</translation>
+    </message>
+    <message>
+      <source>Enable auto copy of linked object when its configuration is changed</source>
+      <translation type="unfinished">Enable auto copy of linked object when its configuration is changed</translation>
+    </message>
+    <message>
+      <source>Tracking</source>
+      <translation>İzleme</translation>
+    </message>
+    <message>
+      <source>Copy the linked object when its configuration is changed.
+Also auto redo the copy if the original linked object is changed.
+</source>
+      <translation type="unfinished">Copy the linked object when its configuration is changed.
+Also auto redo the copy if the original linked object is changed.
+</translation>
+    </message>
+    <message>
+      <source>Disable copy on change</source>
+      <translation type="unfinished">Disable copy on change</translation>
+    </message>
+    <message>
+      <source>Rerefresh configurable object</source>
+      <translation type="unfinished">Rerefresh configurable object</translation>
+    </message>
+    <message>
+      <source>Synchronize the original configurable source object by
+creating a new deep copy. Note that any changes made to
+the current copy will be lost.
+</source>
+      <translation type="unfinished">Synchronize the original configurable source object by
+creating a new deep copy. Note that any changes made to
+the current copy will be lost.
+</translation>
+    </message>
+    <message>
+      <source>Toggle array elements</source>
+      <translation type="unfinished">Toggle array elements</translation>
+    </message>
+    <message>
+      <source>Change whether show each link array element as individual objects</source>
+      <translation type="unfinished">Change whether show each link array element as individual objects</translation>
+    </message>
+    <message>
+      <source>Transform at the origin of the placement</source>
+      <translation type="unfinished">Transform at the origin of the placement</translation>
     </message>
     <message>
       <source>Override colors...</source>
       <translation>Renkleri etkisiz kıl...</translation>
     </message>
     <message>
-      <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
-
-</source>
-      <translation>Aynı fiziksel yol tespit edildi. Varolan belgenin istenmeden üstüne yazılmasına neden olabilir!
-
-</translation>
-    </message>
-    <message>
-      <source>Are you sure you want to continue?</source>
-      <translation>Devam etmek istediğinizden emin misiniz?</translation>
-    </message>
-    <message>
-      <source>
-
-Please check report view for more...</source>
-      <translation>
-
-Daha fazlası için lütfen rapor görünümünü kontrol edin...</translation>
-    </message>
-    <message>
-      <source>
-Document: </source>
-      <translation>
-Belge: </translation>
-    </message>
-    <message>
-      <source>
-  Path: </source>
-      <translation>
-  Yol: </translation>
-    </message>
-    <message>
-      <source>Identical physical path</source>
-      <translation>Özdeş fiziksel yol</translation>
-    </message>
-    <message>
-      <source>Error</source>
-      <translation>Hata</translation>
-    </message>
-    <message>
-      <source>There were errors while loading the file. Some data might have been modified or not recovered at all. Look in the report view for more specific information about the objects involved.</source>
-      <translation>Dosya yüklemesi esnasında hatalar vardı. Bazı veriler değiştirilmiş veya hiç kurtarılmamış olabilir. İlgili nesneler hakkında daha spesifik bilgi için rapor görünümüne bakın.</translation>
-    </message>
-    <message>
-      <source>There were serious errors while loading the file. Some data might have been modified or not recovered at all. Saving the project will most likely result in loss of data.</source>
-      <translation>Dosyayı yüklerken ciddi hatalar oluştu. Bazı veriler değiştirilmiş veya hiç kurtarılmamış olabilir. Projenin kaydedilmesi büyük olasılıkla veri kaybına neden olacaktır.</translation>
-    </message>
-    <message>
-      <source>Workbenches</source>
-      <translation>Tezgah</translation>
-    </message>
-    <message>
-      <source>
-
-Physical path: </source>
-      <translation>
-
-Fiziksel yol: </translation>
-    </message>
-    <message>
-      <source>Could not save document</source>
-      <translation>Belge kaydedilemedi</translation>
-    </message>
-    <message>
-      <source>There was an issue trying to save the file. This may be because some of the parent folders do not exist, or you do not have sufficient permissions, or for other reasons. Error details:
-
-"%1"
-
-Would you like to save the file with a different name?</source>
-      <translation>Dosyayı kaydetmeye çalışırken bir sorun oluştu. Bunun nedeni, bazı üst klasörlerin mevcut olmaması veya yeterli izne sahip olmamanız veya başka sebepler olabilir. Hata detayları:
-
-"%1"
-
-Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
-    </message>
-    <message>
-      <source>Document not saved</source>
-      <translation>Belge kaydedilmedi</translation>
-    </message>
-    <message>
-      <source>The document%1 could not be saved. Do you want to cancel closing it?</source>
-      <translation>%1 belgesi kaydedilemedi. Kapatmayı iptal etmek istiyor musunuz?</translation>
-    </message>
-    <message>
-      <source>%1 Document(s) not saved</source>
-      <translation>%1 belge kaydedilmedi</translation>
-    </message>
-    <message>
-      <source>Some documents could not be saved. Do you want to cancel closing?</source>
-      <translation>Bazı belgeler kaydedilemedi. Kapatmaktan vazgeçmek ister misiniz?</translation>
+      <source>Edit %1</source>
+      <translation>%1'i düzenle</translation>
     </message>
   </context>
   <context>
@@ -7070,10 +7591,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdBoxElementSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Box element selection</source>
       <translation>Kutu eleman seçimi</translation>
     </message>
@@ -7081,20 +7598,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdBoxSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Box selection</source>
       <translation>Seçim kutusu</translation>
     </message>
   </context>
   <context>
     <name>StdCmdAbout</name>
-    <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
     <message>
       <source>&amp;About %1</source>
       <translation>%1 &amp;Hakkında</translation>
@@ -7107,10 +7616,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdAboutQt</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>About &amp;Qt</source>
       <translation>Hakkında &amp; Qt</translation>
     </message>
@@ -7121,10 +7626,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdActivateNextWindow</name>
-    <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
     <message>
       <source>Ne&amp;xt</source>
       <translation>&amp;Sonraki</translation>
@@ -7137,10 +7638,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdActivatePrevWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
-    <message>
       <source>Pre&amp;vious</source>
       <translation>Ö&amp;nceki</translation>
     </message>
@@ -7151,10 +7648,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdAlignment</name>
-    <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
     <message>
       <source>Alignment...</source>
       <translation>Hizalama...</translation>
@@ -7167,10 +7660,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdArrangeIcons</name>
     <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
-    <message>
       <source>Arrange &amp;Icons</source>
       <translation>&amp;Simgeleri Ayarla</translation>
     </message>
@@ -7182,20 +7671,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdAxisCross</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Toggle axis cross</source>
       <translation>Eksen çizgileri</translation>
     </message>
   </context>
   <context>
     <name>StdCmdCascadeWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
     <message>
       <source>&amp;Cascade</source>
       <translation>&amp;Basamakla</translation>
@@ -7208,10 +7689,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdCloseActiveWindow</name>
     <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
-    <message>
       <source>Cl&amp;ose</source>
       <translation>&amp;Kapat</translation>
     </message>
@@ -7222,10 +7699,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdCloseAllWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
     <message>
       <source>Close Al&amp;l</source>
       <translation>Tümünü Ka&amp;pat</translation>
@@ -7238,10 +7711,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdCommandLine</name>
     <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
-    <message>
       <source>Start command &amp;line...</source>
       <translation>Komut satırını başlat...</translation>
     </message>
@@ -7252,10 +7721,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdCopy</name>
-    <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
     <message>
       <source>C&amp;opy</source>
       <translation>K&amp;opyala</translation>
@@ -7268,10 +7733,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdCut</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>&amp;Cut</source>
       <translation>&amp;Kes</translation>
     </message>
@@ -7282,10 +7743,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdDelete</name>
-    <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
     <message>
       <source>&amp;Delete</source>
       <translation>&amp;Sil</translation>
@@ -7298,10 +7755,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdDemoMode</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>View turntable...</source>
       <translation>Döner tablayı göster...</translation>
     </message>
@@ -7313,10 +7766,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdDependencyGraph</name>
     <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
-    <message>
       <source>Dependency graph...</source>
       <translation>Bağımlılık grafiği...</translation>
     </message>
@@ -7327,10 +7776,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdDlgCustomize</name>
-    <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
     <message>
       <source>Cu&amp;stomize...</source>
       <translation>Öze&amp;lleştir...</translation>
@@ -7350,17 +7795,9 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
       <source>Opens a dialog to let you execute a recorded macro</source>
       <translation>Kayıtlı bir makroyu çalıştırmak için bir iletişim kutusu açar</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgMacroExecuteDirect</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
     <message>
       <source>Execute macro</source>
       <translation>Makro çalıştır</translation>
@@ -7380,17 +7817,9 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
       <source>Opens a dialog to record a macro</source>
       <translation>Bir makro kaydetmek için bir iletişim kutusu açar</translation>
     </message>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdDlgParameter</name>
-    <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
     <message>
       <source>E&amp;dit parameters ...</source>
       <translation>Parametreleri &amp;düzenle ...</translation>
@@ -7403,10 +7832,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdDlgPreferences</name>
     <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
-    <message>
       <source>&amp;Preferences ...</source>
       <translation>&amp;Seçenekler ...</translation>
     </message>
@@ -7417,10 +7842,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdDockViewMenu</name>
-    <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
     <message>
       <source>Panels</source>
       <translation>Paneller</translation>
@@ -7433,10 +7854,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdDrawStyle</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Draw style</source>
       <translation>Çizim biçimi</translation>
     </message>
@@ -7448,10 +7865,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdDuplicateSelection</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>Duplicate selection</source>
       <translation>Seçimi çoğalt</translation>
     </message>
@@ -7462,10 +7875,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdEdit</name>
-    <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
     <message>
       <source>Toggle &amp;Edit mode</source>
       <translation>&amp;Düzenleme moduna geç</translation>
@@ -7481,10 +7890,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdExport</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>&amp;Export...</source>
       <translation>&amp;Dışa Aktar...</translation>
@@ -7505,20 +7910,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdExpression</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>Expression actions</source>
       <translation>İfade eylemleri</translation>
     </message>
   </context>
   <context>
     <name>StdCmdFeatRecompute</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>&amp;Recompute</source>
       <translation>&amp;Yeniden hesapla</translation>
@@ -7531,10 +7928,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdFreeCADDonation</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>Donate</source>
       <translation>Bağış Yap</translation>
     </message>
@@ -7545,10 +7938,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADFAQ</name>
-    <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
     <message>
       <source>FreeCAD FAQ</source>
       <translation>FreeCAD Hakkında SSS</translation>
@@ -7565,10 +7954,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdFreeCADForum</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>FreeCAD Forum</source>
       <translation>FreeCAD Forum</translation>
     </message>
@@ -7583,10 +7968,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADPowerUserHub</name>
-    <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
     <message>
       <source>Python scripting documentation</source>
       <translation>Python komut dosyası belgeleri</translation>
@@ -7603,10 +7984,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdFreeCADUserHub</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>Users documentation</source>
       <translation>Kullanıcı belgeleri</translation>
     </message>
@@ -7617,10 +7994,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdFreeCADWebsite</name>
-    <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
     <message>
       <source>FreeCAD Website</source>
       <translation>FreeCAD Web sitesi</translation>
@@ -7633,10 +8006,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdFreezeViews</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Freeze display</source>
       <translation>Görüntüyü Dondur</translation>
     </message>
@@ -7647,10 +8016,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdGroup</name>
-    <message>
-      <source>Structure</source>
-      <translation>Yapı</translation>
-    </message>
     <message>
       <source>Create group</source>
       <translation>Grup oluştur</translation>
@@ -7663,10 +8028,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdHideObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Hide all objects</source>
       <translation>Tüm nesneleri gizle</translation>
     </message>
@@ -7678,10 +8039,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdHideSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Hide selection</source>
       <translation>Seçimi Gizle</translation>
     </message>
@@ -7692,10 +8049,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdImport</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>&amp;Import...</source>
       <translation>&amp; İçe Aktar...</translation>
@@ -7716,20 +8069,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdLinkActions</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>Link actions</source>
       <translation>Bağlantı eylemleri</translation>
     </message>
   </context>
   <context>
     <name>StdCmdLinkImport</name>
-    <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
     <message>
       <source>Import links</source>
       <translation>Bağlantıları içe aktar</translation>
@@ -7742,10 +8087,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdLinkImportAll</name>
     <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
-    <message>
       <source>Import all links</source>
       <translation>Tüm bağlantıları içe aktar</translation>
     </message>
@@ -7756,10 +8097,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdLinkMake</name>
-    <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
     <message>
       <source>Make link</source>
       <translation>Bağlantı oluştur</translation>
@@ -7772,10 +8109,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdLinkMakeGroup</name>
     <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
-    <message>
       <source>Make link group</source>
       <translation>Bağlantı grubu oluştur</translation>
     </message>
@@ -7786,10 +8119,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdLinkMakeRelative</name>
-    <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
     <message>
       <source>Make sub-link</source>
       <translation>Alt bağlantı oluştur</translation>
@@ -7802,10 +8131,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdLinkReplace</name>
     <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
-    <message>
       <source>Replace with link</source>
       <translation>Bağlantıyla değiştir</translation>
     </message>
@@ -7816,10 +8141,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdLinkSelectActions</name>
-    <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
     <message>
       <source>Link navigation</source>
       <translation>Bağlantı gezintisi</translation>
@@ -7832,10 +8153,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdLinkSelectAllLinks</name>
     <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
-    <message>
       <source>Select all links</source>
       <translation>Tüm bağlantıları seç</translation>
     </message>
@@ -7846,10 +8163,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdLinkSelectLinked</name>
-    <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
     <message>
       <source>Go to linked object</source>
       <translation>Bağlantılı nesneye git</translation>
@@ -7862,10 +8175,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdLinkSelectLinkedFinal</name>
     <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
-    <message>
       <source>Go to the deepest linked object</source>
       <translation>En derin bağlantılı nesneye git</translation>
     </message>
@@ -7876,10 +8185,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdLinkUnlink</name>
-    <message>
-      <source>Link</source>
-      <translation>Link</translation>
-    </message>
     <message>
       <source>Unlink</source>
       <translation>Bağlantıyı kaldır</translation>
@@ -7892,10 +8197,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdMacroAttachDebugger</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Attach to remote debugger...</source>
       <translation>Uzak hata ayıklayıcıya ekle...</translation>
     </message>
@@ -7906,10 +8207,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdMacroStartDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
     <message>
       <source>Debug macro</source>
       <translation>Makro hatası ayıklama</translation>
@@ -7922,10 +8219,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdMacroStepInto</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Step into</source>
       <translation>Prosedürün içine gir</translation>
     </message>
@@ -7933,20 +8226,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdMacroStepOver</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Step over</source>
       <translation>Üzerinden atla</translation>
     </message>
   </context>
   <context>
     <name>StdCmdMacroStopDebug</name>
-    <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
     <message>
       <source>Stop debugging</source>
       <translation>Hata ayıklamayı durdur</translation>
@@ -7959,10 +8244,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdMacroStopRecord</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>S&amp;top macro recording</source>
       <translation>Makro kaydını &amp;durdur</translation>
     </message>
@@ -7974,10 +8255,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdMeasureDistance</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>Measure distance</source>
       <translation>Mesafe Ölç</translation>
     </message>
@@ -7985,24 +8262,16 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdMeasurementSimple</name>
     <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
+      <source>Measure distance</source>
+      <translation>Mesafe Ölç</translation>
     </message>
     <message>
       <source>Measures distance between two selected objects</source>
       <translation>İki seçili nesnenin mesafesini ölçer</translation>
     </message>
-    <message>
-      <source>Measure distance</source>
-      <translation>Mesafe Ölç</translation>
-    </message>
   </context>
   <context>
     <name>StdCmdMergeProjects</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>Merge project...</source>
       <translation>Projeyi birleştir...</translation>
@@ -8012,20 +8281,16 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
       <translation>Projeyi birleştir</translation>
     </message>
     <message>
-      <source>Cannot merge project with itself.</source>
-      <translation>Proje kendisiyle birleştirilemez.</translation>
-    </message>
-    <message>
       <source>%1 document (*.FCStd)</source>
       <translation>%1 belgesi (*. FCStd)</translation>
+    </message>
+    <message>
+      <source>Cannot merge project with itself.</source>
+      <translation>Proje kendisiyle birleştirilemez.</translation>
     </message>
   </context>
   <context>
     <name>StdCmdNew</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>&amp;New</source>
       <translation>&amp; Yeni</translation>
@@ -8053,10 +8318,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdOnlineHelpWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>Help Website</source>
       <translation>Yardım Web sitesi</translation>
     </message>
@@ -8067,10 +8328,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdOpen</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>&amp;Open...</source>
       <translation>&amp; Aç...</translation>
@@ -8099,10 +8356,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdPart</name>
     <message>
-      <source>Structure</source>
-      <translation>Yapı</translation>
-    </message>
-    <message>
       <source>Create part</source>
       <translation>Parça oluştur</translation>
     </message>
@@ -8113,10 +8366,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdPaste</name>
-    <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
     <message>
       <source>&amp;Paste</source>
       <translation>&amp; Yapıştır</translation>
@@ -8129,10 +8378,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdPlacement</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>Placement...</source>
       <translation>Yerleşim...</translation>
     </message>
@@ -8143,10 +8388,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdPrint</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>&amp;Print...</source>
       <translation>&amp; Yazdır...</translation>
@@ -8159,10 +8400,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdPrintPdf</name>
     <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
-    <message>
       <source>&amp;Export PDF...</source>
       <translation>&amp;PDF olarak dışa aktar...</translation>
     </message>
@@ -8173,10 +8410,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdPrintPreview</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>&amp;Print preview...</source>
       <translation>Baskı Önizleme...</translation>
@@ -8193,10 +8426,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdProjectInfo</name>
     <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
-    <message>
       <source>Project i&amp;nformation...</source>
       <translation>Proje &amp; özellikler...</translation>
     </message>
@@ -8207,10 +8436,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdProjectUtil</name>
-    <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
     <message>
       <source>Project utility...</source>
       <translation>Proje yardımcısı...</translation>
@@ -8223,10 +8448,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdPythonWebsite</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>Python Website</source>
       <translation>Python Web sitesi</translation>
     </message>
@@ -8237,10 +8458,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdQuit</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>E&amp;xit</source>
       <translation>Çı&amp;kış</translation>
@@ -8253,20 +8470,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdRandomColor</name>
     <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
-    <message>
       <source>Random color</source>
       <translation>Rasgele renk</translation>
     </message>
   </context>
   <context>
     <name>StdCmdRecentFiles</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>Recent files</source>
       <translation>Son dosyalar</translation>
@@ -8279,10 +8488,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdRecentMacros</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Recent macros</source>
       <translation>Son makrolar</translation>
     </message>
@@ -8293,10 +8498,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdRedo</name>
-    <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
     <message>
       <source>&amp;Redo</source>
       <translation>&amp; Yinele</translation>
@@ -8309,10 +8510,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdRefresh</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>&amp;Refresh</source>
       <translation>&amp; Yenile</translation>
     </message>
@@ -8322,11 +8519,18 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
     </message>
   </context>
   <context>
-    <name>StdCmdRevert</name>
+    <name>StdCmdReportBug</name>
     <message>
-      <source>File</source>
-      <translation>Dosya</translation>
+      <source>Report a bug</source>
+      <translation type="unfinished">Report a bug</translation>
     </message>
+    <message>
+      <source>Report a bug or suggest a feature</source>
+      <translation type="unfinished">Report a bug or suggest a feature</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdRevert</name>
     <message>
       <source>Revert</source>
       <translation>Geri al</translation>
@@ -8339,10 +8543,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdSave</name>
     <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
-    <message>
       <source>&amp;Save</source>
       <translation>&amp; Kaydet</translation>
     </message>
@@ -8353,10 +8553,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdSaveAll</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>Save All</source>
       <translation>Tümünü Kaydet</translation>
@@ -8369,10 +8565,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdSaveAs</name>
     <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
-    <message>
       <source>Save &amp;As...</source>
       <translation>Farklı Kaydet...</translation>
     </message>
@@ -8383,10 +8575,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdSaveCopy</name>
-    <message>
-      <source>File</source>
-      <translation>Dosya</translation>
-    </message>
     <message>
       <source>Save a &amp;Copy...</source>
       <translation>Kaydet &amp; Kopyala...</translation>
@@ -8399,10 +8587,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdSceneInspector</name>
     <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
-    <message>
       <source>Scene inspector...</source>
       <translation>Sahne Denetmeni...</translation>
     </message>
@@ -8413,10 +8597,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdSelBack</name>
-    <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
     <message>
       <source>&amp;Back</source>
       <translation>Geri</translation>
@@ -8429,10 +8609,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdSelBoundingBox</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>&amp;Bounding box</source>
       <translation>Sınır kutusu</translation>
     </message>
@@ -8443,10 +8619,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdSelForward</name>
-    <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
     <message>
       <source>&amp;Forward</source>
       <translation>&amp;İleri</translation>
@@ -8459,10 +8631,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdSelectAll</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>Select &amp;All</source>
       <translation>Seç &amp; Tümü</translation>
     </message>
@@ -8473,10 +8641,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdSelectVisibleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Select visible objects</source>
       <translation>Tüm görünür nesneler</translation>
@@ -8489,10 +8653,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdSendToPythonConsole</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>&amp;Send to Python Console</source>
       <translation>&amp;Python Uçbirimi' ne gönder</translation>
     </message>
@@ -8503,10 +8663,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdSetAppearance</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Appearance...</source>
       <translation>Görünüm...</translation>
@@ -8519,10 +8675,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdShowObjects</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Show all objects</source>
       <translation>Tüm nesneleri göster</translation>
     </message>
@@ -8533,10 +8685,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdShowSelection</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Show selection</source>
       <translation>Seçimi göster</translation>
@@ -8549,10 +8697,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdStatusBar</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>Status bar</source>
       <translation>Durum çubuğu</translation>
     </message>
@@ -8563,10 +8707,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdTextDocument</name>
-    <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
     <message>
       <source>Add text document</source>
       <translation>Metin belgesi ekle</translation>
@@ -8579,10 +8719,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdTextureMapping</name>
     <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
-    <message>
       <source>Texture mapping...</source>
       <translation>Doku haritalama...</translation>
     </message>
@@ -8593,10 +8729,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdTileWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
     <message>
       <source>&amp;Tile</source>
       <translation>&amp; Döşe</translation>
@@ -8609,20 +8741,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdToggleBreakpoint</name>
     <message>
-      <source>Macro</source>
-      <translation>Makro</translation>
-    </message>
-    <message>
       <source>Toggle breakpoint</source>
       <translation>Kesme noktasını Değiştir</translation>
     </message>
   </context>
   <context>
     <name>StdCmdToggleClipPlane</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Clipping plane</source>
       <translation>Düz Kırpma</translation>
@@ -8635,10 +8759,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdToggleNavigation</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Toggle navigation/Edit mode</source>
       <translation>Gezinti/Düzenle moduna geç</translation>
     </message>
@@ -8649,10 +8769,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdToggleObjects</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Toggle all objects</source>
       <translation>Tüm nesneleri değiştir</translation>
@@ -8665,10 +8781,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdToggleSelectability</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Toggle selectability</source>
       <translation>Seçilebilirliği değiştir</translation>
     </message>
@@ -8679,10 +8791,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdToggleVisibility</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Toggle visibility</source>
       <translation>Görünürlüğünü Aç/Kapat</translation>
@@ -8695,10 +8803,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdToolBarMenu</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>Tool&amp;bars</source>
       <translation>Araç &amp;Çubukları</translation>
     </message>
@@ -8709,10 +8813,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdTransform</name>
-    <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
     <message>
       <source>Transform...</source>
       <translation>Dönüştür...</translation>
@@ -8725,10 +8825,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdTransformManip</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>Transform</source>
       <translation>Dönüştür</translation>
     </message>
@@ -8739,10 +8835,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdTreeCollapse</name>
-    <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
     <message>
       <source>Collapse selected item</source>
       <translation>Seçilen nesneyi daralt</translation>
@@ -8755,10 +8847,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdTreeExpand</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>Expand selected item</source>
       <translation>Seçilen ögeyi genişlet</translation>
     </message>
@@ -8769,10 +8857,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdTreeSelectAllInstances</name>
-    <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
     <message>
       <source>Select all instances</source>
       <translation>Tüm aşamaları seç</translation>
@@ -8785,10 +8869,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdTreeViewActions</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>TreeView actions</source>
       <translation>AğaçGörünümü eylemleri</translation>
     </message>
@@ -8800,10 +8880,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdUndo</name>
     <message>
-      <source>Edit</source>
-      <translation>Düzenle</translation>
-    </message>
-    <message>
       <source>&amp;Undo</source>
       <translation>Gerial</translation>
     </message>
@@ -8814,10 +8890,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdUnitsCalculator</name>
-    <message>
-      <source>Tools</source>
-      <translation>Araçlar</translation>
-    </message>
     <message>
       <source>&amp;Units calculator...</source>
       <translation>&amp;Birimleri hesap makinesi...</translation>
@@ -8841,10 +8913,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdUserInterface</name>
     <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
-    <message>
       <source>Dock views</source>
       <translation>Yapışkan pencere görünümleri</translation>
     </message>
@@ -8855,10 +8923,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewBottom</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Bottom</source>
       <translation>Alt</translation>
@@ -8871,10 +8935,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewCreate</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Create new view</source>
       <translation>Yeni görünüm oluştur</translation>
     </message>
@@ -8885,10 +8945,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewDimetric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Dimetric</source>
       <translation>Dimetrik</translation>
@@ -8901,10 +8957,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewExample1</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Inventor example #1</source>
       <translation>Inventor Örneği #1</translation>
     </message>
@@ -8915,10 +8967,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewExample2</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Inventor example #2</source>
       <translation>Inventor Örneği #2</translation>
@@ -8931,10 +8979,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewExample3</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Inventor example #3</source>
       <translation>Inventor Örneği #3</translation>
     </message>
@@ -8945,10 +8989,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewFitAll</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Fit all</source>
       <translation>Tümünü görüntüle</translation>
@@ -8961,10 +9001,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewFitSelection</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Fit selection</source>
       <translation>Seçimi görüntüle</translation>
     </message>
@@ -8975,10 +9011,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewFront</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Front</source>
       <translation>Ön</translation>
@@ -8991,10 +9023,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewHome</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Home</source>
       <translation>Ana Sayfa</translation>
     </message>
@@ -9005,10 +9033,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewIsometric</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Isometric</source>
       <translation>İzometrik</translation>
@@ -9021,10 +9045,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewIvIssueCamPos</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Issue camera position</source>
       <translation>Kamera pozisyonunu ver</translation>
     </message>
@@ -9035,10 +9055,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoInterleavedColumns</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Stereo Interleaved Columns</source>
       <translation>Stereo ayraç kolonlar</translation>
@@ -9051,10 +9067,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewIvStereoInterleavedRows</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Stereo Interleaved Rows</source>
       <translation>Bölünmüş Stereo Satırlar</translation>
     </message>
@@ -9065,10 +9077,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoOff</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Stereo Off</source>
       <translation>Stereo devre dışı</translation>
@@ -9081,10 +9089,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewIvStereoQuadBuff</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Stereo quad buffer</source>
       <translation>Stereo çift arabellek</translation>
     </message>
@@ -9095,10 +9099,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewIvStereoRedGreen</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Stereo red/cyan</source>
       <translation>Stereo Kırmızı/Yeşil</translation>
@@ -9111,10 +9111,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewLeft</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Left</source>
       <translation>Sol</translation>
     </message>
@@ -9125,10 +9121,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewRear</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Rear</source>
       <translation>Arka</translation>
@@ -9141,10 +9133,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewRestoreCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Restore saved camera</source>
       <translation>Kaydedilen kamerayı geri yükle</translation>
     </message>
@@ -9155,10 +9143,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewRight</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Right</source>
       <translation>Sağ</translation>
@@ -9171,10 +9155,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewRotateLeft</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Rotate Left</source>
       <translation>Sola Döndür</translation>
     </message>
@@ -9185,10 +9165,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewRotateRight</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Rotate Right</source>
       <translation>Sağa Döndür</translation>
@@ -9201,10 +9177,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewSaveCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Save current camera</source>
       <translation>Varsayılan kamerayı geri yükle</translation>
     </message>
@@ -9215,10 +9187,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewTop</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Top</source>
       <translation>üst</translation>
@@ -9231,10 +9199,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdViewTrimetric</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Trimetric</source>
       <translation>Trimetrik</translation>
     </message>
@@ -9245,10 +9209,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdViewVR</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>FreeCAD-VR</source>
       <translation>FreeCAD-VR</translation>
@@ -9261,10 +9221,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdWhatsThis</name>
     <message>
-      <source>Help</source>
-      <translation>Yardım</translation>
-    </message>
-    <message>
       <source>&amp;What's This?</source>
       <translation>&amp; Bu nedir?</translation>
     </message>
@@ -9275,10 +9231,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdCmdWindows</name>
-    <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
     <message>
       <source>&amp;Windows...</source>
       <translation>&amp; Pencereler...</translation>
@@ -9291,20 +9243,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdCmdWindowsMenu</name>
     <message>
-      <source>Window</source>
-      <translation>Pencere</translation>
-    </message>
-    <message>
       <source>Activates this window</source>
       <translation>Bu pencereyi etkinleştirir</translation>
     </message>
   </context>
   <context>
     <name>StdCmdWorkbench</name>
-    <message>
-      <source>View</source>
-      <translation>Görünüm</translation>
-    </message>
     <message>
       <source>Workbench</source>
       <translation>Tezgah</translation>
@@ -9317,10 +9261,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdMainFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Fullscreen</source>
       <translation>Tam ekran</translation>
     </message>
@@ -9332,10 +9272,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdOrthographicCamera</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Orthographic view</source>
       <translation>Ortografik görünüm</translation>
     </message>
@@ -9346,10 +9282,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdPerspectiveCamera</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Perspective view</source>
       <translation>Perspektif görünüm</translation>
@@ -9369,17 +9301,9 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
       <source>Expand active document and collapse all others</source>
       <translation>Aktif belgeyi genişlet ve diğerlerini daralt</translation>
     </message>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
   </context>
   <context>
     <name>StdTreeDrag</name>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
     <message>
       <source>Initiate dragging</source>
       <translation>Sürüklemeyi başlat</translation>
@@ -9392,24 +9316,16 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdTreeMultiDocument</name>
     <message>
-      <source>Display all documents in the tree view</source>
-      <translation>Unsur ağacındaki tüm belgeleri görüntüle</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
-    <message>
       <source>Multi document</source>
       <translation>Çoklu belge</translation>
+    </message>
+    <message>
+      <source>Display all documents in the tree view</source>
+      <translation>Unsur ağacındaki tüm belgeleri görüntüle</translation>
     </message>
   </context>
   <context>
     <name>StdTreePreSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
     <message>
       <source>Pre-selection</source>
       <translation>Ön seçim</translation>
@@ -9422,10 +9338,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdTreeRecordSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
-    <message>
       <source>Record selection</source>
       <translation>Seçimi kaydet</translation>
     </message>
@@ -9436,10 +9348,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdTreeSelection</name>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
     <message>
       <source>Go to selection</source>
       <translation>Seçime git</translation>
@@ -9452,24 +9360,16 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdTreeSingleDocument</name>
     <message>
-      <source>Only display the active document in the tree view</source>
-      <translation>Unsur ağacında, yalnız aktif belgeyi görüntüle</translation>
-    </message>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
-    <message>
       <source>Single document</source>
       <translation>Tek belge</translation>
+    </message>
+    <message>
+      <source>Only display the active document in the tree view</source>
+      <translation>Unsur ağacında, yalnız aktif belgeyi görüntüle</translation>
     </message>
   </context>
   <context>
     <name>StdTreeSyncPlacement</name>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
     <message>
       <source>Sync placement</source>
       <translation>Yerleşimi eşzamanla</translation>
@@ -9482,10 +9382,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdTreeSyncSelection</name>
     <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
-    <message>
       <source>Sync selection</source>
       <translation>Seçimi eşzamanla</translation>
     </message>
@@ -9496,10 +9392,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdTreeSyncView</name>
-    <message>
-      <source>TreeView</source>
-      <translation>AğaçGörünümü</translation>
-    </message>
     <message>
       <source>Sync view</source>
       <translation>Görünümü eşzamanla</translation>
@@ -9512,20 +9404,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdViewBoxZoom</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Box zoom</source>
       <translation>Kutuya Yakınlaş</translation>
     </message>
   </context>
   <context>
     <name>StdViewDock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Docked</source>
       <translation>Yuvalanmış</translation>
@@ -9538,10 +9422,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdViewDockUndockFullscreen</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Document window</source>
       <translation>Belge penceresi</translation>
     </message>
@@ -9552,10 +9432,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdViewFullscreen</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Fullscreen</source>
       <translation>Tam ekran</translation>
@@ -9568,10 +9444,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdViewScreenShot</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Save picture...</source>
       <translation>Resmi Kaydet...</translation>
     </message>
@@ -9582,10 +9454,6 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   </context>
   <context>
     <name>StdViewUndock</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Undocked</source>
       <translation>yuvalanmamış</translation>
@@ -9598,20 +9466,12 @@ Dosyayı farklı bir adla kaydetmek ister misiniz?</translation>
   <context>
     <name>StdViewZoomIn</name>
     <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
-    <message>
       <source>Zoom In</source>
       <translation>Yakınlaştır</translation>
     </message>
   </context>
   <context>
     <name>StdViewZoomOut</name>
-    <message>
-      <source>Standard-View</source>
-      <translation>Standart Görünüm</translation>
-    </message>
     <message>
       <source>Zoom Out</source>
       <translation>Uzaklaştır</translation>
@@ -9630,12 +9490,12 @@ Devam etmek istediğinize emin misiniz?
 </translation>
     </message>
     <message>
-      <source>Object dependencies</source>
-      <translation>Nesne bağımlılıkları</translation>
-    </message>
-    <message>
       <source>These items are selected for deletion, but are not in the active document.</source>
       <translation>Bloklar seçildi ama etkin belge içinde değil.</translation>
+    </message>
+    <message>
+      <source>Object dependencies</source>
+      <translation>Nesne bağımlılıkları</translation>
     </message>
   </context>
   <context>
@@ -9656,36 +9516,20 @@ Devam etmek istediğinize emin misiniz?
       <translation>Normal mod</translation>
     </message>
     <message>
-      <source>Wireframe</source>
-      <translation>Tel Kafes görünümü</translation>
-    </message>
-    <message>
-      <source>Wireframe mode</source>
-      <translation>Tel kafes modu</translation>
-    </message>
-    <message>
-      <source>Flat lines</source>
-      <translation>Düz çizgiler</translation>
-    </message>
-    <message>
-      <source>Flat lines mode</source>
-      <translation>Düz çizgiler modu</translation>
-    </message>
-    <message>
-      <source>Shaded</source>
-      <translation>Gölgeli</translation>
-    </message>
-    <message>
-      <source>Shaded mode</source>
-      <translation>Gölgeli modu</translation>
-    </message>
-    <message>
       <source>Points</source>
       <translation>Noktalar</translation>
     </message>
     <message>
       <source>Points mode</source>
       <translation>Nokta Modu</translation>
+    </message>
+    <message>
+      <source>Wireframe</source>
+      <translation>Tel Kafes görünümü</translation>
+    </message>
+    <message>
+      <source>Wireframe mode</source>
+      <translation>Tel kafes modu</translation>
     </message>
     <message>
       <source>Hidden line</source>
@@ -9702,6 +9546,22 @@ Devam etmek istediğinize emin misiniz?
     <message>
       <source>No shading mode</source>
       <translation>Gölgeleme modu yok</translation>
+    </message>
+    <message>
+      <source>Shaded</source>
+      <translation>Gölgeli</translation>
+    </message>
+    <message>
+      <source>Shaded mode</source>
+      <translation>Gölgeli modu</translation>
+    </message>
+    <message>
+      <source>Flat lines</source>
+      <translation>Düz çizgiler</translation>
+    </message>
+    <message>
+      <source>Flat lines mode</source>
+      <translation>Düz çizgiler modu</translation>
     </message>
   </context>
   <context>
@@ -9739,12 +9599,12 @@ Hala ilerlemek istiyor musunuz?</translation>
   <context>
     <name>Std_Revert</name>
     <message>
-      <source>This will discard all the changes since last file save.</source>
-      <translation>Bu son dosya kaydettikten sonra yapılan tüm değişiklikleri iptal edecektir.</translation>
-    </message>
-    <message>
       <source>Revert document</source>
       <translation>Belgeyi geri al</translation>
+    </message>
+    <message>
+      <source>This will discard all the changes since last file save.</source>
+      <translation>Bu son dosya kaydettikten sonra yapılan tüm değişiklikleri iptal edecektir.</translation>
     </message>
     <message>
       <source>Do you want to continue?</source>
@@ -9810,6 +9670,10 @@ Hala ilerlemek istiyor musunuz?</translation>
       <translation>Standart görünümler</translation>
     </message>
     <message>
+      <source>Axonometric</source>
+      <translation>Aksonometrik</translation>
+    </message>
+    <message>
       <source>&amp;Stereo</source>
       <translation>&amp;Stereo</translation>
     </message>
@@ -9862,38 +9726,8 @@ Hala ilerlemek istiyor musunuz?</translation>
       <translation>Özel Ops</translation>
     </message>
     <message>
-      <source>Axonometric</source>
-      <translation>Aksonometrik</translation>
-    </message>
-  </context>
-  <context>
-    <name>testClass</name>
-    <message>
-      <source>test</source>
-      <translation>Test et</translation>
-    </message>
-    <message>
-      <source>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt;&lt;span style=" font-size:20pt; font-weight:600;"&gt;iisTaskPanel&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;span style=" font-size:12pt;"&gt;Created for Qt 4.3.x&lt;/span&gt;&lt;/p&gt;
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt;
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;www.ii-system.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt; &lt;style type="text/css"&gt; p, li {boşluk: pre-wrap;}&lt;/style&gt;&lt;/head&gt;&lt;body style="font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt; &lt;p style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px; font-size:8pt;"&gt; &lt;span style="font-size:20pt; font-weight:600;"&gt; iisTaskPanel&lt;/span&gt;&lt;/p&gt; &lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt;&lt;/p&gt; &lt;p style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:600;"&gt; &lt;span style="font-size:12pt;"&gt; Qt 4.3.x için yaratıldı&lt;/span&gt;&lt;/p&gt; &lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt;&lt;/p&gt; &lt;p style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;"&gt; www.ii-system.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <source>Choose the style of the Task Panel</source>
-      <translation>Görev Paneli stilini seçin</translation>
-    </message>
-    <message>
-      <source>Default</source>
-      <translation>Varsayılan</translation>
-    </message>
-    <message>
-      <source>Windows XP</source>
-      <translation>Windows xp</translation>
+      <source>Link actions</source>
+      <translation>Bağlantı eylemleri</translation>
     </message>
   </context>
 </TS>

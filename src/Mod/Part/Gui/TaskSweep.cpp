@@ -81,7 +81,7 @@ public:
     {
     public:
         EdgeSelection()
-            : Gui::SelectionFilterGate((Gui::SelectionFilter*)nullptr)
+            : Gui::SelectionFilterGate(nullPointer())
         {
         }
         bool allow(App::Document* /*pDoc*/, App::DocumentObject*pObj, const char*sSubName)
@@ -304,7 +304,7 @@ bool SweepWidget::accept()
         topoShape = Part::Feature::getTopoShape(docobj);
         if (!topoShape.isNull()) {
             for (std::vector<std::string>::const_iterator it = subnames.begin(); it != subnames.end(); ++it) {
-                subShapes.push_back(topoShape.getSubShape(subnames[0].c_str()));
+                subShapes.push_back(Part::Feature::getTopoShape(docobj, subnames[0].c_str(), true /*need element*/));
             }
             for (std::vector<Part::TopoShape>::iterator it = subShapes.begin(); it != subShapes.end(); ++it) {
                 TopoDS_Shape dsShape = (*it).getShape();

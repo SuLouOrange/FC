@@ -1762,14 +1762,15 @@ QIcon ViewProviderLink::getIcon() const {
 
 QPixmap ViewProviderLink::getOverlayPixmap() const {
     auto ext = getLinkExtension();
+    int px = 12 * getMainWindow()->devicePixelRatioF();
     if(ext && ext->getLinkedObjectProperty() && ext->_getElementCountValue())
-        return BitmapFactory().pixmap("LinkArrayOverlay");
+        return BitmapFactory().pixmapFromSvg("LinkArrayOverlay", QSizeF(px,px));
     else if(hasSubElement)
-        return BitmapFactory().pixmap("LinkSubElement");
+        return BitmapFactory().pixmapFromSvg("LinkSubElement", QSizeF(px,px));
     else if(hasSubName)
-        return BitmapFactory().pixmap("LinkSubOverlay");
+        return BitmapFactory().pixmapFromSvg("LinkSubOverlay", QSizeF(px,px));
     else
-        return BitmapFactory().pixmap("LinkOverlay");
+        return BitmapFactory().pixmapFromSvg("LinkOverlay", QSizeF(px,px));
 }
 
 void ViewProviderLink::onChanged(const App::Property* prop) {
@@ -2483,8 +2484,8 @@ void ViewProviderLink::setupContextMenu(QMenu* menu, QObject* receiver, const ch
             QAction *act = menu->addAction(
                     QObject::tr("Setup configurable object"));
             act->setToolTip(QObject::tr(
-                        "Select which object to copy or exclude when configuration changes."
-                        "All external linked object are excluded by default."));
+                        "Select which object to copy or exclude when configuration changes. "
+                        "All external linked objects are excluded by default."));
             act->setData(-1);
             if (!func) func = new Gui::ActionFunction(menu);
             func->trigger(act, [ext](){
@@ -2518,7 +2519,7 @@ void ViewProviderLink::setupContextMenu(QMenu* menu, QObject* receiver, const ch
                     auto sels = dlg.getSelections(DlgObjectSelection::SelectionOptions::InvertSort);
                     for (auto it=excludes.begin(); it!=excludes.end(); ++it) {
                         auto iter = std::lower_bound(sels.begin(), sels.end(), *it);
-                        if (iter == objs.end() || *iter != *it) {
+                        if (iter == sels.end() || *iter != *it) {
                             ext->setOnChangeCopyObject(*it, options);
                         } else
                             sels.erase(iter);
@@ -2595,7 +2596,7 @@ void ViewProviderLink::setupContextMenu(QMenu* menu, QObject* receiver, const ch
     }
 
     if (ext->isLinkMutated()) {
-        QAction* act = menu->addAction(QObject::tr("Rerefresh configurable object"));
+        QAction* act = menu->addAction(QObject::tr("Refresh configurable object"));
         act->setToolTip(QObject::tr(
                     "Synchronize the original configurable source object by\n"
                     "creating a new deep copy. Note that any changes made to\n"

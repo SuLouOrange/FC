@@ -252,7 +252,7 @@ Do you want to continue?</source>
     </message>
     <message>
       <source>Rendered image</source>
-      <translation>算繪影像</translation>
+      <translation>渲染影像</translation>
     </message>
     <message>
       <source>Lux project file missing</source>
@@ -270,6 +270,78 @@ Do you want to continue?</source>
       <translation>光線追蹤</translation>
     </message>
     <message>
+      <source>Render</source>
+      <translation>渲染</translation>
+    </message>
+    <message>
+      <source>POV-Ray executable:</source>
+      <translation>POV-Ray 執行檔：</translation>
+    </message>
+    <message>
+      <source>POV-Ray output parameters:</source>
+      <translation>POV-Ray 輸出參數：</translation>
+    </message>
+    <message>
+      <source>The POV-Ray parameters to be passed to the render.</source>
+      <translation>POV-Ray 參數傳被送至渲染器</translation>
+    </message>
+    <message>
+      <source>+P +A</source>
+      <translation>+P +A</translation>
+    </message>
+    <message>
+      <source>+W: </source>
+      <translation>+W：</translation>
+    </message>
+    <message>
+      <source>The width of the rendered image</source>
+      <translation>渲染影像之寬度</translation>
+    </message>
+    <message>
+      <source> +H : </source>
+      <translation> +H : </translation>
+    </message>
+    <message>
+      <source>The height of the rendered image</source>
+      <translation>渲染影像之高度</translation>
+    </message>
+    <message>
+      <source>Luxrender executable:</source>
+      <translation>Luxrender 執行檔：</translation>
+    </message>
+    <message>
+      <source>The path to the luxrender (or luxconsole) executable</source>
+      <translation>luxrender (或 luxconsole) 執行檔路徑</translation>
+    </message>
+    <message>
+      <source>Directories</source>
+      <translation>目錄</translation>
+    </message>
+    <message>
+      <source>Default Project dir:</source>
+      <translation>預設專案目錄：</translation>
+    </message>
+    <message>
+      <source>Used by utility tools</source>
+      <translation>被工具程式所使用</translation>
+    </message>
+    <message>
+      <source>Camera file name:</source>
+      <translation>攝影機檔案名稱：</translation>
+    </message>
+    <message>
+      <source>TempCamera.inc</source>
+      <translation>TempCamera.inc</translation>
+    </message>
+    <message>
+      <source>Part file name:</source>
+      <translation>零件檔案名稱：</translation>
+    </message>
+    <message>
+      <source>TempPart.inc</source>
+      <translation>TempPart.inc</translation>
+    </message>
+    <message>
       <source>Mesh export settings</source>
       <translation>網格匯出設定</translation>
     </message>
@@ -285,84 +357,12 @@ Do you want to continue?</source>
       <source>Write u,v coordinates</source>
       <translation>寫入 u、 v 座標</translation>
     </message>
-    <message>
-      <source>Render</source>
-      <translation>算繪</translation>
-    </message>
-    <message>
-      <source>POV-Ray executable:</source>
-      <translation>POV-Ray 執行檔：</translation>
-    </message>
-    <message>
-      <source>POV-Ray output parameters:</source>
-      <translation>POV-Ray 輸出參數：</translation>
-    </message>
-    <message>
-      <source>The POV-Ray parameters to be passed to the render.</source>
-      <translation>POV-Ray 參數傳被送至算繪器</translation>
-    </message>
-    <message>
-      <source>+P +A</source>
-      <translation>+P +A</translation>
-    </message>
-    <message>
-      <source>+W: </source>
-      <translation>+W：</translation>
-    </message>
-    <message>
-      <source>The width of the rendered image</source>
-      <translation>算繪影像之寬度</translation>
-    </message>
-    <message>
-      <source> +H : </source>
-      <translation> +H : </translation>
-    </message>
-    <message>
-      <source>The height of the rendered image</source>
-      <translation>算繪影像之高度</translation>
-    </message>
-    <message>
-      <source>Luxrender executable:</source>
-      <translation>Luxrender 執行檔：</translation>
-    </message>
-    <message>
-      <source>The path to the luxrender (or luxconsole) executable</source>
-      <translation>luxrender (或 luxconsole) 執行檔路徑</translation>
-    </message>
-    <message>
-      <source>Directories</source>
-      <translation>目錄</translation>
-    </message>
-    <message>
-      <source>Part file name:</source>
-      <translation>零件檔案名稱：</translation>
-    </message>
-    <message>
-      <source>Camera file name:</source>
-      <translation>攝影機檔案名稱：</translation>
-    </message>
-    <message>
-      <source>Used by utility tools</source>
-      <translation>被工具程式所使用</translation>
-    </message>
-    <message>
-      <source>Default Project dir:</source>
-      <translation>預設專案目錄：</translation>
-    </message>
-    <message>
-      <source>TempCamera.inc</source>
-      <translation>TempCamera.inc</translation>
-    </message>
-    <message>
-      <source>TempPart.inc</source>
-      <translation>TempPart.inc</translation>
-    </message>
   </context>
   <context>
     <name>RaytracingGui::DlgSettingsRayImp</name>
     <message>
       <source>The path to the POV-Ray executable, if you want to render from %1</source>
-      <translation>若您想要執行算繪 %1, 請輸入 POV-Ray 執行檔之路徑.</translation>
+      <translation>若您想要執行渲染 %1, 請輸入 POV-Ray 執行檔之路徑.</translation>
     </message>
   </context>
   <context>
