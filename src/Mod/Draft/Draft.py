@@ -121,14 +121,8 @@ from draftutils.gui_utils import (dim_symbol,
                                   dimSymbol,
                                   dim_dash,
                                   dimDash)
-<<<<<<< HEAD
 App.Console.PrintWarning("draft 9\n")
 from draftutils.groups import (get_group_names,
-=======
-
-from draftutils.groups import (is_group,
-                               get_group_names,
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
                                getGroupNames,
                                ungroup,
                                get_windows,
@@ -444,10 +438,5 @@ App.Console.PrintWarning("draft 18\n")
 from draftobjects.hatch import (Hatch)
 from draftmake.make_hatch import (make_hatch)
 if App.GuiUp:
-<<<<<<< HEAD
-    from draftviewproviders.view_hatch import (Draft_Hatch_ViewProvider)
-=======
     from draftviewproviders.view_hatch import (ViewProviderDraftHatch)
-
->>>>>>> a13e251ad45c3562875e6bcc8e1c7e84882a4d52
 ## @}
