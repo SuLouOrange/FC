@@ -196,6 +196,7 @@ bool TaskTextureMapping::accept()
 
 bool TaskTextureMapping::reject()
 {
+
     dialog->reject();
     return (dialog->result() == QDialog::Rejected);
 }

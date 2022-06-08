@@ -73,7 +73,7 @@ public:
     bool reject();
 
     virtual QDialogButtonBox::StandardButtons getStandardButtons() const
-    { return QDialogButtonBox::Close; }
+    { return QDialogButtonBox::Close | QDialogButtonBox::Ok; }
 
 private:
     TextureMapping* dialog;
