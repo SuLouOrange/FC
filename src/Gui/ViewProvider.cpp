@@ -106,6 +106,7 @@ ViewProvider::ViewProvider()
     //
     // pcRoot = new SoFCSeparator(true);
     pcRoot = new SoFCSelectionRoot(true);
+    pcRoot->setName("pcRoot");
     pcRoot->ref();
     pcModeSwitch = new SoSwitch();
     pcModeSwitch->ref();
@@ -115,6 +116,7 @@ ViewProvider::ViewProvider()
     pcRoot->addChild(pcModeSwitch);
     sPixmap = "px";
     pcModeSwitch->whichChild = _iActualMode;
+    pcModeSwitch->setName("pcModeSwitch");
 
     setRenderCacheMode(ViewParams::instance()->getRenderCache());
 }

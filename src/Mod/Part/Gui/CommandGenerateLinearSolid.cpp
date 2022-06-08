@@ -397,8 +397,6 @@ void callBackFunc(void* ud, SoEventCallback* n) {
             }
         }
     }
-    return;
-
 }
 
 int drawAction(Base::Vector3d p1, Base::Vector3d p2) {
@@ -443,6 +441,8 @@ void CmdPartDrawLinearSolid::activated(int iMsg)
     }
     cmdData.reset();
 
+    
+
 #if 1
     Gui::Document* activeGui = Gui::Application::Instance->getDocument(activeDoc);
     if (!activeGui) {
@@ -451,22 +451,22 @@ void CmdPartDrawLinearSolid::activated(int iMsg)
     }
 
     Gui::MDIView* pView = activeGui->getActiveView();
-    Gui::View3DInventorViewer* p3DViewer = nullptr;
-    if (pView->isDerivedFrom(Gui::View3DInventor::getClassTypeId())) {
-        FC_MSG(__FUNCTION__ );
-        p3DViewer = reinterpret_cast<Gui::View3DInventor*>(pView)->getViewer();
-    }
-    else {
-        FC_ERR(__FUNCTION__);
-        return;
+    if (auto viewer= static_cast<Gui::View3DInventor*>(pView)->getViewer()) {
+        auto root = viewer->getSceneGraph();
+        SoWriteAction myAction;
+        const char* fileDir = "D:/TestData/sceneGragh.c";
+        bool result = myAction.getOutput()->openFile(fileDir);
+        if (!result) {
+            FC_ERR(__FUNCTION__ << ", cna't open " << fileDir);
+            return;
+        }
+        myAction.getOutput()->setBinary(FALSE);
+        myAction.apply(root);
+        myAction.getOutput()->closeFile();
+        FC_MSG(__FUNCTION__ << ", output scene gragh to " << fileDir << ", success!");
     }
 
-    if (p3DViewer == nullptr) {
-        FC_ERR(__FUNCTION__ );
-        return;
-    }
-
-    p3DViewer->addEventCallback(SoEvent::getClassTypeId(),callBackFunc);
+    //p3DViewer->addEventCallback(SoEvent::getClassTypeId(),callBackFunc);
 #endif
 
 }
